@@ -2,6 +2,7 @@ package uk.gov.legislation.api.documents;
 
 import uk.gov.legislation.data.marklogic.SearchResults;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -24,7 +25,8 @@ class TypeConverter {
 
     private static TypeResponse.Counts counts(SearchResults results) {
         TypeResponse.Counts counts = new TypeResponse.Counts();
-        counts.total = results.facets.facetTypes.facetType.value;
+        if (results.facets.facetTypes.facetType != null)
+            counts.total = results.facets.facetTypes.facetType.value;
         counts.yearly = yearly(results.facets.facetYears);
         return counts;
     }
@@ -41,6 +43,8 @@ class TypeConverter {
     }
 
     private static List<TypeResponse.Document> documents(List<SearchResults.Entry> entries) {
+        if (entries == null)
+            return Collections.emptyList();
         return entries.stream().map(TypeConverter::document).collect(Collectors.toList());
     }
 

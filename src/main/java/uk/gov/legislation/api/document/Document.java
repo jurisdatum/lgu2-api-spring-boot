@@ -15,7 +15,7 @@ import java.io.IOException;
 @RestController
 public class Document {
 
-    @GetMapping(value = "/document/{type}/{year}/{number}/data.xml", produces = MediaType.APPLICATION_XML_VALUE)
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws IOException, InterruptedException {
         String clml = GetDocument.getDocument(type, year, number);
         return clml;
@@ -23,17 +23,17 @@ public class Document {
 
     final Clml2Akn clml2akn = new Clml2Akn();
 
-    @GetMapping(value = "/document/{type}/{year}/{number}/data.akn", produces = "application/akn+xml")
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
         String clml = clml(type, year, number);
-        XdmNode akn = clml2akn.transform(clml);
-        String xml = Clml2Akn.serialize(akn);
-        return xml;
+        XdmNode akn1 = clml2akn.transform(clml);
+        String akn = Clml2Akn.serialize(akn1);
+        return akn;
     }
 
     final Akn2Html akn2html = new Akn2Html();
 
-    @GetMapping(value = "/document/{type}/{year}/{number}/data.html", produces = MediaType.TEXT_HTML_VALUE)
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.TEXT_HTML_VALUE)
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
         String clml = clml(type, year, number);
         XdmNode akn = clml2akn.transform(clml);
@@ -43,7 +43,7 @@ public class Document {
 
     static record Response(String title, String html) { }
 
-    @GetMapping(value = "/document/{type}/{year}/{number}/data.json", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
         String clml = clml(type, year, number);
         XdmNode akn = clml2akn.transform(clml);

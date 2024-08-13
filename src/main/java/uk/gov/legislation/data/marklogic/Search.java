@@ -31,4 +31,24 @@ public class Search {
         return MarkLogic.get(uri);
     }
 
+    public static SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
+        String xml = byTypeAndYearAtom(type, year, page);
+        try {
+            return SearchResults.parse(xml);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
+        String query = "?type=" + URLEncoder.encode(type) + "&year=" + year + "&page=" + page;;
+        URI uri;
+        try {
+            uri = new URI(Endpoint + query);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+        return MarkLogic.get(uri);
+    }
+
 }
