@@ -19,6 +19,7 @@ class TypeConverter {
         meta.page = results.page;
         meta.pageSize = results.itemsPerPage;
         meta.totalPages = results.page + results.morePages;
+        meta.updated = results.updated;
         meta.counts = counts(results);
         return meta;
     }

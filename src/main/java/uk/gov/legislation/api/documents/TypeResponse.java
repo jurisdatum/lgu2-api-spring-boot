@@ -1,5 +1,6 @@
 package uk.gov.legislation.api.documents;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 public class TypeResponse {
@@ -10,6 +11,7 @@ public static class Meta {
     public int page;
     public int pageSize;
     public int totalPages;
+    public LocalDateTime updated;
     public Counts counts;
 }
 

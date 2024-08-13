@@ -3,24 +3,31 @@ package uk.gov.legislation.data.marklogic;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @JacksonXmlRootElement(localName = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class SearchResults {
 
     static SearchResults parse(String xml) throws JsonProcessingException {
-        XmlMapper mapper = new XmlMapper();
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        ObjectMapper mapper = new XmlMapper()
+            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+            .registerModules(new JavaTimeModule());
         return mapper.readValue(xml, SearchResults.class);
     }
 
     @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
     public String id;
+
+    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+    public LocalDateTime updated;
 
     @JacksonXmlProperty(namespace = "http://a9.com/-/spec/opensearch/1.1/")
     public int itemsPerPage;
