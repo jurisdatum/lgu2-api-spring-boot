@@ -29,7 +29,8 @@ public class MarkLogic {
             throw new HttpServerErrorException(HttpStatusCode.valueOf(response.statusCode()));
         if (response.statusCode() >= 400)
             throw new HttpClientErrorException(HttpStatusCode.valueOf(response.statusCode()));
-        return response.body();
+        String xml = response.body();
+        return xml;
     }
 
 }

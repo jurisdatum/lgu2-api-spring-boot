@@ -31,9 +31,9 @@ public class GetDocument {
             return xml;
         }
         if (error.statusCode != 307)
-            throw new ResponseStatusException(HttpStatus.valueOf(error.statusCode));
+            throw new ResponseStatusException(HttpStatus.valueOf(error.statusCode), error.message);
         if (!error.header.name.equals("Location"))
-            throw new ResponseStatusException(HttpStatus.valueOf(error.statusCode));
+            throw new ResponseStatusException(HttpStatus.valueOf(error.statusCode), error.message);
         Pattern pattern = Pattern.compile("/([^/]+)/revision$");
         Matcher matcher = pattern.matcher(error.header.value);
         if (!matcher.find())
