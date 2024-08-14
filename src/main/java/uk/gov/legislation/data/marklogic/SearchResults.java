@@ -39,7 +39,7 @@ public class SearchResults {
     public int page;
 
     @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public int morePages;
+    public int morePages; // total pages!
 
     @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
     public Facets facets;

@@ -18,7 +18,7 @@ class TypeConverter {
         TypeResponse.Meta meta = new TypeResponse.Meta();
         meta.page = results.page;
         meta.pageSize = results.itemsPerPage;
-        meta.totalPages = results.page + results.morePages;
+        meta.totalPages = results.morePages;
         meta.updated = results.updated;
         meta.counts = counts(results);
         return meta;
