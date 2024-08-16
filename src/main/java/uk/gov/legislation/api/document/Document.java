@@ -41,15 +41,15 @@ public class Document {
         return html;
     }
 
-    static record Response(String title, String html) { }
+    static record Response(AkN.Meta meta, String html) { }
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
         String clml = clml(type, year, number);
         XdmNode akn = clml2akn.transform(clml);
-        String title = AkN.getTitle(akn);
         String html = akn2html.transform(akn);
-        Response response = new Response(title, html);
+        AkN.Meta meta = AkN.Meta.extract(akn);
+        Response response = new Response(meta, html);
         return response;
     }
 
