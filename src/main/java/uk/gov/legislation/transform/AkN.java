@@ -4,7 +4,9 @@ import net.sf.saxon.s9api.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.StreamSupport;
 
 public class AkN {
 
@@ -21,12 +23,14 @@ public class AkN {
     private static XPathExecutable lang;
     private static XPathExecutable publisher;
     private static XPathExecutable modified;
+    private static XPathExecutable versions;
 
     static {
         XPathCompiler compiler = Helper.processor.newXPathCompiler();
         compiler.declareNamespace("", "http://docs.oasis-open.org/legaldocml/ns/akn/3.0");
         compiler.declareNamespace("dc", "http://purl.org/dc/elements/1.1/");
         compiler.declareNamespace("ukm", "http://www.legislation.gov.uk/namespaces/metadata");
+        compiler.declareNamespace("atom", "http://www.w3.org/2005/Atom");
         try {
             workUri = compiler.compile("/akomaNtoso/*/meta/identification/FRBRWork/FRBRthis/@value");
             exprUri = compiler.compile("/akomaNtoso/*/meta/identification/FRBRExpression/FRBRthis/@value");
@@ -41,6 +45,7 @@ public class AkN {
             lang = compiler.compile("/akomaNtoso/*/meta/identification/FRBRExpression/FRBRlanguage/@language");
             publisher = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:publisher");
             modified = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:modified");
+            versions = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://purl.org/dc/terms/hasVersion']/@title");
         } catch (SaxonApiException e) {
             throw new RuntimeException("error compiling xpath expression", e);
         }
@@ -118,6 +123,22 @@ public class AkN {
         return LocalDate.parse(str);
     }
 
+    public static List<String> getVersions(XdmNode akn) {
+        XPathSelector selector = versions.load();
+        try {
+            selector.setContextItem(akn);
+        } catch (SaxonApiException e) {
+            throw new RuntimeException("error setting context item", e);
+        }
+        XdmValue result;
+        try {
+            result = selector.evaluate();
+        } catch (SaxonApiException e) {
+            throw new RuntimeException("error evaluating xpath expression", e);
+        }
+        return StreamSupport.stream(result.spliterator(), false).map(item -> item.getStringValue()).collect(Collectors.toList());
+    }
+
 public static record Meta(
         String id,
         String longType,
@@ -132,7 +153,8 @@ public static record Meta(
         String title,
         String lang,
         String publisher,
-        LocalDate modified
+        LocalDate modified,
+        List<String> versions
 ) {
 
     public static Meta extract(XdmNode akn) {
@@ -150,7 +172,8 @@ public static record Meta(
         String lang = AkN.getLang(akn);
         String publisher = AkN.getPublisher(akn);
         LocalDate modified = AkN.getModified(akn);
-        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite, version, status, title, lang, publisher, modified);
+        List<String> versions = AkN.getVersions(akn);
+        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite, version, status, title, lang, publisher, modified, versions);
         return meta;
     }
 
