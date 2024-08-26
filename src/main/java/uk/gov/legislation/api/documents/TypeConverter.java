@@ -4,6 +4,9 @@ import uk.gov.legislation.data.marklogic.SearchResults;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 class TypeConverter {
@@ -57,7 +60,20 @@ class TypeConverter {
         doc.year = entry.year == null ? null : entry.year.value;
         doc.number = entry.number == null ? null : entry.number.value;
         doc.created = entry.creationDate == null ? null : entry.creationDate.date;
+        doc.version = getVersion(entry.links);
         return doc;
+    }
+
+    private static Pattern Version = Pattern.compile("/([^/]+)/revision$");
+
+    private static String getVersion(List<SearchResults.Link> links) {
+        Optional<SearchResults.Link> link = links.stream().filter(l -> l.rel == null).findFirst();
+        if (link.isEmpty())
+            return null;
+        Matcher matcher = Version.matcher(link.get().href);
+        if (matcher.find())
+            return matcher.group(1);
+        return null;
     }
 
 }

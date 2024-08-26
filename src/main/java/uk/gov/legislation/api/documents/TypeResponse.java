@@ -32,6 +32,7 @@ public static class Document {
     public String year;
     public String number;
     public String created;
+    public String version;
 }
 
 }
