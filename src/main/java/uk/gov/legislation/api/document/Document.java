@@ -1,31 +1,43 @@
 package uk.gov.legislation.api.document;
 
 import net.sf.saxon.s9api.XdmNode;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.marklogic.GetDocument;
+import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 
 import java.io.IOException;
+import java.util.Optional;
 
 @RestController
 public class Document {
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
-    public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws IOException, InterruptedException {
-        String clml = GetDocument.getDocument(type, year, number);
+    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.APPLICATION_XML_VALUE)
+    public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws IOException, InterruptedException {
+        String clml = null;
+        try {
+            if (version.isEmpty())
+                clml = GetDocument.getDocument(type, year, number);
+            else
+                clml = GetDocument.getVersion(type, year, number, version.get());
+        } catch (NoDocumentException e) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
         return clml;
     }
 
     final Clml2Akn clml2akn = new Clml2Akn();
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
-    public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
-        String clml = clml(type, year, number);
+    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = "application/akn+xml")
+    public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+        String clml = clml(type, year, number, version);
         XdmNode akn1 = clml2akn.transform(clml);
         String akn = Clml2Akn.serialize(akn1);
         return akn;
@@ -33,9 +45,9 @@ public class Document {
 
     final Akn2Html akn2html = new Akn2Html();
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.TEXT_HTML_VALUE)
-    public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
-        String clml = clml(type, year, number);
+    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.TEXT_HTML_VALUE)
+    public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+        String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn);
         return html;
@@ -43,9 +55,9 @@ public class Document {
 
     static record Response(AkN.Meta meta, String html) { }
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
-        String clml = clml(type, year, number);
+    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.APPLICATION_JSON_VALUE)
+    public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+        String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn);
         AkN.Meta meta = AkN.Meta.extract(akn);

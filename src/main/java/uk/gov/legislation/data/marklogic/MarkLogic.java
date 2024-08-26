@@ -1,9 +1,5 @@
 package uk.gov.legislation.data.marklogic;
 
-import org.springframework.http.HttpStatusCode;
-import org.springframework.web.client.HttpClientErrorException;
-import org.springframework.web.client.HttpServerErrorException;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -25,10 +21,8 @@ public class MarkLogic {
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(uri).header("Authorization", Auth).build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() >= 500)
-            throw new HttpServerErrorException(HttpStatusCode.valueOf(response.statusCode()));
         if (response.statusCode() >= 400)
-            throw new HttpClientErrorException(HttpStatusCode.valueOf(response.statusCode()));
+            throw new RuntimeException(response.body());
         String xml = response.body();
         return xml;
     }
