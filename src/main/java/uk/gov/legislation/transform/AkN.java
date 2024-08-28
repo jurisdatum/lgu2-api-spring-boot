@@ -4,6 +4,7 @@ import net.sf.saxon.s9api.*;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -123,7 +124,7 @@ public class AkN {
         return LocalDate.parse(str);
     }
 
-    public static List<String> getVersions(XdmNode akn) {
+    public static List<String> getVersions(XdmNode akn, String current) {
         XPathSelector selector = versions.load();
         try {
             selector.setContextItem(akn);
@@ -136,7 +137,14 @@ public class AkN {
         } catch (SaxonApiException e) {
             throw new RuntimeException("error evaluating xpath expression", e);
         }
-        return StreamSupport.stream(result.spliterator(), false).map(item -> item.getStringValue()).collect(Collectors.toList());
+        LinkedHashSet<String> versions = StreamSupport.stream(result.spliterator(), false)
+            .map(item -> item.getStringValue())
+            .collect(Collectors.toCollection(LinkedHashSet::new));
+        if (versions.contains("current")) {
+            versions.remove("current");
+            versions.add(current);
+        }
+        return versions.stream().toList();
     }
 
 public static record Meta(
@@ -172,7 +180,7 @@ public static record Meta(
         String lang = AkN.getLang(akn);
         String publisher = AkN.getPublisher(akn);
         LocalDate modified = AkN.getModified(akn);
-        List<String> versions = AkN.getVersions(akn);
+        List<String> versions = AkN.getVersions(akn, version);
         Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite, version, status, title, lang, publisher, modified, versions);
         return meta;
     }
