@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class GetDocument {
+public class Legislation {
 
     static final String Endpoint = MarkLogic.BASE + "legislation.xq";
 

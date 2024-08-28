@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.data.marklogic.GetDocument;
+import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
@@ -23,7 +23,7 @@ public class Document {
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {
-            clml = GetDocument.getDocument(type, year, number, version);
+            clml = Legislation.getDocument(type, year, number, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
