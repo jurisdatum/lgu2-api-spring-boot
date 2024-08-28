@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,10 +12,16 @@ public class GetDocument {
 
     static final String Endpoint = MarkLogic.BASE + "legislation.xq";
 
-    public static String getDocument(String type, int year, int number) throws IOException, InterruptedException, NoDocumentException {
-        return getDocument(type, Integer.toString(year), Integer.toString(number));
+    public static String getDocument(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+        if (version.isPresent())
+            return getVersion(type, year, number, version.get());
+        return getMostRecentVersion(type, year, number);
     }
-    private static String getDocument(String type, String year, String number) throws IOException, InterruptedException, NoDocumentException {
+
+    public static String getMostRecentVersion(String type, int year, int number) throws IOException, InterruptedException, NoDocumentException {
+        return getMostRecentVersion(type, Integer.toString(year), Integer.toString(number));
+    }
+    private static String getMostRecentVersion(String type, String year, String number) throws IOException, InterruptedException, NoDocumentException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + URLEncoder.encode(year, StandardCharsets.US_ASCII) +
             "&number=" + URLEncoder.encode(number, StandardCharsets.US_ASCII);

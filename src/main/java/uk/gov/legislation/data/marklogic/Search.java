@@ -22,12 +22,7 @@ public class Search {
 
     public static String byTypeAtom(String type, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type) + "&page=" + page;
-        URI uri;
-        try {
-            uri = new URI(Endpoint + query);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
+        URI uri = URI.create(Endpoint + query);
         return MarkLogic.get(uri);
     }
 
@@ -42,12 +37,7 @@ public class Search {
 
     public static String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type) + "&year=" + year + "&page=" + page;;
-        URI uri;
-        try {
-            uri = new URI(Endpoint + query);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
+        URI uri = URI.create(Endpoint + query);
         return MarkLogic.get(uri);
     }
 

@@ -21,12 +21,9 @@ public class Document {
 
     @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.APPLICATION_XML_VALUE)
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws IOException, InterruptedException {
-        String clml = null;
+        String clml;
         try {
-            if (version.isEmpty())
-                clml = GetDocument.getDocument(type, year, number);
-            else
-                clml = GetDocument.getVersion(type, year, number, version.get());
+            clml = GetDocument.getDocument(type, year, number, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
