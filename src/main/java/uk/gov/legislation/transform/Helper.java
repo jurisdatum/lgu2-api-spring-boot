@@ -53,7 +53,7 @@ public class Helper {
         html5properties.setProperty(Serializer.Property.METHOD.toString(), "html");
 //		properties.setProperty(Property.VERSION.toString(), "5");
         html5properties.setProperty(Serializer.Property.INCLUDE_CONTENT_TYPE.toString(), "no");
-        html5properties.setProperty(Serializer.Property.INDENT.toString(), "yes");
+        html5properties.setProperty(Serializer.Property.INDENT.toString(), "no");
     }
 
 }
