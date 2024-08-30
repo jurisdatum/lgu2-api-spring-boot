@@ -2,12 +2,28 @@ package uk.gov.legislation.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @SpringBootApplication
-public class Application {
+@Configuration
+public class Application implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
+	}
+
+	@Override
+	public void configureContentNegotiation(ContentNegotiationConfigurer configurer){
+		configurer.defaultContentType(MediaType.APPLICATION_JSON);
+	}
+
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+		registry.addMapping("/**");
 	}
 
 }

@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URLEncoder;
 
 public class Search {
