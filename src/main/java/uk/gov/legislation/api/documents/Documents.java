@@ -14,14 +14,14 @@ import uk.gov.legislation.util.ShortTypes;
 import java.io.IOException;
 
 @RestController
-public class Type {
+public class Documents {
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public TypeResponse search(@PathVariable String type, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
+    public Response docs(@PathVariable String type, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!ShortTypes.isValidShortType(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         SearchResults results = Search.byType(type, page);
-        return TypeConverter.convert(results);
+        return SearchResultsConverter.convert(results);
     }
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
@@ -38,15 +38,15 @@ public class Type {
     /* and year */
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public TypeResponse typeAndYear(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
+    public Response typeAndYear(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!ShortTypes.isValidShortType(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         SearchResults results = Search.byTypeAndYear(type, year, page);
-        return TypeConverter.convert(results);
+        return SearchResultsConverter.convert(results);
     }
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-    public String typeAndYearAtom(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
+    public String typeAndYearFeed(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!ShortTypes.isValidShortType(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         String results = Search.byTypeAndYearAtom(type, year, page);

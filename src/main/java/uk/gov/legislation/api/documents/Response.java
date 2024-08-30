@@ -3,7 +3,7 @@ package uk.gov.legislation.api.documents;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class TypeResponse {
+public class Response {
     public Meta meta;
     public List<Document> documents;
 

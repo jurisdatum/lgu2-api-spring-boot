@@ -9,16 +9,16 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-class TypeConverter {
-    static TypeResponse convert(SearchResults results) {
-        TypeResponse response = new TypeResponse();
+class SearchResultsConverter {
+    static Response convert(SearchResults results) {
+        Response response = new Response();
         response.meta = meta(results);
         response.documents = documents(results.entries);
         return response;
     }
 
-    private static TypeResponse.Meta meta(SearchResults results) {
-        TypeResponse.Meta meta = new TypeResponse.Meta();
+    private static Response.Meta meta(SearchResults results) {
+        Response.Meta meta = new Response.Meta();
         meta.page = results.page;
         meta.pageSize = results.itemsPerPage;
         meta.totalPages = results.morePages;
@@ -27,33 +27,33 @@ class TypeConverter {
         return meta;
     }
 
-    private static TypeResponse.Counts counts(SearchResults results) {
-        TypeResponse.Counts counts = new TypeResponse.Counts();
+    private static Response.Counts counts(SearchResults results) {
+        Response.Counts counts = new Response.Counts();
         if (results.facets.facetTypes.facetType != null)
             counts.total = results.facets.facetTypes.facetType.value;
         counts.yearly = yearly(results.facets.facetYears);
         return counts;
     }
 
-    private static List<TypeResponse.Yearly> yearly(SearchResults.FacetYears facets) {
-        return facets.entries.stream().map(TypeConverter::yearly).collect(Collectors.toList());
+    private static List<Response.Yearly> yearly(SearchResults.FacetYears facets) {
+        return facets.entries.stream().map(SearchResultsConverter::yearly).collect(Collectors.toList());
     }
 
-    private static TypeResponse.Yearly yearly(SearchResults.FacetYear facet) {
-        TypeResponse.Yearly yearly = new TypeResponse.Yearly();
+    private static Response.Yearly yearly(SearchResults.FacetYear facet) {
+        Response.Yearly yearly = new Response.Yearly();
         yearly.year = facet.year;
         yearly.count = facet.total;
         return yearly;
     }
 
-    private static List<TypeResponse.Document> documents(List<SearchResults.Entry> entries) {
+    private static List<Response.Document> documents(List<SearchResults.Entry> entries) {
         if (entries == null)
             return Collections.emptyList();
-        return entries.stream().map(TypeConverter::document).collect(Collectors.toList());
+        return entries.stream().map(SearchResultsConverter::document).collect(Collectors.toList());
     }
 
-    private static TypeResponse.Document document(SearchResults.Entry entry) {
-        TypeResponse.Document doc = new TypeResponse.Document();
+    private static Response.Document document(SearchResults.Entry entry) {
+        Response.Document doc = new Response.Document();
         doc.id = entry.id.substring(33);
         doc.title = entry.title;
         doc.longType = entry.mainType == null ? null : entry.mainType.value;
