@@ -1,0 +1,385 @@
+openapi: 3.0.3
+
+info:
+  title: api.legislation.gov.uk
+  version: 0.0.1
+
+paths:
+
+  /documents/{type}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/page'
+      responses:
+        '200':
+          $ref: '#/components/responses/SearchResults'
+
+  /documents/{type}/{year}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/page'
+      responses:
+        '200':
+          $ref: '#/components/responses/SearchResults'
+
+  /document/{type}/{year}/{number}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/number'
+      responses:
+        '200':
+          $ref: '#/components/responses/Document'
+
+  /document/{type}/{year}/{number}/{version}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/number'
+      - $ref: '#/components/parameters/version'
+      responses:
+        '200':
+          $ref: '#/components/responses/Document'
+
+  /metadata/{type}/{year}/{number}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/number'
+      responses:
+        '200':
+          description: description
+          content:
+            application/json:
+              schema:
+                type: object
+
+components:
+
+  parameters:
+    type:
+      name: type
+      description: The 'short type' of legislation
+      in: path
+      required: true
+      schema:
+        type: string
+        enum: [ ukpga ]
+    year:
+      name: year
+      in: path
+      required: true
+      schema:
+        type: integer
+    number:
+      name: number
+      in: path
+      required: true
+      schema:
+        type: integer
+        minimum: 1
+    version:
+      name: version
+      in: path
+      required: true
+      schema:
+        type: string
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        minimum: 1
+        default: 1
+
+  responses:
+    SearchResults:
+      description: a list of documents
+      content:
+        application/atom+xml:
+          schema:
+            $ref: '#/components/schemas/Atom'
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SearchResults'
+    Document:
+      description: a piece of legislation
+      content:
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/CLML'
+        application/akn+xml:
+          schema:
+            $ref: '#/components/schemas/AkN'
+        text/html:
+          example: '<article>...</article>'
+        application/json:
+          schema:
+            $ref: '#/components/schemas/JsonDoc'
+
+  schemas:
+    Atom:
+      description: Atom
+      type: object
+      xml:
+        namespace: http://www.w3.org/2005/Atom
+        name: feed
+      properties:
+        updated:
+          type: string
+          format: date-time
+        itemsPerPage:
+          type: integer
+          xml:
+            prefix: openSearch
+            namespace: http://a9.com/-/spec/opensearch/1.1/
+          example: 20
+        startIndex:
+          type: integer
+          xml:
+            prefix: openSearch
+            namespace: http://a9.com/-/spec/opensearch/1.1/
+          example: 1
+        page:
+          type: integer
+          xml:
+            prefix: leg
+            namespace: http://www.legislation.gov.uk/namespaces/legislation
+          example: 1
+        morePages:
+          description: total pages
+          type: integer
+          xml:
+            prefix: leg
+            namespace: http://www.legislation.gov.uk/namespaces/legislation
+          example: 2
+        facets:
+          type: object
+          xml:
+            prefix: leg
+            namespace: http://www.legislation.gov.uk/namespaces/legislation
+          properties:
+            facetTypes:
+              type: object
+              properties:
+                facetType:
+                  type: object
+                  properties:
+                    type:
+                      type: string
+                      xml:
+                        attribute: true
+                      example: UnitedKingdomPublicGeneralAct
+                    total:
+                      type: integer
+                      xml:
+                        attribute: true
+                      example: 1000
+            facetYears:
+              type: object
+              properties:
+                facetYear:
+                  type: object
+                  properties:
+                    year:
+                      type: integer
+                      xml:
+                        attribute: true
+                      example: 2024
+                    total:
+                      type: integer
+                      xml:
+                        attribute: true
+                      example: 10
+        entry:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              title:
+                type: string
+              updated:
+                type: string
+                format: date-time
+              DocumentMainType:
+                type: object
+                xml:
+                  prefix: ukm
+                  namespace: 'http://www.legislation.gov.uk/namespaces/metadata'
+                properties:
+                  Value:
+                    type: string
+                    enum: [ UnitedKingdomPublicGeneralAct ]
+                    xml:
+                      attribute: true
+              Year:
+                type: object
+                xml:
+                  prefix: ukm
+                  namespace: 'http://www.legislation.gov.uk/namespaces/metadata'
+                properties:
+                  Value:
+                    type: integer
+                    example: 2024
+                    xml:
+                      attribute: true
+              Number:
+                type: object
+                xml:
+                  prefix: ukm
+                  namespace: 'http://www.legislation.gov.uk/namespaces/metadata'
+                properties:
+                  Value:
+                    type: integer
+                    example: 1
+                    xml:
+                      attribute: true
+          xml:
+            wrapped: false
+    SearchResults:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            page:
+              type: integer
+              example: 1
+            pageSize:
+              type: integer
+              example: 20
+            totalPages:
+              type: integer
+              example: 2
+            updated:
+              type: string
+              format: date-time
+            counts:
+              type: array
+              items:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  yearly:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        year:
+                          type: integer
+                        count:
+                          type: integer
+        documents:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+                example: 'ukpga/2024/1'
+              title:
+                type: string
+                example: 'Post Office (Horizon System) Compensation Act 2024'
+              longType:
+                type: string
+                enum: [ UnitedKingdomPublicGeneralAct ]
+              year:
+                type: integer
+                example: 2024
+              number:
+                type: integer
+                example: 1
+              created:
+                type: string
+                format: date
+                example: '2024-01-25'
+    CLML:
+      description: CLML
+      type: object
+      xml:
+        name: Legislation
+        namespace: 'http://www.legislation.gov.uk/namespaces/legislation'
+      properties:
+        Metadata:
+          type: object
+          xml:
+            prefix: ukm
+            namespace: 'http://www.legislation.gov.uk/namespaces/metadata'
+        Primary:
+          type: object
+    AkN:
+      description: LegalDocML (Akoma Ntoso)
+      type: object
+      xml:
+        name: akomaNtoso
+        namespace: 'http://docs.oasis-open.org/legaldocml/ns/akn/3.0'
+      properties:
+        act:
+          type: object
+    JsonDoc:
+      type: object
+      properties:
+        meta:
+          type: object
+          properties:
+            id:
+              type: string
+              example: ukpga/2024/1
+            longType:
+              type: string
+              enum: [ UnitedKingdomPublicGeneralAct ]
+            shortType:
+              type: string
+              enum: [ ukpga ]
+            year:
+              type: integer
+              example: 2024
+            regnalYear:
+              type: string
+              example: null
+            number:
+              type: integer
+              minimum: 1
+            date:
+              type: string
+              format: date
+              example: 2024-01-25
+            cite:
+              type: string
+              example: '2024 c. 1'
+            version:
+              type: string
+              example: enacted
+            status:
+              type: string
+              enum: [ final, revised ]
+            title:
+              type: string
+              example: 'Post Office (Horizon System) Compensation Act 2024'
+            lang:
+              type: string
+              enum: [ en, cy ]
+            publisher:
+              type: string
+              enum: [ 'Statute Law Database', "King's Printer of Acts of Parliament"  ]
+            modified:
+              type: string
+              format: date
+            versions:
+              type: array
+              items:
+                type: string
+              example: [ 'enacted', '2024-01-25' ]
+        html:
+          type: string
+          example: '<article>...</article>'
