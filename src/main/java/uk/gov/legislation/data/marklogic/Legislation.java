@@ -21,6 +21,7 @@ public class Legislation {
     public static String getMostRecentVersion(String type, int year, int number) throws IOException, InterruptedException, NoDocumentException {
         return getMostRecentVersion(type, Integer.toString(year), Integer.toString(number));
     }
+
     private static String getMostRecentVersion(String type, String year, String number) throws IOException, InterruptedException, NoDocumentException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + URLEncoder.encode(year, StandardCharsets.US_ASCII) +
@@ -48,6 +49,7 @@ public class Legislation {
     public static String getVersion(String type, int year, int number, String version) throws IOException, InterruptedException, NoDocumentException {
         return getVersion(type, Integer.toString(year), Integer.toString(number), version);
     }
+
     private static String getVersion(String type, String year, String number, String version) throws IOException, InterruptedException, NoDocumentException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + URLEncoder.encode(year, StandardCharsets.US_ASCII) +
@@ -62,6 +64,38 @@ public class Legislation {
             return xml;
         }
         throw new NoDocumentException(error);
+    }
+
+    public static String getToC(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+        return getToC(type, Integer.toString(year), Integer.toString(number), version);
+    }
+    public static String getToC(String type, String year, String number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+        String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
+            "&year=" + URLEncoder.encode(year, StandardCharsets.US_ASCII) +
+            "&number=" + URLEncoder.encode(number, StandardCharsets.US_ASCII) +
+            "&view=contents";
+        if (version.isPresent())
+            query += "&version=" + URLEncoder.encode(version.get(), StandardCharsets.US_ASCII);
+        URI uri = URI.create(Endpoint + query);
+        String xml = MarkLogic.get(uri);
+        Error error;
+        try {
+            error = Error.parse(xml);
+        } catch (Exception e) {
+            return xml;
+        }
+        if (version.isPresent())
+            throw new NoDocumentException(error);
+        if (error.statusCode != 307)
+            throw new NoDocumentException(error);
+        if (!error.header.name.equals("Location"))
+            throw new NoDocumentException(error);
+        Pattern pattern = Pattern.compile("/([^/]+)/revision$");
+        Matcher matcher = pattern.matcher(error.header.value);
+        if (!matcher.find())
+            throw new RuntimeException();
+        version = Optional.of(matcher.group(1));
+        return getToC(type, year, number, version);
     }
 
 }

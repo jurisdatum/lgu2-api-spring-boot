@@ -30,7 +30,7 @@ public class Document {
         return clml;
     }
 
-    final Clml2Akn clml2akn = new Clml2Akn();
+    final Clml2Akn clml2akn = Transforms.clml2akn();
 
     @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = "application/akn+xml")
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
@@ -40,7 +40,7 @@ public class Document {
         return akn;
     }
 
-    final Akn2Html akn2html = new Akn2Html();
+    final Akn2Html akn2html = Transforms.akn2html();
 
     @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.TEXT_HTML_VALUE)
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {

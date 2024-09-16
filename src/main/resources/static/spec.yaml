@@ -6,6 +6,7 @@ info:
 
 paths:
 
+
   /documents/{type}:
     get:
       parameters:
@@ -45,6 +46,17 @@ paths:
       responses:
         '200':
           $ref: '#/components/responses/Document'
+
+  /contents/{type}/{year}/{number}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/number'
+      - $ref: '#/components/parameters/version2'
+      responses:
+        '200':
+          $ref: '#/components/responses/Contents'
 
   /metadata/{type}/{year}/{number}:
     get:
@@ -90,6 +102,12 @@ components:
       required: true
       schema:
         type: string
+    version2:
+      name: version
+      in: query
+      required: false
+      schema:
+        type: string
     page:
       name: page
       in: query
@@ -123,6 +141,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/JsonDoc'
+    Contents:
+      description: the table of contents for a document
+      content:
+        application/xml:
+          schema:
+            $ref: '#/components/schemas/CLML'
+        application/akn+xml:
+          schema:
+            $ref: '#/components/schemas/AkN'
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Contents'
 
   schemas:
     Atom:
@@ -330,56 +360,108 @@ components:
       type: object
       properties:
         meta:
-          type: object
-          properties:
-            id:
-              type: string
-              example: ukpga/2024/1
-            longType:
-              type: string
-              enum: [ UnitedKingdomPublicGeneralAct ]
-            shortType:
-              type: string
-              enum: [ ukpga ]
-            year:
-              type: integer
-              example: 2024
-            regnalYear:
-              type: string
-              example: null
-            number:
-              type: integer
-              minimum: 1
-            date:
-              type: string
-              format: date
-              example: 2024-01-25
-            cite:
-              type: string
-              example: '2024 c. 1'
-            version:
-              type: string
-              example: enacted
-            status:
-              type: string
-              enum: [ final, revised ]
-            title:
-              type: string
-              example: 'Post Office (Horizon System) Compensation Act 2024'
-            lang:
-              type: string
-              enum: [ en, cy ]
-            publisher:
-              type: string
-              enum: [ 'Statute Law Database', "King's Printer of Acts of Parliament"  ]
-            modified:
-              type: string
-              format: date
-            versions:
-              type: array
-              items:
-                type: string
-              example: [ 'enacted', '2024-01-25' ]
+          $ref: '#/components/schemas/DocumentMetadata'
         html:
           type: string
           example: '<article>...</article>'
+    DocumentMetadata:
+      type: object
+      properties:
+        id:
+          type: string
+          example: ukpga/2024/1
+        longType:
+          type: string
+          enum: [ UnitedKingdomPublicGeneralAct ]
+        shortType:
+          type: string
+          enum: [ ukpga ]
+        year:
+          type: integer
+          example: 2024
+        regnalYear:
+          type: string
+          example: null
+        number:
+          type: integer
+          minimum: 1
+        date:
+          type: string
+          format: date
+          example: 2024-01-25
+        cite:
+          type: string
+          example: '2024 c. 1'
+        version:
+          type: string
+          example: enacted
+        status:
+          type: string
+          enum: [ final, revised ]
+        title:
+          type: string
+          example: 'Post Office (Horizon System) Compensation Act 2024'
+        lang:
+          type: string
+          enum: [ en, cy ]
+        publisher:
+          type: string
+          enum: [ 'Statute Law Database', "King's Printer of Acts of Parliament"  ]
+        modified:
+          type: string
+          format: date
+        versions:
+          type: array
+          items:
+            type: string
+          example: [ 'enacted', '2024-01-25' ]
+    Contents:
+      type: object
+      properties:
+        meta:
+          $ref: '#/components/schemas/DocumentMetadata'
+        contents:
+          type: object
+          properties:
+            title:
+              type: string
+            body:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentsItem'
+            appendices:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentsItem'
+            attachmentsBeforeSchedules:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentsItem'
+              description: EU legislation can contain attachments both before and after the annexes
+            schedules:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentsItem'
+            attachments:
+              type: array
+              items:
+                $ref: '#/components/schemas/ContentsItem'
+    ContentsItem:
+      type: object
+      properties:
+        name:
+          type: string
+          description: the type of section
+        number:
+          type: string
+          description: the number of the section
+        title:
+          type: string
+          description: the title of the section
+        ref:
+          type: string
+          description: the fragment identifier
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContentsItem'
