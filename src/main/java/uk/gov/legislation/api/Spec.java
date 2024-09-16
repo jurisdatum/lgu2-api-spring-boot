@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Spec {
 
-    private static final String PATH = "/static/spec.yaml";
+    private static final String PATH = "/spec.yaml";
 
     @GetMapping(value = "/spec", produces = { MediaType.TEXT_PLAIN_VALUE, "application/yaml" })
     public byte[] spec() throws Exception {
