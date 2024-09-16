@@ -6,6 +6,18 @@ info:
 
 paths:
 
+  /spec:
+    get:
+      responses:
+        '200':
+          description: this specification
+          content:
+            text/plain:
+              schema:
+                type: string
+            application/yaml:
+              schema:
+                type: object
 
   /documents/{type}:
     get:
