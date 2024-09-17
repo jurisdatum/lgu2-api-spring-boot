@@ -44,16 +44,6 @@ paths:
       - $ref: '#/components/parameters/type'
       - $ref: '#/components/parameters/year'
       - $ref: '#/components/parameters/number'
-      responses:
-        '200':
-          $ref: '#/components/responses/Document'
-
-  /document/{type}/{year}/{number}/{version}:
-    get:
-      parameters:
-      - $ref: '#/components/parameters/type'
-      - $ref: '#/components/parameters/year'
-      - $ref: '#/components/parameters/number'
       - $ref: '#/components/parameters/version'
       responses:
         '200':
@@ -65,7 +55,7 @@ paths:
       - $ref: '#/components/parameters/type'
       - $ref: '#/components/parameters/year'
       - $ref: '#/components/parameters/number'
-      - $ref: '#/components/parameters/version2'
+      - $ref: '#/components/parameters/version'
       responses:
         '200':
           $ref: '#/components/responses/Contents'
@@ -109,12 +99,6 @@ components:
         type: integer
         minimum: 1
     version:
-      name: version
-      in: path
-      required: true
-      schema:
-        type: string
-    version2:
       name: version
       in: query
       required: false

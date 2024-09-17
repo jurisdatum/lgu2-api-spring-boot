@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.marklogic.Legislation;
@@ -19,8 +20,8 @@ import java.util.Optional;
 @RestController
 public class Document {
 
-    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.APPLICATION_XML_VALUE)
-    public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws IOException, InterruptedException {
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
+    public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {
             clml = Legislation.getDocument(type, year, number, version);
@@ -32,8 +33,8 @@ public class Document {
 
     final Clml2Akn clml2akn = Transforms.clml2akn();
 
-    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = "application/akn+xml")
-    public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
+    public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn1 = clml2akn.transform(clml);
         String akn = Clml2Akn.serialize(akn1);
@@ -42,8 +43,8 @@ public class Document {
 
     final Akn2Html akn2html = Transforms.akn2html();
 
-    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.TEXT_HTML_VALUE)
-    public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.TEXT_HTML_VALUE)
+    public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn);
@@ -52,8 +53,8 @@ public class Document {
 
     static record Response(AkN.Meta meta, String html) { }
 
-    @GetMapping(value = { "/document/{type}/{year}/{number}", "/document/{type}/{year}/{number}/{version}" }, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable Optional<String> version) throws Exception {
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn);
