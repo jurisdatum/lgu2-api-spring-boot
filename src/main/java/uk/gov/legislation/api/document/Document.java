@@ -47,7 +47,7 @@ public class Document {
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
-        String html = akn2html.transform(akn);
+        String html = akn2html.transform(akn, true);
         return html;
     }
 
@@ -57,7 +57,7 @@ public class Document {
     public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
-        String html = akn2html.transform(akn);
+        String html = akn2html.transform(akn, false);
         AkN.Meta meta = AkN.Meta.extract(akn);
         Response response = new Response(meta, html);
         return response;

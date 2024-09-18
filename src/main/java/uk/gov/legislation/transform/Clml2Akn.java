@@ -13,6 +13,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Properties;
 
 public class Clml2Akn {
 
@@ -60,10 +61,15 @@ public class Clml2Akn {
         return transform(stream);
     }
 
+    static final Properties Properties = new Properties();
+    static {
+        Properties.setProperty(Serializer.Property.INDENT.toString(), "yes");
+    }
+
     public static String serialize(XdmNode akn) throws SaxonApiException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         Result result = new StreamResult(out);
-        Destination destination = Helper.makeDestination(result, Helper.aknProperties);
+        Destination destination = Helper.makeDestination(result, Properties);
         Helper.processor.writeXdmValue(akn, destination);
         return new String(out.toByteArray(), StandardCharsets.UTF_8);
     }

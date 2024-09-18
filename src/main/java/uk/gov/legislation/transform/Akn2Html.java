@@ -11,10 +11,13 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
+import java.util.Properties;
 
 public class Akn2Html {
 
     private static final String stylesheet = "/transforms/akn2html/akn2html.xsl";
+
+    private static final String CSS_PATH_ENV_VAR = "CSS_PATH";
 
     private static class Importer implements URIResolver {
         @Override public Source resolve(String href, String base) throws TransformerException {
@@ -39,18 +42,31 @@ public class Akn2Html {
         }
     }
 
-    private void transform(Source akn, Destination html) throws SaxonApiException {
+    private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();
+        transform.setParameter(new QName("standalone"), new XdmAtomicValue(standalone));
+        String cssPath = System.getenv(CSS_PATH_ENV_VAR);
+        if (cssPath != null)
+            transform.setParameter(new QName("css-path"), new XdmAtomicValue(cssPath));
         transform.setSource(akn);
         transform.setDestination(html);
         transform.transform();
     }
 
-    public String transform(XdmNode akn) throws SaxonApiException {
+    static final Properties Indent = new Properties();
+    static final Properties DontIndent = new Properties();
+    static {
+        Indent.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
+        DontIndent.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
+        Indent.setProperty(Serializer.Property.INDENT.toString(), "yes");
+        DontIndent.setProperty(Serializer.Property.INDENT.toString(), "no");
+    }
+
+    public String transform(XdmNode akn, boolean standalone) throws SaxonApiException {
         StringWriter html = new StringWriter();
         Result result = new StreamResult(html);
-        Destination destination = Helper.makeDestination(result, Helper.html5properties);
-        transform(akn.asSource(), destination);
+        Destination destination = Helper.makeDestination(result, standalone ? Indent : DontIndent);
+        transform(akn.asSource(), destination, standalone);
         try {
             html.close();
         } catch (IOException e) {
