@@ -60,6 +60,18 @@ paths:
         '200':
           $ref: '#/components/responses/Contents'
 
+  /fragment/{type}/{year}/{number}/{section}:
+    get:
+      parameters:
+      - $ref: '#/components/parameters/type'
+      - $ref: '#/components/parameters/year'
+      - $ref: '#/components/parameters/number'
+      - $ref: '#/components/parameters/section'
+      - $ref: '#/components/parameters/version'
+      responses:
+        '200':
+          $ref: '#/components/responses/Document'
+
   /metadata/{type}/{year}/{number}:
     get:
       parameters:
@@ -98,6 +110,13 @@ components:
       schema:
         type: integer
         minimum: 1
+    section:
+      name: section
+      in: path
+      required: true
+      schema:
+        type: string
+        example: 'section-1'
     version:
       name: version
       in: query

@@ -21,7 +21,7 @@ public class Contents {
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml;
         try {
-            clml = Legislation.getToC(type, Integer.toString(year), Integer.toString(number), version);
+            clml = Legislation.getTableOfContents(type, year, number, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
