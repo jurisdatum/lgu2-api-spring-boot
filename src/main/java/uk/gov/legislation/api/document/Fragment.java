@@ -1,5 +1,7 @@
 package uk.gov.legislation.api.document;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.XdmNode;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -17,9 +19,11 @@ import java.io.IOException;
 import java.util.Optional;
 
 @RestController
+@Tag(name = "Documents")
 public class Fragment {
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_XML_VALUE)
+    @Operation(summary = "part of a document")
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {

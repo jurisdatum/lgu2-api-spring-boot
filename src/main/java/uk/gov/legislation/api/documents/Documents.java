@@ -1,5 +1,6 @@
 package uk.gov.legislation.api.documents;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import uk.gov.legislation.util.ShortTypes;
 import java.io.IOException;
 
 @RestController
+@Tag(name = "Document lists", description = "lists of documents")
 public class Documents {
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_JSON_VALUE)
