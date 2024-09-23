@@ -1,6 +1,7 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
+import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -25,6 +26,10 @@ public class AkN {
     private static XPathExecutable publisher;
     private static XPathExecutable modified;
     private static XPathExecutable versions;
+    private static XPathExecutable dcIdentifier;
+    private static XPathExecutable prevLink;
+    private static XPathExecutable nextLink;
+    private static XPathExecutable schedules;
 
     static {
         XPathCompiler compiler = Helper.processor.newXPathCompiler();
@@ -47,6 +52,10 @@ public class AkN {
             publisher = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:publisher");
             modified = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:modified");
             versions = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://purl.org/dc/terms/hasVersion']/@title");
+            dcIdentifier = compiler.compile("/*/*/meta/proprietary/dc:identifier");
+            prevLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='prev']/@href");
+            nextLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='next']/@href");
+            schedules = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href");
         } catch (SaxonApiException e) {
             throw new RuntimeException("error compiling xpath expression", e);
         }
@@ -65,6 +74,8 @@ public class AkN {
         } catch (SaxonApiException e) {
             throw new RuntimeException("error evaluating xpath expression", e);
         }
+        if (result == null)
+            return null;
         return result.getStringValue();
     }
 
@@ -144,7 +155,27 @@ public class AkN {
             versions.remove("current");
             versions.add(current);
         }
+        versions.remove("prospective"); // ?!
         return versions.stream().toList();
+    }
+
+    public static String getFragmentIdentifier(XdmNode akn) {
+        String link = get(dcIdentifier, akn);
+        return Links.extractFragmentIdentifierFromLink(link);
+    }
+
+    public static String getPreviousLink(XdmNode akn) {
+        String link = get(prevLink, akn);
+        return Links.extractFragmentIdentifierFromLink(link);
+    }
+    public static String getNextLink(XdmNode akn) {
+        String link = get(nextLink, akn);
+        return Links.extractFragmentIdentifierFromLink(link);
+    }
+
+    public static boolean hasSchedules(XdmNode akn) {
+        String link = get(schedules, akn);
+        return link != null;
     }
 
 public static record Meta(
@@ -162,7 +193,12 @@ public static record Meta(
         String lang,
         String publisher,
         LocalDate modified,
-        List<String> versions
+        List<String> versions,
+        String fragment,
+        String prev,
+        String next,
+        boolean schedules
+
 ) {
 
     public static Meta extract(XdmNode akn) {
@@ -181,7 +217,13 @@ public static record Meta(
         String publisher = AkN.getPublisher(akn);
         LocalDate modified = AkN.getModified(akn);
         List<String> versions = AkN.getVersions(akn, version);
-        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite, version, status, title, lang, publisher, modified, versions);
+        String fragment = AkN.getFragmentIdentifier(akn);
+        String prev = AkN.getPreviousLink(akn);
+        String next = AkN.getNextLink(akn);
+        boolean schedules = AkN.hasSchedules(akn);
+        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite,
+            version, status, title, lang, publisher, modified, versions,
+            fragment, prev, next, schedules);
         return meta;
     }
 

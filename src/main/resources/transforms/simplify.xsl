@@ -37,6 +37,7 @@
         <versions>
             <xsl:apply-templates select="atom:link[@rel='http://purl.org/dc/terms/hasVersion']" />
         </versions>
+        <xsl:call-template name="fragment-info" />
     </meta>
 </xsl:template>
 
@@ -109,6 +110,21 @@
     <version>
         <xsl:value-of select="@title" />
     </version>
+</xsl:template>
+
+<xsl:template name="fragment-info">
+    <fragment>
+        <xsl:value-of select="dc:identifier" />
+    </fragment>
+    <prev>
+        <xsl:value-of select="atom:link[@rel='prev']/@href" />
+    </prev>
+    <next>
+        <xsl:value-of select="atom:link[@rel='next']/@href" />
+    </next>
+    <schedules>
+        <xsl:value-of select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
+    </schedules>
 </xsl:template>
 
 <!-- ToC -->

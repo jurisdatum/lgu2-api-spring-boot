@@ -4,7 +4,7 @@ import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.simple.Simplify;
 
-public class Transforms {
+class Transforms {
 
     private static Clml2Akn clml2Akn = null;
 
