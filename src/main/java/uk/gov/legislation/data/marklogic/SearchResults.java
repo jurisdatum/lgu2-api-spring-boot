@@ -25,8 +25,8 @@ public class SearchResults {
     @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
     public String id;
 
-    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
-    public LocalDateTime updated;
+//    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+//    public LocalDateTime updated;
 
     @JacksonXmlProperty(namespace = "http://a9.com/-/spec/opensearch/1.1/")
     public int itemsPerPage;

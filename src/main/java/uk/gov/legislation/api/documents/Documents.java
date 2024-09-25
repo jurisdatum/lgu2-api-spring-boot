@@ -19,11 +19,11 @@ import java.io.IOException;
 public class Documents {
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response docs(@PathVariable String type, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
+    public DocumentList docs(@PathVariable String type, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!ShortTypes.isValidShortType(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         SearchResults results = Search.byType(type, page);
-        return SearchResultsConverter.convert(results);
+        return Converter.convert(results);
     }
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
@@ -40,11 +40,11 @@ public class Documents {
     /* and year */
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response typeAndYear(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
+    public DocumentList typeAndYear(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!ShortTypes.isValidShortType(type))
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         SearchResults results = Search.byTypeAndYear(type, year, page);
-        return SearchResultsConverter.convert(results);
+        return Converter.convert(results);
     }
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
