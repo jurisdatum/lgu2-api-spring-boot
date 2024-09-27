@@ -2,11 +2,9 @@ package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
 
-import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.URIResolver;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -68,9 +66,9 @@ public class Clml2Akn {
 
     public static String serialize(XdmNode akn) throws SaxonApiException {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
-        Result result = new StreamResult(out);
-        Destination destination = Helper.makeDestination(result, Properties);
-        Helper.processor.writeXdmValue(akn, destination);
+        Serializer serializer = akn.getProcessor().newSerializer(out);
+        serializer.setOutputProperties(Properties);
+        serializer.serialize(akn.asSource());
         return new String(out.toByteArray(), StandardCharsets.UTF_8);
     }
 

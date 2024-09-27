@@ -2,11 +2,9 @@ package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
 
-import javax.xml.transform.Result;
 import javax.xml.transform.Source;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.URIResolver;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.InputStream;
@@ -64,14 +62,9 @@ public class Akn2Html {
 
     public String transform(XdmNode akn, boolean standalone) throws SaxonApiException {
         StringWriter html = new StringWriter();
-        Result result = new StreamResult(html);
-        Destination destination = Helper.makeDestination(result, standalone ? Indent : DontIndent);
-        transform(akn.asSource(), destination, standalone);
-        try {
-            html.close();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Serializer serializer = akn.getProcessor().newSerializer(html);
+        serializer.setOutputProperties(standalone ? Indent : DontIndent);
+        transform(akn.asSource(), serializer, standalone);
         return html.toString();
     }
 

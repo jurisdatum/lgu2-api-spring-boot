@@ -4,16 +4,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.*;
 import uk.gov.legislation.transform.Helper;
 
-import javax.xml.transform.Result;
 import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Properties;
 
 public class Simplify {
 
@@ -45,8 +42,7 @@ public class Simplify {
         ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes());
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         Source source = new StreamSource(input);
-        Result result = new StreamResult(output);
-        Destination destination = Helper.makeDestination(result, new Properties());
+        Serializer destination = executable.getProcessor().newSerializer(output);
         transform(source, destination);
         return new String(output.toByteArray(), StandardCharsets.UTF_8);
     }
