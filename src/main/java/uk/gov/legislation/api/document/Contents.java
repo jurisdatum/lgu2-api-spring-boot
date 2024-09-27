@@ -41,9 +41,9 @@ public class Contents {
     }
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Object json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
+    public TableOfContents json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
-        Object simple = Transforms.simplifier().contents(clml);
+        TableOfContents simple = Transforms.simplifier().contents(clml);
         return simple;
     }
 

@@ -1,6 +1,7 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
+import uk.gov.legislation.api.document.Metadata;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
@@ -199,7 +200,7 @@ public static record Meta(
         String next,
         boolean schedules
 
-) {
+) implements Metadata {
 
     public static Meta extract(XdmNode akn) {
         String id = AkN.getId(akn);

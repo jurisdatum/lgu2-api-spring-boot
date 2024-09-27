@@ -32,11 +32,10 @@
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
+        <xsl:apply-templates select="dc:language" />
         <xsl:apply-templates select="dc:publisher" />
         <xsl:apply-templates select="dc:modified" />
-        <versions>
-            <xsl:apply-templates select="atom:link[@rel='http://purl.org/dc/terms/hasVersion']" />
-        </versions>
+        <xsl:call-template name="versions" />
         <xsl:call-template name="fragment-info" />
     </meta>
 </xsl:template>
@@ -56,6 +55,12 @@
     <title>
         <xsl:apply-templates />
     </title>
+</xsl:template>
+
+<xsl:template match="dc:language">
+    <lang>
+        <xsl:apply-templates />
+    </lang>
 </xsl:template>
 
 <xsl:template match="dc:publisher">
@@ -106,10 +111,16 @@
     </date>
 </xsl:template>
 
+<xsl:template name="versions">
+    <hasVersions>
+        <xsl:apply-templates select="atom:link[@rel='http://purl.org/dc/terms/hasVersion']" />
+    </hasVersions>
+</xsl:template>
+
 <xsl:template match="atom:link[@rel='http://purl.org/dc/terms/hasVersion']">
-    <version>
+    <hasVersion>
         <xsl:value-of select="@title" />
-    </version>
+    </hasVersion>
 </xsl:template>
 
 <xsl:template name="fragment-info">
