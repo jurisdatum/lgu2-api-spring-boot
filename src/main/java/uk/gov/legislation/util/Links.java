@@ -35,6 +35,10 @@ public class Links {
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
             return null;
+        if ("contents".equals(split[split.length - 1]))
+            split = Arrays.copyOf(split, split.length - 1);
+        if (split.length == 0)
+            return null;
         return String.join("/", split);
     }
 
