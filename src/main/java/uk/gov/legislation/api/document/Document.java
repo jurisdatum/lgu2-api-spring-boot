@@ -1,6 +1,9 @@
 package uk.gov.legislation.api.document;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.XdmNode;
 import org.springframework.http.HttpStatus;
@@ -24,7 +27,13 @@ import java.util.Optional;
 public class Document {
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
-    @Operation(summary = "the content of a document")
+    @Operation(summary = "the content of a document", responses = {
+        @ApiResponse(
+            responseCode = "200",
+            content = @Content(schema = @Schema(implementation = uk.gov.legislation.api.types.Legislation.class))
+        )
+    })
+    @ApiResponse(responseCode = "200", content = @Content(schema = @Schema(hidden = true))) // to prevent creation of seprate response based on method return type
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {
