@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
+import java.util.Collection;
 import java.util.List;
 
 public interface DocumentList {
@@ -34,6 +35,10 @@ public interface DocumentList {
         @JsonProperty(index = 5)
         public Counts counts();
 
+        @JsonProperty(index = 6)
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Collection<String> subjects();
+
     }
 
     public interface Counts {
@@ -45,10 +50,11 @@ public interface DocumentList {
         public List<? extends ByType> byType();
 
         @JsonProperty(index = 3)
-        public List<? extends ByYear> yearly();
+        public List<? extends ByYear> byYear();
 
         @JsonProperty(index = 4)
-        public Subjects subjects();
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public List<? extends ByInitial> bySubjectInitial();
 
     }
 
@@ -69,16 +75,6 @@ public interface DocumentList {
 
         @JsonProperty(index = 2)
         public int count();
-
-    }
-
-    public interface Subjects {
-
-        @JsonProperty(index = 1)
-        public List<? extends ByInitial> byInitial();
-
-        @JsonProperty(index = 2)
-        public List<String> headings();
 
     }
 

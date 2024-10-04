@@ -5,9 +5,7 @@ import uk.gov.legislation.util.Cites;
 
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -16,15 +14,13 @@ class Converter {
 
     private static record Response(Meta meta, List<? extends DocumentList.Document> documents) implements DocumentList { }
 
-    private static record Meta(int page, int pageSize, int totalPages, LocalDateTime updated, Counts counts) implements DocumentList.Meta { }
+    private static record Meta(int page, int pageSize, int totalPages, LocalDateTime updated, Counts counts, SortedSet<String> subjects) implements DocumentList.Meta { }
 
-    private static record Counts(int total, List<ByType> byType, List<ByYear> yearly, DocumentList.Subjects subjects) implements DocumentList.Counts { }
+    private static record Counts(int total, List<ByType> byType, List<ByYear> byYear, List<? extends DocumentList.ByInitial> bySubjectInitial) implements DocumentList.Counts { }
 
     private static record ByType(String type, int count) implements DocumentList.ByType { }
 
     private static record ByYear(int year, int count) implements DocumentList.ByYear { }
-
-    private static record Subjects (List<? extends DocumentList.ByInitial> byInitial, List<String> headings) implements DocumentList.Subjects { }
 
     private static record ByInitial(String initial, int count) implements DocumentList.ByInitial { }
 
@@ -40,14 +36,15 @@ class Converter {
 
     private static Meta convertMeta(SearchResults results) {
         Counts counts = convertCounts(results);
-        return new Meta(results.page, results.itemsPerPage, results.morePages, results.updated, counts);
+        SortedSet<String> subjects = getSubjectHeadings(results.facets.subjects);
+        return new Meta(results.page, results.itemsPerPage, results.morePages, results.updated, counts, subjects);
     }
 
     private static Counts convertCounts(SearchResults results) {
         int total = results.facets.facetYears.entries.stream().mapToInt(f -> f.total).sum();
         List<ByType> byType = convertTypeFacets(results.facets.facetTypes);
         List<ByYear> byYear = convertYearFacets(results.facets.facetYears);
-        DocumentList.Subjects bySubject = convertSubjectFacets(results.facets.subjects);
+        List<ByInitial> bySubject = convertSubjectFacets(results.facets.subjects);
         return new Counts(total, byType, byYear, bySubject);
     }
 
@@ -67,20 +64,20 @@ class Converter {
         return years.entries.stream().map(f -> new ByYear(f.year, f.total)).collect(Collectors.toList());
     }
 
-    private static DocumentList.Subjects convertSubjectFacets(SearchResults.Subjects subjects) {
+    private static List<ByInitial> convertSubjectFacets(SearchResults.Subjects subjects) {
         if (subjects == null)
             return null;
-        List<? extends DocumentList.ByInitial> byInitial;
         if (subjects.initials == null)
-            byInitial = null;
-        else
-            byInitial = subjects.initials.stream().map(i -> new ByInitial(i.initial, i.total)).toList();
-        List<String> headings;
+            return null;
+        return subjects.initials.stream().map(i -> new ByInitial(i.initial, i.total)).toList();
+    }
+
+    private static SortedSet<String> getSubjectHeadings(SearchResults.Subjects subjects) {
+        if (subjects == null)
+            return null;
         if (subjects.headings == null)
-            headings = null;
-        else
-            headings = subjects.headings.stream().map(h -> h.name).toList();
-        return new Subjects(byInitial, headings);
+            return null;
+        return subjects.headings.stream().map(h -> h.name).collect(Collectors.toCollection(TreeSet::new));
     }
 
     private static List<Document> convertDocs(SearchResults results) {
@@ -104,7 +101,7 @@ class Converter {
         return new Document(id, title, altTitle, longType, year, number, altNumbers, cite, published, updated, version);
     }
 
-    private static Pattern Version = Pattern.compile("/([^/]+)/revision$");
+    private static final Pattern Version = Pattern.compile("/([^/]+)/revision$");
 
     private static String getVersion(List<SearchResults.Link> links) {
         Optional<SearchResults.Link> link = links.stream().filter(l -> l.rel == null).findFirst();
