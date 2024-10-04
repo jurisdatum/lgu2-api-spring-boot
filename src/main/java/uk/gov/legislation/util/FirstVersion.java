@@ -6,6 +6,10 @@ public class FirstVersion {
         switch (type) {
             case "ukpga", "UnitedKingdomPublicGeneralAct":
                 return "enacted";
+            case "uksi", "UnitedKingdomStatutoryInstrument":
+            case "wsi", "WelshStatutoryInstrument":
+            case "nisi", "NorthernIrelandOrderInCouncil":
+                return "made";
         }
         throw new IllegalArgumentException(type);
     }

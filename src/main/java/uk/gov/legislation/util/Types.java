@@ -1,10 +1,11 @@
 package uk.gov.legislation.util;
 
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class ShortTypes {
+public class Types {
 
 //    private static Set<String> Primary = Set.of("ukpga", "ukla", "ukppa", "asp", "asc", "anaw", "mwa", "ukcm", "nia", "aosp", "aep", "aip", "apgb", "gbla", "gbppa", "nisi", "mnia", "apni");
 //
@@ -16,15 +17,14 @@ public class ShortTypes {
 //
 //    private static Set<String> Other = Set.of("ukia");
 
-    private static Set<String> types = Set.of("ukpga");
+    private static Set<String> shortNames = Arrays.stream(Type.values()).map(t -> t.shortName()).collect(Collectors.toSet());
 
     public static boolean isValidShortType(String type) {
-        return types.contains(type);
+        return shortNames.contains(type);
     }
 
-    private static Map<String, String> ShortToLong = Map.of(
-        "ukpga", "UnitedKingdomPublicGeneralAct"
-    );
+    private static Map<String, String> ShortToLong = Arrays.stream(Type.values())
+            .collect(Collectors.toMap(t -> t.shortName(), t -> t.longName()));
 
     private static Map<String, String> LongToShort = ShortToLong.entrySet().stream()
             .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));

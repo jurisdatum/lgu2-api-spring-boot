@@ -2,6 +2,7 @@ package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
 import uk.gov.legislation.api.document.Metadata;
+import uk.gov.legislation.api.documents.DocumentList;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
@@ -9,6 +10,7 @@ import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
 public class AkN {
@@ -19,6 +21,7 @@ public class AkN {
     private static XPathExecutable shortType;
     private static XPathExecutable year;
     private static XPathExecutable number;
+    private static XPathExecutable altNumbers;
     private static XPathExecutable date;
     private static XPathExecutable cite;
     private static XPathExecutable status;
@@ -44,7 +47,8 @@ public class AkN {
             longType = compiler.compile("/akomaNtoso/*/meta/proprietary/ukm:*/ukm:DocumentClassification/ukm:DocumentMainType/@Value");
             shortType = compiler.compile("/akomaNtoso/*/@name");
             year = compiler.compile("/*/*/meta/proprietary/ukm:*/ukm:Year/@Value");
-            number = compiler.compile("/*/*/meta/identification/FRBRWork/FRBRnumber/@value");
+            number = compiler.compile("/*/*/meta/identification/FRBRWork/FRBRnumber[1]/@value");
+            altNumbers = compiler.compile("/*/*/meta/identification/FRBRWork/FRBRnumber/@value[matches(., '^[A-Z]+\\. \\d+$')]");
             date = compiler.compile("/*/*/meta/identification/FRBRWork/FRBRdate/@date");
             cite = compiler.compile("/akomaNtoso/*/meta/identification/FRBRWork/FRBRname/@value");
             status = compiler.compile("/akomaNtoso/*/meta/proprietary/ukm:*/ukm:DocumentClassification/ukm:DocumentStatus/@Value");
@@ -79,6 +83,23 @@ public class AkN {
             return null;
         return result.getStringValue();
     }
+    private static List<String> getMany(XPathExecutable exec, XdmNode akn) {
+        XPathSelector selector = exec.load();
+        try {
+            selector.setContextItem(akn);
+        } catch (SaxonApiException e) {
+            throw new RuntimeException("error setting context item", e);
+        }
+        XdmValue result;
+        try {
+            result = selector.evaluate();
+        } catch (SaxonApiException e) {
+            throw new RuntimeException("error evaluating xpath expression", e);
+        }
+        if (result == null)
+            return null;
+        return result.stream().map(item -> item.getStringValue()).collect(Collectors.toList());
+    }
 
     public static String getId(XdmNode akn) {
         String longId = get(workUri, akn);
@@ -110,6 +131,19 @@ public class AkN {
     public static int getNumber(XdmNode akn) {
         String str = get(number, akn);
         return Integer.parseInt(str);
+    }
+
+    private static record AltNumber(String category, String value) implements DocumentList.Document.AltNumber { }
+
+    public static List<AltNumber> getAltNumbers(XdmNode akn) {
+        List<String> values = getMany(altNumbers, akn);
+        if (values == null)
+            return null;
+        Stream<AltNumber> stream = values.stream().map(value -> {
+            String[] parts = value.split("\\.", 2);
+            return new AltNumber(parts[0], parts[1].trim());
+        });
+        return stream.collect(Collectors.toList());
     }
 
     public static LocalDate getDate(XdmNode akn) {
@@ -186,6 +220,7 @@ public static record Meta(
         int year,
         String regnalYear,
         int number,
+        List<AltNumber> altNumbers,
         LocalDate date,
         String cite,
         String version,
@@ -209,6 +244,7 @@ public static record Meta(
         String regnalYear = AkN.getRegnalYear(id);
         int year = AkN.getYear(akn);
         int number = AkN.getNumber(akn);
+        List<AltNumber> altNumbers = AkN.getAltNumbers(akn);
         LocalDate date = AkN.getDate(akn);
         String cite = AkN.getCite(akn);
         String status = AkN.getStatus(akn);
@@ -222,7 +258,7 @@ public static record Meta(
         String prev = AkN.getPreviousLink(akn);
         String next = AkN.getNextLink(akn);
         boolean schedules = AkN.hasSchedules(akn);
-        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, date, cite,
+        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
             version, status, title, lang, publisher, modified, versions,
             fragment, prev, next, schedules);
         return meta;

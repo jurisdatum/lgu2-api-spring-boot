@@ -1,10 +1,12 @@
 package uk.gov.legislation.api.types;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.xml.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Metadata {
 
@@ -49,6 +51,11 @@ public class Metadata {
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:Number")
         public Number Number;
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        @Schema(name = "ukm:AlterativeNumber")
+        public List<AlternativeNumber> AlterativeNumber;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:EnactmentDate")
@@ -118,6 +125,20 @@ public class Metadata {
         @XmlAttribute
         @Schema(example = "1")
         public int Value;
+
+    }
+
+    public static class AlternativeNumber {
+
+        @JacksonXmlProperty(isAttribute = true)
+        @XmlAttribute
+        @Schema(example = "W")
+        public String Category;
+
+        @JacksonXmlProperty(isAttribute = true)
+        @XmlAttribute
+        @Schema(example = "1")
+        public String Value;
 
     }
 

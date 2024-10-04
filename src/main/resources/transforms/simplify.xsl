@@ -28,6 +28,7 @@
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentMainType" />
         <xsl:apply-templates select="ukm:*/ukm:Year" />
         <xsl:apply-templates select="ukm:*/ukm:Number" />
+        <xsl:apply-templates select="ukm:*/ukm:AlternativeNumber" />
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
@@ -103,6 +104,10 @@
     <number>
         <xsl:value-of select="@Value" />
     </number>
+</xsl:template>
+
+<xsl:template match="ukm:AlternativeNumber">
+    <altNumber category="{ @Category }" value="{ @Value }" />
 </xsl:template>
 
 <xsl:template match="ukm:EnactmentDate">

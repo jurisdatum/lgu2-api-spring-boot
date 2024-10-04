@@ -1,6 +1,7 @@
 package uk.gov.legislation.data.marklogic;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import uk.gov.legislation.util.Type;
 
 import java.io.IOException;
 import java.net.URI;
@@ -19,8 +20,14 @@ public class Search {
         }
     }
 
+    // series can be 'w', 's', 'ni', 'l', 'c'
+
     public static String byTypeAtom(String type, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type) + "&page=" + page;
+        if (type.equals(Type.WSI.shortName()))
+            query += "&series=w";
+        else if (type.equals(Type.NISI.shortName()))
+            query += "&series=ni";
         URI uri = URI.create(Endpoint + query);
         return MarkLogic.get(uri);
     }
@@ -35,7 +42,11 @@ public class Search {
     }
 
     public static String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
-        String query = "?type=" + URLEncoder.encode(type) + "&year=" + year + "&page=" + page;;
+        String query = "?type=" + URLEncoder.encode(type) + "&year=" + year + "&page=" + page;
+        if (type.equals(Type.WSI.shortName()))
+            query += "&series=w";
+        else if (type.equals(Type.NISI.shortName()))
+            query += "&series=ni";
         URI uri = URI.create(Endpoint + query);
         return MarkLogic.get(uri);
     }

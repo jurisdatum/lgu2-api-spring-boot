@@ -19,7 +19,7 @@ public class Links {
             return null;
         if (link.startsWith("id/"))
             link = link.substring(3);
-        Matcher matcher = Pattern.compile("^ukpga/\\d{4}/\\d+/?").matcher(link);
+        Matcher matcher = Pattern.compile("^[a-z]{3,5}/\\d{4}/\\d+/?").matcher(link);
         if (matcher.find())
             link = link.substring(matcher.end());
         else

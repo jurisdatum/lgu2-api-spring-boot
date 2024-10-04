@@ -16,8 +16,8 @@ public class Contents implements TableOfContents {
     private static XmlMapper mapper() {
         return (XmlMapper) new XmlMapper().registerModules(new JavaTimeModule());
     }
-    public static uk.gov.legislation.transform.simple.Contents parse(String clml) throws JsonProcessingException {
-        return mapper().readValue(clml, uk.gov.legislation.transform.simple.Contents.class);
+    public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JsonProcessingException {
+        return mapper().readValue(xml, uk.gov.legislation.transform.simple.Contents.class);
     }
 
     public Metadata meta;

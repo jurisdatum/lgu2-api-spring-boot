@@ -3,14 +3,13 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import uk.gov.legislation.util.Cites;
-import uk.gov.legislation.util.FirstVersion;
-import uk.gov.legislation.util.Links;
-import uk.gov.legislation.util.ShortTypes;
+import uk.gov.legislation.api.documents.DocumentList;
+import uk.gov.legislation.util.*;
 
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Optional;
 
 public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
@@ -22,7 +21,7 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
     public String longType() { return longType; }
 
-    public String shortType() { return ShortTypes.longToShort(longType); }
+    public String shortType() { return Types.longToShort(longType); }
 
     public int year;
 
@@ -36,12 +35,38 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
     public int number() { return number; }
 
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "altNumber")
+    public List<AltNum> altNums;
+
+    public List<AltNum> altNumbers() { return altNums; }
+
+    public static class AltNum implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String category;
+
+        @Override
+        public String category() {
+            return category;
+        }
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String value;
+
+        @Override
+        public String value() {
+            return value;
+        }
+
+    }
+
     public LocalDate date;
 
     public LocalDate date() { return date; }
 
     public String cite() {
-        return Cites.make(longType, year, number);
+        return Cites.make(longType, year, number, altNumbers());
     }
 
     private LocalDate valid;

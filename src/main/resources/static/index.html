@@ -15,9 +15,10 @@
 <script>
 const tagsSorter = (t1, t2) => {
     const f = (tag) => {
-        if (tag === 'Document lists') return 1;
-        if (tag === 'Documents') return 2;
-        return 3;
+        if (tag === 'Document types') return 1;
+        if (tag === 'Document lists') return 2;
+        if (tag === 'Documents') return 3;
+        return 4;
     };
     return f(t1) - f(t2);
 };

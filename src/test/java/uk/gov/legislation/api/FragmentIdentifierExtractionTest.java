@@ -16,6 +16,11 @@ public class FragmentIdentifierExtractionTest {
         link = "http://www.legislation.gov.uk/ukpga/2017/1/contents/enacted/revision";
         fragment = Links.extractFragmentIdentifierFromLink(link);
         Assertions.assertNull(fragment);
+
+		link = "http://www.legislation.gov.uk/ukpga/2017/1/section/1/2017-03-16";
+		fragment = Links.extractFragmentIdentifierFromLink(link);
+		Assertions.assertEquals("section/1", fragment);
+
 	}
 
 }
