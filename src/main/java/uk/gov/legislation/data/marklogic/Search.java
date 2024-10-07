@@ -6,6 +6,7 @@ import uk.gov.legislation.util.Type;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 
 public class Search {
 
@@ -23,7 +24,7 @@ public class Search {
     // series can be 'w', 's', 'ni', 'l', 'c'
 
     public static String byTypeAtom(String type, int page) throws IOException, InterruptedException {
-        String query = "?type=" + URLEncoder.encode(type) + "&page=" + page;
+        String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&page=" + page;
         if (type.equals(Type.WSI.shortName()))
             query += "&series=w";
         else if (type.equals(Type.NISI.shortName()))
@@ -42,7 +43,7 @@ public class Search {
     }
 
     public static String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
-        String query = "?type=" + URLEncoder.encode(type) + "&year=" + year + "&page=" + page;
+        String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&year=" + year + "&page=" + page;
         if (type.equals(Type.WSI.shortName()))
             query += "&series=w";
         else if (type.equals(Type.NISI.shortName()))
