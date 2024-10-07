@@ -9,7 +9,6 @@ import uk.gov.legislation.util.*;
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Optional;
 
 public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
@@ -102,7 +101,7 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
     private List<String> _versions;
 
     public List<String> versions() {
-        LinkedHashSet set = new LinkedHashSet<>(_versions);
+        LinkedHashSet<String> set = new LinkedHashSet<>(_versions);
         if (set.contains("current")) {
             set.remove("current");
             set.add(this.version());
