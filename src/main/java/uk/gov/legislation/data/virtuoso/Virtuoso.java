@@ -6,6 +6,7 @@ import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 class Virtuoso {
@@ -17,7 +18,7 @@ class Virtuoso {
 
     static JsonResults query(String query) throws IOException, InterruptedException {
         HttpClient client = HttpClient.newHttpClient();
-        String body = "query=" + URLEncoder.encode(query);
+        String body = "query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
         HttpRequest request = HttpRequest.newBuilder().uri(URL)
             .POST(HttpRequest.BodyPublishers.ofString(body))
             .header("Authorization", AUTH)
