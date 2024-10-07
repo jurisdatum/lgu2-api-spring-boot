@@ -5,8 +5,7 @@ import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import uk.gov.legislation.util.Links;
 
 public class Legislation {
 
@@ -17,7 +16,16 @@ public class Legislation {
             "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + year +
             "&number=" + number;
-        return getOrRedirect(query, version);
+        if (version.isPresent())
+            query += "&version=" + URLEncoder.encode(version.get(), StandardCharsets.US_ASCII);
+        try {
+            return get(query);
+        } catch (Redirect e) {
+            Links.Components comp = Links.parse(e.location);
+            if (comp == null)
+                throw new RuntimeException(e);
+            return getDocument(comp.type(), comp.year(), comp.number(), comp.version());
+        }
     }
 
     public static String getTableOfContents(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
@@ -26,7 +34,16 @@ public class Legislation {
             "&year=" + year +
             "&number=" + number +
             "&view=contents";
-        return getOrRedirect(query, version);
+        if (version.isPresent())
+            query += "&version=" + URLEncoder.encode(version.get(), StandardCharsets.US_ASCII);
+        try {
+            return get(query);
+        } catch (Redirect e) {
+            Links.Components comp = Links.parse(e.location);
+            if (comp == null)
+                throw new RuntimeException(e);
+            return getTableOfContents(comp.type(), comp.year(), comp.number(), comp.version());
+        }
     }
 
     public static String getDocumentSection(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
@@ -35,12 +52,21 @@ public class Legislation {
             "&year=" + year +
             "&number=" + number +
             "&section=" + URLEncoder.encode(section, StandardCharsets.US_ASCII);
-        return getOrRedirect(query, version);
-    }
-
-    private static String getOrRedirect(String query, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
         if (version.isPresent())
             query += "&version=" + URLEncoder.encode(version.get(), StandardCharsets.US_ASCII);
+        try {
+            return get(query);
+        } catch (Redirect e) {
+            Links.Components comp = Links.parse(e.location);
+            if (comp == null)
+                throw new RuntimeException(e);
+            if (comp.fragment().isEmpty())
+                throw new RuntimeException(e);
+            return getDocumentSection(comp.type(), comp.year(), comp.number(), comp.fragment().get(), comp.version());
+        }
+    }
+
+    private static String get(String query) throws IOException, InterruptedException, NoDocumentException, Redirect {
         URI uri = URI.create(Endpoint + query);
         String xml = MarkLogic.get(uri);
         Error error;
@@ -49,18 +75,22 @@ public class Legislation {
         } catch (Exception e) {
             return xml;
         }
-        if (version.isPresent())
-            throw new NoDocumentException(error);
-        if (error.statusCode != 307)
+        if (error.statusCode >= 400)
             throw new NoDocumentException(error);
         if (!error.header.name.equals("Location"))
-            throw new NoDocumentException(error);
-        Pattern pattern = Pattern.compile("/([^/]+)/revision$");
-        Matcher matcher = pattern.matcher(error.header.value);
-        if (!matcher.find())
-            throw new RuntimeException();
-        version = Optional.of(matcher.group(1));
-        return getOrRedirect(query, version);
+            throw new RuntimeException(xml);
+        throw new Redirect(error.header.value);
+    }
+
+    private static class Redirect extends Exception {
+
+        private final String location;
+
+        private Redirect(String location) {
+            super(location);
+            this.location = location;
+        }
+
     }
 
 }
