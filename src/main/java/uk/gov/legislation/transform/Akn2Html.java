@@ -3,12 +3,9 @@ package uk.gov.legislation.transform;
 import net.sf.saxon.s9api.*;
 
 import javax.xml.transform.Source;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.URIResolver;
 import javax.xml.transform.stream.StreamSource;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.StringWriter;
+import java.net.URISyntaxException;
 import java.util.Properties;
 
 public class Akn2Html {
@@ -17,26 +14,21 @@ public class Akn2Html {
 
     private static final String CSS_PATH_ENV_VAR = "CSS_PATH";
 
-    private static class Importer implements URIResolver {
-        @Override public Source resolve(String href, String base) throws TransformerException {
-            InputStream file = this.getClass().getResourceAsStream("/transforms/akn2html/" + href);
-            return new StreamSource(file, href);
-        }
-    }
-
     private final XsltExecutable executable;
 
     public Akn2Html() {
         XsltCompiler compiler = Helper.processor.newXsltCompiler();
-        compiler.setURIResolver(new Importer());
-        InputStream stream = this.getClass().getResourceAsStream(stylesheet);
-        Source source = new StreamSource(stream, "akn2html.xsl");
+        Source source;
+        try {
+            String systemId = this.getClass().getResource(stylesheet).toURI().toASCIIString();
+            source = new StreamSource(systemId);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
         try {
             executable = compiler.compile(source);
         } catch (SaxonApiException e) {
             throw new RuntimeException(e);
-        } finally {
-            try { stream.close(); } catch (IOException e) { }
         }
     }
 
