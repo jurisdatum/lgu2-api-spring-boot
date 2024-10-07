@@ -109,9 +109,11 @@ public interface DocumentList {
         public static interface AltNumber {
 
             @JsonProperty(index = 1)
+            @Schema(example = "C", allowableValues = { "C", "L", "S", "NI", "W", "Cy", "Regnal" })
             public String category();
 
             @JsonProperty(index = 2)
+            @Schema(example = "1")
             public String value();
 
         }

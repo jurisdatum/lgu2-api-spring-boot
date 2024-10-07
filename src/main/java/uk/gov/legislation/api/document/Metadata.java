@@ -3,6 +3,7 @@ package uk.gov.legislation.api.document;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import uk.gov.legislation.api.documents.DocumentList;
 
 import java.time.LocalDate;
@@ -28,7 +29,7 @@ public interface Metadata {
     public int year();
 
     @JsonProperty(index = 5)
-    @Schema()
+    @Schema(requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String regnalYear();
 
@@ -37,6 +38,7 @@ public interface Metadata {
     public int number();
 
     @JsonProperty(index = 7)
+    @Schema(requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<? extends DocumentList.Document.AltNumber> altNumbers();
 
@@ -76,19 +78,22 @@ public interface Metadata {
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
     public List<String> versions();
 
-    @JsonProperty(index = 17)
-    @Schema(example = "section-2")
+    @JsonProperty(value="schedules", index = 17)
+    public boolean schedules();
+
+    @JsonProperty(index = 18)
+    @Schema(example = "section/2", requiredMode = RequiredMode.NOT_REQUIRED)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String fragment();
 
-    @JsonProperty(value = "prev", index = 18)
-    @Schema(example = "section-1")
+    @JsonProperty(value = "prev", index = 19)
+    @Schema(example = "section/1", requiredMode = RequiredMode.NOT_REQUIRED)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String prev();
 
-    @JsonProperty(value = "next", index = 19)
-    @Schema(example = "section-3")
+    @JsonProperty(value = "next", index = 20)
+    @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String next();
-
-    @JsonProperty(value="schedules", index = 20)
-    public boolean schedules();
 
 }
