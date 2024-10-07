@@ -137,6 +137,7 @@ public static class Entry {
 
     public String altTitle;
 
+    @SuppressWarnings("unchecked")
     @JsonSetter("title")
     public void setTitle(Object obj) {
         if (obj instanceof String str) {
