@@ -105,7 +105,7 @@ public class Metadata {
 
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
-        @Schema(allowableValues = { "final", "revised" })
+        @Schema(allowableValues = { "final", "revised" }) // ToDo "draft"
         public String Value;
 
     }

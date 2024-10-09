@@ -11,7 +11,11 @@ public class Versions {
             return true;
         if (s.equals("made"))
             return true;
+        if (s.equals("created"))
+            return true;
         if (s.equals("current"))
+            return true;
+        if (s.equals("prospective"))
             return true;
         if (date.matcher(s).matches())
             return true;
