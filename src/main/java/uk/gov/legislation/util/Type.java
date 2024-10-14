@@ -4,7 +4,8 @@ public enum Type {
 
     UKPGA("UnitedKingdomPublicGeneralAct", Category.Primary),
     UKLA("UnitedKingdomLocalAct", Category.Primary),
-    UKPPA("UnitedKingdomPrivateOrPersonalAct", Category.Primary),
+//    CULA?
+//    UKPPA("UnitedKingdomPrivateOrPersonalAct", Category.Primary),
 
     ASP("ScottishAct", Category.Primary),
     NIA("NorthernIrelandAct", Category.Primary),
@@ -12,10 +13,10 @@ public enum Type {
     AEP("EnglandAct", Category.Primary),
     AIP("IrelandAct", Category.Primary),
     APGB("GreatBritainAct", Category.Primary),
-    GBLA("GreatBritainLocalAct", Category.Primary),
-    // GBPPA
+//    GBLA("GreatBritainLocalAct", Category.Primary),
+//    GBPPA
     ANAW("WelshNationalAssemblyAct", Category.Primary),
-    ASC("WelshParliamentAct", Category.Primary),
+//    ASC("WelshParliamentAct", Category.Primary),
     MWA("WelshAssemblyMeasure", Category.Primary),
     UKCM("UnitedKingdomChurchMeasure", Category.Primary),
     MNIA("NorthernIrelandAssemblyMeasure", Category.Primary),
@@ -36,9 +37,10 @@ public enum Type {
     NISRO("NorthernIrelandStatutoryRuleOrOrder", Category.Secondary);
 //    NIDSR("NorthernIrelandDraftStatutoryRule", Category.Secondary),
 //    SDSI("ScottishDraftStatutoryInstrument", Category.Secondary);
-
+//    WDSI ?
+//    NIDSI ?
     // "eur", "eudn", "eudr", "eut"
-    // "ukia"
+    // "ukia" sia wia niia
 
     public enum Category { Primary, Secondary }
 

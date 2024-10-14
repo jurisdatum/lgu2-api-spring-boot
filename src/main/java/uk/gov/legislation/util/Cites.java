@@ -30,7 +30,7 @@ public class Cites {
     private static String make(Type type, int year, int number) {
         switch (type) {
             case UKPGA:
-            case UKPPA:
+            // case UKPPA:
             case NIA:
             case AOSP:
             case AEP:
@@ -38,13 +38,13 @@ public class Cites {
             case APGB:
                 return year + " c. " + number;
             case UKLA:
-            case GBLA:
+//            case GBLA:
                 return year + " c. " + Roman.toLowerRoman(number);
             case ASP:
             case ANAW:
-            case ASC:
+//            case ASC:
                 return year + " " + type.shortName() + " " + number;
-            // GBPPA:
+            // case GBPPA:
             case MWA:
                 return year + " nawm " + number;
             case MNIA:

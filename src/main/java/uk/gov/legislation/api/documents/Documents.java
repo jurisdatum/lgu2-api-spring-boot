@@ -57,7 +57,7 @@ public class Documents {
 
     public static class UnknownTypeException extends ResponseStatusException {
 
-        private UnknownTypeException(String type) {
+        UnknownTypeException(String type) {
             super(HttpStatus.BAD_REQUEST, "unknown doc type: " + type);
         }
 

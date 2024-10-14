@@ -12,21 +12,21 @@ import java.util.stream.Collectors;
 
 class Converter {
 
-    private static record Response(Meta meta, List<? extends DocumentList.Document> documents) implements DocumentList { }
+    private record Response(Meta meta, List<? extends DocumentList.Document> documents) implements DocumentList { }
 
-    private static record Meta(int page, int pageSize, int totalPages, LocalDateTime updated, Counts counts, SortedSet<String> subjects) implements DocumentList.Meta { }
+    private record Meta(int page, int pageSize, int totalPages, LocalDateTime updated, Counts counts, SortedSet<String> subjects) implements DocumentList.Meta { }
 
-    private static record Counts(int total, List<ByType> byType, List<ByYear> byYear, List<? extends DocumentList.ByInitial> bySubjectInitial) implements DocumentList.Counts { }
+    private record Counts(int total, List<ByType> byType, List<ByYear> byYear, List<? extends DocumentList.ByInitial> bySubjectInitial) implements DocumentList.Counts { }
 
-    private static record ByType(String type, int count) implements DocumentList.ByType { }
+    private record ByType(String type, int count) implements DocumentList.ByType { }
 
-    private static record ByYear(int year, int count) implements DocumentList.ByYear { }
+    private record ByYear(int year, int count) implements DocumentList.ByYear { }
 
-    private static record ByInitial(String initial, int count) implements DocumentList.ByInitial { }
+    private record ByInitial(String initial, int count) implements DocumentList.ByInitial { }
 
-    private static record Document(String id, String title, String altTitle, String longType, int year, int number, List<Converter.AltNumber> altNumbers, String cite, ZonedDateTime published, ZonedDateTime updated, String version) implements DocumentList.Document { }
+    private record Document(String id, String title, String altTitle, String longType, int year, int number, List<Converter.AltNumber> altNumbers, String cite, ZonedDateTime published, ZonedDateTime updated, String version) implements DocumentList.Document { }
 
-    private static record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber { }
+    private record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber { }
 
     static DocumentList convert(SearchResults results) {
         Meta meta = convertMeta(results);
@@ -53,7 +53,9 @@ class Converter {
             return Collections.emptyList();
         if (facetTypes.entries == null)
             return Collections.emptyList();
-        return facetTypes.entries.stream().map(f -> new ByType(f.type, f.value)).collect(Collectors.toList());
+        return facetTypes.entries.stream()
+                .filter(f -> !f.type.equals("UnitedKingdomDraftPublicBill")) // ToDo !?
+                .map(f -> new ByType(f.type, f.value)).collect(Collectors.toList());
     }
 
     private static List<ByYear> convertYearFacets(SearchResults.FacetYears years) {

@@ -24,6 +24,8 @@ const tagsSorter = (t1, t2) => {
 };
 const operationsSorter = (o1, o2) => {
     const f = (o) => {
+        if (o.get('path') === '/types') return 1;
+        if (o.get('path') === '/types/uk') return 2;
         if (o.get('path') === '/documents/{type}') return 1;
         if (o.get('path') === '/documents/{type}/{year}') return 2;
         if (o.get('path') === '/document/{type}/{year}/{number}') return 1;
