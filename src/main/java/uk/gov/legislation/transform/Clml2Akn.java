@@ -58,11 +58,11 @@ public class Clml2Akn {
     }
 
     public static String serialize(XdmNode akn) throws SaxonApiException {
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        Serializer serializer = akn.getProcessor().newSerializer(out);
+        ByteArrayOutputStream output = new ByteArrayOutputStream();
+        Serializer serializer = akn.getProcessor().newSerializer(output);
         serializer.setOutputProperties(Properties);
         serializer.serialize(akn.asSource());
-        return new String(out.toByteArray(), StandardCharsets.UTF_8);
+        return output.toString(StandardCharsets.UTF_8);
     }
 
 }

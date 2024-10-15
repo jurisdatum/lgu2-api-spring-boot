@@ -15,25 +15,25 @@ import java.util.stream.StreamSupport;
 
 public class AkN {
 
-    private static XPathExecutable workUri;
-    private static XPathExecutable exprUri;
-    private static XPathExecutable longType;
-    private static XPathExecutable shortType;
-    private static XPathExecutable year;
-    private static XPathExecutable number;
-    private static XPathExecutable altNumbers;
-    private static XPathExecutable date;
-    private static XPathExecutable cite;
-    private static XPathExecutable status;
-    private static XPathExecutable title;
-    private static XPathExecutable lang;
-    private static XPathExecutable publisher;
-    private static XPathExecutable modified;
-    private static XPathExecutable versions;
-    private static XPathExecutable dcIdentifier;
-    private static XPathExecutable prevLink;
-    private static XPathExecutable nextLink;
-    private static XPathExecutable schedules;
+    private static final XPathExecutable workUri;
+    private static final XPathExecutable exprUri;
+    private static final XPathExecutable longType;
+    private static final XPathExecutable shortType;
+    private static final XPathExecutable year;
+    private static final XPathExecutable number;
+    private static final XPathExecutable altNumbers;
+    private static final XPathExecutable date;
+    private static final XPathExecutable cite;
+    private static final XPathExecutable status;
+    private static final XPathExecutable title;
+    private static final XPathExecutable lang;
+    private static final XPathExecutable publisher;
+    private static final XPathExecutable modified;
+    private static final XPathExecutable versions;
+    private static final XPathExecutable dcIdentifier;
+    private static final XPathExecutable prevLink;
+    private static final XPathExecutable nextLink;
+    private static final XPathExecutable schedules;
 
     static {
         XPathCompiler compiler = Helper.processor.newXPathCompiler();
@@ -98,7 +98,7 @@ public class AkN {
         }
         if (result == null)
             return null;
-        return result.stream().map(item -> item.getStringValue()).collect(Collectors.toList());
+        return result.stream().map(XdmItem::getStringValue).toList();
     }
 
     public static String getId(XdmNode akn) {
@@ -133,9 +133,9 @@ public class AkN {
         return Integer.parseInt(str);
     }
 
-    private static record AltNumber(String category, String value) implements DocumentList.Document.AltNumber { }
+    private record AltNumber(String category, String value) implements DocumentList.Document.AltNumber { }
 
-    public static List<AltNumber> getAltNumbers(XdmNode akn) {
+    private static List<AltNumber> getAltNumbers(XdmNode akn) {
         List<String> values = getMany(altNumbers, akn);
         if (values == null)
             return null;
@@ -143,7 +143,7 @@ public class AkN {
             String[] parts = value.split("\\.", 2);
             return new AltNumber(parts[0], parts[1].trim());
         });
-        return stream.collect(Collectors.toList());
+        return stream.toList();
     }
 
     public static LocalDate getDate(XdmNode akn) {
@@ -184,13 +184,13 @@ public class AkN {
             throw new RuntimeException("error evaluating xpath expression", e);
         }
         LinkedHashSet<String> versions = StreamSupport.stream(result.spliterator(), false)
-            .map(item -> item.getStringValue())
+            .map(XdmItem::getStringValue)
             .collect(Collectors.toCollection(LinkedHashSet::new));
         if (versions.contains("current")) {
             versions.remove("current");
             versions.add(current);
         }
-        versions.remove("prospective"); // ?!
+        versions.remove("prospective"); // FixMe ?!
         return versions.stream().toList();
     }
 
@@ -213,14 +213,14 @@ public class AkN {
         return link != null;
     }
 
-public static record Meta(
+public record Meta(
         String id,
         String longType,
         String shortType,
         int year,
         String regnalYear,
         int number,
-        List<AltNumber> altNumbers,
+        List<? extends DocumentList.Document.AltNumber> altNumbers,
         LocalDate date,
         String cite,
         String version,

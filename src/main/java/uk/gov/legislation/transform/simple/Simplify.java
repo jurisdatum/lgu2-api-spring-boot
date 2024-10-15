@@ -8,8 +8,7 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 
 public class Simplify {
@@ -20,14 +19,17 @@ public class Simplify {
 
     public Simplify() {
         XsltCompiler compiler = Helper.processor.newXsltCompiler();
-        InputStream stream = this.getClass().getResourceAsStream(stylesheet);
-        Source source = new StreamSource(stream, "simplify.xsl");
+        Source source;
+        try {
+            String systemId = this.getClass().getResource(stylesheet).toURI().toASCIIString();
+            source = new StreamSource(systemId);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
         try {
             executable = compiler.compile(source);
         } catch (SaxonApiException e) {
             throw new RuntimeException(e);
-        } finally {
-            try { stream.close(); } catch (IOException e) { }
         }
     }
 
@@ -44,7 +46,7 @@ public class Simplify {
         Source source = new StreamSource(input);
         Serializer destination = executable.getProcessor().newSerializer(output);
         transform(source, destination);
-        return new String(output.toByteArray(), StandardCharsets.UTF_8);
+        return output.toString(StandardCharsets.UTF_8);
     }
 
     public Contents contents(String clml) throws SaxonApiException, JsonProcessingException {
