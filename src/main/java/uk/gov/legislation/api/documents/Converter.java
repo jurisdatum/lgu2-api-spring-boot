@@ -24,7 +24,7 @@ class Converter {
 
     private record ByInitial(String initial, int count) implements DocumentList.ByInitial { }
 
-    private record Document(String id, String title, String altTitle, String longType, int year, int number, List<Converter.AltNumber> altNumbers, String cite, ZonedDateTime published, ZonedDateTime updated, String version) implements DocumentList.Document { }
+    private record Document(String id, String title, String altTitle, String longType, int year, int number, List<Converter.AltNumber> altNumbers, String cite, ZonedDateTime published, ZonedDateTime updated, String version, List<String> formats) implements DocumentList.Document { }
 
     private record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber { }
 
@@ -100,7 +100,8 @@ class Converter {
         ZonedDateTime published = entry.published;
         ZonedDateTime updated = entry.updated;
         String version = getVersion(entry.links);
-        return new Document(id, title, altTitle, longType, year, number, altNumbers, cite, published, updated, version);
+        List<String> formats = getFormats(entry.links);
+        return new Document(id, title, altTitle, longType, year, number, altNumbers, cite, published, updated, version, formats);
     }
 
     private static final Pattern Version = Pattern.compile("/([^/]+)/revision$");
@@ -113,6 +114,15 @@ class Converter {
         if (matcher.find())
             return matcher.group(1);
         return null;
+    }
+
+    private static List<String> getFormats(List<SearchResults.Link> links) {
+        return links.stream()
+                .filter(l -> "alternate".equals(l.rel))
+                .map(l -> l.type)
+                .filter(t -> "application/xml".equals(t) || "application/pdf".equals(t))
+                .map(t -> t.substring(12))
+                .toList();
     }
 
 }

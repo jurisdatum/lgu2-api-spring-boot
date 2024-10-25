@@ -2,8 +2,8 @@ package uk.gov.legislation.util;
 
 public interface AltNumber {
 
-    public String category();
+    String category();
 
-    public String value();
+    String value();
 
 }

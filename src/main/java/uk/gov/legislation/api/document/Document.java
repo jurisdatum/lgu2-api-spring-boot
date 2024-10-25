@@ -24,6 +24,7 @@ import java.util.Optional;
 
 @RestController
 @Tag(name = "Documents", description = "individual documents")
+@SuppressWarnings("unused")
 public class Document {
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
@@ -50,8 +51,7 @@ public class Document {
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn1 = clml2akn.transform(clml);
-        String akn = Clml2Akn.serialize(akn1);
-        return akn;
+        return Clml2Akn.serialize(akn1);
     }
 
     final Akn2Html akn2html = Transforms.akn2html();
@@ -60,11 +60,10 @@ public class Document {
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode akn = clml2akn.transform(clml);
-        String html = akn2html.transform(akn, true);
-        return html;
+        return akn2html.transform(akn, true);
     }
 
-    static record Response(Metadata meta, String html) { }
+    public record Response(Metadata meta, String html) { }
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
@@ -72,8 +71,7 @@ public class Document {
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn, false);
         Metadata meta = AkN.Meta.extract(akn);
-        Response response = new Response(meta, html);
-        return response;
+        return new Response(meta, html);
     }
 
 }

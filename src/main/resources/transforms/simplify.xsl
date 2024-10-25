@@ -37,6 +37,8 @@
         <xsl:apply-templates select="dc:publisher" />
         <xsl:apply-templates select="dc:modified" />
         <xsl:call-template name="versions" />
+        <xsl:call-template name="schedules" />
+        <xsl:call-template name="formats" />
         <xsl:call-template name="fragment-info" />
     </meta>
 </xsl:template>
@@ -128,6 +130,24 @@
     </hasVersion>
 </xsl:template>
 
+<xsl:template name="schedules">
+    <schedules>
+        <xsl:value-of select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
+    </schedules>
+</xsl:template>
+
+<xsl:template name="formats">
+    <formats>
+        <xsl:if test="exists(following-sibling::*)">
+            <format name="xml" />
+        </xsl:if>
+        <xsl:variable name="alternative" as="element()?" select="ukm:Alternatives/ukm:Alternative[ends-with(@URI, '.pdf')][not(@Language='Welsh')]" /> <!-- ToDo -->
+        <xsl:if test="exists($alternative)">
+            <format name="pdf" uri="{ $alternative/@URI }" />
+        </xsl:if>
+    </formats>
+</xsl:template>
+
 <xsl:template name="fragment-info">
     <fragment>
         <xsl:value-of select="dc:identifier" />
@@ -138,9 +158,6 @@
     <next>
         <xsl:value-of select="atom:link[@rel='next']/@href" />
     </next>
-    <schedules>
-        <xsl:value-of select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
-    </schedules>
 </xsl:template>
 
 <!-- ToC -->

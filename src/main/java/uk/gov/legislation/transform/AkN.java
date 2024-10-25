@@ -6,9 +6,7 @@ import uk.gov.legislation.api.documents.DocumentList;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
@@ -30,10 +28,12 @@ public class AkN {
     private static final XPathExecutable publisher;
     private static final XPathExecutable modified;
     private static final XPathExecutable versions;
+    private static final XPathExecutable schedules;
+    private static final XPathExecutable xmlFormat;
+    private static final XPathExecutable alternatives;
     private static final XPathExecutable dcIdentifier;
     private static final XPathExecutable prevLink;
     private static final XPathExecutable nextLink;
-    private static final XPathExecutable schedules;
 
     static {
         XPathCompiler compiler = Helper.processor.newXPathCompiler();
@@ -57,10 +57,12 @@ public class AkN {
             publisher = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:publisher");
             modified = compiler.compile("/akomaNtoso/*/meta/proprietary/dc:modified");
             versions = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://purl.org/dc/terms/hasVersion']/@title");
+            schedules = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href");
+            xmlFormat = compiler.compile("/*/*/*[not(self::meta)]");
+            alternatives = compiler.compile("/*/*/meta/proprietary/ukm:Alternatives/ukm:Alternative");
             dcIdentifier = compiler.compile("/*/*/meta/proprietary/dc:identifier");
             prevLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='prev']/@href");
             nextLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='next']/@href");
-            schedules = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href");
         } catch (SaxonApiException e) {
             throw new RuntimeException("error compiling xpath expression", e);
         }
@@ -83,7 +85,8 @@ public class AkN {
             return null;
         return result.getStringValue();
     }
-    private static List<String> getMany(XPathExecutable exec, XdmNode akn) {
+
+    private static XdmValue evaluate(XPathExecutable exec, XdmNode akn) {
         XPathSelector selector = exec.load();
         try {
             selector.setContextItem(akn);
@@ -96,6 +99,12 @@ public class AkN {
         } catch (SaxonApiException e) {
             throw new RuntimeException("error evaluating xpath expression", e);
         }
+        return result;
+    }
+
+    @SuppressWarnings("SameParameterValue")
+    private static List<String> getMany(XPathExecutable exec, XdmNode akn) {
+        XdmValue result = evaluate(exec, akn);
         if (result == null)
             return null;
         return result.stream().map(XdmItem::getStringValue).toList();
@@ -103,11 +112,15 @@ public class AkN {
 
     public static String getId(XdmNode akn) {
         String longId = get(workUri, akn);
+        if (longId == null)
+            return null;
         return longId.substring(33);
     }
 
     public static String getVersion(XdmNode akn, String id) {
         String uri = get(exprUri, akn);
+        if (uri == null)
+            return null;
         int start = 31 + id.length();
         return uri.substring(start);
     }
@@ -125,11 +138,15 @@ public class AkN {
 
     public static int getYear(XdmNode akn) {
         String str = get(year, akn);
+        if (str == null)
+            return 0;
         return Integer.parseInt(str);
     }
 
     public static int getNumber(XdmNode akn) {
         String str = get(number, akn);
+        if (str == null)
+            return 0;
         return Integer.parseInt(str);
     }
 
@@ -148,9 +165,13 @@ public class AkN {
 
     public static LocalDate getDate(XdmNode akn) {
         String str = get(date, akn);
+        if (str == null)
+            return null;
         return LocalDate.parse(str);
     }
+
     public static String getCite(XdmNode akn) { return get(cite, akn); }
+
     public static String getStatus(XdmNode akn) { return get(status, akn); }
 
     public static String getTitle(XdmNode akn) {
@@ -167,22 +188,13 @@ public class AkN {
 
     public static LocalDate getModified(XdmNode akn) {
         String str = get(modified, akn);
+        if (str == null)
+            return null;
         return LocalDate.parse(str);
     }
 
     public static List<String> getVersions(XdmNode akn, String current) {
-        XPathSelector selector = versions.load();
-        try {
-            selector.setContextItem(akn);
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error setting context item", e);
-        }
-        XdmValue result;
-        try {
-            result = selector.evaluate();
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error evaluating xpath expression", e);
-        }
+        XdmValue result = evaluate(versions, akn);
         LinkedHashSet<String> versions = StreamSupport.stream(result.spliterator(), false)
             .map(XdmItem::getStringValue)
             .collect(Collectors.toCollection(LinkedHashSet::new));
@@ -192,6 +204,32 @@ public class AkN {
         }
         versions.remove("prospective"); // FixMe ?!
         return versions.stream().toList();
+    }
+
+    public static boolean hasSchedules(XdmNode akn) {
+        String link = get(schedules, akn);
+        return link != null;
+    }
+
+    public record Format1(String name, String uri) implements uk.gov.legislation.api.document.Metadata.Format { }
+
+    public static List<Format1> getFormats(XdmNode akn) {
+        List<Format1> formats = new ArrayList<>(2);
+        if (!evaluate(xmlFormat, akn).isEmpty()) {
+            Format1 xml = new Format1("xml", null);
+            formats.add(xml);
+        }
+        evaluate(alternatives, akn).stream().forEach(i -> {
+            XdmNode e = (XdmNode) i;
+            final String uri = e.attribute("URI");
+            if (!uri.endsWith(".pdf"))
+                return;
+            if ("Welsh".equals(e.attribute("Language")))  // ToDo
+                return;
+            Format1 pdf = new Format1("pdf", uri);
+            formats.add(pdf);
+        });
+        return formats;
     }
 
     public static String getFragmentIdentifier(XdmNode akn) {
@@ -206,11 +244,6 @@ public class AkN {
     public static String getNextLink(XdmNode akn) {
         String link = get(nextLink, akn);
         return Links.extractFragmentIdentifierFromLink(link);
-    }
-
-    public static boolean hasSchedules(XdmNode akn) {
-        String link = get(schedules, akn);
-        return link != null;
     }
 
 public record Meta(
@@ -230,10 +263,11 @@ public record Meta(
         String publisher,
         LocalDate modified,
         List<String> versions,
+        boolean schedules,
+        List<Format1> formats,
         String fragment,
         String prev,
-        String next,
-        boolean schedules
+        String next
 
 ) implements Metadata {
 
@@ -241,7 +275,7 @@ public record Meta(
         String id = AkN.getId(akn);
         String longType = AkN.getLongType(akn);
         String shortType = AkN.getShortType(akn);
-        String regnalYear = AkN.getRegnalYear(id);
+        String regnalYear = id == null ? null : AkN.getRegnalYear(id);
         int year = AkN.getYear(akn);
         int number = AkN.getNumber(akn);
         List<AltNumber> altNumbers = AkN.getAltNumbers(akn);
@@ -254,14 +288,14 @@ public record Meta(
         String publisher = AkN.getPublisher(akn);
         LocalDate modified = AkN.getModified(akn);
         List<String> versions = AkN.getVersions(akn, version);
+        boolean schedules = AkN.hasSchedules(akn);
+        List<Format1> formats = AkN.getFormats(akn);
         String fragment = AkN.getFragmentIdentifier(akn);
         String prev = AkN.getPreviousLink(akn);
         String next = AkN.getNextLink(akn);
-        boolean schedules = AkN.hasSchedules(akn);
-        Meta meta = new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
-            version, status, title, lang, publisher, modified, versions,
-            fragment, prev, next, schedules);
-        return meta;
+        return new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
+            version, status, title, lang, publisher, modified, versions, schedules, formats,
+            fragment, prev, next);
     }
 
 }

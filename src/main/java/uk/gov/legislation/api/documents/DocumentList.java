@@ -9,133 +9,138 @@ import java.time.ZonedDateTime;
 import java.util.Collection;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public interface DocumentList {
 
     @JsonProperty(index = 1)
-    public Meta meta();
+    Meta meta();
 
     @JsonProperty(index = 2)
-    public List<? extends Document> documents();
+    List<? extends Document> documents();
 
     @Schema(name = "ListMetadata")
-    public interface Meta {
+    interface Meta {
 
         @JsonProperty(index = 1)
-        public int page();
+        int page();
 
         @JsonProperty(index = 2)
-        public int pageSize();
+        int pageSize();
 
         @JsonProperty(index = 3)
-        public int totalPages();
+        int totalPages();
 
         @JsonProperty(index = 4)
-        public LocalDateTime updated();
+        LocalDateTime updated();
 
         @JsonProperty(index = 5)
-        public Counts counts();
+        Counts counts();
 
         @JsonProperty(index = 6)
         @JsonInclude(JsonInclude.Include.NON_NULL)
-        public Collection<String> subjects();
+        Collection<String> subjects();
 
     }
 
-    public interface Counts {
+    interface Counts {
 
         @JsonProperty(index = 1)
-        public int total();
+        int total();
 
         @JsonProperty(index = 2)
-        public List<? extends ByType> byType();
+        List<? extends ByType> byType();
 
         @JsonProperty(index = 3)
-        public List<? extends ByYear> byYear();
+        List<? extends ByYear> byYear();
 
         @JsonProperty(index = 4)
         @JsonInclude(JsonInclude.Include.NON_NULL)
-        public List<? extends ByInitial> bySubjectInitial();
+        List<? extends ByInitial> bySubjectInitial();
 
     }
 
-    public interface ByType {
+    interface ByType {
 
         @JsonProperty(index = 1)
-        public String type();
+        String type();
 
         @JsonProperty(index = 2)
-        public int count();
+        int count();
 
     }
 
-    public interface ByYear {
+    interface ByYear {
 
         @JsonProperty(index = 1)
-        public int year();
+        int year();
 
         @JsonProperty(index = 2)
-        public int count();
+        int count();
 
     }
 
-    public interface ByInitial {
+    interface ByInitial {
 
         @JsonProperty(index = 1)
-        public String initial();
+        String initial();
 
         @JsonProperty(index = 2)
-        public int count();
+        int count();
 
     }
 
-    public interface Document {
+    interface Document {
 
         @JsonProperty(index = 1)
-        public String id();
+        String id();
 
         @JsonProperty(index = 2)
-        public String longType();
+        String longType();
 
         @JsonProperty(index = 3)
-        public int year();
+        int year();
 
         @JsonProperty(index = 4)
-        public int number();
+        int number();
 
         @JsonProperty(index = 5)
         @JsonInclude(JsonInclude.Include.NON_NULL)
-        public List<? extends AltNumber> altNumbers();
+        List<? extends AltNumber> altNumbers();
 
-        public static interface AltNumber {
+        interface AltNumber {
 
             @JsonProperty(index = 1)
             @Schema(example = "C", allowableValues = { "C", "L", "S", "NI", "W", "Cy", "Regnal" })
-            public String category();
+            String category();
 
             @JsonProperty(index = 2)
             @Schema(example = "1")
-            public String value();
+            String value();
 
         }
 
         @JsonProperty(index = 6)
-        public String cite();
+        String cite();
 
         @JsonProperty(index = 7)
-        public String title();
+        String title();
 
         @JsonProperty(index = 8)
         @JsonInclude(JsonInclude.Include.NON_NULL)
-        public String altTitle();
+        String altTitle();
 
         @JsonProperty(index = 9)
-        public ZonedDateTime published();
+        ZonedDateTime published();
 
         @JsonProperty(index = 10)
-        public ZonedDateTime updated();
+        ZonedDateTime updated();
 
         @JsonProperty(index = 11)
-        public String version();
+        String version();
+
+        @JsonProperty(index = 12)
+        @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
+        List<String> formats();
 
     }
 

@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.List;
 
+@SuppressWarnings("unused")
 public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
     public String id;
@@ -115,6 +116,34 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
     @JsonSetter
     public void setVersions(List<String> value) { _versions = value; }
 
+    private boolean schedules;
+
+    public boolean schedules() { return schedules; }
+    @JsonSetter("schedules")
+    public void setSchedules(String value) { schedules = value != null && !value.isBlank(); }
+
+    /* formats */
+
+    @JacksonXmlElementWrapper(localName = "formats")
+    @JacksonXmlProperty(localName = "format")
+    public List<Format> formats;
+
+    public static class Format implements uk.gov.legislation.api.document.Metadata.Format {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String name;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String uri;
+
+        public String name() { return name; }
+        public String uri() { return uri; }
+    }
+
+    public List<Format> formats() { return formats; }
+
+    /* fragment info */
+
     private String fragment;
     public String fragment() { return fragment; }
     @JsonSetter("fragment")
@@ -129,11 +158,5 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
     public String next() { return next; }
     @JsonSetter("next")
     public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
-
-    private boolean schedules;
-
-    public boolean schedules() { return schedules; }
-    @JsonSetter("schedules")
-    public void setSchedules(String value) { schedules = value != null && !value.isBlank(); }
 
 }

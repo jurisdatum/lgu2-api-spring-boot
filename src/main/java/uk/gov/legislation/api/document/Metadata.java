@@ -10,6 +10,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Schema(name = "DocumentMetadata")
+@SuppressWarnings("unused")
 public interface Metadata {
 
     @JsonProperty(index = 1)
@@ -82,16 +83,31 @@ public interface Metadata {
     boolean schedules();
 
     @JsonProperty(index = 18)
+    List<? extends Format> formats();
+
+    @Schema(name = "Format")
+    interface Format {
+
+        @JsonProperty(index = 1)
+        @Schema(allowableValues = { "xml", "pdf" })
+        String name();
+
+        @JsonProperty(index = 2)
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        String uri();
+    }
+
+    @JsonProperty(index = 19)
     @Schema(example = "section/2", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String fragment();
 
-    @JsonProperty(value = "prev", index = 19)
+    @JsonProperty(value = "prev", index = 20)
     @Schema(example = "section/1", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String prev();
 
-    @JsonProperty(value = "next", index = 20)
+    @JsonProperty(value = "next", index = 21)
     @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String next();
