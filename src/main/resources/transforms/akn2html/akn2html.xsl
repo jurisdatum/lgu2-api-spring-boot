@@ -17,6 +17,7 @@
 
 <xsl:param name="standalone" as="xs:boolean" select="true()" />
 <xsl:param name="css-path" as="xs:string" select="''" />
+<xsl:param name="images-path" as="xs:string" select="'/static/lgu1/images/'" />
 <xsl:param name="ldapp" as="xs:boolean" select="ldapp:is-ldapp(.)" />
 
 <xsl:include href="ldapp.xsl" />
@@ -342,9 +343,31 @@
 <xsl:template match="preface">
 	<div>
 		<xsl:call-template name="attrs" />
+		<xsl:call-template name="add-crest" />
 		<xsl:apply-templates />
 		<xsl:call-template name="annotations" />
 	</div>
+</xsl:template>
+
+<xsl:template name="add-crest">
+	<xsl:if test="$doc-category = 'primary'">
+		<p class="crest">
+			<xsl:choose>
+				<xsl:when test="$doc-short-type = 'asp'">
+					<img src="{ concat($images-path, 'crests/asp.gif') }" alt="Royal arms" title="Royal arms" width="150" height="133"/>
+				</xsl:when>
+				<xsl:when test="$doc-short-type = 'mwa'">
+					<img src="{ concat($images-path, 'crests/mwa.gif') }" alt="Welsh Royal arms" title="Welsh Royal arms" width="147" height="188"/>
+				</xsl:when>
+				<xsl:when test="$doc-short-type = ('anaw','asc')">
+					<img src="{ concat($images-path, 'crests/mwa.gif') }" alt="Welsh Royal arms" title="Welsh Royal arms" width="147" height="188"/>
+				</xsl:when>
+				<xsl:otherwise>
+					<img src="{ concat($images-path, 'crests/ukpga.gif') }" alt="Royal arms" title="Royal arms" width="156" height="128"/>
+				</xsl:otherwise>
+			</xsl:choose>
+		</p>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="preface/block[@name='title']">

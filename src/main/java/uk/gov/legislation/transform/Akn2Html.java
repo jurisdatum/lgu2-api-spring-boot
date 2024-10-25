@@ -12,7 +12,8 @@ public class Akn2Html {
 
     private static final String stylesheet = "/transforms/akn2html/akn2html.xsl";
 
-    private static final String CSS_PATH_ENV_VAR = "CSS_PATH";
+//    private static final String CSS_PATH_ENV_VAR = "CSS_PATH";
+//    private static final String IMAGES_PATH = "/static/lgu1/images/";
 
     private final XsltExecutable executable;
 
@@ -35,9 +36,10 @@ public class Akn2Html {
     private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();
         transform.setParameter(new QName("standalone"), new XdmAtomicValue(standalone));
-        String cssPath = System.getenv(CSS_PATH_ENV_VAR);
-        if (cssPath != null)
-            transform.setParameter(new QName("css-path"), new XdmAtomicValue(cssPath));
+//        String cssPath = System.getenv(CSS_PATH_ENV_VAR);
+//        if (cssPath != null)
+//            transform.setParameter(new QName("css-path"), new XdmAtomicValue(cssPath));
+//        transform.setParameter(new QName("images-path"), new XdmAtomicValue(IMAGES_PATH));
         transform.setSource(akn);
         transform.setDestination(html);
         transform.transform();
