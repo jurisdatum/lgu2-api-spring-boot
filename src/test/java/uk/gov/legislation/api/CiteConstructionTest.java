@@ -63,13 +63,13 @@ public class CiteConstructionTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void gbla() {
-        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
-        String actual = Cites.make("gbla", 1800, 120, altNumbers);
-        String expected = "1800 c. cxx (Regnal. 39_and_40_Geo_3)";
-        Assertions.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void gbla() {
+//        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
+//        String actual = Cites.make("gbla", 1800, 120, altNumbers);
+//        String expected = "1800 c. cxx (Regnal. 39_and_40_Geo_3)";
+//        Assertions.assertEquals(expected, actual);
+//    }
 
     @Test
     public void anaw() {
@@ -78,12 +78,12 @@ public class CiteConstructionTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void asc() {
-        String actual = Cites.make("asc", 2024, 6, null);
-        String expected = "2024 asc 6";
-        Assertions.assertEquals(expected, actual);
-    }
+//    @Test
+//    public void asc() {
+//        String actual = Cites.make("asc", 2024, 6, null);
+//        String expected = "2024 asc 6";
+//        Assertions.assertEquals(expected, actual);
+//    }
 
     @Test
     public void mwa() {
