@@ -141,7 +141,7 @@
         <xsl:if test="exists(following-sibling::*)">
             <format name="xml" />
         </xsl:if>
-        <xsl:variable name="alternative" as="element()?" select="ukm:Alternatives/ukm:Alternative[ends-with(@URI, '.pdf')][not(@Language='Welsh')]" /> <!-- ToDo -->
+        <xsl:variable name="alternative" as="element()?" select="ukm:Alternatives/ukm:Alternative[ends-with(@URI, '.pdf')][not(@Language=('Welsh','Mixed'))]" /> <!-- ToDo -->
         <xsl:if test="exists($alternative)">
             <format name="pdf" uri="{ $alternative/@URI }" />
         </xsl:if>
