@@ -20,6 +20,7 @@ import java.util.Optional;
 
 @RestController
 @Tag(name = "Documents")
+@SuppressWarnings("unused")
 public class Fragment {
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_XML_VALUE)

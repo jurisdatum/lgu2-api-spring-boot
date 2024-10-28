@@ -4,12 +4,12 @@ import java.net.URI;
 
 public interface TypedValue {
 
-    public String value();
+    String value();
 
-    public String type();
+    String type();
 
-    public URI datatype();
+    URI datatype();
 
-    public String lang();
+    String lang();
 
 }

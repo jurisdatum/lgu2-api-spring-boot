@@ -18,6 +18,7 @@ import java.util.Optional;
 
 @RestController
 @Tag(name = "Documents")
+@SuppressWarnings("unused")
 public class Contents {
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)

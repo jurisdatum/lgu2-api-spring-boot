@@ -26,13 +26,13 @@ public class RdfMapper {
 //            field.setAccessible(true);
             try {
                 if (field.getType().equals(String.class))
-                    field.set(t, values.get(0).value());
+                    field.set(t, values.getFirst().value());
                 else if (field.getType().equals(int.class))
-                    field.setInt(t, Integer.parseInt(values.get(0).value()));
+                    field.setInt(t, Integer.parseInt(values.getFirst().value()));
                 else if (field.getType().equals(List.class)) {
 //                    Type t2 = ((ParameterizedType) field.getGenericType()).getActualTypeArguments()[0];
 //                    if (t2.equals(String.class))
-                        field.set(t, values.stream().map(v -> v.value()).collect(Collectors.toList()));
+                        field.set(t, values.stream().map(TypedValue::value).collect(Collectors.toList()));
                 } else
                     throw new RuntimeException();
             } catch (IllegalAccessException e) {

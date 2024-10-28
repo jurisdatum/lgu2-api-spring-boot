@@ -18,9 +18,11 @@ public class MarkLogic {
     private static final String Auth = "Basic " + Base64.getEncoder().encodeToString((USERNAME + ":" + PASSWORD).getBytes());
 
     static String get(URI uri) throws IOException, InterruptedException {
-        HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder().uri(uri).header("Authorization", Auth).build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response;
+        try (HttpClient client = HttpClient.newHttpClient()) {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        }
         if (response.statusCode() >= 400)
             throw new RuntimeException(response.body());
         String xml = response.body();

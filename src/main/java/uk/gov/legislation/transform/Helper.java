@@ -10,6 +10,7 @@ import java.util.Properties;
 public class Helper {
 
     public static final Processor processor = new Processor(false);
+
     public static class SerializerFactory extends net.sf.saxon.lib.SerializerFactory {
 
         public SerializerFactory(Configuration config) {

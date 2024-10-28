@@ -26,7 +26,7 @@ public class Types {
         List<TypeWrapper> primarily = uk.gov.legislation.util.Types.primarilyAppliesToUK()
                 .stream().map(TypeWrapper::new).toList();
         List<TypeWrapper> possibly = uk.gov.legislation.util.Types.possiblyAppliesToUK()
-                .stream().map(TypeWrapper::new).toList();;
+                .stream().map(TypeWrapper::new).toList();
         return new TypesForCountry() {
             public String country() { return "UK"; }
             public List<TypeWrapper> primarily() { return primarily; }
