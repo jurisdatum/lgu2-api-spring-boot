@@ -9,6 +9,7 @@ import uk.gov.legislation.util.*;
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Optional;
 
 @SuppressWarnings("unused")
 public class Metadata implements uk.gov.legislation.api.document.Metadata {
@@ -124,11 +125,7 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
 
     /* formats */
 
-    @JacksonXmlElementWrapper(localName = "formats")
-    @JacksonXmlProperty(localName = "format")
-    public List<Format> formats;
-
-    public static class Format implements uk.gov.legislation.api.document.Metadata.Format {
+    public static class Format {
 
         @JacksonXmlProperty(isAttribute = true)
         public String name;
@@ -136,11 +133,20 @@ public class Metadata implements uk.gov.legislation.api.document.Metadata {
         @JacksonXmlProperty(isAttribute = true)
         public String uri;
 
-        public String name() { return name; }
-        public String uri() { return uri; }
     }
 
-    public List<Format> formats() { return formats; }
+    private List<Format> _formats;
+
+    @JacksonXmlElementWrapper(localName = "formats")
+    @JacksonXmlProperty(localName = "format")
+    @JsonSetter
+    public void setFormats(List<Format> formats) { _formats = formats; }
+
+    public List<String> formats() { return _formats.stream().map(f -> f.name).toList(); }
+
+    public Optional<String> pdfFormatUri() {
+       return _formats.stream().filter(f -> "pdf".equals(f.name)).map(f -> f.uri).findAny();
+    }
 
     /* fragment info */
 

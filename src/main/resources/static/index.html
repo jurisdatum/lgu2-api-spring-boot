@@ -31,7 +31,9 @@ const operationsSorter = (o1, o2) => {
         if (o.get('path') === '/document/{type}/{year}/{number}') return 1;
         if (o.get('path') === '/contents/{type}/{year}/{number}') return 2;
         if (o.get('path') === '/fragment/{type}/{year}/{number}/{section}') return 3;
-        return 4;
+        if (o.get('path') === '/pdf/{type}/{year}/{number}') return 4;
+        if (o.get('path') === '/thumbnail/{type}/{year}/{number}') return 5;
+        return 6;
     };
     return f(o1) - f(o2);
 };

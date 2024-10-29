@@ -83,19 +83,8 @@ public interface Metadata {
     boolean schedules();
 
     @JsonProperty(index = 18)
-    List<? extends Format> formats();
-
-    @Schema(name = "Format")
-    interface Format {
-
-        @JsonProperty(index = 1)
-        @Schema(allowableValues = { "xml", "pdf" })
-        String name();
-
-        @JsonProperty(index = 2)
-        @JsonInclude(JsonInclude.Include.NON_NULL)
-        String uri();
-    }
+    @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
+    List<String> formats();
 
     @JsonProperty(index = 19)
     @Schema(example = "section/2", requiredMode = RequiredMode.NOT_REQUIRED)

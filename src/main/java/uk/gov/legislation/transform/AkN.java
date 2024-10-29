@@ -211,14 +211,10 @@ public class AkN {
         return link != null;
     }
 
-    public record Format1(String name, String uri) implements uk.gov.legislation.api.document.Metadata.Format { }
-
-    public static List<Format1> getFormats(XdmNode akn) {
-        List<Format1> formats = new ArrayList<>(2);
-        if (!evaluate(xmlFormat, akn).isEmpty()) {
-            Format1 xml = new Format1("xml", null);
-            formats.add(xml);
-        }
+    public static List<String> getFormats(XdmNode akn) {
+        List<String> formats = new ArrayList<>(2);
+        if (!evaluate(xmlFormat, akn).isEmpty())
+            formats.add("xml");
         evaluate(alternatives, akn).stream().forEach(i -> {
             XdmNode e = (XdmNode) i;
             final String uri = e.attribute("URI");
@@ -226,8 +222,9 @@ public class AkN {
                 return;
             if ("Welsh".equals(e.attribute("Language")))  // ToDo
                 return;
-            Format1 pdf = new Format1("pdf", uri);
-            formats.add(pdf);
+            if ("Mixed".equals(e.attribute("Language")))  // ToDo
+                return;
+            formats.add("pdf");
         });
         return formats;
     }
@@ -264,7 +261,7 @@ public record Meta(
         LocalDate modified,
         List<String> versions,
         boolean schedules,
-        List<Format1> formats,
+        List<String> formats,
         String fragment,
         String prev,
         String next
@@ -289,7 +286,7 @@ public record Meta(
         LocalDate modified = AkN.getModified(akn);
         List<String> versions = AkN.getVersions(akn, version);
         boolean schedules = AkN.hasSchedules(akn);
-        List<Format1> formats = AkN.getFormats(akn);
+        List<String> formats = AkN.getFormats(akn);
         String fragment = AkN.getFragmentIdentifier(akn);
         String prev = AkN.getPreviousLink(akn);
         String next = AkN.getNextLink(akn);
