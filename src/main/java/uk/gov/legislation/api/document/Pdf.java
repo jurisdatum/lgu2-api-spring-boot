@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.simple.Contents;
+import uk.gov.legislation.transform.simple.Simplify;
 
 import java.io.IOException;
 import java.net.URI;
@@ -47,6 +48,9 @@ public class Pdf {
         return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
     }
 
+    @Autowired
+    private Simplify simplifier;
+
     private Optional<String> getPdfUrl(String type, int year, int number, String version) throws IOException, InterruptedException, SaxonApiException {
         String clml;
         try {
@@ -54,7 +58,7 @@ public class Pdf {
         } catch (NoDocumentException e) {
             return Optional.empty();
         }
-        Contents toc = Transforms.simplifier().contents(clml);
+        Contents toc = simplifier.contents(clml);
         return toc.meta().pdfFormatUri();
     }
 

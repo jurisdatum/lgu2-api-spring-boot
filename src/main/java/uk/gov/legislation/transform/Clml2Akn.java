@@ -1,6 +1,7 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
+import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -11,6 +12,7 @@ import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
+@Service
 public class Clml2Akn {
 
     private static final String stylesheet = "/transforms/clml2akn/clml2akn.xsl";

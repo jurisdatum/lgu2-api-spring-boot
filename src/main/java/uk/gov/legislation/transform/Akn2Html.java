@@ -1,6 +1,7 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
+import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -8,6 +9,7 @@ import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.Properties;
 
+@Service
 public class Akn2Html {
 
     private static final String stylesheet = "/transforms/akn2html/akn2html.xsl";

@@ -49,7 +49,8 @@ public class Document {
         return clml;
     }
 
-    final Clml2Akn clml2akn = Transforms.clml2akn();
+    @Autowired
+    private Clml2Akn clml2akn;
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
@@ -58,7 +59,8 @@ public class Document {
         return Clml2Akn.serialize(akn1);
     }
 
-    final Akn2Html akn2html = Transforms.akn2html();
+    @Autowired
+    private Akn2Html akn2html;
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.TEXT_HTML_VALUE)
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {

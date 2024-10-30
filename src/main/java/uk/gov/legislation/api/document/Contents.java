@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.Optional;
 
@@ -37,17 +38,23 @@ public class Contents {
         return clml;
     }
 
+    @Autowired
+    private Clml2Akn clml2akn;
+
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/akn+xml")
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
-        XdmNode node = Transforms.clml2akn().transform(clml);
+        XdmNode node = clml2akn.transform(clml);
         return Clml2Akn.serialize(node);
     }
+
+    @Autowired
+    private Simplify simplifier;
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public TableOfContents json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
-        return Transforms.simplifier().contents(clml);
+        return simplifier.contents(clml);
     }
 
 }

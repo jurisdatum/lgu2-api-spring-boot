@@ -14,6 +14,7 @@ import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.AkN;
+import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 
 import java.io.IOException;
@@ -39,25 +40,31 @@ public class Fragment {
         return clml;
     }
 
+    @Autowired
+    private Clml2Akn clml2akn;
+
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = "application/akn+xml")
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
-        XdmNode akn1 = Transforms.clml2akn().transform(clml);
+        XdmNode akn1 = clml2akn.transform(clml);
         return Clml2Akn.serialize(akn1);
     }
+
+    @Autowired
+    private Akn2Html akn2html;
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.TEXT_HTML_VALUE)
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
-        XdmNode akn = Transforms.clml2akn().transform(clml);
-        return Transforms.akn2html().transform(akn, true);
+        XdmNode akn = clml2akn.transform(clml);
+        return akn2html.transform(akn, true);
     }
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Document.Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
-        XdmNode akn = Transforms.clml2akn().transform(clml);
-        String html = Transforms.akn2html().transform(akn, false);
+        XdmNode akn = clml2akn.transform(clml);
+        String html = akn2html.transform(akn, false);
         AkN.Meta meta = AkN.Meta.extract(akn);
         return new Document.Response(meta, html);
     }

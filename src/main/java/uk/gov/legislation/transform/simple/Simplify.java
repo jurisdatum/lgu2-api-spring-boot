@@ -2,6 +2,7 @@ package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.*;
+import org.springframework.stereotype.Service;
 import uk.gov.legislation.transform.Helper;
 
 import javax.xml.transform.Source;
@@ -11,6 +12,7 @@ import java.io.ByteArrayOutputStream;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 
+@Service
 public class Simplify {
 
     private static final String stylesheet = "/transforms/simplify.xsl";
