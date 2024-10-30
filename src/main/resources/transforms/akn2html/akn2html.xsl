@@ -187,8 +187,6 @@
 <!-- templates -->
 
 <xsl:template match="akomaNtoso[$standalone = true()]">
-	<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
-</xsl:text>
 	<html>
 		<head>
 			<meta charset="utf-8" />
