@@ -146,6 +146,10 @@
 </xsl:template>
 
 
+<!-- FixMe: this should someday be removed -->
+<xsl:template match="Q{http://www.tso.co.uk/assets/namespace/error}Warning" />
+
+
 <!-- default -->
 
 <xsl:template match="*">
