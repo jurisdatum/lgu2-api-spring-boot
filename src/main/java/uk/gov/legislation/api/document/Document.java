@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.XdmNode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,6 +28,9 @@ import java.util.Optional;
 @SuppressWarnings("unused")
 public class Document {
 
+    @Autowired
+    private Legislation db;
+
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
     @Operation(summary = "the content of a document", responses = {
         @ApiResponse(
@@ -38,7 +42,7 @@ public class Document {
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {
-            clml = Legislation.getDocument(type, year, number, version);
+            clml = db.getDocument(type, year, number, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }

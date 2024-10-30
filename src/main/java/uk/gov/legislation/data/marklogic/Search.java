@@ -1,18 +1,23 @@
 package uk.gov.legislation.data.marklogic;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import uk.gov.legislation.util.Type;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 
+@Service
 public class Search {
 
-    static final String Endpoint = MarkLogic.BASE + "search.xq";
+    static final String Endpoint = "search.xq";
 
-    public static SearchResults byType(String type, int page) throws IOException, InterruptedException {
+    @Autowired
+    private MarkLogic db;
+
+    public SearchResults byType(String type, int page) throws IOException, InterruptedException {
         String xml = byTypeAtom(type, page);
         try {
             return SearchResults.parse(xml);
@@ -23,17 +28,16 @@ public class Search {
 
     // series can be 'w', 's', 'ni', 'l', 'c'
 
-    public static String byTypeAtom(String type, int page) throws IOException, InterruptedException {
+    public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&page=" + page;
         if (type.equals(Type.WSI.shortName()))
             query += "&series=w";
         else if (type.equals(Type.NISI.shortName()))
             query += "&series=ni";
-        URI uri = URI.create(Endpoint + query);
-        return MarkLogic.get(uri);
+        return db.get(Endpoint, query);
     }
 
-    public static SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
+    public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
         String xml = byTypeAndYearAtom(type, year, page);
         try {
             return SearchResults.parse(xml);
@@ -42,14 +46,13 @@ public class Search {
         }
     }
 
-    public static String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
+    public String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&year=" + year + "&page=" + page;
         if (type.equals(Type.WSI.shortName()))
             query += "&series=w";
         else if (type.equals(Type.NISI.shortName()))
             query += "&series=ni";
-        URI uri = URI.create(Endpoint + query);
-        return MarkLogic.get(uri);
+        return db.get(Endpoint, query);
     }
 
 }

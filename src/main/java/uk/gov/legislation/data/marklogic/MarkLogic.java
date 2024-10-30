@@ -1,5 +1,10 @@
 package uk.gov.legislation.data.marklogic;
 
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Service;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -7,17 +12,28 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.Base64;
 
+@Service
 public class MarkLogic {
 
-    private static final String USERNAME = System.getenv("MARKLOGIC_USERNAME");
-    private static final String PASSWORD = System.getenv("MARKLOGIC_PASSWORD");
-    private static final String HOST = System.getenv("MARKLOGIC_HOST");
-    private static final String PORT = System.getenv("MARKLOGIC_PORT");
-    static final String BASE = "http://" + HOST + ":" + PORT + "/";
+    @Autowired
+    private Environment env;
 
-    private static final String Auth = "Basic " + Base64.getEncoder().encodeToString((USERNAME + ":" + PASSWORD).getBytes());
+    @PostConstruct
+    public void init() {
+        String host = env.getProperty("MARKLOGIC_HOST");
+        String port = env.getProperty("MARKLOGIC_PORT");
+        String username = env.getProperty("MARKLOGIC_USERNAME");
+        String password = env.getProperty("MARKLOGIC_PASSWORD");
+        Base = "http://" + host + ":" + port + "/";
+        Auth = "Basic " + Base64.getEncoder().encodeToString((username + ":" + password).getBytes());
+    }
 
-    static String get(URI uri) throws IOException, InterruptedException {
+    private String Base;
+
+    private String Auth;
+
+    String get(String endpoint, String query) throws IOException, InterruptedException {
+        URI uri = URI.create(Base + endpoint + query);
         HttpRequest request = HttpRequest.newBuilder().uri(uri).header("Authorization", Auth).build();
         HttpResponse<String> response;
         try (HttpClient client = HttpClient.newHttpClient()) {
@@ -25,8 +41,7 @@ public class MarkLogic {
         }
         if (response.statusCode() >= 400)
             throw new RuntimeException(response.body());
-        String xml = response.body();
-        return xml;
+        return response.body();
     }
 
 }

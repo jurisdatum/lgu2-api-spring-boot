@@ -3,6 +3,7 @@ package uk.gov.legislation.api.document;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.SaxonApiException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,6 +22,9 @@ import java.util.Optional;
 @Tag(name = "Documents")
 @SuppressWarnings("unused")
 public class Pdf {
+
+    @Autowired
+    private Legislation db;
 
     @GetMapping(value = "/pdf/{type}/{year}/{number}")
     @Operation(summary = "an original PDF version")
@@ -46,7 +50,7 @@ public class Pdf {
     private Optional<String> getPdfUrl(String type, int year, int number, String version) throws IOException, InterruptedException, SaxonApiException {
         String clml;
         try {
-            clml = Legislation.getTableOfContents(type, year, number, version == null ? Optional.empty() : Optional.of(version));
+            clml = db.getTableOfContents(type, year, number, version == null ? Optional.empty() : Optional.of(version));
         } catch (NoDocumentException e) {
             return Optional.empty();
         }

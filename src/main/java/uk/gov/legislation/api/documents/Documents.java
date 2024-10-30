@@ -1,6 +1,7 @@
 package uk.gov.legislation.api.documents;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,13 +17,17 @@ import java.io.IOException;
 
 @RestController
 @Tag(name = "Document lists", description = "lists of documents")
+@SuppressWarnings("unused")
 public class Documents {
+
+    @Autowired
+    private Search db;
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_JSON_VALUE)
     public DocumentList docs(@PathVariable String type, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
-        SearchResults results = Search.byType(type, page);
+        SearchResults results = db.byType(type, page);
         return Converter.convert(results);
     }
 
@@ -31,7 +36,7 @@ public class Documents {
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
         try {
-            return Search.byTypeAtom(type, page);
+            return db.byTypeAtom(type, page);
         } catch (IOException | InterruptedException e) {
             throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
         }
@@ -43,7 +48,7 @@ public class Documents {
     public DocumentList typeAndYear(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
-        SearchResults results = Search.byTypeAndYear(type, year, page);
+        SearchResults results = db.byTypeAndYear(type, year, page);
         return Converter.convert(results);
     }
 
@@ -51,8 +56,7 @@ public class Documents {
     public String typeAndYearFeed(@PathVariable String type, @PathVariable int year, @RequestParam(value = "page", defaultValue = "1") int page) throws IOException, InterruptedException {
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
-        String results = Search.byTypeAndYearAtom(type, year, page);
-        return results;
+        return db.byTypeAndYearAtom(type, year, page);
     }
 
     public static class UnknownTypeException extends ResponseStatusException {

@@ -3,6 +3,7 @@ package uk.gov.legislation.api.document;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.XdmNode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,12 +24,15 @@ import java.util.Optional;
 @SuppressWarnings("unused")
 public class Fragment {
 
+    @Autowired
+    private Legislation db;
+
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_XML_VALUE)
     @Operation(summary = "part of a document")
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws IOException, InterruptedException {
         String clml;
         try {
-            clml = Legislation.getDocumentSection(type, year, number, section, version);
+            clml = db.getDocumentSection(type, year, number, section, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
@@ -39,16 +43,14 @@ public class Fragment {
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
         XdmNode akn1 = Transforms.clml2akn().transform(clml);
-        String akn = Clml2Akn.serialize(akn1);
-        return akn;
+        return Clml2Akn.serialize(akn1);
     }
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.TEXT_HTML_VALUE)
     public String html(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
         XdmNode akn = Transforms.clml2akn().transform(clml);
-        String html = Transforms.akn2html().transform(akn, true);
-        return html;
+        return Transforms.akn2html().transform(akn, true);
     }
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -57,8 +59,7 @@ public class Fragment {
         XdmNode akn = Transforms.clml2akn().transform(clml);
         String html = Transforms.akn2html().transform(akn, false);
         AkN.Meta meta = AkN.Meta.extract(akn);
-        Document.Response response = new Document.Response(meta, html);
-        return response;
+        return new Document.Response(meta, html);
     }
 
 }

@@ -1,17 +1,23 @@
 package uk.gov.legislation.data.marklogic;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import uk.gov.legislation.util.Links;
+
 import java.io.IOException;
-import java.net.URI;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
-import uk.gov.legislation.util.Links;
 
+@Service
 public class Legislation {
 
-    static final String Endpoint = MarkLogic.BASE + "legislation.xq";
+    static final String Endpoint = "legislation.xq";
 
-    public static String getDocument(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    @Autowired
+    private MarkLogic db;
+
+    public String getDocument(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
         String query =
             "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + year +
@@ -28,7 +34,7 @@ public class Legislation {
         }
     }
 
-    public static String getTableOfContents(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    public String getTableOfContents(String type, int year, int number, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
         String query =
             "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + year +
@@ -46,7 +52,7 @@ public class Legislation {
         }
     }
 
-    public static String getDocumentSection(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    public String getDocumentSection(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
         String query =
             "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) +
             "&year=" + year +
@@ -66,9 +72,8 @@ public class Legislation {
         }
     }
 
-    private static String get(String query) throws IOException, InterruptedException, NoDocumentException, Redirect {
-        URI uri = URI.create(Endpoint + query);
-        String xml = MarkLogic.get(uri);
+    private String get(String query) throws IOException, InterruptedException, NoDocumentException, Redirect {
+        String xml = db.get(Endpoint, query);
         Error error;
         try {
             error = Error.parse(xml);

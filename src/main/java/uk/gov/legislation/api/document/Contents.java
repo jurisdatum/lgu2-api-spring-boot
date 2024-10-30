@@ -3,6 +3,7 @@ package uk.gov.legislation.api.document;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.XdmNode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,12 +22,15 @@ import java.util.Optional;
 @SuppressWarnings("unused")
 public class Contents {
 
+    @Autowired
+    private Legislation db;
+
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = MediaType.APPLICATION_XML_VALUE)
     @Operation(summary = "table of contents")
     public String clml(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml;
         try {
-            clml = Legislation.getTableOfContents(type, year, number, version);
+            clml = db.getTableOfContents(type, year, number, version);
         } catch (NoDocumentException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
@@ -37,15 +41,13 @@ public class Contents {
     public String akn(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
         XdmNode node = Transforms.clml2akn().transform(clml);
-        String akn = Clml2Akn.serialize(node);
-        return akn;
+        return Clml2Akn.serialize(node);
     }
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
     public TableOfContents json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, version);
-        TableOfContents simple = Transforms.simplifier().contents(clml);
-        return simple;
+        return Transforms.simplifier().contents(clml);
     }
 
 }
