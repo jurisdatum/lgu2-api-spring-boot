@@ -22,6 +22,7 @@
 
 <xsl:include href="ldapp.xsl" />
 <xsl:include href="annotations.xsl" />
+<xsl:include href="repeals.xsl" />
 
 <xsl:output method="html" include-content-type="no" encoding="utf-8" indent="yes" omit-xml-declaration="yes" />
 
@@ -650,6 +651,14 @@
 		<xsl:call-template name="attrs" />
 		<xsl:apply-templates select="node() except authorialNote[@class='referenceNote']" />
 	</span>
+</xsl:template>
+
+<xsl:template match="blockContainer[@class=('explanatoryNote','explanatoryNotes','earlierOrders','commencementHistory')]">
+	<div>
+		<xsl:call-template name="attrs" />
+		<xsl:apply-templates />
+		<xsl:call-template name="annotations" />
+	</div>
 </xsl:template>
 
 <xsl:template match="blockContainer[@class=('explanatoryNote','explanatoryNotes','earlierOrders','commencementHistory')]/heading">
