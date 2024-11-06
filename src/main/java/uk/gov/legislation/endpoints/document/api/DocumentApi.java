@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -62,7 +63,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version
-    ) throws Exception;
+    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
 
     /**
      * Retrieves document content in HTML format.
@@ -83,7 +84,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version
-    ) throws Exception;
+    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
 
     /**
      * Record representing the response structure for JSON document content.
@@ -109,5 +110,5 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version
-    ) throws Exception;
+    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
 }

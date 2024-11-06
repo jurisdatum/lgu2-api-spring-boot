@@ -21,6 +21,8 @@ import java.util.Optional;
  */
 @RestController
 public class DocumentApiController implements DocumentApi {
+    private static final String DOCUMENT_NOT_FOUND_MESSAGE = "Document not found for type: %s, year: %d, number: %d";
+
 
     private final Legislation legislationService;
     private final Clml2Akn clmlToAknTransformer;
@@ -54,14 +56,14 @@ public class DocumentApiController implements DocumentApi {
                 .map(clml -> ResponseEntity.ok()
                         .contentType(MediaType.APPLICATION_XML)
                         .body(clml))
-                .orElseThrow(() -> new NoDocumentException("Document not found"));
+                .orElseThrow(() -> new NoDocumentException(String.format(DOCUMENT_NOT_FOUND_MESSAGE, type, year, number)));
     }
 
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version)
             throws NoDocumentException, SaxonApiException, IOException, InterruptedException {
         String clml = fetchClmlContent(type, year, number, version)
-                .orElseThrow(() -> new NoDocumentException("Document not found"));
+                .orElseThrow(() -> new NoDocumentException(String.format(DOCUMENT_NOT_FOUND_MESSAGE, type, year, number)));
         XdmNode aknNode = clmlToAknTransformer.transform(clml);
         String serializedAkn = Clml2Akn.serialize(aknNode);
         return ResponseEntity.ok()
@@ -73,7 +75,7 @@ public class DocumentApiController implements DocumentApi {
     public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version)
             throws NoDocumentException, SaxonApiException, IOException, InterruptedException {
         String clml = fetchClmlContent(type, year, number, version)
-                .orElseThrow(() -> new NoDocumentException("Document not found"));
+                .orElseThrow(() -> new NoDocumentException(String.format(DOCUMENT_NOT_FOUND_MESSAGE, type, year, number)));
         XdmNode aknNode = clmlToAknTransformer.transform(clml);
         String htmlContent = aknToHtmlTransformer.transform(aknNode, true);
         return ResponseEntity.ok()
@@ -85,7 +87,7 @@ public class DocumentApiController implements DocumentApi {
     public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version)
             throws SaxonApiException, NoDocumentException, IOException, InterruptedException {
         String clml = fetchClmlContent(type, year, number, version)
-                .orElseThrow(() -> new NoDocumentException("Document not found"));
+                .orElseThrow(() -> new NoDocumentException(String.format(DOCUMENT_NOT_FOUND_MESSAGE, type, year, number)));
         XdmNode aknNode = clmlToAknTransformer.transform(clml);
         String htmlContent = aknToHtmlTransformer.transform(aknNode, false);
         Metadata metadata = AkN.Meta.extract(aknNode);
