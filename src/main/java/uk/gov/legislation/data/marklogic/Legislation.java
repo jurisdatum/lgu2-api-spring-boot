@@ -81,7 +81,7 @@ public class Legislation {
             return xml;
         }
         if (error.statusCode >= 400)
-            throw new NoDocumentException(error);
+            throw new NoDocumentException(error.toString());
         if (!error.header.name.equals("Location"))
             throw new RuntimeException(xml);
         throw new Redirect(error.header.value);

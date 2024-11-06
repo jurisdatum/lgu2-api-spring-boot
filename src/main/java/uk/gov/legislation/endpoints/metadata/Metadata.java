@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.metadata;
+package uk.gov.legislation.endpoints.metadata;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;

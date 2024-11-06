@@ -1,8 +1,8 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
-import uk.gov.legislation.api.document.Metadata;
-import uk.gov.legislation.api.documents.DocumentList;
+import uk.gov.legislation.endpoints.document.Metadata;
+import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.documents;
+package uk.gov.legislation.endpoints.documents;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

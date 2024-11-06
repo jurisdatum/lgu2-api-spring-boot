@@ -1,4 +1,4 @@
-package uk.gov.legislation.api;
+package uk.gov.legislation.endpoints;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,7 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-import uk.gov.legislation.api.document.TableOfContents;
+import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.List;

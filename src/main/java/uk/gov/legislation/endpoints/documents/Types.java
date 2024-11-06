@@ -1,11 +1,11 @@
-package uk.gov.legislation.api.documents;
+package uk.gov.legislation.endpoints.documents;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.api.types.TypeWrapper;
-import uk.gov.legislation.api.types.TypesForCountry;
+import uk.gov.legislation.endpoints.types.TypeWrapper;
+import uk.gov.legislation.endpoints.types.TypesForCountry;
 import uk.gov.legislation.util.Type;
 
 import java.util.Arrays;

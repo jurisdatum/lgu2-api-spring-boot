@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.document;
+package uk.gov.legislation.endpoints.document;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

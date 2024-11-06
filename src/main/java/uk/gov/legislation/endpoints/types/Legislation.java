@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.types;
+package uk.gov.legislation.endpoints.types;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;

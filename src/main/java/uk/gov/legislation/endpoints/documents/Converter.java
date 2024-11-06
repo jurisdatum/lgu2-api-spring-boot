@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.documents;
+package uk.gov.legislation.endpoints.documents;
 
 import uk.gov.legislation.data.marklogic.SearchResults;
 import uk.gov.legislation.util.Cites;
