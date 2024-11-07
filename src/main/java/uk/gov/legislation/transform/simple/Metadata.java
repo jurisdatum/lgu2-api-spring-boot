@@ -3,7 +3,7 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import uk.gov.legislation.api.documents.DocumentList;
+import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.*;
 
 import java.time.LocalDate;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @SuppressWarnings("unused")
-public class Metadata implements uk.gov.legislation.api.document.Metadata {
+public class Metadata implements uk.gov.legislation.endpoints.document.Metadata {
 
     public String id;
 

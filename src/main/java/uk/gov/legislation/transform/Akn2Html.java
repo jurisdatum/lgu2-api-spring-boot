@@ -7,53 +7,45 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
+import java.util.Objects;
 import java.util.Properties;
 
 @Service
 public class Akn2Html {
 
-    private static final String stylesheet = "/transforms/akn2html/akn2html.xsl";
-
-//    private static final String CSS_PATH_ENV_VAR = "CSS_PATH";
-//    private static final String IMAGES_PATH = "/static/lgu1/images/";
+    private static final String STYLESHEET = "/transforms/akn2html/akn2html.xsl";
 
     private final XsltExecutable executable;
 
     public Akn2Html() {
-        XsltCompiler compiler = Helper.processor.newXsltCompiler();
-        Source source;
-        try {
-            String systemId = this.getClass().getResource(stylesheet).toURI().toASCIIString();
-            source = new StreamSource(systemId);
-        } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            executable = compiler.compile(source);
-        } catch (SaxonApiException e) {
-            throw new RuntimeException(e);
-        }
+        this.executable = compileXslt();
+    }
+
+    private XsltExecutable compileXslt() {
+        return wrapWithRuntimeException(() -> {
+            XsltCompiler compiler = Helper.processor.newXsltCompiler();
+            String systemId = Objects.requireNonNull(this.getClass().getResource(STYLESHEET)).toURI().toASCIIString();
+            Source source = new StreamSource(systemId);
+            return compiler.compile(source);
+        });
     }
 
     private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();
         transform.setParameter(new QName("standalone"), new XdmAtomicValue(standalone));
-//        String cssPath = System.getenv(CSS_PATH_ENV_VAR);
-//        if (cssPath != null)
-//            transform.setParameter(new QName("css-path"), new XdmAtomicValue(cssPath));
-//        transform.setParameter(new QName("images-path"), new XdmAtomicValue(IMAGES_PATH));
         transform.setSource(akn);
         transform.setDestination(html);
         transform.transform();
     }
 
-    static final Properties Indent = new Properties();
-    static final Properties DontIndent = new Properties();
-    static {
-        Indent.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
-        DontIndent.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
-        Indent.setProperty(Serializer.Property.INDENT.toString(), "yes");
-        DontIndent.setProperty(Serializer.Property.INDENT.toString(), "no");
+    static final Properties Indent = createProperties(true);
+    static final Properties DontIndent = createProperties(false);
+
+    private static Properties createProperties(boolean indent) {
+        Properties properties = new Properties();
+        properties.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
+        properties.setProperty(Serializer.Property.INDENT.toString(), indent ? "yes" : "no");
+        return properties;
     }
 
     public String transform(XdmNode akn, boolean standalone) throws SaxonApiException {
@@ -64,4 +56,19 @@ public class Akn2Html {
         return html.toString();
     }
 
+    // Helper method to wrap exceptions and throw RuntimeException
+    private <T> T wrapWithRuntimeException(ThrowingSupplier<T> supplier) {
+        try {
+            return supplier.get();
+        } catch (URISyntaxException | SaxonApiException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    // Functional interface for suppliers that can throw checked exceptions
+    @FunctionalInterface
+    private interface ThrowingSupplier<T> {
+        T get() throws URISyntaxException, SaxonApiException;
+    }
 }
+

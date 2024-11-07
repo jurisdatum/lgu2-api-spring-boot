@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.document;
+package uk.gov.legislation.endpoints.document;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
+import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
@@ -61,12 +62,12 @@ public class Fragment {
     }
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section:.+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Document.Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
+    public DocumentApi.Response json(@PathVariable String type, @PathVariable int year, @PathVariable int number, @PathVariable String section, @RequestParam Optional<String> version) throws Exception {
         String clml = clml(type, year, number, section, version);
         XdmNode akn = clml2akn.transform(clml);
         String html = akn2html.transform(akn, false);
         AkN.Meta meta = AkN.Meta.extract(akn);
-        return new Document.Response(meta, html);
+        return new DocumentApi.Response(meta, html);
     }
 
 }

@@ -1,4 +1,4 @@
-package uk.gov.legislation.api;
+package uk.gov.legislation.endpoints;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

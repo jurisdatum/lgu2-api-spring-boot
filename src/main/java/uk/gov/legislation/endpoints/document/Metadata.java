@@ -1,10 +1,10 @@
-package uk.gov.legislation.api.document;
+package uk.gov.legislation.endpoints.document;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
-import uk.gov.legislation.api.documents.DocumentList;
+import uk.gov.legislation.endpoints.documents.DocumentList;
 
 import java.time.LocalDate;
 import java.util.List;
