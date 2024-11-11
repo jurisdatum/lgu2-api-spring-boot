@@ -21,7 +21,7 @@ import java.util.Optional;
  */
 @RestController
 public class DocumentApiController implements DocumentApi {
-    private static final String DOCUMENT_NOT_FOUND_MESSAGE = "Document not found for type: %s, year: %d, number: %d";
+    public static final String DOCUMENT_NOT_FOUND_MESSAGE = "Document not found for type: %s, year: %d, number: %d";
 
 
     private final Legislation legislationService;
@@ -35,6 +35,7 @@ public class DocumentApiController implements DocumentApi {
      * @param clmlToAknTransformer the CLML to AKN transformer
      * @param aknToHtmlTransformer the AKN to HTML transformer
      */
+
     public DocumentApiController(Legislation legislationService, Clml2Akn clmlToAknTransformer, Akn2Html aknToHtmlTransformer) {
         this.legislationService = legislationService;
         this.clmlToAknTransformer = clmlToAknTransformer;

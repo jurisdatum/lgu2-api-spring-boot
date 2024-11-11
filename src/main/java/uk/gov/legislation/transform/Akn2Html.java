@@ -1,7 +1,9 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
+import uk.gov.legislation.config.Configuration;
+import uk.gov.legislation.exceptions.XSLTCompilationException;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -10,21 +12,25 @@ import java.net.URISyntaxException;
 import java.util.Objects;
 import java.util.Properties;
 
-@Service
+@Component
 public class Akn2Html {
 
-    private static final String STYLESHEET = "/transforms/akn2html/akn2html.xsl";
-
     private final XsltExecutable executable;
+    private final Configuration stylSheetAknPath;
 
-    public Akn2Html() {
+    public Akn2Html(Configuration stylSheetAknPath) {
+        this.stylSheetAknPath = stylSheetAknPath;
         this.executable = compileXslt();
+    }
+
+    public String getStylSheetAknPath() {
+        return stylSheetAknPath.getStylesheetAknPath();
     }
 
     private XsltExecutable compileXslt() {
         return wrapWithRuntimeException(() -> {
             XsltCompiler compiler = Helper.processor.newXsltCompiler();
-            String systemId = Objects.requireNonNull(this.getClass().getResource(STYLESHEET)).toURI().toASCIIString();
+            String systemId = Objects.requireNonNull(this.getClass().getResource(getStylSheetAknPath()).toURI().toASCIIString());
             Source source = new StreamSource(systemId);
             return compiler.compile(source);
         });
@@ -56,16 +62,20 @@ public class Akn2Html {
         return html.toString();
     }
 
-    // Helper method to wrap exceptions and throw RuntimeException
+   /**
+     Helper method to wrap exceptions and throw RuntimeException
+   */
     private <T> T wrapWithRuntimeException(ThrowingSupplier<T> supplier) {
         try {
             return supplier.get();
         } catch (URISyntaxException | SaxonApiException e) {
-            throw new RuntimeException(e);
+            throw new XSLTCompilationException(e.getMessage());
         }
     }
 
-    // Functional interface for suppliers that can throw checked exceptions
+   /**
+     Functional interface for suppliers that can throw checked exceptions
+    */
     @FunctionalInterface
     private interface ThrowingSupplier<T> {
         T get() throws URISyntaxException, SaxonApiException;
