@@ -1,13 +1,13 @@
 package uk.gov.legislation.endpoints;
 
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import uk.gov.legislation.util.Links;
 
 public class FragmentIdentifierExtractionTest {
 
     @Test
-	public void fragments() {
+	void fragments() {
 
 		String link = "http://www.legislation.gov.uk/ukpga/2017/1/2017-03-16/revision";
 		String fragment = Links.extractFragmentIdentifierFromLink(link);
