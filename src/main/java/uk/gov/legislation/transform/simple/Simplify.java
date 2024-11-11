@@ -29,7 +29,7 @@ public class Simplify {
         this.executable = compileXslt();
     }
     public String processDocument() {
-      return stylesheetConfig.getStylesheetPath();
+      return stylesheetConfig.getStylesheetSimplifyPath();
     }
 
     private XsltExecutable compileXslt() {
