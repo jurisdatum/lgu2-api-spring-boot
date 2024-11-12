@@ -4,16 +4,26 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import net.sf.saxon.s9api.SaxonApiException;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.List;
 
+@SpringBootTest(classes = Application.class)
 class MetadataExtractionTest {
 
-    private static String CLML = """
+	private final Simplify simplifier;
+
+	@Autowired
+	public MetadataExtractionTest(Simplify simplifier) {
+		this.simplifier = simplifier;
+	}
+
+	private static final String CLML = """
 			<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation">
 			    <Metadata xmlns="http://www.legislation.gov.uk/namespaces/metadata" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom">
 				    <dct:valid>2017-03-16</dct:valid>
@@ -35,8 +45,8 @@ class MetadataExtractionTest {
 			</Legislation>
 			""";
     @Test
-    public void versions() throws SaxonApiException, JsonProcessingException {
-		TableOfContents simple = new Simplify().contents(CLML);
+    void versions() throws SaxonApiException, JsonProcessingException {
+		TableOfContents simple = this.simplifier.contents(CLML);
 		List<String> versions = simple.meta().versions();
 		Assertions.assertEquals(3, versions.size(), "There should be exactly three versions");
 		Assertions.assertEquals("enacted", versions.get(0), "First version should be 'enacted'");
