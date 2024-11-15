@@ -22,7 +22,9 @@ import java.util.Optional;
  */
 @RestController
 public class FragmentApiController implements FragmentApi {
+
     private static final String TRANSFORMATION_FAIL = "Transformation Failed";
+
     private final FragmentService fragmentService;
     private final TransformationService transformationService;
 
@@ -64,9 +66,10 @@ public class FragmentApiController implements FragmentApi {
     /**
      * Retrieves a document fragment in AKN (Akoma Ntoso) XML format.
      * Transforms the retrieved CLML content to AKN format using the transformation service.
+     * @throws TransformationException     if the document fail to transfrom to AKN
      */
     @Override
-    public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(clml -> {
                     try {
@@ -84,7 +87,7 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to HTML format using the transformation service.
      */
     @Override
-    public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(clml -> {
                     try {
@@ -102,7 +105,7 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to JSON format using the transformation service.
      */
     @Override
-    public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException {
+    public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, int year, int number, String section, Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(clml -> {
                     try {
