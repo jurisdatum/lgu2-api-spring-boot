@@ -3,12 +3,10 @@ package uk.gov.legislation.transform;
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.config.Configuration;
-import uk.gov.legislation.exceptions.XSLTCompilationException;
-
+import uk.gov.legislation.exceptions.Exceptions;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.StringWriter;
-import java.net.URISyntaxException;
 import java.util.Objects;
 import java.util.Properties;
 
@@ -28,7 +26,7 @@ public class Akn2Html {
     }
 
     private XsltExecutable compileXslt() {
-        return wrapWithRuntimeException(() -> {
+        return Exceptions.handleException(() -> {
             XsltCompiler compiler = Helper.processor.newXsltCompiler();
             String systemId = Objects.requireNonNull(this.getClass().getResource(getStylSheetAknPath()).toURI().toASCIIString());
             Source source = new StreamSource(systemId);
@@ -62,23 +60,5 @@ public class Akn2Html {
         return html.toString();
     }
 
-   /**
-     Helper method to wrap exceptions and throw RuntimeException
-   */
-    private <T> T wrapWithRuntimeException(ThrowingSupplier<T> supplier) {
-        try {
-            return supplier.get();
-        } catch (URISyntaxException | SaxonApiException e) {
-            throw new XSLTCompilationException(e.getMessage());
-        }
-    }
-
-   /**
-     Functional interface for suppliers that can throw checked exceptions
-    */
-    @FunctionalInterface
-    private interface ThrowingSupplier<T> {
-        T get() throws URISyntaxException, SaxonApiException;
-    }
 }
 

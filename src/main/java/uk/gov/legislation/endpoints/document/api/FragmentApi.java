@@ -8,10 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
-import uk.gov.legislation.exceptions.TransformationException;
 
-import java.io.IOException;
 import java.util.Optional;
 
 /**
@@ -32,7 +29,7 @@ public interface FragmentApi {
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
-            @RequestParam Optional <String> version) throws IOException, InterruptedException, NoDocumentException;
+            @RequestParam Optional <String> version);
 
     @Operation(summary = "Retrieve document fragment in AKN format")
     @ApiResponses(value = {
@@ -45,7 +42,7 @@ public interface FragmentApi {
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException;
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve document fragment in HTML format")
     @ApiResponses(value = {
@@ -58,7 +55,7 @@ public interface FragmentApi {
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException;
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve document fragment in JSON format")
     @ApiResponses(value = {
@@ -71,5 +68,5 @@ public interface FragmentApi {
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException, TransformationException;
+            @RequestParam Optional<String> version);
 }

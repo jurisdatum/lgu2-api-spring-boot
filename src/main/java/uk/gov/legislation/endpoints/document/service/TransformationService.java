@@ -1,5 +1,8 @@
 package uk.gov.legislation.endpoints.document.service;
 
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import org.springframework.stereotype.Service;
@@ -33,5 +36,9 @@ public class TransformationService {
         AkN.Meta meta = AkN.Meta.extract(akn);
         return new DocumentApi.Response(meta, html);
     }
-}
 
+    public Object parse(String xml) throws JsonProcessingException {
+        XmlMapper mapper = new XmlMapper();
+        return mapper.readValue(xml, Object.class);
+    }
+}

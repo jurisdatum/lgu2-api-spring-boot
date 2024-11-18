@@ -1,6 +1,9 @@
 package uk.gov.legislation.exceptions;
 
 
+import lombok.Getter;
+
+@Getter
 public class ErrorResponse {
     private final String status;
     private final String message;
@@ -12,7 +15,5 @@ public class ErrorResponse {
         this.timestamp = timestamp;
     }
 
-    public String getStatus() { return status; }
-    public String getMessage() { return message; }
-    public String getTimestamp() { return timestamp; }
+
 }

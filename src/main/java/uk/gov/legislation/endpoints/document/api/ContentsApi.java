@@ -8,10 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.endpoints.document.TableOfContents;
 
-import java.io.IOException;
 import java.util.Optional;
 
 @Tag(name = "Document Contents", description = "API for accessing document contents in various formats")
@@ -27,7 +25,7 @@ public interface ContentsApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException;
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve contents in AKN format")
     @ApiResponses(value = {
@@ -40,7 +38,7 @@ public interface ContentsApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException;
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve contents in JSON format")
     @ApiResponses(value = {
@@ -52,5 +50,5 @@ public interface ContentsApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version) throws IOException, InterruptedException, NoDocumentException;
+            @RequestParam Optional<String> version);
 }

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -61,5 +62,35 @@ public class GlobalExceptionHandler {
                 isoTimestamp
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+
+    @ExceptionHandler(RedirectException.class)
+    public ResponseEntity<String> handleRedirectException(RedirectException ex) {
+        String errorMessage = "Redirection required to location: " + ex.getLocation();
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT) // 307 HTTP status for redirection
+                .header("Location", ex.getLocation())
+                .body(errorMessage);
+    }
+
+    @ExceptionHandler(IOException.class)
+    public ResponseEntity<ErrorResponse> handleIOException(IOException ex) {
+        ErrorResponse errorResponse = new ErrorResponse(
+                "IOException_Error",
+                "An IO error occurred: " + ex.getMessage(),
+                isoTimestamp
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(InterruptedException.class)
+    public ResponseEntity<ErrorResponse> handleInterruptedException(InterruptedException ex) {
+        Thread.currentThread().interrupt();
+        ErrorResponse errorResponse = new ErrorResponse(
+                "InterruptedException_Error",
+                "The request was interrupted: " + ex.getMessage(),
+                isoTimestamp
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
 }
