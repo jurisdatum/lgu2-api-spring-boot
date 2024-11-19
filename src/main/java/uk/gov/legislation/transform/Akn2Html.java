@@ -3,12 +3,14 @@ package uk.gov.legislation.transform;
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.config.Configuration;
-import uk.gov.legislation.exceptions.Exceptions;
+import uk.gov.legislation.exceptions.XSLTCompilationException;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.StringWriter;
-import java.util.Objects;
+import java.net.URISyntaxException;
+import java.util.Optional;
 import java.util.Properties;
+import java.util.function.Supplier;
 
 @Component
 public class Akn2Html {
@@ -26,13 +28,26 @@ public class Akn2Html {
     }
 
     private XsltExecutable compileXslt() {
-        return Exceptions.handleException(() -> {
-            XsltCompiler compiler = Helper.processor.newXsltCompiler();
-            String systemId = Objects.requireNonNull(this.getClass().getResource(getStylSheetAknPath()).toURI().toASCIIString());
-            Source source = new StreamSource(systemId);
-            return compiler.compile(source);
-        });
+        return safelyCompileXsl(
+                getStylSheetAknPath(),
+                Helper.processor::newXsltCompiler
+        );
     }
+
+    private XsltExecutable safelyCompileXsl(String stylesheetPath, Supplier <XsltCompiler> compilerSupplier) {
+        return Optional.ofNullable(this.getClass().getResource(stylesheetPath))
+                .map(resource -> {
+                    try {
+                        String systemId = resource.toURI().toASCIIString();
+                        Source source = new StreamSource(systemId);
+                        return compilerSupplier.get().compile(source);
+                    } catch (SaxonApiException | URISyntaxException e) {
+                        throw new XSLTCompilationException("Failed to compile XSLT", e);
+                    }
+                })
+                .orElseThrow(() -> new IllegalArgumentException("Stylesheet resource not found: " + stylesheetPath));
+    }
+
 
     private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();

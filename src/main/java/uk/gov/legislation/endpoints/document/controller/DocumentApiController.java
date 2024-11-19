@@ -2,14 +2,12 @@ package uk.gov.legislation.endpoints.document.controller;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.endpoints.document.Metadata;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
-import uk.gov.legislation.exceptions.Exceptions;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
@@ -17,6 +15,7 @@ import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Optional;
+import java.util.function.Function;
 
 
 /**
@@ -46,86 +45,57 @@ public class DocumentApiController implements DocumentApi {
     /**
      * Fetches CLML content based on document details.
      */
-    private Optional<String> fetchClmlContent(String type, int year, int number, Optional<String> version){
+    private Optional<String> fetchClmlContent(String type, int year, int number, Optional<String> version) {
         return Optional.ofNullable(legislationService.getDocument(type, year, number, version));
+    }
+
+    private <T> ResponseEntity<T> handleTransformation(Function <String, T> transformationFunction, String type, int year, int number, Optional<String> version, String errorMessage) {
+        return fetchClmlContent(type, year, number, version)
+                .map(transformationFunction)
+                .map(result -> ResponseEntity.ok().body(result))
+                .orElseThrow(() -> new NoDocumentException(String.format(errorMessage, type, year, number)));
     }
 
     @Override
     public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version) {
-
-        return Exceptions.handleException(() ->
-                fetchClmlContent(type, year, number, version)
-                        .map(clml -> ResponseEntity.ok()
-                                .contentType(MediaType.APPLICATION_XML)
-                                .body(clml))
-                        .orElseThrow(() -> new NoDocumentException(
-                                String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                        )
-        );
+        return handleTransformation(clml -> clml, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
 
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version) {
-
-        return Exceptions.handleException(() -> {
-            String clml = fetchClmlContent(type, year, number, version)
-                    .orElseThrow(() -> new NoDocumentException(
-                            String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                    );
-
+        return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
-                String serializedAkn = Clml2Akn.serialize(aknNode);
-                return ResponseEntity.ok()
-                        .contentType(MediaType.valueOf("application/akn+xml"))
-                        .body(serializedAkn);
+                return Clml2Akn.serialize(aknNode);
             } catch (SaxonApiException e) {
                 throw new TransformationException(Constants.TRANSFORMATION_FAIL_AKN.getError(), e);
             }
-        });
+        }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
 
     @Override
     public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version) {
-
-        return Exceptions.handleException(() -> {
-            String clml = fetchClmlContent(type, year, number, version)
-                    .orElseThrow(() -> new NoDocumentException(
-                            String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                    );
-
+        return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
-                String htmlContent = aknToHtmlTransformer.transform(aknNode, true);
-                return ResponseEntity.ok()
-                        .contentType(MediaType.TEXT_HTML)
-                        .body(htmlContent);
+                return aknToHtmlTransformer.transform(aknNode, true);
             } catch (SaxonApiException e) {
                 throw new TransformationException(Constants.TRANSFORMATION_FAIL_HTML.getError(), e);
             }
-        });
+        }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
 
     @Override
     public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version) {
-
-        return Exceptions.handleException(() -> {
-            String clml = fetchClmlContent(type, year, number, version)
-                    .orElseThrow(() -> new NoDocumentException(
-                            String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                    );
-
+        return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
                 String htmlContent = aknToHtmlTransformer.transform(aknNode, false);
                 Metadata metadata = AkN.Meta.extract(aknNode);
-                return ResponseEntity.ok()
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .body(new Response(metadata, htmlContent));
+                return new Response(metadata, htmlContent);
             } catch (SaxonApiException e) {
                 throw new TransformationException(Constants.TRANSFORMATION_FAIL_JSON.getError(), e);
             }
-        });
+        }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
-
 }

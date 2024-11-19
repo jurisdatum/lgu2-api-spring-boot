@@ -93,4 +93,16 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
+
+    @ExceptionHandler(DocumentFetchException.class)
+    public ResponseEntity<Object> handleDocumentFetchException(DocumentFetchException ex) {
+
+        ErrorResponse errorResponse = new ErrorResponse(
+                "Document fetch failed",
+                "Error-Document fetch failed: " + ex.getMessage(),
+                isoTimestamp
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+
+    }
 }

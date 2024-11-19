@@ -1,9 +1,8 @@
 package uk.gov.legislation.data.marklogic;
 
-public class NoDocumentException extends Exception {
-
-    public NoDocumentException(String error) {
-        super(error);
+public class NoDocumentException extends RuntimeException {
+    public NoDocumentException(String message) {
+        super(message);
     }
 
 }

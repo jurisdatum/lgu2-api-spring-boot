@@ -25,7 +25,7 @@ public class ContentsService {
     }
 
 
-    public String fetchContentsXml(String type, int year, int number, Optional <String> version) throws NoDocumentException {
+    public String fetchContentsXml(String type, int year, int number, Optional <String> version) {
         return Optional.ofNullable(legislationRepository.getTableOfContents(type, year, number, version))
                 .orElseThrow(() -> new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number)));
     }

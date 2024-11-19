@@ -1,7 +1,7 @@
 package uk.gov.legislation.data.marklogic;
 
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.exceptions.Exceptions;
+import uk.gov.legislation.exceptions.DocumentFetchException;
 import uk.gov.legislation.exceptions.RedirectException;
 import uk.gov.legislation.util.Links;
 import java.io.IOException;
@@ -23,52 +23,61 @@ public class Legislation {
 
 
     public String getDocument(String type, int year, int number, Optional<String> version) {
-        return Exceptions.handleException(() ->
-                handleRequest(
-                        buildQuery(type, year, number, version, Optional.empty(), Optional.empty()),
-                        comp -> getDocument(comp.type(), comp.year(), comp.number(), comp.version())
-                )
+        return handleRequest(
+                buildQuery(type, year, number, version, Optional.empty(), Optional.empty()),
+                comp -> getDocument(comp.type(), comp.year(), comp.number(), comp.version())
         );
     }
 
+    /** Get table of contents
+     */
 
     public String getTableOfContents(String type, int year, int number, Optional<String> version) {
-        return Exceptions.handleException(() ->
-                handleRequest(
+        return handleRequest(
                 buildQuery(type, year, number, version, Optional.of("contents"), Optional.empty()),
                 comp -> getTableOfContents(comp.type(), comp.year(), comp.number(), comp.version())
-                )
         );
     }
 
-
+    /** Get document section
+     */
     public String getDocumentSection(String type, int year, int number, String section, Optional<String> version) {
-        return Exceptions.handleException(() ->
-                handleRequest(
+        return handleRequest(
                 buildQuery(type, year, number, version, Optional.empty(), Optional.of(section)),
                 comp -> {
                     if (comp.fragment().isEmpty()) {
                         throw new IllegalStateException("Invalid redirect without fragment.");
                     }
                     return getDocumentSection(comp.type(), comp.year(), comp.number(), comp.fragment().get(), comp.version());
-                })
+                }
         );
     }
 
-    private String handleRequest(String query, Function<Links.Components, String> redirectHandler)
-            throws IOException, InterruptedException, NoDocumentException {
+    /** Helper method for handling requests
+     */
+
+    private String handleRequest(String query, Function<Links.Components, String> redirectHandler) {
         try {
             return get(query);
-        } catch ( RedirectException redirect) {
+        }
+        catch (IOException | InterruptedException e) {
+            throw new DocumentFetchException("Failed to fetch document due to I/O or interruption", e);
+        }
+        catch (RedirectException redirect) {
             Links.Components components = Links.parse(redirect.getLocation());
             if (components == null) {
                 throw new IllegalStateException("Invalid redirect location: " + redirect.getLocation(), redirect);
             }
             return redirectHandler.apply(components);
+        } catch (NoDocumentException e) {
+            throw new DocumentFetchException("No document found", e);
         }
     }
 
-    private String buildQuery(String type, int year, int number, Optional<String> version, Optional<String> view, Optional<String> section) {
+    /** Build the query string for requests
+    */
+
+     private String buildQuery(String type, int year, int number, Optional<String> version, Optional<String> view, Optional<String> section) {
         StringBuilder query = new StringBuilder();
         query.append("?type=").append(encode(type))
                 .append("&year=").append(year)
@@ -81,6 +90,9 @@ public class Legislation {
         return query.toString();
     }
 
+    /** Fetch document and handle redirection
+     * @param query
+     */
     private String get(String query)
             throws IOException, InterruptedException, NoDocumentException, RedirectException {
         String xml = db.get(ENDPOINT, query);
@@ -97,8 +109,13 @@ public class Legislation {
         throw new RedirectException(error.header.value);
     }
 
-
+    /** URL encoding
+     * @param value
+     * @return
+     */
     private String encode(String value) {
         return URLEncoder.encode(value, StandardCharsets.US_ASCII);
     }
+
+
 }
