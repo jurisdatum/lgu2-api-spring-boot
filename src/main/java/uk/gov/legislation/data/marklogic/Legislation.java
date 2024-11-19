@@ -2,7 +2,6 @@ package uk.gov.legislation.data.marklogic;
 
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.exceptions.DocumentFetchException;
-import uk.gov.legislation.exceptions.RedirectException;
 import uk.gov.legislation.util.Links;
 import java.io.IOException;
 import java.net.URLEncoder;
@@ -59,18 +58,17 @@ public class Legislation {
     private String handleRequest(String query, Function<Links.Components, String> redirectHandler) {
         try {
             return get(query);
-        }
-        catch (IOException | InterruptedException e) {
-            throw new DocumentFetchException("Failed to fetch document due to I/O or interruption", e);
-        }
-        catch (RedirectException redirect) {
+        } catch (IOException e) {
+            throw new DocumentFetchException("Failed to fetch document due to I/O", e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new DocumentFetchException("Failed to fetch document due to interruption", e);
+        } catch (RedirectException redirect) {
             Links.Components components = Links.parse(redirect.getLocation());
             if (components == null) {
                 throw new IllegalStateException("Invalid redirect location: " + redirect.getLocation(), redirect);
             }
             return redirectHandler.apply(components);
-        } catch (NoDocumentException e) {
-            throw new DocumentFetchException("No document found", e);
         }
     }
 
@@ -91,7 +89,7 @@ public class Legislation {
     }
 
     /** Fetch document and handle redirection
-     * @param query
+     * @param query the query string compoent of the MarkLogic request URL
      */
     private String get(String query)
             throws IOException, InterruptedException, NoDocumentException, RedirectException {
@@ -110,12 +108,11 @@ public class Legislation {
     }
 
     /** URL encoding
-     * @param value
-     * @return
+     * @param value a query parameter
+     * @return the URL-encoded parameter
      */
     private String encode(String value) {
         return URLEncoder.encode(value, StandardCharsets.US_ASCII);
     }
-
 
 }

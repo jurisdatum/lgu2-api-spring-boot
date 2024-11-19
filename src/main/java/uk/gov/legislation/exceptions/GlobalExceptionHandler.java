@@ -23,6 +23,7 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
+
     @ExceptionHandler(TransformationException.class)
     public ResponseEntity<ErrorResponse> handleAknTransformationException(TransformationException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
@@ -32,7 +33,6 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
-
 
     @ExceptionHandler(XSLTCompilationException.class)
     public ResponseEntity<ErrorResponse> handleXSLTCompilationException(XSLTCompilationException ex) {
@@ -64,15 +64,6 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-
-    @ExceptionHandler(RedirectException.class)
-    public ResponseEntity<String> handleRedirectException(RedirectException ex) {
-        String errorMessage = "Redirection required to location: " + ex.getLocation();
-        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT) // 307 HTTP status for redirection
-                .header("Location", ex.getLocation())
-                .body(errorMessage);
-    }
-
     @ExceptionHandler(IOException.class)
     public ResponseEntity<ErrorResponse> handleIOException(IOException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
@@ -80,7 +71,7 @@ public class GlobalExceptionHandler {
                 "An IO error occurred: " + ex.getMessage(),
                 isoTimestamp
         );
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
 
     @ExceptionHandler(InterruptedException.class)
@@ -102,7 +93,7 @@ public class GlobalExceptionHandler {
                 "Error-Document fetch failed: " + ex.getMessage(),
                 isoTimestamp
         );
-        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-
+        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
+
 }

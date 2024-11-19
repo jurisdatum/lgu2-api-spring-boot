@@ -1,12 +1,12 @@
-package uk.gov.legislation.exceptions;
+package uk.gov.legislation.data.marklogic;
 
 import lombok.Getter;
 
 @Getter
-public class RedirectException extends Exception {
+class RedirectException extends Exception {
     private final String location;
 
-    public RedirectException(String location) {
+    RedirectException(String location) {
         super("Redirect to: " + location);
         this.location = location;
     }
