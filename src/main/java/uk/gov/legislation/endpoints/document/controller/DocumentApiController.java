@@ -45,11 +45,11 @@ public class DocumentApiController implements DocumentApi {
     /**
      * Fetches CLML content based on document details.
      */
-    private Optional<String> fetchClmlContent(String type, int year, int number, Optional<String> version) {
-        return Optional.ofNullable(legislationService.getDocument(type, Integer.toString(year), number, version));
+    private Optional<String> fetchClmlContent(String type, String year, int number, Optional<String> version) {
+        return Optional.ofNullable(legislationService.getDocument(type, year, number, version));
     }
 
-    private <T> ResponseEntity<T> handleTransformation(Function <String, T> transformationFunction, String type, int year, int number, Optional<String> version, String errorMessage) {
+    private <T> ResponseEntity<T> handleTransformation(Function <String, T> transformationFunction, String type, String year, int number, Optional<String> version, String errorMessage) {
         return fetchClmlContent(type, year, number, version)
                 .map(transformationFunction)
                 .map(result -> ResponseEntity.ok().body(result))
@@ -58,11 +58,25 @@ public class DocumentApiController implements DocumentApi {
 
     @Override
     public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version) {
-        return handleTransformation(clml -> clml, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
+        return handleTransformation(clml -> clml, type, Integer.toString(year), number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
+    @Override
+    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return handleTransformation(clml -> clml, type, regnalYear, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
+    }
+
 
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version) {
+        return getDocumentAkn(type, Integer.toString(year), number, version);
+    }
+    @Override
+    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentAkn(type, regnalYear, number, version);
+    }
+    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version) {
         return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
@@ -73,8 +87,17 @@ public class DocumentApiController implements DocumentApi {
         }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
 
+
     @Override
     public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version) {
+        return getDocumentHtml(type, Integer.toString(year), number, version);
+    }
+    @Override
+    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentHtml(type, regnalYear, number, version);
+    }
+    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version) {
         return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
@@ -85,8 +108,17 @@ public class DocumentApiController implements DocumentApi {
         }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
 
+
     @Override
     public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version) {
+        return getDocumentJson(type, Integer.toString(year), number, version);
+    }
+    @Override
+    public ResponseEntity<Response> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentJson(type, regnalYear, number, version);
+    }
+    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version) {
         return handleTransformation(clml -> {
             try {
                 XdmNode aknNode = clmlToAknTransformer.transform(clml);
@@ -98,4 +130,5 @@ public class DocumentApiController implements DocumentApi {
             }
         }, type, year, number, version, Constants.DOCUMENT_NOT_FOUND.getError());
     }
+
 }

@@ -30,6 +30,14 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional <String> version);
+    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
+    ResponseEntity <String> getFragmentClml(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional <String> version);
 
     @Operation(summary = "Retrieve document fragment in AKN format")
     @ApiResponses(value = {
@@ -40,6 +48,14 @@ public interface FragmentApi {
     ResponseEntity<String> getFragmentAkn(
             @PathVariable String type,
             @PathVariable int year,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional<String> version);
+    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/akn+xml")
+    ResponseEntity<String> getFragmentAkn(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version);
@@ -56,6 +72,14 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "text/html")
+    ResponseEntity<String> getFragmentHtml(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve document fragment in JSON format")
     @ApiResponses(value = {
@@ -69,4 +93,13 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/json")
+    ResponseEntity<DocumentApi.Response> getFragmentJson(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional<String> version);
+
 }

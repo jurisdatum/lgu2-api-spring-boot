@@ -34,11 +34,30 @@ public class Pdf {
         URI uri = URI.create(pdf.get());
         return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
     }
+    @GetMapping(value = "/pdf/{type}/{monarch}/{years}/{number}")
+    public ResponseEntity<Void> pdf(@PathVariable String type, @PathVariable String monarch, @PathVariable String years, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        Optional<String> pdf = getPdfUrl(type, regnalYear, number, version);
+        if (pdf.isEmpty())
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        URI uri = URI.create(pdf.get());
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
+    }
 
     @GetMapping(value = "/thumbnail/{type}/{year}/{number}")
     @Operation(summary = "thumbnail of PDF")
     public ResponseEntity<Void> thumbnail(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
         Optional<String> pdf = getPdfUrl(type, Integer.toString(year), number, version);
+        if (pdf.isEmpty())
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        String thumbnail = convertToThumbnailUrl(pdf.get());
+        URI uri = URI.create(thumbnail);
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
+    }
+    @GetMapping(value = "/thumbnail/{type}/{monarch}/{years}/{number}")
+    public ResponseEntity<Void> thumbnail(@PathVariable String type, @PathVariable String monarch, @PathVariable String years, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        Optional<String> pdf = getPdfUrl(type, regnalYear, number, version);
         if (pdf.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         String thumbnail = convertToThumbnailUrl(pdf.get());

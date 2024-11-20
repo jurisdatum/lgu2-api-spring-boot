@@ -39,6 +39,13 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
+    ResponseEntity<String> getDocumentClml(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
 
     /**
      * Retrieves document content in AKN format.
@@ -59,6 +66,13 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
+    ResponseEntity<String> getDocumentAkn(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
 
     /**
      * Retrieves document content in HTML format.
@@ -77,6 +91,13 @@ public interface DocumentApi {
     ResponseEntity<String> getDocumentHtml(
             @PathVariable String type,
             @PathVariable int year,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
+    ResponseEntity<String> getDocumentHtml(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version);
 
@@ -104,4 +125,12 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
+    ResponseEntity<Response> getDocumentJson(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
+
 }

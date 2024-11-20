@@ -26,6 +26,13 @@ public interface ContentsApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/xml")
+    ResponseEntity<String> getDocumentContentsClml(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
 
     @Operation(summary = "Retrieve contents in AKN format")
     @ApiResponses(value = {
@@ -37,6 +44,13 @@ public interface ContentsApi {
     ResponseEntity<String> getDocumentContentsAkn(
             @PathVariable String type,
             @PathVariable int year,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
+    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
+    ResponseEntity<String> getDocumentContentsAkn(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version);
 
@@ -51,4 +65,12 @@ public interface ContentsApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
+    ResponseEntity<TableOfContents> getDocumentContentsJson(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version);
+
 }
