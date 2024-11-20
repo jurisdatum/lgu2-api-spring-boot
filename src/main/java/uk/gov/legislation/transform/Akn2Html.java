@@ -4,13 +4,13 @@ import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.config.Configuration;
 import uk.gov.legislation.exceptions.XSLTCompilationException;
-
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
-import java.util.Objects;
+import java.util.Optional;
 import java.util.Properties;
+import java.util.function.Supplier;
 
 @Component
 public class Akn2Html {
@@ -28,13 +28,26 @@ public class Akn2Html {
     }
 
     private XsltExecutable compileXslt() {
-        return wrapWithRuntimeException(() -> {
-            XsltCompiler compiler = Helper.processor.newXsltCompiler();
-            String systemId = Objects.requireNonNull(this.getClass().getResource(getStylSheetAknPath()).toURI().toASCIIString());
-            Source source = new StreamSource(systemId);
-            return compiler.compile(source);
-        });
+        return safelyCompileXsl(
+                getStylSheetAknPath(),
+                Helper.processor::newXsltCompiler
+        );
     }
+
+    private XsltExecutable safelyCompileXsl(String stylesheetPath, Supplier <XsltCompiler> compilerSupplier) {
+        return Optional.ofNullable(this.getClass().getResource(stylesheetPath))
+                .map(resource -> {
+                    try {
+                        String systemId = resource.toURI().toASCIIString();
+                        Source source = new StreamSource(systemId);
+                        return compilerSupplier.get().compile(source);
+                    } catch (SaxonApiException | URISyntaxException e) {
+                        throw new XSLTCompilationException("Failed to compile XSLT", e);
+                    }
+                })
+                .orElseThrow(() -> new IllegalArgumentException("Stylesheet resource not found: " + stylesheetPath));
+    }
+
 
     private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();
@@ -62,23 +75,5 @@ public class Akn2Html {
         return html.toString();
     }
 
-   /**
-     Helper method to wrap exceptions and throw RuntimeException
-   */
-    private <T> T wrapWithRuntimeException(ThrowingSupplier<T> supplier) {
-        try {
-            return supplier.get();
-        } catch (URISyntaxException | SaxonApiException e) {
-            throw new XSLTCompilationException(e.getMessage());
-        }
-    }
-
-   /**
-     Functional interface for suppliers that can throw checked exceptions
-    */
-    @FunctionalInterface
-    private interface ThrowingSupplier<T> {
-        T get() throws URISyntaxException, SaxonApiException;
-    }
 }
 

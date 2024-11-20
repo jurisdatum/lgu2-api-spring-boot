@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.marklogic.Legislation;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 
@@ -51,13 +50,9 @@ public class Pdf {
     @Autowired
     private Simplify simplifier;
 
-    private Optional<String> getPdfUrl(String type, int year, int number, String version) throws IOException, InterruptedException, SaxonApiException {
+    private Optional<String> getPdfUrl(String type, int year, int number, String version) throws IOException, SaxonApiException {
         String clml;
-        try {
-            clml = db.getTableOfContents(type, year, number, version == null ? Optional.empty() : Optional.of(version));
-        } catch (NoDocumentException e) {
-            return Optional.empty();
-        }
+        clml = db.getTableOfContents(type, year, number, version == null ? Optional.empty() : Optional.of(version));
         Contents toc = simplifier.contents(clml);
         return toc.meta().pdfFormatUri();
     }

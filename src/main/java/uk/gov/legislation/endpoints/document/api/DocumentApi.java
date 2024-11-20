@@ -5,15 +5,12 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.endpoints.document.Metadata;
 
-import java.io.IOException;
 import java.util.Optional;
 
 /**
@@ -41,8 +38,7 @@ public interface DocumentApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version
-    ) throws IOException, InterruptedException, NoDocumentException;
+            @RequestParam Optional<String> version);
 
     /**
      * Retrieves document content in AKN format.
@@ -62,8 +58,7 @@ public interface DocumentApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version
-    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
+            @RequestParam Optional<String> version);
 
     /**
      * Retrieves document content in HTML format.
@@ -83,8 +78,7 @@ public interface DocumentApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version
-    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
+            @RequestParam Optional<String> version);
 
     /**
      * Record representing the response structure for JSON document content.
@@ -109,6 +103,5 @@ public interface DocumentApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version
-    ) throws IOException, InterruptedException, NoDocumentException, SaxonApiException;
+            @RequestParam Optional<String> version);
 }
