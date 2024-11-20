@@ -8,19 +8,20 @@ import java.util.Optional;
 
 @Service
 public class FragmentService {
+
     private final Legislation db;
 
     public FragmentService(Legislation db) {
         this.db = db;
     }
 
-    public Optional <String> getDocumentSection(String type, int year, int number, String section, Optional<String> version) {
+    public Optional<String> getDocumentSection(String type, String year, int number, String section, Optional<String> version) {
             return Optional.ofNullable(db.getDocumentSection(type, year, number, section, version));
 
     }
 
-    public String getNotFoundMessage(String type, int year, int number) {
+    public String getNotFoundMessage(String type, String year, int number) {
         return String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number);
     }
-}
 
+}

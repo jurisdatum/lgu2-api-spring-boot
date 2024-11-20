@@ -20,8 +20,7 @@ public class Legislation {
         this.db = db;
     }
 
-
-    public String getDocument(String type, int year, int number, Optional<String> version) {
+    public String getDocument(String type, String year, int number, Optional<String> version) {
         return handleRequest(
                 buildQuery(type, year, number, version, Optional.empty(), Optional.empty()),
                 comp -> getDocument(comp.type(), comp.year(), comp.number(), comp.version())
@@ -31,7 +30,7 @@ public class Legislation {
     /** Get table of contents
      */
 
-    public String getTableOfContents(String type, int year, int number, Optional<String> version) {
+    public String getTableOfContents(String type, String year, int number, Optional<String> version) {
         return handleRequest(
                 buildQuery(type, year, number, version, Optional.of("contents"), Optional.empty()),
                 comp -> getTableOfContents(comp.type(), comp.year(), comp.number(), comp.version())
@@ -40,7 +39,7 @@ public class Legislation {
 
     /** Get document section
      */
-    public String getDocumentSection(String type, int year, int number, String section, Optional<String> version) {
+    public String getDocumentSection(String type, String year, int number, String section, Optional<String> version) {
         return handleRequest(
                 buildQuery(type, year, number, version, Optional.empty(), Optional.of(section)),
                 comp -> {
@@ -75,10 +74,10 @@ public class Legislation {
     /** Build the query string for requests
     */
 
-     private String buildQuery(String type, int year, int number, Optional<String> version, Optional<String> view, Optional<String> section) {
+     private String buildQuery(String type, String year, int number, Optional<String> version, Optional<String> view, Optional<String> section) {
         StringBuilder query = new StringBuilder();
         query.append("?type=").append(encode(type))
-                .append("&year=").append(year)
+                .append("&year=").append(encode(year))
                 .append("&number=").append(number);
 
         version.ifPresent(v -> query.append("&version=").append(encode(v)));

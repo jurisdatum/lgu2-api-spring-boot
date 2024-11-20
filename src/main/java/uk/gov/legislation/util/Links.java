@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class Links {
 
-    public record Components(String type, int year, int number, Optional<String> fragment, Optional<String> version) { }
+    public record Components(String type, String year, int number, Optional<String> fragment, Optional<String> version) { }
 
     public static Components parse(String link) {
         if (link == null)
@@ -22,18 +22,24 @@ public class Links {
             return null;
         if (link.startsWith("id/"))
             link = link.substring(3);
+
         Matcher matcher = Pattern.compile("^([a-z]{3,5})/(\\d{4})/(\\d+)/?").matcher(link);
-        if (!matcher.find())
-            return null;
+        if (!matcher.find()) {
+            matcher = Pattern.compile("^([a-z]{3,5})/([A-Za-z0-9]+/[0-9-]+)/(\\d+)/?").matcher(link);
+            if (!matcher.find())
+                return null;
+        }
         final String type = matcher.group(1);
-        final int year = Integer.parseInt(matcher.group(2));
+        final String year = matcher.group(2);
         final int number = Integer.parseInt(matcher.group(3));
         link = link.substring(matcher.end());
+
         String[] split = link.split("/");
         if (split[split.length - 1].equals("revision"))
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
             return new Components(type, year, number, Optional.empty(), Optional.empty());
+
         final Optional<String> version;
         if (Versions.isVersionLabel(split[split.length - 1])) {
             version = Optional.of(split[split.length - 1]);
@@ -51,6 +57,7 @@ public class Links {
         return new Components(type, year, number, fragment, version);
     }
 
+    // FixMe should return Optional<String>
     public static String extractFragmentIdentifierFromLink(String link) {
         Components components = parse(link);
         if (components == null)

@@ -46,7 +46,7 @@ public class DocumentApiController implements DocumentApi {
      * Fetches CLML content based on document details.
      */
     private Optional<String> fetchClmlContent(String type, int year, int number, Optional<String> version) {
-        return Optional.ofNullable(legislationService.getDocument(type, year, number, version));
+        return Optional.ofNullable(legislationService.getDocument(type, Integer.toString(year), number, version));
     }
 
     private <T> ResponseEntity<T> handleTransformation(Function <String, T> transformationFunction, String type, int year, int number, Optional<String> version, String errorMessage) {

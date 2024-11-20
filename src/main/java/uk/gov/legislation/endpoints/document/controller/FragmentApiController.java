@@ -43,12 +43,12 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentClml(String type, int year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
+        return fragmentService.getDocumentSection(type, Integer.toString(year), number, section, version)
                 .map(clml -> ResponseEntity.ok()
                         .contentType(MediaType.APPLICATION_XML)
                         .body(clml))
                 .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+                        fragmentService.getNotFoundMessage(type, Integer.toString(year), number)));
     }
 
     /**
@@ -57,13 +57,13 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
+        return fragmentService.getDocumentSection(type, Integer.toString(year), number, section, version)
                 .map(transformationService::transformToAkn)
                 .map(akn -> ResponseEntity.ok()
                         .contentType(MediaType.parseMediaType("application/akn+xml"))
                         .body(akn))
                 .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+                        fragmentService.getNotFoundMessage(type, Integer.toString(year), number)));
     }
 
     /**
@@ -72,13 +72,13 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
+        return fragmentService.getDocumentSection(type, Integer.toString(year), number, section, version)
                 .map(clml -> transformationService.transformToHtml(clml, true))
                 .map(html -> ResponseEntity.ok()
                         .contentType(MediaType.TEXT_HTML)
                         .body(html))
                 .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+                        fragmentService.getNotFoundMessage(type, Integer.toString(year), number)));
     }
 
     /**
@@ -87,10 +87,11 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, int year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
+        return fragmentService.getDocumentSection(type, Integer.toString(year), number, section, version)
                 .map(transformationService::createJsonResponse)
                 .map(ResponseEntity::ok)
                 .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+                        fragmentService.getNotFoundMessage(type, Integer.toString(year), number)));
     }
+
 }

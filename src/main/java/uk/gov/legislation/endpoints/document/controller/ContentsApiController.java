@@ -42,7 +42,7 @@ public class ContentsApiController implements ContentsApi {
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version) {
         return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
+                Optional.ofNullable(contentsService.fetchContentsXml(type, Integer.toString(year), number, version))
                         .map(xmlContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_XML).body(xmlContent))
                         .orElseThrow(() ->
                                 new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
@@ -56,7 +56,7 @@ public class ContentsApiController implements ContentsApi {
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version) {
         return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
+                Optional.ofNullable(contentsService.fetchContentsXml(type, Integer.toString(year), number, version))
                         .map(contentsService::transformToAkn)
                         .map(aknXml -> ResponseEntity.ok().contentType(MediaType.valueOf("application/akn+xml")).body(aknXml))
                         .orElseThrow(() ->
@@ -71,7 +71,7 @@ public class ContentsApiController implements ContentsApi {
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version) {
         return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
+                Optional.ofNullable(contentsService.fetchContentsXml(type, Integer.toString(year), number, version))
                         .map(contentsService::simplifyToTableOfContents)
                         .map(jsonContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(jsonContent))
                         .orElseThrow(() ->
