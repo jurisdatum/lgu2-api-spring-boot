@@ -16,7 +16,7 @@ import uk.gov.legislation.util.Types;
 import java.io.IOException;
 
 @RestController
-@Tag(name = "Document lists", description = "lists of documents")
+@Tag(name = "Document lists")
 @SuppressWarnings("unused")
 public class Documents {
 

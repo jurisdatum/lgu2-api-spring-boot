@@ -19,7 +19,7 @@ import java.net.URI;
 import java.util.Optional;
 
 @RestController
-@Tag(name = "Documents")
+@Tag(name = "PDFs")
 public class Pdf {
 
     @Autowired

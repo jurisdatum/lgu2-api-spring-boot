@@ -1,51 +1,48 @@
 package uk.gov.legislation.endpoints.document.api;
 
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.endpoints.document.TableOfContents;
+import uk.gov.legislation.endpoints.document.api.params.*;
+import uk.gov.legislation.endpoints.document.api.params.Number;
 
 import java.util.Optional;
 
-@Tag(name = "Document Contents", description = "API for accessing document contents in various formats")
+@Tag(name = "Tables of contents")
 public interface ContentsApi {
 
-    @Operation(summary = "Retrieve contents in CLML format")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully retrieved contents in CLML format"),
-            @ApiResponse(responseCode = "404", description = "Document not found")
-    })
-    @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/xml")
-    ResponseEntity<String> getDocumentContentsClml(
-            @PathVariable String type,
-            @PathVariable int year,
-            @PathVariable int number,
-            @RequestParam Optional<String> version);
-    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/xml")
-    ResponseEntity<String> getDocumentContentsClml(
-            @PathVariable String type,
-            @PathVariable String monarch,
-            @PathVariable String years,
-            @PathVariable int number,
-            @RequestParam Optional<String> version);
+    /* CLML */
 
-    @Operation(summary = "Retrieve contents in AKN format")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully retrieved contents in AKN format"),
-            @ApiResponse(responseCode = "404", description = "Document not found"),
-            @ApiResponse(responseCode = "500", description = "Transformation error occurred")
-    })
+    @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/xml")
+    @Operation(summary = "get a document's table of conents (calendar year)")
+    ResponseEntity<String> getDocumentContentsClml(
+            @PathVariable @Type String type,
+            @PathVariable @Year int year,
+            @PathVariable @Number int number,
+            @RequestParam @Version Optional<String> version);
+
+    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/xml")
+    @Operation(summary = "get a document's table of conents (regnal year)")
+    ResponseEntity<String> getDocumentContentsClml(
+            @PathVariable @Type String type,
+            @PathVariable @Monarch String monarch,
+            @PathVariable @Years String years,
+            @PathVariable @Number int number,
+            @RequestParam @Version Optional<String> version);
+
+    /* Akoma Ntoso */
+
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
             @PathVariable String type,
@@ -54,17 +51,15 @@ public interface ContentsApi {
             @PathVariable int number,
             @RequestParam Optional<String> version);
 
-    @Operation(summary = "Retrieve contents in JSON format")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully retrieved contents in JSON format"),
-            @ApiResponse(responseCode = "404", description = "Document not found")
-    })
+    /* JSON */
+
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
+
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
             @PathVariable String type,
