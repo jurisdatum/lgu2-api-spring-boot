@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.3.5</version>
+		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
@@ -20,7 +20,13 @@
 		<license/>
 	</licenses>
 	<developers>
-		<developer/>
+		<developer>
+			<name>Jim Mangiafico</name>
+			<organization>Juris Datum</organization>
+		</developer>
+		<developer>
+			<name>Aasif Gulbarga</name>
+		</developer>
 	</developers>
 	<scm>
 		<connection/>
