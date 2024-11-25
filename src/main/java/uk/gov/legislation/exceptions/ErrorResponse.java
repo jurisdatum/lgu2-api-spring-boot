@@ -1,6 +1,7 @@
 package uk.gov.legislation.exceptions;
 
 import lombok.Getter;
+import org.springframework.http.HttpStatusCode;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -8,14 +9,20 @@ import java.time.format.DateTimeFormatter;
 @Getter
 public class ErrorResponse {
 
-    private final String status;
+    private final int status;
+    private final String error;
     private final String message;
     private final String timestamp;
 
-    public ErrorResponse(String status, String message) {
+    public ErrorResponse(int status, String error, String message) {
         this.status = status;
+        this.error = error;
         this.message = message;
         this.timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+    }
+
+    ErrorResponse(HttpStatusCode status, String error, String message) {
+        this(status.value(), error, message);
     }
 
 }
