@@ -28,9 +28,9 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     public int year() { return year; }
 
-//    public String regnalYear;
+    public String regnalYear;
 
-    public String regnalYear() { return null; }
+    public String regnalYear() { return regnalYear; }
 
     public int number;
 

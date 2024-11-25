@@ -24,8 +24,7 @@ public class ContentsService {
         this.simplifier = simplifier;
     }
 
-
-    public String fetchContentsXml(String type, int year, int number, Optional <String> version) {
+    public String fetchContentsXml(String type, String year, int number, Optional <String> version) {
         return Optional.ofNullable(legislationRepository.getTableOfContents(type, year, number, version))
                 .orElseThrow(() -> new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number)));
     }
@@ -46,4 +45,5 @@ public class ContentsService {
             throw new TransformationException("Simplification to JSON format failed",e);
         }
     }
+
 }

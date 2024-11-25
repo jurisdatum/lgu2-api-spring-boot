@@ -43,6 +43,18 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentClml(String type, int year, int number, String section, Optional<String> version) {
+        return getFragmentClml(type, Integer.toString(year), number, section, version);
+    }
+    /**
+     * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
+     * @param years     A year or range of years, relative to the monarch, e.g., '1' or '1-2'
+     */
+    @Override
+    public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number, String section, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getFragmentClml(type, regnalYear, number, section, version);
+    }
+    private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section, Optional<String> version) {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(clml -> ResponseEntity.ok()
                         .contentType(MediaType.APPLICATION_XML)
@@ -57,6 +69,14 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version) {
+        return getFragmentAkn(type, Integer.toString(year), number, section, version);
+    }
+    @Override
+    public ResponseEntity<String> getFragmentAkn(String type, String monarch, String years, int number, String section, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getFragmentAkn(type, regnalYear, number, section, version);
+    }
+    private ResponseEntity<String> getFragmentAkn(String type, String year, int number, String section, Optional<String> version) {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(transformationService::transformToAkn)
                 .map(akn -> ResponseEntity.ok()
@@ -72,6 +92,14 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version) {
+        return getFragmentHtml(type, Integer.toString(year), number, section, version);
+    }
+    @Override
+    public ResponseEntity<String> getFragmentHtml(String type, String monarch, String years, int number, String section, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getFragmentHtml(type, regnalYear, number, section, version);
+    }
+    private ResponseEntity<String> getFragmentHtml(String type, String year, int number, String section, Optional<String> version) {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(clml -> transformationService.transformToHtml(clml, true))
                 .map(html -> ResponseEntity.ok()
@@ -87,10 +115,19 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, int year, int number, String section, Optional<String> version) {
+        return getFragmentJson(type, Integer.toString(year), number, section, version);
+    }
+    @Override
+    public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, String monarch, String years, int number, String section, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getFragmentJson(type, regnalYear, number, section, version);
+    }
+    private ResponseEntity<DocumentApi.Response> getFragmentJson(String type, String year, int number, String section, Optional<String> version) {
         return fragmentService.getDocumentSection(type, year, number, section, version)
                 .map(transformationService::createJsonResponse)
                 .map(ResponseEntity::ok)
                 .orElseThrow(() -> new NoDocumentException(
                         fragmentService.getNotFoundMessage(type, year, number)));
     }
+
 }

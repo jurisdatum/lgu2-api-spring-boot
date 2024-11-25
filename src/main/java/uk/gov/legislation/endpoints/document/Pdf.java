@@ -19,8 +19,7 @@ import java.net.URI;
 import java.util.Optional;
 
 @RestController
-@Tag(name = "Documents")
-@SuppressWarnings("unused")
+@Tag(name = "PDFs")
 public class Pdf {
 
     @Autowired
@@ -29,7 +28,16 @@ public class Pdf {
     @GetMapping(value = "/pdf/{type}/{year}/{number}")
     @Operation(summary = "an original PDF version")
     public ResponseEntity<Void> pdf(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
-        Optional<String> pdf = getPdfUrl(type, year, number, version);
+        Optional<String> pdf = getPdfUrl(type, Integer.toString(year), number, version);
+        if (pdf.isEmpty())
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        URI uri = URI.create(pdf.get());
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
+    }
+    @GetMapping(value = "/pdf/{type}/{monarch}/{years}/{number}")
+    public ResponseEntity<Void> pdf(@PathVariable String type, @PathVariable String monarch, @PathVariable String years, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        Optional<String> pdf = getPdfUrl(type, regnalYear, number, version);
         if (pdf.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         URI uri = URI.create(pdf.get());
@@ -39,7 +47,17 @@ public class Pdf {
     @GetMapping(value = "/thumbnail/{type}/{year}/{number}")
     @Operation(summary = "thumbnail of PDF")
     public ResponseEntity<Void> thumbnail(@PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
-        Optional<String> pdf = getPdfUrl(type, year, number, version);
+        Optional<String> pdf = getPdfUrl(type, Integer.toString(year), number, version);
+        if (pdf.isEmpty())
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        String thumbnail = convertToThumbnailUrl(pdf.get());
+        URI uri = URI.create(thumbnail);
+        return ResponseEntity.status(HttpStatus.TEMPORARY_REDIRECT).location(uri).build();
+    }
+    @GetMapping(value = "/thumbnail/{type}/{monarch}/{years}/{number}")
+    public ResponseEntity<Void> thumbnail(@PathVariable String type, @PathVariable String monarch, @PathVariable String years, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        Optional<String> pdf = getPdfUrl(type, regnalYear, number, version);
         if (pdf.isEmpty())
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         String thumbnail = convertToThumbnailUrl(pdf.get());
@@ -50,7 +68,7 @@ public class Pdf {
     @Autowired
     private Simplify simplifier;
 
-    private Optional<String> getPdfUrl(String type, int year, int number, String version) throws IOException, SaxonApiException {
+    private Optional<String> getPdfUrl(String type, String year, int number, String version) throws IOException, SaxonApiException {
         String clml;
         clml = db.getTableOfContents(type, year, number, version == null ? Optional.empty() : Optional.of(version));
         Contents toc = simplifier.contents(clml);

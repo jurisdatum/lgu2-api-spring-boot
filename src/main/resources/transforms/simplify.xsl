@@ -24,9 +24,10 @@
 
 <xsl:template match="ukm:Metadata">
     <meta>
-        <xsl:apply-templates select="dc:identifier" />
+        <xsl:call-template name="id" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentMainType" />
         <xsl:apply-templates select="ukm:*/ukm:Year" />
+        <xsl:call-template name="regnal-year" />
         <xsl:apply-templates select="ukm:*/ukm:Number" />
         <xsl:apply-templates select="ukm:*/ukm:AlternativeNumber" />
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
@@ -43,14 +44,23 @@
     </meta>
 </xsl:template>
 
-<xsl:template match="dc:identifier">
+<xsl:variable name="id-components" as="xs:string+">
+    <xsl:variable name="id" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
+    <xsl:variable name="id" as="xs:string" select="substring-after($id, 'http://www.legislation.gov.uk/')" />
+    <xsl:variable name="components" as="xs:string+" select="tokenize($id, '/')" />
+    <xsl:choose>
+        <xsl:when test="$components[2] castable as xs:integer">
+            <xsl:sequence select="subsequence($components, 1, 3)" />
+        </xsl:when>
+        <xsl:otherwise>
+            <xsl:sequence select="subsequence($components, 1, 4)" />
+        </xsl:otherwise>
+    </xsl:choose>
+</xsl:variable>
+
+<xsl:template name="id">
     <id>
-        <xsl:variable name="id" select="string(.)" />
-        <xsl:variable name="id" select="substring-after($id, 'http://www.legislation.gov.uk/')" />
-        <xsl:variable name="parts" select="tokenize($id, '/')" />
-        <xsl:variable name="parts" select="subsequence($parts, 1, 3)" />
-        <xsl:variable name="id" select="string-join($parts, '/')" />
-        <xsl:value-of select="$id" />
+        <xsl:value-of select="string-join($id-components, '/')" />
     </id>
 </xsl:template>
 
@@ -100,6 +110,15 @@
     <year>
         <xsl:value-of select="@Value" />
     </year>
+</xsl:template>
+
+<xsl:template name="regnal-year">
+    <xsl:if test="count($id-components) = 4">
+        <xsl:variable name="components" select="subsequence($id-components, 2, 2)" />
+        <regnalYear>
+            <xsl:value-of select="string-join($components, '/')" />
+        </regnalYear>
+    </xsl:if>
 </xsl:template>
 
 <xsl:template match="ukm:Number">

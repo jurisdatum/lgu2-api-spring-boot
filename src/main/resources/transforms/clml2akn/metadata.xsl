@@ -33,7 +33,7 @@
 				<xsl:when test="exists(/ukl:Legislation/Metadata/PrimaryMetadata/EnactmentDate)">
 					<xsl:value-of select="/ukl:Legislation/Metadata/PrimaryMetadata/EnactmentDate/@Date" />
 				</xsl:when>
-				<xsl:otherwise>
+				<xsl:when test="exists(/ukl:Legislation/ukl:Primary/ukl:PrimaryPrelims/ukl:DateOfEnactment/ukl:DateText)">
 					<xsl:variable name="prelim-date" as="xs:date?" select="local:parse-date(/ukl:Legislation/ukl:Primary/ukl:PrimaryPrelims/ukl:DateOfEnactment/ukl:DateText)" />
 					<xsl:choose>
 						<xsl:when test="exists($prelim-date)">
@@ -43,6 +43,9 @@
 							<xsl:value-of select="concat(/ukl:Legislation/Metadata/PrimaryMetadata/Year/@Value, '-01-01')" />
 						</xsl:otherwise>
 					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:value-of select="concat(/ukl:Legislation/Metadata/PrimaryMetadata/Year/@Value, '-01-01')" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:when>
@@ -91,7 +94,7 @@
 				<xsl:when test="exists(/ukl:Legislation/Metadata/PrimaryMetadata/EnactmentDate)">
 					<xsl:text>enacted</xsl:text>
 				</xsl:when>
-				<xsl:otherwise>
+				<xsl:when test="exists(/ukl:Legislation/ukl:Primary/ukl:PrimaryPrelims/ukl:DateOfEnactment/ukl:DateText)">
 					<xsl:variable name="prelim-date" as="xs:date?" select="local:parse-date(/ukl:Legislation/ukl:Primary/ukl:PrimaryPrelims/ukl:DateOfEnactment/ukl:DateText)" />
 					<xsl:choose>
 						<xsl:when test="exists($prelim-date)">
@@ -101,6 +104,9 @@
 							<xsl:text>estimated</xsl:text>
 						</xsl:otherwise>
 					</xsl:choose>
+				</xsl:when>
+				<xsl:otherwise>
+					<xsl:text>estimated</xsl:text>
 				</xsl:otherwise>
 			</xsl:choose>
 		</xsl:when>

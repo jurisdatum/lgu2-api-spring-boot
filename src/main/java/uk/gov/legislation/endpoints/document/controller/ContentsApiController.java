@@ -38,15 +38,26 @@ public class ContentsApiController implements ContentsApi {
      * @param version  Optional version of the document to retrieve
      * @return ResponseEntity containing CLML XML if found, or throws NoDocumentException if the document is not found
      */
-
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version) {
+        return getDocumentContentsClml(type, Integer.toString(year), number, version);
+    }
+    /**
+     * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
+     * @param years     A year or range of years, relative to the monarch, e.g., '1' or '1-2'
+     */
+    @Override
+    public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentContentsClml(type, regnalYear, number, version);
+    }
+    private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version) {
         return
                 Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
                         .map(xmlContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_XML).body(xmlContent))
                         .orElseThrow(() ->
                                 new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-        );
+                        );
     }
 
     /**
@@ -55,13 +66,21 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version) {
+        return getDocumentContentsAkn(type, Integer.toString(year), number, version);
+    }
+    @Override
+    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentContentsAkn(type, regnalYear, number, version);
+    }
+    private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version) {
         return
                 Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
                         .map(contentsService::transformToAkn)
                         .map(aknXml -> ResponseEntity.ok().contentType(MediaType.valueOf("application/akn+xml")).body(aknXml))
                         .orElseThrow(() ->
                                 new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-        );
+                        );
     }
 
     /**
@@ -70,13 +89,21 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version) {
+        return getDocumentContentsJson(type, Integer.toString(year), number, version);
+    }
+    @Override
+    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version) {
+        String regnalYear = String.join("/", monarch, years);
+        return getDocumentContentsJson(type, regnalYear, number, version);
+    }
+    private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version) {
         return
                 Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
                         .map(contentsService::simplifyToTableOfContents)
                         .map(jsonContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(jsonContent))
                         .orElseThrow(() ->
                                 new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-        );
+                        );
     }
 
 }

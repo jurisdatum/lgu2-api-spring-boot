@@ -435,6 +435,14 @@
 	</xsl:choose>
 </xsl:variable>
 
+<xsl:variable name="doc-regnal-year" as="xs:string?">
+	<xsl:analyze-string select="$dc-identifier" regex="^https?://www.legislation.gov.uk/[a-z]{{3,5}}/([A-Z][A-Za-z0-9]+/\d+(-\d+)?)/\d+">
+		<xsl:matching-substring>
+			<xsl:sequence select="regex-group(1)" />
+		</xsl:matching-substring>
+	</xsl:analyze-string>
+</xsl:variable>
+
 <xsl:variable name="doc-number" as="xs:string">
 	<xsl:variable name="ukm-number" as="element()?" select="/Legislation/ukm:Metadata/ukm:*/ukm:Number" />
 	<xsl:choose>
@@ -462,7 +470,14 @@
 <xsl:variable name="doc-title" as="xs:string" select="/Legislation/ukm:Metadata/dc:title" />
 
 <xsl:variable name="doc-short-id" as="xs:string">
-	<xsl:sequence select="concat($doc-short-type, '/', $doc-year, '/', $doc-number)" />
+	<xsl:choose>
+		<xsl:when test="exists($doc-regnal-year)">
+			<xsl:sequence select="concat($doc-short-type, '/', $doc-regnal-year, '/', $doc-number)" />
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:sequence select="concat($doc-short-type, '/', $doc-year, '/', $doc-number)" />
+		</xsl:otherwise>
+	</xsl:choose>
 </xsl:variable>
 
 <xsl:variable name="doc-long-id" as="xs:string">

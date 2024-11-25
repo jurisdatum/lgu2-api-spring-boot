@@ -12,7 +12,7 @@ public enum Constants {
     TRANSFORMATION_FAIL_JSON("Failed to transform CLML to JSON"),
 
     // Document not found messages
-    DOCUMENT_NOT_FOUND("Document not found: %s, %d, %d");
+    DOCUMENT_NOT_FOUND("Document not found: %s, %s, %d");
      final String error;
 
     Constants(String error) {
