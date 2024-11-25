@@ -2,7 +2,7 @@ package uk.gov.legislation.exceptions;
 
 import lombok.Getter;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 @Getter
@@ -15,7 +15,7 @@ public class ErrorResponse {
     public ErrorResponse(String status, String message) {
         this.status = status;
         this.message = message;
-        this.timestamp = LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME);
+        this.timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
     }
 
 }
