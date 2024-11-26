@@ -14,8 +14,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(NoDocumentException.class)
     public ResponseEntity <ErrorResponse> handleNoDocumentException(NoDocumentException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "Not Found",
-                "Document not found: " + ex.getMessage()
+                HttpStatus.NOT_FOUND,
+                "Document Not Found",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
@@ -23,8 +24,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(TransformationException.class)
     public ResponseEntity<ErrorResponse> handleAknTransformationException(TransformationException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.INTERNAL_SERVER_ERROR,
                 "Transformation Error",
-                "Transformation failed: " + ex.getMessage()
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -32,8 +34,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(XSLTCompilationException.class)
     public ResponseEntity<ErrorResponse> handleXSLTCompilationException(XSLTCompilationException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "Error compiling XSLT",
-                "XSLTCompilationException failed: " + ex.getMessage()
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "XSLT Compilation Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -41,17 +44,20 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(InvalidURISyntaxException.class)
     public ResponseEntity<ErrorResponse> handleInvalidURISyntaxException(InvalidURISyntaxException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "InvalidURISyntax_Error",
-                "InvalidURISyntax: " + ex.getMessage()
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "Invalid URI Syntax Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
+    // thrown when MarkLogic returns an error response
     @ExceptionHandler(MarkLogicRequestException.class)
     public ResponseEntity<ErrorResponse> handleMarkLogicRequestException(MarkLogicRequestException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "MarkLogic Request Error",
-                "MarkLogic Error: " + ex.getMessage()
+                HttpStatus.INTERNAL_SERVER_ERROR,
+                "MarkLogic Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -59,8 +65,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(IOException.class)
     public ResponseEntity<ErrorResponse> handleIOException(IOException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "IOException_Error",
-                "An IO error occurred: " + ex.getMessage()
+                HttpStatus.SERVICE_UNAVAILABLE,
+                "IO Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
@@ -69,17 +76,20 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ErrorResponse> handleInterruptedException(InterruptedException ex) {
         Thread.currentThread().interrupt();
         ErrorResponse errorResponse = new ErrorResponse(
-                "InterruptedException_Error",
-                "The request was interrupted: " + ex.getMessage()
+                HttpStatus.SERVICE_UNAVAILABLE,
+                "Network Interruption Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
 
+    // a wrapper around an IOException or an InterruptedException thrown during a request to MarkLogic
     @ExceptionHandler(DocumentFetchException.class)
     public ResponseEntity<Object> handleDocumentFetchException(DocumentFetchException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
-                "Document fetch failed",
-                "Document fetch failed: " + ex.getMessage()
+                HttpStatus.SERVICE_UNAVAILABLE,
+                "Document Fetch Error",
+                ex.getMessage()
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
     }
