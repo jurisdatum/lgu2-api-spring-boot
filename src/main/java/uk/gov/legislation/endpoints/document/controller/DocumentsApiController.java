@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.endpoints.document.api.DocumentsApi;
 import uk.gov.legislation.endpoints.document.service.DocumentsService;
 import uk.gov.legislation.endpoints.documents.DocumentList;
-import uk.gov.legislation.exceptions.UnknownTypeException;
 
 import java.io.IOException;
 
@@ -19,34 +18,28 @@ public class DocumentsApiController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<DocumentList> getDocs(String type, int page) throws IOException, InterruptedException {
-        return documentsService.getDocumentsByType(type, page)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new UnknownTypeException(type));
+    public ResponseEntity<DocumentList> getDocs(String type, int page)
+            throws IOException, InterruptedException {
+        return ResponseEntity.ok(documentsService.getDocumentsByType(type, page));
     }
 
     @Override
-    public ResponseEntity<String> getFeed(String type, int page) throws IOException, InterruptedException {
-        return documentsService.getFeedByType(type, page)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new UnknownTypeException(type));
+    public ResponseEntity<String> getFeed(String type, int page)
+            throws IOException, InterruptedException {
+        return ResponseEntity.ok(documentsService.getFeedByType(type, page));
     }
 
     @Override
-    public ResponseEntity<DocumentList> getDocsByTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
-        return documentsService.getDocumentsByTypeAndYear(type, year, page)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new UnknownTypeException(type));
+    public ResponseEntity<DocumentList> getDocsByTypeAndYear(String type, int year, int page)
+            throws IOException, InterruptedException {
+        return ResponseEntity.ok(documentsService.getDocumentsByTypeAndYear(type, year, page));
     }
 
     @Override
-    public ResponseEntity<String> getFeedByTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
-        return documentsService.getFeedByTypeAndYear(type, year, page)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new UnknownTypeException(type));
+    public ResponseEntity<String> getFeedByTypeAndYear(String type, int year, int page)
+            throws IOException, InterruptedException {
+        return ResponseEntity.ok(documentsService.getFeedByTypeAndYear(type, year, page));
     }
-
-
-    }
+}
 
 
