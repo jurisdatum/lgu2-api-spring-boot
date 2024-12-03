@@ -43,8 +43,8 @@ public class DocumentsService {
 
     private void validateType(String type) {
         if (!Types.isValidShortType(type)) {
-            throw new UnknownTypeException("Unknown document type: " + type);
+            throw new UnknownTypeException(type);
         }
     }
-}
 
+}
