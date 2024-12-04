@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-class Converter {
+public class Converter {
 
     private record Response(Meta meta, List<? extends DocumentList.Document> documents) implements DocumentList { }
 
@@ -28,7 +28,7 @@ class Converter {
 
     private record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber { }
 
-    static DocumentList convert(SearchResults results) {
+    public static DocumentList convert(SearchResults results) {
         Meta meta = convertMeta(results);
         List<Document> docs = convertDocs(results);
         return new Response(meta, docs);
