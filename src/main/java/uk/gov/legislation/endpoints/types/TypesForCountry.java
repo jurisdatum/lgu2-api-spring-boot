@@ -6,18 +6,25 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;
 
 @Schema
-public interface TypesForCountry {
+public class TypesForCountry {
 
     @JsonProperty(index = 1)
-    @Schema(allowableValues = { "UK" })
-    String country();
+    @Schema(allowableValues = {"UK"})
+    private String country;
 
     @JsonProperty(index = 2)
     @Schema(description = "types that exclusively or primarily apply to the country")
-    List<TypeWrapper> primarily();
+    private List<TypeWrapper> primarily;
 
     @JsonProperty(index = 3)
     @Schema(description = "types that may contain legislation that applies to the country")
-    List<TypeWrapper> possibly();
+    private List<TypeWrapper> possibly;
+
+    public TypesForCountry(String country, List<TypeWrapper> primarily, List<TypeWrapper> possibly) {
+        this.country = country;
+        this.primarily = primarily;
+        this.possibly = possibly;
+    }
 
 }
+

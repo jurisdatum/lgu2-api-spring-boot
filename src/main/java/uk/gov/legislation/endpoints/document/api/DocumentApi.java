@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.endpoints.document.api.params.Number;
-import uk.gov.legislation.endpoints.document.api.params.*;
+import uk.gov.legislation.params.*;
+import uk.gov.legislation.params.Number;
 
 import java.util.Optional;
 
