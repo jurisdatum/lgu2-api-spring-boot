@@ -35,7 +35,7 @@ public class Links {
         link = link.substring(matcher.end());
 
         String[] split = link.split("/");
-        if (split[split.length - 1].equals("revision"))
+        if (split[split.length - 1].equals("revision"))  // ToDo: this might no longer be necessary?
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
             return new Components(type, year, number, Optional.empty(), Optional.empty());
