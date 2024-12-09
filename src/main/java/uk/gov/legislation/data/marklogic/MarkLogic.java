@@ -29,7 +29,7 @@ public class MarkLogic {
         String username = env.getProperty("MARKLOGIC_USERNAME");
         String password = env.getProperty("MARKLOGIC_PASSWORD");
 
-        this.baseUri = String.format("http://%s:%s/", host, port);
+        this.baseUri = String.format("http://%s:%s/queries/", host, port);
         this.authHeader = createAuthHeader(username, password);
     }
 
