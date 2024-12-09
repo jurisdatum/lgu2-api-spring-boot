@@ -1,14 +1,13 @@
 package uk.gov.legislation.endpoints.fragment.controller;
 
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.endpoints.fragment.api.FragmentApi;
 import uk.gov.legislation.endpoints.fragment.service.FragmentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
 import java.util.Optional;
+import java.util.function.Function;
 
 /**
  * REST Controller for managing fragment retrieval and transformation APIs.
@@ -55,12 +54,7 @@ public class FragmentApiController implements FragmentApi {
         return getFragmentClml(type, regnalYear, number, section, version);
     }
     private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
-                .map(clml -> ResponseEntity.ok()
-                        .contentType(MediaType.APPLICATION_XML)
-                        .body(clml))
-                .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+        return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity());
     }
 
     /**
@@ -77,13 +71,7 @@ public class FragmentApiController implements FragmentApi {
         return getFragmentAkn(type, regnalYear, number, section, version);
     }
     private ResponseEntity<String> getFragmentAkn(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
-                .map(transformationService::transformToAkn)
-                .map(akn -> ResponseEntity.ok()
-                        .contentType(MediaType.parseMediaType("application/akn+xml"))
-                        .body(akn))
-                .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToAkn);
     }
 
     /**
@@ -100,13 +88,7 @@ public class FragmentApiController implements FragmentApi {
         return getFragmentHtml(type, regnalYear, number, section, version);
     }
     private ResponseEntity<String> getFragmentHtml(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
-                .map(clml -> transformationService.transformToHtml(clml, true))
-                .map(html -> ResponseEntity.ok()
-                        .contentType(MediaType.TEXT_HTML)
-                        .body(html))
-                .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+        return fragmentService.fetchAndTransform(type, year, number, section, version, clml -> transformationService.transformToHtml(clml, true));
     }
 
     /**
@@ -123,11 +105,7 @@ public class FragmentApiController implements FragmentApi {
         return getFragmentJson(type, regnalYear, number, section, version);
     }
     private ResponseEntity<DocumentApi.Response> getFragmentJson(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.getDocumentSection(type, year, number, section, version)
-                .map(transformationService::createJsonResponse)
-                .map(ResponseEntity::ok)
-                .orElseThrow(() -> new NoDocumentException(
-                        fragmentService.getNotFoundMessage(type, year, number)));
+        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::createJsonResponse);
     }
 
 }

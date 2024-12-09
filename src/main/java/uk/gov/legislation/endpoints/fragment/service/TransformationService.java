@@ -1,8 +1,6 @@
 package uk.gov.legislation.endpoints.fragment.service;
 
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import org.springframework.stereotype.Service;
@@ -51,13 +49,4 @@ public class TransformationService {
         }
     }
 
-    public Object parse(String xml) {
-        try {
-            XmlMapper mapper = new XmlMapper();
-            return mapper.readValue(xml, Object.class);
-        } catch (JsonProcessingException e) {
-            throw new TransformationException("Error parsing XML to object", e);
-        }
-    }
 }
-

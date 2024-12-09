@@ -1,10 +1,13 @@
 package uk.gov.legislation.endpoints.fragment.service;
 
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.data.marklogic.Legislation;
-import uk.gov.legislation.util.Constants;
+import uk.gov.legislation.endpoints.CustomHeaders;
 
 import java.util.Optional;
+import java.util.function.Function;
 
 @Service
 public class FragmentService {
@@ -15,13 +18,13 @@ public class FragmentService {
         this.db = db;
     }
 
-    public Optional<String> getDocumentSection(String type, String year, int number, String section, Optional<String> version) {
-            return Optional.ofNullable(db.getDocumentSection(type, year, number, section, version));
+    /* helper */
 
-    }
-
-    public String getNotFoundMessage(String type, String year, int number) {
-        return String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number);
+    public  <T> ResponseEntity <T> fetchAndTransform(String type, String year, int number, String section, Optional<String> version, Function<String, T> transform) {
+        Legislation.Response leg = db.getDocumentSection(type, year, number, section, version);
+        T body = transform.apply(leg.clml());
+        HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
+        return ResponseEntity.ok().headers(headers).body(body);
     }
 
 }

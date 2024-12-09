@@ -26,7 +26,7 @@ public class PdfService {
      * Fetches the URL of a PDF or its thumbnail based on the input parameters.
      */
     public Optional<String> fetchPdfUrl(String type, String yearOrRegnal, int number, String version) throws IOException, SaxonApiException {
-        String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version));
+        String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version)).clml();
         return simplifier.contents(clml).meta().pdfFormatUri();
     }
 
