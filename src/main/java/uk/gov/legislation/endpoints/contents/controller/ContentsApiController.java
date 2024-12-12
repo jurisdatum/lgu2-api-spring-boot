@@ -1,15 +1,13 @@
 package uk.gov.legislation.endpoints.contents.controller;
 
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.data.marklogic.NoDocumentException;
 import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.endpoints.contents.api.ContentsApi;
 import uk.gov.legislation.endpoints.contents.service.ContentsService;
 
-import uk.gov.legislation.util.Constants;
 import java.util.Optional;
+import java.util.function.Function;
 
 
 /**
@@ -52,12 +50,7 @@ public class ContentsApiController implements ContentsApi {
         return getDocumentContentsClml(type, regnalYear, number, version);
     }
     private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version) {
-        return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
-                        .map(xmlContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_XML).body(xmlContent))
-                        .orElseThrow(() ->
-                                new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                        );
+        return contentsService.fetchAndTransform(type, year, number, version, Function.identity());
     }
 
     /**
@@ -74,13 +67,7 @@ public class ContentsApiController implements ContentsApi {
         return getDocumentContentsAkn(type, regnalYear, number, version);
     }
     private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version) {
-        return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
-                        .map(contentsService::transformToAkn)
-                        .map(aknXml -> ResponseEntity.ok().contentType(MediaType.valueOf("application/akn+xml")).body(aknXml))
-                        .orElseThrow(() ->
-                                new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                        );
+        return contentsService.fetchAndTransform(type, year, number, version, contentsService::transformToAkn);
     }
 
     /**
@@ -97,13 +84,7 @@ public class ContentsApiController implements ContentsApi {
         return getDocumentContentsJson(type, regnalYear, number, version);
     }
     private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version) {
-        return
-                Optional.ofNullable(contentsService.fetchContentsXml(type, year, number, version))
-                        .map(contentsService::simplifyToTableOfContents)
-                        .map(jsonContent -> ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(jsonContent))
-                        .orElseThrow(() ->
-                                new NoDocumentException(String.format(Constants.DOCUMENT_NOT_FOUND.getError(), type, year, number))
-                        );
+        return contentsService.fetchAndTransform(type, year, number, version, contentsService::simplifyToTableOfContents);
     }
 
 }
