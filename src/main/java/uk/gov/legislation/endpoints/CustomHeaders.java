@@ -19,4 +19,6 @@ public class CustomHeaders {
         return headers;
     }
 
+    private CustomHeaders() {
+    }
 }

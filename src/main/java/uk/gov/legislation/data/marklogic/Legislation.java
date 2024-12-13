@@ -5,11 +5,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.exceptions.DocumentFetchException;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
+import uk.gov.legislation.exceptions.NoDocumentException;
+import uk.gov.legislation.exceptions.RedirectException;
 import uk.gov.legislation.util.Links;
 
 import java.io.IOException;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 @Service
@@ -76,9 +76,9 @@ public class Legislation {
             if (comp == null)
                 throw new IllegalStateException("Invalid redirect location: " + e.getLocation(), e);
             params = new Parameters(comp.type(), comp.year(), comp.number())
-                .version(comp.version())
-                .view(params.view)
-                .section(params.section); // FixMe I believe this should be comp.fragment() ?
+                    .version(comp.version())
+                    .view(params.view)
+                    .section(params.section); // FixMe I believe this should be comp.fragment() ?
             return getAndFollowRedirect(params, true);
         }
     }
@@ -102,80 +102,10 @@ public class Legislation {
             return xml;
         }
         if (error.statusCode >= 400)
-            throw new NoDocumentException(error);
+            throw new NoDocumentException(error.toString());
         if (!error.header.name.equals("Location"))
             throw new MarkLogicRequestException("Error parsing MarkLogic error response");
         logger.debug("MarkLogic redirecting to {}", error.header.value);
         throw new RedirectException(error.header.value);
     }
-
-    /* parameters */
-
-    static class Parameters {
-
-        private final String type;
-
-        private final String year;
-
-        private final int number;
-
-        private Optional<String> version;
-
-        private Optional<String> view;
-
-        private Optional<String> section;
-
-        Parameters(String type, String year, int number) {
-            if (type == null)
-                throw new IllegalArgumentException();
-            if (year == null)
-                throw new IllegalArgumentException();
-            this.type = type;
-            this.year = year;
-            this.number = number;
-            this.version = Optional.empty();
-            this.view = Optional.empty();
-            this.section = Optional.empty();
-        }
-
-        String type() { return type; }
-
-        String year() { return year; }
-
-        int number() { return number; }
-
-        Optional<String> version() { return version; }
-
-        Parameters version(Optional<String> version) {
-            this.version = version;
-            return this;
-        }
-
-        Parameters view(Optional<String> view) {
-            this.view = view;
-            return this;
-        }
-
-        Parameters section(Optional<String> section) {
-            this.section = section;
-            return this;
-        }
-
-        String buildQuery() {
-            StringBuilder query = new StringBuilder();
-            query.append("?type=").append(encode(type))
-                .append("&year=").append(encode(year))
-                .append("&number=").append(number);
-            version.ifPresent(v -> query.append("&version=").append(encode(v)));
-            view.ifPresent(v -> query.append("&view=").append(encode(v)));
-            section.ifPresent(s -> query.append("&section=").append(encode(s)));
-            return query.toString();
-        }
-
-        static String encode(String value) {
-            return URLEncoder.encode(value, StandardCharsets.US_ASCII);
-        }
-
-    }
-
 }

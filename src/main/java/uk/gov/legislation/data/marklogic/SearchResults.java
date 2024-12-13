@@ -19,7 +19,7 @@ import java.util.Map;
 @JacksonXmlRootElement(localName = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class SearchResults {
 
-    static SearchResults parse(String xml) throws JsonProcessingException {
+    public static SearchResults parse(String xml) throws JsonProcessingException {
         ObjectMapper mapper = new XmlMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
             .registerModules(new JavaTimeModule());

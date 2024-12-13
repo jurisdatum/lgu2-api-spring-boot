@@ -11,6 +11,7 @@ import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.simple.Simplify;
 
+import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -50,7 +51,7 @@ public class ContentsService {
         Legislation.Response leg = legislationRepository.getTableOfContents(type, year, number, version);
         T body = transform.apply(leg.clml());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
-        return ResponseEntity.ok().headers(headers).body(body);
+        return ResponseEntity.ok().headers(Objects.requireNonNull(headers)).body(body);
     }
 
 }

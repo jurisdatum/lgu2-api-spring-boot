@@ -1,7 +1,7 @@
 package uk.gov.legislation.endpoints.documents.service;
 
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.Search;
+import uk.gov.legislation.data.marklogic.queries.Search;
 import uk.gov.legislation.data.marklogic.SearchResults;
 import uk.gov.legislation.endpoints.documents.Converter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
