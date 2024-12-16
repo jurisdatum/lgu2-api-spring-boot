@@ -51,7 +51,8 @@ public class ContentsService {
         Legislation.Response leg = legislationRepository.getTableOfContents(type, year, number, version);
         T body = transform.apply(leg.clml());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
-        return ResponseEntity.ok().headers(Objects.requireNonNull(headers)).body(body);
+        // ok for headers to be null
+        return ResponseEntity.ok().headers(headers).body(body);
     }
 
 }
