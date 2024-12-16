@@ -4,11 +4,11 @@ import uk.gov.legislation.data.marklogic.Error;
 
 public class NoDocumentException extends RuntimeException {
 
-    public NoDocumentException(String message) {
+    private NoDocumentException(String message) {
         super(message);
     }
 
-    NoDocumentException(Error error) {
+    public NoDocumentException(Error error) {
         this(error.message);
     }
 

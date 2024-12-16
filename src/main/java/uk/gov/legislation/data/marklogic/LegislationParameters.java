@@ -4,16 +4,16 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
-public class Parameters {
+public class LegislationParameters {
 
     private final String type;
     private final String year;
     private final int number;
     private Optional<String> version;
-    Optional<String> view;
-    Optional<String> section;
+    private Optional<String> view;
+    private Optional<String> section;
 
-    public Parameters(String type, String year, int number) {
+    public LegislationParameters(String type, String year, int number) {
         if (type == null)
             throw new IllegalArgumentException();
         if (year == null)
@@ -34,17 +34,19 @@ public class Parameters {
 
     public Optional<String> version() { return version; }
 
-    public Parameters version(Optional<String> version) {
+    public LegislationParameters version(Optional<String> version) {
         this.version = version;
         return this;
     }
 
-    public Parameters view(Optional<String> view) {
+    public Optional<String> view() { return view; }
+    public LegislationParameters view(Optional<String> view) {
         this.view = view;
         return this;
     }
 
-    public Parameters section(Optional<String> section) {
+    public Optional<String> section() { return section; }
+    public LegislationParameters section(Optional<String> section) {
         this.section = section;
         return this;
     }
@@ -63,4 +65,5 @@ public class Parameters {
     public static String encode(String value) {
         return URLEncoder.encode(value, StandardCharsets.US_ASCII);
     }
+
 }
