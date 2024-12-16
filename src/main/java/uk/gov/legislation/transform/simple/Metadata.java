@@ -3,13 +3,14 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.EffectsConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.*;
 
 import java.time.LocalDate;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @SuppressWarnings("unused")
 public class Metadata implements uk.gov.legislation.endpoints.document.Metadata {
@@ -164,5 +165,30 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public String next() { return next; }
     @JsonSetter("next")
     public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
+
+    /* unapplied effects */
+
+    private List<UnappliedEffect> unfilteredEffects = Collections.emptyList();
+    private List<Effect> effects;
+    private boolean filtered;
+
+    public List<UnappliedEffect> unfilteredEffects() { return unfilteredEffects; }
+    @Override
+    public List<Effect> unappliedEffects() {
+        if (!filtered) {
+            List<UnappliedEffect> temp = Effects.removeAppliedInForceDates(unfilteredEffects);
+            effects = EffectsConverter.convert(temp);
+            filtered = true;
+        }
+        return effects;
+    }
+    @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JsonSetter
+    public void setUnappliedEffects(List<UnappliedEffect> source) {
+        unfilteredEffects = source;
+        effects = null;
+        filtered = false;
+    }
 
 }

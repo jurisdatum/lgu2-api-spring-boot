@@ -41,6 +41,7 @@
         <xsl:call-template name="schedules" />
         <xsl:call-template name="formats" />
         <xsl:call-template name="fragment-info" />
+        <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" mode="copy" />
     </meta>
 </xsl:template>
 
@@ -177,6 +178,39 @@
     <next>
         <xsl:value-of select="atom:link[@rel='next']/@href" />
     </next>
+</xsl:template>
+
+<!-- effects -->
+
+<xsl:template match="ukm:UnappliedEffect" mode="copy">
+    <xsl:copy>
+        <xsl:copy-of select="@* except @AffectedProvisions" />
+        <xsl:apply-templates mode="copy" />
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ukm:AffectedProvisions" mode="copy" >
+    <xsl:copy>
+        <!-- only copy the element children, sometimes they can look like this: <ukm:AffectedProvisions>Act</ukm:AffectedProvisions> -->
+        <!-- Jackson does not like the fact that sometimes this element has text content by other times it has only element children -->
+        <!-- alternatively, I could copy the text content to an attribute -->
+        <xsl:apply-templates select="*" mode="copy" />
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="ukm:Section" mode="copy">
+    <xsl:copy>
+        <!-- Jackson does not like two attributes named @Ref, one in the empyt namespace and one in the err namespace -->
+        <xsl:copy-of select="@* except @err:*" xmlns:err="http://www.legislation.gov.uk/namespaces/error" />
+        <xsl:apply-templates mode="copy" />
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="*" mode="copy">
+    <xsl:copy>
+        <xsl:copy-of select="@*" />
+        <xsl:apply-templates mode="copy" />
+    </xsl:copy>
 </xsl:template>
 
 <!-- ToC -->

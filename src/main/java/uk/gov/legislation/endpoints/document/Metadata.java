@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
+import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 
 import java.time.LocalDate;
@@ -100,5 +101,9 @@ public interface Metadata {
     @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String next();
+
+    @JsonProperty(index = 22)
+    @JsonInclude(JsonInclude.Include.ALWAYS)
+    List<Effect> unappliedEffects();
 
 }

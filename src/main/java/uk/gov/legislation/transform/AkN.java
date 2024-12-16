@@ -2,7 +2,11 @@ package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
 import uk.gov.legislation.endpoints.document.Metadata;
+import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.endpoints.document.responses.EffectsConverter;
+import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
@@ -34,6 +38,8 @@ public class AkN {
     private static final XPathExecutable dcIdentifier;
     private static final XPathExecutable prevLink;
     private static final XPathExecutable nextLink;
+    private static final XPathExecutable unappliedEffectsSelector;
+    private static final XPathExecutable fragmentIdsSelector;
 
     static {
         XPathCompiler compiler = Helper.processor.newXPathCompiler();
@@ -63,6 +69,8 @@ public class AkN {
             dcIdentifier = compiler.compile("/*/*/meta/proprietary/dc:identifier");
             prevLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='prev']/@href");
             nextLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='next']/@href");
+            unappliedEffectsSelector = compiler.compile("/*/*/meta/proprietary/ukm:*/ukm:UnappliedEffects/ukm:UnappliedEffect");
+            fragmentIdsSelector = compiler.compile("//*/@id");
         } catch (SaxonApiException e) {
             throw new RuntimeException("error compiling xpath expression", e);
         }
@@ -102,7 +110,6 @@ public class AkN {
         return result;
     }
 
-    @SuppressWarnings("SameParameterValue")
     private static List<String> getMany(XPathExecutable exec, XdmNode akn) {
         XdmValue result = evaluate(exec, akn);
         if (result == null)
@@ -243,6 +250,22 @@ public class AkN {
         return Links.extractFragmentIdentifierFromLink(link);
     }
 
+    /* unapplied effects */
+
+    public static List<Effect> getUnappliedEffects(XdmNode root, boolean isFragment) {
+        List<UnappliedEffect> unfiltered = evaluate(unappliedEffectsSelector, root).stream()
+            .map(item -> (XdmNode) item)
+            .map(UnappliedEffect::make)
+            .toList();
+        List<UnappliedEffect> filtered = Effects.removeAppliedInForceDates(unfiltered);
+        if (isFragment) {
+            List<String> ids = getMany(fragmentIdsSelector, root);
+            if (ids != null)
+                filtered = Effects.removeIrrelevantSections(filtered, new HashSet<>(ids));
+        }
+        return EffectsConverter.convert(filtered);
+    }
+
 public record Meta(
         String id,
         String longType,
@@ -264,7 +287,8 @@ public record Meta(
         List<String> formats,
         String fragment,
         String prev,
-        String next
+        String next,
+        List<Effect> unappliedEffects
 
 ) implements Metadata {
 
@@ -290,9 +314,10 @@ public record Meta(
         String fragment = AkN.getFragmentIdentifier(akn);
         String prev = AkN.getPreviousLink(akn);
         String next = AkN.getNextLink(akn);
+        List<Effect> ue = getUnappliedEffects(akn, fragment != null);
         return new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
             version, status, title, lang, publisher, modified, versions, schedules, formats,
-            fragment, prev, next);
+            fragment, prev, next, ue);
     }
 
 }

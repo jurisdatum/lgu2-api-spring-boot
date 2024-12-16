@@ -1,0 +1,46 @@
+[ {
+  "requiresApplication" : true,
+  "type" : "word inserted",
+  "affectedProvisions" : [ ],
+  "inForceDates" : [ {
+    "date" : null,
+    "qualification" : ""
+  } ],
+  "source" : {
+    "id" : "ukpga/2021/22",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "year" : 2021,
+    "number" : 22
+  },
+  "notes" : null
+}, {
+  "requiresApplication" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectedProvisions" : [ ],
+  "inForceDates" : [ {
+    "date" : null,
+    "qualification" : "with effect in accordance with"
+  } ],
+  "source" : {
+    "id" : "ukpga/2014/21",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "year" : 2014,
+    "number" : 21
+  },
+  "notes" : null
+}, {
+  "requiresApplication" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectedProvisions" : [ ],
+  "inForceDates" : [ {
+    "date" : null,
+    "qualification" : "with effect in accordance with"
+  } ],
+  "source" : {
+    "id" : "ukpga/2014/21",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "year" : 2014,
+    "number" : 21
+  },
+  "notes" : null
+} ]

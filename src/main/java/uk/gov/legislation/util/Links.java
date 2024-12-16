@@ -34,7 +34,13 @@ public class Links {
         final int number = Integer.parseInt(matcher.group(3));
         link = link.substring(matcher.end());
 
+        if (link.isBlank())
+            return new Components(type, year, number, Optional.empty(), Optional.empty());
+
         String[] split = link.split("/");
+        if (split.length == 0)
+            throw new IllegalStateException(link);
+
         if (split[split.length - 1].equals("revision"))  // ToDo: this might no longer be necessary?
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
@@ -55,6 +61,27 @@ public class Links {
             return new Components(type, year, number, Optional.empty(), version);
         final Optional<String> fragment = Optional.of(String.join("/", split));
         return new Components(type, year, number, fragment, version);
+    }
+
+    public static String shorten(String uri) {
+        Components comp = parse(uri);
+        if (comp == null)
+            return null;
+        StringBuilder builder = new StringBuilder();
+        builder.append(comp.type);
+        builder.append("/");
+        builder.append(comp.year);
+        builder.append("/");
+        builder.append(comp.number);
+        if (comp.fragment.isPresent()) {
+            builder.append("/");
+            builder.append(comp.fragment.get());
+        }
+        if (comp.version.isPresent()) {
+            builder.append("/");
+            builder.append(comp.version.get());
+        }
+        return builder.toString();
     }
 
     // FixMe should return Optional<String>

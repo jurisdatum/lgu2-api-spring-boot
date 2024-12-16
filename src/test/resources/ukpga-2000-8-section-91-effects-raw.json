@@ -1,0 +1,627 @@
+[ {
+  "requiresApplied" : false,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
+  "affectedProvisions" : [ {
+    "ref" : "section-86-9A",
+    "text" : "s. 86(9A)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
+  "affectedProvisions" : [ {
+    "ref" : "section-87A-11",
+    "text" : "s. 87A(11)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
+  "affectedProvisions" : [ {
+    "ref" : "section-91-1A",
+    "text" : "s. 91(1A)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
+  "affectedProvisions" : [ {
+    "ref" : "section-91-1A-e",
+    "text" : "s. 91(1A)(e)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "word omitted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)",
+  "affectedProvisions" : [ {
+    "ref" : "section-124-10-c-i",
+    "text" : "s. 124(10)(c)(i)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "word inserted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
+  "affectedProvisions" : [ {
+    "ref" : "section-129-7-a",
+    "text" : "s. 129(7)(a)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "omitted and word",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
+  "affectedProvisions" : [ {
+    "ref" : "section-129-7-c",
+    "text" : "s. 129(7)(c)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
+  "affectedProvisions" : [ {
+    "ref" : "schedule-11A",
+    "text" : "Sch. 11A ",
+    "missing" : false
+  }, {
+    "ref" : "schedule-11A-paragraph-5-3",
+    "text" : "para. 5(3)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 662,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/662",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)",
+  "affectedProvisions" : [ {
+    "ref" : "schedule-17A",
+    "text" : "Sch. 17A ",
+    "missing" : true
+  }, {
+    "ref" : "schedule-17A-paragraph-12",
+    "text" : "para. 12",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2020-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2023,
+  "affectingNumber" : 29,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2023/29",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-2A",
+    "text" : "Sch. 2A ",
+    "missing" : false
+  }, {
+    "ref" : "schedule-2A-paragraph-19-2-b",
+    "text" : "para. 19(2)(b)",
+    "missing" : false
+  }, {
+    "ref" : "schedule-2A-paragraph-19-2-iia",
+    "text" : "(iia)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2023-06-29",
+    "qualification" : "for specified purposes"
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2016,
+  "affectingNumber" : 14,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2016/14",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "part-20C",
+    "text" : "Pt. 20C",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply (with modifications) conferred",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-2A",
+    "text" : "Sch. 2A",
+    "missing" : true
+  }, {
+    "ref" : "schedule-2B",
+    "text" : "2B",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-31-1-aa",
+    "text" : "s. 31(1)(aa)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-32A",
+    "text" : "s. 32A",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-36A",
+    "text" : "s. 36A",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply (with modifications) conferred",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-32A",
+    "text" : "s. 32A",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply (with modifications) conferred",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-2A",
+    "text" : "Sch. 2A",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply (with modifications) conferred",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-2B",
+    "text" : "Sch. 2B",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-2B",
+    "text" : "Sch. 2B",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-71J",
+    "text" : "s. 71J",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-214-5A",
+    "text" : "s. 214(5A)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-367A",
+    "text" : "s. 367A",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "word inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : null,
+    "text" : "-",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-395-13-h-i",
+    "text" : "s. 395(13)(h)(i)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-395-14",
+    "text" : "s. 395(14)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-1ZA",
+    "text" : "Sch. 1ZA ",
+    "missing" : false
+  }, {
+    "ref" : "schedule-1ZA-paragraph-32-c",
+    "text" : "para. 32(c)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "notes" : null,
+  "affectedProvisions" : [ ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : "with effect in accordance with"
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "notes" : null,
+  "affectedProvisions" : [ ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : "with effect in accordance with"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "applied",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 102,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/102",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-398-8",
+    "text" : "s. 398(8)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : true,
+    "date" : "2024-01-30",
+    "qualification" : "for specified purposes"
+  }, {
+    "applied" : true,
+    "date" : "2024-11-01",
+    "qualification" : "in force in so far as not already in force"
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1083,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "schedule-6",
+    "text" : "Sch. 6 ",
+    "missing" : false
+  }, {
+    "ref" : "schedule-6-paragraph-4A-8",
+    "text" : "para. 4A(8)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : "2024-12-31",
+    "qualification" : "wholly in force"
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2024,
+  "affectingNumber" : 13,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-234I-9",
+    "text" : "s. 234I(9)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  }, {
+    "applied" : false,
+    "date" : "2025-01-01",
+    "qualification" : "for specified purposes"
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2024,
+  "affectingNumber" : 13,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
+  "notes" : null,
+  "affectedProvisions" : [ {
+    "ref" : "section-234J-6",
+    "text" : "s. 234J(6)",
+    "missing" : false
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  }, {
+    "applied" : false,
+    "date" : "2025-01-01",
+    "qualification" : "for specified purposes"
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2002,
+  "affectingNumber" : 40,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2002/40",
+  "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A.",
+  "affectedProvisions" : [ {
+    "ref" : "section-427A-3",
+    "text" : "s. 427A(3)",
+    "missing" : true
+  } ],
+  "inForceDates" : [ {
+    "applied" : false,
+    "date" : null,
+    "qualification" : ""
+  } ]
+} ]

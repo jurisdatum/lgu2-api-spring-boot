@@ -1,6 +1,7 @@
 package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -13,11 +14,12 @@ import java.util.List;
 @JacksonXmlRootElement()
 public class Contents implements TableOfContents {
 
-    private static XmlMapper mapper() {
-        return (XmlMapper) new XmlMapper().registerModules(new JavaTimeModule());
-    }
     public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JsonProcessingException {
-        return mapper().readValue(xml, uk.gov.legislation.transform.simple.Contents.class);
+        System.out.println(xml);
+        XmlMapper mapper = (XmlMapper) new XmlMapper()
+            .registerModules(new JavaTimeModule())
+            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        return mapper.readValue(xml, uk.gov.legislation.transform.simple.Contents.class);
     }
 
     public Metadata meta;
