@@ -29,21 +29,21 @@ public class Search {
      */
     public SearchResults byType(String type, int page) throws IOException, InterruptedException {
         String xml = byTypeAtom(type, page);
-            return SearchResults.parse(xml);
+        return SearchResults.parse(xml);
     }
+
+    // series can be 'w', 's', 'ni', 'l', 'c'
 
     /**
      * Constructs the query for fetching search results by type and page.
      */
     public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&page=" + page;
-
         if (Type.WSI.shortName().equals(type)) {
             query += "&series=w";
         } else if (Type.NISI.shortName().equals(type)) {
             query += "&series=ni";
         }
-
         return db.get(ENDPOINT, query);
     }
 
@@ -52,8 +52,7 @@ public class Search {
      */
     public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
         String xml = byTypeAndYearAtom(type, year, page);
-            return SearchResults.parse(xml);
-
+        return SearchResults.parse(xml);
     }
 
     /**
@@ -61,13 +60,12 @@ public class Search {
      */
     public String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
         String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&year=" + year + "&page=" + page;
-
         if (Type.WSI.shortName().equals(type)) {
             query += "&series=w";
         } else if (Type.NISI.shortName().equals(type)) {
             query += "&series=ni";
         }
-
         return db.get(ENDPOINT, query);
     }
+
 }

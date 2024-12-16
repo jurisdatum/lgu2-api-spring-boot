@@ -1,15 +1,14 @@
 package uk.gov.legislation.endpoints.documents;
 
+import org.springframework.stereotype.Component;
 import uk.gov.legislation.data.marklogic.SearchResults;
 import uk.gov.legislation.util.Cites;
+import uk.gov.legislation.util.Links;
+
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import org.springframework.stereotype.Component;
 
 /**
  A class to convert SearchResults into DocumentList objects.
@@ -17,10 +16,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class Converter {
 
-    /**
-     Regular expression pattern to extract version from URL
-     */
-    private static final Pattern VERSION_PATTERN = Pattern.compile("/([^/]+)/revision$");
 
     /**
      * Converts a SearchResults object into a DocumentList.
@@ -166,8 +161,7 @@ public class Converter {
         int year = Optional.ofNullable(entry.year).map(yr -> yr.value).orElse(0);
         int number = Optional.ofNullable(entry.number).map(num -> num.value).orElse(0);
 
-
-        List <AltNumber> altNumbers = Optional.ofNullable(entry.altNumbers)
+        List<AltNumber> altNumbers = Optional.ofNullable(entry.altNumbers)
                 .map(alts -> alts.stream()
                         .map(alt -> new AltNumber(alt.Category, alt.Value))
                         .toList())
@@ -195,7 +189,7 @@ public class Converter {
     }
 
     /**
-     * Extracts the document version from a list of links.
+     * Extracts the document version from the Atom links.
      *
      * @param links the list of links to search for the version
      * @return the document version, or null if not found
@@ -203,12 +197,12 @@ public class Converter {
 
     private static String extractVersion(List<SearchResults.Link> links) {
         return links.stream()
-                .filter(link -> link.rel == null)
-                .map(link -> VERSION_PATTERN.matcher(link.href))
-                .filter(Matcher::find)
-                .map(matcher -> matcher.group(1))
-                .findFirst()
-                .orElse(null);
+            .filter(link -> link.rel == null)
+            .findFirst()
+            .map(link -> link.href)
+            .map(Links::parse)
+            .flatMap(Links.Components::version)
+            .orElse(null);
     }
 
     /**
@@ -249,7 +243,5 @@ public class Converter {
             String version, List<String> formats) implements DocumentList.Document { }
 
     private record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber { }
+
 }
-
-
-
