@@ -15,7 +15,6 @@ import java.util.List;
 public class Contents implements TableOfContents {
 
     public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JsonProcessingException {
-        System.out.println(xml);
         XmlMapper mapper = (XmlMapper) new XmlMapper()
             .registerModules(new JavaTimeModule())
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);

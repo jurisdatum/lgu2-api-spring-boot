@@ -1,5 +1,6 @@
 package uk.gov.legislation.endpoints.document.responses;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.time.LocalDate;
@@ -8,13 +9,13 @@ import java.util.List;
 public class Effect {
 
     @Schema
-    public boolean requiresApplication;
+    public boolean required;
 
     @Schema
     public String type;
 
     @Schema
-    public List<Section> affectedProvisions;
+    public Provisions affected;
 
     @Schema
     public List<InForce> inForceDates;
@@ -22,26 +23,35 @@ public class Effect {
     @Schema
     public Source source;
 
-    @Schema
+    @Schema(nullable = true)
     public String notes;
 
-    public static class Section {
 
-        @Schema(example = "section-11")
-        public String id;
+    public static class Provisions {
 
         @Schema
-        public boolean missing;
+        public String plain;
+
+        @Schema
+        public List<RichText.Node> rich;
 
     }
 
     public static class InForce {
 
-        @Schema
+        @Schema(nullable = true)
         public LocalDate date;
 
         @Schema
-        public String qualification;
+        public boolean applied;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        @Schema(nullable = true)
+        public Boolean prospective;
+
+        @JsonInclude(JsonInclude.Include.NON_EMPTY)
+        @Schema(nullable = true)
+        public String description;
 
     }
 

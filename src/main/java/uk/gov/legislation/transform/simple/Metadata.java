@@ -1,10 +1,11 @@
 package uk.gov.legislation.transform.simple;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.endpoints.document.responses.Effect;
-import uk.gov.legislation.endpoints.document.responses.EffectsConverter;
+import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.*;
@@ -168,27 +169,31 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     /* unapplied effects */
 
-    private List<UnappliedEffect> unfilteredEffects = Collections.emptyList();
-    private List<Effect> effects;
-    private boolean filtered;
+    private List<UnappliedEffect> rawEffects = Collections.emptyList();
+    @JsonIgnore
+    public List<UnappliedEffect> rawEffects() { return rawEffects; }
 
-    public List<UnappliedEffect> unfilteredEffects() { return unfilteredEffects; }
+    private List<Effect> convertedEffects = Collections.emptyList();
+    @JsonIgnore
     @Override
-    public List<Effect> unappliedEffects() {
-        if (!filtered) {
-            List<UnappliedEffect> temp = Effects.removeAppliedInForceDates(unfilteredEffects);
-            effects = EffectsConverter.convert(temp);
-            filtered = true;
-        }
-        return effects;
-    }
+    public List<Effect> unappliedEffects() { return convertedEffects; }
+
     @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JsonSetter
     public void setUnappliedEffects(List<UnappliedEffect> source) {
-        unfilteredEffects = source;
-        effects = null;
-        filtered = false;
+        rawEffects = source;
+        convertedEffects = EffectsConverter.convert(source);
     }
+
+    private Set<String> internalIds = Collections.emptySet();
+
+    @JsonIgnore
+    public Set<String> getInternalIds() { return internalIds; }
+
+    @JacksonXmlElementWrapper(localName = "internal-ids")
+    @JacksonXmlProperty(localName = "internal-id")
+    @JsonSetter
+    public void setInternalIds(List<String> ids) { internalIds = new HashSet<>(ids); }
 
 }

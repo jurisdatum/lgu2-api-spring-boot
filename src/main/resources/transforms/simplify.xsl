@@ -42,6 +42,13 @@
         <xsl:call-template name="formats" />
         <xsl:call-template name="fragment-info" />
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" mode="copy" />
+        <internal-ids>
+            <xsl:for-each select="//*/@id">
+                <internal-id>
+                    <xsl:value-of select="." />
+                </internal-id>
+            </xsl:for-each>
+        </internal-ids>
     </meta>
 </xsl:template>
 
@@ -184,26 +191,45 @@
 
 <xsl:template match="ukm:UnappliedEffect" mode="copy">
     <xsl:copy>
-        <xsl:copy-of select="@* except @AffectedProvisions" />
+        <xsl:apply-templates select="@*" mode="copy" />
         <xsl:apply-templates mode="copy" />
     </xsl:copy>
 </xsl:template>
 
-<xsl:template match="ukm:AffectedProvisions" mode="copy" >
+<xsl:template match="@*" mode="copy">
     <xsl:copy>
-        <!-- only copy the element children, sometimes they can look like this: <ukm:AffectedProvisions>Act</ukm:AffectedProvisions> -->
-        <!-- Jackson does not like the fact that sometimes this element has text content by other times it has only element children -->
-        <!-- alternatively, I could copy the text content to an attribute -->
-        <xsl:apply-templates select="*" mode="copy" />
+        <xsl:value-of select="." />
     </xsl:copy>
 </xsl:template>
+
+<xsl:template match="@AffectedProvisions" mode="copy">
+    <xsl:attribute name="AffectedProvisionsText">
+        <xsl:value-of select="." />
+    </xsl:attribute>
+</xsl:template>
+
+<xsl:template match="ukm:AffectedProvisions//text()" mode="copy" > <!-- can be child of SectionRange -->
+    <node type="text" text="{.}" />
+</xsl:template>
+
+<xsl:template match="ukm:SectionRange" mode="copy">
+    <xsl:apply-templates mode="copy" />
+</xsl:template>
+
 
 <xsl:template match="ukm:Section" mode="copy">
-    <xsl:copy>
-        <!-- Jackson does not like two attributes named @Ref, one in the empyt namespace and one in the err namespace -->
-        <xsl:copy-of select="@* except @err:*" xmlns:err="http://www.legislation.gov.uk/namespaces/error" />
-        <xsl:apply-templates mode="copy" />
-    </xsl:copy>
+    <node type="section" ref="{ @Ref }" uri="{ @URI }" text="{ . }">
+        <xsl:if test="exists(@Missing)">
+            <xsl:attribute name="missing">
+                <xsl:value-of select="@Missing" />
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="exists(@err:Ref)" xmlns:err="http://www.legislation.gov.uk/namespaces/error">
+            <xsl:attribute name="error">
+                <xsl:value-of select="@err:Ref" />
+            </xsl:attribute>
+        </xsl:if>
+    </node>
 </xsl:template>
 
 <xsl:template match="*" mode="copy">

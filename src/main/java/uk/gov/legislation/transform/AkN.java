@@ -4,9 +4,6 @@ import net.sf.saxon.s9api.*;
 import uk.gov.legislation.endpoints.document.Metadata;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.documents.DocumentList;
-import uk.gov.legislation.endpoints.document.responses.EffectsConverter;
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
-import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
@@ -15,6 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
 
+@Deprecated(forRemoval = true)
 public class AkN {
 
     private static final XPathExecutable workUri;
@@ -250,22 +248,6 @@ public class AkN {
         return Links.extractFragmentIdentifierFromLink(link);
     }
 
-    /* unapplied effects */
-
-    public static List<Effect> getUnappliedEffects(XdmNode root, boolean isFragment) {
-        List<UnappliedEffect> unfiltered = evaluate(unappliedEffectsSelector, root).stream()
-            .map(item -> (XdmNode) item)
-            .map(UnappliedEffect::make)
-            .toList();
-        List<UnappliedEffect> filtered = Effects.removeAppliedInForceDates(unfiltered);
-        if (isFragment) {
-            List<String> ids = getMany(fragmentIdsSelector, root);
-            if (ids != null)
-                filtered = Effects.removeIrrelevantSections(filtered, new HashSet<>(ids));
-        }
-        return EffectsConverter.convert(filtered);
-    }
-
 public record Meta(
         String id,
         String longType,
@@ -314,7 +296,7 @@ public record Meta(
         String fragment = AkN.getFragmentIdentifier(akn);
         String prev = AkN.getPreviousLink(akn);
         String next = AkN.getNextLink(akn);
-        List<Effect> ue = getUnappliedEffects(akn, fragment != null);
+        List<Effect> ue = Collections.emptyList();
         return new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
             version, status, title, lang, publisher, modified, versions, schedules, formats,
             fragment, prev, next, ue);

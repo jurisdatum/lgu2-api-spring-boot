@@ -42,6 +42,12 @@ public class Clml2Akn {
         transform.transform();
     }
 
+    public XdmNode transform(XdmNode clml) throws SaxonApiException {
+        XdmDestination destination = new XdmDestination();
+        transform(clml.asSource(), destination);
+        return destination.getXdmNode();
+    }
+
     public XdmNode transform(InputStream clml) throws SaxonApiException {
         Source source = new StreamSource(clml);
         XdmDestination destination = new XdmDestination();

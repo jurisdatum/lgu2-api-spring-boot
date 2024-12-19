@@ -1,7 +1,9 @@
-package uk.gov.legislation.endpoints.document.responses;
+package uk.gov.legislation.endpoints.document.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.RichText;
 import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.Links;
 
@@ -22,33 +24,46 @@ public class EffectsConverter {
     public static Effect convert1(UnappliedEffect clml) {
         Effect effect = new Effect();
         effect.type = clml.type;
-        effect.requiresApplication = clml.requiresApplied;
-        effect.affectedProvisions = convertAffectedProvisions(clml);
+        effect.required = clml.requiresApplied;
+        effect.affected = convertAffectedProvisions(clml);
         effect.inForceDates = convertInForceDates(clml);
         effect.source = makeSource(clml);
         effect.notes = clml.notes;
         return effect;
     }
 
-    private static List<Effect.Section> convertAffectedProvisions(UnappliedEffect clml) {
-        return clml.affectedProvisions.stream().map(EffectsConverter::convertAffectedProvision).toList();
+    private static Effect.Provisions convertAffectedProvisions(UnappliedEffect clml) {
+        Effect.Provisions provisions = new Effect.Provisions();
+        provisions.plain = clml.affectedProvisionsText;
+        provisions.rich = clml.affectedProvisions.stream().map(EffectsConverter::convertRichTextNode).toList();
+        return provisions;
     }
-    private static Effect.Section convertAffectedProvision(UnappliedEffect.Section clml) {
-        Effect.Section section = new Effect.Section();
-        section.id = clml.ref;
-        section.missing = clml.missing;
-        return section;
+    private static RichText.Node convertRichTextNode(UnappliedEffect.RichTextNode clml) {
+        RichText.Node node = new RichText.Node();
+        node.text = clml.text;
+        switch (clml.type) {
+            case null -> logger.warn("node type is null");
+            case UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
+            case UnappliedEffect.RichTextNode.SECTION_TYPE -> {
+                node.type = "link";
+                node.id = clml.ref;
+                node.href = Links.shorten(clml.uri);
+                node.missing = clml.missing ? true : null;
+            }
+            default -> logger.warn("unrecognized node type: {}", clml.type);
+        }
+        return node;
     }
 
     private static List<Effect.InForce> convertInForceDates(UnappliedEffect clml) {
         return clml.inForceDates.stream().map(EffectsConverter::convertInForceDate).toList();
     }
     private static Effect.InForce convertInForceDate(UnappliedEffect.InForce clml) {
-        if (clml.applied)
-            logger.warn("converting applied in-force date");
         Effect.InForce inForce = new Effect.InForce();
         inForce.date = clml.date;
-        inForce.qualification = clml.qualification;
+        inForce.applied = clml.applied;
+        inForce.prospective = clml.prospective;
+        inForce.description = clml.qualification;
         return inForce;
     }
 
