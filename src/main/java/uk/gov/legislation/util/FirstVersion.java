@@ -3,41 +3,44 @@ package uk.gov.legislation.util;
 public class FirstVersion {
 
     public static String get(String type) {
-        switch (type) {
-            case "ukpga", "UnitedKingdomPublicGeneralAct":
-            case "ukla", "UnitedKingdomLocalAct":
-            case "ukppa", "UnitedKingdomPrivateOrPersonalAct":
-            case "asp", "ScottishAct":
-            case "nia", "NorthernIrelandAct":
-            case "aosp", "ScottishOldAct":
-            case "aep", "EnglandAct":
-            case "aip", "IrelandAct":
-            case "apgb", "GreatBritainAct":
-            case "gbla", "GreatBritainLocalAct":
-            case "anaw", "WelshNationalAssemblyAct":
-            case "asc", "WelshParliamentAct":
-            case "mwa", "WelshAssemblyMeasure":
-            case "ukcm", "UnitedKingdomChurchMeasure":
-            case "mnia", "NorthernIrelandAssemblyMeasure":
-            case "apni", "NorthernIrelandParliamentAct":
-                return "enacted";
-            case "uksi", "UnitedKingdomStatutoryInstrument":
-            case "wsi", "WelshStatutoryInstrument":
-            case "ssi", "ScottishStatutoryInstrument":
-            case "nisi", "NorthernIrelandOrderInCouncil":
-            case "ukmd", "UnitedKingdomMinisterialDirection":
-            case "uksro", "UnitedKingdomStatutoryRuleOrOrder":
-            case "ukdsi", "UnitedKingdomDraftStatutoryInstrument":
-            case "nisr", "NorthernIrelandStatutoryRule":
-            case "nisro", "NorthernIrelandStatutoryRuleOrOrder":
-            case "nidsr", "NorthernIrelandDraftStatutoryRule":
-            case "sdsi", "ScottishDraftStatutoryInstrument":
-                return "made";
-            case "ukmo", "UnitedKingdomMinisterialOrder":
-            case "ukci", "UnitedKingdomChurchInstrument":
-                return "created";
-        }
-        throw new IllegalArgumentException(type);
-    }
+        Constants.TypeConstants constant = Constants.TypeConstants.fromType(type);
 
+        return switch (constant) {
+            case UKPGA, UNITED_KINGDOM_PUBLIC_GENERAL_ACT,
+                    UKLA, UNITED_KINGDOM_LOCAL_ACT,
+                    UKPPA, UNITED_KINGDOM_PRIVATE_OR_PERSONAL_ACT,
+                    ASP, SCOTTISH_ACT,
+                    NIA, NORTHERN_IRELAND_ACT,
+                    AOSP, SCOTTISH_OLD_ACT,
+                    AEP, ENGLAND_ACT,
+                    AIP, IRELAND_ACT,
+                    APGB, GREAT_BRITAIN_ACT,
+                    GBLA, GREAT_BRITAIN_LOCAL_ACT,
+                    ANAW, WELSH_NATIONAL_ASSEMBLY_ACT,
+                    ASC, WELSH_PARLIAMENT_ACT,
+                    MWA, WELSH_ASSEMBLY_MEASURE,
+                    UKCM, UNITED_KINGDOM_CHURCH_MEASURE,
+                    MNIA, NORTHERN_IRELAND_ASSEMBLY_MEASURE,
+                    APNI, NORTHERN_IRELAND_PARLIAMENT_ACT -> "enacted";
+
+            case UKSI, UNITED_KINGDOM_STATUTORY_INSTRUMENT,
+                    WSI, WELSH_STATUTORY_INSTRUMENT,
+                    SSI, SCOTTISH_STATUTORY_INSTRUMENT,
+                    NISI, NORTHERN_IRELAND_ORDER_IN_COUNCIL,
+                    UKMD, UNITED_KINGDOM_MINISTERIAL_DIRECTION,
+                    UKSRO, UNITED_KINGDOM_STATUTORY_RULE_OR_ORDER,
+                    UKDSI, UNITED_KINGDOM_DRAFT_STATUTORY_INSTRUMENT,
+                    NISR, NORTHERN_IRELAND_STATUTORY_RULE,
+                    NISRO, NORTHERN_IRELAND_STATUTORY_RULE_OR_ORDER,
+                    NIDSR, NORTHERN_IRELAND_DRAFT_STATUTORY_RULE,
+                    SDSI, SCOTTISH_DRAFT_STATUTORY_INSTRUMENT -> "made";
+
+            case UKMO, UNITED_KINGDOM_MINISTERIAL_ORDER,
+                    UKCI, UNITED_KINGDOM_CHURCH_INSTRUMENT -> "created";
+
+        };
+    }
 }
+
+
+
