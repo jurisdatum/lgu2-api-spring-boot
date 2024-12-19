@@ -22,7 +22,7 @@ public class FragmentService {
 
     public  <T> ResponseEntity <T> fetchAndTransform(String type, String year, int number, String section, Optional<String> version, Function<String, T> transform) {
         Legislation.Response leg = db.getDocumentSection(type, year, number, section, version);
-        T body = transform.apply(leg.clml());
+        T body = transform.apply(leg.clMl());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
         return ResponseEntity.ok().headers(headers).body(body);
     }

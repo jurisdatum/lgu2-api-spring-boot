@@ -46,7 +46,7 @@ public class Legislation {
 
     /* records for return values */
 
-    public record Response(String clml, Optional<Redirect> redirect) { }
+    public record Response(String clMl, Optional<Redirect> redirect) { }
 
     public record Redirect(String type, String year, int number, Optional<String> version) {
 

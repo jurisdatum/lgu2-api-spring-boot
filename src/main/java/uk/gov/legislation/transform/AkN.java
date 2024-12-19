@@ -1,12 +1,13 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
-import uk.gov.legislation.endpoints.document.Metadata;
+import uk.gov.legislation.endpoints.document.MetaData;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.concurrent.CompletionException;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import java.util.stream.StreamSupport;
@@ -63,61 +64,61 @@ public class AkN {
             dcIdentifier = compiler.compile("/*/*/meta/proprietary/dc:identifier");
             prevLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='prev']/@href");
             nextLink = compiler.compile("/*/*/meta/proprietary/atom:link[@rel='next']/@href");
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error compiling xpath expression", e);
+        } catch (Exception e) {
+            throw new CompletionException("error compiling xpath expression", e);
         }
     }
 
-    private static String get(XPathExecutable exec, XdmNode akn) {
+    private static String get(XPathExecutable exec, XdmNode akn) throws SaxonApiException {
         XPathSelector selector = exec.load();
         try {
             selector.setContextItem(akn);
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error setting context item", e);
+        } catch (Exception e) {
+            throw new SaxonApiException("error setting context item", e);
         }
         XdmItem result;
         try {
             result = selector.evaluateSingle();
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error evaluating xpath expression", e);
+        } catch (Exception e) {
+            throw new SaxonApiException("error evaluating xpath expression", e);
         }
         if (result == null)
             return null;
         return result.getStringValue();
     }
 
-    private static XdmValue evaluate(XPathExecutable exec, XdmNode akn) {
+    private static XdmValue evaluate(XPathExecutable exec, XdmNode akn) throws SaxonApiException {
         XPathSelector selector = exec.load();
         try {
             selector.setContextItem(akn);
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error setting context item", e);
+        } catch (Exception e) {
+            throw new SaxonApiException("error setting context item", e);
         }
         XdmValue result;
         try {
             result = selector.evaluate();
-        } catch (SaxonApiException e) {
-            throw new RuntimeException("error evaluating xpath expression", e);
+        } catch (Exception e) {
+            throw new SaxonApiException("error evaluating xpath expression", e);
         }
         return result;
     }
 
     @SuppressWarnings("SameParameterValue")
-    private static List<String> getMany(XPathExecutable exec, XdmNode akn) {
+    private static List<String> getMany(XPathExecutable exec, XdmNode akn) throws SaxonApiException {
         XdmValue result = evaluate(exec, akn);
         if (result == null)
-            return null;
+            return Collections.emptyList();
         return result.stream().map(XdmItem::getStringValue).toList();
     }
 
-    public static String getId(XdmNode akn) {
+    public static String getId(XdmNode akn) throws SaxonApiException {
         String longId = get(workUri, akn);
         if (longId == null)
             return null;
         return longId.substring(33);
     }
 
-    public static String getVersion(XdmNode akn, String id) {
+    public static String getVersion(XdmNode akn, String id) throws SaxonApiException {
         String uri = get(exprUri, akn);
         if (uri == null)
             return null;
@@ -125,9 +126,9 @@ public class AkN {
         return uri.substring(start);
     }
 
-    public static String getLongType(XdmNode akn) { return get(longType, akn); }
+    public static String getLongType(XdmNode akn) throws SaxonApiException { return get(longType, akn); }
 
-    public static String getShortType(XdmNode akn) { return get(shortType, akn); }
+    public static String getShortType(XdmNode akn) throws SaxonApiException { return get(shortType, akn); }
 
     public static String getRegnalYear(String id) {
         String[] components = id.split("/");
@@ -136,14 +137,14 @@ public class AkN {
         return Arrays.stream(components, 1, components.length - 1).collect(Collectors.joining("/"));
     }
 
-    public static int getYear(XdmNode akn) {
+    public static int getYear(XdmNode akn) throws SaxonApiException {
         String str = get(year, akn);
         if (str == null)
             return 0;
         return Integer.parseInt(str);
     }
 
-    public static int getNumber(XdmNode akn) {
+    public static int getNumber(XdmNode akn) throws SaxonApiException {
         String str = get(number, akn);
         if (str == null)
             return 0;
@@ -152,10 +153,10 @@ public class AkN {
 
     private record AltNumber(String category, String value) implements DocumentList.Document.AltNumber { }
 
-    private static List<AltNumber> getAltNumbers(XdmNode akn) {
+    private static List<AltNumber> getAltNumbers(XdmNode akn) throws SaxonApiException {
         List<String> values = getMany(altNumbers, akn);
         if (values == null)
-            return null;
+            return Collections.emptyList();
         Stream<AltNumber> stream = values.stream().map(value -> {
             String[] parts = value.split("\\.", 2);
             return new AltNumber(parts[0], parts[1].trim());
@@ -163,37 +164,37 @@ public class AkN {
         return stream.toList();
     }
 
-    public static LocalDate getDate(XdmNode akn) {
+    public static LocalDate getDate(XdmNode akn) throws SaxonApiException {
         String str = get(date, akn);
         if (str == null)
             return null;
         return LocalDate.parse(str);
     }
 
-    public static String getCite(XdmNode akn) { return get(cite, akn); }
+    public static String getCite(XdmNode akn) throws SaxonApiException { return get(cite, akn); }
 
-    public static String getStatus(XdmNode akn) { return get(status, akn); }
+    public static String getStatus(XdmNode akn) throws SaxonApiException { return get(status, akn); }
 
-    public static String getTitle(XdmNode akn) {
+    public static String getTitle(XdmNode akn) throws SaxonApiException {
         return get(title, akn);
     }
 
-    public static String getLang(XdmNode akn) {
+    public static String getLang(XdmNode akn) throws SaxonApiException {
         return get(lang, akn);
     }
 
-    public static String getPublisher(XdmNode akn) {
+    public static String getPublisher(XdmNode akn) throws SaxonApiException {
         return get(publisher, akn);
     }
 
-    public static LocalDate getModified(XdmNode akn) {
+    public static LocalDate getModified(XdmNode akn) throws SaxonApiException {
         String str = get(modified, akn);
         if (str == null)
             return null;
         return LocalDate.parse(str);
     }
 
-    public static List<String> getVersions(XdmNode akn, String current) {
+    public static List<String> getVersions(XdmNode akn, String current) throws SaxonApiException {
         XdmValue result = evaluate(versions, akn);
         LinkedHashSet<String> versions = StreamSupport.stream(result.spliterator(), false)
             .map(XdmItem::getStringValue)
@@ -206,12 +207,12 @@ public class AkN {
         return versions.stream().toList();
     }
 
-    public static boolean hasSchedules(XdmNode akn) {
+    public static boolean hasSchedules(XdmNode akn) throws SaxonApiException {
         String link = get(schedules, akn);
         return link != null;
     }
 
-    public static List<String> getFormats(XdmNode akn) {
+    public static List<String> getFormats(XdmNode akn) throws SaxonApiException {
         List<String> formats = new ArrayList<>(2);
         if (!evaluate(xmlFormat, akn).isEmpty())
             formats.add("xml");
@@ -229,16 +230,16 @@ public class AkN {
         return formats;
     }
 
-    public static String getFragmentIdentifier(XdmNode akn) {
+    public static Optional <String> getFragmentIdentifier(XdmNode akn) throws SaxonApiException {
         String link = get(dcIdentifier, akn);
         return Links.extractFragmentIdentifierFromLink(link);
     }
 
-    public static String getPreviousLink(XdmNode akn) {
+    public static Optional <String> getPreviousLink(XdmNode akn) throws SaxonApiException {
         String link = get(prevLink, akn);
         return Links.extractFragmentIdentifierFromLink(link);
     }
-    public static String getNextLink(XdmNode akn) {
+    public static Optional <String> getNextLink(XdmNode akn) throws SaxonApiException {
         String link = get(nextLink, akn);
         return Links.extractFragmentIdentifierFromLink(link);
     }
@@ -266,9 +267,9 @@ public record Meta(
         String prev,
         String next
 
-) implements Metadata {
+) implements MetaData {
 
-    public static Meta extract(XdmNode akn) {
+    public static Meta extract(XdmNode akn) throws SaxonApiException {
         String id = AkN.getId(akn);
         String longType = AkN.getLongType(akn);
         String shortType = AkN.getShortType(akn);
@@ -287,9 +288,9 @@ public record Meta(
         List<String> versions = AkN.getVersions(akn, version);
         boolean schedules = AkN.hasSchedules(akn);
         List<String> formats = AkN.getFormats(akn);
-        String fragment = AkN.getFragmentIdentifier(akn);
-        String prev = AkN.getPreviousLink(akn);
-        String next = AkN.getNextLink(akn);
+        String fragment = String.valueOf(AkN.getFragmentIdentifier(akn));
+        String prev = String.valueOf(AkN.getPreviousLink(akn));
+        String next = String.valueOf(AkN.getNextLink(akn));
         return new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
             version, status, title, lang, publisher, modified, versions, schedules, formats,
             fragment, prev, next);

@@ -15,4 +15,7 @@ public class Configuration {
     @Value("${stylesheet.akn.path}")
     private String stylesheetAknPath;
 
+    @Value("${stylesheet.clMl.path}")
+    private String stylesheetClMlPath;
+
 }

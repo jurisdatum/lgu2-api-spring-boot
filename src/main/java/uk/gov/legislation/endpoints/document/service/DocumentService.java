@@ -7,11 +7,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.document.Metadata;
+import uk.gov.legislation.endpoints.document.MetaData;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
-import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.ClMl2Akn;
 
 import java.util.Optional;
 import java.util.function.Function;
@@ -20,29 +20,29 @@ import java.util.function.Function;
 public class DocumentService {
 
     private final Legislation legislationService;
-    private final Clml2Akn clmlToAknTransformer;
+    private final ClMl2Akn clMlToAknTransformer;
     private final Akn2Html aknToHtmlTransformer;
 
-    public DocumentService(Legislation legislationService, Clml2Akn clmlToAknTransformer, Akn2Html aknToHtmlTransformer) {
+    public DocumentService(Legislation legislationService, ClMl2Akn clMlToAknTransformer, Akn2Html aknToHtmlTransformer) {
         this.legislationService = legislationService;
-        this.clmlToAknTransformer = clmlToAknTransformer;
+        this.clMlToAknTransformer = clMlToAknTransformer;
         this.aknToHtmlTransformer = aknToHtmlTransformer;
     }
 
-    public String transformToAkn(String clmlContent) throws SaxonApiException {
-        XdmNode aknNode = clmlToAknTransformer.transform(clmlContent);
-        return Clml2Akn.serialize(aknNode);
+    public String transformToAkn(String clMlContent) throws SaxonApiException {
+        XdmNode aknNode = clMlToAknTransformer.transform(clMlContent);
+        return ClMl2Akn.serialize(aknNode);
     }
 
-    public String transformToHtml(String clmlContent) throws SaxonApiException {
-        XdmNode aknNode = clmlToAknTransformer.transform(clmlContent);
+    public String transformToHtml(String clMlContent) throws SaxonApiException {
+        XdmNode aknNode = clMlToAknTransformer.transform(clMlContent);
         return aknToHtmlTransformer.transform(aknNode, true);
     }
 
-    public DocumentApi.Response transformToJsonResponse(String clmlContent) throws SaxonApiException {
-        XdmNode aknNode = clmlToAknTransformer.transform(clmlContent);
+    public DocumentApi.Response transformToJsonResponse(String clMlContent) throws SaxonApiException {
+        XdmNode aknNode = clMlToAknTransformer.transform(clMlContent);
         String htmlContent = aknToHtmlTransformer.transform(aknNode, false);
-        Metadata metadata = AkN.Meta.extract(aknNode);
+        MetaData metadata = AkN.Meta.extract(aknNode);
         return new DocumentApi.Response(metadata, htmlContent);
     }
 
@@ -55,7 +55,7 @@ public class DocumentService {
             int number,
             Optional<String> version) {
         Legislation.Response leg = legislationService.getDocument(type, year, number, version);
-        T body = transformationFunction.apply(leg.clml());
+        T body = transformationFunction.apply(leg.clMl());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
         return ResponseEntity.ok().headers(headers).body(body);
     }

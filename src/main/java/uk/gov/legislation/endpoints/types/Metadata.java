@@ -12,58 +12,58 @@ public class Metadata {
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/elements/1.1/")
     @Schema(name = "dc:identifier", example = "http://www.legislation.gov.uk/ukpga/2024/1")
-    public String identifier;
+    private String identifier;
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/elements/1.1/")
     @Schema(name = "dc:title", example = "Post Office (Horizon System) Compensation Act 2024")
-    public String title;
+    private String title;
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/elements/1.1/")
     @Schema(name = "dc:publisher", example = "Statute Law Database")
-    public String publisher;
+    private String publisher;
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/elements/1.1/")
     @Schema(name = "dc:modified", example = "2024-04-18")
-    public LocalDate modified;
+    private LocalDate modified;
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/elements/1.1/")
     @Schema(name = "dc:contributor", example = "Expert Participation")
-    public String contributor;
+    private String contributor;
 
     @JacksonXmlProperty(namespace = "http://purl.org/dc/terms/")
     @Schema(name = "dct:valid")
-    public LocalDate valid;
+    private LocalDate valid;
 
     @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @Schema(name = "ukm:PrimaryMetadata")
-    public PrimaryMetadata PrimaryMetadata;
+    private PrimaryMetadata primaryMetadata;
 
     public static class PrimaryMetadata {
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:DocumentClassification")
-        public DocumentClassification DocumentClassification;
+        private DocumentClassification documentClassification;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:Year")
-        public Year Year;
+        private Year year;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:Number")
-        public Number Number;
+        private Number number;
 
         @JacksonXmlElementWrapper(useWrapping = false)
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:AlterativeNumber")
-        public List<AlternativeNumber> AlterativeNumber;
+        private List<AlternativeNumber> alterativeNumber;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:EnactmentDate")
-        public EnactmentDate EnactmentDate;
+        private EnactmentDate enactmentDate;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name = "ukm:ISBN")
-        public ISBN ISBN;
+        private ISBN iSBN;
 
     }
 
@@ -71,15 +71,15 @@ public class Metadata {
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name="ukm:DocumentCategory")
-        public DocumentCategory DocumentCategory;
+        private DocumentCategory documentCategory;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name="ukm:DocumentMainType")
-        public DocumentMainType DocumentMainType;
+        private DocumentMainType documentMainType;
 
         @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/metadata")
         @Schema(name="ukm:DocumentStatus")
-        public DocumentStatus DocumentStatus;
+        private DocumentStatus documentStatus;
 
     }
 
@@ -88,7 +88,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(allowableValues = { "primary" })
-        public String Value;
+        private String value;
 
     }
 
@@ -97,7 +97,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(allowableValues = { "UnitedKingdomPublicGeneralAct" })
-        public String Value;
+        private String value;
 
     }
 
@@ -106,7 +106,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(allowableValues = { "final", "revised" }) // ToDo "draft"
-        public String Value;
+        private String value;
 
     }
 
@@ -115,7 +115,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "2024")
-        public int Value;
+        private int value;
 
     }
 
@@ -124,7 +124,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "1")
-        public int Value;
+        private int value;
 
     }
 
@@ -133,12 +133,12 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "W")
-        public String Category;
+        private String category;
 
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "1")
-        public String Value;
+        private String value;
 
     }
 
@@ -147,7 +147,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "2024-01-25")
-        public LocalDate Date;
+        private LocalDate date;
 
     }
 
@@ -156,7 +156,7 @@ public class Metadata {
         @JacksonXmlProperty(isAttribute = true)
         @XmlAttribute
         @Schema(example = "9780105702443")
-        public String Value;
+        private String value;
 
     }
 

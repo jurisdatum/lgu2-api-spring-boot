@@ -28,9 +28,9 @@ public class DocumentApiController implements DocumentApi {
      * Fetches CLML content based on document details.
      */
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentClMl(String type, int year, int number, Optional<String> version) {
         return documentService.fetchAndTransform(
-                clml -> clml,
+                clMl -> clMl,
                 type,
                 Integer.toString(year),
                 number,
@@ -39,10 +39,10 @@ public class DocumentApiController implements DocumentApi {
     }
 
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentClMl(String type, String monarch, String years, int number, Optional<String> version) {
         String regnalYear = String.join("/", monarch, years);
         return documentService.fetchAndTransform(
-                clml -> clml,
+                clMl -> clMl,
                 type,
                 regnalYear,
                 number,
@@ -63,9 +63,9 @@ public class DocumentApiController implements DocumentApi {
 
     private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version) {
         return documentService.fetchAndTransform(
-                clml -> {
+                clMl -> {
                     try {
-                        return documentService.transformToAkn(clml);
+                        return documentService.transformToAkn(clMl);
                     } catch (SaxonApiException e) {
                         throw new TransformationException(Constants.TRANSFORMATION_FAIL_AKN.getError(), e);
                     }
@@ -90,9 +90,9 @@ public class DocumentApiController implements DocumentApi {
 
     private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version) {
         return documentService.fetchAndTransform(
-                clml -> {
+                clMl -> {
                     try {
-                        return documentService.transformToHtml(clml);
+                        return documentService.transformToHtml(clMl);
                     } catch (SaxonApiException e) {
                         throw new TransformationException(Constants.TRANSFORMATION_FAIL_HTML.getError(), e);
                     }
@@ -117,9 +117,9 @@ public class DocumentApiController implements DocumentApi {
 
     private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version) {
         return documentService.fetchAndTransform(
-                clml -> {
+                clMl -> {
                     try {
-                        return documentService.transformToJsonResponse(clml);
+                        return documentService.transformToJsonResponse(clMl);
                     } catch (SaxonApiException e) {
                         throw new TransformationException(Constants.TRANSFORMATION_FAIL_JSON.getError(), e);
                     }

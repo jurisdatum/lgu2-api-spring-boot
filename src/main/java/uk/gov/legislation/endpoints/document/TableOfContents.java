@@ -9,7 +9,7 @@ import java.util.List;
 public interface TableOfContents {
 
     @JsonProperty(index = 1)
-    Metadata meta();
+    MetaData meta();
 
     @JsonProperty(index = 2)
     Contents contents();
