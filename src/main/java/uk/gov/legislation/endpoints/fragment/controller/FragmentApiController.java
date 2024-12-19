@@ -41,19 +41,19 @@ public class FragmentApiController implements FragmentApi {
      * @return ResponseEntity with the CLML content if found, or 404 Not Found if the section is missing
      */
     @Override
-    public ResponseEntity<String> getFragmentClml(String type, int year, int number, String section, Optional<String> version) {
-        return getFragmentClml(type, Integer.toString(year), number, section, version);
+    public ResponseEntity<String> getFragmentClMl(String type, int year, int number, String section, Optional<String> version) {
+        return getFragmentClMls(type, Integer.toString(year), number, section, version);
     }
     /**
      * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
      * @param years     A year or range of years, relative to the monarch, e.g., '1' or '1-2'
      */
     @Override
-    public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<String> getFragmentClMl(String type, String monarch, String years, int number, String section, Optional<String> version) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentClml(type, regnalYear, number, section, version);
+        return getFragmentClMls(type, regnalYear, number, section, version);
     }
-    private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section, Optional<String> version) {
+    private ResponseEntity<String> getFragmentClMls(String type, String year, int number, String section, Optional<String> version) {
         return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity());
     }
 

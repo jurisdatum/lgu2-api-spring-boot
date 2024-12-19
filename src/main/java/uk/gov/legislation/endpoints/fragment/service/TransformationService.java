@@ -8,39 +8,39 @@ import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.AkN;
 import uk.gov.legislation.transform.Akn2Html;
-import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.ClMl2Akn;
 
 @Service
 public class TransformationService {
 
-    private final Clml2Akn clml2akn;
+    private final ClMl2Akn clMl2akn;
     private final Akn2Html akn2html;
 
-    public TransformationService(Clml2Akn clml2akn, Akn2Html akn2html) {
-        this.clml2akn = clml2akn;
+    public TransformationService(ClMl2Akn clMl2akn, Akn2Html akn2html) {
+        this.clMl2akn = clMl2akn;
         this.akn2html = akn2html;
     }
 
-    public String transformToAkn(String clml) {
+    public String transformToAkn(String clMl) {
         try {
-            return Clml2Akn.serialize(clml2akn.transform(clml));
+            return ClMl2Akn.serialize(clMl2akn.transform(clMl));
         } catch (SaxonApiException e) {
             throw new TransformationException("Error transforming CLML to AKN format", e);
         }
     }
 
-    public String transformToHtml(String clml, boolean includeExtras) {
+    public String transformToHtml(String clMl, boolean includeExtras) {
         try {
-            XdmNode akn = clml2akn.transform(clml);
+            XdmNode akn = clMl2akn.transform(clMl);
             return akn2html.transform(akn, includeExtras);
         } catch (SaxonApiException e) {
             throw new TransformationException("Error transforming AKN to HTML format", e);
         }
     }
 
-    public DocumentApi.Response createJsonResponse(String clml) {
+    public DocumentApi.Response createJsonResponse(String clMl) {
         try {
-            XdmNode akn = clml2akn.transform(clml);
+            XdmNode akn = clMl2akn.transform(clMl);
             String html = akn2html.transform(akn, false);
             AkN.Meta meta = AkN.Meta.extract(akn);
             return new DocumentApi.Response(meta, html);

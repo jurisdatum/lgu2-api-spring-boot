@@ -23,7 +23,7 @@ public interface FragmentApi {
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/xml")
     @Operation(summary = "get a document fragment, e.g., a section (calendar year)")
-    ResponseEntity <String> getFragmentClml(
+    ResponseEntity <String> getFragmentClMl(
             @PathVariable @Type String type,
             @PathVariable @Year int year,
             @PathVariable @Number int number,
@@ -32,7 +32,7 @@ public interface FragmentApi {
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
     @Operation(summary = "get a document fragment, e.g., a section (regnal year)")
-    ResponseEntity <String> getFragmentClml(
+    ResponseEntity <String> getFragmentClMl(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,

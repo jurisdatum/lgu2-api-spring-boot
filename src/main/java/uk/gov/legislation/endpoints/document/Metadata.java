@@ -11,7 +11,7 @@ import java.util.List;
 
 @Schema(name = "DocumentMetadata")
 @SuppressWarnings("unused")
-public interface Metadata {
+public interface MetaData {
 
     @JsonProperty(index = 1)
     @Schema(example = "ukpga/2024/1")

@@ -8,10 +8,8 @@ import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.exceptions.TransformationException;
-import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.ClMl2Akn;
 import uk.gov.legislation.transform.simple.Simplify;
-
-import java.util.Objects;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -19,27 +17,27 @@ import java.util.function.Function;
 public class ContentsService {
 
     private final Legislation legislationRepository;
-    private final Clml2Akn clmlToAknTransformer;
+    private final ClMl2Akn clMlToAknTransformer;
     private final Simplify simplifier;
 
-    public ContentsService(Legislation legislationRepository, Clml2Akn clmlToAknTransformer, Simplify simplifier) {
+    public ContentsService(Legislation legislationRepository, ClMl2Akn clMlToAknTransformer, Simplify simplifier) {
         this.legislationRepository = legislationRepository;
-        this.clmlToAknTransformer = clmlToAknTransformer;
+        this.clMlToAknTransformer = clMlToAknTransformer;
         this.simplifier = simplifier;
     }
 
-    public String transformToAkn(String clmlContent) {
+    public String transformToAkn(String clMlContent) {
         try {
-            XdmNode transformedNode = clmlToAknTransformer.transform(clmlContent);
-            return Clml2Akn.serialize(transformedNode);
+            XdmNode transformedNode = clMlToAknTransformer.transform(clMlContent);
+            return ClMl2Akn.serialize(transformedNode);
         } catch (Exception e) {
             throw new TransformationException("Transformation to AKN format failed",e);
         }
     }
 
-    public TableOfContents simplifyToTableOfContents(String clmlContent) {
+    public TableOfContents simplifyToTableOfContents(String clMlContent) {
         try {
-            return simplifier.contents(clmlContent);
+            return simplifier.contents(clMlContent);
         } catch (Exception e) {
             throw new TransformationException("Simplification to JSON format failed",e);
         }
@@ -49,7 +47,7 @@ public class ContentsService {
 
     public <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Function<String, T> transform) {
         Legislation.Response leg = legislationRepository.getTableOfContents(type, year, number, version);
-        T body = transform.apply(leg.clml());
+        T body = transform.apply(leg.clMl());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
         // ok for headers to be null
         return ResponseEntity.ok().headers(headers).body(body);
