@@ -2,7 +2,8 @@ package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Service;
-
+import uk.gov.legislation.config.Configuration;
+import uk.gov.legislation.exceptions.InvalidURISyntaxException;
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
@@ -10,47 +11,52 @@ import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import java.util.Properties;
 
 @Service
-public class Clml2Akn {
-
-    private static final String stylesheet = "/transforms/clml2akn/clml2akn.xsl";
+public class ClMl2Akn {
 
     private final XsltExecutable executable;
-
-    public Clml2Akn() {
+    private final Configuration stylSheetClMlPath;
+    public String getStylSheetClMlPath() {
+        return stylSheetClMlPath.getStylesheetClMlPath();
+    }
+    public ClMl2Akn(Configuration stylSheetClmlPath) throws SaxonApiException, InvalidURISyntaxException {
+        this.stylSheetClMlPath = stylSheetClmlPath;
         XsltCompiler compiler = Helper.processor.newXsltCompiler();
         Source source;
         try {
-            String systemId = this.getClass().getResource(stylesheet).toURI().toASCIIString();
+            String systemId = Objects.requireNonNull(this.getClass().getResource(getStylSheetClMlPath())).toURI().toASCIIString();
             source = new StreamSource(systemId);
         } catch (URISyntaxException e) {
-            throw new RuntimeException(e);
+            throw new InvalidURISyntaxException(
+                    "Failed to convert the stylesheet path to a valid URI: " + getStylSheetClMlPath(), e);
+
         }
         try {
             executable = compiler.compile(source);
-        } catch (SaxonApiException e) {
-            throw new RuntimeException(e);
+        } catch (Exception e) {
+            throw new SaxonApiException(e);
         }
     }
 
-    private void transform(Source clml, Destination destination) throws SaxonApiException {
+    private void transform(Source clMl, Destination destination) throws SaxonApiException {
         XsltTransformer transform = executable.load();
-        transform.setSource(clml);
+        transform.setSource(clMl);
         transform.setDestination(destination);
         transform.transform();
     }
 
-    public XdmNode transform(InputStream clml) throws SaxonApiException {
-        Source source = new StreamSource(clml);
+    public XdmNode transform(InputStream clMl) throws SaxonApiException {
+        Source source = new StreamSource(clMl);
         XdmDestination destination = new XdmDestination();
         transform(source, destination);
         return destination.getXdmNode();
     }
 
-    public XdmNode transform(String clml) throws SaxonApiException {
-        ByteArrayInputStream stream = new ByteArrayInputStream(clml.getBytes());
+    public XdmNode transform(String clMl) throws SaxonApiException {
+        ByteArrayInputStream stream = new ByteArrayInputStream(clMl.getBytes());
         return transform(stream);
     }
 
