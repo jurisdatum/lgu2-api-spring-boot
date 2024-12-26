@@ -88,22 +88,22 @@ public interface Metadata {
     List<String> formats();
 
     @JsonProperty(index = 19)
+    @JsonInclude(JsonInclude.Include.ALWAYS)
+    List<Effect> unappliedEffects();
+
+    @JsonProperty(index = 20)
     @Schema(example = "section/2", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String fragment();
 
-    @JsonProperty(value = "prev", index = 20)
+    @JsonProperty(value = "prev", index = 21)
     @Schema(example = "section/1", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String prev();
 
-    @JsonProperty(value = "next", index = 21)
+    @JsonProperty(value = "next", index = 22)
     @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String next();
-
-    @JsonProperty(index = 22)
-    @JsonInclude(JsonInclude.Include.ALWAYS)
-    List<Effect> unappliedEffects();
 
 }

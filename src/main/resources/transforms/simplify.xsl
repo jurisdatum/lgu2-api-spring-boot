@@ -207,15 +207,22 @@
         <xsl:value-of select="." />
     </xsl:attribute>
 </xsl:template>
+<xsl:template match="@AffectingProvisions" mode="copy">
+    <xsl:attribute name="AffectingProvisionsText">
+        <xsl:value-of select="." />
+    </xsl:attribute>
+</xsl:template>
 
 <xsl:template match="ukm:AffectedProvisions//text()" mode="copy" > <!-- can be child of SectionRange -->
+    <node type="text" text="{.}" />
+</xsl:template>
+<xsl:template match="ukm:AffectingProvisions//text()" mode="copy" > <!-- can be child of SectionRange -->
     <node type="text" text="{.}" />
 </xsl:template>
 
 <xsl:template match="ukm:SectionRange" mode="copy">
     <xsl:apply-templates mode="copy" />
 </xsl:template>
-
 
 <xsl:template match="ukm:Section" mode="copy">
     <node type="section" ref="{ @Ref }" uri="{ @URI }" text="{ . }">

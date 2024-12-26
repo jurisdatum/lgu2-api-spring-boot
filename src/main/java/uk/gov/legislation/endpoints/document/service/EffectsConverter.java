@@ -25,34 +25,18 @@ public class EffectsConverter {
         Effect effect = new Effect();
         effect.type = clml.type;
         effect.required = clml.requiresApplied;
-        effect.affected = convertAffectedProvisions(clml);
+        effect.affected = convertProvisions(clml.affectedProvisionsText, clml.affectedProvisions);
         effect.inForceDates = convertInForceDates(clml);
         effect.source = makeSource(clml);
         effect.notes = clml.notes;
         return effect;
     }
 
-    private static Effect.Provisions convertAffectedProvisions(UnappliedEffect clml) {
+    private static Effect.Provisions convertProvisions(String plain, List<UnappliedEffect.RichTextNode> rich) {
         Effect.Provisions provisions = new Effect.Provisions();
-        provisions.plain = clml.affectedProvisionsText;
-        provisions.rich = clml.affectedProvisions.stream().map(EffectsConverter::convertRichTextNode).toList();
+        provisions.plain = plain;
+        provisions.rich = rich.stream().map(EffectsConverter::convertRichTextNode).toList();
         return provisions;
-    }
-    private static RichText.Node convertRichTextNode(UnappliedEffect.RichTextNode clml) {
-        RichText.Node node = new RichText.Node();
-        node.text = clml.text;
-        switch (clml.type) {
-            case null -> logger.warn("node type is null");
-            case UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
-            case UnappliedEffect.RichTextNode.SECTION_TYPE -> {
-                node.type = "link";
-                node.id = clml.ref;
-                node.href = Links.shorten(clml.uri);
-                node.missing = clml.missing ? true : null;
-            }
-            default -> logger.warn("unrecognized node type: {}", clml.type);
-        }
-        return node;
     }
 
     private static List<Effect.InForce> convertInForceDates(UnappliedEffect clml) {
@@ -73,7 +57,25 @@ public class EffectsConverter {
         source.longType = clml.affectingClass;
         source.year = clml.affectingYear;
         source.number = clml.affectingNumber;
+        source.provisions = convertProvisions(clml.affectingProvisionsText, clml.affectingProvisions);
         return source;
+    }
+
+    private static RichText.Node convertRichTextNode(UnappliedEffect.RichTextNode clml) {
+        RichText.Node node = new RichText.Node();
+        node.text = clml.text;
+        switch (clml.type) {
+            case null -> logger.warn("node type is null");
+            case UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
+            case UnappliedEffect.RichTextNode.SECTION_TYPE -> {
+                node.type = "link";
+                node.id = clml.ref;
+                node.href = Links.shorten(clml.uri);
+                node.missing = clml.missing ? true : null;
+            }
+            default -> logger.warn("unrecognized node type: {}", clml.type);
+        }
+        return node;
     }
 
 }

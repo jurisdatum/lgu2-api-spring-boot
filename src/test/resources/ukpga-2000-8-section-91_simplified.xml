@@ -40,7 +40,7 @@
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
          <ukm:UnappliedEffect AffectedNumber="8"
                               URI="http://www.legislation.gov.uk/id/effect/key-875cc899be978a92b596eb35963a5fdf"
-                              AffectingProvisions="reg. 8(9)"
+                              AffectingProvisionsText="reg. 8(9)"
                               EffectId="key-875cc899be978a92b596eb35963a5fdf"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
@@ -104,7 +104,7 @@
                               AffectingYear="2019"
                               Notes="This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)"
                               RequiresApplied="false"
-                              AffectingProvisions="reg. 10(5)"
+                              AffectingProvisionsText="reg. 10(5)"
                               AffectedProvisionsText="s. 87A(11)"
                               EffectId="key-62f9ebcef830ae282962af1b813987d9"
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D"
@@ -141,7 +141,7 @@
                               AffectedExtent="E+W+S+N.I."
                               AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectingNumber="707"
-                              AffectingProvisions="reg. 30(2)(b)"
+                              AffectingProvisionsText="reg. 30(2)(b)"
                               AffectingEffectsExtent="E+W+S+N.I."
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707"
                               AffectingYear="2019"
@@ -200,7 +200,7 @@
                               EffectId="key-88a5235d47a1f9dff629be79e310f19d"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectingNumber="707"
-                              AffectingProvisions="reg. 30(2)(a)"
+                              AffectingProvisionsText="reg. 30(2)(a)"
                               Modified="2022-01-20T13:03:31Z"
                               AffectingEffectsExtent="E+W+S+N.I."
                               Type="words substituted"
@@ -254,7 +254,7 @@
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
                               Comments="IP completion day"
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D"
-                              AffectingProvisions="reg. 5(11)(b)"
+                              AffectingProvisionsText="reg. 5(11)(b)"
                               EffectId="key-f22c04ada6692c04c5853c1b3ce00f60">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
@@ -294,7 +294,7 @@
                               AffectingEffectsExtent="E+W+S+N.I."
                               AffectedNumber="8"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisions="reg. 5(12)(a)(i)"
+                              AffectingProvisionsText="reg. 5(12)(a)(i)"
                               AffectedExtent="E+W+S+N.I."
                               RequiresApplied="false"
                               Notes="This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)"
@@ -347,7 +347,7 @@
                               AffectedProvisionsText="s. 129(7)(c)"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
                               Comments="IP completion day"
-                              AffectingProvisions="reg. 5(12)(a)(ii)"
+                              AffectingProvisionsText="reg. 5(12)(a)(ii)"
                               Row="70"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               EffectId="key-9f4d2636661658e584be975ef736bdfb"
@@ -400,7 +400,7 @@
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               EffectId="key-a5848184868fb09bd796f96db116dad6"
                               Notes="This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20"
-                              AffectingProvisions="reg. 38(5)(b)"
+                              AffectingProvisionsText="reg. 38(5)(b)"
                               AffectingNumber="707"
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
@@ -443,7 +443,7 @@
                               AffectingYear="2019"
                               RequiresApplied="false"
                               AffectedYear="2000"
-                              AffectingProvisions="reg. 13(1)"
+                              AffectingProvisionsText="reg. 13(1)"
                               AffectedNumber="8"
                               AffectingNumber="662"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
@@ -501,7 +501,7 @@
                               EffectId="key-abb334800fe3123a9c453d646a5962c5"
                               AffectedYear="2000"
                               AffectingYear="2023"
-                              AffectingProvisions="Sch. 10 para. 19(a)"
+                              AffectingProvisionsText="Sch. 10 para. 19(a)"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedNumber="8"
@@ -560,7 +560,7 @@
                               EffectId="key-9f40eff4aabeafb17afaec32bf3adb5c"
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               AffectedExtent="E+W+S+N.I."
-                              AffectingProvisions="s. 30(3)"
+                              AffectingProvisionsText="s. 30(3)"
                               AffectedProvisionsText="Pt. 20C"
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
@@ -606,7 +606,7 @@
                               AffectingYear="2021"
                               EffectId="key-6ca6fc8c64f818e454714c91e07697f2"
                               Row="169"
-                              AffectingProvisions="s. 23(10)"
+                              AffectingProvisionsText="s. 23(10)"
                               AffectedNumber="8"
                               AffectedProvisionsText="Sch. 2A 2B"
                               AffectedYear="2000"
@@ -659,7 +659,7 @@
                               AffectedYear="2000"
                               EffectId="key-0140b0bab4e2adf4d449c7fca67df6a1"
                               AffectingYear="2021"
-                              AffectingProvisions="s. 22(2)"
+                              AffectingProvisionsText="s. 22(2)"
                               AffectingNumber="22"
                               Modified="2023-08-29T11:14:38Z"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
@@ -705,7 +705,7 @@
                               AffectingEffectsExtent="E+W+S+N.I."
                               EffectId="key-2c60a029232f828b8c5dbdfba9c798fd"
                               AffectedNumber="8"
-                              AffectingProvisions="s. 22(3)"
+                              AffectingProvisionsText="s. 22(3)"
                               AffectedProvisionsText="s. 32A"
                               AffectingYear="2021"
                               AffectingNumber="22"
@@ -759,7 +759,7 @@
                               AffectedNumber="8"
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               AffectedProvisionsText="s. 36A and cross-heading"
-                              AffectingProvisions="s. 22(4)"
+                              AffectingProvisionsText="s. 22(4)"
                               AffectedYear="2000"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
@@ -801,7 +801,7 @@
                               Row="60"
                               AffectedYear="2000"
                               AffectedProvisionsText="s. 32A"
-                              AffectingProvisions="s. 23(10)"
+                              AffectingProvisionsText="s. 23(10)"
                               AffectingNumber="22"
                               Type="power to apply (with modifications) conferred"
                               AffectingYear="2021"
@@ -852,7 +852,7 @@
                               AffectingEffectsExtent="E+W+S+N.I."
                               AffectedYear="2000"
                               AffectingNumber="22"
-                              AffectingProvisions="s. 23(10)"
+                              AffectingProvisionsText="s. 23(10)"
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               Modified="2023-08-29T11:14:38Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
@@ -900,7 +900,7 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               Row="62"
-                              AffectingProvisions="s. 23(10)">
+                              AffectingProvisionsText="s. 23(10)">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -935,7 +935,7 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               AffectingNumber="22"
                               RequiresApplied="true"
-                              AffectingProvisions="Sch. 7"
+                              AffectingProvisionsText="Sch. 7"
                               EffectId="key-146b1815125d882430250621162b81da"
                               AffectingYear="2021"
                               AffectedNumber="8"
@@ -983,7 +983,7 @@
                               Modified="2023-08-29T11:14:38Z"
                               AffectedYear="2000"
                               AffectedProvisionsText="s. 71J and cross-heading"
-                              AffectingProvisions="Sch. 8 para. 4"
+                              AffectingProvisionsText="Sch. 8 para. 4"
                               Type="inserted"
                               URI="http://www.legislation.gov.uk/id/effect/key-3a025cb5620dc74f1b2f670bf6408371"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
@@ -1044,7 +1044,7 @@
                               AffectingYear="2021"
                               AffectedProvisionsText="s. 214(5A)"
                               AffectingClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisions="Sch. 8 para. 8">
+                              AffectingProvisionsText="Sch. 8 para. 8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1086,7 +1086,7 @@
                               AffectingEffectsExtent="E+W+S+N.I."
                               Type="inserted"
                               Modified="2023-08-29T11:14:38Z"
-                              AffectingProvisions="Sch. 8 para. 10"
+                              AffectingProvisionsText="Sch. 8 para. 10"
                               AffectedYear="2000"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               Row="424"
@@ -1138,7 +1138,7 @@
                               Type="word inserted"
                               Row="429"
                               AffectingYear="2021"
-                              AffectingProvisions="Sch. 8 para. 12(2)(b)"
+                              AffectingProvisionsText="Sch. 8 para. 12(2)(b)"
                               AffectingNumber="22"
                               AffectedProvisionsText="s. 395(13)(bc)-(be)"
                               EffectId="key-a4e0c0b46392b2949d5da900239e2f19"
@@ -1188,7 +1188,7 @@
                               URI="http://www.legislation.gov.uk/id/effect/key-d25543ee0cbc0ff32265d4bd6421bf49"
                               AffectedYear="2000"
                               Row="432"
-                              AffectingProvisions="Sch. 8 para. 12(2)(c)"
+                              AffectingProvisionsText="Sch. 8 para. 12(2)(c)"
                               RequiresApplied="true"
                               EffectId="key-d25543ee0cbc0ff32265d4bd6421bf49"
                               AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22"
@@ -1232,7 +1232,7 @@
                <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingProvisions="Sch. 8 para. 12(3)"
+         <ukm:UnappliedEffect AffectingProvisionsText="Sch. 8 para. 12(3)"
                               AffectingNumber="22"
                               Modified="2023-08-29T11:14:38Z"
                               AffectedYear="2000"
@@ -1281,7 +1281,7 @@
                <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingProvisions="Sch. 8 para. 18"
+         <ukm:UnappliedEffect AffectingProvisionsText="Sch. 8 para. 18"
                               URI="http://www.legislation.gov.uk/id/effect/key-351bc17b224a6085482c0de133c1bb4a"
                               AffectingClass="UnitedKingdomPublicGeneralAct"
                               AffectingNumber="22"
@@ -1350,7 +1350,7 @@
                               AffectingYear="2014"
                               URI="http://www.legislation.gov.uk/id/effect/key-05ccd5d9047901e84edea944467e0ab2"
                               RequiresApplied="true"
-                              AffectingProvisions="s. 79(4)"
+                              AffectingProvisionsText="s. 79(4)"
                               AffectedNumber="8"
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D"
                               AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D"
@@ -1384,7 +1384,7 @@
          <ukm:UnappliedEffect EffectId="key-b7ec36e10fbbebda09d50f93f0150ab8"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
                               Type="power to apply conferred (temp. until 15.5.2039)"
-                              AffectingProvisions="s. 81(10)"
+                              AffectingProvisionsText="s. 81(10)"
                               AffectingURI="http://www.legislation.gov.uk/id/ukpga/2014/21"
                               AffectedYear="2000"
                               AffectingYear="2014"
@@ -1435,7 +1435,7 @@
                               AffectedNumber="8"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/102"
                               AppendedCommentary="as amended by S.I. 2024/705, regs. 1(2), 2(2)"
-                              AffectingProvisions="reg. 34(7)(8)(f)"
+                              AffectingProvisionsText="reg. 34(7)(8)(f)"
                               AffectedProvisionsText="s. 398(8)"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-102-jwl9r655-103"
                               AffectingNumber="102"
@@ -1509,7 +1509,7 @@
                               Row="32"
                               RequiresApplied="true"
                               AffectingYear="2024"
-                              AffectingProvisions="reg. 10(b)"
+                              AffectingProvisionsText="reg. 10(b)"
                               AffectedProvisionsText="Sch. 6 para. 4A(8)"
                               Created="2024-11-04T13:29:24Z"
                               Type="inserted"
@@ -1548,7 +1548,7 @@
                <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingProvisions="Sch. 29 para. 3(2)"
+         <ukm:UnappliedEffect AffectingProvisionsText="Sch. 29 para. 3(2)"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
                               Type="inserted"
                               AffectedProvisionsText="s. 234I(9)"
@@ -1623,7 +1623,7 @@
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
          <ukm:UnappliedEffect AffectedProvisionsText="s. 234J(6)"
-                              AffectingProvisions="Sch. 29 para. 3(3)"
+                              AffectingProvisionsText="Sch. 29 para. 3(3)"
                               Type="inserted"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8"
                               AffectingURI="http://www.legislation.gov.uk/id/ukpga/2024/13"
@@ -1699,7 +1699,7 @@
          <ukm:UnappliedEffect Notes="This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A."
                               AffectedNumber="8"
                               AffectedProvisionsText="s. 427A(3)"
-                              AffectingProvisions="Sch. 17 para. 59"
+                              AffectingProvisionsText="Sch. 17 para. 59"
                               RequiresApplied="false"
                               Type="words substituted"
                               AffectingURI="http://www.legislation.gov.uk/id/ukpga/2002/40"

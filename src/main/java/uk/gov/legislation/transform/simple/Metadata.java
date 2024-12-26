@@ -13,7 +13,6 @@ import uk.gov.legislation.util.*;
 import java.time.LocalDate;
 import java.util.*;
 
-@SuppressWarnings("unused")
 public class Metadata implements uk.gov.legislation.endpoints.document.Metadata {
 
     public String id;
@@ -40,6 +39,7 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "altNumber")
+    @JsonIgnore
     public List<AltNum> altNums;
 
     public List<AltNum> altNumbers() { return altNums; }
@@ -174,7 +174,6 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public List<UnappliedEffect> rawEffects() { return rawEffects; }
 
     private List<Effect> convertedEffects = Collections.emptyList();
-    @JsonIgnore
     @Override
     public List<Effect> unappliedEffects() { return convertedEffects; }
 

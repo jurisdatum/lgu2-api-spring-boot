@@ -69,6 +69,9 @@ public class Effect {
         @Schema
         public int number;
 
+        @Schema
+        public Provisions provisions;
+
     }
 
 }

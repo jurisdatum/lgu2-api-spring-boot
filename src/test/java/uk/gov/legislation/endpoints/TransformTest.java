@@ -25,9 +25,9 @@ public class TransformTest {
     }
 
 
-    private String read(String resource) throws IOException {
+    static String read(String resource) throws IOException {
         String content;
-        try (var input = getClass().getResourceAsStream(resource)) {
+        try (var input = TransformTest.class.getResourceAsStream(resource)) {
             Objects.requireNonNull(input);
             content = new String(input.readAllBytes(), StandardCharsets.UTF_8);
         }
@@ -52,8 +52,8 @@ public class TransformTest {
         String clml = getClml();
         String actual = transform.transformToHtml(clml, true).replaceFirst("""
             <div property="FRBRdate" typeof="FRBRdate">
-                                 <meta property="date" content="[^"]+">
-                                 <meta property="name" content="transform">""", """
+             {21}<meta property="date" content="[^"]+">
+             {21}<meta property="name" content="transform">""", """
             <div property="FRBRdate" typeof="FRBRdate">
                                  <meta property="date" content="2024-12-19-05:00">
                                  <meta property="name" content="transform">""");

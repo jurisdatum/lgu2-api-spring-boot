@@ -38,9 +38,14 @@ public class UnappliedEffect {
     @JacksonXmlProperty(localName = "AffectedProvisionsText", isAttribute = true)
     public String affectedProvisionsText;
 
-    @JacksonXmlElementWrapper(localName = "AffectedProvisions")
-    @JacksonXmlProperty(localName = "node")
+    @JacksonXmlProperty(localName = "AffectedProvisions")
     public List<RichTextNode> affectedProvisions = Collections.emptyList();
+
+    @JacksonXmlProperty(localName = "AffectingProvisionsText", isAttribute = true)
+    public String affectingProvisionsText;
+
+    @JacksonXmlProperty(localName = "AffectingProvisions")
+    public List<RichTextNode> affectingProvisions = Collections.emptyList();
 
     @JacksonXmlElementWrapper(localName = "InForceDates")
     @JacksonXmlProperty(localName = "InForce")

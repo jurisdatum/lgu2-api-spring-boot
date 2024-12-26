@@ -20,9 +20,7 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
-import java.util.Objects;
 
 @SpringBootTest
 class UnappliedEffectsTest {
@@ -39,24 +37,15 @@ class UnappliedEffectsTest {
         .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .enable(SerializationFeature.INDENT_OUTPUT);
 
-    private String read(String resource) throws IOException {
-        String content;
-        try (var input = getClass().getResourceAsStream(resource)) {
-            Objects.requireNonNull(input);
-            content = new String(input.readAllBytes(), StandardCharsets.UTF_8);
-        }
-        return content;
-    }
-
     private String getClml() throws IOException {
-        return read("/ukpga-2000-8-section-91.xml");
+        return TransformTest.read("/ukpga-2000-8-section-91.xml");
     }
 
     @Test
     void simplify() throws Exception {
         String clml = getClml();
         String actual = indent(simplifier.transform(clml));
-        String expected = read("/ukpga-2000-8-section-91_simplified.xml");
+        String expected = TransformTest.read("/ukpga-2000-8-section-91_simplified.xml");
         Assertions.assertEquals(expected, actual);
     }
 
@@ -78,7 +67,7 @@ class UnappliedEffectsTest {
         String clml = getClml();
         Metadata meta = simplifier.metadata(clml);
         String actual = mapper.writeValueAsString(meta.rawEffects());
-        String expected = read("/ukpga-2000-8-section-91-effects-raw.json");
+        String expected = TransformTest.read("/ukpga-2000-8-section-91-effects-raw.json");
         Assertions.assertEquals(expected, actual);
     }
 
@@ -88,7 +77,7 @@ class UnappliedEffectsTest {
         Metadata meta = simplifier.metadata(clml);
         List<UnappliedEffect> effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects(), meta.getInternalIds());
         String actual = mapper.writeValueAsString(effects);
-        String expected = read("/ukpga-2000-8-section-91-effects-filtered.json");
+        String expected = TransformTest.read("/ukpga-2000-8-section-91-effects-filtered.json");
         Assertions.assertEquals(expected, actual);
     }
 
@@ -98,7 +87,7 @@ class UnappliedEffectsTest {
         Metadata meta = simplifier.metadata(clml);
         List<Effect> effects = EffectsConverter.convert(meta.rawEffects());
         String actual = mapper.writeValueAsString(effects);
-        String expected = read("/ukpga-2000-8-section-91-effects-converted.json");
+        String expected = TransformTest.read("/ukpga-2000-8-section-91-effects-converted.json");
         Assertions.assertEquals(expected, actual);
     }
 

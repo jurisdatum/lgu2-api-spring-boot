@@ -15,6 +15,15 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingProvisionsText" : "reg. 30(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(b)",
+    "ref" : "regulation-30-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -38,6 +47,15 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingProvisionsText" : "reg. 30(2)(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(a)",
+    "ref" : "regulation-30-2-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
+    "error" : null,
+    "missing" : false
+  } ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -61,6 +79,15 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingProvisionsText" : "s. 79(4)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 79(4)",
+    "ref" : "section-79-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4",
+    "error" : null,
+    "missing" : false
+  } ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -81,6 +108,15 @@
     "text" : "Act",
     "ref" : null,
     "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingProvisionsText" : "s. 81(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 81(10)",
+    "ref" : "section-81-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10",
     "error" : null,
     "missing" : false
   } ],
