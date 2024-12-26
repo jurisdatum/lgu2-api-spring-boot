@@ -51,6 +51,13 @@ public class UnappliedEffect {
     @JacksonXmlProperty(localName = "InForce")
     public List<InForce> inForceDates = Collections.emptyList();
 
+    /* Provide details of the provision giving authority for the In-Force date(s).
+    /* If there is no commencement provision then there will be a value added 'N'.
+    /* Where the commencement date is defined elsewhere, for example, in an Interpretation provision,
+    /* then this provision also will be included as part of the Commencement Authority */
+    @JacksonXmlProperty(localName = "CommencementAuthority")
+    public List<RichTextNode> commencementAuthority = Collections.emptyList();
+
     public static class RichTextNode {
 
         public static final String TEXT_TYPE = "text";

@@ -23,6 +23,9 @@ public class Effect {
     @Schema
     public Source source;
 
+    @Schema
+    public Provisions commencement;
+
     @Schema(nullable = true)
     public String notes;
 

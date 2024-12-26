@@ -29,6 +29,14 @@
     "applied" : false,
     "prospective" : null,
     "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)",
+    "ref" : "regulation-1-2",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2",
+    "error" : null,
+    "missing" : false
   } ]
 }, {
   "requiresApplied" : false,
@@ -61,6 +69,14 @@
     "applied" : false,
     "prospective" : null,
     "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)",
+    "ref" : "regulation-1-2",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2",
+    "error" : null,
+    "missing" : false
   } ]
 }, {
   "requiresApplied" : true,
@@ -93,6 +109,14 @@
     "applied" : false,
     "prospective" : true,
     "qualification" : "with effect in accordance with"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 94(3)",
+    "ref" : "section-94-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3",
+    "error" : null,
+    "missing" : false
   } ]
 }, {
   "requiresApplied" : true,
@@ -125,5 +149,13 @@
     "applied" : false,
     "prospective" : true,
     "qualification" : "with effect in accordance with"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 94(3)",
+    "ref" : "section-94-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3",
+    "error" : null,
+    "missing" : false
   } ]
 } ]

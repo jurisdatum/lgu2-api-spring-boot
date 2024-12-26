@@ -8,6 +8,7 @@ import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.Links;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class EffectsConverter {
 
@@ -18,20 +19,25 @@ public class EffectsConverter {
     private static final Logger logger = LoggerFactory.getLogger(EffectsConverter.class);
 
     public static List<Effect> convert(List<UnappliedEffect> effects) {
-        return effects.stream().map(EffectsConverter::convert1).toList();
+        return effects.stream().map(EffectsConverter::convertEffect).toList();
     }
 
-    public static Effect convert1(UnappliedEffect clml) {
+    private static Effect convertEffect(UnappliedEffect clml) {
         Effect effect = new Effect();
         effect.type = clml.type;
         effect.required = clml.requiresApplied;
         effect.affected = convertProvisions(clml.affectedProvisionsText, clml.affectedProvisions);
         effect.inForceDates = convertInForceDates(clml);
         effect.source = makeSource(clml);
+        effect.commencement = convertProvisions(clml.commencementAuthority);
         effect.notes = clml.notes;
         return effect;
     }
 
+    private static Effect.Provisions convertProvisions(List<UnappliedEffect.RichTextNode> rich) {
+        String plain = rich.stream().map(node -> node.text).collect(Collectors.joining());
+        return convertProvisions(plain, rich);
+    }
     private static Effect.Provisions convertProvisions(String plain, List<UnappliedEffect.RichTextNode> rich) {
         Effect.Provisions provisions = new Effect.Provisions();
         provisions.plain = plain;
