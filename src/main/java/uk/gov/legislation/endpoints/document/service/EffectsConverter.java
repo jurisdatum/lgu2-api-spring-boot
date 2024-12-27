@@ -5,8 +5,11 @@ import org.slf4j.LoggerFactory;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.responses.RichText;
 import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.util.Extent;
 import uk.gov.legislation.util.Links;
 
+import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -27,6 +30,7 @@ public class EffectsConverter {
         effect.type = clml.type;
         effect.required = clml.requiresApplied;
         effect.affected = convertProvisions(clml.affectedProvisionsText, clml.affectedProvisions);
+        effect.affectedExtent = convertExtent(clml.affectedExtent);
         effect.inForceDates = convertInForceDates(clml);
         effect.source = makeSource(clml);
         effect.commencement = convertProvisions(clml.commencementAuthority);
@@ -82,6 +86,17 @@ public class EffectsConverter {
             default -> logger.warn("unrecognized node type: {}", clml.type);
         }
         return node;
+    }
+
+    public static final String SAME_AS_AFFECTED = "S+A+M+E+A+S+A+F+F+E+C+T+E+D";
+
+    private static EnumSet<Extent> convertExtent(String clml) {
+        if (clml == null)
+            return EnumSet.noneOf(Extent.class);
+        return Arrays.stream(clml.split("\\+"))
+            .map(extent -> extent.replace(".", ""))
+            .map(Extent::valueOf)
+            .collect(Collectors.toCollection(() -> EnumSet.noneOf(Extent.class)));
     }
 
 }

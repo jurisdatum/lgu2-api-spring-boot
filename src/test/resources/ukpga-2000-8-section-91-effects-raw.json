@@ -5,16 +5,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
-  "affectedProvisionsText" : "s. 86(9A)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 86(9A)",
-    "ref" : "section-86-9A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/86/9A",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 8(9)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -24,6 +14,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 86(9A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 86(9A)",
+    "ref" : "section-86-9A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/86/9A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -45,16 +49,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
-  "affectedProvisionsText" : "s. 87A(11)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 87A(11)",
-    "ref" : "section-87A-11",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/87A/11",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 10(5)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -64,6 +58,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 87A(11)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 87A(11)",
+    "ref" : "section-87A-11",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/87A/11",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -85,16 +93,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
-  "affectedProvisionsText" : "s. 91(1A)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 91(1A)",
-    "ref" : "section-91-1A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 30(2)(b)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -104,6 +102,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)",
+    "ref" : "section-91-1A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -125,16 +137,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
-  "affectedProvisionsText" : "s. 91(1A)(e)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 91(1A)(e)",
-    "ref" : "section-91-1A-e",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 30(2)(a)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -144,6 +146,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)(e)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)(e)",
+    "ref" : "section-91-1A-e",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -165,16 +181,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 310,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)",
-  "affectedProvisionsText" : "s. 124(10)(c)(i)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 124(10)(c)(i)",
-    "ref" : "section-124-10-c-i",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/124/10/c/i",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 5(11)(b)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -184,6 +190,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 124(10)(c)(i)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 124(10)(c)(i)",
+    "ref" : "section-124-10-c-i",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/124/10/c/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -205,16 +225,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 310,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
-  "affectedProvisionsText" : "s. 129(7)(a)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 129(7)(a)",
-    "ref" : "section-129-7-a",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/a",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 5(12)(a)(i)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -224,6 +234,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 129(7)(a)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 129(7)(a)",
+    "ref" : "section-129-7-a",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -245,16 +269,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 310,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
-  "affectedProvisionsText" : "s. 129(7)(c)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 129(7)(c)",
-    "ref" : "section-129-7-c",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/c",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 5(12)(a)(ii)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -264,6 +278,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 129(7)(c)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 129(7)(c)",
+    "ref" : "section-129-7-c",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/c",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -285,7 +313,17 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
+  "affectingProvisionsText" : "reg. 38(5)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 38(5)(b)",
+    "ref" : "regulation-38-5-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 11A para. 5(3)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -302,15 +340,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "reg. 38(5)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 38(5)(b)",
-    "ref" : "regulation-38-5-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -332,7 +364,17 @@
   "affectingYear" : 2019,
   "affectingNumber" : 662,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/662",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)",
+  "affectingProvisionsText" : "reg. 13(1)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 13(1)",
+    "ref" : "regulation-13-1",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 17A para. 12",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -349,15 +391,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   } ],
-  "affectingProvisionsText" : "reg. 13(1)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 13(1)",
-    "ref" : "regulation-13-1",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -379,7 +415,24 @@
   "affectingYear" : 2023,
   "affectingNumber" : 29,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2023/29",
-  "notes" : null,
+  "affectingProvisionsText" : "Sch. 10 para. 19(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 10 ",
+    "ref" : "schedule-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 19(a)",
+    "ref" : "schedule-10-paragraph-19-a",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 2A para. 19(2)(b)(iia)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -403,22 +456,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "Sch. 10 para. 19(a)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 10 ",
-    "ref" : "schedule-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 19(a)",
-    "ref" : "schedule-10-paragraph-19-a",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : "2023-06-29",
     "applied" : false,
@@ -440,16 +480,6 @@
   "affectingYear" : 2016,
   "affectingNumber" : 14,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2016/14",
-  "notes" : null,
-  "affectedProvisionsText" : "Pt. 20C",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "Pt. 20C",
-    "ref" : "part-20C",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/part/20C",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
   "affectingProvisionsText" : "s. 30(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -459,6 +489,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Pt. 20C",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Pt. 20C",
+    "ref" : "part-20C",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/part/20C",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -480,7 +524,17 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "s. 23(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 23(10)",
+    "ref" : "section-23-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 2A 2B",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -497,15 +551,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   } ],
-  "affectingProvisionsText" : "s. 23(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 23(10)",
-    "ref" : "section-23-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -527,16 +575,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 31(1)(aa)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 31(1)(aa)",
-    "ref" : "section-31-1-aa",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/31/1/aa",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "s. 22(2)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -546,6 +584,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 31(1)(aa)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 31(1)(aa)",
+    "ref" : "section-31-1-aa",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/31/1/aa",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -567,16 +619,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 32A",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 32A",
-    "ref" : "section-32A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
   "affectingProvisionsText" : "s. 22(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -586,6 +628,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 32A",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 32A",
+    "ref" : "section-32A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -607,7 +663,17 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "s. 22(4)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 22(4)",
+    "ref" : "section-22-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "s. 36A and cross-heading",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -624,15 +690,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "s. 22(4)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 22(4)",
-    "ref" : "section-22-4",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -654,7 +714,17 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "s. 23(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 23(10)",
+    "ref" : "section-23-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "s. 32A",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -664,15 +734,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   } ],
-  "affectingProvisionsText" : "s. 23(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 23(10)",
-    "ref" : "section-23-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -694,7 +758,17 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "s. 23(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 23(10)",
+    "ref" : "section-23-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 2A",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -704,15 +778,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   } ],
-  "affectingProvisionsText" : "s. 23(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 23(10)",
-    "ref" : "section-23-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -734,16 +802,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "Sch. 2B",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 2B",
-    "ref" : "schedule-2B",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
   "affectingProvisionsText" : "s. 23(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -753,28 +811,8 @@
     "error" : null,
     "missing" : false
   } ],
-  "inForceDates" : [ {
-    "date" : null,
-    "applied" : false,
-    "prospective" : true,
-    "qualification" : ""
-  } ],
-  "commencementAuthority" : [ {
-    "type" : "section",
-    "text" : "s. 49(5)",
-    "ref" : "section-49-5",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
-    "error" : null,
-    "missing" : false
-  } ]
-}, {
-  "requiresApplied" : true,
-  "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 2B",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -784,15 +822,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   } ],
-  "affectingProvisionsText" : "Sch. 7",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 7",
-    "ref" : "schedule-7",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -814,23 +846,50 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 71J and cross-heading",
-  "affectedProvisions" : [ {
+  "affectingProvisionsText" : "Sch. 7",
+  "affectingProvisions" : [ {
     "type" : "section",
-    "text" : "s. 71J",
-    "ref" : "section-71J",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/71J",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  }, {
-    "type" : "text",
-    "text" : " and cross-heading",
-    "ref" : null,
-    "uri" : null,
+    "text" : "Sch. 7",
+    "ref" : "schedule-7",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7",
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "Sch. 2B",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2B",
+    "ref" : "schedule-2B",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : null,
+    "applied" : false,
+    "prospective" : true,
+    "qualification" : ""
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 49(5)",
+    "ref" : "section-49-5",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
   "affectingProvisionsText" : "Sch. 8 para. 4",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -847,6 +906,27 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 71J and cross-heading",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 71J",
+    "ref" : "section-71J",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/71J",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  }, {
+    "type" : "text",
+    "text" : " and cross-heading",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -868,16 +948,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 214(5A)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 214(5A)",
-    "ref" : "section-214-5A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "Sch. 8 para. 8",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -894,6 +964,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 214(5A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 214(5A)",
+    "ref" : "section-214-5A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -915,16 +999,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 367A",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 367A",
-    "ref" : "section-367A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
   "affectingProvisionsText" : "Sch. 8 para. 10",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -941,6 +1015,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 367A",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 367A",
+    "ref" : "section-367A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -962,7 +1050,24 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "Sch. 8 para. 12(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 8 ",
+    "ref" : "schedule-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 12(2)(b)",
+    "ref" : "schedule-8-paragraph-12-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "s. 395(13)(bc)-(be)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -986,22 +1091,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "Sch. 8 para. 12(2)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 8 ",
-    "ref" : "schedule-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 12(2)(b)",
-    "ref" : "schedule-8-paragraph-12-2-b",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1023,16 +1115,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 395(13)(h)(i)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 395(13)(h)(i)",
-    "ref" : "section-395-13-h-i",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "Sch. 8 para. 12(2)(c)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1049,6 +1131,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 395(13)(h)(i)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 395(13)(h)(i)",
+    "ref" : "section-395-13-h-i",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1070,16 +1166,6 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 395(14)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 395(14)",
-    "ref" : "section-395-14",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "Sch. 8 para. 12(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1096,6 +1182,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 395(14)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 395(14)",
+    "ref" : "section-395-14",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1117,7 +1217,24 @@
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "notes" : null,
+  "affectingProvisionsText" : "Sch. 8 para. 18",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 8 ",
+    "ref" : "schedule-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 18",
+    "ref" : "schedule-8-paragraph-18",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 1ZA para. 32(c) and word",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1141,22 +1258,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "Sch. 8 para. 18",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 8 ",
-    "ref" : "schedule-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 18",
-    "ref" : "schedule-8-paragraph-18",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1178,16 +1282,6 @@
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "notes" : null,
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "s. 79(4)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1197,6 +1291,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1218,16 +1326,6 @@
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "notes" : null,
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "s. 81(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1237,6 +1335,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1258,16 +1370,6 @@
   "affectingYear" : 2024,
   "affectingNumber" : 102,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/102",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 398(8)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 398(8)",
-    "ref" : "section-398-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 34(7)(8)(f)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1284,6 +1386,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 398(8)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 398(8)",
+    "ref" : "section-398-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : "2024-01-30",
     "applied" : true,
@@ -1317,7 +1433,17 @@
   "affectingYear" : 2024,
   "affectingNumber" : 1083,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
-  "notes" : null,
+  "affectingProvisionsText" : "reg. 10(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 10(b)",
+    "ref" : "regulation-10-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "affectedProvisionsText" : "Sch. 6 para. 4A(8)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1334,15 +1460,9 @@
     "error" : null,
     "missing" : false
   } ],
-  "affectingProvisionsText" : "reg. 10(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 10(b)",
-    "ref" : "regulation-10-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b",
-    "error" : null,
-    "missing" : false
-  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : "2024-12-31",
     "applied" : false,
@@ -1364,16 +1484,6 @@
   "affectingYear" : 2024,
   "affectingNumber" : 13,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 234I(9)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 234I(9)",
-    "ref" : "section-234I-9",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "Sch. 29 para. 3(2)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1390,6 +1500,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "s. 234I(9)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 234I(9)",
+    "ref" : "section-234I-9",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1416,16 +1540,6 @@
   "affectingYear" : 2024,
   "affectingNumber" : 13,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
-  "notes" : null,
-  "affectedProvisionsText" : "s. 234J(6)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 234J(6)",
-    "ref" : "section-234J-6",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "Sch. 29 para. 3(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1442,6 +1556,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "s. 234J(6)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 234J(6)",
+    "ref" : "section-234J-6",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1468,16 +1596,6 @@
   "affectingYear" : 2002,
   "affectingNumber" : 40,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2002/40",
-  "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A.",
-  "affectedProvisionsText" : "s. 427A(3)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 427A(3)",
-    "ref" : "section-427A-3",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
   "affectingProvisionsText" : "Sch. 17 para. 59",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1494,6 +1612,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "s. 427A(3)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 427A(3)",
+    "ref" : "section-427A-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A.",
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,

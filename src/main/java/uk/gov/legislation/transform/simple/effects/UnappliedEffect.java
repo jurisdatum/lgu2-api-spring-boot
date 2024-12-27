@@ -20,6 +20,8 @@ public class UnappliedEffect {
     @JacksonXmlProperty(localName = "Type", isAttribute = true)
     public String type;
 
+    /* affecting */
+
     @JacksonXmlProperty(localName = "AffectingClass", isAttribute = true)
     public String affectingClass;
 
@@ -32,8 +34,19 @@ public class UnappliedEffect {
     @JacksonXmlProperty(localName = "AffectingURI", isAttribute = true)
     public String affectingURI;
 
-    @JacksonXmlProperty(localName = "Notes", isAttribute = true)
-    public String notes;
+    @JacksonXmlProperty(localName = "AffectingProvisionsText", isAttribute = true)
+    public String affectingProvisionsText;
+
+    @JacksonXmlProperty(localName = "AffectingProvisions")
+    public List<RichTextNode> affectingProvisions = Collections.emptyList();
+
+    @JacksonXmlProperty(localName = "AffectingExtent", isAttribute = true)
+    public String affectingExtent;
+
+    @JacksonXmlProperty(localName = "AffectingEffectsExtent", isAttribute = true)
+    public String affectingEffectsExtent;
+
+    /* affected */
 
     @JacksonXmlProperty(localName = "AffectedProvisionsText", isAttribute = true)
     public String affectedProvisionsText;
@@ -41,11 +54,16 @@ public class UnappliedEffect {
     @JacksonXmlProperty(localName = "AffectedProvisions")
     public List<RichTextNode> affectedProvisions = Collections.emptyList();
 
-    @JacksonXmlProperty(localName = "AffectingProvisionsText", isAttribute = true)
-    public String affectingProvisionsText;
+    @JacksonXmlProperty(localName = "AffectedExtent", isAttribute = true)
+    public String affectedExtent;
 
-    @JacksonXmlProperty(localName = "AffectingProvisions")
-    public List<RichTextNode> affectingProvisions = Collections.emptyList();
+    @JacksonXmlProperty(localName = "AffectedEffectsExtent", isAttribute = true)
+    public String affectedEffectsExtent;
+
+    /* other */
+
+    @JacksonXmlProperty(localName = "Notes", isAttribute = true)
+    public String notes;
 
     @JacksonXmlElementWrapper(localName = "InForceDates")
     @JacksonXmlProperty(localName = "InForce")
@@ -57,6 +75,8 @@ public class UnappliedEffect {
     /* then this provision also will be included as part of the Commencement Authority */
     @JacksonXmlProperty(localName = "CommencementAuthority")
     public List<RichTextNode> commencementAuthority = Collections.emptyList();
+
+    /* rich text */
 
     public static class RichTextNode {
 

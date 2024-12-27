@@ -2,9 +2,11 @@ package uk.gov.legislation.endpoints.document.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 public class Effect {
 
@@ -16,6 +18,9 @@ public class Effect {
 
     @Schema
     public Provisions affected;
+
+    @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
+    public Set<Extent> affectedExtent;
 
     @Schema
     public List<InForce> inForceDates;

@@ -10,6 +10,7 @@
       "href" : "ukpga/2000/8/section/86/9A"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -52,6 +53,7 @@
       "href" : "ukpga/2000/8/section/87A/11"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -94,6 +96,7 @@
       "href" : "ukpga/2000/8/section/91/1A"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -136,6 +139,7 @@
       "href" : "ukpga/2000/8/section/91/1A/e"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -178,6 +182,7 @@
       "href" : "ukpga/2000/8/section/124/10/c/i"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -220,6 +225,7 @@
       "href" : "ukpga/2000/8/section/129/7/a"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -262,6 +268,7 @@
       "href" : "ukpga/2000/8/section/129/7/c"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -309,6 +316,7 @@
       "href" : "ukpga/2000/8/schedule/11A/paragraph/5/3"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -358,6 +366,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -410,6 +419,7 @@
       "href" : "ukpga/2000/8/schedule/2A/paragraph/19/2/iia"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : "2023-06-29",
     "applied" : false,
@@ -458,6 +468,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -507,6 +518,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -549,6 +561,7 @@
       "href" : "ukpga/2000/8/section/31/1/aa"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -592,6 +605,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -638,6 +652,7 @@
       "text" : " and cross-heading"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -681,6 +696,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -724,6 +740,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -767,6 +784,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -810,6 +828,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -856,6 +875,7 @@
       "text" : " and cross-heading"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -903,6 +923,7 @@
       "href" : "ukpga/2000/8/section/214/5A"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -951,6 +972,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1006,6 +1028,7 @@
       "href" : "ukpga/2000/8/section/395/13/be"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1053,6 +1076,7 @@
       "href" : "ukpga/2000/8/section/395/13/h/i"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1100,6 +1124,7 @@
       "href" : "ukpga/2000/8/section/395/14"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1155,6 +1180,7 @@
       "text" : " and word"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1200,6 +1226,7 @@
       "text" : "Act"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1241,6 +1268,7 @@
       "text" : "Act"
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1284,6 +1312,7 @@
       "href" : "ukpga/2000/8/section/398/8"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : "2024-01-30",
     "applied" : true,
@@ -1345,6 +1374,7 @@
       "href" : "ukpga/2000/8/schedule/6/paragraph/4A/8"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : "2024-12-31",
     "applied" : false,
@@ -1387,6 +1417,7 @@
       "href" : "ukpga/2000/8/section/234I/9"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1438,6 +1469,7 @@
       "href" : "ukpga/2000/8/section/234J/6"
     } ]
   },
+  "affectedExtent" : [ ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -1490,6 +1522,7 @@
       "missing" : true
     } ]
   },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,

@@ -5,16 +5,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
-  "affectedProvisionsText" : "s. 91(1A)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 91(1A)",
-    "ref" : "section-91-1A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 30(2)(b)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -24,6 +14,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)",
+    "ref" : "section-91-1A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -45,16 +49,6 @@
   "affectingYear" : 2019,
   "affectingNumber" : 707,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
-  "affectedProvisionsText" : "s. 91(1A)(e)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 91(1A)(e)",
-    "ref" : "section-91-1A-e",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e",
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "reg. 30(2)(a)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -64,6 +58,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)(e)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)(e)",
+    "ref" : "section-91-1A-e",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
     "applied" : false,
@@ -85,16 +93,6 @@
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "notes" : null,
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "s. 79(4)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -104,6 +102,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
@@ -125,16 +137,6 @@
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "notes" : null,
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
   "affectingProvisionsText" : "s. 81(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -144,6 +146,20 @@
     "error" : null,
     "missing" : false
   } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
   "inForceDates" : [ {
     "date" : null,
     "applied" : false,
