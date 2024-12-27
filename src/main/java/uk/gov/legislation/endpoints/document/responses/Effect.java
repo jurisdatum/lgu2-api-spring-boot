@@ -65,7 +65,7 @@ public class Effect {
 
     public static class Source {
 
-        @Schema
+        @Schema(example = "ukpga/2024/1")
         public String id;
 
         @Schema
@@ -76,6 +76,9 @@ public class Effect {
 
         @Schema
         public int number;
+
+        @Schema(example = "2024 c. 1")
+        public String cite;
 
         @Schema
         public Provisions provisions;

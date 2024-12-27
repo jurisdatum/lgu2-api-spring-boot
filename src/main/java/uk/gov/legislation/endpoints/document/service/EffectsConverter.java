@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.responses.RichText;
 import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Extent;
 import uk.gov.legislation.util.Links;
 
@@ -67,6 +68,7 @@ public class EffectsConverter {
         source.longType = clml.affectingClass;
         source.year = clml.affectingYear;
         source.number = clml.affectingNumber;
+        source.cite = Cites.make(source.longType, source.year, source.number);
         source.provisions = convertProvisions(clml.affectingProvisionsText, clml.affectingProvisions);
         return source;
     }
