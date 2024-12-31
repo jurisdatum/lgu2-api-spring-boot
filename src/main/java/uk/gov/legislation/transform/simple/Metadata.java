@@ -6,6 +6,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
+import uk.gov.legislation.endpoints.document.service.ExtentConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.*;
@@ -89,6 +90,12 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public String title;
 
     public String title() { return title; }
+
+    private String extent;
+
+    public Set<Extent> extent() {
+        return ExtentConverter.convert(extent);
+    }
 
     public String lang;
 

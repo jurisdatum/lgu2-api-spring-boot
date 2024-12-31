@@ -24,7 +24,7 @@ class MetadataExtractionTest {
 	}
 
 	private static final String CLML = """
-			<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation">
+			<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" DocumentURI="http://www.legislation.gov.uk/ukpga/2017/1/enacted">
 			    <Metadata xmlns="http://www.legislation.gov.uk/namespaces/metadata" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom">
 				    <dc:identifier>http://www.legislation.gov.uk/ukpga/2017/1/enacted</dc:identifier>
 				    <dct:valid>2017-03-16</dct:valid>

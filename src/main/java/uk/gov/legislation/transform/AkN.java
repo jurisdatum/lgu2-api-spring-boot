@@ -4,6 +4,7 @@ import net.sf.saxon.s9api.*;
 import uk.gov.legislation.endpoints.document.Metadata;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.util.Extent;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
@@ -261,6 +262,7 @@ public record Meta(
         String version,
         String status,
         String title,
+        Set<Extent> extent,
         String lang,
         String publisher,
         LocalDate modified,
@@ -298,7 +300,7 @@ public record Meta(
         String next = AkN.getNextLink(akn);
         List<Effect> ue = Collections.emptyList();
         return new Meta(id, longType, shortType, year, regnalYear, number, altNumbers, date, cite,
-            version, status, title, lang, publisher, modified, versions, schedules, formats,
+            version, status, title, EnumSet.noneOf(Extent.class), lang, publisher, modified, versions, schedules, formats,
             fragment, prev, next, ue);
     }
 

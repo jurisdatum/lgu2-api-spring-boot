@@ -6,9 +6,11 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 @Schema(name = "DocumentMetadata")
 @SuppressWarnings("unused")
@@ -65,43 +67,47 @@ public interface Metadata {
     String title();
 
     @JsonProperty(index = 13)
+    @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
+    Set<Extent> extent();
+
+    @JsonProperty(index = 14)
     @Schema()
     String lang();
 
-    @JsonProperty(index = 14)
+    @JsonProperty(index = 15)
     @Schema(allowableValues = { "King's Printer of Acts of Parliament", "Queen's Printer of Acts of Parliament", "Statute Law Database" }, example = "Statute Law Database")
     String publisher();
 
-    @JsonProperty(index = 15)
+    @JsonProperty(index = 16)
     @Schema(example = "2024-09-23")
     LocalDate modified();
 
-    @JsonProperty(index = 16)
+    @JsonProperty(index = 17)
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
     List<String> versions();
 
-    @JsonProperty(value="schedules", index = 17)
+    @JsonProperty(value="schedules", index = 18)
     boolean schedules();
 
-    @JsonProperty(index = 18)
+    @JsonProperty(index = 19)
     @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
     List<String> formats();
 
-    @JsonProperty(index = 19)
+    @JsonProperty(index = 20)
     @JsonInclude(JsonInclude.Include.ALWAYS)
     List<Effect> unappliedEffects();
 
-    @JsonProperty(index = 20)
+    @JsonProperty(index = 21)
     @Schema(example = "section/2", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String fragment();
 
-    @JsonProperty(value = "prev", index = 21)
+    @JsonProperty(value = "prev", index = 22)
     @Schema(example = "section/1", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String prev();
 
-    @JsonProperty(value = "next", index = 22)
+    @JsonProperty(value = "next", index = 23)
     @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String next();

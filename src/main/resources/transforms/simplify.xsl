@@ -34,6 +34,7 @@
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
+        <xsl:call-template name="extent" />
         <xsl:apply-templates select="dc:language" />
         <xsl:apply-templates select="dc:publisher" />
         <xsl:apply-templates select="dc:modified" />
@@ -52,9 +53,14 @@
     </meta>
 </xsl:template>
 
+<xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
+
+<xsl:key name="document-uri" match="*" use="@DocumentURI"/>
+
+<xsl:variable name="target" as="element()?" select="key('document-uri', $dc-identifier)" />
+
 <xsl:variable name="id-components" as="xs:string+">
-    <xsl:variable name="id" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
-    <xsl:variable name="id" as="xs:string" select="substring-after($id, 'http://www.legislation.gov.uk/')" />
+    <xsl:variable name="id" as="xs:string" select="substring-after($dc-identifier, 'http://www.legislation.gov.uk/')" />
     <xsl:variable name="components" as="xs:string+" select="tokenize($id, '/')" />
     <xsl:choose>
         <xsl:when test="$components[2] castable as xs:integer">
@@ -144,6 +150,16 @@
         <xsl:value-of select="@Date" />
     </date>
 </xsl:template>
+
+<!-- extent -->
+
+<xsl:template name="extent">
+    <extent>
+        <xsl:value-of select="$target/ancestor-or-self::*[exists(@RestrictExtent)][1]/@RestrictExtent" />
+    </extent>
+</xsl:template>
+
+<!-- versions -->
 
 <xsl:template name="versions">
     <hasVersions>
