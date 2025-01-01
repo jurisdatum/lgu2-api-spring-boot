@@ -13,6 +13,10 @@ public class Effects {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 
+    public static void sort(List<UnappliedEffect> effects) {
+        effects.sort(EffectsComparator.INSTANCE);
+    }
+
     /* sections */
 
     static final Predicate<RichTextNode> isSection = node -> RichTextNode.SECTION_TYPE.equals(node.type);

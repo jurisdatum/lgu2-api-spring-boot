@@ -72,6 +72,17 @@ class UnappliedEffectsTest {
     }
 
     @Test
+    void sorted() throws Exception {
+        String clml = getClml();
+        Metadata meta = simplifier.metadata(clml);
+        List<UnappliedEffect> effects = meta.rawEffects();
+        Effects.sort(effects);
+        String actual = mapper.writeValueAsString(effects);
+        String expected = TransformTest.read("/ukpga-2000-8-section-91-effects-sorted.json");
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     void filtered() throws Exception {
         String clml = getClml();
         Metadata meta = simplifier.metadata(clml);
