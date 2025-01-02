@@ -1,7 +1,7 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect.RichTextNode;
+import uk.gov.legislation.transform.simple.UnappliedEffect;
+import uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode;
 
 import java.util.List;
 import java.util.Set;

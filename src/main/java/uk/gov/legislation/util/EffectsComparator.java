@@ -1,6 +1,6 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.transform.simple.UnappliedEffect;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -12,7 +12,6 @@ import java.util.regex.Pattern;
 class EffectsComparator {
 
     private static final Comparator<UnappliedEffect> BY_AFFECTED_PROVISION = (UnappliedEffect e1, UnappliedEffect e2) -> {
-        System.out.println("comparing " + e1.affectedProvisionsText + " to " + e2.affectedProvisionsText);
         Optional<String> id1 = e1.affectedProvisions.stream()
             .filter(node -> node.type.equals(UnappliedEffect.RichTextNode.SECTION_TYPE))
             .map(node -> node.ref)

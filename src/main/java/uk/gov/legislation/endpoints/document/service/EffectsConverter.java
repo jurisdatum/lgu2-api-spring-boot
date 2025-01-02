@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.responses.RichText;
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.transform.simple.UnappliedEffect;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
 

@@ -8,7 +8,6 @@ import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.endpoints.document.service.ExtentConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
 import uk.gov.legislation.util.*;
 
 import java.time.LocalDate;

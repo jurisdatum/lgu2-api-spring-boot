@@ -11,7 +11,7 @@ import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
-import uk.gov.legislation.transform.simple.effects.UnappliedEffect;
+import uk.gov.legislation.transform.simple.UnappliedEffect;
 import uk.gov.legislation.util.Effects;
 
 import javax.xml.transform.*;

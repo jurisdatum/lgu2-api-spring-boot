@@ -1,4 +1,4 @@
-package uk.gov.legislation.transform.simple.effects;
+package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
