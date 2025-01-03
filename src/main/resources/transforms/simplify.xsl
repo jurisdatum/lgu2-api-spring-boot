@@ -201,6 +201,27 @@
     <next>
         <xsl:value-of select="atom:link[@rel='next']/@href" />
     </next>
+    <ancestors>
+        <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
+            <ancestor name="{ local-name(.) }">
+                <xsl:copy-of select="@id" />
+                <xsl:copy-of select="@DocumentURI" />
+                <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
+                <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
+            </ancestor>
+        </xsl:for-each>
+    </ancestors>
+</xsl:template>
+
+<xsl:template match="*" mode="simplify-number">
+    <number>
+        <xsl:value-of select="normalize-space(.)" />
+    </number>
+</xsl:template>
+<xsl:template match="*" mode="simplify-title">
+    <title>
+        <xsl:value-of select="normalize-space(.)" />
+    </title>
 </xsl:template>
 
 <!-- effects -->

@@ -33,6 +33,25 @@
       <fragment>http://www.legislation.gov.uk/ukpga/2000/8/section/91</fragment>
       <prev>http://www.legislation.gov.uk/ukpga/2000/8/section/90B</prev>
       <next>http://www.legislation.gov.uk/ukpga/2000/8/section/92</next>
+      <ancestors>
+         <ancestor name="Part"
+                   id="part-VI"
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI">
+            <number>Part VI</number>
+            <title>Official Listing</title>
+         </ancestor>
+         <ancestor name="Pblock"
+                   id="part-VI-crossheading-penalties"
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI/crossheading/penalties">
+            <title>Penalties</title>
+         </ancestor>
+         <ancestor name="P1"
+                   id="section-91"
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/section/91">
+            <number>91</number>
+            <title>Penalties for breach of Part 6 rules</title>
+         </ancestor>
+      </ancestors>
       <ukm:UnappliedEffects xmlns="http://www.legislation.gov.uk/namespaces/legislation"
                             xmlns:atom="http://www.w3.org/2005/Atom"
                             xmlns:dc="http://purl.org/dc/elements/1.1/"

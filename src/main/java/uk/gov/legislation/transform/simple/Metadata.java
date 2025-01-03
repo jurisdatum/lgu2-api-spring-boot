@@ -173,6 +173,16 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     @JsonSetter("next")
     public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
 
+    /* ancestors */
+
+    @JacksonXmlProperty(localName = "ancestors")
+    private List<Level> ancestors;
+
+    @Override
+    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestry() {
+        return ancestors.stream().map(Level::convert).toList();
+    }
+
     /* unapplied effects */
 
     private List<UnappliedEffect> rawEffects = Collections.emptyList();

@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.media.Schema.RequiredMode;
 import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.Level;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.Extent;
 
@@ -102,14 +103,19 @@ public interface Metadata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String fragment();
 
-    @JsonProperty(value = "prev", index = 22)
+    @JsonProperty(index = 22)
     @Schema(example = "section/1", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String prev();
 
-    @JsonProperty(value = "next", index = 23)
+    @JsonProperty(index = 23)
     @Schema(example = "section/3", requiredMode = RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     String next();
+
+    @JsonProperty(index = 24)
+    @Schema
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    List<Level> ancestry();
 
 }

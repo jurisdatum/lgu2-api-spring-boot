@@ -66,7 +66,7 @@ public class Links {
     public static String shorten(String uri) {
         Components comp = parse(uri);
         if (comp == null)
-            return null;
+            return uri;
         StringBuilder builder = new StringBuilder();
         builder.append(comp.type);
         builder.append("/");
