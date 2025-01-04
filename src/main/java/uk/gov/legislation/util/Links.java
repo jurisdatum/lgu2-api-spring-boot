@@ -34,14 +34,14 @@ public class Links {
         final int number = Integer.parseInt(matcher.group(3));
         link = link.substring(matcher.end());
 
-        if (link.isBlank())
+        if (link.isEmpty())
             return new Components(type, year, number, Optional.empty(), Optional.empty());
 
         String[] split = link.split("/");
         if (split.length == 0)
             throw new IllegalStateException(link);
 
-        if (split[split.length - 1].equals("revision"))  // ToDo: this might no longer be necessary?
+        if (split[split.length - 1].equals("revision"))  // this might no longer be necessary?
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
             return new Components(type, year, number, Optional.empty(), Optional.empty());
