@@ -6,6 +6,9 @@ import java.util.stream.Collectors;
 
 public class Cites {
 
+    public static String make(String type, int year, int number) {
+        return make(Types.get(type), year, number, Collections.emptyList());
+    }
     public static String make(String type, int year, int number, Collection<? extends AltNumber> altNumbers) {
         return make(Types.get(type), year, number, altNumbers);
     }

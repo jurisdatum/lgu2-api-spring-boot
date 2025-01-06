@@ -1,0 +1,177 @@
+[ {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingProvisionsText" : "reg. 30(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(b)",
+    "ref" : "regulation-30-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)",
+    "ref" : "section-91-1A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
+  "inForceDates" : [ {
+    "date" : "2020-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)",
+    "ref" : "regulation-1-2",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : false,
+  "type" : "words substituted",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingProvisionsText" : "reg. 30(2)(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(a)",
+    "ref" : "regulation-30-2-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "s. 91(1A)(e)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 91(1A)(e)",
+    "ref" : "section-91-1A-e",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
+  "inForceDates" : [ {
+    "date" : "2020-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)",
+    "ref" : "regulation-1-2",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingProvisionsText" : "s. 79(4)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 79(4)",
+    "ref" : "section-79-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : null,
+    "applied" : false,
+    "prospective" : true,
+    "qualification" : "with effect in accordance with"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 94(3)",
+    "ref" : "section-94-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingProvisionsText" : "s. 81(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 81(10)",
+    "ref" : "section-81-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : null,
+    "applied" : false,
+    "prospective" : true,
+    "qualification" : "with effect in accordance with"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 94(3)",
+    "ref" : "section-94-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3",
+    "error" : null,
+    "missing" : false
+  } ]
+} ]

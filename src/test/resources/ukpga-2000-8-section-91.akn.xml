@@ -1,0 +1,1346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="ukpga">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ukpga/2000/8"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ukpga/2000/8"/>
+               <FRBRdate date="2000-06-14" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="8"/>
+               <FRBRname value="2000 c. 8"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga/2000/8/2024-11-22"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga/2000/8/2024-11-22"/>
+               <FRBRdate date="2024-11-22" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga/2000/8/2024-11-22/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga/2000/8/2024-11-22/data.akn"/>
+               <FRBRdate date="2024-12-19-05:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2000-06-14" eId="date-enacted" source="#"/>
+            <eventRef date="2024-01-30" eId="date-2024-01-30" source="#"/>
+            <eventRef date="2024-11-22" eId="date-2024-11-22" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#part-VI" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#part-VI-crossheading-penalties" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#section-91" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2024-11-22" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2024-11-22" type="jurisdiction"/>
+               <restriction href="#part-VI" refersTo="#period-from-2024-01-30" type="jurisdiction"/>
+               <restriction href="#part-VI-crossheading-penalties" refersTo="#period-from-2024-01-30" type="jurisdiction"/>
+               <restriction href="#section-91" refersTo="#period-from-2024-01-30" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#section-91" refersTo="#c2075659"/>
+               <uk:commentary href="#section-91" refersTo="#c2075363"/>
+               <uk:commentary href="#section-91" refersTo="#c2076430"/>
+               <uk:commentary href="#section-91" refersTo="#key-9927ca5530fa26b483ba2aa61ac1396f"/>
+               <uk:commentary href="#section-91" refersTo="#key-3b0b778955a5106ceae95b7f360b5477"/>
+               <uk:commentary href="#section-91" refersTo="#c2075642"/>
+               <uk:commentary href="#section-91" refersTo="#key-85f6cff819aaa17a73f223224991dd4a"/>
+               <uk:commentary href="#section-91" refersTo="#key-a8e1b0bd9a38d1a4c85f6dd7d76274d8"/>
+               <uk:commentary href="#section-91" refersTo="#key-c171a4448b9cd91a4a4aecebff1b3e18"/>
+               <uk:commentary href="#section-91" refersTo="#key-5e7eb91f3f5f6e1bc8323b2d4b364dad"/>
+               <uk:commentary href="#section-91" refersTo="#c2076432"/>
+               <uk:commentary href="#section-91" refersTo="#key-1213410748182873a865ee673a7305de"/>
+               <uk:commentary href="#section-91" refersTo="#c2075644"/>
+               <uk:commentary href="#section-91" refersTo="#c2076438"/>
+               <uk:commentary href="#section-91" refersTo="#key-9347bfc126a77137db13693982c2440e"/>
+               <uk:commentary href="#section-91" refersTo="#key-bf7813dca13818bd9bd01642f856ffa8"/>
+               <uk:commentary href="#section-91" refersTo="#key-51374a2090f3db888ffe88e4018f3fbf"/>
+               <uk:commentary href="#section-91" refersTo="#c2075648"/>
+               <uk:commentary href="#section-91" refersTo="#c2075653"/>
+               <uk:commentary href="#section-91" refersTo="#c2075655"/>
+               <uk:commentary href="#section-91" refersTo="#key-46e5047e93c3ecb4aa2444ed02e4dbaf"/>
+               <uk:commentary href="#section-91" refersTo="#c1709270"/>
+               <uk:commentary href="#section-91" refersTo="#key-5da925aab5c742f321a1d154b853d2bd"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2024-01-30">
+               <timeInterval start="#date-2024-01-30" refersTo="#"/>
+            </temporalGroup>
+            <temporalGroup eId="period-from-2024-11-22">
+               <timeInterval start="#date-2024-11-22" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e+w+s+ni" href="" showAs="E+W+S+N.I."/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075659" marker="F1">
+               <p>S. 91 heading substituted (1.7.2005) by <ref eId="c02257" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02258" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02259" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/4">Sch. 1 para. 7(4)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075363" marker="F2">
+               <p>S. 91(1)(2) substituted (1.7.2005) by <ref eId="c02261" href="http://www.legislation.gov.uk/id/uksi/2005/381">The Financial Services and Markets Act 2000 (Market Abuse) Regulations 2005 (S.I. 2005/381)</ref>, <ref eId="c02262" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/381/regulation/1/2">regs. 1(2)</ref>, <ref eId="c02263" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/381/regulation/4">4</ref>, <ref eId="c02264" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/381/schedule/1/paragraph/4">Sch. 1 para. 4</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2076430" marker="F3">
+               <p>S. 91(1)(1ZA) substituted for s. 91(1) (8.11.2006) by <ref eId="c02266" href="http://www.legislation.gov.uk/id/ukpga/2006/46">Companies Act 2006 (c. 46)</ref>, <ref eId="c02267" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1272">ss. 1272</ref>, <ref eId="c02268" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1300/1/a">1300(1)(a)</ref>, <ref eId="c02269" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/2006/46/schedule/15/paragraph/6/2">Sch. 15 para. 6(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-9927ca5530fa26b483ba2aa61ac1396f" marker="F4">
+               <p>Words in ss. 89A-97 substituted (24.1.2013 for specified purposes, 1.4.2013 in so far as not already in force) by <ref eId="ctoerfns2-19004" href="http://www.legislation.gov.uk/id/ukpga/2012/21">Financial Services Act 2012 (c. 21)</ref>, <ref eId="ctoerfns2-19005" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/2012/21/section">ss.</ref>
+                  <ref eId="ctoerfns2-19006" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/21/section/16/3/g">16(2)(3)(g)</ref>, <ref eId="ctoerfns2-19007" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/21/section/122/3">122(3)</ref> (with <ref eId="ctoerfns2-19008" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/21/schedule/20">Sch. 20</ref>); <ref eId="ctoerfns2-19009" href="http://www.legislation.gov.uk/id/uksi/2013/113">S.I. 2013/113</ref>, <ref eId="ctoerfns2-19010" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/113/article/2/1/c">art. 2(1)(c)</ref>, <ref eId="ctoerfns2-19011" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/113/schedule/part/3">Sch. Pt. 3</ref>; <ref eId="ctoerfns2-19012" href="http://www.legislation.gov.uk/id/uksi/2013/423">S.I. 2013/423</ref>, <ref eId="ctoerfns2-19013" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/423/article/3">art. 3</ref>, <ref eId="ctoerfns2-19014" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/423/schedule">Sch.</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-3b0b778955a5106ceae95b7f360b5477" marker="F5">
+               <p>S. 91(1ZA) omitted (3.7.2016) by virtue of <ref eId="cewotdcg3-00014" href="http://www.legislation.gov.uk/id/uksi/2016/680">The Financial Services and Markets Act 2000 (Market Abuse) Regulations 2016 (S.I. 2016/680)</ref>, <ref eId="cewotdcg3-00015" class="subref" href="http://www.legislation.gov.uk/id/uksi/2016/680/regulation/1">regs. 1</ref>, <ref eId="cewotdcg3-00016" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2016/680/regulation/8/3/a">8(3)(a)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075642" marker="F6">
+               <p>S. 91(1A) inserted (1.7.2005) by <ref eId="c02271" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02272" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02273" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/2">Sch. 1 para. 7(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-85f6cff819aaa17a73f223224991dd4a" marker="F7">
+               <p>S. 91(1A) omitted (30.1.2024 for specified purposes) by virtue of <ref eId="ca6md6gt5-00005" href="http://www.legislation.gov.uk/id/uksi/2024/105">The Public Offers and Admissions to Trading Regulations 2024 (S.I. 2024/105)</ref>, <ref eId="ca6md6gt5-00006" class="subref" href="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/2/2">reg. 2(2)</ref>
+                  <ref eId="ca6md6gt5-00007" class="subref" href="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/2/3">(3)</ref>, <ref eId="ca6md6gt5-00008" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2024/105/schedule/3/paragraph/9/2">Sch. 3 para. 9(2)</ref> (with <rref eId="ca6md6gt5-00009" class="subref" from="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/48" upTo="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/50" ukl:CitationRef="ca6md6gt5-00005">regs. 48-50</rref>)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-a8e1b0bd9a38d1a4c85f6dd7d76274d8" marker="F8">
+               <p>Words in s. 91(1A)(e) substituted (21.7.2019) by <ref eId="cluuq4de3-00027" href="http://www.legislation.gov.uk/id/uksi/2019/1043">The Financial Services and Markets Act 2000 (Prospectus) Regulations 2019 (S.I. 2019/1043)</ref>, <ref eId="cluuq4de3-00028" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/1/1">regs. 1(1)</ref>, <ref eId="cluuq4de3-00029" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/26/2/a">26(2)(a)</ref> (with <ref eId="cluuq4de3-00030" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/40">reg. 40</ref>)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-c171a4448b9cd91a4a4aecebff1b3e18" marker="F9">
+               <p>Words in s. 91(1A) substituted (21.7.2019) by <ref eId="cluuq4de3-00007" href="http://www.legislation.gov.uk/id/uksi/2019/1043">The Financial Services and Markets Act 2000 (Prospectus) Regulations 2019 (S.I. 2019/1043)</ref>, <ref eId="cluuq4de3-00008" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/1/1">regs. 1(1)</ref>, <ref eId="cluuq4de3-00009" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/26/2/b/i">26(2)(b)(i)</ref> (with <ref eId="cluuq4de3-00010" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/40">reg. 40</ref>)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-5e7eb91f3f5f6e1bc8323b2d4b364dad" marker="F10">
+               <p>Words in s. 91(1A) substituted (21.7.2019) by <ref eId="cluuq4de3-00017" href="http://www.legislation.gov.uk/id/uksi/2019/1043">The Financial Services and Markets Act 2000 (Prospectus) Regulations 2019 (S.I. 2019/1043)</ref>, <ref eId="cluuq4de3-00018" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/1/1">regs. 1(1)</ref>, <ref eId="cluuq4de3-00019" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/26/2/b/ii">26(2)(b)(ii)</ref> (with <ref eId="cluuq4de3-00020" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1043/regulation/40">reg. 40</ref>)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2076432" marker="F11">
+               <p>S. 91(1B) inserted (8.11.2006) by <ref eId="c02275" href="http://www.legislation.gov.uk/id/ukpga/2006/46">Companies Act 2006 (c. 46)</ref>, <ref eId="c02276" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1272">ss. 1272</ref>, <ref eId="c02277" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1300/1/a">1300(1)(a)</ref>, <ref eId="c02278" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/2006/46/schedule/15/paragraph/6/3">Sch. 15 para. 6(3)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-1213410748182873a865ee673a7305de" marker="F12">
+               <p>Words in s. 91(1B)(a)(i) substituted (31.12.2020) by <ref eId="c8isvp234-00007" href="http://www.legislation.gov.uk/id/uksi/2019/707">The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019 (S.I. 2019/707)</ref>, <ref eId="c8isvp234-00008" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">regs. 1(2)</ref>, <ref eId="c8isvp234-00009" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/3">30(3)</ref> (with savings in <ref eId="c8isvp234-00010" href="http://www.legislation.gov.uk/id/uksi/2019/680">S.I. 2019/680</ref>, <ref eId="c8isvp234-00011" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/680/regulation/11">reg. 11</ref> (as amended by <ref eId="c8isvp234-00012" href="http://www.legislation.gov.uk/id/uksi/2019/1234">S.I. 2019/1234</ref>, <ref eId="c8isvp234-00013" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1234/regulation/1/3">regs. 1(3)</ref>, <ref eId="c8isvp234-00014" class="subref" href="http://www.legislation.gov.uk/id/uksi/2019/1234/regulation/29/2">29(2)</ref>)); <ref eId="c8isvp234-00015" href="http://www.legislation.gov.uk/id/ukpga/2020/1">2020 c. 1</ref>, <ref eId="c8isvp234-00016" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2020/1/schedule/5/paragraph/1/1">Sch. 5 para. 1(1)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075644" marker="F13">
+               <p>Words in s. 91(2) substituted (1.7.2005) by <ref eId="c02280" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02281" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02282" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/3/a">Sch. 1 para. 7(3)(a)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2076438" marker="F14">
+               <p>Words in s. 91(2) substituted (8.11.2006) by <ref eId="c02284" href="http://www.legislation.gov.uk/id/ukpga/2006/46">Companies Act 2006 (c. 46)</ref>, <ref eId="c02285" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1272">ss. 1272</ref>, <ref eId="c02286" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2006/46/section/1300/1/a">1300(1)(a)</ref>, <ref eId="c02287" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/2006/46/schedule/15/paragraph/6/4">Sch. 15 para. 6(4)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-9347bfc126a77137db13693982c2440e" marker="F15">
+               <p>Word in s. 91(2) omitted (3.7.2016) by virtue of <ref eId="cewotdcg3-00007" href="http://www.legislation.gov.uk/id/uksi/2016/680">The Financial Services and Markets Act 2000 (Market Abuse) Regulations 2016 (S.I. 2016/680)</ref>, <ref eId="cewotdcg3-00008" class="subref" href="http://www.legislation.gov.uk/id/uksi/2016/680/regulation/1">regs. 1</ref>, <ref eId="cewotdcg3-00009" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2016/680/regulation/8/3/b">8(3)(b)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-bf7813dca13818bd9bd01642f856ffa8" marker="F16">
+               <p>Word in s. 91(2) omitted (30.1.2024 for specified purposes) by virtue of <ref eId="ca6md6gt5-00016" href="http://www.legislation.gov.uk/id/uksi/2024/105">The Public Offers and Admissions to Trading Regulations 2024 (S.I. 2024/105)</ref>, <ref eId="ca6md6gt5-00017" class="subref" href="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/2/2">reg. 2(2)</ref>
+                  <ref eId="ca6md6gt5-00018" class="subref" href="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/2/3">(3)</ref>, <ref eId="ca6md6gt5-00019" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2024/105/schedule/3/paragraph/9/3">Sch. 3 para. 9(3)</ref> (with <rref eId="ca6md6gt5-00020" class="subref" from="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/48" upTo="http://www.legislation.gov.uk/id/uksi/2024/105/regulation/50" ukl:CitationRef="ca6md6gt5-00016">regs. 48-50</rref>)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-51374a2090f3db888ffe88e4018f3fbf" marker="F17">
+               <p>Words in s. 91(2) substituted (26.11.2015) by <ref eId="c5v1m1lf3-00017" href="http://www.legislation.gov.uk/id/uksi/2015/1755">The Transparency Regulations 2015 (S.I. 2015/1755)</ref>, <ref eId="c5v1m1lf3-00018" class="subref" href="http://www.legislation.gov.uk/id/uksi/2015/1755/regulation/1/3">regs. 1(3)</ref>, <ref eId="c5v1m1lf3-00019" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2015/1755/regulation/4/2/a">4(2)(a)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075648" marker="F18">
+               <p>Words in s. 91(2) substituted (1.7.2005) by <ref eId="c02289" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02290" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02291" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/3/b">Sch. 1 para. 7(3)(b)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075653" marker="F19">
+               <p>Words in s. 91(2) substituted (1.7.2005) by <ref eId="c02293" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02294" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02295" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/3/c">Sch. 1 para. 7(3)(c)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c2075655" marker="F20">
+               <p>Word in s. 91(2) substituted (1.7.2005) by <ref eId="c02297" href="http://www.legislation.gov.uk/id/uksi/2005/1433">The Prospectus Regulations 2005 (S.I. 2005/1433)</ref>, <ref eId="c02298" class="subref" href="http://www.legislation.gov.uk/id/uksi/2005/1433/regulation/2/1">reg. 2(1)</ref>, <ref eId="c02299" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2005/1433/schedule/1/paragraph/7/3/d">Sch. 1 para. 7(3)(d)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-46e5047e93c3ecb4aa2444ed02e4dbaf" marker="F21">
+               <p>S. 91(2A)(2B) inserted (26.11.2015) by <ref eId="c5v1m1lf3-00008" href="http://www.legislation.gov.uk/id/uksi/2015/1755">The Transparency Regulations 2015 (S.I. 2015/1755)</ref>, <ref eId="c5v1m1lf3-00009" class="subref" href="http://www.legislation.gov.uk/id/uksi/2015/1755/regulation/1/3">regs. 1(3)</ref>, <ref eId="c5v1m1lf3-00010" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2015/1755/regulation/4/2/b">4(2)(b)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="key-5da925aab5c742f321a1d154b853d2bd" marker="F22">
+               <p>Words in s. 91(6) substituted (1.4.2013) by <ref eId="cucj1xfo2-00007" href="http://www.legislation.gov.uk/id/ukpga/2012/21">Financial Services Act 2012 (c. 21)</ref>, <ref eId="cucj1xfo2-00008" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/2012/21/section/20">ss. 20</ref>, <ref eId="cucj1xfo2-00009" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/21/section/122/3">122(3)</ref> (with <ref eId="cucj1xfo2-00010" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/21/schedule/20">Sch. 20</ref>); <ref eId="cucj1xfo2-00011" href="http://www.legislation.gov.uk/id/uksi/2013/423">S.I. 2013/423</ref>, <ref eId="cucj1xfo2-00012" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/423/article/3">art. 3</ref>, <ref eId="cucj1xfo2-00013" class="subref" href="http://www.legislation.gov.uk/id/uksi/2013/423/schedule">Sch.</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c1709270" marker="C1">
+               <p>S. 91(6)(7) applied (with modifications) (1.12.2001) by <ref eId="c02301" href="http://www.legislation.gov.uk/id/uksi/2001/2957">S.I. 2001/2957</ref>, <ref eId="c02302" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2001/2957/article/1">arts. 1</ref>, <rref eId="c02303" class="subref" from="http://www.legislation.gov.uk/id/uksi/2001/2957/article/11/4" upTo="http://www.legislation.gov.uk/id/uksi/2001/2957/article/11/6" ukl:CitationRef="c02301">11(4)-(6)</rref>; <ref eId="c02304" href="http://www.legislation.gov.uk/id/uksi/2001/3538">S.I. 2001/3538</ref>, <ref eId="c02305" class="subref operative" href="http://www.legislation.gov.uk/id/uksi/2001/3538/article/2/1">art. 2(1)</ref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/ukpga/2000/8/section/91</dc:identifier>
+            <dc:title>Financial Services and Markets Act 2000</dc:title>
+            <dc:description>An Act to make provision about the regulation of financial services and markets; to provide for the transfer of certain statutory functions relating to building societies, friendly societies, industrial and provident societies and certain other mutual societies; and for connected purposes.</dc:description>
+            <dc:date>2000-06-15</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2024-12-06</dc:modified>
+            <dc:contributor>Expert Participation</dc:contributor>
+            <dct:valid>2024-11-22</dct:valid>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="self" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.xml" type="application/xml"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2000/8/resources" title="More Resources"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/notes" title="Explanatory Notes"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/ukpga/2000/8/notes/contents" title="Explanatory Notes Table of Contents"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2000/8" title="whole act"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2000/8/introduction" title="introduction"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2000/8/body" title="body"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukpga/2000/8/schedules" title="schedules"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.rdf" title="RDF/XML"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.akn" title="AKN"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.xht" title="HTML snippet"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.htm" title="Website (XHTML) Default View"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.csv" title="CSV"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.pdf" title="PDF"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.html" title="HTML5 snippet"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2000/8/contents" title="Table of Contents"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/replaces" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2020-12-31" title="2020-12-31"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/enacted" title="enacted"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2001-12-01" title="2001-12-01"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2005-07-01" title="2005-07-01"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2006-11-08" title="2006-11-08"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2013-04-01" title="2013-04-01"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2015-11-26" title="2015-11-26"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2016-07-03" title="2016-07-03"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2019-07-21" title="2019-07-21"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2020-12-31" title="2020-12-31"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2024-01-30" title="2024-01-30"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="up" href="http://www.legislation.gov.uk/ukpga/2000/8" title="Entire legislation"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="prev" href="http://www.legislation.gov.uk/ukpga/2000/8/section/90B" title="Provision; Section 90B"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="prevInForce" href="http://www.legislation.gov.uk/ukpga/2000/8/section/90B" title="Provision; Section 90B"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="next" href="http://www.legislation.gov.uk/ukpga/2000/8/section/92" title="Provision; Section 92"/>
+            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="nextInForce" href="http://www.legislation.gov.uk/ukpga/2000/8/section/92" title="Provision; Section 92"/>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomPublicGeneralAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2000"/>
+               <ukm:Number Value="8"/>
+               <ukm:EnactmentDate Date="2000-06-14"/>
+               <ukm:ISBN Value="010540800X"/>
+               <ukm:UnappliedEffects>
+                  <ukm:UnappliedEffect AffectedNumber="8" URI="http://www.legislation.gov.uk/id/effect/key-875cc899be978a92b596eb35963a5fdf" AffectingProvisions="reg. 8(9)" EffectId="key-875cc899be978a92b596eb35963a5fdf" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Row="44" RequiresApplied="false" AffectingYear="2019" AffectingNumber="707" AppendedCommentary="(with savings in S.I. 2019/680, reg. 11 (as amended by S.I. 2019/1234, regs. 1(3), 29(2))); 2020 c. 1, Sch. 5 para. 1(1)" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedExtent="E+W+S+N.I." AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707" Notes="This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)" AffectingClass="UnitedKingdomStatutoryInstrument" AffectedYear="2000" Modified="2022-01-20T13:03:31Z" Comments="IP completion day" Type="inserted" AffectingEffectsExtent="E+W+S+N.I." AffectedProvisions="s. 86(9A)">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-86-9A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/86/9A" FoundRef="section-86">s. 86(9A)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-8-9" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/8/9">reg. 8(9)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">reg. 1(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707" AffectedYear="2000" AffectedNumber="8" AffectedExtent="E+W+S+N.I." Modified="2022-01-20T13:03:31Z" AffectingEffectsExtent="E+W+S+N.I." AffectedClass="UnitedKingdomPublicGeneralAct" Comments="IP completion day" AppendedCommentary="(with savings in S.I. 2019/680, reg. 11 (as amended by S.I. 2019/1234, regs. 1(3), 29(2))); 2020 c. 1, Sch. 5 para. 1(1)" AffectingClass="UnitedKingdomStatutoryInstrument" Row="49" AffectingNumber="707" URI="http://www.legislation.gov.uk/id/effect/key-62f9ebcef830ae282962af1b813987d9" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingYear="2019" Notes="This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)" RequiresApplied="false" AffectingProvisions="reg. 10(5)" AffectedProvisions="s. 87A(11)" EffectId="key-62f9ebcef830ae282962af1b813987d9" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" Type="inserted">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-87A-11" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/87A/11" FoundRef="section-87A">s. 87A(11)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-10-5" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/10/5">reg. 10(5)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">reg. 1(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-e94fd82d7ebd04b9c7170c141f20c314" Modified="2022-01-20T13:03:31Z" AffectedExtent="E+W+S+N.I." AffectingClass="UnitedKingdomStatutoryInstrument" AffectingNumber="707" AffectingProvisions="reg. 30(2)(b)" AffectingEffectsExtent="E+W+S+N.I." AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707" AffectingYear="2019" Notes="This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17" Row="58" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Comments="IP completion day" RequiresApplied="false" AffectedNumber="8" Type="words substituted" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedYear="2000" AffectedClass="UnitedKingdomPublicGeneralAct" AppendedCommentary="(with savings in S.I. 2019/680, reg. 11 (as amended by S.I. 2019/1234, regs. 1(3), 29(2))); 2020 c. 1, Sch. 5 para. 1(1)" AffectedProvisions="s. 91(1A)" EffectId="key-e94fd82d7ebd04b9c7170c141f20c314">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-91-1A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A">s. 91(1A)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-30-2-b" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b">reg. 30(2)(b)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">reg. 1(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedProvisions="s. 91(1A)(e)" URI="http://www.legislation.gov.uk/id/effect/key-88a5235d47a1f9dff629be79e310f19d" AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707" RequiresApplied="false" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Row="59" Notes="This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17" Comments="IP completion day" AppendedCommentary="(with savings in S.I. 2019/680, reg. 11 (as amended by S.I. 2019/1234, regs. 1(3), 29(2))); 2020 c. 1, Sch. 5 para. 1(1)" AffectedYear="2000" AffectingClass="UnitedKingdomStatutoryInstrument" EffectId="key-88a5235d47a1f9dff629be79e310f19d" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingNumber="707" AffectingProvisions="reg. 30(2)(a)" Modified="2022-01-20T13:03:31Z" AffectingEffectsExtent="E+W+S+N.I." Type="words substituted" AffectedExtent="E+W+S+N.I." AffectingYear="2019" AffectedNumber="8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-91-1A-e" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e">s. 91(1A)(e)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-30-2-a" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a">reg. 30(2)(a)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">reg. 1(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Modified="2022-01-20T13:03:31Z" AffectingYear="2019" AffectedProvisions="s. 124(10)(c)(i)" AppendedCommentary="2020 c. 1, Sch. 5 para. 1(1)" Row="68" RequiresApplied="false" AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/310" URI="http://www.legislation.gov.uk/id/effect/key-f22c04ada6692c04c5853c1b3ce00f60" AffectingNumber="310" Type="word omitted" AffectedNumber="8" Notes="This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)" AffectedYear="2000" AffectingClass="UnitedKingdomStatutoryInstrument" AffectingEffectsExtent="E+W+S+N.I." AffectedExtent="E+W+S+N.I." AffectedClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Comments="IP completion day" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectingProvisions="reg. 5(11)(b)" EffectId="key-f22c04ada6692c04c5853c1b3ce00f60">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-124-10-c-i" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/124/10/c/i" FoundRef="section-124">s. 124(10)(c)(i)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-5-11-b" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/11/b">reg. 5(11)(b)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-3" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3">reg. 1(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedProvisions="s. 129(7)(a)" Type="word inserted" AffectingYear="2019" AffectingClass="UnitedKingdomStatutoryInstrument" Comments="IP completion day" AppendedCommentary="2020 c. 1, Sch. 5 para. 1(1)" AffectedYear="2000" AffectingEffectsExtent="E+W+S+N.I." AffectedNumber="8" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingProvisions="reg. 5(12)(a)(i)" AffectedExtent="E+W+S+N.I." RequiresApplied="false" Notes="This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)" EffectId="key-1b6544d7af86f0dee5166b56c2d79ff3" AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/310" URI="http://www.legislation.gov.uk/id/effect/key-1b6544d7af86f0dee5166b56c2d79ff3" AffectingNumber="310" Modified="2022-01-20T13:03:31Z" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" Row="69">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-129-7-a" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/a" FoundRef="section-129">s. 129(7)(a)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-5-12-a-i" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/i">reg. 5(12)(a)(i)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-3" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3">reg. 1(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Modified="2022-01-20T13:03:31Z" AffectingYear="2019" URI="http://www.legislation.gov.uk/id/effect/key-9f4d2636661658e584be975ef736bdfb" Type="omitted and word" AffectedExtent="E+W+S+N.I." Notes="This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)" RequiresApplied="false" AffectedNumber="8" AffectingEffectsExtent="E+W+S+N.I." AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/310" AffectingNumber="310" AffectedYear="2000" AffectedProvisions="s. 129(7)(c)" AffectingClass="UnitedKingdomStatutoryInstrument" Comments="IP completion day" AffectingProvisions="reg. 5(12)(a)(ii)" Row="70" AffectedClass="UnitedKingdomPublicGeneralAct" EffectId="key-9f4d2636661658e584be975ef736bdfb" AppendedCommentary="2020 c. 1, Sch. 5 para. 1(1)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-129-7-c" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/c" FoundRef="section-129">s. 129(7)(c)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-5-12-a-ii" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/ii">reg. 5(12)(a)(ii)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-3" URI="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3">reg. 1(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Type="inserted" AffectingEffectsExtent="E+W+S+N.I." Modified="2022-01-20T13:03:31Z" AffectedNumber="8" Row="180" AffectedExtent="E+W+S+N.I." AppendedCommentary="(with savings in S.I. 2019/680, reg. 11 (as amended by S.I. 2019/1234, regs. 1(3), 29(2))); 2020 c. 1, Sch. 5 para. 1(1)" URI="http://www.legislation.gov.uk/id/effect/key-a5848184868fb09bd796f96db116dad6" AffectingClass="UnitedKingdomStatutoryInstrument" AffectedProvisions="Sch. 11A para. 5(3)" Comments="IP completion day" RequiresApplied="false" AffectedYear="2000" AffectingYear="2019" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/707" AffectedClass="UnitedKingdomPublicGeneralAct" EffectId="key-a5848184868fb09bd796f96db116dad6" Notes="This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20" AffectingProvisions="reg. 38(5)(b)" AffectingNumber="707" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="schedule-11A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/11A">Sch. 11A </ukm:Section>
+                        <ukm:Section Ref="schedule-11A-paragraph-5-3" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/11A/paragraph/5/3" FoundRef="schedule-11A-paragraph-5">para. 5(3)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-38-5-b" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b">reg. 38(5)(b)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2">reg. 1(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Type="words substituted" AffectingClass="UnitedKingdomStatutoryInstrument" URI="http://www.legislation.gov.uk/id/effect/key-939a37929efc4d8ee2527c61acc808b2" AppendedCommentary="(with savings in S.I. 2019/680, reg. 11); 2020 c. 1, Sch. 5 para. 1(1)" AffectingYear="2019" RequiresApplied="false" AffectedYear="2000" AffectingProvisions="reg. 13(1)" AffectedNumber="8" AffectingNumber="662" AffectedClass="UnitedKingdomPublicGeneralAct" Modified="2022-01-20T13:03:31Z" EffectId="key-939a37929efc4d8ee2527c61acc808b2" AffectingURI="http://www.legislation.gov.uk/id/uksi/2019/662" AffectedExtent="E+W+S+N.I." AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectingEffectsExtent="E+W+S+N.I." Comments="IP completion day" Row="188" Notes="This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)" AffectedProvisions="Sch. 17A para. 12">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-17A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/17A" err:Ref="Section missing in legislation" Missing="true">Sch. 17A </ukm:Section>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-17A-paragraph-12" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/17A/paragraph/12" err:Ref="Section missing in legislation" Missing="true">para. 12</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Investment Exchanges, Clearing Houses and Central Securities Depositories (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-13-1" URI="http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1">reg. 13(1)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-3" URI="http://www.legislation.gov.uk/id/uksi/2019/662/regulation/1/3">reg. 1(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2020-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Type="inserted" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2023/29" AffectedProvisions="Sch. 2A para. 19(2)(b)(iia)" AffectingEffectsExtent="E+W+S+N.I." URI="http://www.legislation.gov.uk/id/effect/key-abb334800fe3123a9c453d646a5962c5" EffectId="key-abb334800fe3123a9c453d646a5962c5" AffectedYear="2000" AffectingYear="2023" AffectingProvisions="Sch. 10 para. 19(a)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedNumber="8" Row="2570" RequiresApplied="false" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingNumber="29" Modified="2024-11-05T10:37:54Z">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="schedule-2A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A">Sch. 2A </ukm:Section>
+                        <ukm:Section Ref="schedule-2A-paragraph-19-2-b" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A/paragraph/19/2/b">para. 19(2)(b)</ukm:Section>
+                        <ukm:Section Ref="schedule-2A-paragraph-19-2-iia" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A/paragraph/19/2/iia" FoundRef="schedule-2A-paragraph-19">(iia)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services and Markets Act 2023</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-10" URI="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10">Sch. 10 </ukm:Section>
+                        <ukm:Section Ref="schedule-10-paragraph-19-a" URI="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a">para. 19(a)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-86-1-e" URI="http://www.legislation.gov.uk/id/ukpga/2023/29/section/86/1/e">s. 86(1)(e)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Date="2023-06-29" Qualification="for specified purposes"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-9f40eff4aabeafb17afaec32bf3adb5c" AffectedClass="UnitedKingdomPublicGeneralAct" Type="inserted" AffectedNumber="8" AffectingNumber="14" EffectId="key-9f40eff4aabeafb17afaec32bf3adb5c" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedExtent="E+W+S+N.I." AffectingProvisions="s. 30(3)" AffectedProvisions="Pt. 20C" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingYear="2016" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2016/14" AffectedYear="2000" AppendedCommentary="(as amended (26.6.2017) by S.I. 2017/692, reg. 1(2), Sch. 7 para. 3 (with regs. 8, 15, 36(2))" Row="68" Modified="2022-02-02T20:32:30Z" Comments="Contains power; Before the prosp insertion of Pt. 20C comes into force, Pt. 20C heading and s. 333U are amended on 26.6.2017 by 2017 SI0692, reg. 36(2) and Sch. 7 para. 3. Please ensure these amendments are carried through into Pt. 20C when it is eventually brought into force: “(3) For the heading of Part 20C (as inserted by the Bank of England and Financial Services Act 2016), substitute “Politically exposed persons: money laundering and terrorist financing”. (4) In section 333U (guidance relating to money laundering and politically exposed persons)— (a) in the heading, after “Money laundering” insert “and terrorist financing”; and (b) in subsection (3)— (i) for “Secretary of State” substitute “Treasury”; and (ii) in paragraph (b), after “by the FCA” insert “or under the ombudsman scheme”." AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" RequiresApplied="true">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="part-20C" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/part/20C" err:Ref="Section missing in legislation" Missing="true">Pt. 20C</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Bank of England and Financial Services Act 2016</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-30-3" URI="http://www.legislation.gov.uk/id/ukpga/2016/14/section/30/3">s. 30(3)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-41-3" URI="http://www.legislation.gov.uk/id/ukpga/2016/14/section/41/3">s. 41(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingYear="2021" EffectId="key-6ca6fc8c64f818e454714c91e07697f2" Row="169" AffectingProvisions="s. 23(10)" AffectedNumber="8" AffectedProvisions="Sch. 2A 2B" AffectedYear="2000" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingNumber="22" URI="http://www.legislation.gov.uk/id/effect/key-6ca6fc8c64f818e454714c91e07697f2" AffectedClass="UnitedKingdomPublicGeneralAct" Modified="2022-01-20T13:03:31Z" AffectingEffectsExtent="E+W+S+N.I." RequiresApplied="true" Type="power to apply (with modifications) conferred" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-2A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A" err:Ref="Section missing in legislation" Missing="true">Sch. 2A</ukm:Section>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-2B" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B" err:Ref="Section missing in legislation" Missing="true">2B</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-23-10" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10">s. 23(10)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect RequiresApplied="true" AffectedYear="2000" EffectId="key-0140b0bab4e2adf4d449c7fca67df6a1" AffectingYear="2021" AffectingProvisions="s. 22(2)" AffectingNumber="22" Modified="2023-08-29T11:14:38Z" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingClass="UnitedKingdomPublicGeneralAct" Type="inserted" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingEffectsExtent="E+W+S+N.I." AffectedNumber="8" URI="http://www.legislation.gov.uk/id/effect/key-0140b0bab4e2adf4d449c7fca67df6a1" AffectedProvisions="s. 31(1)(aa)" Row="55">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-31-1-aa" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/31/1/aa" FoundRef="section-31">s. 31(1)(aa)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-22-2" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/2">s. 22(2)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedYear="2000" AffectingEffectsExtent="E+W+S+N.I." EffectId="key-2c60a029232f828b8c5dbdfba9c798fd" AffectedNumber="8" AffectingProvisions="s. 22(3)" AffectedProvisions="s. 32A" AffectingYear="2021" AffectingNumber="22" Modified="2023-08-29T11:14:38Z" Row="56" AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-2c60a029232f828b8c5dbdfba9c798fd" Type="inserted" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" RequiresApplied="true">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-32A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A" err:Ref="Section missing in legislation" Missing="true">s. 32A</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-22-3" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/3">s. 22(3)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingNumber="22" AffectedClass="UnitedKingdomPublicGeneralAct" Row="57" Modified="2023-08-29T11:14:38Z" AffectingEffectsExtent="E+W+S+N.I." AffectingYear="2021" URI="http://www.legislation.gov.uk/id/effect/key-e67f7d8b98a3b70a471b8a49d867eb84" RequiresApplied="true" EffectId="key-e67f7d8b98a3b70a471b8a49d867eb84" Type="inserted" AffectedNumber="8" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedProvisions="s. 36A and cross-heading" AffectingProvisions="s. 22(4)" AffectedYear="2000" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-36A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/36A" err:Ref="Section missing in legislation" Missing="true">s. 36A</ukm:Section> and cross-heading</ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-22-4" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4">s. 22(4)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" URI="http://www.legislation.gov.uk/id/effect/key-fcc0de8be4391c23dec47137ddcec2a4" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" RequiresApplied="true" Modified="2023-08-29T11:14:38Z" Row="60" AffectedYear="2000" AffectedProvisions="s. 32A" AffectingProvisions="s. 23(10)" AffectingNumber="22" Type="power to apply (with modifications) conferred" AffectingYear="2021" AffectedNumber="8" EffectId="key-fcc0de8be4391c23dec47137ddcec2a4" AffectingEffectsExtent="E+W+S+N.I." AffectingClass="UnitedKingdomPublicGeneralAct">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-32A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A" err:Ref="Section missing in legislation" Missing="true">s. 32A</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-23-10" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10">s. 23(10)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-61b01e0bec5b297c5597aa9704f371c6" RequiresApplied="true" AffectedNumber="8" AffectedClass="UnitedKingdomPublicGeneralAct" Type="power to apply (with modifications) conferred" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" EffectId="key-61b01e0bec5b297c5597aa9704f371c6" Row="61" AffectedProvisions="Sch. 2A" AffectingYear="2021" AffectingEffectsExtent="E+W+S+N.I." AffectedYear="2000" AffectingNumber="22" AffectingProvisions="s. 23(10)" AffectingClass="UnitedKingdomPublicGeneralAct" Modified="2023-08-29T11:14:38Z">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-2A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A" err:Ref="Section missing in legislation" Missing="true">Sch. 2A</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-23-10" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10">s. 23(10)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedNumber="8" AffectedYear="2000" AffectingYear="2021" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingEffectsExtent="E+W+S+N.I." RequiresApplied="true" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectedProvisions="Sch. 2B" Type="power to apply (with modifications) conferred" Modified="2023-08-29T11:14:38Z" AffectingNumber="22" EffectId="key-aac44921d3994325926d8f41aeb37761" URI="http://www.legislation.gov.uk/id/effect/key-aac44921d3994325926d8f41aeb37761" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedClass="UnitedKingdomPublicGeneralAct" Row="62" AffectingProvisions="s. 23(10)">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-2B" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B" err:Ref="Section missing in legislation" Missing="true">Sch. 2B</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-23-10" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10">s. 23(10)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedYear="2000" Modified="2023-08-29T11:14:38Z" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingNumber="22" RequiresApplied="true" AffectingProvisions="Sch. 7" EffectId="key-146b1815125d882430250621162b81da" AffectingYear="2021" AffectedNumber="8" AffectedProvisions="Sch. 2B" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingEffectsExtent="E+W+S+N.I." URI="http://www.legislation.gov.uk/id/effect/key-146b1815125d882430250621162b81da" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Type="inserted" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" Row="415">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="schedule-2B" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B" err:Ref="Section missing in legislation" Missing="true">Sch. 2B</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-7" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7">Sch. 7</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingYear="2021" Row="418" Modified="2023-08-29T11:14:38Z" AffectedYear="2000" AffectedProvisions="s. 71J and cross-heading" AffectingProvisions="Sch. 8 para. 4" Type="inserted" URI="http://www.legislation.gov.uk/id/effect/key-3a025cb5620dc74f1b2f670bf6408371" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" EffectId="key-3a025cb5620dc74f1b2f670bf6408371" AffectingNumber="22" RequiresApplied="true" AffectingEffectsExtent="E+W+S+N.I." AffectedNumber="8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-71J" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/71J" err:Ref="Section missing in legislation" Missing="true">s. 71J</ukm:Section> and cross-heading</ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-4" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/4">para. 4</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedNumber="8" Modified="2023-08-29T11:14:38Z" EffectId="key-3f1bd96525c93768fff2391b9658bd21" RequiresApplied="true" AffectingEffectsExtent="E+W+S+N.I." AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-3f1bd96525c93768fff2391b9658bd21" AffectedYear="2000" Row="422" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Type="inserted" AffectingNumber="22" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingYear="2021" AffectedProvisions="s. 214(5A)" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingProvisions="Sch. 8 para. 8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-214-5A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A" FoundRef="section-214">s. 214(5A)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/8">para. 8</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedProvisions="s. 367A" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingClass="UnitedKingdomPublicGeneralAct" RequiresApplied="true" AffectingNumber="22" AffectedNumber="8" AffectingEffectsExtent="E+W+S+N.I." Type="inserted" Modified="2023-08-29T11:14:38Z" AffectingProvisions="Sch. 8 para. 10" AffectedYear="2000" AffectedClass="UnitedKingdomPublicGeneralAct" Row="424" EffectId="key-6bd371d6bc6ef10b3da4519ea6aecf1b" URI="http://www.legislation.gov.uk/id/effect/key-6bd371d6bc6ef10b3da4519ea6aecf1b" AffectingYear="2021" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-367A" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A" err:Ref="Section missing in legislation" Missing="true">s. 367A</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-10" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/10">para. 10</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingEffectsExtent="E+W+S+N.I." AffectedNumber="8" AffectedYear="2000" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectedClass="UnitedKingdomPublicGeneralAct" RequiresApplied="true" URI="http://www.legislation.gov.uk/id/effect/key-a4e0c0b46392b2949d5da900239e2f19" Type="word inserted" Row="429" AffectingYear="2021" AffectingProvisions="Sch. 8 para. 12(2)(b)" AffectingNumber="22" AffectedProvisions="s. 395(13)(bc)-(be)" EffectId="key-a4e0c0b46392b2949d5da900239e2f19" Modified="2023-08-29T11:14:38Z" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingClass="UnitedKingdomPublicGeneralAct">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:SectionRange Start="section-395-13-bc" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc" End="section-395-13-be" UpTo="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be" FoundEnd="section-395" MissingEnd="true">
+                           <ukm:Section Ref="section-395-13-bc" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc">s. 395(13)(bc)</ukm:Section>-<ukm:Section Ref="section-395-13-be" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be" FoundRef="section-395">(be)</ukm:Section>
+                        </ukm:SectionRange>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-12-2-b" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b">para. 12(2)(b)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Type="inserted" AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-d25543ee0cbc0ff32265d4bd6421bf49" AffectedYear="2000" Row="432" AffectingProvisions="Sch. 8 para. 12(2)(c)" RequiresApplied="true" EffectId="key-d25543ee0cbc0ff32265d4bd6421bf49" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingYear="2021" AffectingEffectsExtent="E+W+S+N.I." Modified="2023-08-29T11:14:38Z" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedProvisions="s. 395(13)(h)(i)" AffectedNumber="8" AffectingNumber="22">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-395-13-h-i" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i" FoundRef="section-395">s. 395(13)(h)(i)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-12-2-c" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/c">para. 12(2)(c)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingProvisions="Sch. 8 para. 12(3)" AffectingNumber="22" Modified="2023-08-29T11:14:38Z" AffectedYear="2000" URI="http://www.legislation.gov.uk/id/effect/key-7ac28ab801b516daf7fa1fb9eca8a371" Row="433" AffectingEffectsExtent="E+W+S+N.I." AffectedClass="UnitedKingdomPublicGeneralAct" AffectedProvisions="s. 395(14)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedNumber="8" AffectingYear="2021" Type="inserted" RequiresApplied="true" EffectId="key-7ac28ab801b516daf7fa1fb9eca8a371" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" AffectingClass="UnitedKingdomPublicGeneralAct">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-395-14" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14" FoundRef="section-395">s. 395(14)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-12-3" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/3">para. 12(3)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingProvisions="Sch. 8 para. 18" URI="http://www.legislation.gov.uk/id/effect/key-351bc17b224a6085482c0de133c1bb4a" AffectingClass="UnitedKingdomPublicGeneralAct" AffectingNumber="22" Modified="2023-08-29T11:14:38Z" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22" RequiresApplied="true" AffectedProvisions="Sch. 1ZA para. 32(c) and word" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingEffectsExtent="E+W+S+N.I." AffectedYear="2000" Row="441" Type="inserted" AffectedNumber="8" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingYear="2021" EffectId="key-351bc17b224a6085482c0de133c1bb4a">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="schedule-1ZA" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/1ZA">Sch. 1ZA </ukm:Section>
+                        <ukm:Section Ref="schedule-1ZA-paragraph-32-c" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/1ZA/paragraph/32/c" FoundRef="schedule-1ZA">para. 32(c)</ukm:Section> and word</ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-8" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8">Sch. 8 </ukm:Section>
+                        <ukm:Section Ref="schedule-8-paragraph-18" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18">para. 18</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-49-5" URI="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5">s. 49(5)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingNumber="21" AffectedProvisions="Act" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2014/21" EffectId="key-05ccd5d9047901e84edea944467e0ab2" AffectedExtent="E+W+S+N.I." AffectedYear="2000" Row="5" AffectingClass="UnitedKingdomPublicGeneralAct" Type="power to apply conferred (temp. until 15.5.2039)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Modified="2022-01-20T13:03:31Z" AffectingYear="2014" URI="http://www.legislation.gov.uk/id/effect/key-05ccd5d9047901e84edea944467e0ab2" RequiresApplied="true" AffectingProvisions="s. 79(4)" AffectedNumber="8" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedClass="UnitedKingdomPublicGeneralAct">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>Act</ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Water Act 2014</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-79-4" URI="http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4">s. 79(4)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-94-3" URI="http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3">s. 94(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification="with effect in accordance with" OtherQualification="s. 83(1)"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect EffectId="key-b7ec36e10fbbebda09d50f93f0150ab8" AffectedClass="UnitedKingdomPublicGeneralAct" Type="power to apply conferred (temp. until 15.5.2039)" AffectingProvisions="s. 81(10)" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2014/21" AffectedYear="2000" AffectingYear="2014" AffectingClass="UnitedKingdomPublicGeneralAct" Row="6" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedExtent="E+W+S+N.I." AffectedProvisions="Act" AffectingNumber="21" URI="http://www.legislation.gov.uk/id/effect/key-b7ec36e10fbbebda09d50f93f0150ab8" AffectedNumber="8" Modified="2022-01-20T13:03:31Z" RequiresApplied="true">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>Act</ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Water Act 2014</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="section-81-10" URI="http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10">s. 81(10)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-94-3" URI="http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3">s. 94(3)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification="with effect in accordance with" OtherQualification="s. 83(1)"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct" AffectedYear="2000" EffectId="key-ed88e1aa30d0adc7d1880e40d06035a9" Type="applied" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" RequiresApplied="false" AffectedNumber="8" AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/102" AppendedCommentary="as amended by S.I. 2024/705, regs. 1(2), 2(2)" AffectingProvisions="reg. 34(7)(8)(f)" AffectedProvisions="s. 398(8)" URI="http://www.legislation.gov.uk/id/effect/uksi-2024-102-jwl9r655-103" AffectingNumber="102" AffectingYear="2024" AffectingClass="UnitedKingdomStatutoryInstrument" Row="103" Created="2024-10-15T11:00:49Z" AffectingEffectsExtent="E+W+S+N.I." AppliedModified="2024-11-01T18:11:28.371657Z">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-398-8" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8" FoundRef="section-398">s. 398(8)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Securitisation Regulations 2024</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-34-7" URI="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/34/7">reg. 34(7)</ukm:Section>
+                        <ukm:Section Ref="regulation-34-8-f" URI="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/34/8/f">reg. 34(8)(f)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:Savings>
+                        <ukm:Section Ref="regulation-52-3" URI="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/52/3">reg. 52(3)</ukm:Section>
+                        <ukm:Section Ref="schedule-3" URI="http://www.legislation.gov.uk/id/uksi/2024/102/schedule/3">Sch. 3</ukm:Section>
+                     </ukm:Savings>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-2-1-e" URI="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/2/1/e">reg. 2(1)(e)</ukm:Section>
+                        <ukm:Section Ref="regulation-2-2" URI="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/2/2">(2)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="true" Date="2024-01-30" Qualification="for specified purposes"/>
+                        <ukm:InForce Applied="true" Date="2024-11-01" Qualification="in force in so far as not already in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct" EffectId="key-c79d974c7a04c516fb02ba4b35ecb1f1" AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083" AffectingNumber="1083" AffectingEffectsExtent="E+W+S+N.I." URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-32" AffectedYear="2000" Row="32" RequiresApplied="true" AffectingYear="2024" AffectingProvisions="reg. 10(b)" AffectedProvisions="Sch. 6 para. 4A(8)" Created="2024-11-04T13:29:24Z" Type="inserted" AffectingClass="UnitedKingdomStatutoryInstrument" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectedNumber="8">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="schedule-6" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/6">Sch. 6 </ukm:Section>
+                        <ukm:Section Ref="schedule-6-paragraph-4A-8" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/6/paragraph/4A/8" FoundRef="schedule-6-paragraph-4A">para. 4A(8)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="regulation-10-b" URI="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b">reg. 10(b)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="regulation-1-2-b" URI="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b">reg. 1(2)(b)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectingProvisions="Sch. 29 para. 3(2)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" Type="inserted" AffectedProvisions="s. 234I(9)" AffectedNumber="8" Row="893" RequiresApplied="true" AffectingNumber="13" EffectId="key-fd568cacd551775f059585d7a7104604" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedYear="2000" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2024/13" Modified="2024-12-04T13:44:27Z" AffectingYear="2024" URI="http://www.legislation.gov.uk/id/effect/key-fd568cacd551775f059585d7a7104604" AffectingClass="UnitedKingdomPublicGeneralAct">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-234I-9" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9" FoundRef="section-234I">s. 234I(9)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Digital Markets, Competition and Consumers Act 2024</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-29" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29">Sch. 29 </ukm:Section>
+                        <ukm:Section Ref="schedule-29-paragraph-3-2" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29/paragraph/3/2">para. 3(2)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-339-1" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/section/339/1">s. 339(1)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                        <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/uksi/2024/1226" CommencingClass="UnitedKingdomStatutoryInstrument" Date="2025-01-01" Qualification="for specified purposes" CommencingYear="2024" CommencingNumber="1226" Comments="to the extent that it relates to the provisions specified in paragraph 2(5)(b)(ii).">
+                           <ukm:CommencingProvisions>
+                              <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/1/2">reg. 1(2)</ukm:Section>
+                              <ukm:Section Ref="regulation-2-1" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/1">2(1)</ukm:Section>
+                              <ukm:Section Ref="regulation-2-21" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/21">(21)</ukm:Section>
+                           </ukm:CommencingProvisions>
+                        </ukm:InForce>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect AffectedProvisions="s. 234J(6)" AffectingProvisions="Sch. 29 para. 3(3)" Type="inserted" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2024/13" AffectingClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-c94c102b94bff398c285f0c68bceacf2" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedNumber="8" EffectId="key-c94c102b94bff398c285f0c68bceacf2" AffectingYear="2024" Modified="2024-12-04T13:44:27Z" AffectingNumber="13" Row="894" AffectedYear="2000" AffectedClass="UnitedKingdomPublicGeneralAct" RequiresApplied="true">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section Ref="section-234J-6" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6" FoundRef="section-234J">s. 234J(6)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Digital Markets, Competition and Consumers Act 2024</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-29" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29">Sch. 29 </ukm:Section>
+                        <ukm:Section Ref="schedule-29-paragraph-3-3" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29/paragraph/3/3">para. 3(3)</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-339-1" URI="http://www.legislation.gov.uk/id/ukpga/2024/13/section/339/1">s. 339(1)</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+                        <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/uksi/2024/1226" CommencingClass="UnitedKingdomStatutoryInstrument" Date="2025-01-01" Qualification="for specified purposes" CommencingYear="2024" CommencingNumber="1226" Comments="to the extent that it relates to the provisions specified in paragraph 2(5)(b)(ii).">
+                           <ukm:CommencingProvisions>
+                              <ukm:Section Ref="regulation-1-2" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/1/2">reg. 1(2)</ukm:Section>
+                              <ukm:Section Ref="regulation-2-1" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/1">2(1)</ukm:Section>
+                              <ukm:Section Ref="regulation-2-21" URI="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/21">(21)</ukm:Section>
+                           </ukm:CommencingProvisions>
+                        </ukm:InForce>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+                  <ukm:UnappliedEffect Notes="This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A." AffectedNumber="8" AffectedProvisions="s. 427A(3)" AffectingProvisions="Sch. 17 para. 59" RequiresApplied="false" Type="words substituted" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2002/40" AffectingNumber="40" AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8" EffectId="key-c00514942197fe9622352b7129a7cb29" AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" Row="160" AffectedExtent="E+W+S+N.I." Modified="2022-01-20T13:03:31Z" AffectingYear="2002" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedYear="2000" URI="http://www.legislation.gov.uk/id/effect/key-c00514942197fe9622352b7129a7cb29">
+                     <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
+                     <ukm:AffectedProvisions>
+                        <ukm:Section xmlns:err="http://www.legislation.gov.uk/namespaces/error" Ref="section-427A-3" URI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3" err:Ref="Section missing in legislation" Missing="true">s. 427A(3)</ukm:Section>
+                     </ukm:AffectedProvisions>
+                     <ukm:AffectingTitle>Enterprise Act 2002 (repealed)</ukm:AffectingTitle>
+                     <ukm:AffectingTitle>Enterprise Act 2002</ukm:AffectingTitle>
+                     <ukm:AffectingProvisions>
+                        <ukm:Section Ref="schedule-17" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/schedule/17">Sch. 17 </ukm:Section>
+                        <ukm:Section Ref="schedule-17-paragraph-59" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/schedule/17/paragraph/59">para. 59</ukm:Section>
+                     </ukm:AffectingProvisions>
+                     <ukm:Savings>
+                        <ukm:SectionRange Start="section-249-1" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1" End="section-249-3" UpTo="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/3">
+                           <ukm:Section Ref="section-249-1" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1">s. 249(1)</ukm:Section>-<ukm:Section Ref="section-249-3" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/3">(3)</ukm:Section>
+                        </ukm:SectionRange>
+                     </ukm:Savings>
+                     <ukm:CommencementAuthority>
+                        <ukm:Section Ref="section-279" URI="http://www.legislation.gov.uk/id/ukpga/2002/40/section/279">s. 279</ukm:Section>
+                     </ukm:CommencementAuthority>
+                     <ukm:InForceDates>
+                        <ukm:InForce Prospective="true" Qualification=""/>
+                     </ukm:InForceDates>
+                  </ukm:UnappliedEffect>
+               </ukm:UnappliedEffects>
+            </ukm:PrimaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/notes" DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/section/91/notes"/>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative Date="2008-03-02" URI="http://www.legislation.gov.uk/ukpga/2000/8/pdfs/ukpga_20000008_en.pdf" Title="Print Version"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="1883"/>
+               <ukm:BodyParagraphs Value="1236"/>
+               <ukm:ScheduleParagraphs Value="647"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <part eId="part-VI">
+            <num>Part VI</num>
+            <heading> Official Listing</heading>
+            <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-VI-crossheading-penalties">
+               <heading> Penalties</heading>
+               <section xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="section-91" ns0:target="true">
+                  <num>91</num>
+                  <heading>
+                     <ins class="substitution first last" ukl:ChangeId="d29p11039" ukl:CommentaryRef="c2075659">
+                        <noteRef uk:name="commentary" href="#c2075659" class="commentary"/>Penalties for breach of Part 6 rules</ins>
+                  </heading>
+                  <subsection eId="section-91-1">
+                     <num>
+                        <ins class="substitution first" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                           <noteRef uk:name="commentary" href="#c2075363" class="commentary"/>
+                           <ins class="substitution first" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">
+                              <noteRef uk:name="commentary" href="#c2076430" class="commentary"/>(1)</ins>
+                        </ins>
+                     </num>
+                     <intro>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">If the </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">
+                                 <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390163537" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                                    <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430"> considers that—</ins>
+                           </ins>
+                        </p>
+                     </intro>
+                     <level class="para1" eId="section-91-1-a">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">(a)</ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">an issuer of listed securities, or</ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-1-b">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">(b)</ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">an applicant for listing,</ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <wrapUp>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">has contravened any provision of listing rules, it may impose on him a penalty of such amount as it considers appropriate.</ins>
+                           </ins>
+                        </p>
+                     </wrapUp>
+                  </subsection>
+                  <subsection eId="section-91-1ZA">
+                     <num>
+                        <noteRef href="#key-3b0b778955a5106ceae95b7f360b5477" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                        <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                           <ins class="substitution" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">(1ZA)</ins>
+                        </ins>
+                     </num>
+                     <content>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution last" ukl:ChangeId="d29p11047" ukl:CommentaryRef="c2076430">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</ins>
+                           </ins>
+                        </p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-1A">
+                     <num>
+                        <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                           <ins class="first" ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                              <noteRef uk:name="commentary" href="#c2075642" class="commentary"/>(1A)</ins>
+                        </ins>
+                     </num>
+                     <intro>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del class="first" ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">
+                                    <noteRef uk:name="commentary" href="#key-85f6cff819aaa17a73f223224991dd4a" class="commentary"/>If the </del>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">
+                                    <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390187119" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                                       <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins>
+                                 </del>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a"> considers that—</del>
+                              </ins>
+                           </ins>
+                        </p>
+                     </intro>
+                     <level class="para1" eId="section-91-1A-a">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">(a)</del>
+                              </ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">an issuer of transferable securities,</del>
+                                 </ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-1A-b">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">(b)</del>
+                              </ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">a person offering transferable securities to the public or requesting their admission to trading on a regulated market,</del>
+                                 </ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-1A-c">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">(c)</del>
+                              </ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">an applicant for the approval of a prospectus in relation to transferable securities,</del>
+                                 </ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-1A-d">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">(d)</del>
+                              </ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">a person on whom a requirement has been imposed under section 87K or 87L, or</del>
+                                 </ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-1A-e">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                 <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">(e)</del>
+                              </ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">any other person to whom  </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">
+                                       <ins class="substitution first last" ukl:ChangeId="key-a8e1b0bd9a38d1a4c85f6dd7d76274d8-1576510735375" ukl:CommentaryRef="key-a8e1b0bd9a38d1a4c85f6dd7d76274d8">
+                                          <noteRef uk:name="commentary" href="#key-a8e1b0bd9a38d1a4c85f6dd7d76274d8" class="commentary"/>any provision of, or made in accordance with, the prospectus regulation applies</ins>
+                                    </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">, </del>
+                                 </ins>
+                              </ins>
+                           </p>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">has contravened a provision of this Part or of prospectus rules, or a provision  </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">
+                                       <ins class="substitution first last" ukl:ChangeId="key-c171a4448b9cd91a4a4aecebff1b3e18-1576510672695" ukl:CommentaryRef="key-c171a4448b9cd91a4a4aecebff1b3e18">
+                                          <noteRef uk:name="commentary" href="#key-c171a4448b9cd91a4a4aecebff1b3e18" class="commentary"/>of or</ins>
+                                    </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">  made in accordance with the  </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">
+                                       <ins class="substitution first last" ukl:ChangeId="key-5e7eb91f3f5f6e1bc8323b2d4b364dad-1576510710411" ukl:CommentaryRef="key-5e7eb91f3f5f6e1bc8323b2d4b364dad">
+                                          <noteRef uk:name="commentary" href="#key-5e7eb91f3f5f6e1bc8323b2d4b364dad" class="commentary"/>prospectus regulation,</ins>
+                                    </del>
+                                 </ins>
+                              </ins>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins class="last" ukl:ChangeId="d29p11095" ukl:CommentaryRef="c2075642">
+                                    <del class="last" ukl:ChangeId="key-85f6cff819aaa17a73f223224991dd4a-1707828989931" ukl:CommentaryRef="key-85f6cff819aaa17a73f223224991dd4a">  or a requirement imposed on him under such a provision, it may impose on him a penalty of such amount as it considers appropriate.</del>
+                                 </ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                  </subsection>
+                  <subsection eId="section-91-1B">
+                     <num>
+                        <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                           <ins class="first" ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">
+                              <noteRef uk:name="commentary" href="#c2076432" class="commentary"/>(1B)</ins>
+                        </ins>
+                     </num>
+                     <intro>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">If the </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">
+                                 <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390207869" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                                    <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432"> considers—</ins>
+                           </ins>
+                        </p>
+                     </intro>
+                     <level class="para1" eId="section-91-1B-a">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">(a)</ins>
+                           </ins>
+                        </num>
+                        <intro>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">that a person has contravened—</ins>
+                              </ins>
+                           </p>
+                        </intro>
+                        <level class="para2" eId="section-91-1B-a-i">
+                           <num>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">(i)</ins>
+                              </ins>
+                           </num>
+                           <content>
+                              <p>
+                                 <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                    <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">a provision of  </ins>
+                                 </ins>
+                                 <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                    <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">
+                                       <ins class="substitution first last" ukl:ChangeId="key-1213410748182873a865ee673a7305de-1625844285182" ukl:CommentaryRef="key-1213410748182873a865ee673a7305de">
+                                          <noteRef uk:name="commentary" href="#key-1213410748182873a865ee673a7305de" class="commentary"/>qualifying transparency legislation</ins>
+                                    </ins>
+                                 </ins>
+                                 <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                    <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">, or</ins>
+                                 </ins>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para2" eId="section-91-1B-a-ii">
+                           <num>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">(ii)</ins>
+                              </ins>
+                           </num>
+                           <content>
+                              <p>
+                                 <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                    <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">a provision of corporate governance rules, or</ins>
+                                 </ins>
+                              </p>
+                           </content>
+                        </level>
+                     </level>
+                     <level class="para1" eId="section-91-1B-b">
+                        <num>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">(b)</ins>
+                           </ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                                 <ins ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">that a person on whom a requirement has been imposed under section 89L (power to suspend or prohibit trading of securities in case of infringement of applicable transparency obligation), has contravened that requirement,</ins>
+                              </ins>
+                           </p>
+                        </content>
+                     </level>
+                     <wrapUp>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="last" ukl:ChangeId="d29p11136" ukl:CommentaryRef="c2076432">it may impose on the person a penalty of such amount as it considers appropriate.</ins>
+                           </ins>
+                        </p>
+                     </wrapUp>
+                  </subsection>
+                  <subsection eId="section-91-2">
+                     <num>
+                        <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">(2)</ins>
+                     </num>
+                     <content>
+                        <p>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">If, in the case of a contravention  </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first last" ukl:ChangeId="d29p11177" ukl:CommentaryRef="c2075644">
+                                 <noteRef uk:name="commentary" href="#c2075644" class="commentary"/>by a person</ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363"> referred to in subsection </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first" ukl:ChangeId="d29p11181" ukl:CommentaryRef="c2076438">
+                                 <noteRef uk:name="commentary" href="#c2076438" class="commentary"/>(1), </ins>
+                           </ins>
+                           <noteRef href="#key-9347bfc126a77137db13693982c2440e" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11181" ukl:CommentaryRef="c2076438">... </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11181" ukl:CommentaryRef="c2076438">
+                                 <del class="first last" ukl:ChangeId="key-bf7813dca13818bd9bd01642f856ffa8-1707829019036" ukl:CommentaryRef="key-bf7813dca13818bd9bd01642f856ffa8">
+                                    <noteRef uk:name="commentary" href="#key-bf7813dca13818bd9bd01642f856ffa8" class="commentary"/>(1A)</del>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution" ukl:ChangeId="d29p11181" ukl:CommentaryRef="c2076438"> or  </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution last" ukl:ChangeId="d29p11181" ukl:CommentaryRef="c2076438">
+                                 <ins class="substitution first last" ukl:ChangeId="key-51374a2090f3db888ffe88e4018f3fbf-1541693666528" ukl:CommentaryRef="key-51374a2090f3db888ffe88e4018f3fbf">
+                                    <noteRef uk:name="commentary" href="#key-51374a2090f3db888ffe88e4018f3fbf" class="commentary"/>(1B)(a)(ii) or (b)</ins>
+                              </ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first last" ukl:ChangeId="d29p11184" ukl:CommentaryRef="c2075648">
+                                 <noteRef uk:name="commentary" href="#c2075648" class="commentary"/>(“P”)</ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">, the </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390239370" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                                 <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363"> considers that  </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first last" ukl:ChangeId="d29p11188" ukl:CommentaryRef="c2075653">
+                                 <noteRef uk:name="commentary" href="#c2075653" class="commentary"/>another person</ins>
+                           </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363"> who was at the material time a director of  </ins>
+                           <ins class="substitution" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363">
+                              <ins class="substitution first last" ukl:ChangeId="d29p11192" ukl:CommentaryRef="c2075655">
+                                 <noteRef uk:name="commentary" href="#c2075655" class="commentary"/>P</ins>
+                           </ins>
+                           <ins class="substitution last" ukl:ChangeId="d29p11046" ukl:CommentaryRef="c2075363"> was knowingly concerned in the contravention, it may impose upon him a penalty of such amount as it considers appropriate.</ins>
+                        </p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-2A">
+                     <num>
+                        <ins class="first" ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">
+                           <noteRef uk:name="commentary" href="#key-46e5047e93c3ecb4aa2444ed02e4dbaf" class="commentary"/>(2A)</ins>
+                     </num>
+                     <intro>
+                        <p>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">If—</ins>
+                        </p>
+                     </intro>
+                     <level class="para1" eId="section-91-2A-a">
+                        <num>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">(a)</ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">a person has contravened a provision mentioned in subsection (1B)(a)(i), and</ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-2A-b">
+                        <num>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">(b)</ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">the FCA considers that another person (“A”), who was at the material time a relevant officer of the person, was knowingly concerned in the contravention,</ins>
+                           </p>
+                        </content>
+                     </level>
+                     <wrapUp>
+                        <p>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">the FCA may impose upon A a penalty of such amount as it considers appropriate.</ins>
+                        </p>
+                     </wrapUp>
+                  </subsection>
+                  <subsection eId="section-91-2B">
+                     <num>
+                        <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">(2B)</ins>
+                     </num>
+                     <intro>
+                        <p>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">In subsection (2A) “relevant officer” of a person means—</ins>
+                        </p>
+                     </intro>
+                     <level class="para1" eId="section-91-2B-a">
+                        <num>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">(a)</ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">a director or other similar officer of the person, or</ins>
+                           </p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-2B-b">
+                        <num>
+                           <ins ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">(b)</ins>
+                        </num>
+                        <content>
+                           <p>
+                              <ins class="last" ukl:ChangeId="key-46e5047e93c3ecb4aa2444ed02e4dbaf-1541693629412" ukl:CommentaryRef="key-46e5047e93c3ecb4aa2444ed02e4dbaf">if the affairs of the person are managed by its members, a member of the person.</ins>
+                           </p>
+                        </content>
+                     </level>
+                  </subsection>
+                  <subsection eId="section-91-3">
+                     <num>(3)</num>
+                     <content>
+                        <p>If the <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390244715" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                              <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins> is entitled to impose a penalty on a person under this section in respect of a particular matter it may, instead of imposing a penalty on him in respect of that matter, publish a statement censuring him.</p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-4">
+                     <num>(4)</num>
+                     <content>
+                        <p>Nothing in this section prevents the <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390254749" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                              <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins> from taking any other steps which it has power to take under this Part.</p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-5">
+                     <num>(5)</num>
+                     <content>
+                        <p>A penalty under this section is payable to the <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390264254" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                              <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins>.</p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-6">
+                     <num>(6)</num>
+                     <content>
+                        <p>The <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390272461" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                              <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins> may not take action against a person under this section after the end of the period of  <ins class="substitution first last" ukl:ChangeId="key-5da925aab5c742f321a1d154b853d2bd-1516629428126" ukl:CommentaryRef="key-5da925aab5c742f321a1d154b853d2bd">
+                              <noteRef uk:name="commentary" href="#key-5da925aab5c742f321a1d154b853d2bd" class="commentary"/>3 years</ins>  beginning with the first day on which it knew of the contravention unless proceedings against that person, in respect of the contravention, were begun before the end of that period.</p>
+                     </content>
+                  </subsection>
+                  <subsection eId="section-91-7">
+                     <num>(7)</num>
+                     <intro>
+                        <p>For the purposes of subsection (6)—</p>
+                     </intro>
+                     <level class="para1" eId="section-91-7-a">
+                        <num>(a)</num>
+                        <content>
+                           <p>the <ins class="substitution first last" ukl:ChangeId="key-9927ca5530fa26b483ba2aa61ac1396f-1505390283111" ukl:CommentaryRef="key-9927ca5530fa26b483ba2aa61ac1396f">
+                                 <noteRef uk:name="commentary" href="#key-9927ca5530fa26b483ba2aa61ac1396f" class="commentary"/>FCA</ins> is to be treated as knowing of a contravention if it has information from which the contravention can reasonably be inferred; and</p>
+                        </content>
+                     </level>
+                     <level class="para1" eId="section-91-7-b">
+                        <num>(b)</num>
+                        <content>
+                           <p>proceedings against a person in respect of a contravention are to be treated as begun when a warning notice is given to him under section 92.</p>
+                        </content>
+                     </level>
+                  </subsection>
+               </section>
+            </hcontainer>
+         </part>
+      </body>
+   </act>
+</akomaNtoso>

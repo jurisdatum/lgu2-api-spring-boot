@@ -1,17 +1,18 @@
 package uk.gov.legislation.transform.simple;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.service.EffectsConverter;
+import uk.gov.legislation.endpoints.document.service.ExtentConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.*;
 
 import java.time.LocalDate;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
-@SuppressWarnings("unused")
 public class Metadata implements uk.gov.legislation.endpoints.document.Metadata {
 
     public String id;
@@ -38,6 +39,7 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "altNumber")
+    @JsonIgnore
     public List<AltNum> altNums;
 
     public List<AltNum> altNumbers() { return altNums; }
@@ -87,6 +89,12 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public String title;
 
     public String title() { return title; }
+
+    private String extent;
+
+    public Set<Extent> extent() {
+        return ExtentConverter.convert(extent);
+    }
 
     public String lang;
 
@@ -164,5 +172,43 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public String next() { return next; }
     @JsonSetter("next")
     public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
+
+    /* ancestors */
+
+    @JacksonXmlProperty(localName = "ancestors")
+    private List<Level> ancestors;
+
+    @Override
+    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestry() {
+        return ancestors.stream().map(Level::convert).toList();
+    }
+
+    /* unapplied effects */
+
+    private List<UnappliedEffect> rawEffects = Collections.emptyList();
+    @JsonIgnore
+    public List<UnappliedEffect> rawEffects() { return rawEffects; }
+
+    private List<Effect> convertedEffects = Collections.emptyList();
+    @Override
+    public List<Effect> unappliedEffects() { return convertedEffects; }
+
+    @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JsonSetter
+    public void setUnappliedEffects(List<UnappliedEffect> source) {
+        rawEffects = source;
+        convertedEffects = EffectsConverter.convert(source);
+    }
+
+    private Set<String> internalIds = Collections.emptySet();
+
+    @JsonIgnore
+    public Set<String> getInternalIds() { return internalIds; }
+
+    @JacksonXmlElementWrapper(localName = "internal-ids")
+    @JacksonXmlProperty(localName = "internal-id")
+    @JsonSetter
+    public void setInternalIds(List<String> ids) { internalIds = new HashSet<>(ids); }
 
 }

@@ -1,9 +1,15 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.Configuration;
+import net.sf.saxon.s9api.DocumentBuilder;
 import net.sf.saxon.s9api.Processor;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.serialize.Emitter;
 
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -37,6 +43,13 @@ public class Helper {
         Configuration configuration = processor.getUnderlyingConfiguration();
         SerializerFactory serializerFactory = new SerializerFactory(configuration);
         configuration.setSerializerFactory(serializerFactory);
+    }
+
+    public static XdmNode parse(String xml) throws SaxonApiException {
+        ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes());
+        Source source = new StreamSource(stream);
+        DocumentBuilder builder = processor.newDocumentBuilder();
+        return builder.build(source);
     }
 
 }

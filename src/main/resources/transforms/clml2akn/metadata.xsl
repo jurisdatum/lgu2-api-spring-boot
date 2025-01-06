@@ -471,7 +471,7 @@
 	</xsl:copy>
 </xsl:template>
 
-<xsl:template match="ukm:UnappliedEffects" />
+<!-- include unapplied effects -->
 
 
 <xsl:variable name="elements-with-restrict-dates" as="element()*" select="//*[@RestrictStartDate or @RestrictEndDate][empty(ancestor-or-self::ukl:Attachments)]" />

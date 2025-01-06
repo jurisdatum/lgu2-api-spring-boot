@@ -34,6 +34,7 @@
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
+        <xsl:call-template name="extent" />
         <xsl:apply-templates select="dc:language" />
         <xsl:apply-templates select="dc:publisher" />
         <xsl:apply-templates select="dc:modified" />
@@ -41,12 +42,25 @@
         <xsl:call-template name="schedules" />
         <xsl:call-template name="formats" />
         <xsl:call-template name="fragment-info" />
+        <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" mode="copy" />
+        <internal-ids>
+            <xsl:for-each select="//*/@id">
+                <internal-id>
+                    <xsl:value-of select="." />
+                </internal-id>
+            </xsl:for-each>
+        </internal-ids>
     </meta>
 </xsl:template>
 
+<xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
+
+<xsl:key name="document-uri" match="*" use="@DocumentURI"/>
+
+<xsl:variable name="target" as="element()?" select="key('document-uri', $dc-identifier)" />
+
 <xsl:variable name="id-components" as="xs:string+">
-    <xsl:variable name="id" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
-    <xsl:variable name="id" as="xs:string" select="substring-after($id, 'http://www.legislation.gov.uk/')" />
+    <xsl:variable name="id" as="xs:string" select="substring-after($dc-identifier, 'http://www.legislation.gov.uk/')" />
     <xsl:variable name="components" as="xs:string+" select="tokenize($id, '/')" />
     <xsl:choose>
         <xsl:when test="$components[2] castable as xs:integer">
@@ -137,6 +151,16 @@
     </date>
 </xsl:template>
 
+<!-- extent -->
+
+<xsl:template name="extent">
+    <extent>
+        <xsl:value-of select="$target/ancestor-or-self::*[exists(@RestrictExtent)][1]/@RestrictExtent" />
+    </extent>
+</xsl:template>
+
+<!-- versions -->
+
 <xsl:template name="versions">
     <hasVersions>
         <xsl:apply-templates select="atom:link[@rel='http://purl.org/dc/terms/hasVersion']" />
@@ -177,6 +201,86 @@
     <next>
         <xsl:value-of select="atom:link[@rel='next']/@href" />
     </next>
+    <ancestors>
+        <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
+            <ancestor name="{ local-name(.) }">
+                <xsl:copy-of select="@id" />
+                <xsl:copy-of select="@DocumentURI" />
+                <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
+                <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
+            </ancestor>
+        </xsl:for-each>
+    </ancestors>
+</xsl:template>
+
+<xsl:template match="*" mode="simplify-number">
+    <number>
+        <xsl:value-of select="normalize-space(.)" />
+    </number>
+</xsl:template>
+<xsl:template match="*" mode="simplify-title">
+    <title>
+        <xsl:value-of select="normalize-space(.)" />
+    </title>
+</xsl:template>
+
+<!-- effects -->
+
+<xsl:template match="ukm:UnappliedEffect" mode="copy">
+    <xsl:copy>
+        <xsl:apply-templates select="@*" mode="copy" />
+        <xsl:apply-templates mode="copy" />
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="@*" mode="copy">
+    <xsl:copy>
+        <xsl:value-of select="." />
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="@AffectedProvisions" mode="copy">
+    <xsl:attribute name="AffectedProvisionsText">
+        <xsl:value-of select="." />
+    </xsl:attribute>
+</xsl:template>
+<xsl:template match="@AffectingProvisions" mode="copy">
+    <xsl:attribute name="AffectingProvisionsText">
+        <xsl:value-of select="." />
+    </xsl:attribute>
+</xsl:template>
+
+<xsl:template match="ukm:AffectedProvisions//text()" mode="copy" > <!-- can be child of SectionRange -->
+    <node type="text" text="{.}" />
+</xsl:template>
+<xsl:template match="ukm:AffectingProvisions//text()" mode="copy" > <!-- can be child of SectionRange -->
+    <node type="text" text="{.}" />
+</xsl:template>
+
+<xsl:template match="ukm:SectionRange" mode="copy">
+    <xsl:apply-templates mode="copy" />
+</xsl:template>
+
+<xsl:template match="ukm:Section" mode="copy">
+    <node type="section" ref="{ @Ref }" uri="{ @URI }" text="{ . }">
+        <xsl:if test="exists(@Missing)">
+            <xsl:attribute name="missing">
+                <xsl:value-of select="@Missing" />
+            </xsl:attribute>
+        </xsl:if>
+        <xsl:if test="exists(@err:Ref)" xmlns:err="http://www.legislation.gov.uk/namespaces/error">
+            <xsl:attribute name="error">
+                <xsl:value-of select="@err:Ref" />
+            </xsl:attribute>
+        </xsl:if>
+    </node>
+</xsl:template>
+
+<xsl:template match="*" mode="copy">
+    <xsl:copy>
+        <xsl:copy-of select="@*" />
+        <xsl:apply-templates mode="copy" />
+    </xsl:copy>
 </xsl:template>
 
 <!-- ToC -->

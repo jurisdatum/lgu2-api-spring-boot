@@ -63,6 +63,27 @@ public class Links {
         return new Components(type, year, number, fragment, version);
     }
 
+    public static String shorten(String uri) {
+        Components comp = parse(uri);
+        if (comp == null)
+            return uri;
+        StringBuilder builder = new StringBuilder();
+        builder.append(comp.type);
+        builder.append("/");
+        builder.append(comp.year);
+        builder.append("/");
+        builder.append(comp.number);
+        if (comp.fragment.isPresent()) {
+            builder.append("/");
+            builder.append(comp.fragment.get());
+        }
+        if (comp.version.isPresent()) {
+            builder.append("/");
+            builder.append(comp.version.get());
+        }
+        return builder.toString();
+    }
+
     // FixMe should return Optional<String>
     public static String extractFragmentIdentifierFromLink(String link) {
         Components components = parse(link);
