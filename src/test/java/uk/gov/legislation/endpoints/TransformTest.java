@@ -24,7 +24,6 @@ public class TransformTest {
         this.transform = transform;
     }
 
-
     static String read(String resource) throws IOException {
         String content;
         try (var input = TransformTest.class.getResourceAsStream(resource)) {

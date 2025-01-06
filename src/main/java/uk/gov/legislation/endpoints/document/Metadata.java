@@ -116,6 +116,11 @@ public interface Metadata {
     @JsonProperty(index = 24)
     @Schema
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    List<Level> ancestry();
+    List<Level> ancestors();
+
+    @JsonProperty(index = 25)
+    @Schema
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    List<Level> descendants();
 
 }

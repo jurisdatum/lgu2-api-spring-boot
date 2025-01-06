@@ -21,6 +21,8 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @SpringBootTest
 class UnappliedEffectsTest {
@@ -86,7 +88,9 @@ class UnappliedEffectsTest {
     void filtered() throws Exception {
         String clml = getClml();
         Metadata meta = simplifier.metadata(clml);
-        List<UnappliedEffect> effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects(), meta.getInternalIds());
+        Set<String> ids = meta.ancestors().stream().map(l -> l.id).collect(Collectors.toSet());
+        meta.descendants().stream().map(l -> l.id).forEach(ids::add);
+        List<UnappliedEffect> effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects(), ids);
         String actual = mapper.writeValueAsString(effects);
         String expected = TransformTest.read("/ukpga-2000-8-section-91-effects-filtered.json");
         Assertions.assertEquals(expected, actual);

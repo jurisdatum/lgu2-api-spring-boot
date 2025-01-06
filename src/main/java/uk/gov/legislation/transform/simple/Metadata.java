@@ -173,14 +173,26 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     @JsonSetter("next")
     public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
 
-    /* ancestors */
+    /* ancestors and descendants */
+
+    public static class Ancestor extends Level {}
 
     @JacksonXmlProperty(localName = "ancestors")
-    private List<Level> ancestors;
+    private List<Ancestor> ancestors;
 
     @Override
-    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestry() {
+    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestors() {
         return ancestors.stream().map(Level::convert).toList();
+    }
+
+    public static class Descendant extends Level {}
+
+    @JacksonXmlProperty(localName = "descendants")
+    private List<Descendant> descendants;
+
+    @Override
+    public List<uk.gov.legislation.endpoints.document.responses.Level> descendants() {
+        return descendants.stream().map(Level::convert).toList();
     }
 
     /* unapplied effects */
@@ -200,15 +212,5 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
         rawEffects = source;
         convertedEffects = EffectsConverter.convert(source);
     }
-
-    private Set<String> internalIds = Collections.emptySet();
-
-    @JsonIgnore
-    public Set<String> getInternalIds() { return internalIds; }
-
-    @JacksonXmlElementWrapper(localName = "internal-ids")
-    @JacksonXmlProperty(localName = "internal-id")
-    @JsonSetter
-    public void setInternalIds(List<String> ids) { internalIds = new HashSet<>(ids); }
 
 }

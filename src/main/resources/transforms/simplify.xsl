@@ -43,13 +43,6 @@
         <xsl:call-template name="formats" />
         <xsl:call-template name="fragment-info" />
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" mode="copy" />
-        <internal-ids>
-            <xsl:for-each select="//*/@id">
-                <internal-id>
-                    <xsl:value-of select="." />
-                </internal-id>
-            </xsl:for-each>
-        </internal-ids>
     </meta>
 </xsl:template>
 
@@ -191,6 +184,8 @@
     </formats>
 </xsl:template>
 
+<!-- fragments -->
+
 <xsl:template name="fragment-info">
     <fragment>
         <xsl:value-of select="dc:identifier" />
@@ -203,14 +198,29 @@
     </next>
     <ancestors>
         <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
-            <ancestor name="{ local-name(.) }">
-                <xsl:copy-of select="@id" />
-                <xsl:copy-of select="@DocumentURI" />
-                <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
-                <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
-            </ancestor>
+            <xsl:call-template name="ancestor-or-descendant">
+                <xsl:with-param name="name" select="'ancestor'" />
+            </xsl:call-template>
         </xsl:for-each>
     </ancestors>
+    <descendants>
+        <xsl:for-each select="$target/descendant-or-self::*[exists(@DocumentURI)]">
+            <xsl:call-template name="ancestor-or-descendant">
+                <xsl:with-param name="name" select="'descendant'" />
+            </xsl:call-template>
+        </xsl:for-each>
+    </descendants>
+</xsl:template>
+
+<xsl:template name="ancestor-or-descendant">
+    <xsl:param name="name" as="xs:string" />
+    <xsl:element name="{ $name }">
+        <xsl:attribute name="name" select="local-name(.)" />
+        <xsl:copy-of select="@id" />
+        <xsl:copy-of select="@DocumentURI" />
+        <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
+        <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
+    </xsl:element>
 </xsl:template>
 
 <xsl:template match="*" mode="simplify-number">
@@ -218,6 +228,7 @@
         <xsl:value-of select="normalize-space(.)" />
     </number>
 </xsl:template>
+
 <xsl:template match="*" mode="simplify-title">
     <title>
         <xsl:value-of select="normalize-space(.)" />
