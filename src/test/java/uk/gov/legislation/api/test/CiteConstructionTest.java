@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints;
+package uk.gov.legislation.api.test;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

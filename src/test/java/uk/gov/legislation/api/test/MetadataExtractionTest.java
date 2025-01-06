@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints;
+package uk.gov.legislation.api.test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.transform.simple.Simplify;
 

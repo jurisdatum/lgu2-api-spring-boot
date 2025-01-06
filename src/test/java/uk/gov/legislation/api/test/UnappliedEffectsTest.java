@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints;
+package uk.gov.legislation.api.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -8,6 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
@@ -28,7 +29,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static uk.gov.legislation.endpoints.TransformTest.read;
+import static uk.gov.legislation.api.test.TransformTest.read;
 
 @SpringBootTest(classes = Application.class)
 class UnappliedEffectsTest {
