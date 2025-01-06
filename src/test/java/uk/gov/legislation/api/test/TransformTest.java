@@ -41,7 +41,9 @@ public class TransformTest {
     }
 
     static String makeResourceName(String id, String ext) {
-        return  "/" + id.replace('/', '-') + ext;
+        String dir = id.replace('/', '_') + "/";
+        String file = id.replace('/', '-') + ext;
+        return  "/" +  dir + file;
     }
 
     static String read(String id, String ext) throws IOException {

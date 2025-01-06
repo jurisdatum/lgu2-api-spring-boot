@@ -55,7 +55,7 @@ class UnappliedEffectsTest {
     void simplify(String id) throws Exception {
         String clml = read(id, ".xml");
         String actual = indent(simplifier.transform(clml));
-        String expected = read(id, "_simplified.xml");
+        String expected = read(id, "-simplified.xml");
         Assertions.assertEquals(expected, actual);
     }
 
