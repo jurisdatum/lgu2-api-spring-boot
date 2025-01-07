@@ -10,23 +10,26 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
+import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
+import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.Versions;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.Objects;
 import java.util.stream.Stream;
 
 @SpringBootTest(classes = Application.class)
-public class TransformTest {
+class TransformTest {
 
-    private final TransformationService transform;
+    private final DocumentService documentService;
+    private final TransformationService fragmentService;
 
     @Autowired
-    TransformTest(TransformationService transform) {
-        this.transform = transform;
+    TransformTest(DocumentService docService, TransformationService fragService) {
+        this.documentService = docService;
+        this.fragmentService = fragService;
     }
 
     static Stream<String> provide() {
@@ -57,11 +60,17 @@ public class TransformTest {
         return akn.replaceFirst("<FRBRdate date=\".+?\" name=\"transform\"/>", "<FRBRdate date=\"1001-01-01-00:00\" name=\"transform\"/>");
     }
 
+    static boolean isFragment(String id) {
+        String uri = "http://www.legislation.gov.uk/" + id;
+        Links.Components comps = Links.parse(uri);
+        return comps.fragment().isPresent();
+    }
+
     @ParameterizedTest
     @MethodSource("provide")
     void akn(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = transform.transformToAkn(clml);
+        String actual = isFragment(id) ? fragmentService.transformToAkn(clml) : documentService.transformToAkn(clml);
         String expected = read(id, ".akn.xml");
         actual = replaceAknDate(actual);
         expected = replaceAknDate(expected);
@@ -82,7 +91,7 @@ public class TransformTest {
     @MethodSource("provide")
     void html(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = transform.transformToHtml(clml, true);
+        String actual = isFragment(id) ? fragmentService.transformToHtml(clml, true) : documentService.transformToHtml(clml);
         String expected = read(id, ".html");
         actual = replaceHtmlDate(actual);
         expected = replaceHtmlDate(expected);
@@ -93,7 +102,7 @@ public class TransformTest {
     @MethodSource("provide")
     void json(String id) throws Exception {
         String clml = read(id, ".xml");
-        DocumentApi.Response response = transform.createJsonResponse(clml);
+        DocumentApi.Response response = isFragment(id) ? fragmentService.createJsonResponse(clml) : documentService.transformToJsonResponse(clml);
         ObjectMapper mapper = new ObjectMapper()
             .registerModules(new JavaTimeModule())
             .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)

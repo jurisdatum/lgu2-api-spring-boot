@@ -55,7 +55,7 @@ public class DocumentService {
         String htmlContent = aknToHtmlTransformer.transform(aknNode, false);
         Metadata metadata;
         try {
-            metadata = simplifier.metadata(clmlDoc);
+            metadata = simplifier.extractDocumentMetadata(clmlDoc);
         } catch (JsonProcessingException e) {
             throw new TransformationException("Simplification to JSON format failed",e);
         }

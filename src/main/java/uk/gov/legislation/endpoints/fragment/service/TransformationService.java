@@ -38,6 +38,7 @@ public class TransformationService {
         }
     }
 
+    // FixMe signature should match DocumentService
     public String transformToHtml(String clml, boolean standalone) {
         try {
             XdmNode akn = clml2akn.transform(clml);
@@ -47,13 +48,14 @@ public class TransformationService {
         }
     }
 
+    // FixMe method name should match DocumentService
     public DocumentApi.Response createJsonResponse(String clml) {
         try {
             long start = System.currentTimeMillis();
             XdmNode clmlDoc = Helper.parse(clml);
             XdmNode akn = clml2akn.transform(clmlDoc);
             String html = akn2html.transform(akn, false);
-            Metadata meta = simplifier.metadata(clmlDoc);
+            Metadata meta = simplifier.extractFragmentMetadata(clmlDoc);
             long end = System.currentTimeMillis();
             logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
             return new DocumentApi.Response(meta, html);

@@ -29,7 +29,7 @@ public class Simplify {
         this.stylesheetConfig = stylesheetConfig;
         this.executable = compileXslt();
     }
-    public String processDocument() {
+    private String processDocument() {
       return stylesheetConfig.getStylesheetSimplifyPath();
     }
 
@@ -62,30 +62,34 @@ public class Simplify {
         return compiler.compile(source);
     }
 
-    private void transform(Source clml, Serializer destination) throws SaxonApiException {
+    private void transform(Source clml, Serializer destination, Parameters params) throws SaxonApiException {
         XsltTransformer transformer = executable.load();
+        transformer.setParameter(new QName("is-fragment"), new XdmAtomicValue(params.isFragment()));
+        transformer.setParameter(new QName("include-contents"), new XdmAtomicValue(params.includeContents()));
         transformer.setSource(clml);
         transformer.setDestination(destination);
         transformer.transform();
     }
 
-    public String transform(XdmNode clml) throws SaxonApiException {
+    public record Parameters(boolean isFragment, boolean includeContents) {}
+
+    public String transform(XdmNode clml, Parameters params) throws SaxonApiException {
         try (var output = new ByteArrayOutputStream()) {
             Serializer destination = executable.getProcessor().newSerializer(output);
-            transform(clml.asSource(), destination);
+            transform(clml.asSource(), destination, params);
             return output.toString(StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new TransformationException("Error processing the transformation input/output", e);
         }
     }
 
-    public String transform(String clml) throws SaxonApiException {
+    public String transform(String clml, Parameters params) throws SaxonApiException {
         try (ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes());
              ByteArrayOutputStream output = new ByteArrayOutputStream()) {
 
             Source source = new StreamSource(input);
             Serializer destination = executable.getProcessor().newSerializer(output);
-            transform(source, destination);
+            transform(source, destination, params);
 
             return output.toString(StandardCharsets.UTF_8);
         } catch (IOException e) {
@@ -94,16 +98,36 @@ public class Simplify {
     }
 
     public Contents contents(String clml) throws SaxonApiException, JsonProcessingException {
-        String simplified = transform(clml);
+        Parameters params = new Parameters(false, true);
+        String simplified = transform(clml, params);
         return Contents.parse(simplified);
     }
 
-    public Metadata metadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
-        String simplified = transform(clml);
+    /* metadata */
+
+    private Metadata metadata(XdmNode clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
+        Parameters params = new Parameters(isFragment, false);
+        String simplified = transform(clml, params);
         return Contents.parse(simplified).meta();
     }
-    public Metadata metadata(String clml) throws SaxonApiException, JsonProcessingException {
-        return contents(clml).meta();
+    private Metadata metadata(String clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
+        Parameters params = new Parameters(isFragment, false);
+        String simplified = transform(clml, params);
+        return Contents.parse(simplified).meta();
+    }
+
+    public Metadata extractDocumentMetadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
+        return metadata(clml, false);
+    }
+    public Metadata extractDocumentMetadata(String clml) throws SaxonApiException, JsonProcessingException {
+        return metadata(clml, false);
+    }
+
+    public Metadata extractFragmentMetadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
+        return metadata(clml, true);
+    }
+    public Metadata extractFragmentMetadata(String clml) throws SaxonApiException, JsonProcessingException {
+        return metadata(clml, true);
     }
 
 }

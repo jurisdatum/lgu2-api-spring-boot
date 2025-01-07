@@ -178,7 +178,7 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public static class Ancestor extends Level {}
 
     @JacksonXmlProperty(localName = "ancestors")
-    private List<Ancestor> ancestors;
+    private List<Ancestor> ancestors = Collections.emptyList();
 
     @Override
     public List<uk.gov.legislation.endpoints.document.responses.Level> ancestors() {
@@ -188,7 +188,7 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     public static class Descendant extends Level {}
 
     @JacksonXmlProperty(localName = "descendants")
-    private List<Descendant> descendants;
+    private List<Descendant> descendants = Collections.emptyList();
 
     @Override
     public List<uk.gov.legislation.endpoints.document.responses.Level> descendants() {

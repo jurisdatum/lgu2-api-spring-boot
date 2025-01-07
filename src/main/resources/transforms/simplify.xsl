@@ -14,9 +14,15 @@
 <xsl:strip-space elements="*" />
 <xsl:preserve-space elements="Text Emphasis Strong Underline SmallCaps Superior Inferior Uppercase Underline Expanded Strike Definition Proviso Abbreviation Acronym Term Span Citation CitationSubRef InternalLink ExternalLink InlineAmendment Addition Substitution Repeal" />
 
+<xsl:param name="is-fragment" as="xs:boolean" select="false()" />
+<xsl:param name="include-contents" as="xs:boolean" select="true()" />
+
 <xsl:template match="Legislation">
     <leg>
-        <xsl:apply-templates select="ukm:Metadata | Contents" />
+        <xsl:apply-templates select="ukm:Metadata" />
+        <xsl:if test="$include-contents">
+            <xsl:apply-templates select="Contents" />
+        </xsl:if>
     </leg>
 </xsl:template>
 
@@ -41,7 +47,9 @@
         <xsl:call-template name="versions" />
         <xsl:call-template name="schedules" />
         <xsl:call-template name="formats" />
-        <xsl:call-template name="fragment-info" />
+        <xsl:if test="$is-fragment">
+            <xsl:call-template name="fragment-info" />
+        </xsl:if>
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" mode="copy" />
     </meta>
 </xsl:template>

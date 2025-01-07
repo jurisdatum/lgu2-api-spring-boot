@@ -54,7 +54,8 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void simplify(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = indent(simplifier.transform(clml));
+        Simplify.Parameters parameters = new Simplify.Parameters(TransformTest.isFragment(id), false);
+        String actual = indent(simplifier.transform(clml, parameters));
         String expected = read(id, "-simplified.xml");
         Assertions.assertEquals(expected, actual);
     }
@@ -76,7 +77,7 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void raw(String id) throws Exception {
         String clml = read(id, ".xml");
-        Metadata meta = simplifier.metadata(clml);
+        Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         String actual = mapper.writeValueAsString(meta.rawEffects());
         String expected = read(id, "-effects-raw.json");
         Assertions.assertEquals(expected, actual);
@@ -86,7 +87,7 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void sorted(String id) throws Exception {
         String clml = read(id, ".xml");
-        Metadata meta = simplifier.metadata(clml);
+        Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<UnappliedEffect> effects = meta.rawEffects();
         Effects.sort(effects);
         String actual = mapper.writeValueAsString(effects);
@@ -98,7 +99,7 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void filtered(String id) throws Exception {
         String clml = read(id, ".xml");
-        Metadata meta = simplifier.metadata(clml);
+        Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         Set<String> ids = meta.ancestors().stream().map(l -> l.id).collect(Collectors.toSet());
         meta.descendants().stream().map(l -> l.id).forEach(ids::add);
         List<UnappliedEffect> effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects(), ids);
@@ -111,7 +112,7 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void converted(String id) throws Exception {
         String clml = read(id, ".xml");
-        Metadata meta = simplifier.metadata(clml);
+        Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<Effect> effects = EffectsConverter.convert(meta.rawEffects());
         String actual = mapper.writeValueAsString(effects);
         String expected = read(id, "-effects-converted.json");
