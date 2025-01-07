@@ -45,24 +45,24 @@
                             xmlns:dct="http://purl.org/dc/terms/"
                             xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
                             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-775a4b1f57c4c20a8ee8c60cef111876"
-                              AffectingYear="2023"
-                              AffectingNumber="1382"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
-                              AffectedProvisionsText="s. 27"
-                              Row="83"
-                              AffectedNumber="29"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingProvisionsText="reg. 12(a)"
+         <ukm:UnappliedEffect Modified="2024-01-24T19:30:50Z"
                               AffectedYear="2023"
-                              EffectId="key-775a4b1f57c4c20a8ee8c60cef111876"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Modified="2024-01-24T19:30:50Z"
-                              RequiresApplied="true"
-                              Comments="so far as the substitution of subsection (1)(c) of section 3B (regulatory principles to be applied by both regulators) into FSMA 2000 requires the FCA and PRA(23) to have regard to the need to contribute towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021 where each regulator considers the exercise of its functions to be relevant to the making of such a contribution"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingYear="2023"
                               Type="coming into force"
-                              AffectedExtent="E+W+S+N.I.">
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/key-775a4b1f57c4c20a8ee8c60cef111876"
+                              AffectingProvisionsText="reg. 12(a)"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="83"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              Comments="so far as the substitution of subsection (1)(c) of section 3B (regulatory principles to be applied by both regulators) into FSMA 2000 requires the FCA and PRA(23) to have regard to the need to contribute towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021 where each regulator considers the exercise of its functions to be relevant to the making of such a contribution"
+                              EffectId="key-775a4b1f57c4c20a8ee8c60cef111876"
+                              AffectedProvisionsText="s. 27"
+                              AffectingNumber="1382"
+                              RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -92,24 +92,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingProvisionsText="reg. 12(b)"
-                              RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
-                              Row="132"
-                              AffectedExtent="E+W+S+N.I."
-                              Type="coming into force"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedYear="2023"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingYear="2023"
-                              URI="http://www.legislation.gov.uk/id/effect/key-6643c9e1369d48ceafa36242b1660e84"
-                              Modified="2024-01-24T19:30:50Z"
-                              Comments="so far as the insertion of section 30E(1) (c) (regulatory principles) into the Bank of England Act 1998 requires the Bank to have regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
-                              AffectedNumber="29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+         <ukm:UnappliedEffect AffectingYear="2023"
                               EffectId="key-6643c9e1369d48ceafa36242b1660e84"
+                              AffectingProvisionsText="reg. 12(b)"
+                              Comments="so far as the insertion of section 30E(1) (c) (regulatory principles) into the Bank of England Act 1998 requires the Bank to have regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
+                              Row="132"
+                              Type="coming into force"
                               AffectedProvisionsText="s. 48"
-                              AffectingNumber="1382">
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectingNumber="1382"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedYear="2023"
+                              Modified="2024-01-24T19:30:50Z"
+                              RequiresApplied="true"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              URI="http://www.legislation.gov.uk/id/effect/key-6643c9e1369d48ceafa36242b1660e84">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -139,24 +139,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedYear="2023"
-                              AffectedExtent="E+W+S+N.I."
-                              Row="133"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
-                              RequiresApplied="true"
-                              AffectedProvisionsText="s. 48"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Comments="so far as it inserts section 30I(2) into the Bank of England Act 1998"
-                              EffectId="key-9ab21e3e731a24f2a9c94f516811c1a4"
-                              AffectingProvisionsText="reg. 13"
-                              Type="coming into force"
-                              AffectedNumber="29"
-                              AffectingNumber="1382"
-                              Modified="2024-01-24T19:30:50Z"
-                              URI="http://www.legislation.gov.uk/id/effect/key-9ab21e3e731a24f2a9c94f516811c1a4"
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-9ab21e3e731a24f2a9c94f516811c1a4"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingYear="2023">
+                              Row="133"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingProvisionsText="reg. 13"
+                              Comments="so far as it inserts section 30I(2) into the Bank of England Act 1998"
+                              AffectedProvisionsText="s. 48"
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedNumber="29"
+                              AffectingYear="2023"
+                              Type="coming into force"
+                              AffectingNumber="1382"
+                              EffectId="key-9ab21e3e731a24f2a9c94f516811c1a4"
+                              RequiresApplied="true"
+                              Modified="2024-01-24T19:30:50Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -179,24 +179,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Row="142"
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              AffectingNumber="1382"
                               AffectedProvisionsText="s. 51"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
-                              EffectId="key-1dd6dcd3045d38388b0164a5b8d19144"
-                              AffectingProvisionsText="reg. 12(c)"
-                              AffectingYear="2023"
-                              AffectedYear="2023"
-                              AffectedNumber="29"
                               AffectedExtent="E+W+S+N.I."
-                              RequiresApplied="true"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Type="coming into force"
+                              URI="http://www.legislation.gov.uk/id/effect/key-1dd6dcd3045d38388b0164a5b8d19144"
                               Modified="2024-01-24T19:30:50Z"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
-                              URI="http://www.legislation.gov.uk/id/effect/key-1dd6dcd3045d38388b0164a5b8d19144"
+                              Row="142"
+                              Type="coming into force"
                               Comments="so far as it relates to the provision described in sub-paragraph (d)"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingNumber="1382">
+                              RequiresApplied="true"
+                              AffectingYear="2023"
+                              AffectingProvisionsText="reg. 12(c)"
+                              AffectedNumber="29"
+                              EffectId="key-1dd6dcd3045d38388b0164a5b8d19144"
+                              AffectedClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -226,24 +226,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingYear="2023"
-                              URI="http://www.legislation.gov.uk/id/effect/key-63ff469869f3663f6d87a1fe6da8d44f"
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-63ff469869f3663f6d87a1fe6da8d44f"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 12(d)"
                               Type="coming into force"
-                              AffectingNumber="1382"
+                              AffectingYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectedNumber="29"
                               RequiresApplied="true"
                               Modified="2024-01-24T19:30:50Z"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
-                              AffectedYear="2023"
-                              AffectedNumber="29"
-                              Comments="so far as it inserts provision into section 53(c) (regulatory principles) of the 2013 Act relating to the need to have due regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Row="463"
-                              AffectingProvisionsText="reg. 12(d)"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               EffectId="key-63ff469869f3663f6d87a1fe6da8d44f"
-                              AffectedProvisionsText="Sch. 7 para. 3">
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedExtent="E+W+S+N.I."
+                              Comments="so far as it inserts provision into section 53(c) (regulatory principles) of the 2013 Act relating to the need to have due regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
+                              Row="463"
+                              AffectedProvisionsText="Sch. 7 para. 3"
+                              AffectingNumber="1382">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -278,23 +278,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedNumber="29"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Row="11"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              RequiresApplied="true"
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingNumber="250"
                               AffectedProvisionsText="s. 51"
-                              Type="coming into force"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-250-auyyufg5-11"
-                              AffectingProvisionsText="reg. 4(a)"
                               AffectedYear="2023"
+                              Created="2024-03-01T08:48:36Z"
                               EffectId="key-4ca72b1f5ab1a9e840f7c98fe6d8fd48"
                               AffectedExtent="E+W+S+N.I."
-                              Created="2024-03-01T08:48:36Z"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-250-auyyufg5-11"
                               AffectingYear="2024"
-                              AffectingNumber="250"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250">
+                              AffectedNumber="29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 4(a)"
+                              Row="11"
+                              RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -317,23 +317,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedYear="2023"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedNumber="29"
-                              Row="12"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisionsText="reg. 4(b)"
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-250-auyyufg5-12"
-                              EffectId="key-b8a5201f49dba5aafc54289051c9ee13"
-                              Created="2024-03-01T08:48:36Z"
                               AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              EffectId="key-b8a5201f49dba5aafc54289051c9ee13"
+                              AffectingNumber="250"
+                              Row="12"
+                              Created="2024-03-01T08:48:36Z"
                               AffectedProvisionsText="Sch. 7 para. 1"
                               Type="coming into force"
-                              AffectingNumber="250"
-                              AffectingYear="2024">
+                              RequiresApplied="true"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 4(b)"
+                              AffectingYear="2024"
+                              AffectedYear="2023">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -361,24 +361,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingProvisionsText="reg. 2(a)"
+         <ukm:UnappliedEffect AffectedProvisionsText="s. 1(1)"
+                              AffectingNumber="620"
+                              EffectId="key-1b15c512ad8d010ef2176471c11b21f0"
                               Created="2024-05-10T10:12:42Z"
                               AffectedExtent="E+W+S+N.I."
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-5"
-                              Type="coming into force"
-                              RequiresApplied="true"
-                              AffectedProvisionsText="s. 1(1)"
-                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               Row="5"
-                              AffectingNumber="620"
-                              AffectedYear="2023"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
-                              AffectedNumber="29"
+                              Type="coming into force"
                               Comments="so far as it relates to the instruments listed in paragraphs (b) to (d) and in the Schedule, and to the extent that those instruments are not already revoked"
-                              EffectId="key-1b15c512ad8d010ef2176471c11b21f0"
+                              AffectedYear="2023"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct">
+                              AffectingProvisionsText="reg. 2(a)"
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              AffectingYear="2024"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -401,24 +401,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 1 Pt. 2"
-                              EffectId="key-3c482c15e9c9e217851bfbcb9f33d030"
-                              Type="coming into force"
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-6"
                               AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-6"
-                              AffectedNumber="29"
+                              AffectedProvisionsText="Sch. 1 Pt. 2"
+                              Type="coming into force"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedYear="2023"
-                              AffectingProvisionsText="reg. 2(b)"
-                              Comments="CER task: refer to SI for list of revocations brought into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedExtent="E+W+S+N.I."
                               Row="6"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Comments="CER task: refer to SI for list of revocations brought into force"
                               AffectingNumber="620"
-                              Created="2024-05-10T10:12:42Z"
+                              AffectedNumber="29"
                               RequiresApplied="true"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29">
+                              Created="2024-05-10T10:12:42Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 2(b)"
+                              EffectId="key-3c482c15e9c9e217851bfbcb9f33d030"
+                              AffectedYear="2023">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -446,24 +446,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedNumber="29"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-7"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
                               EffectId="key-31fe60e1709da08f2c1d9e78cbaab4da"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
                               Row="7"
-                              RequiresApplied="true"
-                              AffectingProvisionsText="Sch."
-                              Comments="CER task: refer to SI for list of revocations brought into force"
-                              AffectedYear="2023"
                               AffectedExtent="E+W+S+N.I."
-                              AffectedProvisionsText="Sch. 1 Pt. 3"
+                              Created="2024-05-10T10:12:42Z"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectingYear="2024"
-                              AffectingNumber="620"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
                               Type="coming into force"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-7"
-                              Created="2024-05-10T10:12:42Z">
+                              AffectedProvisionsText="Sch. 1 Pt. 3"
+                              Comments="CER task: refer to SI for list of revocations brought into force"
+                              AffectingNumber="620"
+                              AffectingProvisionsText="Sch."
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -493,22 +493,22 @@
          </ukm:UnappliedEffect>
          <ukm:UnappliedEffect EffectId="key-d10a5609f98f1bd084cd1f4700b6f248"
                               AffectingYear="2024"
-                              Type="coming into force"
-                              AffectedNumber="29"
                               AffectedYear="2023"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
-                              AffectingProvisionsText="reg. 2(d)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              AffectingNumber="620"
+                              AffectedNumber="29"
                               Row="8"
                               Comments="CER task: the revocation of SI 2023/1346"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Created="2024-05-10T10:12:42Z"
                               RequiresApplied="true"
-                              AffectingNumber="620"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-8"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedExtent="E+W+S+N.I."
+                              Created="2024-05-10T10:12:42Z"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedProvisionsText="Sch. 1 Pt. 5"
-                              AffectingClass="UnitedKingdomStatutoryInstrument">
+                              AffectingProvisionsText="reg. 2(d)"
+                              AffectedExtent="E+W+S+N.I.">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -536,24 +536,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-22"
-                              Row="22"
-                              AffectingYear="2024"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingProvisionsText="reg. 4(a)"
-                              RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Type="coming into force"
-                              AffectedProvisionsText="s. 2(1)"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedNumber="29"
-                              AffectedYear="2023"
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
                               EffectId="key-3f0ad2167f23fd4eb2201d322f0af474"
+                              AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-22"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Created="2024-10-30T11:28:57Z"
-                              Comments="insofar as it relates to the specified provisions"
                               AffectedExtent="E+W+S+N.I."
-                              AffectingNumber="1071">
+                              AffectedNumber="29"
+                              AffectedProvisionsText="s. 2(1)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              Comments="insofar as it relates to the specified provisions"
+                              AffectingProvisionsText="reg. 4(a)"
+                              AffectingYear="2024"
+                              Row="22">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -576,24 +576,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 1"
-                              EffectId="key-057048f57bc3c5c734c26ce426ba9298"
-                              Type="coming into force"
-                              Created="2024-10-30T11:28:57Z"
-                              Comments="insofar as it relates to the specified provisions"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingNumber="1071"
+         <ukm:UnappliedEffect AffectingNumber="1071"
                               AffectedExtent="E+W+S+N.I."
-                              RequiresApplied="true"
-                              AffectingProvisionsText="reg. 4(b)(i)"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedNumber="29"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-23"
+                              EffectId="key-057048f57bc3c5c734c26ce426ba9298"
                               AffectedYear="2023"
                               AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-23"
+                              AffectingProvisionsText="reg. 4(b)(i)"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Comments="insofar as it relates to the specified provisions"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="23"
+                              Created="2024-10-30T11:28:57Z"
+                              RequiresApplied="true"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              Row="23">
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Type="coming into force"
+                              AffectedNumber="29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -621,23 +621,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-24"
-                              AffectedExtent="E+W+S+N.I."
-                              Type="coming into force"
-                              Row="24"
-                              AffectedNumber="29"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectingNumber="1071"
-                              AffectingProvisionsText="reg. 4(b)(ii)"
-                              AffectedYear="2023"
+                              AffectedNumber="29"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Created="2024-10-30T11:28:57Z"
+                              AffectedProvisionsText="Sch. 2 para. 7"
                               RequiresApplied="true"
                               EffectId="key-face1264874e7a2829b9e5485f8bcafc"
-                              AffectedProvisionsText="Sch. 2 para. 7"
-                              AffectingYear="2024">
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedYear="2023"
+                              AffectingProvisionsText="reg. 4(b)(ii)"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-24"
+                              Row="24">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -665,23 +665,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect EffectId="key-e10ee43d4e6ec9712a7f97978c0dfbf6"
+         <ukm:UnappliedEffect AffectingYear="2024"
+                              RequiresApplied="true"
                               AffectingProvisionsText="reg. 4(b)(iii)"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectedYear="2023"
-                              AffectedNumber="29"
+                              Created="2024-10-30T11:28:57Z"
                               Type="coming into force"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
                               AffectedProvisionsText="Sch. 2 para. 10"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-25"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingYear="2024"
-                              Created="2024-10-30T11:28:57Z"
                               AffectingNumber="1071"
+                              Row="25"
+                              AffectedNumber="29"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Row="25">
+                              EffectId="key-e10ee43d4e6ec9712a7f97978c0dfbf6">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -709,23 +709,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Row="26"
-                              AffectedProvisionsText="Sch. 2 para. 11"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-26"
-                              EffectId="key-fd52d0024bd45957ccb7e6a0c961eb7e"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingNumber="1071"
-                              AffectedNumber="29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisionsText="reg. 4(b)(iv)"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectingYear="2024"
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 11"
                               Type="coming into force"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedYear="2023"
+                              AffectedNumber="29"
+                              Created="2024-10-30T11:28:57Z"
+                              Row="26"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-26"
+                              AffectingProvisionsText="reg. 4(b)(iv)"
+                              AffectingYear="2024"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              RequiresApplied="true"
-                              AffectedYear="2023">
+                              EffectId="key-fd52d0024bd45957ccb7e6a0c961eb7e"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -753,22 +753,22 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 20"
-                              AffectedYear="2023"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Row="27"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingNumber="1071"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Type="coming into force"
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
                               Created="2024-10-30T11:28:57Z"
                               AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-27"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedNumber="29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               AffectingProvisionsText="reg. 4(b)(v)"
+                              AffectedNumber="29"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-27"
+                              AffectedProvisionsText="Sch. 2 para. 20"
+                              RequiresApplied="true"
+                              Row="27"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
                               EffectId="key-a8b210d237e9b8f94a3e5906d089a06e">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
@@ -795,23 +795,23 @@
                <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect RequiresApplied="true"
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
                               AffectingYear="2024"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-28"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectedNumber="29"
-                              AffectingNumber="1071"
-                              AffectedYear="2023"
-                              AffectedProvisionsText="Sch. 2 para. 21"
-                              Type="coming into force"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              EffectId="key-a4d33c0aa0d95ac7e5420d96a63b9f2e"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingProvisionsText="reg. 4(b)(vi)"
                               Row="28"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingClass="UnitedKingdomStatutoryInstrument">
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedProvisionsText="Sch. 2 para. 21"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-28"
+                              AffectedNumber="29"
+                              EffectId="key-a4d33c0aa0d95ac7e5420d96a63b9f2e"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 4(b)(vi)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -837,23 +837,23 @@
                <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingProvisionsText="reg. 4(b)(vii)"
-                              AffectedNumber="29"
-                              Row="29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+         <ukm:UnappliedEffect AffectingYear="2024"
                               RequiresApplied="true"
                               AffectedProvisionsText="Sch. 2 para. 24"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-29"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedYear="2023"
-                              Created="2024-10-30T11:28:57Z"
-                              Type="coming into force"
                               EffectId="key-a6fa07ecf7417a7f1e37bc741593951e"
-                              AffectingYear="2024"
-                              AffectingNumber="1071">
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 4(b)(vii)"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedNumber="29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Row="29"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -879,23 +879,23 @@
                <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Type="coming into force"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisionsText="reg. 4(b)(viii)"
-                              AffectingYear="2024"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectedYear="2023"
-                              Row="30"
-                              AffectedProvisionsText="Sch. 2 para. 25"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-30"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedExtent="E+W+S+N.I."
-                              EffectId="key-f3f65c5688bfeaf42a2fcd37719b91c3"
                               RequiresApplied="true"
+                              Type="coming into force"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 4(b)(viii)"
+                              AffectedNumber="29"
+                              EffectId="key-f3f65c5688bfeaf42a2fcd37719b91c3"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-30"
+                              AffectedProvisionsText="Sch. 2 para. 25"
                               AffectingNumber="1071"
-                              AffectedNumber="29">
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="30"
+                              AffectingYear="2024"
+                              AffectedYear="2023">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -923,24 +923,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="s. 1(1)"
-                              Comments="so far as it relates to the instruments specified"
-                              EffectId="key-b41e92e2ab19ff21eaa49082a168489f"
-                              Row="31"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedYear="2023"
-                              AffectingNumber="1071"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-31"
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingYear="2024"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingProvisionsText="reg. 5(a)"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Type="coming into force"
+                              Row="31"
                               AffectedNumber="29"
+                              Comments="so far as it relates to the instruments specified"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingYear="2024"
                               RequiresApplied="true"
-                              Type="coming into force">
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-31"
+                              EffectId="key-b41e92e2ab19ff21eaa49082a168489f"
+                              AffectedYear="2023"
+                              AffectedProvisionsText="s. 1(1)"
+                              AffectingNumber="1071"
+                              AffectingProvisionsText="reg. 5(a)">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -963,24 +963,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
-                              AffectingNumber="1071"
-                              Comments="so far as it relates to the instruments specified"
-                              Row="32"
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              EffectId="key-7eb752917d4f18622bcb141bebaa2b22"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingYear="2024"
-                              AffectedProvisionsText="s. 2(1)"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedNumber="29"
                               Type="coming into force"
-                              AffectingProvisionsText="reg. 5(b)"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Created="2024-10-30T11:28:57Z"
+                              Comments="so far as it relates to the instruments specified"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedProvisionsText="s. 2(1)"
+                              AffectedNumber="29"
                               AffectedYear="2023"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-32">
+                              Row="32"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 5(b)"
+                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-32"
+                              AffectingNumber="1071"
+                              EffectId="key-7eb752917d4f18622bcb141bebaa2b22">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1003,24 +1003,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-33"
-                              AffectingProvisionsText="reg. 5(c) Sch."
-                              AffectingYear="2024"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              EffectId="key-0392860f3571b8e8cef819577ebb6c68"
-                              Type="coming into force"
+         <ukm:UnappliedEffect AffectingNumber="1071"
                               RequiresApplied="true"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Comments="CER task - see Sch. for REUL revoked"
-                              AffectingNumber="1071"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               Row="33"
-                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 5(c) Sch."
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Created="2024-10-30T11:28:57Z"
                               AffectedProvisionsText="Sch. 1 Pt. 3"
                               AffectedNumber="29"
-                              AffectedExtent="E+W+S+N.I."
-                              Created="2024-10-30T11:28:57Z">
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-33"
+                              Comments="CER task - see Sch. for REUL revoked"
+                              EffectId="key-0392860f3571b8e8cef819577ebb6c68"
+                              AffectedYear="2023"
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1053,24 +1053,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedYear="2023"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Comments="so far as it relates to para 17"
-                              AffectingYear="2024"
-                              AffectedExtent="E+W+S+N.I."
-                              RequiresApplied="true"
-                              Row="34"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-34"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingNumber="1071"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedNumber="29"
-                              AffectedProvisionsText="Sch. 2 para. 1"
-                              Created="2024-10-30T11:28:57Z"
-                              Type="coming into force"
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectingProvisionsText="reg. 5(d)(i)"
-                              EffectId="key-ffa7a7f46945def53f19073386c5aa32">
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-34"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              EffectId="key-ffa7a7f46945def53f19073386c5aa32"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              AffectingYear="2024"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedYear="2023"
+                              AffectingNumber="1071"
+                              Row="34"
+                              Type="coming into force"
+                              Comments="so far as it relates to para 17">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1098,23 +1098,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect RequiresApplied="true"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedProvisionsText="Sch. 2 para. 17"
-                              AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-35"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedNumber="29"
-                              Row="35"
-                              AffectingNumber="1071"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
                               Type="coming into force"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedNumber="29"
+                              AffectingProvisionsText="reg. 5(d)(ii)"
+                              AffectedProvisionsText="Sch. 2 para. 17"
+                              RequiresApplied="true"
                               AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-35"
+                              AffectingNumber="1071"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               EffectId="key-2d98fff858a07303a424b1fd76762dd3"
-                              AffectingProvisionsText="reg. 5(d)(ii)">
+                              AffectingYear="2024"
+                              Row="35">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1142,24 +1142,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedYear="2023"
-                              RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+         <ukm:UnappliedEffect AffectedProvisionsText="s. 2(1)"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              Type="coming into force"
-                              AffectingYear="2024"
-                              EffectId="key-0c4d4c801904955106bf6bea8f1d86f7"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-36"
-                              AffectedNumber="29"
-                              AffectingNumber="1071"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Row="36"
-                              AffectingProvisionsText="reg. 6(a)"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedProvisionsText="s. 2(1)"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               Created="2024-10-30T11:28:57Z"
-                              Comments="so far as it relates to the provisions specified">
+                              Type="coming into force"
+                              RequiresApplied="true"
+                              AffectingNumber="1071"
+                              AffectedYear="2023"
+                              Row="36"
+                              Comments="so far as it relates to the provisions specified"
+                              EffectId="key-0c4d4c801904955106bf6bea8f1d86f7"
+                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingProvisionsText="reg. 6(a)"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-36">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1182,24 +1182,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Comments="so far as it relates to paras 22, 27"
-                              AffectedYear="2023"
-                              AffectingYear="2024"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedExtent="E+W+S+N.I."
-                              Type="coming into force"
-                              AffectedNumber="29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 1"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-37"
-                              RequiresApplied="true"
-                              AffectedProvisionsText="Sch. 2 para. 1"
-                              EffectId="key-4a58c71b0acd763d658115038ec9091f"
-                              AffectingNumber="1071"
-                              Row="37"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               AffectingProvisionsText="reg. 6(b)(i)"
-                              AffectingClass="UnitedKingdomStatutoryInstrument">
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              RequiresApplied="true"
+                              AffectedExtent="E+W+S+N.I."
+                              EffectId="key-4a58c71b0acd763d658115038ec9091f"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingYear="2024"
+                              Comments="so far as it relates to paras 22, 27"
+                              Row="37"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedNumber="29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1227,23 +1227,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingYear="2024"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-38"
-                              AffectedProvisionsText="Sch. 2 para. 22"
-                              Type="coming into force"
-                              EffectId="key-f16e326d52a716e3e2083cb78a9af4af"
-                              AffectedYear="2023"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedNumber="29"
-                              AffectingNumber="1071"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
                               AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-38"
+                              EffectId="key-f16e326d52a716e3e2083cb78a9af4af"
+                              AffectingNumber="1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingYear="2024"
                               Row="38"
-                              AffectingProvisionsText="reg. 6(b)(ii)">
+                              AffectedProvisionsText="Sch. 2 para. 22"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingProvisionsText="reg. 6(b)(ii)"
+                              AffectedYear="2023">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1269,23 +1269,23 @@
                <ukm:InForce Applied="false" Date="2025-03-31" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 27"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Row="39"
-                              AffectingNumber="1071"
-                              AffectedNumber="29"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-39"
-                              Type="coming into force"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              EffectId="key-532e46b7440c56a22a315f155568a44f"
-                              AffectingYear="2024"
+         <ukm:UnappliedEffect EffectId="key-532e46b7440c56a22a315f155568a44f"
+                              AffectedProvisionsText="Sch. 2 para. 27"
                               AffectingProvisionsText="reg. 6(b)(iii)"
+                              AffectingYear="2024"
+                              AffectedNumber="29"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Created="2024-10-30T11:28:57Z"
+                              Row="39"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               RequiresApplied="true"
                               AffectedYear="2023"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Created="2024-10-30T11:28:57Z">
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-39"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
+                              Type="coming into force">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1313,24 +1313,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Type="coming into force"
-                              AffectedNumber="29"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              Row="40"
-                              RequiresApplied="true"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedYear="2023"
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
                               AffectingProvisionsText="reg. 7(a)"
-                              AffectedProvisionsText="s. 2(1)"
-                              AffectingYear="2024"
-                              AffectingNumber="1071"
-                              EffectId="key-d9301ed95ee3a14bc0fd8ddbafc16f87"
+                              Row="40"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedYear="2023"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-40"
+                              AffectedProvisionsText="s. 2(1)"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              EffectId="key-d9301ed95ee3a14bc0fd8ddbafc16f87"
+                              AffectingYear="2024"
+                              Comments="so far as it relates to the provisions specified"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              Comments="so far as it relates to the provisions specified">
+                              RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1353,24 +1353,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedNumber="29"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              RequiresApplied="true"
-                              EffectId="key-1de537552df350acdc75ac156390d541"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-41"
-                              AffectedExtent="E+W+S+N.I."
-                              Type="coming into force"
-                              AffectingProvisionsText="reg. 7(b)(i)"
-                              Comments="so far as it relates to para 18"
-                              Row="41"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedProvisionsText="Sch. 2 para. 1"
-                              AffectedYear="2023"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectingNumber="1071"
-                              AffectingYear="2024">
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-41"
+                              AffectingProvisionsText="reg. 7(b)(i)"
+                              RequiresApplied="true"
+                              Comments="so far as it relates to para 18"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              Row="41"
+                              AffectedYear="2023"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              EffectId="key-1de537552df350acdc75ac156390d541"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1398,23 +1398,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 18"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedNumber="29"
+         <ukm:UnappliedEffect AffectingProvisionsText="reg. 7(b)(ii)"
                               Row="42"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingProvisionsText="reg. 7(b)(ii)"
-                              AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-42"
-                              EffectId="key-4fe86b0255bcedb6996f0962dee65b0f"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               AffectingNumber="1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              AffectedProvisionsText="Sch. 2 para. 18"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              EffectId="key-4fe86b0255bcedb6996f0962dee65b0f"
+                              AffectedExtent="E+W+S+N.I."
                               Type="coming into force"
-                              RequiresApplied="true">
+                              AffectingYear="2024"
+                              RequiresApplied="true"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-42"
+                              Created="2024-10-30T11:28:57Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1442,24 +1442,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingYear="2024"
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              RequiresApplied="true"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectedNumber="29"
                               EffectId="key-5bda9a357eba200805566d6a0ef7da46"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 8(a)"
                               AffectedProvisionsText="s. 2(1)"
-                              AffectingNumber="1071"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Created="2024-10-30T11:28:57Z"
                               Comments="so far as it relates to the provisions specified"
                               Type="coming into force"
-                              AffectingProvisionsText="reg. 8(a)"
-                              AffectedExtent="E+W+S+N.I."
-                              RequiresApplied="true"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Created="2024-10-30T11:28:57Z"
                               Row="43"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-43"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedYear="2023">
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingYear="2024">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1482,24 +1482,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectingNumber="1071"
-                              RequiresApplied="true"
+         <ukm:UnappliedEffect AffectingProvisionsText="reg. 8(b)(i)"
+                              Row="44"
+                              AffectingYear="2024"
                               AffectedYear="2023"
+                              Comments="so far as it relates to paras 8, 12"
+                              AffectingNumber="1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedNumber="29"
                               EffectId="key-67aeba3a8024046792f3ceb2e951e7b8"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-44"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              Row="44"
+                              Created="2024-10-30T11:28:57Z"
                               Type="coming into force"
-                              AffectingYear="2024"
-                              Comments="so far as it relates to paras 8, 12"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               AffectedProvisionsText="Sch. 2 para. 1"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingProvisionsText="reg. 8(b)(i)">
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-44"
+                              AffectedExtent="E+W+S+N.I.">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1527,23 +1527,23 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              Row="45"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingProvisionsText="reg. 8(b)(ii)"
-                              Type="coming into force"
+         <ukm:UnappliedEffect AffectingYear="2024"
+                              AffectedYear="2023"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              Row="45"
+                              AffectingNumber="1071"
+                              AffectingProvisionsText="reg. 8(b)(ii)"
+                              AffectedProvisionsText="Sch. 2 para. 8"
+                              Type="coming into force"
+                              AffectedExtent="E+W+S+N.I."
                               RequiresApplied="true"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedNumber="29"
-                              AffectedProvisionsText="Sch. 2 para. 8"
                               EffectId="key-1f578448600b213529551d923f8ace93"
-                              AffectingNumber="1071"
-                              AffectedYear="2023"
-                              AffectingYear="2024"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-45">
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-45"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1571,23 +1571,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect Type="coming into force"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-46"
+         <ukm:UnappliedEffect RequiresApplied="true"
+                              AffectingNumber="1071"
                               Row="46"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedProvisionsText="Sch. 2 para. 12"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedYear="2023"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
                               AffectedNumber="29"
-                              RequiresApplied="true"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedYear="2023"
-                              AffectingNumber="1071"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectingYear="2024"
-                              AffectedProvisionsText="Sch. 2 para. 12"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               EffectId="key-0b2c4d4d99ff5441fe37d2646c8bf91d"
-                              AffectingProvisionsText="reg. 8(b)(iii)"
-                              Created="2024-10-30T11:28:57Z"
-                              AffectedClass="UnitedKingdomPublicGeneralAct">
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-46"
+                              AffectingProvisionsText="reg. 8(b)(iii)">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1615,24 +1615,24 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingYear="2024"
-                              AffectedNumber="29"
-                              Row="47"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              RequiresApplied="true"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-47"
-                              AffectingNumber="1071"
-                              AffectedYear="2023"
-                              Created="2024-10-30T11:28:57Z"
-                              Comments="so far as it relates to the provisions specified"
-                              Type="coming into force"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedProvisionsText="s. 2(1)"
+         <ukm:UnappliedEffect AffectingNumber="1071"
+                              AffectingYear="2024"
                               AffectingProvisionsText="reg. 9(a)"
-                              EffectId="key-d7f3f0ae6a7e1ecdef5782fa74077ac4">
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-47"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedProvisionsText="s. 2(1)"
+                              Comments="so far as it relates to the provisions specified"
+                              AffectedExtent="E+W+S+N.I."
+                              RequiresApplied="true"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              EffectId="key-d7f3f0ae6a7e1ecdef5782fa74077ac4"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Type="coming into force"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Row="47"
+                              AffectedNumber="29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1655,24 +1655,24 @@
                             Qualification="for specified purposes"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedNumber="29"
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-48"
+                              AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              Comments="so far as it relates to specified paras"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              EffectId="key-5d78b60c57bc357d1ca634e04e921d7a"
+                              AffectedNumber="29"
+                              Row="48"
+                              RequiresApplied="true"
                               AffectingProvisionsText="reg. 9(b)(i)"
                               Type="coming into force"
-                              Row="48"
-                              AffectedExtent="E+W+S+N.I."
                               AffectedProvisionsText="Sch. 2 para. 44"
-                              AffectingNumber="1071"
                               Created="2024-10-30T11:28:57Z"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              EffectId="key-5d78b60c57bc357d1ca634e04e921d7a"
-                              AffectedYear="2023"
-                              RequiresApplied="true"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-48"
-                              AffectingYear="2024"
-                              Comments="so far as it relates to specified paras"
-                              AffectedClass="UnitedKingdomPublicGeneralAct">
+                              AffectingNumber="1071"
+                              AffectingYear="2024">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1701,22 +1701,22 @@
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
          <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingNumber="1071"
-                              AffectedNumber="29"
-                              EffectId="key-7777b1517ef9a14c9f5496ae07b47e2c"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              RequiresApplied="true"
                               AffectedProvisionsText="Sch. 2 para. 45"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-49"
-                              Type="coming into force"
                               Row="49"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-49"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
                               AffectingYear="2024"
                               AffectingProvisionsText="reg. 9(b)(ii)"
+                              RequiresApplied="true"
                               Created="2024-10-30T11:28:57Z"
-                              AffectedExtent="E+W+S+N.I.">
+                              AffectedNumber="29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedExtent="E+W+S+N.I."
+                              EffectId="key-7777b1517ef9a14c9f5496ae07b47e2c">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1744,23 +1744,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect EffectId="key-727c69f405d3a38fbaac4f205aebaee1"
-                              AffectingYear="2024"
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              EffectId="key-727c69f405d3a38fbaac4f205aebaee1"
+                              RequiresApplied="true"
+                              Row="50"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedProvisionsText="Sch. 2 para. 46"
+                              AffectedYear="2023"
+                              AffectingNumber="1071"
                               AffectingProvisionsText="reg. 9(b)(iii)"
                               Created="2024-10-30T11:28:57Z"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedExtent="E+W+S+N.I."
-                              Row="50"
-                              Type="coming into force"
-                              AffectedYear="2023"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedNumber="29"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              AffectingNumber="1071"
-                              RequiresApplied="true"
+                              AffectedNumber="29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectingClass="UnitedKingdomStatutoryInstrument"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-50"
-                              AffectedProvisionsText="Sch. 2 para. 46">
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-50">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1786,23 +1786,23 @@
                <ukm:InForce Applied="false" Date="2026-07-06" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingYear="2024"
-                              AffectingProvisionsText="reg. 9(b)(iv)"
-                              AffectedExtent="E+W+S+N.I."
-                              AffectedNumber="29"
-                              Created="2024-10-30T11:28:57Z"
-                              Row="51"
+         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectedYear="2023"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-51"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedProvisionsText="Sch. 2 para. 49"
+                              AffectingYear="2024"
+                              AffectedExtent="E+W+S+N.I."
                               EffectId="key-57cb6bae9180567df9bf60ef54f1a595"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Row="51"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingProvisionsText="reg. 9(b)(iv)"
                               AffectingNumber="1071"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               Type="coming into force"
-                              RequiresApplied="true"
-                              AffectingClass="UnitedKingdomStatutoryInstrument">
+                              AffectedProvisionsText="Sch. 2 para. 49"
+                              RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1830,23 +1830,23 @@
                             Qualification="in force in so far as not already in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
-                              EffectId="key-95378eb63fc2ee411b13536fe61a4e6e"
-                              Type="coming into force"
-                              AffectedExtent="E+W+S+N.I."
-                              RequiresApplied="true"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedYear="2023"
-                              Row="52"
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
                               AffectedNumber="29"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-52"
-                              AffectingYear="2024"
                               AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              AffectingYear="2024"
                               AffectingProvisionsText="reg. 9(b)(v)"
                               AffectedProvisionsText="Sch. 2 para. 50"
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              Created="2024-10-30T11:28:57Z">
+                              Created="2024-10-30T11:28:57Z"
+                              EffectId="key-95378eb63fc2ee411b13536fe61a4e6e"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-52"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Row="52">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1872,23 +1872,23 @@
                <ukm:InForce Applied="false" Date="2026-07-06" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
-                              RequiresApplied="true"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
-                              AffectingNumber="1083"
-                              AffectedYear="2023"
-                              AffectingEffectsExtent="E+W+S+N.I."
-                              AffectedNumber="29"
-                              Created="2024-11-04T13:29:24Z"
-                              AffectingProvisionsText="reg. 3"
-                              AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingYear="2024"
-                              EffectId="key-1e085e893b54fd49e07b4f4225e19b9f"
-                              Row="15"
-                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+         <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
                               Type="savings for effects of commencing S.I. 2024/620"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 3"
+                              AffectingEffectsExtent="E+W+S+N.I."
+                              AffectedProvisionsText="Sch. 1 Pt. 2"
+                              Created="2024-11-04T13:29:24Z"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-1e085e893b54fd49e07b4f4225e19b9f"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-15"
-                              AffectedProvisionsText="Sch. 1 Pt. 2">
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingNumber="1083"
+                              AffectedNumber="29"
+                              Row="15">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1921,23 +1921,23 @@
                <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectedNumber="29"
-                              RequiresApplied="true"
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 1 Pt. 3"
                               AffectingProvisionsText="reg. 3"
-                              AffectingNumber="1083"
-                              Row="16"
-                              AffectingYear="2024"
-                              AffectingEffectsExtent="E+W+S+N.I."
                               EffectId="key-026ab96648fe311270c4b2d2f688f16e"
+                              AffectingNumber="1083"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
                               AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
                               Type="savings for effects of commencing S.I. 2024/620"
+                              Row="16"
+                              RequiresApplied="true"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectedProvisionsText="Sch. 1 Pt. 3"
-                              Created="2024-11-04T13:29:24Z"
+                              AffectedNumber="29"
+                              AffectingEffectsExtent="E+W+S+N.I."
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-16"
+                              Created="2024-11-04T13:29:24Z"
                               AffectedYear="2023"
-                              AffectingClass="UnitedKingdomStatutoryInstrument">
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-16">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns=""
@@ -1970,22 +1970,22 @@
                <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
-         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
-                              AffectingEffectsExtent="E+W+S+N.I."
-                              AffectingYear="2024"
-                              AffectingProvisionsText="reg. 3"
-                              Created="2024-11-04T13:29:24Z"
-                              Type="savings for effects of commencing S.I. 2024/620"
-                              RequiresApplied="true"
-                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-17"
-                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
+         <ukm:UnappliedEffect Type="savings for effects of commencing S.I. 2024/620"
                               AffectedYear="2023"
                               AffectedClass="UnitedKingdomPublicGeneralAct"
-                              AffectingNumber="1083"
-                              AffectedNumber="29"
+                              AffectingProvisionsText="reg. 3"
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-17"
                               Row="17"
+                              Created="2024-11-04T13:29:24Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
+                              AffectedNumber="29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingEffectsExtent="E+W+S+N.I."
+                              AffectingNumber="1083"
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
                               EffectId="key-4ca6662a57fd72531d16eb7d7ac39093"
+                              RequiresApplied="true"
                               AffectedProvisionsText="Sch. 1 Pt. 5">
             <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
