@@ -42,7 +42,7 @@ class UnappliedEffectsTest {
     }
 
     static Stream<String> provide() {
-        return Stream.of("ukpga/2000/8/section/91");
+        return Stream.of("ukpga/2000/8/section/91" , "ukpga/2023/29/2024-11-01");
     }
 
     private final ObjectMapper mapper = new ObjectMapper()

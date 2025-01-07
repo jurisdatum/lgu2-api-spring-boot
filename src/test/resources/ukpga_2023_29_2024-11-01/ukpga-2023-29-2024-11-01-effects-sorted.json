@@ -1,0 +1,1918 @@
+[ {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 5(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(a)",
+    "ref" : "regulation-5-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 1(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 1(1)",
+    "ref" : "section-1-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/1/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 620,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/620",
+  "affectingProvisionsText" : "reg. 2(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 2(a)",
+    "ref" : "regulation-2-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 1(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 1(1)",
+    "ref" : "section-1-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/1/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(a)",
+    "ref" : "regulation-4-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 5(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(b)",
+    "ref" : "regulation-5-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 6(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 6(a)",
+    "ref" : "regulation-6-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 7(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 7(a)",
+    "ref" : "regulation-7-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 8(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 8(a)",
+    "ref" : "regulation-8-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(a)",
+    "ref" : "regulation-9-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 2(1)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 2(1)",
+    "ref" : "section-2-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2023,
+  "affectingNumber" : 1382,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2023/1382",
+  "affectingProvisionsText" : "reg. 12(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 12(a)",
+    "ref" : "regulation-12-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 27",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 27",
+    "ref" : "section-27",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/27",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2023,
+  "affectingNumber" : 1382,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2023/1382",
+  "affectingProvisionsText" : "reg. 12(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 12(b)",
+    "ref" : "regulation-12-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 48",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 48",
+    "ref" : "section-48",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/48",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2023,
+  "affectingNumber" : 1382,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2023/1382",
+  "affectingProvisionsText" : "reg. 13",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 13",
+    "ref" : "regulation-13",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/13",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 48",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 48",
+    "ref" : "section-48",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/48",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-02-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2023,
+  "affectingNumber" : 1382,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2023/1382",
+  "affectingProvisionsText" : "reg. 12(c)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 12(c)",
+    "ref" : "regulation-12-c",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/c",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 51",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 51",
+    "ref" : "section-51",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/51",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 250,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/250",
+  "affectingProvisionsText" : "reg. 4(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(a)",
+    "ref" : "regulation-4-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/250/regulation/4/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "s. 51",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 51",
+    "ref" : "section-51",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/section/51",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 5(c) Sch.",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(c)",
+    "ref" : "regulation-5-c",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/c",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Sch.",
+    "ref" : "schedule",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/schedule",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 1 Pt. 3",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 3",
+    "ref" : "schedule-1-part-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 620,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/620",
+  "affectingProvisionsText" : "reg. 2(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 2(b)",
+    "ref" : "regulation-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 1 Pt. 2",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 2",
+    "ref" : "schedule-1-part-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/2",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 620,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/620",
+  "affectingProvisionsText" : "Sch.",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch.",
+    "ref" : "schedule",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/620/schedule",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 1 Pt. 3",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 3",
+    "ref" : "schedule-1-part-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 620,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/620",
+  "affectingProvisionsText" : "reg. 2(d)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 2(d)",
+    "ref" : "regulation-2-d",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/d",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 1 Pt. 5",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 5",
+    "ref" : "schedule-1-part-5",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/5",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1083,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
+  "affectingProvisionsText" : "reg. 3",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 3",
+    "ref" : "regulation-3",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "Sch. 1 Pt. 2",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 2",
+    "ref" : "schedule-1-part-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/2",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)(b)",
+    "ref" : "regulation-1-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1083,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
+  "affectingProvisionsText" : "reg. 3",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 3",
+    "ref" : "regulation-3",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "Sch. 1 Pt. 3",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 3",
+    "ref" : "schedule-1-part-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)(b)",
+    "ref" : "regulation-1-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1083,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
+  "affectingProvisionsText" : "reg. 3",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 3",
+    "ref" : "regulation-3",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedProvisionsText" : "Sch. 1 Pt. 5",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 1 ",
+    "ref" : "schedule-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "Pt. 5",
+    "ref" : "schedule-1-part-5",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/5",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "reg. 1(2)(b)",
+    "ref" : "regulation-1-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(i)",
+    "ref" : "regulation-4-b-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-2-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(ii)",
+    "ref" : "regulation-4-b-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 7",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 7",
+    "ref" : "schedule-2-paragraph-7",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/7",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(iii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(iii)",
+    "ref" : "regulation-4-b-iii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/iii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 10",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 10",
+    "ref" : "schedule-2-paragraph-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(iv)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(iv)",
+    "ref" : "regulation-4-b-iv",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/iv",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 11",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 11",
+    "ref" : "schedule-2-paragraph-11",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/11",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(v)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(v)",
+    "ref" : "regulation-4-b-v",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/v",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 20",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 20",
+    "ref" : "schedule-2-paragraph-20",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/20",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(vi)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(vi)",
+    "ref" : "regulation-4-b-vi",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/vi",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 21",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 21",
+    "ref" : "schedule-2-paragraph-21",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/21",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(vii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(vii)",
+    "ref" : "regulation-4-b-vii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/vii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 24",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 24",
+    "ref" : "schedule-2-paragraph-24",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/24",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 4(b)(viii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)(viii)",
+    "ref" : "regulation-4-b-viii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/viii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 25",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 25",
+    "ref" : "schedule-2-paragraph-25",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/25",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 5(d)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(d)(i)",
+    "ref" : "regulation-5-d-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/d/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-2-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 5(d)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(d)(ii)",
+    "ref" : "regulation-5-d-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/d/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 17",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 17",
+    "ref" : "schedule-2-paragraph-17",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/17",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 6(b)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 6(b)(i)",
+    "ref" : "regulation-6-b-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-2-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 6(b)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 6(b)(ii)",
+    "ref" : "regulation-6-b-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 22",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 22",
+    "ref" : "schedule-2-paragraph-22",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/22",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 6(b)(iii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 6(b)(iii)",
+    "ref" : "regulation-6-b-iii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/iii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 27",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 27",
+    "ref" : "schedule-2-paragraph-27",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/27",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 7(b)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 7(b)(i)",
+    "ref" : "regulation-7-b-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/b/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-2-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 7(b)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 7(b)(ii)",
+    "ref" : "regulation-7-b-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/b/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 18",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 18",
+    "ref" : "schedule-2-paragraph-18",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/18",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 8(b)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 8(b)(i)",
+    "ref" : "regulation-8-b-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-2-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 8(b)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 8(b)(ii)",
+    "ref" : "regulation-8-b-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 8",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 8",
+    "ref" : "schedule-2-paragraph-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/8",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 8(b)(iii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 8(b)(iii)",
+    "ref" : "regulation-8-b-iii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/iii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 12",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 12",
+    "ref" : "schedule-2-paragraph-12",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/12",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(b)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(b)(i)",
+    "ref" : "regulation-9-b-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 44",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 44",
+    "ref" : "schedule-2-paragraph-44",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/44",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(b)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(b)(ii)",
+    "ref" : "regulation-9-b-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 45",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 45",
+    "ref" : "schedule-2-paragraph-45",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/45",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(b)(iii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(b)(iii)",
+    "ref" : "regulation-9-b-iii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/iii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 46",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 46",
+    "ref" : "schedule-2-paragraph-46",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/46",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(b)(iv)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(b)(iv)",
+    "ref" : "regulation-9-b-iv",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/iv",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 49",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 49",
+    "ref" : "schedule-2-paragraph-49",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/49",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1071,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1071",
+  "affectingProvisionsText" : "reg. 9(b)(v)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 9(b)(v)",
+    "ref" : "regulation-9-b-v",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/v",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 2 para. 50",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2 ",
+    "ref" : "schedule-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 50",
+    "ref" : "schedule-2-paragraph-50",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/50",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "wholly in force"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2023,
+  "affectingNumber" : 1382,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2023/1382",
+  "affectingProvisionsText" : "reg. 12(d)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 12(d)",
+    "ref" : "regulation-12-d",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/d",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 7 para. 3",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 7 ",
+    "ref" : "schedule-7",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 3",
+    "ref" : "schedule-7-paragraph-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7/paragraph/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "for specified purposes"
+  } ],
+  "commencementAuthority" : [ ]
+}, {
+  "requiresApplied" : true,
+  "type" : "coming into force",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 250,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/250",
+  "affectingProvisionsText" : "reg. 4(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 4(b)",
+    "ref" : "regulation-4-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/250/regulation/4/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : null,
+  "affectedProvisionsText" : "Sch. 7 para. 1",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 7 ",
+    "ref" : "schedule-7",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 1",
+    "ref" : "schedule-7-paragraph-1",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7/paragraph/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : null,
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "prospective" : null,
+    "qualification" : "in force in so far as not already in force"
+  } ],
+  "commencementAuthority" : [ ]
+} ]

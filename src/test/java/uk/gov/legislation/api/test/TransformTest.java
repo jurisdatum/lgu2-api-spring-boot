@@ -14,6 +14,8 @@ import uk.gov.legislation.endpoints.fragment.service.TransformationService;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -28,7 +30,7 @@ public class TransformTest {
     }
 
     static Stream<String> provide() {
-        return Stream.of("ukpga/2000/8/section/91");
+        return Stream.of("ukpga/2000/8/section/91", "ukpga/2023/29/2024-11-01");
     }
 
     static String read(String resource) throws IOException {
@@ -51,28 +53,39 @@ public class TransformTest {
         return read(resource);
     }
 
+    private static String replaceAknDate(String akn) {
+        return akn.replaceFirst("<FRBRdate date=\".+?\" name=\"transform\"/>", "<FRBRdate date=\"1001-01-01-00:00\" name=\"transform\"/>");
+    }
+
     @ParameterizedTest
     @MethodSource("provide")
     void akn(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = transform.transformToAkn(clml)
-            .replaceFirst("<FRBRdate date=\".+?\" name=\"transform\"/>", "<FRBRdate date=\"2024-12-19-05:00\" name=\"transform\"/>");
+        String actual = transform.transformToAkn(clml);
         String expected = read(id, ".akn.xml");
+        actual = replaceAknDate(actual);
+        expected = replaceAknDate(expected);
         Assertions.assertEquals(expected, actual);
+    }
+
+    private static String replaceHtmlDate(String html) {
+        return html.replaceFirst("""
+            <div property="FRBRdate" typeof="FRBRdate">
+             {21}<meta property="date" content="[^"]+">
+             {21}<meta property="name" content="transform">""", """
+            <div property="FRBRdate" typeof="FRBRdate">
+                                 <meta property="date" content="1001-01-01-00:00">
+                                 <meta property="name" content="transform">""");
     }
 
     @ParameterizedTest
     @MethodSource("provide")
     void html(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = transform.transformToHtml(clml, true).replaceFirst("""
-            <div property="FRBRdate" typeof="FRBRdate">
-             {21}<meta property="date" content="[^"]+">
-             {21}<meta property="name" content="transform">""", """
-            <div property="FRBRdate" typeof="FRBRdate">
-                                 <meta property="date" content="2024-12-19-05:00">
-                                 <meta property="name" content="transform">""");
+        String actual = transform.transformToHtml(clml, true);
         String expected = read(id, ".html");
+        actual = replaceHtmlDate(actual);
+        expected = replaceHtmlDate(expected);
         Assertions.assertEquals(expected, actual);
     }
 
