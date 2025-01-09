@@ -6,9 +6,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.params.*;
+import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.params.Number;
+import uk.gov.legislation.params.*;
 
 import java.util.Optional;
 
@@ -75,22 +75,17 @@ public interface DocumentApi {
             @RequestParam Optional<String> version);
 
     /**
-     * Record representing the response structure for JSON document content.
-     */
-    record Response(Metadata meta, String html) {}
-
-    /**
      * Retrieves document metadata and HTML content in JSON format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/json")
-    ResponseEntity<Response> getDocumentJson(
+    ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
-    ResponseEntity<Response> getDocumentJson(
+    ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

@@ -2,7 +2,7 @@ package uk.gov.legislation.endpoints.fragment.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
+import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.endpoints.fragment.api.FragmentApi;
 import uk.gov.legislation.endpoints.fragment.service.FragmentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
@@ -96,16 +96,16 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to JSON format using the transformation service.
      */
     @Override
-    public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, int year, int number, String section, Optional<String> version) {
+    public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section, Optional<String> version) {
         return getFragmentJson(type, Integer.toString(year), number, section, version);
     }
     @Override
-    public ResponseEntity<DocumentApi.Response> getFragmentJson(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number, String section, Optional<String> version) {
         String regnalYear = String.join("/", monarch, years);
         return getFragmentJson(type, regnalYear, number, section, version);
     }
-    private ResponseEntity<DocumentApi.Response> getFragmentJson(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::createJsonResponse);
+    private ResponseEntity<Fragment> getFragmentJson(String type, String year, int number, String section, Optional<String> version) {
+        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToJsonResponse);
     }
 
 }

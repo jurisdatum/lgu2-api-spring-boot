@@ -7,12 +7,13 @@ import net.sf.saxon.s9api.XdmNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
+import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Helper;
+import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
 @Service
@@ -48,8 +49,7 @@ public class TransformationService {
         }
     }
 
-    // FixMe method name should match DocumentService
-    public DocumentApi.Response createJsonResponse(String clml) {
+    public Fragment transformToJsonResponse(String clml) {
         try {
             long start = System.currentTimeMillis();
             XdmNode clmlDoc = Helper.parse(clml);
@@ -58,7 +58,7 @@ public class TransformationService {
             Metadata meta = simplifier.extractFragmentMetadata(clmlDoc);
             long end = System.currentTimeMillis();
             logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
-            return new DocumentApi.Response(meta, html);
+            return new Fragment(FragmentMetadataConverter.convert(meta), html);
         } catch (SaxonApiException e) {
             throw new TransformationException("Error creating JSON response from CLML", e);
         } catch (JsonProcessingException e) {

@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
+import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.params.*;
 import uk.gov.legislation.params.Number;
 
@@ -81,7 +81,7 @@ public interface FragmentApi {
     /* JSON */
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/json")
-    ResponseEntity<DocumentApi.Response> getFragmentJson(
+    ResponseEntity<Fragment> getFragmentJson(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
@@ -89,7 +89,7 @@ public interface FragmentApi {
             @RequestParam Optional<String> version);
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/json")
-    ResponseEntity<DocumentApi.Response> getFragmentJson(
+    ResponseEntity<Fragment> getFragmentJson(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

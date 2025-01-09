@@ -3,13 +3,13 @@ package uk.gov.legislation.endpoints.document.controller;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Optional;
-
 
 
 /**
@@ -105,17 +105,17 @@ public class DocumentApiController implements DocumentApi {
     }
 
     @Override
-    public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version) {
+    public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version) {
         return getDocumentJson(type, Integer.toString(year), number, version);
     }
 
     @Override
-    public ResponseEntity<Response> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version) {
         String regnalYear = String.join("/", monarch, years);
         return getDocumentJson(type, regnalYear, number, version);
     }
 
-    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version) {
+    private ResponseEntity<Document> getDocumentJson(String type, String year, int number, Optional<String> version) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {

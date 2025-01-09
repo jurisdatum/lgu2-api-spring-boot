@@ -8,14 +8,15 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Helper;
+import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.Optional;
@@ -48,7 +49,7 @@ public class DocumentService {
         return aknToHtmlTransformer.transform(aknNode, true);
     }
 
-    public DocumentApi.Response transformToJsonResponse(String clmlContent) throws SaxonApiException {
+    public Document transformToJsonResponse(String clmlContent) throws SaxonApiException {
         long start = System.currentTimeMillis();
         XdmNode clmlDoc = Helper.parse(clmlContent);
         XdmNode aknNode = clmlToAknTransformer.transform(clmlDoc);
@@ -61,7 +62,7 @@ public class DocumentService {
         }
         long end = System.currentTimeMillis();
         logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
-        return new DocumentApi.Response(metadata, htmlContent);
+        return new Document(DocumentMetadataConverter.convert(metadata), htmlContent);
     }
 
     /* helper */

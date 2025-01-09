@@ -8,12 +8,12 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.endpoints.Application;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
 import uk.gov.legislation.util.Links;
-import uk.gov.legislation.util.Versions;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -102,12 +102,18 @@ class TransformTest {
     @MethodSource("provide")
     void json(String id) throws Exception {
         String clml = read(id, ".xml");
-        DocumentApi.Response response = isFragment(id) ? fragmentService.createJsonResponse(clml) : documentService.transformToJsonResponse(clml);
         ObjectMapper mapper = new ObjectMapper()
             .registerModules(new JavaTimeModule())
             .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
             .enable(SerializationFeature.INDENT_OUTPUT);
-        String actual = mapper.writeValueAsString(response);
+        String actual;
+        if (isFragment(id)) {
+            Fragment fragment = fragmentService.transformToJsonResponse(clml);
+            actual = mapper.writeValueAsString(fragment);
+        } else {
+            Document document = documentService.transformToJsonResponse(clml);
+            actual = mapper.writeValueAsString(document);
+        }
         String expected = read(id, ".json");
         Assertions.assertEquals(expected, actual);
     }
