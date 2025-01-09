@@ -71,8 +71,9 @@ public class DocumentService {
             String type,
             String year,
             int number,
-            Optional<String> version) {
-        Legislation.Response leg = legislationService.getDocument(type, year, number, version);
+            Optional<String> version,
+            String language) {
+        Legislation.Response leg = legislationService.getDocument(type, year, number, version, language);
         T body = transformationFunction.apply(leg.clml());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
         return ResponseEntity.ok().headers(headers).body(body);

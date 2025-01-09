@@ -2,6 +2,7 @@ package uk.gov.legislation.endpoints.document.controller;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.endpoints.document.service.DocumentService;
@@ -9,7 +10,7 @@ import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Optional;
-
+import static uk.gov.legislation.transform.Helper.validateLanguage;
 
 
 /**
@@ -28,40 +29,51 @@ public class DocumentApiController implements DocumentApi {
      * Fetches CLML content based on document details.
      */
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
+
         return documentService.fetchAndTransform(
                 clml -> clml,
                 type,
                 Integer.toString(year),
                 number,
-                version
+                version,
+                validatedLanguage
         );
     }
 
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
         return documentService.fetchAndTransform(
                 clml -> clml,
                 type,
                 regnalYear,
                 number,
-                version
+                version,
+                validatedLanguage
         );
     }
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version) {
-        return getDocumentAkn(type, Integer.toString(year), number, version);
+    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
+        return getDocumentAkn(type, Integer.toString(year), number, version, validatedLanguage);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentAkn(type, regnalYear, number, version);
+        return getDocumentAkn(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version) {
+    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, String language) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -73,22 +85,28 @@ public class DocumentApiController implements DocumentApi {
                 type,
                 year,
                 number,
-                version
+                version,
+                language
         );
     }
 
     @Override
-    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version) {
-        return getDocumentHtml(type, Integer.toString(year), number, version);
+    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
+        return getDocumentHtml(type, Integer.toString(year), number, version, validatedLanguage);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentHtml(type, regnalYear, number, version);
+        return getDocumentHtml(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version) {
+    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, String language) {
+
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -100,22 +118,27 @@ public class DocumentApiController implements DocumentApi {
                 type,
                 year,
                 number,
-                version
+                version,
+                language
         );
     }
 
     @Override
-    public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version) {
-        return getDocumentJson(type, Integer.toString(year), number, version);
+    public ResponseEntity<Response> getDocumentJson(String type, int year, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
+        return getDocumentJson(type, Integer.toString(year), number, version, validatedLanguage);
     }
 
     @Override
-    public ResponseEntity<Response> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<Response> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentJson(type, regnalYear, number, version);
+        return getDocumentJson(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version) {
+    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version, String language ) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -127,7 +150,8 @@ public class DocumentApiController implements DocumentApi {
                 type,
                 year,
                 number,
-                version
+                version,
+                language
         );
     }
 }

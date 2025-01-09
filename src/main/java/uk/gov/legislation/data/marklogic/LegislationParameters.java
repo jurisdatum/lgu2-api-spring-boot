@@ -12,7 +12,23 @@ public class LegislationParameters {
     private Optional<String> version;
     private Optional<String> view;
     private Optional<String> section;
+    private  String language;
 
+
+    public LegislationParameters(String type, String year, int number, String language) {
+        if (type == null)
+            throw new IllegalArgumentException();
+        if (year == null)
+            throw new IllegalArgumentException();
+        this.type = type;
+        this.year = year;
+        this.number = number;
+        this.version = Optional.empty();
+        this.view = Optional.empty();
+        this.section = Optional.empty();
+        this.language = language;
+
+    }
     public LegislationParameters(String type, String year, int number) {
         if (type == null)
             throw new IllegalArgumentException();
@@ -55,12 +71,14 @@ public class LegislationParameters {
         StringBuilder query = new StringBuilder();
         query.append("?type=").append(encode(type))
                 .append("&year=").append(encode(year))
-                .append("&number=").append(number);
+                .append("&number=").append(number)
+                .append("&lang=").append(encode(language));
         version.ifPresent(v -> query.append("&version=").append(encode(v)));
         view.ifPresent(v -> query.append("&view=").append(encode(v)));
         section.ifPresent(s -> query.append("&section=").append(encode(s)));
         return query.toString();
     }
+
 
     public static String encode(String value) {
         return URLEncoder.encode(value, StandardCharsets.US_ASCII);

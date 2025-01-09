@@ -9,7 +9,15 @@ import java.io.IOException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
+    @ExceptionHandler(UnsupportedLanguageException.class)
+    public ResponseEntity<ErrorResponse> handleUnsupportedLanguageException(UnsupportedLanguageException ex) {
+        ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.BAD_REQUEST,
+                "Unsupported Language",
+                ex.getMessage()
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
     @ExceptionHandler(NoDocumentException.class)
     public ResponseEntity <ErrorResponse> handleNoDocumentException(NoDocumentException ex) {
         ErrorResponse errorResponse = new ErrorResponse(

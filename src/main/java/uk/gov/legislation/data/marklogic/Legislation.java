@@ -22,8 +22,8 @@ public class Legislation {
         this.db = db;
     }
 
-    public Response getDocument(String type, String year, int number, Optional<String> version) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version);
+    public Response getDocument(String type, String year, int number, Optional<String> version, String language) {
+        LegislationParameters params = new LegislationParameters(type, year, number, language).version(version);
         return getAndFollowRedirect(params);
     }
 
