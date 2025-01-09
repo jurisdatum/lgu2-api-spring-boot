@@ -5,7 +5,7 @@ import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Getter
+
 @Component
 public class Configuration {
 
@@ -15,4 +15,11 @@ public class Configuration {
     @Value("${stylesheet.akn.path}")
     private String stylesheetAknPath;
 
+    public String getStylesheetSimplifyPath() {
+        return stylesheetSimplifyPath;
+    }
+
+    public String getStylesheetAknPath() {
+        return stylesheetAknPath;
+    }
 }

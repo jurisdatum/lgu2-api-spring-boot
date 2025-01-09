@@ -1,8 +1,7 @@
 package uk.gov.legislation.util;
 
-import lombok.Getter;
 
-@Getter
+
 public enum Constants {
 
 
@@ -17,6 +16,10 @@ public enum Constants {
 
     Constants(String error) {
         this.error = error;
+    }
+
+    public String getError() {
+        return error;
     }
 }
 
