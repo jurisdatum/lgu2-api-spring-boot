@@ -1,5 +1,6 @@
 package uk.gov.legislation.converters;
 
+import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
@@ -11,10 +12,11 @@ public class DocumentMetadataConverter {
     public static DocumentMetadata convert(Metadata simple) {
         DocumentMetadata converted = new DocumentMetadata();
         convert(simple, converted);
+        converted.unappliedEffects = EffectsConverter.convert(simple.rawEffects());
         return converted;
     }
 
-    protected static void convert(Metadata simple, DocumentMetadata converted) {
+    protected static void convert(Metadata simple, CommonMetadata converted) {
         converted.id = simple.id;
         converted.longType = simple.longType;
         converted.shortType = Types.longToShort(simple.longType);
@@ -34,7 +36,6 @@ public class DocumentMetadataConverter {
         converted.versions = simple.versions();
         converted.schedules = simple.schedules();
         converted.formats = simple.formats();
-        converted.unappliedEffects = EffectsConverter.convert(simple.rawEffects());
     }
 
 }

@@ -13,10 +13,6 @@ public class Effects {
         throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
     }
 
-    public static void sort(List<UnappliedEffect> effects) {
-        effects.sort(EffectsComparator.INSTANCE);
-    }
-
     /* sections */
 
     static final Predicate<RichTextNode> isSection = node -> RichTextNode.SECTION_TYPE.equals(node.type);
@@ -24,12 +20,22 @@ public class Effects {
     static final Predicate<UnappliedEffect> isPlainText = effect -> effect.affectedProvisions.stream()
         .noneMatch(isSection);
 
-    public static List<UnappliedEffect> removeThoseWithNoRelevantSection(List<UnappliedEffect> effects, Set<String> ids) {
+    /**
+     *
+     * @param effects
+     * @param ids the fragment ids to be retained
+     * @param includeWhole retain those targeting no particular section
+     * @return
+     */
+    public static List<UnappliedEffect> removeThoseWithNoRelevantSection(List<UnappliedEffect> effects, Set<String> ids, boolean includeWhole) {
         if (ids.isEmpty())
             return effects;
         Predicate<UnappliedEffect> someSectionsAreRelevant = effect -> effect.affectedProvisions.stream()
             .filter(isSection).anyMatch(n -> ids.contains(n.ref));
-        return effects.stream().filter(isPlainText.or(someSectionsAreRelevant)).toList();
+        if (includeWhole)
+            return effects.stream().filter(isPlainText.or(someSectionsAreRelevant)).toList();
+        else
+            return effects.stream().filter(someSectionsAreRelevant).toList();
     }
 
 }

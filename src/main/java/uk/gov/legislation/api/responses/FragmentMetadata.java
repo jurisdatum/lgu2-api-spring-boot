@@ -1,12 +1,14 @@
 package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.endpoints.document.responses.Effect;
 import uk.gov.legislation.endpoints.document.responses.Level;
 
 import java.util.List;
 
-public class FragmentMetadata extends DocumentMetadata {
+public class FragmentMetadata extends CommonMetadata {
 
+    // ToDo should this be "section-2" (slashes replaced with dashes) ??
     @Schema(example = "section/2")
     public String fragment;
 
@@ -21,5 +23,17 @@ public class FragmentMetadata extends DocumentMetadata {
 
     @Schema
     public List<Level> descendants;
+
+    @Schema
+    public Effects unappliedEffects;
+
+    public static class Effects {
+
+        @Schema(description = "directly affecting the fragment or one of its descendants")
+        public List<Effect> fragment;
+
+        @Schema(description = "affecting one of the fragment's ancestors")
+        public List<Effect> ancestor;
+    }
 
 }
