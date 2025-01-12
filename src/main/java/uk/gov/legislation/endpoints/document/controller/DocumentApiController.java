@@ -9,6 +9,7 @@ import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Optional;
+
 import static uk.gov.legislation.endpoints.Language.validateLanguage;
 
 
@@ -30,7 +31,6 @@ public class DocumentApiController implements DocumentApi {
     @Override
     public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, String language) {
         String validatedLanguage = validateLanguage(language);
-
         return documentService.fetchAndTransform(
                 clml -> clml,
                 type,
@@ -55,6 +55,8 @@ public class DocumentApiController implements DocumentApi {
         );
     }
 
+    // could add a private getDocumentClml method to match the other three content types
+
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, String language) {
         String validatedLanguage = validateLanguage(language);
@@ -68,7 +70,7 @@ public class DocumentApiController implements DocumentApi {
         return getDocumentAkn(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, String language) {
+    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -81,7 +83,7 @@ public class DocumentApiController implements DocumentApi {
                 year,
                 number,
                 version,
-                language
+                validatedLanguage
         );
     }
 
@@ -98,8 +100,7 @@ public class DocumentApiController implements DocumentApi {
         return getDocumentHtml(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, String language) {
-
+    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -112,7 +113,7 @@ public class DocumentApiController implements DocumentApi {
                 year,
                 number,
                 version,
-                language
+                validatedLanguage
         );
     }
 
@@ -129,7 +130,7 @@ public class DocumentApiController implements DocumentApi {
         return getDocumentJson(type, regnalYear, number, version, validatedLanguage);
     }
 
-    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version, String language ) {
+    private ResponseEntity<Response> getDocumentJson(String type, String year, int number, Optional<String> version, String validatedLanguage ) {
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -142,7 +143,7 @@ public class DocumentApiController implements DocumentApi {
                 year,
                 number,
                 version,
-                language
+                validatedLanguage
         );
     }
 }
