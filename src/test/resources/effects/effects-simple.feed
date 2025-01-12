@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:leg="http://www.legislation.gov.uk/namespaces/legislation" xmlns:openSearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:parameters="http://a9.com/-/spec/opensearch/extensions/parameters/1.0/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+   <id>http://www.legislation.gov.uk/changes/data.feed?sort=modified</id>
+   <link rel="self" type="application/atom+xml" href="http://www.legislation.gov.uk/changes/data.feed?sort=modified"/>
+   <link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/changes/data.csv?sort=modified"/>
+   <updated>2025-01-10T02:23:26.449553Z</updated>
+   <title>Changes to Legislation</title>
+   <openSearch:itemsPerPage>20</openSearch:itemsPerPage>
+   <openSearch:startIndex>1</openSearch:startIndex>
+   <openSearch:Query role="request"> </openSearch:Query>
+   <leg:page>1</leg:page>
+   <leg:morePages>74520</leg:morePages>
+   <leg:totalPages>74521</leg:totalPages>
+   <openSearch:totalResults>1490409</openSearch:totalResults>
+   <link rel="first" type="application/atom+xml" href="http://www.legislation.gov.uk/changes/data.feed?sort=modified"/>
+   <link rel="next" type="application/atom+xml" href="http://www.legislation.gov.uk/changes/data.feed?sort=modified&amp;page=2"/>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-7d04edf8bb3c585c7773afbe6215d9a3/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect EffectId="key-7d04edf8bb3c585c7773afbe6215d9a3" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" RequiresApplied="true" Applied="false" AffectingNumber="30" AffectingEffectsExtent="E+W" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2022/30" AffectedExtent="E+W" Type="omitted" AffectingProvisionsText="Sch. 5 para. 38" AffectedNumber="55" Modified="2024-11-09T09:25:54Z" AffectedYear="1984" Row="5" URI="http://www.legislation.gov.uk/id/effect/key-7d04edf8bb3c585c7773afbe6215d9a3" AffectingYear="2022" AffectedProvisionsText="s. 44 and cross-heading" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingClass="UnitedKingdomPublicGeneralAct">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="part-I-crossheading-application-of-building-regulations-to-crown-etc" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/part/I/crossheading/application-of-building-regulations-to-crown-etc" text="s. 44 and cross-heading"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Building Safety Act 2022</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-5" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5" text="Sch. 5 "/>
+               <node xmlns="" type="section" ref="schedule-5-paragraph-38" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5/paragraph/38" text="para. 38"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-170-4-c" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c" text="s. 170(4)(c)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Building Safety Act 2022 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2015/7/key-d1205b2b87ec1f9eddf1d3ab12ae048d/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedExtent="E+W" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2015/7" URI="http://www.legislation.gov.uk/id/effect/key-d1205b2b87ec1f9eddf1d3ab12ae048d" RequiresApplied="true" Row="6" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingProvisionsText="s. 37(2)" AffectingNumber="7" AffectingYear="2015" AffectedClass="UnitedKingdomPublicGeneralAct" EffectId="key-d1205b2b87ec1f9eddf1d3ab12ae048d" AffectedNumber="55" Modified="2024-11-09T09:25:54Z" AffectedProvisionsText="s. 1(1A)(d)" AffectingEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D" AffectingClass="UnitedKingdomPublicGeneralAct" Type="inserted" AffectedYear="1984" Applied="false">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-1-1A-d" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/1/1A/d" text="s. 1(1A)(d)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Infrastructure Act 2015</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-37-2" uri="http://www.legislation.gov.uk/id/ukpga/2015/7/section/37/2" text="s. 37(2)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-57-5-a" uri="http://www.legislation.gov.uk/id/ukpga/2015/7/section/57/5/a" text="s. 57(5)(a)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Infrastructure Act 2015 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-41eef9bdccb45f4687352577e38d77aa/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect EffectId="key-41eef9bdccb45f4687352577e38d77aa" RequiresApplied="true" AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" AffectingProvisionsText="Sch. 13 para. 61(a)" AffectingTerritorialApplication="W" AffectingClass="WelshParliamentAct" AffectingEffectsExtent="E+W" AffectedNumber="55" AffectingYear="2023" AffectingNumber="3" AffectedClass="UnitedKingdomPublicGeneralAct" Applied="true" Row="7" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" URI="http://www.legislation.gov.uk/id/effect/key-41eef9bdccb45f4687352577e38d77aa" AffectedYear="1984" Type="words inserted" Modified="2024-11-09T09:25:54Z" AffectedProvisionsText="s. 1A(2)(a)" AppliedModified="2024-11-09T10:27:57.500846Z">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-1A-2-a" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/1A/2/a" text="s. 1A(2)(a)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-61-a" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/61/a" text="para. 61(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-3d96c0989ca52418a67adc1203cf9702/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedYear="1984" Modified="2024-11-09T09:25:54Z" Applied="true" AffectedProvisionsText="s. 1A(2)(b)" Row="8" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingYear="2023" AppliedModified="2024-11-09T10:27:57.500846Z" AffectingTerritorialApplication="W" URI="http://www.legislation.gov.uk/id/effect/key-3d96c0989ca52418a67adc1203cf9702" AffectedNumber="55" AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" AffectingEffectsExtent="E+W" AffectingProvisionsText="Sch. 13 para. 61(b)" EffectId="key-3d96c0989ca52418a67adc1203cf9702" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Type="words substituted" AffectingNumber="3" AffectingClass="WelshParliamentAct" RequiresApplied="true">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-1A-2-b" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/1A/2/b" text="s. 1A(2)(b)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-61-b" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/61/b" text="para. 61(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-b296411a23d06e7af49a26c588f24f13/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect Applied="false" AffectedProvisionsText="s. 4" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingProvisionsText="s. 5(a) Sch." URI="http://www.legislation.gov.uk/id/effect/key-b296411a23d06e7af49a26c588f24f13" AffectingEffectsExtent="E+W" EffectId="key-b296411a23d06e7af49a26c588f24f13" AffectedYear="1984" Row="9" RequiresApplied="true" AffectedNumber="55" AffectedExtent="E+W" AffectingYear="2004" Modified="2024-11-09T09:25:54Z" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingClass="UnitedKingdomPublicGeneralAct" Type="repealed" AffectingNumber="22">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/4" text="s. 4"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-5-a" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/5/a" text="s. 5(a)"/>
+               <node xmlns="" type="text" text=" "/>
+               <node xmlns="" type="section" ref="schedule" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/schedule" text="Sch."/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-8ff73453a59c369551c5199945be1555/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" AffectingEffectsExtent="E+W" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingNumber="3" AffectedYear="1984" Row="10" Modified="2024-11-09T09:25:54Z" AffectedNumber="55" Type="words inserted" AppliedModified="2024-11-09T10:27:57.500846Z" RequiresApplied="true" Applied="true" URI="http://www.legislation.gov.uk/id/effect/key-8ff73453a59c369551c5199945be1555" AffectedProvisionsText="s. 20(1)" AffectingYear="2023" AffectingClass="WelshParliamentAct" AffectingProvisionsText="Sch. 13 para. 62" EffectId="key-8ff73453a59c369551c5199945be1555" AffectingTerritorialApplication="W">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-20-1" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/20/1" text="s. 20(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-62" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/62" text="para. 62"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-2211e63b3aa9fbd4d958874f8701645b/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect Row="11" AffectedProvisionsText="s. 44(3)(a)" AffectedExtent="E+W" AffectingProvisionsText="s. 4(4)(a)" Type="words inserted" AffectingEffectsExtent="E+W" AffectedNumber="55" AffectingYear="2004" EffectId="key-2211e63b3aa9fbd4d958874f8701645b" AffectingNumber="22" Applied="false" AffectedYear="1984" RequiresApplied="true" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-2211e63b3aa9fbd4d958874f8701645b" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Modified="2024-11-09T09:25:54Z">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-44-3-a" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/3/a" text="s. 44(3)(a)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-4-4-a" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/4/4/a" text="s. 4(4)(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-f89e6d6cffb9c08463f5e23d0cd80542/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectingEffectsExtent="E+W" AffectedProvisionsText="s. 44(8)" AffectingClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-f89e6d6cffb9c08463f5e23d0cd80542" AffectedNumber="55" Applied="false" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" AffectingProvisionsText="s. 4(4)(b)" EffectId="key-f89e6d6cffb9c08463f5e23d0cd80542" AffectingYear="2004" Type="words substituted" AffectedYear="1984" RequiresApplied="true" AffectedExtent="E+W" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingNumber="22" AffectedClass="UnitedKingdomPublicGeneralAct" Row="12" Modified="2024-11-09T09:25:54Z">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-44-8" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/8" text="s. 44(8)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-4-4-b" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/4/4/b" text="s. 4(4)(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-da50ed455ad164bf3e61cc3ee11d050a/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectingProvisionsText="s. 3(8)" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" EffectId="key-da50ed455ad164bf3e61cc3ee11d050a" AffectingYear="2004" AffectedProvisionsText="s. 44(11)" AffectingEffectsExtent="E+W" URI="http://www.legislation.gov.uk/id/effect/key-da50ed455ad164bf3e61cc3ee11d050a" AffectedYear="1984" Type="inserted" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Row="13" Applied="false" AffectedExtent="E+W" RequiresApplied="true" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedNumber="55" AffectingNumber="22" Modified="2024-11-09T09:25:54Z">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-44-11" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/11" text="s. 44(11)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-3-8" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/3/8" text="s. 3(8)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-f396bafcf3c7f3e7d7b115a2b64c688a/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-f396bafcf3c7f3e7d7b115a2b64c688a" EffectId="key-f396bafcf3c7f3e7d7b115a2b64c688a" AffectedNumber="55" AffectedProvisionsText="s. 45" RequiresApplied="true" AffectedYear="1984" AffectingNumber="30" Modified="2024-11-09T09:25:54Z" Applied="false" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Row="14" AffectingProvisionsText="Sch. 5 para. 38" AffectingYear="2022" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2022/30" Type="omitted" AffectingEffectsExtent="E+W" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedExtent="E+W">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-45" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/45" text="s. 45"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Building Safety Act 2022</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-5" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5" text="Sch. 5 "/>
+               <node xmlns="" type="section" ref="schedule-5-paragraph-38" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5/paragraph/38" text="para. 38"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-170-4-c" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c" text="s. 170(4)(c)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Building Safety Act 2022 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-3d35acb9c20ac0bdca9705da2d03b1ea/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect RequiresApplied="true" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" URI="http://www.legislation.gov.uk/id/effect/key-3d35acb9c20ac0bdca9705da2d03b1ea" AffectedNumber="55" AffectedProvisionsText="s. 45(1)" Row="15" AffectingNumber="22" AffectingYear="2004" AffectingProvisionsText="s. 3(9)" Modified="2024-11-09T09:25:54Z" AffectedClass="UnitedKingdomPublicGeneralAct" Type="word substituted" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectedYear="1984" Applied="false" AffectingEffectsExtent="E+W" AffectedExtent="E+W" EffectId="key-3d35acb9c20ac0bdca9705da2d03b1ea">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-45-1" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/45/1" text="s. 45(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-3-9" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/3/9" text="s. 3(9)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-7e19a4d53e7bc488db6617087fa7f28a/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedClass="UnitedKingdomPublicGeneralAct" AffectingEffectsExtent="E+W" AffectedExtent="E+W" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" AffectingYear="2004" Modified="2024-11-09T09:25:54Z" RequiresApplied="true" Row="16" URI="http://www.legislation.gov.uk/id/effect/key-7e19a4d53e7bc488db6617087fa7f28a" Applied="false" AffectingNumber="22" AffectedNumber="55" AffectingProvisionsText="Sch." AffectedYear="1984" AffectedProvisionsText="s. 56(1)-(4)" EffectId="key-7e19a4d53e7bc488db6617087fa7f28a" Type="repealed" AffectingClass="UnitedKingdomPublicGeneralAct">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-56-1" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1" text="s. 56(1)"/>
+               <node xmlns="" type="text" text="-"/>
+               <node xmlns="" type="section" ref="section-56-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4" text="(4)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/schedule" text="Sch."/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-c07f14b999d3ebde008c5d6afadc0e1b/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedNumber="55" AffectedExtent="E+W" AffectedProvisionsText="s. 59(4) (5)" Row="17" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2004/22" Applied="false" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Type="repealed" EffectId="key-c07f14b999d3ebde008c5d6afadc0e1b" RequiresApplied="true" AffectedYear="1984" AffectingClass="UnitedKingdomPublicGeneralAct" Modified="2024-11-09T09:25:54Z" AffectingProvisionsText="s. 5(b) Sch." AffectingYear="2004" AffectingEffectsExtent="E+W" AffectingNumber="22" URI="http://www.legislation.gov.uk/id/effect/key-c07f14b999d3ebde008c5d6afadc0e1b">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-59-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/59/4" text="s. 59(4)"/>
+               <node xmlns="" type="text" text=" "/>
+               <node xmlns="" type="section" ref="section-59-5" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/59/5" text="(5)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-5-b" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/5/b" text="s. 5(b)"/>
+               <node xmlns="" type="text" text=" "/>
+               <node xmlns="" type="section" ref="schedule" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/schedule" text="Sch."/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-11-3" uri="http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3" text="s. 11(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Sustainable and Secure Buildings Act 2004 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-814eed9ef9f96cc1db4cb6f69c58754e/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect URI="http://www.legislation.gov.uk/id/effect/key-814eed9ef9f96cc1db4cb6f69c58754e" Type="words inserted" Modified="2024-11-09T09:25:54Z" AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" EffectId="key-814eed9ef9f96cc1db4cb6f69c58754e" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingProvisionsText="Sch. 13 para. 63" AffectingNumber="3" AffectedProvisionsText="s. 77(3)" AppliedModified="2024-11-09T10:27:57.500846Z" AffectingTerritorialApplication="W" AffectingYear="2023" RequiresApplied="true" AffectingClass="WelshParliamentAct" AffectedYear="1984" AffectedNumber="55" Row="18" Applied="true" AffectingEffectsExtent="E+W">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-77-3" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/77/3" text="s. 77(3)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-63" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/63" text="para. 63"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-e1014f8e7bc6a1aa085f179f718072db/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedNumber="55" Type="words inserted" Row="19" RequiresApplied="true" Modified="2024-11-09T09:25:54Z" AffectedProvisionsText="s. 79(5)" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectingTerritorialApplication="W" AffectedClass="UnitedKingdomPublicGeneralAct" AffectingYear="2023" AffectedYear="1984" AppliedModified="2024-11-09T10:27:57.500846Z" AffectingEffectsExtent="E+W" EffectId="key-e1014f8e7bc6a1aa085f179f718072db" AffectingClass="WelshParliamentAct" URI="http://www.legislation.gov.uk/id/effect/key-e1014f8e7bc6a1aa085f179f718072db" Applied="true" AffectingNumber="3" AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" AffectingProvisionsText="Sch. 13 para. 64">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-79-5" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/79/5" text="s. 79(5)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-64" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/64" text="para. 64"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-168b69c81c8d135d6e7037c3c0d47fd4/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AppliedModified="2024-11-09T10:27:57.500846Z" AffectingNumber="3" AffectingTerritorialApplication="W" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" URI="http://www.legislation.gov.uk/id/effect/key-168b69c81c8d135d6e7037c3c0d47fd4" Applied="true" Row="20" Type="inserted" AffectingYear="2023" AffectingEffectsExtent="E+W" AffectedNumber="55" EffectId="key-168b69c81c8d135d6e7037c3c0d47fd4" AffectedClass="UnitedKingdomPublicGeneralAct" AffectedYear="1984" AffectingProvisionsText="Sch. 13 para. 65" RequiresApplied="true" Modified="2024-11-09T09:25:54Z" AffectingURI="http://www.legislation.gov.uk/id/asc/2023/3" AffectingClass="WelshParliamentAct" AffectedProvisionsText="s. 79A">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-79A" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/79A" text="s. 79A" missing="true" error="Section missing in legislation"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Historic Environment (Wales) Act 2023</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Deddf yr Amgylchedd Hanesyddol (Cymru) 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="schedule-13" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13" text="Sch. 13 "/>
+               <node xmlns="" type="section" ref="schedule-13-paragraph-65" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/65" text="para. 65"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
+               <node xmlns="" type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node xmlns="" type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-212-2" uri="http://www.legislation.gov.uk/id/asc/2023/3/section/212/2" text="s. 212(2)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+               <ukm:InForce CommencingURI="http://www.legislation.gov.uk/id/wsi/2024/860" CommencingClass="WelshStatutoryInstrument" Date="2024-11-04" Applied="true" Qualification="wholly in force" CommencingYear="2024" CommencingNumber="860">
+                  <ukm:CommencingProvisions>
+                     <node xmlns="" type="section" ref="article-3-d" uri="http://www.legislation.gov.uk/id/wsi/2024/860/article/3/d" text="art. 3(d)"/>
+                  </ukm:CommencingProvisions>
+               </ukm:InForce>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Historic Environment (Wales) Act 2023 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-bc9ccbbb414f1a09609e61584f1c351f/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectingEffectsExtent="E+W" AffectingYear="2011" AffectingTerritorialApplication="W" AffectedClass="UnitedKingdomPublicGeneralAct" Applied="false" URI="http://www.legislation.gov.uk/id/effect/key-bc9ccbbb414f1a09609e61584f1c351f" AffectedExtent="E+W" AffectingProvisionsText="s. 4(a)" AffectedProvisionsText="s. 93" Type="applied" AffectedYear="1984" AffectingClass="WelshAssemblyMeasure" Modified="2024-11-09T09:25:54Z" EffectId="key-bc9ccbbb414f1a09609e61584f1c351f" AffectedNumber="55" AffectingURI="http://www.legislation.gov.uk/id/mwa/2011/3" AffectingNumber="3" RequiresApplied="true" Row="21" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-93" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/93" text="s. 93"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Domestic Fire Safety (Wales) Measure 2011</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Mesur Diogelwch Tân Domestig (Cymru) 2011</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-4-a" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/4/a" text="s. 4(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="section-1-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/1/3" text="s. 1(3)"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-9-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3" text="s. 9(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-91603a80818f5fbe63e6ecb5356de5f3/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectingProvisionsText="s. 4(b)" RequiresApplied="true" AffectingNumber="3" AffectingURI="http://www.legislation.gov.uk/id/mwa/2011/3" Applied="false" AffectingYear="2011" AffectingClass="WelshAssemblyMeasure" Modified="2024-11-09T09:25:54Z" Type="applied" AffectingEffectsExtent="E+W" EffectId="key-91603a80818f5fbe63e6ecb5356de5f3" Row="22" AffectedClass="UnitedKingdomPublicGeneralAct" URI="http://www.legislation.gov.uk/id/effect/key-91603a80818f5fbe63e6ecb5356de5f3" AffectedNumber="55" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" AffectedProvisionsText="s. 94" AffectedYear="1984" AffectedExtent="E+W" AffectingTerritorialApplication="W">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-94" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/94" text="s. 94"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Domestic Fire Safety (Wales) Measure 2011</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Mesur Diogelwch Tân Domestig (Cymru) 2011</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-4-b" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/4/b" text="s. 4(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="section-1-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/1/3" text="s. 1(3)"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-9-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3" text="s. 9(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-a951401347c0738a038738934203b570/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedExtent="E+W" AffectingProvisionsText="s. 4(c)" Applied="false" AffectingYear="2011" AffectedProvisionsText="s. 94A" AffectingURI="http://www.legislation.gov.uk/id/mwa/2011/3" AffectedYear="1984" AffectingTerritorialApplication="W" Modified="2024-11-09T09:25:54Z" AffectingClass="WelshAssemblyMeasure" AffectedNumber="55" Row="23" EffectId="key-a951401347c0738a038738934203b570" Type="applied" AffectingEffectsExtent="E+W" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" URI="http://www.legislation.gov.uk/id/effect/key-a951401347c0738a038738934203b570" AffectingNumber="3" RequiresApplied="true" AffectedClass="UnitedKingdomPublicGeneralAct">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-94A" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/94A" text="s. 94A"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Domestic Fire Safety (Wales) Measure 2011</ukm:AffectingTitle>
+            <ukm:AffectingTitle xml:lang="cy">Mesur Diogelwch Tân Domestig (Cymru) 2011</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-4-c" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/4/c" text="s. 4(c)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns="" type="section" ref="section-1-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/1/3" text="s. 1(3)"/>
+            </ukm:Savings>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-9-3" uri="http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3" text="s. 9(3)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+   <entry>
+      <id>http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-b4eed32f9f8e7a44d8d1866ecef12480/modified/2024-11-09T09:25:54Z</id>
+      <content type="text/xml">
+         <ukm:Effect AffectedExtent="E+W" URI="http://www.legislation.gov.uk/id/effect/key-b4eed32f9f8e7a44d8d1866ecef12480" AffectingEffectsExtent="E+W" EffectId="key-b4eed32f9f8e7a44d8d1866ecef12480" AffectingYear="2022" Modified="2024-11-09T09:25:54Z" Type="inserted" AffectedURI="http://www.legislation.gov.uk/id/ukpga/1984/55" Applied="false" RequiresApplied="true" AffectedClass="UnitedKingdomPublicGeneralAct" Row="24" AffectingProvisionsText="s. 60(2)" AffectingNumber="30" AffectingClass="UnitedKingdomPublicGeneralAct" AffectedYear="1984" AffectedProvisionsText="s. 95(5)" AffectingURI="http://www.legislation.gov.uk/id/ukpga/2022/30" AffectedNumber="55">
+            <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns="" type="section" ref="section-95-5" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/95/5" text="s. 95(5)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>Building Safety Act 2022</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns="" type="section" ref="section-60-2" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/section/60/2" text="s. 60(2)"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns="" type="section" ref="section-170-4-c" uri="http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c" text="s. 170(4)(c)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Prospective="true" Qualification=""/>
+            </ukm:InForceDates>
+         </ukm:Effect>
+      </content>
+      <title>Building Safety Act 2022 effect on Building Act 1984</title>
+      <updated>2024-11-09T09:25:54Z</updated>
+      <author>
+         <name>editorial.legislation.gov.uk</name>
+      </author>
+   </entry>
+</feed>

@@ -15,7 +15,7 @@ import uk.gov.legislation.exceptions.ErrorResponse;
 
 import java.util.List;
 
-@Tag(name = "Document Types", description = "APIs for fetching document types and their country-specific applicability")
+@Tag(name = "Document types", description = "APIs for fetching document types and their country-specific applicability")
 public interface TypesApi {
 
     @GetMapping(value = "/types", produces = MediaType.APPLICATION_JSON_VALUE)

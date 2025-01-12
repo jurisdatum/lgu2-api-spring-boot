@@ -2,9 +2,8 @@ package uk.gov.legislation.endpoints.document.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
 import uk.gov.legislation.endpoints.document.responses.RichText;
-import uk.gov.legislation.transform.simple.UnappliedEffect;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
 
@@ -19,12 +18,12 @@ public class EffectsConverter {
 
     private static final Logger logger = LoggerFactory.getLogger(EffectsConverter.class);
 
-    public static List<Effect> convert(List<UnappliedEffect> effects) {
+    public static List<UnappliedEffect> convert(List<uk.gov.legislation.transform.simple.UnappliedEffect> effects) {
         return effects.stream().map(EffectsConverter::convertEffect).toList();
     }
 
-    private static Effect convertEffect(UnappliedEffect clml) {
-        Effect effect = new Effect();
+    private static UnappliedEffect convertEffect(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
+        UnappliedEffect effect = new UnappliedEffect();
         effect.type = clml.type;
         effect.required = clml.requiresApplied;
         effect.affected = convertProvisions(clml.affectedProvisionsText, clml.affectedProvisions);
@@ -36,22 +35,22 @@ public class EffectsConverter {
         return effect;
     }
 
-    private static Effect.Provisions convertProvisions(List<UnappliedEffect.RichTextNode> rich) {
+    private static UnappliedEffect.Provisions convertProvisions(List<uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode> rich) {
         String plain = rich.stream().map(node -> node.text).collect(Collectors.joining());
         return convertProvisions(plain, rich);
     }
-    private static Effect.Provisions convertProvisions(String plain, List<UnappliedEffect.RichTextNode> rich) {
-        Effect.Provisions provisions = new Effect.Provisions();
+    private static UnappliedEffect.Provisions convertProvisions(String plain, List<uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode> rich) {
+        UnappliedEffect.Provisions provisions = new UnappliedEffect.Provisions();
         provisions.plain = plain;
         provisions.rich = rich.stream().map(EffectsConverter::convertRichTextNode).toList();
         return provisions;
     }
 
-    private static List<Effect.InForce> convertInForceDates(UnappliedEffect clml) {
+    private static List<UnappliedEffect.InForce> convertInForceDates(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
         return clml.inForceDates.stream().map(EffectsConverter::convertInForceDate).toList();
     }
-    private static Effect.InForce convertInForceDate(UnappliedEffect.InForce clml) {
-        Effect.InForce inForce = new Effect.InForce();
+    private static UnappliedEffect.InForce convertInForceDate(uk.gov.legislation.transform.simple.UnappliedEffect.InForce clml) {
+        UnappliedEffect.InForce inForce = new UnappliedEffect.InForce();
         inForce.date = clml.date;
         inForce.applied = clml.applied;
         inForce.prospective = clml.prospective;
@@ -59,8 +58,8 @@ public class EffectsConverter {
         return inForce;
     }
 
-    private static Effect.Source makeSource(UnappliedEffect clml) {
-        Effect.Source source = new Effect.Source();
+    private static UnappliedEffect.Source makeSource(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
+        UnappliedEffect.Source source = new UnappliedEffect.Source();
         source.id = Links.shorten(clml.affectingURI);
         source.longType = clml.affectingClass;
         source.year = clml.affectingYear;
@@ -70,13 +69,13 @@ public class EffectsConverter {
         return source;
     }
 
-    private static RichText.Node convertRichTextNode(UnappliedEffect.RichTextNode clml) {
+    private static RichText.Node convertRichTextNode(uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode clml) {
         RichText.Node node = new RichText.Node();
         node.text = clml.text;
         switch (clml.type) {
             case null -> logger.warn("node type is null");
-            case UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
-            case UnappliedEffect.RichTextNode.SECTION_TYPE -> {
+            case uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
+            case uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode.SECTION_TYPE -> {
                 node.type = "link";
                 node.id = clml.ref;
                 node.href = Links.shorten(clml.uri);

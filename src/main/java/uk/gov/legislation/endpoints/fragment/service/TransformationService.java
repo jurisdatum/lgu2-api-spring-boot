@@ -31,6 +31,7 @@ public class TransformationService {
 
     private final Logger logger = LoggerFactory.getLogger(TransformationService.class);
 
+    // FixMe method in DocumentService throws SaxonApiException
     public String transformToAkn(String clml) {
         try {
             return Clml2Akn.serialize(clml2akn.transform(clml));

@@ -1,7 +1,7 @@
 package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
 import uk.gov.legislation.endpoints.document.responses.Level;
 
 import java.util.List;
@@ -30,10 +30,10 @@ public class FragmentMetadata extends CommonMetadata {
     public static class Effects {
 
         @Schema(description = "directly affecting the fragment or one of its descendants")
-        public List<Effect> fragment;
+        public List<UnappliedEffect> fragment;
 
         @Schema(description = "affecting one of the fragment's ancestors")
-        public List<Effect> ancestor;
+        public List<UnappliedEffect> ancestor;
     }
 
 }

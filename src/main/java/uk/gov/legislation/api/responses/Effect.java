@@ -1,14 +1,16 @@
-package uk.gov.legislation.endpoints.document.responses;
+package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.util.Extent;
+import uk.gov.legislation.endpoints.document.responses.RichText;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Set;
 
 public class Effect {
+
+    @Schema
+    public boolean applied;
 
     @Schema
     public boolean required;
@@ -17,51 +19,18 @@ public class Effect {
     public String type;
 
     @Schema
-    public Provisions affected;
-
-    @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
-    public Set<Extent> affectedExtent;
-
-    @Schema
-    public List<InForce> inForceDates;
+    public Source target;
 
     @Schema
     public Source source;
 
-    @Schema
-    public Provisions commencement;
-
     @Schema(nullable = true)
-    public String notes;
+    public Provisions commencementAuthority;
 
+    @Schema
+    public List<InForce> inForceDates;
 
-    public static class Provisions {
-
-        @Schema
-        public String plain;
-
-        @Schema
-        public List<RichText.Node> rich;
-
-    }
-
-    public static class InForce {
-
-        @Schema(nullable = true)
-        public LocalDate date;
-
-        @Schema
-        public boolean applied;
-
-        @JsonInclude(JsonInclude.Include.NON_NULL)
-        @Schema(nullable = true)
-        public Boolean prospective;
-
-        @JsonInclude(JsonInclude.Include.NON_EMPTY)
-        @Schema(nullable = true)
-        public String description;
-
-    }
+    /* */
 
     public static class Source {
 
@@ -82,6 +51,35 @@ public class Effect {
 
         @Schema
         public Provisions provisions;
+
+    }
+
+    public static class Provisions {
+
+        @Schema
+        public String plain;
+
+        @Schema
+        public List<RichText.Node> rich;
+
+    }
+
+
+    public static class InForce {
+
+        @Schema(nullable = true)
+        public LocalDate date;
+
+        @Schema
+        public boolean applied;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        @Schema(nullable = true)
+        public Boolean prospective;
+
+        @JsonInclude(JsonInclude.Include.NON_EMPTY)
+        @Schema(nullable = true)
+        public String description;
 
     }
 

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import uk.gov.legislation.endpoints.document.responses.Effect;
+import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.endpoints.document.service.ExtentConverter;
 import uk.gov.legislation.endpoints.documents.DocumentList;
@@ -197,18 +197,18 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     /* unapplied effects */
 
-    private List<UnappliedEffect> rawEffects = Collections.emptyList();
+    private List<uk.gov.legislation.transform.simple.UnappliedEffect> rawEffects = Collections.emptyList();
     @JsonIgnore
-    public List<UnappliedEffect> rawEffects() { return rawEffects; }
+    public List<uk.gov.legislation.transform.simple.UnappliedEffect> rawEffects() { return rawEffects; }
 
-    private List<Effect> convertedEffects = Collections.emptyList();
+    private List<UnappliedEffect> convertedEffects = Collections.emptyList();
     @Override
-    public List<Effect> unappliedEffects() { return convertedEffects; }
+    public List<UnappliedEffect> unappliedEffects() { return convertedEffects; }
 
     @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JsonSetter
-    public void setUnappliedEffects(List<UnappliedEffect> source) {
+    public void setUnappliedEffects(List<uk.gov.legislation.transform.simple.UnappliedEffect> source) {
         rawEffects = source;
         convertedEffects = EffectsConverter.convert(source);
     }

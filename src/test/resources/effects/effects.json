@@ -1,0 +1,1353 @@
+{
+  "id" : "http://www.legislation.gov.uk/changes/data.feed?sort=modified",
+  "updated" : "2025-01-10T02:23:26.449553Z",
+  "itemsPerPage" : 20,
+  "startIndex" : 1,
+  "page" : 1,
+  "morePages" : 74520,
+  "totalPages" : 74521,
+  "totalResults" : 1490409,
+  "entries" : [ {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-7d04edf8bb3c585c7773afbe6215d9a3/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-7d04edf8bb3c585c7773afbe6215d9a3",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "omitted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 44 and cross-heading",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 44 and cross-heading",
+          "ref" : "part-I-crossheading-application-of-building-regulations-to-crown-etc",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/part/I/crossheading/application-of-building-regulations-to-crown-etc",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2022,
+        "affectingNumber" : 30,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingProvisionsText" : "Sch. 5 para. 38",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 5 ",
+          "ref" : "schedule-5",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 38",
+          "ref" : "schedule-5-paragraph-38",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5/paragraph/38",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 170(4)(c)",
+          "ref" : "section-170-4-c",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Building Safety Act 2022 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2015/7/key-d1205b2b87ec1f9eddf1d3ab12ae048d/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-d1205b2b87ec1f9eddf1d3ab12ae048d",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 1(1A)(d)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 1(1A)(d)",
+          "ref" : "section-1-1A-d",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/1/1A/d",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2015,
+        "affectingNumber" : 7,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2015/7",
+        "affectingProvisionsText" : "s. 37(2)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 37(2)",
+          "ref" : "section-37-2",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2015/7/section/37/2",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 57(5)(a)",
+          "ref" : "section-57-5-a",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2015/7/section/57/5/a",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Infrastructure Act 2015 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-41eef9bdccb45f4687352577e38d77aa/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-41eef9bdccb45f4687352577e38d77aa",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "words inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 1A(2)(a)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 1A(2)(a)",
+          "ref" : "section-1A-2-a",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/1A/2/a",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 61(a)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 61(a)",
+          "ref" : "schedule-13-paragraph-61-a",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/61/a",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-3d96c0989ca52418a67adc1203cf9702/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-3d96c0989ca52418a67adc1203cf9702",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "words substituted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 1A(2)(b)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 1A(2)(b)",
+          "ref" : "section-1A-2-b",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/1A/2/b",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 61(b)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 61(b)",
+          "ref" : "schedule-13-paragraph-61-b",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/61/b",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-b296411a23d06e7af49a26c588f24f13/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-b296411a23d06e7af49a26c588f24f13",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "repealed",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 4",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4",
+          "ref" : "section-4",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/4",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 5(a) Sch.",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 5(a)",
+          "ref" : "section-5-a",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/5/a",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "text",
+          "text" : " ",
+          "ref" : null,
+          "uri" : null,
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "Sch.",
+          "ref" : "schedule",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/schedule",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-8ff73453a59c369551c5199945be1555/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-8ff73453a59c369551c5199945be1555",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "words inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 20(1)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 20(1)",
+          "ref" : "section-20-1",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/20/1",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 62",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 62",
+          "ref" : "schedule-13-paragraph-62",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/62",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-2211e63b3aa9fbd4d958874f8701645b/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-2211e63b3aa9fbd4d958874f8701645b",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "words inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 44(3)(a)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 44(3)(a)",
+          "ref" : "section-44-3-a",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/3/a",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 4(4)(a)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4(4)(a)",
+          "ref" : "section-4-4-a",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/4/4/a",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-f89e6d6cffb9c08463f5e23d0cd80542/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-f89e6d6cffb9c08463f5e23d0cd80542",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "words substituted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 44(8)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 44(8)",
+          "ref" : "section-44-8",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/8",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 4(4)(b)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4(4)(b)",
+          "ref" : "section-4-4-b",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/4/4/b",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-da50ed455ad164bf3e61cc3ee11d050a/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-da50ed455ad164bf3e61cc3ee11d050a",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 44(11)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 44(11)",
+          "ref" : "section-44-11",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/44/11",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 3(8)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 3(8)",
+          "ref" : "section-3-8",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/3/8",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-f396bafcf3c7f3e7d7b115a2b64c688a/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-f396bafcf3c7f3e7d7b115a2b64c688a",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "omitted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 45",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 45",
+          "ref" : "section-45",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/45",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2022,
+        "affectingNumber" : 30,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingProvisionsText" : "Sch. 5 para. 38",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 5 ",
+          "ref" : "schedule-5",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 38",
+          "ref" : "schedule-5-paragraph-38",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/schedule/5/paragraph/38",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 170(4)(c)",
+          "ref" : "section-170-4-c",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Building Safety Act 2022 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-3d35acb9c20ac0bdca9705da2d03b1ea/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-3d35acb9c20ac0bdca9705da2d03b1ea",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "word substituted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 45(1)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 45(1)",
+          "ref" : "section-45-1",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/45/1",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 3(9)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 3(9)",
+          "ref" : "section-3-9",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/3/9",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-7e19a4d53e7bc488db6617087fa7f28a/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-7e19a4d53e7bc488db6617087fa7f28a",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "repealed",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 56(1)-(4)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 56(1)",
+          "ref" : "section-56-1",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "text",
+          "text" : "-",
+          "ref" : null,
+          "uri" : null,
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "(4)",
+          "ref" : "section-56-4",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "Sch.",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch.",
+          "ref" : "schedule",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/schedule",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2004/22/key-c07f14b999d3ebde008c5d6afadc0e1b/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-c07f14b999d3ebde008c5d6afadc0e1b",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "repealed",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 59(4) (5)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 59(4)",
+          "ref" : "section-59-4",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/59/4",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "text",
+          "text" : " ",
+          "ref" : null,
+          "uri" : null,
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "(5)",
+          "ref" : "section-59-5",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/59/5",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2004,
+        "affectingNumber" : 22,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingProvisionsText" : "s. 5(b) Sch.",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 5(b)",
+          "ref" : "section-5-b",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/5/b",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "text",
+          "text" : " ",
+          "ref" : null,
+          "uri" : null,
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "Sch.",
+          "ref" : "schedule",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/schedule",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 11(3)",
+          "ref" : "section-11-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2004/22/section/11/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Sustainable and Secure Buildings Act 2004 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-814eed9ef9f96cc1db4cb6f69c58754e/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-814eed9ef9f96cc1db4cb6f69c58754e",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "words inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 77(3)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 77(3)",
+          "ref" : "section-77-3",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/77/3",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 63",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 63",
+          "ref" : "schedule-13-paragraph-63",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/63",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-e1014f8e7bc6a1aa085f179f718072db/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-e1014f8e7bc6a1aa085f179f718072db",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "words inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 79(5)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 79(5)",
+          "ref" : "section-79-5",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/79/5",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 64",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 64",
+          "ref" : "schedule-13-paragraph-64",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/64",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/asc/2023/3/key-168b69c81c8d135d6e7037c3c0d47fd4/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-168b69c81c8d135d6e7037c3c0d47fd4",
+        "applied" : true,
+        "requiresApplied" : true,
+        "type" : "inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 79A",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 79A",
+          "ref" : "section-79A",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/79A",
+          "error" : "Section missing in legislation",
+          "missing" : true
+        } ],
+        "affectedExtent" : null,
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshParliamentAct",
+        "affectingYear" : 2023,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingProvisionsText" : "Sch. 13 para. 65",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "Sch. 13 ",
+          "ref" : "schedule-13",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13",
+          "error" : null,
+          "missing" : false
+        }, {
+          "type" : "section",
+          "text" : "para. 65",
+          "ref" : "schedule-13-paragraph-65",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/schedule/13/paragraph/65",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        }, {
+          "date" : "2024-11-04",
+          "applied" : true,
+          "prospective" : null,
+          "qualification" : "wholly in force"
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 212(2)",
+          "ref" : "section-212-2",
+          "uri" : "http://www.legislation.gov.uk/id/asc/2023/3/section/212/2",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Historic Environment (Wales) Act 2023 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-bc9ccbbb414f1a09609e61584f1c351f/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-bc9ccbbb414f1a09609e61584f1c351f",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "applied",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 93",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 93",
+          "ref" : "section-93",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/93",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshAssemblyMeasure",
+        "affectingYear" : 2011,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingProvisionsText" : "s. 4(a)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4(a)",
+          "ref" : "section-4-a",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/4/a",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 9(3)",
+          "ref" : "section-9-3",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-91603a80818f5fbe63e6ecb5356de5f3/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-91603a80818f5fbe63e6ecb5356de5f3",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "applied",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 94",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 94",
+          "ref" : "section-94",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/94",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshAssemblyMeasure",
+        "affectingYear" : 2011,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingProvisionsText" : "s. 4(b)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4(b)",
+          "ref" : "section-4-b",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/4/b",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 9(3)",
+          "ref" : "section-9-3",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/mwa/2011/3/key-a951401347c0738a038738934203b570/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-a951401347c0738a038738934203b570",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "applied",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 94A",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 94A",
+          "ref" : "section-94A",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/94A",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "WelshAssemblyMeasure",
+        "affectingYear" : 2011,
+        "affectingNumber" : 3,
+        "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingProvisionsText" : "s. 4(c)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 4(c)",
+          "ref" : "section-4-c",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/4/c",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 9(3)",
+          "ref" : "section-9-3",
+          "uri" : "http://www.legislation.gov.uk/id/mwa/2011/3/section/9/3",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Domestic Fire Safety (Wales) Measure 2011 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  }, {
+    "id" : "http://www.legislation.gov.uk/changes/affected/ukpga/1984/55/affecting/ukpga/2022/30/key-b4eed32f9f8e7a44d8d1866ecef12480/modified/2024-11-09T09:25:54Z",
+    "content" : {
+      "effect" : {
+        "id" : "key-b4eed32f9f8e7a44d8d1866ecef12480",
+        "applied" : false,
+        "requiresApplied" : true,
+        "type" : "inserted",
+        "affectedClass" : "UnitedKingdomPublicGeneralAct",
+        "affectedYear" : 1984,
+        "affectedNumber" : 55,
+        "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedProvisionsText" : "s. 95(5)",
+        "affectedProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 95(5)",
+          "ref" : "section-95-5",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/95/5",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectedExtent" : "E+W",
+        "affectedEffectsExtent" : null,
+        "affectingClass" : "UnitedKingdomPublicGeneralAct",
+        "affectingYear" : 2022,
+        "affectingNumber" : 30,
+        "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingProvisionsText" : "s. 60(2)",
+        "affectingProvisions" : [ {
+          "type" : "section",
+          "text" : "s. 60(2)",
+          "ref" : "section-60-2",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/section/60/2",
+          "error" : null,
+          "missing" : false
+        } ],
+        "affectingExtent" : null,
+        "affectingEffectsExtent" : "E+W",
+        "notes" : null,
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "qualification" : ""
+        } ],
+        "commencementAuthority" : [ {
+          "type" : "section",
+          "text" : "s. 170(4)(c)",
+          "ref" : "section-170-4-c",
+          "uri" : "http://www.legislation.gov.uk/id/ukpga/2022/30/section/170/4/c",
+          "error" : null,
+          "missing" : false
+        } ]
+      }
+    },
+    "title" : "Building Safety Act 2022 effect on Building Act 1984",
+    "updated" : "2024-11-09T09:25:54Z",
+    "author" : {
+      "name" : "editorial.legislation.gov.uk"
+    }
+  } ]
+}
