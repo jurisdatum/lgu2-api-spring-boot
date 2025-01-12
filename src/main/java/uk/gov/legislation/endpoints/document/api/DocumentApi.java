@@ -22,7 +22,7 @@ public interface DocumentApi {
     /**
      * Retrieves document content in CLML format.
      */
-    @GetMapping(value = "/document/{type}/{year}/{number}{version}", produces = "application/xml")
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/xml")
     @Operation(summary = "get a document with a calendar year")
     ResponseEntity<String> getDocumentClml(
             @PathVariable @Type String type,
@@ -31,7 +31,7 @@ public interface DocumentApi {
             @RequestParam @Version Optional<String> version,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}{version}", produces = "application/xml")
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(summary = "get a document with a regnal year")
     ResponseEntity<String> getDocumentClml(
             @PathVariable @Type String type,
@@ -44,7 +44,7 @@ public interface DocumentApi {
     /**
      * Retrieves document content in AKN format.
      */
-    @GetMapping(value = "/document/{type}/{year}/{number}{version}", produces = "application/akn+xml")
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentAkn(
             @PathVariable String type,
             @PathVariable int year,
@@ -52,7 +52,7 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}{version}", produces = "application/akn+xml")
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -64,7 +64,7 @@ public interface DocumentApi {
     /**
      * Retrieves document content in HTML format.
      */
-    @GetMapping(value = "/document/{type}/{year}/{number}{version}", produces = "text/html")
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "text/html")
     ResponseEntity<String> getDocumentHtml(
             @PathVariable String type,
             @PathVariable int year,
@@ -72,7 +72,7 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}{version}", produces = "text/html")
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
     ResponseEntity<String> getDocumentHtml(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -89,7 +89,7 @@ public interface DocumentApi {
     /**
      * Retrieves document metadata and HTML content in JSON format.
      */
-    @GetMapping(value = "/document/{type}/{year}/{number}{version}", produces = "application/json")
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/json")
     ResponseEntity<Response> getDocumentJson(
             @PathVariable String type,
             @PathVariable int year,
@@ -97,7 +97,7 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}{version}", produces = "application/json")
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<Response> getDocumentJson(
             @PathVariable String type,
             @PathVariable String monarch,
