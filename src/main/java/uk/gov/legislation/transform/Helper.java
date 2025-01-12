@@ -6,7 +6,6 @@ import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.serialize.Emitter;
-import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -51,13 +50,6 @@ public class Helper {
         Source source = new StreamSource(stream);
         DocumentBuilder builder = processor.newDocumentBuilder();
         return builder.build(source);
-    }
-    public static String validateLanguage(String language) {
-        if (!language.equals("en") && !language.equals("cy")) {
-            throw new UnsupportedLanguageException("Unsupported Language, only (en and cy) is acceptable language: "
-                    + language +" is not acceptable");
-        }
-        return language;
     }
 
 }

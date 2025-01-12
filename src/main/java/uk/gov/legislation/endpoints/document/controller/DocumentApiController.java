@@ -9,7 +9,7 @@ import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Optional;
-import static uk.gov.legislation.transform.Helper.validateLanguage;
+import static uk.gov.legislation.endpoints.Language.validateLanguage;
 
 
 /**
