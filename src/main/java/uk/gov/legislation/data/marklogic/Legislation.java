@@ -107,8 +107,8 @@ public class Legislation {
         LegislationParameters newParams = new LegislationParameters(comp.type(), comp.year(), comp.number())
             .version(comp.version())
             .view(oldParams.view())
-            .section(oldParams.section()) // FixMe I believe this should be comp.fragment() ??
-            .lang(oldParams.lang());
+            .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
+            .lang(comp.language());
         return getAndFollowRedirect(newParams, true);
     }
 
