@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.endpoints.Application;
-import uk.gov.legislation.endpoints.document.TableOfContents;
+import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.List;
@@ -48,8 +48,8 @@ class MetadataExtractionTest {
 			""";
     @Test
     void versions() throws SaxonApiException, JsonProcessingException {
-		TableOfContents simple = this.simplifier.contents(CLML);
-		List<String> versions = simple.meta().versions();
+		Contents simple = this.simplifier.contents(CLML);
+		List<String> versions = simple.meta.versions();
 		Assertions.assertEquals(3, versions.size(), "There should be exactly three versions");
 		Assertions.assertEquals("enacted", versions.get(0), "First version should be 'enacted'");
 		Assertions.assertEquals("2017-01-16", versions.get(1), "Second version should be '2017-01-16'");

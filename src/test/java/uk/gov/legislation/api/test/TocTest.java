@@ -8,8 +8,10 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.api.responses.TableOfContents;
+import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.endpoints.Application;
-import uk.gov.legislation.endpoints.document.TableOfContents;
+import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.stream.Stream;
@@ -39,8 +41,9 @@ class TocTest {
     @MethodSource("provide")
     void toc(String id) throws Exception {
         String clml = read(id, "-contents.xml");
-        TableOfContents contents = simplifier.contents(clml);
-        String actual = mapper.writeValueAsString(contents);
+        Contents simple = simplifier.contents(clml);
+        TableOfContents toc = TableOfContentsConverter.convert(simple);
+        String actual = mapper.writeValueAsString(toc);
         String expected = read(id, "-contents.json");
         Assertions.assertEquals(expected, actual);
     }

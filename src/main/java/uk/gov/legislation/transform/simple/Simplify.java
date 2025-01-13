@@ -108,12 +108,12 @@ public class Simplify {
     private Metadata metadata(XdmNode clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
-        return Contents.parse(simplified).meta();
+        return Contents.parse(simplified).meta;
     }
     private Metadata metadata(String clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
-        return Contents.parse(simplified).meta();
+        return Contents.parse(simplified).meta;
     }
 
     public Metadata extractDocumentMetadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
