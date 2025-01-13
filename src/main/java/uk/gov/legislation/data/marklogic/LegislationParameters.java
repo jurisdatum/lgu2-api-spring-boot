@@ -12,6 +12,7 @@ public class LegislationParameters {
     private Optional<String> version;
     private Optional<String> view;
     private Optional<String> section;
+    private Optional<String> lang;
 
     public LegislationParameters(String type, String year, int number) {
         if (type == null)
@@ -24,6 +25,7 @@ public class LegislationParameters {
         this.version = Optional.empty();
         this.view = Optional.empty();
         this.section = Optional.empty();
+        this.lang = Optional.empty();
     }
 
     public String type() { return type; }
@@ -33,7 +35,6 @@ public class LegislationParameters {
     public int number() { return number; }
 
     public Optional<String> version() { return version; }
-
     public LegislationParameters version(Optional<String> version) {
         this.version = version;
         return this;
@@ -51,6 +52,12 @@ public class LegislationParameters {
         return this;
     }
 
+    public Optional<String> lang() { return lang; }
+    public LegislationParameters lang(Optional<String> lang) {
+        this.lang = lang;
+        return this;
+    }
+
     public String buildQuery() {
         StringBuilder query = new StringBuilder();
         query.append("?type=").append(encode(type))
@@ -59,6 +66,7 @@ public class LegislationParameters {
         version.ifPresent(v -> query.append("&version=").append(encode(v)));
         view.ifPresent(v -> query.append("&view=").append(encode(v)));
         section.ifPresent(s -> query.append("&section=").append(encode(s)));
+        lang.ifPresent(s -> query.append("&lang=").append(encode(s)));
         return query.toString();
     }
 

@@ -29,6 +29,7 @@ class UriParsingTest {
         assertEquals(1, comp.number());
         assertTrue(comp.fragment().isEmpty());
         assertTrue(comp.version().isEmpty());
+        assertTrue(comp.language().isEmpty());
     }
 
     @Test
@@ -80,6 +81,7 @@ class UriParsingTest {
         assertEquals(1, comp.number());
         assertTrue(comp.fragment().isEmpty());
         assertTrue(comp.version().isEmpty());
+        assertTrue(comp.language().isEmpty());
     }
 
     @Test
@@ -149,6 +151,7 @@ class UriParsingTest {
         assertTrue(comp.fragment().isPresent());
         assertEquals("section/1", comp.fragment().get());
         assertTrue(comp.version().isEmpty());
+        assertTrue(comp.language().isEmpty());
     }
 
     @Test
@@ -190,6 +193,37 @@ class UriParsingTest {
         assertEquals(25, comp.number());
         assertTrue(comp.fragment().isEmpty());
         assertTrue(comp.version().isEmpty());
+    }
+
+    /* language */
+
+    @Test
+    void http_lgu_wsi_2024_1002_welsh() {
+        String uri = "http://www.legislation.gov.uk/wsi/2024/1002/welsh";
+        Links.Components comp = Links.parse(uri);
+        assertNotNull(comp);
+        assertEquals("wsi", comp.type());
+        assertEquals("2024", comp.year());
+        assertEquals(1002, comp.number());
+        assertTrue(comp.fragment().isEmpty());
+        assertTrue(comp.version().isEmpty());
+        assertTrue(comp.language().isPresent());
+        assertEquals("welsh", comp.language().get());
+    }
+
+    @Test
+    void http_lgu_wsi_2024_1002_made_welsh() {
+        String uri = "http://www.legislation.gov.uk/wsi/2024/1002/made/welsh";
+        Links.Components comp = Links.parse(uri);
+        assertNotNull(comp);
+        assertEquals("wsi", comp.type());
+        assertEquals("2024", comp.year());
+        assertEquals(1002, comp.number());
+        assertTrue(comp.fragment().isEmpty());
+        assertTrue(comp.version().isPresent());
+        assertEquals("made", comp.version().get());
+        assertTrue(comp.language().isPresent());
+        assertEquals("welsh", comp.language().get());
     }
 
     /* other */

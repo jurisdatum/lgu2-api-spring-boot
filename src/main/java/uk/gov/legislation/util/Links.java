@@ -7,7 +7,14 @@ import java.util.regex.Pattern;
 
 public class Links {
 
-    public record Components(String type, String year, int number, Optional<String> fragment, Optional<String> version) { }
+    public record Components(
+        String type,
+        String year,
+        int number,
+        Optional<String> fragment,  // with slashes, e.g., section/1
+        Optional<String> version,
+        Optional<String> language  // can be empty, 'english' or 'welsh'
+    ) { }
 
     public static Components parse(String link) {
         if (link == null)
@@ -35,7 +42,7 @@ public class Links {
         link = link.substring(matcher.end());
 
         if (link.isEmpty())
-            return new Components(type, year, number, Optional.empty(), Optional.empty());
+            return new Components(type, year, number, Optional.empty(), Optional.empty(), Optional.empty());
 
         String[] split = link.split("/");
         if (split.length == 0)
@@ -44,7 +51,17 @@ public class Links {
         if (split[split.length - 1].equals("revision"))  // this might no longer be necessary?
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), Optional.empty());
+            return new Components(type, year, number, Optional.empty(), Optional.empty(), Optional.empty());
+
+        final Optional<String> language;
+        if ("english".equalsIgnoreCase(split[split.length - 1]) || "welsh".equalsIgnoreCase(split[split.length - 1])) {
+            language = Optional.of(split[split.length - 1]);
+            split = Arrays.copyOf(split, split.length - 1);
+        } else {
+            language = Optional.empty();
+        }
+        if (split.length == 0)
+            return new Components(type, year, number, Optional.empty(), Optional.empty(), language);
 
         final Optional<String> version;
         if (Versions.isVersionLabel(split[split.length - 1])) {
@@ -54,13 +71,15 @@ public class Links {
             version = Optional.empty();
         }
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), version);
-        if ("contents".equals(split[split.length - 1]))
+            return new Components(type, year, number, Optional.empty(), version, language);
+
+        if ("contents".equals(split[split.length - 1]))  // FixMe find a way to capture 'contents'
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), version);
+            return new Components(type, year, number, Optional.empty(), version, language);
+
         final Optional<String> fragment = Optional.of(String.join("/", split));
-        return new Components(type, year, number, fragment, version);
+        return new Components(type, year, number, fragment, version, language);
     }
 
     public static String shorten(String uri) {
@@ -80,6 +99,10 @@ public class Links {
         if (comp.version.isPresent()) {
             builder.append("/");
             builder.append(comp.version.get());
+        }
+        if (comp.language.isPresent()) {
+            builder.append("/");
+            builder.append(comp.language.get());
         }
         return builder.toString();
     }

@@ -2,7 +2,7 @@ package uk.gov.legislation.data.marklogic;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import uk.gov.legislation.exceptions.DocumentFetchException;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 import uk.gov.legislation.exceptions.NoDocumentException;
@@ -11,7 +11,7 @@ import uk.gov.legislation.util.Links;
 import java.io.IOException;
 import java.util.Optional;
 
-@Service
+@Repository
 public class Legislation {
 
     private static final String ENDPOINT = "legislation.xq";
@@ -22,8 +22,8 @@ public class Legislation {
         this.db = db;
     }
 
-    public Response getDocument(String type, String year, int number, Optional<String> version) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version);
+    public Response getDocument(String type, String year, int number, Optional<String> version, Optional<String> language) {
+        LegislationParameters params = new LegislationParameters(type, year, number).version(version).lang(language);
         return getAndFollowRedirect(params);
     }
 
@@ -107,7 +107,8 @@ public class Legislation {
         LegislationParameters newParams = new LegislationParameters(comp.type(), comp.year(), comp.number())
             .version(comp.version())
             .view(oldParams.view())
-            .section(oldParams.section()); // FixMe I believe this should be comp.fragment() ??
+            .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
+            .lang(comp.language());
         return getAndFollowRedirect(newParams, true);
     }
 
