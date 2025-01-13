@@ -39,10 +39,25 @@ public class Helper {
 
     }
 
+    /**
+     * The purpose of this is to make generate-id() stable, for testing. Without it generate-id()
+     * produces different values depending on the order the source document is processed.
+     */
+    public static class DocumentNumberAllocator extends net.sf.saxon.tree.util.DocumentNumberAllocator {
+
+        @Override
+        public synchronized long allocateDocumentNumber() {
+            return 1;
+        }
+
+    }
+
     static {
         Configuration configuration = processor.getUnderlyingConfiguration();
         SerializerFactory serializerFactory = new SerializerFactory(configuration);
         configuration.setSerializerFactory(serializerFactory);
+        DocumentNumberAllocator numberAllocator = new DocumentNumberAllocator();
+        configuration.setDocumentNumberAllocator(numberAllocator);
     }
 
     public static XdmNode parse(String xml) throws SaxonApiException {
