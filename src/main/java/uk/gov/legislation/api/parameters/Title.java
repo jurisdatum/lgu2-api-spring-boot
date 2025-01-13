@@ -1,4 +1,4 @@
-package uk.gov.legislation.params;
+package uk.gov.legislation.api.parameters;
 
 import io.swagger.v3.oas.annotations.Parameter;
 
@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-@Parameter(description = "A year or range of years, relative to the monarch", example = "10-11")
-public @interface Years { }
+@Parameter(description = "title words for search")
+public @interface Title { }

@@ -1,4 +1,4 @@
-package uk.gov.legislation.params;
+package uk.gov.legislation.api.parameters;
 
 import io.swagger.v3.oas.annotations.Parameter;
 

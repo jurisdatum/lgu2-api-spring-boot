@@ -1,4 +1,4 @@
-package uk.gov.legislation.params;
+package uk.gov.legislation.api.parameters;
 
 import io.swagger.v3.oas.annotations.Parameter;
 
@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-@Parameter(description = "A four digit calendar year", example = "2024")
-public @interface Year { }
+@Parameter(description = "A version name or date", example = "enacted")
+public @interface Version { }
