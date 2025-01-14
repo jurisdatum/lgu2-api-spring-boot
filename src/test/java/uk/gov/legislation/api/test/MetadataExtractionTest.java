@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.api.responses.DocumentMetadata;
+import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
@@ -55,7 +57,8 @@ class MetadataExtractionTest {
 		Assertions.assertEquals("2017-01-16", versions.get(1), "Second version should be '2017-01-16'");
 		Assertions.assertEquals("2017-03-16", versions.get(2), "Third version should be '2017-03-16'");
 		ObjectMapper mapper = new ObjectMapper().registerModules(new JavaTimeModule());
-		String json = mapper.writeValueAsString(simple);
+		DocumentMetadata meta = DocumentMetadataConverter.convert(simple.meta);
+		String json = mapper.writeValueAsString(meta);
 		Assertions.assertTrue(json.contains("\"versions\":[\"enacted\",\"2017-01-16\",\"2017-03-16\""));
     }
 

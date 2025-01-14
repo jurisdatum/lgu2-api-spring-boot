@@ -4,47 +4,33 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
-import uk.gov.legislation.endpoints.document.service.EffectsConverter;
-import uk.gov.legislation.endpoints.document.service.ExtentConverter;
-import uk.gov.legislation.endpoints.documents.DocumentList;
-import uk.gov.legislation.util.*;
+import uk.gov.legislation.util.FirstVersion;
+import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Optional;
 
-public class Metadata implements uk.gov.legislation.endpoints.document.Metadata {
+public class Metadata {
 
     public String id;
 
-    public String id() { return id; }
-
     public String longType;
-
-    public String longType() { return longType; }
-
-    public String shortType() { return Types.longToShort(longType); }
 
     public int year;
 
-    public int year() { return year; }
-
     public String regnalYear;
 
-    public String regnalYear() { return regnalYear; }
-
     public int number;
-
-    public int number() { return number; }
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "altNumber")
     @JsonIgnore
     public List<AltNum> altNums;
 
-    public List<AltNum> altNumbers() { return altNums; }
-
-    public static class AltNum implements uk.gov.legislation.util.AltNumber, DocumentList.Document.AltNumber {
+    public static class AltNum implements uk.gov.legislation.util.AltNumber {
 
         @JacksonXmlProperty(isAttribute = true)
         public String category;
@@ -66,12 +52,6 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     public LocalDate date;
 
-    public LocalDate date() { return date; }
-
-    public String cite() {
-        return Cites.make(longType, year, number, altNumbers());
-    }
-
     private LocalDate valid;
     @JsonSetter("valid")
     public void setValid(String value) { valid = LocalDate.parse(value); }
@@ -84,39 +64,25 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
 
     public String status;
 
-    public String status() { return status; }
-
     public String title;
 
-    public String title() { return title; }
-
-    private String extent;
-
-    public Set<Extent> extent() {
-        return ExtentConverter.convert(extent);
-    }
+    public String extent;
 
     public String lang;
 
-    public String lang() { return lang; }
-
     public String publisher;
 
-    public String publisher() { return publisher; }
-
     public LocalDate modified;
-
-    public LocalDate modified() { return modified; }
 
     private List<String> _versions;
 
     public List<String> versions() {
         LinkedHashSet<String> set = new LinkedHashSet<>(_versions);
-        if (set.contains("current")) {
+        if (set.contains("current")) { // FixMe this might put current version out of order
             set.remove("current");
             set.add(this.version());
         }
-        set.remove("prospective"); // ?!
+        set.remove("prospective"); // FixMe
         return set.stream().toList();
     }
 
@@ -125,9 +91,8 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     @JsonSetter
     public void setVersions(List<String> value) { _versions = value; }
 
-    private boolean schedules;
+    public boolean schedules;
 
-    public boolean schedules() { return schedules; }
     @JsonSetter("schedules")
     public void setSchedules(String value) { schedules = value != null && !value.isBlank(); }
 
@@ -180,7 +145,6 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     @JacksonXmlProperty(localName = "ancestors")
     private List<Ancestor> ancestors = Collections.emptyList();
 
-    @Override
     public List<uk.gov.legislation.endpoints.document.responses.Level> ancestors() {
         return ancestors.stream().map(Level::convert).toList();
     }
@@ -190,27 +154,14 @@ public class Metadata implements uk.gov.legislation.endpoints.document.Metadata 
     @JacksonXmlProperty(localName = "descendants")
     private List<Descendant> descendants = Collections.emptyList();
 
-    @Override
     public List<uk.gov.legislation.endpoints.document.responses.Level> descendants() {
         return descendants.stream().map(Level::convert).toList();
     }
 
     /* unapplied effects */
 
-    private List<uk.gov.legislation.transform.simple.UnappliedEffect> rawEffects = Collections.emptyList();
-    @JsonIgnore
-    public List<uk.gov.legislation.transform.simple.UnappliedEffect> rawEffects() { return rawEffects; }
-
-    private List<UnappliedEffect> convertedEffects = Collections.emptyList();
-    @Override
-    public List<UnappliedEffect> unappliedEffects() { return convertedEffects; }
-
     @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    @JsonSetter
-    public void setUnappliedEffects(List<uk.gov.legislation.transform.simple.UnappliedEffect> source) {
-        rawEffects = source;
-        convertedEffects = EffectsConverter.convert(source);
-    }
+    public List<UnappliedEffect> rawEffects = Collections.emptyList();
 
 }

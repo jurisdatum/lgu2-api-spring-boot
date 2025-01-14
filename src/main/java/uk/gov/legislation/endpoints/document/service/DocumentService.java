@@ -9,6 +9,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
@@ -54,15 +55,16 @@ public class DocumentService {
         XdmNode clmlDoc = Helper.parse(clmlContent);
         XdmNode aknNode = clmlToAknTransformer.transform(clmlDoc);
         String htmlContent = aknToHtmlTransformer.transform(aknNode, false);
-        Metadata metadata;
+        Metadata simpleMetadata;
         try {
-            metadata = simplifier.extractDocumentMetadata(clmlDoc);
+            simpleMetadata = simplifier.extractDocumentMetadata(clmlDoc);
         } catch (JsonProcessingException e) {
             throw new TransformationException("Simplification to JSON format failed",e);
         }
+        DocumentMetadata convertedMetadata = DocumentMetadataConverter.convert(simpleMetadata);
         long end = System.currentTimeMillis();
         logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
-        return new Document(DocumentMetadataConverter.convert(metadata), htmlContent);
+        return new Document(convertedMetadata, htmlContent);
     }
 
     /* helper */

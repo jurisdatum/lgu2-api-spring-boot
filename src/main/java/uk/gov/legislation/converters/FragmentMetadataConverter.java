@@ -33,7 +33,7 @@ public class FragmentMetadataConverter {
             .map(level -> level.id)
             .filter(id -> !id.equals(metadata.fragment()))
             .collect(Collectors.toSet());
-        List<UnappliedEffect> all = metadata.rawEffects().stream().sorted(EffectsComparator.INSTANCE).toList();
+        List<UnappliedEffect> all = metadata.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
         List<UnappliedEffect> direct = Effects.removeThoseWithNoRelevantSection(all, descendantIds, false);
         List<UnappliedEffect> ancestor = Effects.removeThoseWithNoRelevantSection(all, ancestorIds, true);
         FragmentMetadata.Effects effects = new FragmentMetadata.Effects();

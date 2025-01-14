@@ -2,7 +2,6 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
@@ -32,7 +31,7 @@ public abstract class CommonMetadata {
 
     @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public List<? extends DocumentList.Document.AltNumber> altNumbers;
+    public List<AltNumber> altNumbers;
 
     @Schema(example = "2024-01-25")
     public LocalDate date;
@@ -69,5 +68,16 @@ public abstract class CommonMetadata {
 
     @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
     public List<String> formats;
+
+
+    public static class AltNumber {
+
+        @Schema(example = "C", allowableValues = { "C", "L", "S", "NI", "W", "Cy", "Regnal" })
+        public String category;
+
+        @Schema(example = "1")
+        public String value;
+
+    }
 
 }

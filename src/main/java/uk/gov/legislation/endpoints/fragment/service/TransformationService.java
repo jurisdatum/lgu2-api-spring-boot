@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Akn2Html;
@@ -57,9 +58,10 @@ public class TransformationService {
             XdmNode akn = clml2akn.transform(clmlDoc);
             String html = akn2html.transform(akn, false);
             Metadata meta = simplifier.extractFragmentMetadata(clmlDoc);
+            FragmentMetadata convertedMetadata = FragmentMetadataConverter.convert(meta);
             long end = System.currentTimeMillis();
             logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
-            return new Fragment(FragmentMetadataConverter.convert(meta), html);
+            return new Fragment(convertedMetadata, html);
         } catch (SaxonApiException e) {
             throw new TransformationException("Error creating JSON response from CLML", e);
         } catch (JsonProcessingException e) {
