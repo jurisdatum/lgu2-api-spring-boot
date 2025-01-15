@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.time.ZonedDateTime;
+import java.util.Collections;
 import java.util.List;
 
 @JacksonXmlRootElement(localName = "feed", namespace = "http://www.w3.org/2005/Atom")
@@ -36,6 +37,6 @@ public class Page {
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "entry")
-    public List<Entry> entries;
+    public List<Entry> entries = Collections.emptyList();
 
 }
