@@ -19,6 +19,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 44 and cross-heading",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -34,6 +35,7 @@
         "affectingYear" : 2022,
         "affectingNumber" : 30,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingTitle" : "Building Safety Act 2022",
         "affectingProvisionsText" : "Sch. 5 para. 38",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -86,6 +88,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 1(1A)(d)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -101,6 +104,7 @@
         "affectingYear" : 2015,
         "affectingNumber" : 7,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2015/7",
+        "affectingTitle" : "Infrastructure Act 2015",
         "affectingProvisionsText" : "s. 37(2)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -146,6 +150,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 1A(2)(a)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -161,6 +166,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 61(a)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -218,6 +224,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 1A(2)(b)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -233,6 +240,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 61(b)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -290,6 +298,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 4",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -305,6 +314,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 5(a) Sch.",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -364,6 +374,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 20(1)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -379,6 +390,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 62",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -436,6 +448,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 44(3)(a)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -451,6 +464,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 4(4)(a)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -496,6 +510,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 44(8)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -511,6 +526,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 4(4)(b)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -556,6 +572,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 44(11)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -571,6 +588,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 3(8)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -616,6 +634,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 45",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -631,6 +650,7 @@
         "affectingYear" : 2022,
         "affectingNumber" : 30,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingTitle" : "Building Safety Act 2022",
         "affectingProvisionsText" : "Sch. 5 para. 38",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -683,6 +703,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 45(1)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -698,6 +719,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 3(9)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -743,6 +765,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 56(1)-(4)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -772,6 +795,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "Sch.",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -817,6 +841,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 59(4) (5)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -846,6 +871,7 @@
         "affectingYear" : 2004,
         "affectingNumber" : 22,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2004/22",
+        "affectingTitle" : "Sustainable and Secure Buildings Act 2004",
         "affectingProvisionsText" : "s. 5(b) Sch.",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -905,6 +931,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 77(3)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -920,6 +947,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 63",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -977,6 +1005,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 79(5)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -992,6 +1021,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 64",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -1049,6 +1079,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 79A",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -1064,6 +1095,7 @@
         "affectingYear" : 2023,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/asc/2023/3",
+        "affectingTitle" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
         "affectingProvisionsText" : "Sch. 13 para. 65",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -1121,6 +1153,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 93",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -1136,6 +1169,7 @@
         "affectingYear" : 2011,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingTitle" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
         "affectingProvisionsText" : "s. 4(a)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -1181,6 +1215,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 94",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -1196,6 +1231,7 @@
         "affectingYear" : 2011,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingTitle" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
         "affectingProvisionsText" : "s. 4(b)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -1241,6 +1277,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 94A",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -1256,6 +1293,7 @@
         "affectingYear" : 2011,
         "affectingNumber" : 3,
         "affectingURI" : "http://www.legislation.gov.uk/id/mwa/2011/3",
+        "affectingTitle" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
         "affectingProvisionsText" : "s. 4(c)",
         "affectingProvisions" : [ {
           "type" : "section",
@@ -1301,6 +1339,7 @@
         "affectedYear" : 1984,
         "affectedNumber" : 55,
         "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/1984/55",
+        "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 95(5)",
         "affectedProvisions" : [ {
           "type" : "section",
@@ -1316,6 +1355,7 @@
         "affectingYear" : 2022,
         "affectingNumber" : 30,
         "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2022/30",
+        "affectingTitle" : "Building Safety Act 2022",
         "affectingProvisionsText" : "s. 60(2)",
         "affectingProvisions" : [ {
           "type" : "section",
