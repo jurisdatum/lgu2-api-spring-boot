@@ -46,6 +46,7 @@ public class EffectsFeedConverter {
         effect.target.longType = simple.affectedClass;
         effect.target.year = simple.affectedYear;
         effect.target.number = simple.affectedNumber;
+        effect.target.title = simple.affectedTitle;
         effect.target.cite = Cites.make(simple.affectedClass, simple.affectedYear, simple.affectedNumber);
         effect.target.provisions = new Effect.Provisions();
         effect.target.provisions.plain = simple.affectedProvisionsText;
@@ -56,6 +57,7 @@ public class EffectsFeedConverter {
         effect.source.longType = simple.affectingClass;
         effect.source.year = simple.affectingYear;
         effect.source.number = simple.affectingNumber;
+        effect.source.title = simple.affectingTitle;
         effect.source.cite = Cites.make(simple.affectingClass, simple.affectingYear, simple.affectingNumber);
         effect.source.provisions = new Effect.Provisions();
         effect.source.provisions.plain = simple.affectingProvisionsText;

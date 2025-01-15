@@ -35,6 +35,9 @@ public class Effect {
     @JacksonXmlProperty(localName = "AffectedURI", isAttribute = true)
     public String affectedURI;
 
+    @JacksonXmlProperty(localName = "AffectedTitle", isAttribute = true)
+    public String affectedTitle;
+
     @JacksonXmlProperty(localName = "AffectedProvisionsText", isAttribute = true)
     public String affectedProvisionsText;
 
@@ -60,6 +63,9 @@ public class Effect {
 
     @JacksonXmlProperty(localName = "AffectingURI", isAttribute = true)
     public String affectingURI;
+
+    @JacksonXmlProperty(localName = "AffectingTitle", isAttribute = true)
+    public String affectingTitle;
 
     @JacksonXmlProperty(localName = "AffectingProvisionsText", isAttribute = true)
     public String affectingProvisionsText;

@@ -46,6 +46,9 @@ public class Effect {
         @Schema
         public int number;
 
+        @Schema
+        public String title;
+
         @Schema(example = "2024 c. 1")
         public String cite;
 
