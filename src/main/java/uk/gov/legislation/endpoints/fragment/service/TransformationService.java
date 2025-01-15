@@ -7,12 +7,14 @@ import net.sf.saxon.s9api.XdmNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.endpoints.document.api.DocumentApi;
+import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.api.responses.FragmentMetadata;
+import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Helper;
+import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
 @Service
@@ -30,6 +32,7 @@ public class TransformationService {
 
     private final Logger logger = LoggerFactory.getLogger(TransformationService.class);
 
+    // FixMe method in DocumentService throws SaxonApiException
     public String transformToAkn(String clml) {
         try {
             return Clml2Akn.serialize(clml2akn.transform(clml));
@@ -38,6 +41,7 @@ public class TransformationService {
         }
     }
 
+    // FixMe signature should match DocumentService
     public String transformToHtml(String clml, boolean standalone) {
         try {
             XdmNode akn = clml2akn.transform(clml);
@@ -47,16 +51,17 @@ public class TransformationService {
         }
     }
 
-    public DocumentApi.Response createJsonResponse(String clml) {
+    public Fragment transformToJsonResponse(String clml) {
         try {
             long start = System.currentTimeMillis();
             XdmNode clmlDoc = Helper.parse(clml);
             XdmNode akn = clml2akn.transform(clmlDoc);
             String html = akn2html.transform(akn, false);
-            Metadata meta = simplifier.metadata(clmlDoc);
+            Metadata meta = simplifier.extractFragmentMetadata(clmlDoc);
+            FragmentMetadata convertedMetadata = FragmentMetadataConverter.convert(meta);
             long end = System.currentTimeMillis();
             logger.debug("It took {} miliseconds to convert CLML to JSON", end - start);
-            return new DocumentApi.Response(meta, html);
+            return new Fragment(convertedMetadata, html);
         } catch (SaxonApiException e) {
             throw new TransformationException("Error creating JSON response from CLML", e);
         } catch (JsonProcessingException e) {

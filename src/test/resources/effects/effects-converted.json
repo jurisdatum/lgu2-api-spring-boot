@@ -1,0 +1,1146 @@
+{
+  "meta" : {
+    "page" : 1,
+    "pageSize" : 20,
+    "totalPages" : 74521,
+    "updated" : "2025-01-10T02:23:26.449553Z"
+  },
+  "effects" : [ {
+    "applied" : false,
+    "required" : true,
+    "type" : "omitted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 44 and cross-heading",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 44 and cross-heading",
+          "id" : "part-I-crossheading-application-of-building-regulations-to-crown-etc",
+          "href" : "ukpga/1984/55/part/I/crossheading/application-of-building-regulations-to-crown-etc"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2022/30",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2022,
+      "number" : 30,
+      "title" : "Building Safety Act 2022",
+      "cite" : "2022 c. 30",
+      "provisions" : {
+        "plain" : "Sch. 5 para. 38",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 5 ",
+          "id" : "schedule-5",
+          "href" : "ukpga/2022/30/schedule/5"
+        }, {
+          "type" : "link",
+          "text" : "para. 38",
+          "id" : "schedule-5-paragraph-38",
+          "href" : "ukpga/2022/30/schedule/5/paragraph/38"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 170(4)(c)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 170(4)(c)",
+        "id" : "section-170-4-c",
+        "href" : "ukpga/2022/30/section/170/4/c"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 1(1A)(d)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 1(1A)(d)",
+          "id" : "section-1-1A-d",
+          "href" : "ukpga/1984/55/section/1/1A/d"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2015/7",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2015,
+      "number" : 7,
+      "title" : "Infrastructure Act 2015",
+      "cite" : "2015 c. 7",
+      "provisions" : {
+        "plain" : "s. 37(2)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 37(2)",
+          "id" : "section-37-2",
+          "href" : "ukpga/2015/7/section/37/2"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 57(5)(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 57(5)(a)",
+        "id" : "section-57-5-a",
+        "href" : "ukpga/2015/7/section/57/5/a"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "words inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 1A(2)(a)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 1A(2)(a)",
+          "id" : "section-1A-2-a",
+          "href" : "ukpga/1984/55/section/1A/2/a"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 61(a)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 61(a)",
+          "id" : "schedule-13-paragraph-61-a",
+          "href" : "asc/2023/3/schedule/13/paragraph/61/a"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "words substituted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 1A(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 1A(2)(b)",
+          "id" : "section-1A-2-b",
+          "href" : "ukpga/1984/55/section/1A/2/b"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 61(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 61(b)",
+          "id" : "schedule-13-paragraph-61-b",
+          "href" : "asc/2023/3/schedule/13/paragraph/61/b"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "repealed",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 4",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4",
+          "id" : "section-4",
+          "href" : "ukpga/1984/55/section/4"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 5(a) Sch.",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 5(a)",
+          "id" : "section-5-a",
+          "href" : "ukpga/2004/22/section/5/a"
+        }, {
+          "type" : "text",
+          "text" : " "
+        }, {
+          "type" : "link",
+          "text" : "Sch.",
+          "id" : "schedule",
+          "href" : "ukpga/2004/22/schedule"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "words inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 20(1)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 20(1)",
+          "id" : "section-20-1",
+          "href" : "ukpga/1984/55/section/20/1"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 62",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 62",
+          "id" : "schedule-13-paragraph-62",
+          "href" : "asc/2023/3/schedule/13/paragraph/62"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "words inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 44(3)(a)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 44(3)(a)",
+          "id" : "section-44-3-a",
+          "href" : "ukpga/1984/55/section/44/3/a"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 4(4)(a)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4(4)(a)",
+          "id" : "section-4-4-a",
+          "href" : "ukpga/2004/22/section/4/4/a"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "words substituted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 44(8)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 44(8)",
+          "id" : "section-44-8",
+          "href" : "ukpga/1984/55/section/44/8"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 4(4)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4(4)(b)",
+          "id" : "section-4-4-b",
+          "href" : "ukpga/2004/22/section/4/4/b"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 44(11)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 44(11)",
+          "id" : "section-44-11",
+          "href" : "ukpga/1984/55/section/44/11"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 3(8)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 3(8)",
+          "id" : "section-3-8",
+          "href" : "ukpga/2004/22/section/3/8"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "omitted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 45",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 45",
+          "id" : "section-45",
+          "href" : "ukpga/1984/55/section/45"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2022/30",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2022,
+      "number" : 30,
+      "title" : "Building Safety Act 2022",
+      "cite" : "2022 c. 30",
+      "provisions" : {
+        "plain" : "Sch. 5 para. 38",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 5 ",
+          "id" : "schedule-5",
+          "href" : "ukpga/2022/30/schedule/5"
+        }, {
+          "type" : "link",
+          "text" : "para. 38",
+          "id" : "schedule-5-paragraph-38",
+          "href" : "ukpga/2022/30/schedule/5/paragraph/38"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 170(4)(c)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 170(4)(c)",
+        "id" : "section-170-4-c",
+        "href" : "ukpga/2022/30/section/170/4/c"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "word substituted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 45(1)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 45(1)",
+          "id" : "section-45-1",
+          "href" : "ukpga/1984/55/section/45/1"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 3(9)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 3(9)",
+          "id" : "section-3-9",
+          "href" : "ukpga/2004/22/section/3/9"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "repealed",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 56(1)-(4)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 56(1)",
+          "id" : "section-56-1",
+          "href" : "ukpga/1984/55/section/56/1"
+        }, {
+          "type" : "text",
+          "text" : "-"
+        }, {
+          "type" : "link",
+          "text" : "(4)",
+          "id" : "section-56-4",
+          "href" : "ukpga/1984/55/section/56/4"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "Sch.",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch.",
+          "id" : "schedule",
+          "href" : "ukpga/2004/22/schedule"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "repealed",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 59(4) (5)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 59(4)",
+          "id" : "section-59-4",
+          "href" : "ukpga/1984/55/section/59/4"
+        }, {
+          "type" : "text",
+          "text" : " "
+        }, {
+          "type" : "link",
+          "text" : "(5)",
+          "id" : "section-59-5",
+          "href" : "ukpga/1984/55/section/59/5"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2004/22",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2004,
+      "number" : 22,
+      "title" : "Sustainable and Secure Buildings Act 2004",
+      "cite" : "2004 c. 22",
+      "provisions" : {
+        "plain" : "s. 5(b) Sch.",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 5(b)",
+          "id" : "section-5-b",
+          "href" : "ukpga/2004/22/section/5/b"
+        }, {
+          "type" : "text",
+          "text" : " "
+        }, {
+          "type" : "link",
+          "text" : "Sch.",
+          "id" : "schedule",
+          "href" : "ukpga/2004/22/schedule"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 11(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 11(3)",
+        "id" : "section-11-3",
+        "href" : "ukpga/2004/22/section/11/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "words inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 77(3)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 77(3)",
+          "id" : "section-77-3",
+          "href" : "ukpga/1984/55/section/77/3"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 63",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 63",
+          "id" : "schedule-13-paragraph-63",
+          "href" : "asc/2023/3/schedule/13/paragraph/63"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "words inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 79(5)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 79(5)",
+          "id" : "section-79-5",
+          "href" : "ukpga/1984/55/section/79/5"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 64",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 64",
+          "id" : "schedule-13-paragraph-64",
+          "href" : "asc/2023/3/schedule/13/paragraph/64"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : true,
+    "required" : true,
+    "type" : "inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 79A",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 79A",
+          "id" : "section-79A",
+          "href" : "ukpga/1984/55/section/79A",
+          "missing" : true
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "asc/2023/3",
+      "longType" : "WelshParliamentAct",
+      "year" : 2023,
+      "number" : 3,
+      "title" : "Deddf yr Amgylchedd Hanesyddol (Cymru) 2023",
+      "cite" : null,
+      "provisions" : {
+        "plain" : "Sch. 13 para. 65",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "Sch. 13 ",
+          "id" : "schedule-13",
+          "href" : "asc/2023/3/schedule/13"
+        }, {
+          "type" : "link",
+          "text" : "para. 65",
+          "id" : "schedule-13-paragraph-65",
+          "href" : "asc/2023/3/schedule/13/paragraph/65"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 212(2)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 212(2)",
+        "id" : "section-212-2",
+        "href" : "asc/2023/3/section/212/2"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    }, {
+      "date" : "2024-11-04",
+      "applied" : true,
+      "description" : "wholly in force"
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "applied",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 93",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 93",
+          "id" : "section-93",
+          "href" : "ukpga/1984/55/section/93"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "mwa/2011/3",
+      "longType" : "WelshAssemblyMeasure",
+      "year" : 2011,
+      "number" : 3,
+      "title" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
+      "cite" : "2011 nawm 3",
+      "provisions" : {
+        "plain" : "s. 4(a)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4(a)",
+          "id" : "section-4-a",
+          "href" : "mwa/2011/3/section/4/a"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 9(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 9(3)",
+        "id" : "section-9-3",
+        "href" : "mwa/2011/3/section/9/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "applied",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 94",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 94",
+          "id" : "section-94",
+          "href" : "ukpga/1984/55/section/94"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "mwa/2011/3",
+      "longType" : "WelshAssemblyMeasure",
+      "year" : 2011,
+      "number" : 3,
+      "title" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
+      "cite" : "2011 nawm 3",
+      "provisions" : {
+        "plain" : "s. 4(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4(b)",
+          "id" : "section-4-b",
+          "href" : "mwa/2011/3/section/4/b"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 9(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 9(3)",
+        "id" : "section-9-3",
+        "href" : "mwa/2011/3/section/9/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "applied",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 94A",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 94A",
+          "id" : "section-94A",
+          "href" : "ukpga/1984/55/section/94A"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "mwa/2011/3",
+      "longType" : "WelshAssemblyMeasure",
+      "year" : 2011,
+      "number" : 3,
+      "title" : "Mesur Diogelwch Tân Domestig (Cymru) 2011",
+      "cite" : "2011 nawm 3",
+      "provisions" : {
+        "plain" : "s. 4(c)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 4(c)",
+          "id" : "section-4-c",
+          "href" : "mwa/2011/3/section/4/c"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 9(3)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 9(3)",
+        "id" : "section-9-3",
+        "href" : "mwa/2011/3/section/9/3"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  }, {
+    "applied" : false,
+    "required" : true,
+    "type" : "inserted",
+    "target" : {
+      "id" : "ukpga/1984/55",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 1984,
+      "number" : 55,
+      "title" : "Building Act 1984",
+      "cite" : "1984 c. 55",
+      "provisions" : {
+        "plain" : "s. 95(5)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 95(5)",
+          "id" : "section-95-5",
+          "href" : "ukpga/1984/55/section/95/5"
+        } ]
+      }
+    },
+    "source" : {
+      "id" : "ukpga/2022/30",
+      "longType" : "UnitedKingdomPublicGeneralAct",
+      "year" : 2022,
+      "number" : 30,
+      "title" : "Building Safety Act 2022",
+      "cite" : "2022 c. 30",
+      "provisions" : {
+        "plain" : "s. 60(2)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 60(2)",
+          "id" : "section-60-2",
+          "href" : "ukpga/2022/30/section/60/2"
+        } ]
+      }
+    },
+    "commencementAuthority" : {
+      "plain" : "s. 170(4)(c)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "s. 170(4)(c)",
+        "id" : "section-170-4-c",
+        "href" : "ukpga/2022/30/section/170/4/c"
+      } ]
+    },
+    "inForceDates" : [ {
+      "date" : null,
+      "applied" : false,
+      "prospective" : true
+    } ]
+  } ]
+}

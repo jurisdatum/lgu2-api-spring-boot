@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.endpoints.document.Metadata;
-import uk.gov.legislation.params.*;
-import uk.gov.legislation.params.Number;
+import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.responses.Document;
 
 import java.util.Optional;
 
@@ -82,15 +82,10 @@ public interface DocumentApi {
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     /**
-     * Record representing the response structure for JSON document content.
-     */
-    record Response(Metadata meta, String html) {}
-
-    /**
      * Retrieves document metadata and HTML content in JSON format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/json")
-    ResponseEntity<Response> getDocumentJson(
+    ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
@@ -98,7 +93,7 @@ public interface DocumentApi {
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
-    ResponseEntity<Response> getDocumentJson(
+    ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

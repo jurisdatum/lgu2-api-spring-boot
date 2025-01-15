@@ -27,7 +27,7 @@ public class PdfService {
      */
     public Optional<String> fetchPdfUrl(String type, String yearOrRegnal, int number, String version) throws IOException, SaxonApiException {
         String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version)).clml();
-        return simplifier.contents(clml).meta().pdfFormatUri();
+        return simplifier.contents(clml).meta.pdfFormatUri();
     }
 
     /**

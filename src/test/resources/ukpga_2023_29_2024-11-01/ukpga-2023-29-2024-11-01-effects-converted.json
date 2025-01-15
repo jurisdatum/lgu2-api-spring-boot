@@ -1,0 +1,1936 @@
+[ {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 27",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 27",
+      "id" : "section-27",
+      "href" : "ukpga/2023/29/section/27"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2023/1382",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2023,
+    "number" : 1382,
+    "cite" : "2023 No. 1382",
+    "provisions" : {
+      "plain" : "reg. 12(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 12(a)",
+        "id" : "regulation-12-a",
+        "href" : "uksi/2023/1382/regulation/12/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 48",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 48",
+      "id" : "section-48",
+      "href" : "ukpga/2023/29/section/48"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2023/1382",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2023,
+    "number" : 1382,
+    "cite" : "2023 No. 1382",
+    "provisions" : {
+      "plain" : "reg. 12(b)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 12(b)",
+        "id" : "regulation-12-b",
+        "href" : "uksi/2023/1382/regulation/12/b"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 48",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 48",
+      "id" : "section-48",
+      "href" : "ukpga/2023/29/section/48"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-02-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2023/1382",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2023,
+    "number" : 1382,
+    "cite" : "2023 No. 1382",
+    "provisions" : {
+      "plain" : "reg. 13",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 13",
+        "id" : "regulation-13",
+        "href" : "uksi/2023/1382/regulation/13"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 51",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 51",
+      "id" : "section-51",
+      "href" : "ukpga/2023/29/section/51"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2023/1382",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2023,
+    "number" : 1382,
+    "cite" : "2023 No. 1382",
+    "provisions" : {
+      "plain" : "reg. 12(c)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 12(c)",
+        "id" : "regulation-12-c",
+        "href" : "uksi/2023/1382/regulation/12/c"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 7 para. 3",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 7 ",
+      "id" : "schedule-7",
+      "href" : "ukpga/2023/29/schedule/7"
+    }, {
+      "type" : "link",
+      "text" : "para. 3",
+      "id" : "schedule-7-paragraph-3",
+      "href" : "ukpga/2023/29/schedule/7/paragraph/3"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2023/1382",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2023,
+    "number" : 1382,
+    "cite" : "2023 No. 1382",
+    "provisions" : {
+      "plain" : "reg. 12(d)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 12(d)",
+        "id" : "regulation-12-d",
+        "href" : "uksi/2023/1382/regulation/12/d"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 51",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 51",
+      "id" : "section-51",
+      "href" : "ukpga/2023/29/section/51"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/250",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 250,
+    "cite" : "2024 No. 250",
+    "provisions" : {
+      "plain" : "reg. 4(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(a)",
+        "id" : "regulation-4-a",
+        "href" : "uksi/2024/250/regulation/4/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 7 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 7 ",
+      "id" : "schedule-7",
+      "href" : "ukpga/2023/29/schedule/7"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-7-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/7/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-01-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/250",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 250,
+    "cite" : "2024 No. 250",
+    "provisions" : {
+      "plain" : "reg. 4(b)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)",
+        "id" : "regulation-4-b",
+        "href" : "uksi/2024/250/regulation/4/b"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 1(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 1(1)",
+      "id" : "section-1-1",
+      "href" : "ukpga/2023/29/section/1/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/620",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 620,
+    "cite" : "2024 No. 620",
+    "provisions" : {
+      "plain" : "reg. 2(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 2(a)",
+        "id" : "regulation-2-a",
+        "href" : "uksi/2024/620/regulation/2/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 2",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 2",
+      "id" : "schedule-1-part-2",
+      "href" : "ukpga/2023/29/schedule/1/part/2"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/620",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 620,
+    "cite" : "2024 No. 620",
+    "provisions" : {
+      "plain" : "reg. 2(b)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 2(b)",
+        "id" : "regulation-2-b",
+        "href" : "uksi/2024/620/regulation/2/b"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 3",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 3",
+      "id" : "schedule-1-part-3",
+      "href" : "ukpga/2023/29/schedule/1/part/3"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/620",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 620,
+    "cite" : "2024 No. 620",
+    "provisions" : {
+      "plain" : "Sch.",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "Sch.",
+        "id" : "schedule",
+        "href" : "uksi/2024/620/schedule"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 5",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 5",
+      "id" : "schedule-1-part-5",
+      "href" : "ukpga/2023/29/schedule/1/part/5"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/620",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 620,
+    "cite" : "2024 No. 620",
+    "provisions" : {
+      "plain" : "reg. 2(d)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 2(d)",
+        "id" : "regulation-2-d",
+        "href" : "uksi/2024/620/regulation/2/d"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(a)",
+        "id" : "regulation-4-a",
+        "href" : "uksi/2024/1071/regulation/4/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-2-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(i)",
+        "id" : "regulation-4-b-i",
+        "href" : "uksi/2024/1071/regulation/4/b/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 7",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 7",
+      "id" : "schedule-2-paragraph-7",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/7"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(ii)",
+        "id" : "regulation-4-b-ii",
+        "href" : "uksi/2024/1071/regulation/4/b/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 10",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 10",
+      "id" : "schedule-2-paragraph-10",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/10"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(iii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(iii)",
+        "id" : "regulation-4-b-iii",
+        "href" : "uksi/2024/1071/regulation/4/b/iii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 11",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 11",
+      "id" : "schedule-2-paragraph-11",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/11"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(iv)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(iv)",
+        "id" : "regulation-4-b-iv",
+        "href" : "uksi/2024/1071/regulation/4/b/iv"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 20",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 20",
+      "id" : "schedule-2-paragraph-20",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/20"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(v)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(v)",
+        "id" : "regulation-4-b-v",
+        "href" : "uksi/2024/1071/regulation/4/b/v"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 21",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 21",
+      "id" : "schedule-2-paragraph-21",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/21"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(vi)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(vi)",
+        "id" : "regulation-4-b-vi",
+        "href" : "uksi/2024/1071/regulation/4/b/vi"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 24",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 24",
+      "id" : "schedule-2-paragraph-24",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/24"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(vii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(vii)",
+        "id" : "regulation-4-b-vii",
+        "href" : "uksi/2024/1071/regulation/4/b/vii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 25",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 25",
+      "id" : "schedule-2-paragraph-25",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/25"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 4(b)(viii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 4(b)(viii)",
+        "id" : "regulation-4-b-viii",
+        "href" : "uksi/2024/1071/regulation/4/b/viii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 1(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 1(1)",
+      "id" : "section-1-1",
+      "href" : "ukpga/2023/29/section/1/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 5(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 5(a)",
+        "id" : "regulation-5-a",
+        "href" : "uksi/2024/1071/regulation/5/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 5(b)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 5(b)",
+        "id" : "regulation-5-b",
+        "href" : "uksi/2024/1071/regulation/5/b"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 3",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 3",
+      "id" : "schedule-1-part-3",
+      "href" : "ukpga/2023/29/schedule/1/part/3"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 5(c) Sch.",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 5(c)",
+        "id" : "regulation-5-c",
+        "href" : "uksi/2024/1071/regulation/5/c"
+      }, {
+        "type" : "link",
+        "text" : "Sch.",
+        "id" : "schedule",
+        "href" : "uksi/2024/1071/schedule"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-2-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 5(d)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 5(d)(i)",
+        "id" : "regulation-5-d-i",
+        "href" : "uksi/2024/1071/regulation/5/d/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 17",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 17",
+      "id" : "schedule-2-paragraph-17",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/17"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 5(d)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 5(d)(ii)",
+        "id" : "regulation-5-d-ii",
+        "href" : "uksi/2024/1071/regulation/5/d/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 6(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 6(a)",
+        "id" : "regulation-6-a",
+        "href" : "uksi/2024/1071/regulation/6/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-2-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 6(b)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 6(b)(i)",
+        "id" : "regulation-6-b-i",
+        "href" : "uksi/2024/1071/regulation/6/b/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 22",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 22",
+      "id" : "schedule-2-paragraph-22",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/22"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 6(b)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 6(b)(ii)",
+        "id" : "regulation-6-b-ii",
+        "href" : "uksi/2024/1071/regulation/6/b/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 27",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 27",
+      "id" : "schedule-2-paragraph-27",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/27"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-03-31",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 6(b)(iii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 6(b)(iii)",
+        "id" : "regulation-6-b-iii",
+        "href" : "uksi/2024/1071/regulation/6/b/iii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 7(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 7(a)",
+        "id" : "regulation-7-a",
+        "href" : "uksi/2024/1071/regulation/7/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-2-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 7(b)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 7(b)(i)",
+        "id" : "regulation-7-b-i",
+        "href" : "uksi/2024/1071/regulation/7/b/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 18",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 18",
+      "id" : "schedule-2-paragraph-18",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/18"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-06-30",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 7(b)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 7(b)(ii)",
+        "id" : "regulation-7-b-ii",
+        "href" : "uksi/2024/1071/regulation/7/b/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 8(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 8(a)",
+        "id" : "regulation-8-a",
+        "href" : "uksi/2024/1071/regulation/8/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 1",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 1",
+      "id" : "schedule-2-paragraph-1",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 8(b)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 8(b)(i)",
+        "id" : "regulation-8-b-i",
+        "href" : "uksi/2024/1071/regulation/8/b/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 8",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 8",
+      "id" : "schedule-2-paragraph-8",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/8"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 8(b)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 8(b)(ii)",
+        "id" : "regulation-8-b-ii",
+        "href" : "uksi/2024/1071/regulation/8/b/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 12",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 12",
+      "id" : "schedule-2-paragraph-12",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/12"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2025-12-01",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 8(b)(iii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 8(b)(iii)",
+        "id" : "regulation-8-b-iii",
+        "href" : "uksi/2024/1071/regulation/8/b/iii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "s. 2(1)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "s. 2(1)",
+      "id" : "section-2-1",
+      "href" : "ukpga/2023/29/section/2/1"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(a)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(a)",
+        "id" : "regulation-9-a",
+        "href" : "uksi/2024/1071/regulation/9/a"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 44",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 44",
+      "id" : "schedule-2-paragraph-44",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/44"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "for specified purposes"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(b)(i)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(b)(i)",
+        "id" : "regulation-9-b-i",
+        "href" : "uksi/2024/1071/regulation/9/b/i"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 45",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 45",
+      "id" : "schedule-2-paragraph-45",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/45"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(b)(ii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(b)(ii)",
+        "id" : "regulation-9-b-ii",
+        "href" : "uksi/2024/1071/regulation/9/b/ii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 46",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 46",
+      "id" : "schedule-2-paragraph-46",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/46"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(b)(iii)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(b)(iii)",
+        "id" : "regulation-9-b-iii",
+        "href" : "uksi/2024/1071/regulation/9/b/iii"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 49",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 49",
+      "id" : "schedule-2-paragraph-49",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/49"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "in force in so far as not already in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(b)(iv)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(b)(iv)",
+        "id" : "regulation-9-b-iv",
+        "href" : "uksi/2024/1071/regulation/9/b/iv"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "coming into force",
+  "affected" : {
+    "plain" : "Sch. 2 para. 50",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 2 ",
+      "id" : "schedule-2",
+      "href" : "ukpga/2023/29/schedule/2"
+    }, {
+      "type" : "link",
+      "text" : "para. 50",
+      "id" : "schedule-2-paragraph-50",
+      "href" : "ukpga/2023/29/schedule/2/paragraph/50"
+    } ]
+  },
+  "affectedExtent" : [ "E", "W", "S", "NI" ],
+  "inForceDates" : [ {
+    "date" : "2026-07-06",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1071",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1071,
+    "cite" : "2024 No. 1071",
+    "provisions" : {
+      "plain" : "reg. 9(b)(v)",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 9(b)(v)",
+        "id" : "regulation-9-b-v",
+        "href" : "uksi/2024/1071/regulation/9/b/v"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "",
+    "rich" : [ ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 2",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 2",
+      "id" : "schedule-1-part-2",
+      "href" : "ukpga/2023/29/schedule/1/part/2"
+    } ]
+  },
+  "affectedExtent" : [ ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1083",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1083,
+    "cite" : "2024 No. 1083",
+    "provisions" : {
+      "plain" : "reg. 3",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 3",
+        "id" : "regulation-3",
+        "href" : "uksi/2024/1083/regulation/3"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "reg. 1(2)(b)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "reg. 1(2)(b)",
+      "id" : "regulation-1-2-b",
+      "href" : "uksi/2024/1083/regulation/1/2/b"
+    } ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 3",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 3",
+      "id" : "schedule-1-part-3",
+      "href" : "ukpga/2023/29/schedule/1/part/3"
+    } ]
+  },
+  "affectedExtent" : [ ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1083",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1083,
+    "cite" : "2024 No. 1083",
+    "provisions" : {
+      "plain" : "reg. 3",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 3",
+        "id" : "regulation-3",
+        "href" : "uksi/2024/1083/regulation/3"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "reg. 1(2)(b)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "reg. 1(2)(b)",
+      "id" : "regulation-1-2-b",
+      "href" : "uksi/2024/1083/regulation/1/2/b"
+    } ]
+  },
+  "notes" : null
+}, {
+  "required" : true,
+  "type" : "savings for effects of commencing S.I. 2024/620",
+  "affected" : {
+    "plain" : "Sch. 1 Pt. 5",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "Sch. 1 ",
+      "id" : "schedule-1",
+      "href" : "ukpga/2023/29/schedule/1"
+    }, {
+      "type" : "link",
+      "text" : "Pt. 5",
+      "id" : "schedule-1-part-5",
+      "href" : "ukpga/2023/29/schedule/1/part/5"
+    } ]
+  },
+  "affectedExtent" : [ ],
+  "inForceDates" : [ {
+    "date" : "2024-12-31",
+    "applied" : false,
+    "description" : "wholly in force"
+  } ],
+  "source" : {
+    "id" : "uksi/2024/1083",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "year" : 2024,
+    "number" : 1083,
+    "cite" : "2024 No. 1083",
+    "provisions" : {
+      "plain" : "reg. 3",
+      "rich" : [ {
+        "type" : "link",
+        "text" : "reg. 3",
+        "id" : "regulation-3",
+        "href" : "uksi/2024/1083/regulation/3"
+      } ]
+    }
+  },
+  "commencement" : {
+    "plain" : "reg. 1(2)(b)",
+    "rich" : [ {
+      "type" : "link",
+      "text" : "reg. 1(2)(b)",
+      "id" : "regulation-1-2-b",
+      "href" : "uksi/2024/1083/regulation/1/2/b"
+    } ]
+  },
+  "notes" : null
+} ]

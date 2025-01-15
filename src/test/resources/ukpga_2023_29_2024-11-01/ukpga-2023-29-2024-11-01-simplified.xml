@@ -1,0 +1,2024 @@
+<leg>
+   <meta>
+      <id>ukpga/2023/29</id>
+      <longType>UnitedKingdomPublicGeneralAct</longType>
+      <year>2023</year>
+      <number>29</number>
+      <date>2023-06-29</date>
+      <status>revised</status>
+      <valid>2024-11-01</valid>
+      <title>Financial Services and Markets Act 2023</title>
+      <extent>E+W+S+N.I.</extent>
+      <lang>en</lang>
+      <publisher>Statute Law Database</publisher>
+      <modified>2024-11-04</modified>
+      <hasVersions>
+         <hasVersion>enacted</hasVersion>
+         <hasVersion>2023-06-29</hasVersion>
+         <hasVersion>2023-07-11</hasVersion>
+         <hasVersion>2023-08-29</hasVersion>
+         <hasVersion>2023-09-06</hasVersion>
+         <hasVersion>2023-11-06</hasVersion>
+         <hasVersion>2023-12-14</hasVersion>
+         <hasVersion>2023-12-26</hasVersion>
+         <hasVersion>2023-12-31</hasVersion>
+         <hasVersion>2024-01-01</hasVersion>
+         <hasVersion>2024-01-08</hasVersion>
+         <hasVersion>2024-01-30</hasVersion>
+         <hasVersion>2024-02-07</hasVersion>
+         <hasVersion>2024-03-01</hasVersion>
+         <hasVersion>2024-04-05</hasVersion>
+         <hasVersion>2024-06-30</hasVersion>
+         <hasVersion>2024-08-01</hasVersion>
+         <hasVersion>2024-10-29</hasVersion>
+         <hasVersion>current</hasVersion>
+      </hasVersions>
+      <schedules>http://www.legislation.gov.uk/ukpga/2023/29/schedules/2024-11-01</schedules>
+      <formats>
+         <format name="xml"/>
+         <format name="pdf"
+                 uri="http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpga_20230029_en.pdf"/>
+      </formats>
+      <ukm:UnappliedEffects xmlns="http://www.legislation.gov.uk/namespaces/legislation"
+                            xmlns:atom="http://www.w3.org/2005/Atom"
+                            xmlns:dc="http://purl.org/dc/elements/1.1/"
+                            xmlns:dct="http://purl.org/dc/terms/"
+                            xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
+                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ukm:UnappliedEffect Modified="2024-01-24T19:30:50Z"
+                              AffectedYear="2023"
+                              AffectingYear="2023"
+                              Type="coming into force"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/key-775a4b1f57c4c20a8ee8c60cef111876"
+                              AffectingProvisionsText="reg. 12(a)"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="83"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              Comments="so far as the substitution of subsection (1)(c) of section 3B (regulatory principles to be applied by both regulators) into FSMA 2000 requires the FCA and PRA(23) to have regard to the need to contribute towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021 where each regulator considers the exercise of its functions to be relevant to the making of such a contribution"
+                              EffectId="key-775a4b1f57c4c20a8ee8c60cef111876"
+                              AffectedProvisionsText="s. 27"
+                              AffectingNumber="1382"
+                              RequiresApplied="true">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-27"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/27"
+                     text="s. 27"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 4 and Transitional and Saving Provisions) (Amendment) Regulations 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-12-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/a"
+                     text="reg. 12(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-16-1"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/16/1"
+                     text="reg. 16(1)"/>
+            </ukm:Savings>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingYear="2023"
+                              EffectId="key-6643c9e1369d48ceafa36242b1660e84"
+                              AffectingProvisionsText="reg. 12(b)"
+                              Comments="so far as the insertion of section 30E(1) (c) (regulatory principles) into the Bank of England Act 1998 requires the Bank to have regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
+                              Row="132"
+                              Type="coming into force"
+                              AffectedProvisionsText="s. 48"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectingNumber="1382"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedYear="2023"
+                              Modified="2024-01-24T19:30:50Z"
+                              RequiresApplied="true"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              URI="http://www.legislation.gov.uk/id/effect/key-6643c9e1369d48ceafa36242b1660e84">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-48"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/48"
+                     text="s. 48"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 4 and Transitional and Saving Provisions) (Amendment) Regulations 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-12-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/b"
+                     text="reg. 12(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-16-1"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/16/1"
+                     text="reg. 16(1)"/>
+            </ukm:Savings>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-9ab21e3e731a24f2a9c94f516811c1a4"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Row="133"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingProvisionsText="reg. 13"
+                              Comments="so far as it inserts section 30I(2) into the Bank of England Act 1998"
+                              AffectedProvisionsText="s. 48"
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedNumber="29"
+                              AffectingYear="2023"
+                              Type="coming into force"
+                              AffectingNumber="1382"
+                              EffectId="key-9ab21e3e731a24f2a9c94f516811c1a4"
+                              RequiresApplied="true"
+                              Modified="2024-01-24T19:30:50Z">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-48"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/48"
+                     text="s. 48"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 4 and Transitional and Saving Provisions) (Amendment) Regulations 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-13"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/13"
+                     text="reg. 13"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-02-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              AffectingNumber="1382"
+                              AffectedProvisionsText="s. 51"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedExtent="E+W+S+N.I."
+                              URI="http://www.legislation.gov.uk/id/effect/key-1dd6dcd3045d38388b0164a5b8d19144"
+                              Modified="2024-01-24T19:30:50Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              Row="142"
+                              Type="coming into force"
+                              Comments="so far as it relates to the provision described in sub-paragraph (d)"
+                              RequiresApplied="true"
+                              AffectingYear="2023"
+                              AffectingProvisionsText="reg. 12(c)"
+                              AffectedNumber="29"
+                              EffectId="key-1dd6dcd3045d38388b0164a5b8d19144"
+                              AffectedClass="UnitedKingdomPublicGeneralAct">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-51"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/51"
+                     text="s. 51"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 4 and Transitional and Saving Provisions) (Amendment) Regulations 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-12-c"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/c"
+                     text="reg. 12(c)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-16-2"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/16/2"
+                     text="reg. 16(2)"/>
+            </ukm:Savings>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/key-63ff469869f3663f6d87a1fe6da8d44f"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 12(d)"
+                              Type="coming into force"
+                              AffectingYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2023/1382"
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              Modified="2024-01-24T19:30:50Z"
+                              EffectId="key-63ff469869f3663f6d87a1fe6da8d44f"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedExtent="E+W+S+N.I."
+                              Comments="so far as it inserts provision into section 53(c) (regulatory principles) of the 2013 Act relating to the need to have due regard to the desirability of sustainable growth in the economy of the United Kingdom in a way consistent with contributing towards achieving compliance by the Secretary of State with section 5 of the Environment Act 2021"
+                              Row="463"
+                              AffectedProvisionsText="Sch. 7 para. 3"
+                              AffectingNumber="1382">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-7"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7"
+                     text="Sch. 7 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-7-paragraph-3"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7/paragraph/3"
+                     text="para. 3"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 4 and Transitional and Saving Provisions) (Amendment) Regulations 2023</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-12-d"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/12/d"
+                     text="reg. 12(d)"/>
+            </ukm:AffectingProvisions>
+            <ukm:Savings>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-16-2"
+                     uri="http://www.legislation.gov.uk/id/uksi/2023/1382/regulation/16/2"
+                     text="reg. 16(2)"/>
+            </ukm:Savings>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingNumber="250"
+                              AffectedProvisionsText="s. 51"
+                              AffectedYear="2023"
+                              Created="2024-03-01T08:48:36Z"
+                              EffectId="key-4ca72b1f5ab1a9e840f7c98fe6d8fd48"
+                              AffectedExtent="E+W+S+N.I."
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-250-auyyufg5-11"
+                              AffectingYear="2024"
+                              AffectedNumber="29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 4(a)"
+                              Row="11"
+                              RequiresApplied="true">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-51"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/51"
+                     text="s. 51"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 5) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/250/regulation/4/a"
+                     text="reg. 4(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-250-auyyufg5-12"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              EffectId="key-b8a5201f49dba5aafc54289051c9ee13"
+                              AffectingNumber="250"
+                              Row="12"
+                              Created="2024-03-01T08:48:36Z"
+                              AffectedProvisionsText="Sch. 7 para. 1"
+                              Type="coming into force"
+                              RequiresApplied="true"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/250"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 4(b)"
+                              AffectingYear="2024"
+                              AffectedYear="2023">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-7"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7"
+                     text="Sch. 7 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-7-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/7/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 5) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/250/regulation/4/b"
+                     text="reg. 4(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-01-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedProvisionsText="s. 1(1)"
+                              AffectingNumber="620"
+                              EffectId="key-1b15c512ad8d010ef2176471c11b21f0"
+                              Created="2024-05-10T10:12:42Z"
+                              AffectedExtent="E+W+S+N.I."
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-5"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="5"
+                              Type="coming into force"
+                              Comments="so far as it relates to the instruments listed in paragraphs (b) to (d) and in the Schedule, and to the extent that those instruments are not already revoked"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 2(a)"
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              AffectingYear="2024"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-1-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/1/1"
+                     text="s. 1(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 6) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-2-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/a"
+                     text="reg. 2(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-6"
+                              AffectingYear="2024"
+                              AffectedProvisionsText="Sch. 1 Pt. 2"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedExtent="E+W+S+N.I."
+                              Row="6"
+                              Comments="CER task: refer to SI for list of revocations brought into force"
+                              AffectingNumber="620"
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              Created="2024-05-10T10:12:42Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 2(b)"
+                              EffectId="key-3c482c15e9c9e217851bfbcb9f33d030"
+                              AffectedYear="2023">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/2"
+                     text="Pt. 2"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 6) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-2-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/b"
+                     text="reg. 2(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-7"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
+                              EffectId="key-31fe60e1709da08f2c1d9e78cbaab4da"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="7"
+                              AffectedExtent="E+W+S+N.I."
+                              Created="2024-05-10T10:12:42Z"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingYear="2024"
+                              Type="coming into force"
+                              AffectedProvisionsText="Sch. 1 Pt. 3"
+                              Comments="CER task: refer to SI for list of revocations brought into force"
+                              AffectingNumber="620"
+                              AffectingProvisionsText="Sch."
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-3"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3"
+                     text="Pt. 3"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 6) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/620/schedule"
+                     text="Sch."/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect EffectId="key-d10a5609f98f1bd084cd1f4700b6f248"
+                              AffectingYear="2024"
+                              AffectedYear="2023"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/620"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              AffectingNumber="620"
+                              AffectedNumber="29"
+                              Row="8"
+                              Comments="CER task: the revocation of SI 2023/1346"
+                              RequiresApplied="true"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-620-dr7e82l5-8"
+                              Created="2024-05-10T10:12:42Z"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedProvisionsText="Sch. 1 Pt. 5"
+                              AffectingProvisionsText="reg. 2(d)"
+                              AffectedExtent="E+W+S+N.I.">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-5"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/5"
+                     text="Pt. 5"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 6) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-2-d"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/620/regulation/2/d"
+                     text="reg. 2(d)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
+                              EffectId="key-3f0ad2167f23fd4eb2201d322f0af474"
+                              AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-22"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              AffectedProvisionsText="s. 2(1)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              Comments="insofar as it relates to the specified provisions"
+                              AffectingProvisionsText="reg. 4(a)"
+                              AffectingYear="2024"
+                              Row="22">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/a"
+                     text="reg. 4(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingNumber="1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-23"
+                              EffectId="key-057048f57bc3c5c734c26ce426ba9298"
+                              AffectedYear="2023"
+                              AffectingYear="2024"
+                              AffectingProvisionsText="reg. 4(b)(i)"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Comments="insofar as it relates to the specified provisions"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="23"
+                              Created="2024-10-30T11:28:57Z"
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Type="coming into force"
+                              AffectedNumber="29">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/i"
+                     text="reg. 4(b)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedProvisionsText="Sch. 2 para. 7"
+                              RequiresApplied="true"
+                              EffectId="key-face1264874e7a2829b9e5485f8bcafc"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedYear="2023"
+                              AffectingProvisionsText="reg. 4(b)(ii)"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-24"
+                              Row="24">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-7"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/7"
+                     text="para. 7"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/ii"
+                     text="reg. 4(b)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingYear="2024"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 4(b)(iii)"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedProvisionsText="Sch. 2 para. 10"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-25"
+                              AffectingNumber="1071"
+                              Row="25"
+                              AffectedNumber="29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              EffectId="key-e10ee43d4e6ec9712a7f97978c0dfbf6">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-10"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/10"
+                     text="para. 10"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-iii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/iii"
+                     text="reg. 4(b)(iii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 11"
+                              Type="coming into force"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedYear="2023"
+                              AffectedNumber="29"
+                              Created="2024-10-30T11:28:57Z"
+                              Row="26"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-26"
+                              AffectingProvisionsText="reg. 4(b)(iv)"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-fd52d0024bd45957ccb7e6a0c961eb7e"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              RequiresApplied="true">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-11"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/11"
+                     text="para. 11"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-iv"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/iv"
+                     text="reg. 4(b)(iv)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 4(b)(v)"
+                              AffectedNumber="29"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-27"
+                              AffectedProvisionsText="Sch. 2 para. 20"
+                              RequiresApplied="true"
+                              Row="27"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              EffectId="key-a8b210d237e9b8f94a3e5906d089a06e">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-20"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/20"
+                     text="para. 20"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-v"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/v"
+                     text="reg. 4(b)(v)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Row="28"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedProvisionsText="Sch. 2 para. 21"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-28"
+                              AffectedNumber="29"
+                              EffectId="key-a4d33c0aa0d95ac7e5420d96a63b9f2e"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 4(b)(vi)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-21"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/21"
+                     text="para. 21"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-vi"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/vi"
+                     text="reg. 4(b)(vi)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingYear="2024"
+                              RequiresApplied="true"
+                              AffectedProvisionsText="Sch. 2 para. 24"
+                              EffectId="key-a6fa07ecf7417a7f1e37bc741593951e"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 4(b)(vii)"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedNumber="29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Row="29"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-29">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-24"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/24"
+                     text="para. 24"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-vii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/vii"
+                     text="reg. 4(b)(vii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-01" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              RequiresApplied="true"
+                              Type="coming into force"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 4(b)(viii)"
+                              AffectedNumber="29"
+                              EffectId="key-f3f65c5688bfeaf42a2fcd37719b91c3"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-30"
+                              AffectedProvisionsText="Sch. 2 para. 25"
+                              AffectingNumber="1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Row="30"
+                              AffectingYear="2024"
+                              AffectedYear="2023">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-25"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/25"
+                     text="para. 25"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-4-b-viii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/4/b/viii"
+                     text="reg. 4(b)(viii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              Row="31"
+                              AffectedNumber="29"
+                              Comments="so far as it relates to the instruments specified"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingYear="2024"
+                              RequiresApplied="true"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-31"
+                              EffectId="key-b41e92e2ab19ff21eaa49082a168489f"
+                              AffectedYear="2023"
+                              AffectedProvisionsText="s. 1(1)"
+                              AffectingNumber="1071"
+                              AffectingProvisionsText="reg. 5(a)">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-1-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/1/1"
+                     text="s. 1(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-5-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/a"
+                     text="reg. 5(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              RequiresApplied="true"
+                              Type="coming into force"
+                              Created="2024-10-30T11:28:57Z"
+                              Comments="so far as it relates to the instruments specified"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedProvisionsText="s. 2(1)"
+                              AffectedNumber="29"
+                              AffectedYear="2023"
+                              Row="32"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingProvisionsText="reg. 5(b)"
+                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-32"
+                              AffectingNumber="1071"
+                              EffectId="key-7eb752917d4f18622bcb141bebaa2b22">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-5-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/b"
+                     text="reg. 5(b)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingNumber="1071"
+                              RequiresApplied="true"
+                              Row="33"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingProvisionsText="reg. 5(c) Sch."
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedProvisionsText="Sch. 1 Pt. 3"
+                              AffectedNumber="29"
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-33"
+                              Comments="CER task - see Sch. for REUL revoked"
+                              EffectId="key-0392860f3571b8e8cef819577ebb6c68"
+                              AffectedYear="2023"
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-3"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3"
+                     text="Pt. 3"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-5-c"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/c"
+                     text="reg. 5(c)"/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/schedule"
+                     text="Sch."/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 5(d)(i)"
+                              AffectedNumber="29"
+                              RequiresApplied="true"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-34"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              EffectId="key-ffa7a7f46945def53f19073386c5aa32"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              AffectingYear="2024"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedYear="2023"
+                              AffectingNumber="1071"
+                              Row="34"
+                              Type="coming into force"
+                              Comments="so far as it relates to para 17">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-5-d-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/d/i"
+                     text="reg. 5(d)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Type="coming into force"
+                              AffectedNumber="29"
+                              AffectingProvisionsText="reg. 5(d)(ii)"
+                              AffectedProvisionsText="Sch. 2 para. 17"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-35"
+                              AffectingNumber="1071"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-2d98fff858a07303a424b1fd76762dd3"
+                              AffectingYear="2024"
+                              Row="35">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-17"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/17"
+                     text="para. 17"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-5-d-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/5/d/ii"
+                     text="reg. 5(d)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2024-12-31"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedProvisionsText="s. 2(1)"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              RequiresApplied="true"
+                              AffectingNumber="1071"
+                              AffectedYear="2023"
+                              Row="36"
+                              Comments="so far as it relates to the provisions specified"
+                              EffectId="key-0c4d4c801904955106bf6bea8f1d86f7"
+                              AffectingYear="2024"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingProvisionsText="reg. 6(a)"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-36">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-6-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/a"
+                     text="reg. 6(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-03-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 2 para. 1"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-37"
+                              AffectingProvisionsText="reg. 6(b)(i)"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              RequiresApplied="true"
+                              AffectedExtent="E+W+S+N.I."
+                              EffectId="key-4a58c71b0acd763d658115038ec9091f"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingYear="2024"
+                              Comments="so far as it relates to paras 22, 27"
+                              Row="37"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedNumber="29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-6-b-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/i"
+                     text="reg. 6(b)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-03-31"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              RequiresApplied="true"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-38"
+                              EffectId="key-f16e326d52a716e3e2083cb78a9af4af"
+                              AffectingNumber="1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingYear="2024"
+                              Row="38"
+                              AffectedProvisionsText="Sch. 2 para. 22"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingProvisionsText="reg. 6(b)(ii)"
+                              AffectedYear="2023">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-22"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/22"
+                     text="para. 22"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-6-b-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/ii"
+                     text="reg. 6(b)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2025-03-31" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect EffectId="key-532e46b7440c56a22a315f155568a44f"
+                              AffectedProvisionsText="Sch. 2 para. 27"
+                              AffectingProvisionsText="reg. 6(b)(iii)"
+                              AffectingYear="2024"
+                              AffectedNumber="29"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              Created="2024-10-30T11:28:57Z"
+                              Row="39"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-39"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
+                              Type="coming into force">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-27"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/27"
+                     text="para. 27"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-6-b-iii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/6/b/iii"
+                     text="reg. 6(b)(iii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-03-31"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect Created="2024-10-30T11:28:57Z"
+                              AffectingProvisionsText="reg. 7(a)"
+                              Row="40"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedYear="2023"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-40"
+                              AffectedProvisionsText="s. 2(1)"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              EffectId="key-d9301ed95ee3a14bc0fd8ddbafc16f87"
+                              AffectingYear="2024"
+                              Comments="so far as it relates to the provisions specified"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              RequiresApplied="true">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-7-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/a"
+                     text="reg. 7(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-06-30"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingNumber="1071"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-41"
+                              AffectingProvisionsText="reg. 7(b)(i)"
+                              RequiresApplied="true"
+                              Comments="so far as it relates to para 18"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              Row="41"
+                              AffectedYear="2023"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              EffectId="key-1de537552df350acdc75ac156390d541"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-7-b-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/b/i"
+                     text="reg. 7(b)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-06-30"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingProvisionsText="reg. 7(b)(ii)"
+                              Row="42"
+                              AffectingNumber="1071"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedNumber="29"
+                              AffectedProvisionsText="Sch. 2 para. 18"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              EffectId="key-4fe86b0255bcedb6996f0962dee65b0f"
+                              AffectedExtent="E+W+S+N.I."
+                              Type="coming into force"
+                              AffectingYear="2024"
+                              RequiresApplied="true"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-42"
+                              Created="2024-10-30T11:28:57Z">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-18"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/18"
+                     text="para. 18"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-7-b-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/7/b/ii"
+                     text="reg. 7(b)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-06-30"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              RequiresApplied="true"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedNumber="29"
+                              EffectId="key-5bda9a357eba200805566d6a0ef7da46"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 8(a)"
+                              AffectedProvisionsText="s. 2(1)"
+                              Comments="so far as it relates to the provisions specified"
+                              Type="coming into force"
+                              Created="2024-10-30T11:28:57Z"
+                              Row="43"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectingNumber="1071"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-43"
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingYear="2024">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-8-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/a"
+                     text="reg. 8(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-12-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingProvisionsText="reg. 8(b)(i)"
+                              Row="44"
+                              AffectingYear="2024"
+                              AffectedYear="2023"
+                              Comments="so far as it relates to paras 8, 12"
+                              AffectingNumber="1071"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedNumber="29"
+                              EffectId="key-67aeba3a8024046792f3ceb2e951e7b8"
+                              Created="2024-10-30T11:28:57Z"
+                              Type="coming into force"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedProvisionsText="Sch. 2 para. 1"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-44"
+                              AffectedExtent="E+W+S+N.I.">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/1"
+                     text="para. 1"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-8-b-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/i"
+                     text="reg. 8(b)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-12-01"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingYear="2024"
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              Row="45"
+                              AffectingNumber="1071"
+                              AffectingProvisionsText="reg. 8(b)(ii)"
+                              AffectedProvisionsText="Sch. 2 para. 8"
+                              Type="coming into force"
+                              AffectedExtent="E+W+S+N.I."
+                              RequiresApplied="true"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-1f578448600b213529551d923f8ace93"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-45"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingClass="UnitedKingdomStatutoryInstrument">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-8"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/8"
+                     text="para. 8"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-8-b-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/ii"
+                     text="reg. 8(b)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect RequiresApplied="true"
+                              AffectingNumber="1071"
+                              Row="46"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedProvisionsText="Sch. 2 para. 12"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedYear="2023"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              AffectingYear="2024"
+                              Type="coming into force"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              EffectId="key-0b2c4d4d99ff5441fe37d2646c8bf91d"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-46"
+                              AffectingProvisionsText="reg. 8(b)(iii)">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-12"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/12"
+                     text="para. 12"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-8-b-iii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/8/b/iii"
+                     text="reg. 8(b)(iii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2025-12-01"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingNumber="1071"
+                              AffectingYear="2024"
+                              AffectingProvisionsText="reg. 9(a)"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-47"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedProvisionsText="s. 2(1)"
+                              Comments="so far as it relates to the provisions specified"
+                              AffectedExtent="E+W+S+N.I."
+                              RequiresApplied="true"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              EffectId="key-d7f3f0ae6a7e1ecdef5782fa74077ac4"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Type="coming into force"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Row="47"
+                              AffectedNumber="29">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="section-2-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/2/1"
+                     text="s. 2(1)"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-a"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/a"
+                     text="reg. 9(a)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2026-07-06"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-48"
+                              AffectedYear="2023"
+                              AffectedExtent="E+W+S+N.I."
+                              Comments="so far as it relates to specified paras"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              EffectId="key-5d78b60c57bc357d1ca634e04e921d7a"
+                              AffectedNumber="29"
+                              Row="48"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 9(b)(i)"
+                              Type="coming into force"
+                              AffectedProvisionsText="Sch. 2 para. 44"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectingNumber="1071"
+                              AffectingYear="2024">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-44"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/44"
+                     text="para. 44"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-b-i"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/i"
+                     text="reg. 9(b)(i)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2026-07-06"
+                            Qualification="for specified purposes"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedProvisionsText="Sch. 2 para. 45"
+                              Row="49"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-49"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectingYear="2024"
+                              AffectingProvisionsText="reg. 9(b)(ii)"
+                              RequiresApplied="true"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectedNumber="29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingNumber="1071"
+                              Type="coming into force"
+                              AffectedYear="2023"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              AffectedExtent="E+W+S+N.I."
+                              EffectId="key-7777b1517ef9a14c9f5496ae07b47e2c">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-45"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/45"
+                     text="para. 45"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-b-ii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/ii"
+                     text="reg. 9(b)(ii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2026-07-06"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Type="coming into force"
+                              EffectId="key-727c69f405d3a38fbaac4f205aebaee1"
+                              RequiresApplied="true"
+                              Row="50"
+                              AffectedExtent="E+W+S+N.I."
+                              AffectedProvisionsText="Sch. 2 para. 46"
+                              AffectedYear="2023"
+                              AffectingNumber="1071"
+                              AffectingProvisionsText="reg. 9(b)(iii)"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              AffectedNumber="29"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-50">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-46"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/46"
+                     text="para. 46"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-b-iii"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/iii"
+                     text="reg. 9(b)(iii)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2026-07-06" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectedYear="2023"
+                              AffectedNumber="29"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-51"
+                              AffectingYear="2024"
+                              AffectedExtent="E+W+S+N.I."
+                              EffectId="key-57cb6bae9180567df9bf60ef54f1a595"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Row="51"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Created="2024-10-30T11:28:57Z"
+                              AffectingProvisionsText="reg. 9(b)(iv)"
+                              AffectingNumber="1071"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              Type="coming into force"
+                              AffectedProvisionsText="Sch. 2 para. 49"
+                              RequiresApplied="true">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-49"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/49"
+                     text="para. 49"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-b-iv"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/iv"
+                     text="reg. 9(b)(iv)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false"
+                            Date="2026-07-06"
+                            Qualification="in force in so far as not already in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedExtent="E+W+S+N.I."
+                              AffectedNumber="29"
+                              AffectingNumber="1071"
+                              RequiresApplied="true"
+                              AffectedYear="2023"
+                              AffectingYear="2024"
+                              AffectingProvisionsText="reg. 9(b)(v)"
+                              AffectedProvisionsText="Sch. 2 para. 50"
+                              Type="coming into force"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Created="2024-10-30T11:28:57Z"
+                              EffectId="key-95378eb63fc2ee411b13536fe61a4e6e"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1071-kji6m4n5-52"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1071"
+                              Row="52">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2"
+                     text="Sch. 2 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-2-paragraph-50"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/2/paragraph/50"
+                     text="para. 50"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Financial Services and Markets Act 2023 (Commencement No. 8) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-9-b-v"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1071/regulation/9/b/v"
+                     text="reg. 9(b)(v)"/>
+            </ukm:AffectingProvisions>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2026-07-06" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
+                              Type="savings for effects of commencing S.I. 2024/620"
+                              RequiresApplied="true"
+                              AffectingProvisionsText="reg. 3"
+                              AffectingEffectsExtent="E+W+S+N.I."
+                              AffectedProvisionsText="Sch. 1 Pt. 2"
+                              Created="2024-11-04T13:29:24Z"
+                              AffectingYear="2024"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-1e085e893b54fd49e07b4f4225e19b9f"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-15"
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingNumber="1083"
+                              AffectedNumber="29"
+                              Row="15">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-2"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/2"
+                     text="Pt. 2"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-3"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3"
+                     text="reg. 3"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-1-2-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b"
+                     text="reg. 1(2)(b)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect AffectedProvisionsText="Sch. 1 Pt. 3"
+                              AffectingProvisionsText="reg. 3"
+                              EffectId="key-026ab96648fe311270c4b2d2f688f16e"
+                              AffectingNumber="1083"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
+                              Type="savings for effects of commencing S.I. 2024/620"
+                              Row="16"
+                              RequiresApplied="true"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectedNumber="29"
+                              AffectingEffectsExtent="E+W+S+N.I."
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              Created="2024-11-04T13:29:24Z"
+                              AffectedYear="2023"
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-16">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-3"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/3"
+                     text="Pt. 3"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-3"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3"
+                     text="reg. 3"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-1-2-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b"
+                     text="reg. 1(2)(b)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+         <ukm:UnappliedEffect Type="savings for effects of commencing S.I. 2024/620"
+                              AffectedYear="2023"
+                              AffectedClass="UnitedKingdomPublicGeneralAct"
+                              AffectingProvisionsText="reg. 3"
+                              AffectingYear="2024"
+                              URI="http://www.legislation.gov.uk/id/effect/uksi-2024-1083-kpdon825-17"
+                              Row="17"
+                              Created="2024-11-04T13:29:24Z"
+                              AffectingURI="http://www.legislation.gov.uk/id/uksi/2024/1083"
+                              AffectedNumber="29"
+                              AffectingClass="UnitedKingdomStatutoryInstrument"
+                              AffectingEffectsExtent="E+W+S+N.I."
+                              AffectingNumber="1083"
+                              AffectedURI="http://www.legislation.gov.uk/id/ukpga/2023/29"
+                              EffectId="key-4ca6662a57fd72531d16eb7d7ac39093"
+                              RequiresApplied="true"
+                              AffectedProvisionsText="Sch. 1 Pt. 5">
+            <ukm:AffectedTitle>Financial Services and Markets Act 2023</ukm:AffectedTitle>
+            <ukm:AffectedProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1"
+                     text="Sch. 1 "/>
+               <node xmlns=""
+                     type="section"
+                     ref="schedule-1-part-5"
+                     uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/1/part/5"
+                     text="Pt. 5"/>
+            </ukm:AffectedProvisions>
+            <ukm:AffectingTitle>The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024</ukm:AffectingTitle>
+            <ukm:AffectingProvisions>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-3"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/3"
+                     text="reg. 3"/>
+            </ukm:AffectingProvisions>
+            <ukm:CommencementAuthority>
+               <node xmlns=""
+                     type="section"
+                     ref="regulation-1-2-b"
+                     uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b"
+                     text="reg. 1(2)(b)"/>
+            </ukm:CommencementAuthority>
+            <ukm:InForceDates>
+               <ukm:InForce Applied="false" Date="2024-12-31" Qualification="wholly in force"/>
+            </ukm:InForceDates>
+         </ukm:UnappliedEffect>
+      </ukm:UnappliedEffects>
+   </meta>
+</leg>

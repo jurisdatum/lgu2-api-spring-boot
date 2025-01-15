@@ -4,11 +4,13 @@ import net.sf.saxon.s9api.XdmNode;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import uk.gov.legislation.api.responses.TableOfContents;
+import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.data.marklogic.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.document.TableOfContents;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.Optional;
@@ -38,7 +40,8 @@ public class ContentsService {
 
     public TableOfContents simplifyToTableOfContents(String clmlContent) {
         try {
-            return simplifier.contents(clmlContent);
+            Contents simple = simplifier.contents(clmlContent);
+            return TableOfContentsConverter.convert(simple);
         } catch (Exception e) {
             throw new TransformationException("Simplification to JSON format failed",e);
         }

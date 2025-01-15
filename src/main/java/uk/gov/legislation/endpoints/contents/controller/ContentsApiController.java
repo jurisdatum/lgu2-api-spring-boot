@@ -2,7 +2,7 @@ package uk.gov.legislation.endpoints.contents.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.endpoints.document.TableOfContents;
+import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.endpoints.contents.api.ContentsApi;
 import uk.gov.legislation.endpoints.contents.service.ContentsService;
 

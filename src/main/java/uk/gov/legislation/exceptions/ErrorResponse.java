@@ -1,12 +1,10 @@
 package uk.gov.legislation.exceptions;
 
-import lombok.Getter;
 import org.springframework.http.HttpStatusCode;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-@Getter
 public class ErrorResponse {
 
     private final int status;

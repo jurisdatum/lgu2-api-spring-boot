@@ -9,7 +9,7 @@ import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-class EffectsComparator {
+public class EffectsComparator {
 
     private static final Comparator<UnappliedEffect> BY_AFFECTED_PROVISION = (UnappliedEffect e1, UnappliedEffect e2) -> {
         Optional<String> id1 = e1.affectedProvisions.stream()
@@ -41,7 +41,7 @@ class EffectsComparator {
             .compare(tokens1, tokens2);
     }
 
-    static final Comparator<UnappliedEffect> INSTANCE = BY_AFFECTED_PROVISION
+    public static final Comparator<UnappliedEffect> INSTANCE = BY_AFFECTED_PROVISION
         .thenComparing((UnappliedEffect e) -> e.type)
         .thenComparing((UnappliedEffect e) -> e.affectingURI);
 
