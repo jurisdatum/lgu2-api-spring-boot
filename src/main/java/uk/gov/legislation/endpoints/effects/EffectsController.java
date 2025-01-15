@@ -38,11 +38,11 @@ public class EffectsController implements EffectsApi {
             .affectedType(targetType)
             .affectedYear(targetYear)
             .affectedNumber(targetNumber)
-            .affectedTtitle(targetTitle)
+            .affectedTitle(targetTitle)
             .affectingType(sourceType)
             .affectingYear(sourceYear)
             .affectingNumber(sourceNumber)
-            .affectingTtitle(sourceTitle)
+            .affectingTitle(sourceTitle)
             .page(page)
             .build();
         return db.fetch(params);
