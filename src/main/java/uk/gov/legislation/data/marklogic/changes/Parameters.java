@@ -66,7 +66,7 @@ public class Parameters {
             return this;
         }
 
-        public Builder affectedNumber(int affectedNumber) {
+        public Builder affectedNumber(Integer affectedNumber) {
             params.affectedNumber = affectedNumber;
             return this;
         }
@@ -86,7 +86,7 @@ public class Parameters {
             return this;
         }
 
-        public Builder affectingNumber(int affectingNumber) {
+        public Builder affectingNumber(Integer affectingNumber) {
             params.affectingNumber = affectingNumber;
             return this;
         }
