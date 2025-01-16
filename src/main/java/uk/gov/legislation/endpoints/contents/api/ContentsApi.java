@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.parameters.*;
@@ -23,7 +24,8 @@ public interface ContentsApi {
             @PathVariable @Type String type,
             @PathVariable @Year int year,
             @PathVariable @Number int number,
-            @RequestParam @Version Optional<String> version);
+            @RequestParam @Version Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(summary = "get a document's table of conents (regnal year)")
@@ -32,7 +34,9 @@ public interface ContentsApi {
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
             @PathVariable @Number int number,
-            @RequestParam @Version Optional<String> version);
+            @RequestParam @Version Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language
+);
 
     /* Akoma Ntoso */
 
@@ -41,7 +45,8 @@ public interface ContentsApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version);
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
@@ -49,7 +54,8 @@ public interface ContentsApi {
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
-            @RequestParam Optional<String> version);
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     /* JSON */
 
@@ -58,7 +64,8 @@ public interface ContentsApi {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam Optional<String> version);
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
@@ -66,6 +73,7 @@ public interface ContentsApi {
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
-            @RequestParam Optional<String> version);
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
 }
