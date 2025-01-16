@@ -9,6 +9,8 @@ import uk.gov.legislation.endpoints.contents.service.ContentsService;
 import java.util.Optional;
 import java.util.function.Function;
 
+import static uk.gov.legislation.endpoints.Language.validateLanguage;
+
 
 /**
  * REST Controller for managing API endpoints related to document contents.
@@ -37,20 +39,22 @@ public class ContentsApiController implements ContentsApi {
      * @return ResponseEntity containing CLML XML if found, or throws NoDocumentException if the document is not found
      */
     @Override
-    public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version) {
-        return getDocumentContentsClml(type, Integer.toString(year), number, version);
+    public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, String language) {
+        String validatedLanguage = validateLanguage(language);
+        return getDocumentContentsClml(type, Integer.toString(year), number, version, validatedLanguage);
     }
     /**
      * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
      * @param years     A year or range of years, relative to the monarch, e.g., '1' or '1-2'
      */
     @Override
-    public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsClml(type, regnalYear, number, version);
+        return getDocumentContentsClml(type, regnalYear, number, version,validatedLanguage);
     }
-    private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version) {
-        return contentsService.fetchAndTransform(type, year, number, version, Function.identity());
+    private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version, String language) {
+        return contentsService.fetchAndTransform(type, year, number, version, Function.identity(),language);
     }
 
     /**
@@ -58,33 +62,33 @@ public class ContentsApiController implements ContentsApi {
      * Converts the CLML format to AKN XML format using the contents service.
      */
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version) {
-        return getDocumentContentsAkn(type, Integer.toString(year), number, version);
+    public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, String language) {
+        String validatedLanguage = validateLanguage(language);
+        return getDocumentContentsAkn(type, Integer.toString(year), number, version,validatedLanguage);
     }
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, String language) {
+        String validatedLanguage = validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsAkn(type, regnalYear, number, version);
+        return getDocumentContentsAkn(type, regnalYear, number, version,validatedLanguage);
     }
-    private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version) {
-        return contentsService.fetchAndTransform(type, year, number, version, contentsService::transformToAkn);
-    }
+    private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version, String language) {
+        return contentsService.fetchAndTransform(type, year, number, version, contentsService::transformToAkn, language);}
 
     /**
      * Retrieves the document contents in a simplified JSON format.
      * Converts the CLML format to a TableOfContents object using the contents service.
      */
     @Override
-    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version) {
-        return getDocumentContentsJson(type, Integer.toString(year), number, version);
+    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version, String language) {
+        return getDocumentContentsJson(type, Integer.toString(year), number, version, language);
     }
     @Override
-    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version) {
+    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version, String language) {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsJson(type, regnalYear, number, version);
+        return getDocumentContentsJson(type, regnalYear, number, version, language);
     }
-    private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version) {
-        return contentsService.fetchAndTransform(type, year, number, version, contentsService::simplifyToTableOfContents);
-    }
+    private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version,String language) {
+        return contentsService.fetchAndTransform(type, year, number, version, contentsService::simplifyToTableOfContents,language); }
 
 }

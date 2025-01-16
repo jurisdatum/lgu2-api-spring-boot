@@ -36,11 +36,17 @@ public class Legislation {
         LegislationParameters params = new LegislationParameters(type, year, number).version(version).view(CONTENTS_VIEW);
         return getAndFollowRedirect(params);
     }
+    public Response getTableOfContents(String type, String year, int number, Optional<String> version, String language) {
+        LegislationParameters params = new LegislationParameters(type, year, number).version(version).view(CONTENTS_VIEW).lang(Optional.ofNullable(language));
+        return getAndFollowRedirect(params);
+    }
 
     /** Get document section
      */
-    public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version).section(Optional.of(section));
+    public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version, String language) {
+        LegislationParameters params = new LegislationParameters(type, year, number)
+                .version(version).section(Optional.of(section))
+                .lang(Optional.ofNullable(language));
         return getAndFollowRedirect(params);
     }
 
