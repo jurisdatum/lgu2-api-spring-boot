@@ -25,6 +25,8 @@ public class EffectsFeedConverter {
         meta.page = atom.page;
         meta.pageSize = atom.itemsPerPage;
         meta.totalPages = atom.totalPages;
+        meta.startIndex = atom.startIndex;
+        meta.totalResults = atom.totalResults;
         meta.updated = atom.updated;
         return meta;
     }
