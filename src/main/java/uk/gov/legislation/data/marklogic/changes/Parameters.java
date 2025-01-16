@@ -11,13 +11,13 @@ import java.util.stream.Collectors;
 public class Parameters {
 
     private String affectedType;
+    private Integer affectedYear;
     private Integer affectedNumber;
-    private String affectedYear;
     private String affectedTitle;
 
     private String affectingType;
+    private Integer affectingYear;
     private Integer affectingNumber;
-    private String affectingYear;
     private String affectingTitle;
 
     private Integer page;
@@ -61,7 +61,7 @@ public class Parameters {
             return this;
         }
 
-        public Builder affectedYear(String affectedYear) {
+        public Builder affectedYear(Integer affectedYear) {
             params.affectedYear = affectedYear;
             return this;
         }
@@ -81,7 +81,7 @@ public class Parameters {
             return this;
         }
 
-        public Builder affectingYear(String affectingYear) {
+        public Builder affectingYear(Integer affectingYear) {
             params.affectingYear = affectingYear;
             return this;
         }
