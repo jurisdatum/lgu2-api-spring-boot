@@ -5,11 +5,9 @@ import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.api.parameters.Title;
-import uk.gov.legislation.api.parameters.Year;
-import uk.gov.legislation.api.responses.PageOfEffects;
+import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
-import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.responses.PageOfEffects;
 
 import java.io.IOException;
 
@@ -26,7 +24,7 @@ public interface EffectsApi {
         @RequestParam(required = false) @Year Integer sourceYear,
         @RequestParam(required = false) @Number Integer sourceNumber,
         @RequestParam(required = false) @Title String sourceTitle,
-        @RequestParam(required = false, defaultValue = "1") int page
+        @RequestParam(required = false, defaultValue = "1") @Page int page
     ) throws IOException, InterruptedException;
 
     @GetMapping(value = "/effects", produces = MediaType.APPLICATION_JSON_VALUE)
