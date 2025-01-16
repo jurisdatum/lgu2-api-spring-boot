@@ -41,20 +41,20 @@ public class FragmentApiController implements FragmentApi {
      * @return ResponseEntity with the CLML content if found, or 404 Not Found if the section is missing
      */
     @Override
-    public ResponseEntity<String> getFragmentClml(String type, int year, int number, String section, Optional<String> version) {
-        return getFragmentClml(type, Integer.toString(year), number, section, version);
+    public ResponseEntity<String> getFragmentClml(String type, int year, int number, String section, Optional<String> version, String language) {
+        return getFragmentClml(type, Integer.toString(year), number, section, version, language);
     }
     /**
      * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
      * @param years     A year or range of years, relative to the monarch, e.g., '1' or '1-2'
      */
     @Override
-    public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number, String section, Optional<String> version, String language) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentClml(type, regnalYear, number, section, version);
+        return getFragmentClml(type, regnalYear, number, section, version, language);
     }
-    private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity());
+    private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section, Optional<String> version, String language) {
+        return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity(), language);
     }
 
     /**
@@ -62,16 +62,16 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to AKN format using the transformation service.
      */
     @Override
-    public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version) {
-        return getFragmentAkn(type, Integer.toString(year), number, section, version);
+    public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section, Optional<String> version, String language) {
+        return getFragmentAkn(type, Integer.toString(year), number, section, version, language);
     }
     @Override
-    public ResponseEntity<String> getFragmentAkn(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<String> getFragmentAkn(String type, String monarch, String years, int number, String section, Optional<String> version, String language) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentAkn(type, regnalYear, number, section, version);
+        return getFragmentAkn(type, regnalYear, number, section, version, language);
     }
-    private ResponseEntity<String> getFragmentAkn(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToAkn);
+    private ResponseEntity<String> getFragmentAkn(String type, String year, int number, String section, Optional<String> version, String language) {
+        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToAkn, language);
     }
 
     /**
@@ -79,16 +79,16 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to HTML format using the transformation service.
      */
     @Override
-    public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version) {
-        return getFragmentHtml(type, Integer.toString(year), number, section, version);
+    public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section, Optional<String> version, String language) {
+        return getFragmentHtml(type, Integer.toString(year), number, section, version, language);
     }
     @Override
-    public ResponseEntity<String> getFragmentHtml(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<String> getFragmentHtml(String type, String monarch, String years, int number, String section, Optional<String> version, String language) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentHtml(type, regnalYear, number, section, version);
+        return getFragmentHtml(type, regnalYear, number, section, version, language);
     }
-    private ResponseEntity<String> getFragmentHtml(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, clml -> transformationService.transformToHtml(clml, true));
+    private ResponseEntity<String> getFragmentHtml(String type, String year, int number, String section, Optional<String> version, String language) {
+        return fragmentService.fetchAndTransform(type, year, number, section, version, clml -> transformationService.transformToHtml(clml, true), language);
     }
 
     /**
@@ -96,16 +96,16 @@ public class FragmentApiController implements FragmentApi {
      * Transforms the retrieved CLML content to JSON format using the transformation service.
      */
     @Override
-    public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section, Optional<String> version) {
-        return getFragmentJson(type, Integer.toString(year), number, section, version);
+    public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section, Optional<String> version, String language) {
+        return getFragmentJson(type, Integer.toString(year), number, section, version, language);
     }
     @Override
-    public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number, String section, Optional<String> version) {
+    public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number, String section, Optional<String> version, String language) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentJson(type, regnalYear, number, section, version);
+        return getFragmentJson(type, regnalYear, number, section, version, language);
     }
-    private ResponseEntity<Fragment> getFragmentJson(String type, String year, int number, String section, Optional<String> version) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToJsonResponse);
+    private ResponseEntity<Fragment> getFragmentJson(String type, String year, int number, String section, Optional<String> version, String language) {
+        return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToJsonResponse, language);
     }
 
 }
