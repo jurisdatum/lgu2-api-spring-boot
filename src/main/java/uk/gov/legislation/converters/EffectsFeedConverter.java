@@ -2,8 +2,7 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.PageOfEffects;
-import uk.gov.legislation.endpoints.document.service.ExtentConverter;
-import uk.gov.legislation.transform.simple.UnappliedEffect;
+import uk.gov.legislation.transform.simple.effects.InForce;
 import uk.gov.legislation.transform.simple.effects.Entry;
 import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.util.Cites;
@@ -79,7 +78,7 @@ public class EffectsFeedConverter {
         return effect;
     }
 
-    private static Effect.InForce convertInForceDate(UnappliedEffect.InForce clml) {
+    private static Effect.InForce convertInForceDate(InForce clml) {
         Effect.InForce inForce = new Effect.InForce();
         inForce.date = clml.date;
         inForce.applied = clml.applied;

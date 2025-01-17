@@ -3,8 +3,8 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import uk.gov.legislation.transform.simple.effects.InForce;
 
-import java.time.LocalDate;
 import java.util.Collections;
 import java.util.List;
 
@@ -75,48 +75,5 @@ public class UnappliedEffect {
     /* then this provision also will be included as part of the Commencement Authority */
     @JacksonXmlProperty(localName = "CommencementAuthority")
     public List<RichTextNode> commencementAuthority = Collections.emptyList();
-
-    /* rich text */
-
-    public static class RichTextNode {
-
-        public static final String TEXT_TYPE = "text";
-        public static final String SECTION_TYPE = "section";
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String type;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String text;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String ref;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String uri;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String error;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public boolean missing;
-
-    }
-
-    public static class InForce {
-
-        @JacksonXmlProperty(localName = "Date", isAttribute = true)
-        public LocalDate date;
-
-        @JacksonXmlProperty(localName = "Applied", isAttribute = true)
-        public boolean applied;
-
-        @JacksonXmlProperty(localName = "Prospective", isAttribute = true)
-        public Boolean prospective;
-
-        @JacksonXmlProperty(localName = "Qualification", isAttribute = true)
-        public String qualification;
-
-    }
 
 }

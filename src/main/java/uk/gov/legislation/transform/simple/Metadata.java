@@ -145,7 +145,7 @@ public class Metadata {
     @JacksonXmlProperty(localName = "ancestors")
     private List<Ancestor> ancestors = Collections.emptyList();
 
-    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestors() {
+    public List<uk.gov.legislation.api.responses.Level> ancestors() {
         return ancestors.stream().map(Level::convert).toList();
     }
 
@@ -154,7 +154,7 @@ public class Metadata {
     @JacksonXmlProperty(localName = "descendants")
     private List<Descendant> descendants = Collections.emptyList();
 
-    public List<uk.gov.legislation.endpoints.document.responses.Level> descendants() {
+    public List<uk.gov.legislation.api.responses.Level> descendants() {
         return descendants.stream().map(Level::convert).toList();
     }
 

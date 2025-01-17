@@ -2,7 +2,6 @@ package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
-import uk.gov.legislation.endpoints.document.responses.Level;
 
 import java.util.List;
 

@@ -2,8 +2,11 @@ package uk.gov.legislation.endpoints.document.service;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import uk.gov.legislation.converters.ExtentConverter;
 import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
-import uk.gov.legislation.endpoints.document.responses.RichText;
+import uk.gov.legislation.api.responses.RichText;
+import uk.gov.legislation.transform.simple.effects.InForce;
+import uk.gov.legislation.transform.simple.RichTextNode;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
 
@@ -35,11 +38,11 @@ public class EffectsConverter {
         return effect;
     }
 
-    private static UnappliedEffect.Provisions convertProvisions(List<uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode> rich) {
+    private static UnappliedEffect.Provisions convertProvisions(List<RichTextNode> rich) {
         String plain = rich.stream().map(node -> node.text).collect(Collectors.joining());
         return convertProvisions(plain, rich);
     }
-    private static UnappliedEffect.Provisions convertProvisions(String plain, List<uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode> rich) {
+    private static UnappliedEffect.Provisions convertProvisions(String plain, List<RichTextNode> rich) {
         UnappliedEffect.Provisions provisions = new UnappliedEffect.Provisions();
         provisions.plain = plain;
         provisions.rich = rich.stream().map(EffectsConverter::convertRichTextNode).toList();
@@ -49,7 +52,7 @@ public class EffectsConverter {
     private static List<UnappliedEffect.InForce> convertInForceDates(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
         return clml.inForceDates.stream().map(EffectsConverter::convertInForceDate).toList();
     }
-    private static UnappliedEffect.InForce convertInForceDate(uk.gov.legislation.transform.simple.UnappliedEffect.InForce clml) {
+    private static UnappliedEffect.InForce convertInForceDate(InForce clml) {
         UnappliedEffect.InForce inForce = new UnappliedEffect.InForce();
         inForce.date = clml.date;
         inForce.applied = clml.applied;
@@ -69,13 +72,13 @@ public class EffectsConverter {
         return source;
     }
 
-    private static RichText.Node convertRichTextNode(uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode clml) {
+    private static RichText.Node convertRichTextNode(RichTextNode clml) {
         RichText.Node node = new RichText.Node();
         node.text = clml.text;
         switch (clml.type) {
             case null -> logger.warn("node type is null");
-            case uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode.TEXT_TYPE -> node.type = "text";
-            case uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode.SECTION_TYPE -> {
+            case RichTextNode.TEXT_TYPE -> node.type = "text";
+            case RichTextNode.SECTION_TYPE -> {
                 node.type = "link";
                 node.id = clml.ref;
                 node.href = Links.shorten(clml.uri);

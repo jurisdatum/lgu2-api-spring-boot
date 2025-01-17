@@ -1,5 +1,6 @@
 package uk.gov.legislation.util;
 
+import uk.gov.legislation.transform.simple.RichTextNode;
 import uk.gov.legislation.transform.simple.UnappliedEffect;
 
 import java.util.Arrays;
@@ -13,11 +14,11 @@ public class EffectsComparator {
 
     private static final Comparator<UnappliedEffect> BY_AFFECTED_PROVISION = (UnappliedEffect e1, UnappliedEffect e2) -> {
         Optional<String> id1 = e1.affectedProvisions.stream()
-            .filter(node -> node.type.equals(UnappliedEffect.RichTextNode.SECTION_TYPE))
+            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
             .map(node -> node.ref)
             .findFirst();
         Optional<String> id2 = e2.affectedProvisions.stream()
-            .filter(node -> node.type.equals(UnappliedEffect.RichTextNode.SECTION_TYPE))
+            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
             .map(node -> node.ref)
             .findFirst();
         if (id1.isEmpty() && id2.isEmpty())

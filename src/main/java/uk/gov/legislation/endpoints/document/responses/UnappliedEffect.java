@@ -2,6 +2,7 @@ package uk.gov.legislation.endpoints.document.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.api.responses.RichText;
 import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;

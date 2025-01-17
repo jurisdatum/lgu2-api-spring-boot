@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.document.responses;
+package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
