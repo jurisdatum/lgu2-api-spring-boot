@@ -3,6 +3,8 @@
     "page" : 1,
     "pageSize" : 20,
     "totalPages" : 74521,
+    "startIndex" : 1,
+    "totalResults" : 1490409,
     "updated" : "2025-01-10T02:23:26.449553Z"
   },
   "effects" : [ {
