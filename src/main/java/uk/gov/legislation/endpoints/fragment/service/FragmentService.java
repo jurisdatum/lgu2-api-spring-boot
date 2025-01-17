@@ -26,7 +26,7 @@ public class FragmentService {
 
     public  <T> ResponseEntity <T> fetchAndTransform(String type, String year, int number, String section, Optional<String> version, Function<String, T> transform, String language) {
         long start = System.currentTimeMillis();
-        Legislation.Response leg = db.getDocumentSection(type, year, number, section, version, language);
+        Legislation.Response leg = db.getDocumentSection(type, year, number, section, version, Optional.of(language));
         long end = System.currentTimeMillis();
         logger.debug("It took {} miliseconds to fetch the CLML", end - start);
         T body = transform.apply(leg.clml());

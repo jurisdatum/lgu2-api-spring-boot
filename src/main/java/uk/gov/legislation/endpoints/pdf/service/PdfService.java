@@ -25,8 +25,9 @@ public class PdfService {
     /**
      * Fetches the URL of a PDF or its thumbnail based on the input parameters.
      */
+    // ToDo add support for Welsh
     public Optional<String> fetchPdfUrl(String type, String yearOrRegnal, int number, String version) throws IOException, SaxonApiException {
-        String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version)).clml();
+        String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version), Optional.empty()).clml();
         return simplifier.contents(clml).meta.pdfFormatUri();
     }
 
@@ -36,6 +37,7 @@ public class PdfService {
      * @param url The original PDF URL
      * @return The thumbnail URL
      */
+    // ToDo add support for Welsh
     public String convertToThumbnailUrl(String url) {
         return url
                 .replaceFirst("/pdfs/", "/images/")

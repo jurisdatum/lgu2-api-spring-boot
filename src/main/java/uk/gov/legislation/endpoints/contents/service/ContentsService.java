@@ -50,7 +50,7 @@ public class ContentsService {
     /* helper */
 
     public <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Function<String, T> transform, String language) {
-        Legislation.Response leg = legislationRepository.getTableOfContents(type, year, number, version, language);
+        Legislation.Response leg = legislationRepository.getTableOfContents(type, year, number, version, Optional.of(language));
         T body = transform.apply(leg.clml());
         HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
         return ResponseEntity.ok().headers(headers).body(body);
