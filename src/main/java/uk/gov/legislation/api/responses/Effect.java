@@ -3,9 +3,11 @@ package uk.gov.legislation.api.responses;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.endpoints.document.responses.RichText;
+import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
 
 public class Effect {
 
@@ -54,6 +56,9 @@ public class Effect {
 
         @Schema
         public Provisions provisions;
+
+        @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
+        public Set<Extent> extent;
 
     }
 

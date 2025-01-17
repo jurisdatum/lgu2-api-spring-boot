@@ -2,6 +2,7 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.PageOfEffects;
+import uk.gov.legislation.endpoints.document.service.ExtentConverter;
 import uk.gov.legislation.transform.simple.UnappliedEffect;
 import uk.gov.legislation.transform.simple.effects.Entry;
 import uk.gov.legislation.transform.simple.effects.Page;
@@ -53,6 +54,7 @@ public class EffectsFeedConverter {
         effect.target.provisions = new Effect.Provisions();
         effect.target.provisions.plain = simple.affectedProvisionsText;
         effect.target.provisions.rich = simple.affectedProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.target.extent = ExtentConverter.convert(simple.affectedExtent);
 
         effect.source = new Effect.Source();
         effect.source.id = Links.shorten(simple.affectingURI);
@@ -64,6 +66,7 @@ public class EffectsFeedConverter {
         effect.source.provisions = new Effect.Provisions();
         effect.source.provisions.plain = simple.affectingProvisionsText;
         effect.source.provisions.rich = simple.affectingProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.source.extent = ExtentConverter.convert(simple.affectingExtent);
 
         if (!simple.commencementAuthority.isEmpty()) {
             effect.commencementAuthority = new Effect.Provisions();
