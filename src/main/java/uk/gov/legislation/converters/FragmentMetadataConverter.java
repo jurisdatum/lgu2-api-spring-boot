@@ -3,7 +3,7 @@ package uk.gov.legislation.converters;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.UnappliedEffect;
+import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
 
@@ -33,9 +33,9 @@ public class FragmentMetadataConverter {
             .map(level -> level.id)
             .filter(id -> !id.equals(metadata.fragment()))
             .collect(Collectors.toSet());
-        List<UnappliedEffect> all = metadata.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
-        List<UnappliedEffect> direct = Effects.removeThoseWithNoRelevantSection(all, descendantIds, false);
-        List<UnappliedEffect> ancestor = Effects.removeThoseWithNoRelevantSection(all, ancestorIds, true);
+        List<Effect> all = metadata.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
+        List<Effect> direct = Effects.removeThoseWithNoRelevantSection(all, descendantIds, false);
+        List<Effect> ancestor = Effects.removeThoseWithNoRelevantSection(all, ancestorIds, true);
         FragmentMetadata.Effects effects = new FragmentMetadata.Effects();
         effects.fragment = EffectsConverter.convert(direct);
         effects.ancestor = EffectsConverter.convert(ancestor);

@@ -21,11 +21,11 @@ public class EffectsConverter {
 
     private static final Logger logger = LoggerFactory.getLogger(EffectsConverter.class);
 
-    public static List<UnappliedEffect> convert(List<uk.gov.legislation.transform.simple.UnappliedEffect> effects) {
+    public static List<UnappliedEffect> convert(List<uk.gov.legislation.transform.simple.effects.Effect> effects) {
         return effects.stream().map(EffectsConverter::convertEffect).toList();
     }
 
-    private static UnappliedEffect convertEffect(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
+    private static UnappliedEffect convertEffect(uk.gov.legislation.transform.simple.effects.Effect clml) {
         UnappliedEffect effect = new UnappliedEffect();
         effect.type = clml.type;
         effect.required = clml.requiresApplied;
@@ -49,7 +49,7 @@ public class EffectsConverter {
         return provisions;
     }
 
-    private static List<UnappliedEffect.InForce> convertInForceDates(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
+    private static List<UnappliedEffect.InForce> convertInForceDates(uk.gov.legislation.transform.simple.effects.Effect clml) {
         return clml.inForceDates.stream().map(EffectsConverter::convertInForceDate).toList();
     }
     private static UnappliedEffect.InForce convertInForceDate(InForce clml) {
@@ -61,7 +61,7 @@ public class EffectsConverter {
         return inForce;
     }
 
-    private static UnappliedEffect.Source makeSource(uk.gov.legislation.transform.simple.UnappliedEffect clml) {
+    private static UnappliedEffect.Source makeSource(uk.gov.legislation.transform.simple.effects.Effect clml) {
         UnappliedEffect.Source source = new UnappliedEffect.Source();
         source.id = Links.shorten(clml.affectingURI);
         source.longType = clml.affectingClass;
