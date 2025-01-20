@@ -32,6 +32,14 @@ public class Search {
         return SearchResults.parse(xml);
     }
 
+    /**
+     * Fetches search results by title and page.
+     */
+    public SearchResults byTitle(String title, int page) throws IOException, InterruptedException {
+        String xml = byTitleAtom(title, page);
+        return SearchResults.parse(xml);
+    }
+
     // series can be 'w', 's', 'ni', 'l', 'c'
 
     /**
@@ -44,6 +52,14 @@ public class Search {
         } else if (Type.NISI.shortName().equals(type)) {
             query += "&series=ni";
         }
+        return db.get(ENDPOINT, query);
+    }
+
+    /**
+     * Constructs the query for fetching search results by title and page.
+     */
+    public String byTitleAtom(String title, int page) throws IOException, InterruptedException {
+        String query = "?title=" + URLEncoder.encode(title, StandardCharsets.UTF_8) + "&page=" + page;
         return db.get(ENDPOINT, query);
     }
 
