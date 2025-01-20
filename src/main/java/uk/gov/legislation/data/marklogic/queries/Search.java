@@ -35,7 +35,11 @@ public class Search {
     /**
      * Fetches search results by title and page.
      */
-    public SearchResults byTitle(String title, int page) throws IOException, InterruptedException {
+    public String byTitle(String title, int page) throws IOException, InterruptedException {
+        return byTitleAtom(title, page);
+    }
+
+    public SearchResults byTitleJson(String title, int page) throws IOException, InterruptedException {
         String xml = byTitleAtom(title, page);
         return SearchResults.parse(xml);
     }
@@ -59,7 +63,7 @@ public class Search {
      * Constructs the query for fetching search results by title and page.
      */
     public String byTitleAtom(String title, int page) throws IOException, InterruptedException {
-        String query = "?title=" + URLEncoder.encode(title, StandardCharsets.UTF_8) + "&page=" + page;
+        String query = "?title=" + URLEncoder.encode(title, StandardCharsets.US_ASCII) + "&page=" + page;
         return db.get(ENDPOINT, query);
     }
 

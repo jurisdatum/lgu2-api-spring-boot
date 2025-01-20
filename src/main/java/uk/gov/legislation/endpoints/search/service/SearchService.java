@@ -17,8 +17,13 @@ public class SearchService {
         this.db = db;
     }
 
-    public DocumentList getSearchByTitle(String title, int page) throws IOException, InterruptedException {
-        SearchResults results = db.byTitle(title, page);
+    public String getAtomSearchByTitle(String title, int page) throws IOException, InterruptedException {
+        return db.byTitle(title, page);
+    }
+    public DocumentList getJsonSearchByTitle(String title, int page) throws IOException, InterruptedException {
+        SearchResults results = db.byTitleJson(title, page);
         return Converter.convert(results);
     }
+
+
 }
