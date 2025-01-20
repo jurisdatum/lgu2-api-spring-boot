@@ -57,7 +57,15 @@ class UnappliedEffectsTest {
         Simplify.Parameters parameters = new Simplify.Parameters(TransformTest.isFragment(id), false);
         String actual = indent(simplifier.transform(clml, parameters));
         String expected = read(id, "-simplified.xml");
+        System.out.println(actual.length());
+        System.out.println(expected.length());
         Assertions.assertEquals(expected, actual);
+
+//        //String actual1= actual.replaceAll(" ","");
+//        String expected1 = expected.replaceAll("\\r", "");
+//        //System.out.println(actual1.length());
+//        System.out.println(expected1.length());
+//        Assertions.assertEquals(expected1, actual);
     }
 
     private String indent(String xml) throws TransformerException {
