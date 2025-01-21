@@ -1,7 +1,6 @@
 package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.FragmentMetadata;
-import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
@@ -37,8 +36,8 @@ public class FragmentMetadataConverter {
         List<Effect> direct = Effects.removeThoseWithNoRelevantSection(all, descendantIds, false);
         List<Effect> ancestor = Effects.removeThoseWithNoRelevantSection(all, ancestorIds, true);
         FragmentMetadata.Effects effects = new FragmentMetadata.Effects();
-        effects.fragment = EffectsConverter.convert(direct);
-        effects.ancestor = EffectsConverter.convert(ancestor);
+        effects.fragment = EffectsFeedConverter.convertEffects(direct);
+        effects.ancestor = EffectsFeedConverter.convertEffects(ancestor);
         return effects;
     }
 

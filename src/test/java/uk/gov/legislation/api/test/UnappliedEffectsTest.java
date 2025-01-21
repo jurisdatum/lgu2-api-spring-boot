@@ -8,9 +8,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.api.responses.Effect;
+import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.endpoints.Application;
-import uk.gov.legislation.endpoints.document.responses.UnappliedEffect;
-import uk.gov.legislation.endpoints.document.service.EffectsConverter;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.util.Effects;
@@ -112,7 +112,7 @@ class UnappliedEffectsTest {
     void converted(String id) throws Exception {
         String clml = read(id, ".xml");
         Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
-        List<UnappliedEffect> effects = EffectsConverter.convert(meta.rawEffects);
+        List<Effect> effects = EffectsFeedConverter.convertEffects(meta.rawEffects);
         String actual = mapper.writeValueAsString(effects);
         String expected = read(id, "-effects-converted.json");
         Assertions.assertEquals(expected, actual);

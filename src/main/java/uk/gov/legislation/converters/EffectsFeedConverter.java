@@ -2,8 +2,8 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.PageOfEffects;
-import uk.gov.legislation.transform.simple.effects.InForce;
 import uk.gov.legislation.transform.simple.effects.Entry;
+import uk.gov.legislation.transform.simple.effects.InForce;
 import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
@@ -16,7 +16,7 @@ public class EffectsFeedConverter {
     public static PageOfEffects convert(Page atom) {
         PageOfEffects page = new PageOfEffects();
         page.meta = convertMetadata(atom);
-        page.effects = convertEffects(atom.entries);
+        page.effects = convertEntries(atom.entries);
         return page;
     }
 
@@ -31,12 +31,20 @@ public class EffectsFeedConverter {
         return meta;
     }
 
-    private static List<Effect> convertEffects(List<Entry> entries) {
-        return entries.stream().map(EffectsFeedConverter::convertEffect).toList();
+    private static List<Effect> convertEntries(List<Entry> entries) {
+        return entries.stream().map(EffectsFeedConverter::convertEntry).toList();
     }
 
-    private static Effect convertEffect(Entry entry) {
+    private static Effect convertEntry(Entry entry) {
         uk.gov.legislation.transform.simple.effects.Effect simple = entry.content.effect;
+        return convertEffect(simple);
+    }
+
+    public static List<Effect> convertEffects(List<uk.gov.legislation.transform.simple.effects.Effect> simple) {
+        return simple.stream().map(EffectsFeedConverter::convertEffect).toList();
+    }
+
+    public static Effect convertEffect(uk.gov.legislation.transform.simple.effects.Effect simple) {
 
         Effect effect = new Effect();
         effect.applied = simple.applied;

@@ -255,28 +255,33 @@
     } ],
     "unappliedEffects" : {
       "fragment" : [ {
+        "applied" : false,
         "required" : false,
         "type" : "words substituted",
-        "affected" : {
-          "plain" : "s. 91(1A)",
-          "rich" : [ {
-            "type" : "link",
-            "text" : "s. 91(1A)",
-            "id" : "section-91-1A",
-            "href" : "ukpga/2000/8/section/91/1A"
-          } ]
+        "target" : {
+          "id" : "ukpga/2000/8",
+          "longType" : "UnitedKingdomPublicGeneralAct",
+          "year" : 2000,
+          "number" : 8,
+          "title" : "Financial Services and Markets Act 2000",
+          "cite" : "2000 c. 8",
+          "provisions" : {
+            "plain" : "s. 91(1A)",
+            "rich" : [ {
+              "type" : "link",
+              "text" : "s. 91(1A)",
+              "id" : "section-91-1A",
+              "href" : "ukpga/2000/8/section/91/1A"
+            } ]
+          },
+          "extent" : [ "E", "W", "S", "NI" ]
         },
-        "affectedExtent" : [ "E", "W", "S", "NI" ],
-        "inForceDates" : [ {
-          "date" : "2020-12-31",
-          "applied" : false,
-          "description" : "wholly in force"
-        } ],
         "source" : {
           "id" : "uksi/2019/707",
           "longType" : "UnitedKingdomStatutoryInstrument",
           "year" : 2019,
           "number" : 707,
+          "title" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
           "cite" : "2019 No. 707",
           "provisions" : {
             "plain" : "reg. 30(2)(b)",
@@ -286,9 +291,10 @@
               "id" : "regulation-30-2-b",
               "href" : "uksi/2019/707/regulation/30/2/b"
             } ]
-          }
+          },
+          "extent" : [ ]
         },
-        "commencement" : {
+        "commencementAuthority" : {
           "plain" : "reg. 1(2)",
           "rich" : [ {
             "type" : "link",
@@ -297,30 +303,39 @@
             "href" : "uksi/2019/707/regulation/1/2"
           } ]
         },
-        "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17"
-      }, {
-        "required" : false,
-        "type" : "words substituted",
-        "affected" : {
-          "plain" : "s. 91(1A)(e)",
-          "rich" : [ {
-            "type" : "link",
-            "text" : "s. 91(1A)(e)",
-            "id" : "section-91-1A-e",
-            "href" : "ukpga/2000/8/section/91/1A/e"
-          } ]
-        },
-        "affectedExtent" : [ "E", "W", "S", "NI" ],
         "inForceDates" : [ {
           "date" : "2020-12-31",
           "applied" : false,
           "description" : "wholly in force"
-        } ],
+        } ]
+      }, {
+        "applied" : false,
+        "required" : false,
+        "type" : "words substituted",
+        "target" : {
+          "id" : "ukpga/2000/8",
+          "longType" : "UnitedKingdomPublicGeneralAct",
+          "year" : 2000,
+          "number" : 8,
+          "title" : "Financial Services and Markets Act 2000",
+          "cite" : "2000 c. 8",
+          "provisions" : {
+            "plain" : "s. 91(1A)(e)",
+            "rich" : [ {
+              "type" : "link",
+              "text" : "s. 91(1A)(e)",
+              "id" : "section-91-1A-e",
+              "href" : "ukpga/2000/8/section/91/1A/e"
+            } ]
+          },
+          "extent" : [ "E", "W", "S", "NI" ]
+        },
         "source" : {
           "id" : "uksi/2019/707",
           "longType" : "UnitedKingdomStatutoryInstrument",
           "year" : 2019,
           "number" : 707,
+          "title" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
           "cite" : "2019 No. 707",
           "provisions" : {
             "plain" : "reg. 30(2)(a)",
@@ -330,9 +345,10 @@
               "id" : "regulation-30-2-a",
               "href" : "uksi/2019/707/regulation/30/2/a"
             } ]
-          }
+          },
+          "extent" : [ ]
         },
-        "commencement" : {
+        "commencementAuthority" : {
           "plain" : "reg. 1(2)",
           "rich" : [ {
             "type" : "link",
@@ -341,30 +357,38 @@
             "href" : "uksi/2019/707/regulation/1/2"
           } ]
         },
-        "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17"
+        "inForceDates" : [ {
+          "date" : "2020-12-31",
+          "applied" : false,
+          "description" : "wholly in force"
+        } ]
       } ],
       "ancestor" : [ {
+        "applied" : false,
         "required" : true,
         "type" : "power to apply conferred (temp. until 15.5.2039)",
-        "affected" : {
-          "plain" : "Act",
-          "rich" : [ {
-            "type" : "text",
-            "text" : "Act"
-          } ]
+        "target" : {
+          "id" : "ukpga/2000/8",
+          "longType" : "UnitedKingdomPublicGeneralAct",
+          "year" : 2000,
+          "number" : 8,
+          "title" : "Financial Services and Markets Act 2000",
+          "cite" : "2000 c. 8",
+          "provisions" : {
+            "plain" : "Act",
+            "rich" : [ {
+              "type" : "text",
+              "text" : "Act"
+            } ]
+          },
+          "extent" : [ "E", "W", "S", "NI" ]
         },
-        "affectedExtent" : [ "E", "W", "S", "NI" ],
-        "inForceDates" : [ {
-          "date" : null,
-          "applied" : false,
-          "prospective" : true,
-          "description" : "with effect in accordance with"
-        } ],
         "source" : {
           "id" : "ukpga/2014/21",
           "longType" : "UnitedKingdomPublicGeneralAct",
           "year" : 2014,
           "number" : 21,
+          "title" : "Water Act 2014",
           "cite" : "2014 c. 21",
           "provisions" : {
             "plain" : "s. 79(4)",
@@ -374,9 +398,10 @@
               "id" : "section-79-4",
               "href" : "ukpga/2014/21/section/79/4"
             } ]
-          }
+          },
+          "extent" : [ ]
         },
-        "commencement" : {
+        "commencementAuthority" : {
           "plain" : "s. 94(3)",
           "rich" : [ {
             "type" : "link",
@@ -385,29 +410,38 @@
             "href" : "ukpga/2014/21/section/94/3"
           } ]
         },
-        "notes" : null
-      }, {
-        "required" : true,
-        "type" : "power to apply conferred (temp. until 15.5.2039)",
-        "affected" : {
-          "plain" : "Act",
-          "rich" : [ {
-            "type" : "text",
-            "text" : "Act"
-          } ]
-        },
-        "affectedExtent" : [ "E", "W", "S", "NI" ],
         "inForceDates" : [ {
           "date" : null,
           "applied" : false,
           "prospective" : true,
           "description" : "with effect in accordance with"
-        } ],
+        } ]
+      }, {
+        "applied" : false,
+        "required" : true,
+        "type" : "power to apply conferred (temp. until 15.5.2039)",
+        "target" : {
+          "id" : "ukpga/2000/8",
+          "longType" : "UnitedKingdomPublicGeneralAct",
+          "year" : 2000,
+          "number" : 8,
+          "title" : "Financial Services and Markets Act 2000",
+          "cite" : "2000 c. 8",
+          "provisions" : {
+            "plain" : "Act",
+            "rich" : [ {
+              "type" : "text",
+              "text" : "Act"
+            } ]
+          },
+          "extent" : [ "E", "W", "S", "NI" ]
+        },
         "source" : {
           "id" : "ukpga/2014/21",
           "longType" : "UnitedKingdomPublicGeneralAct",
           "year" : 2014,
           "number" : 21,
+          "title" : "Water Act 2014",
           "cite" : "2014 c. 21",
           "provisions" : {
             "plain" : "s. 81(10)",
@@ -417,9 +451,10 @@
               "id" : "section-81-10",
               "href" : "ukpga/2014/21/section/81/10"
             } ]
-          }
+          },
+          "extent" : [ ]
         },
-        "commencement" : {
+        "commencementAuthority" : {
           "plain" : "s. 94(3)",
           "rich" : [ {
             "type" : "link",
@@ -428,7 +463,12 @@
             "href" : "ukpga/2014/21/section/94/3"
           } ]
         },
-        "notes" : null
+        "inForceDates" : [ {
+          "date" : null,
+          "applied" : false,
+          "prospective" : true,
+          "description" : "with effect in accordance with"
+        } ]
       } ]
     }
   },
