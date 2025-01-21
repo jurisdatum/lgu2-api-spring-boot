@@ -58,7 +58,6 @@ class UnappliedEffectsTest {
         String actual = indent(simplifier.transform(clml, parameters));
         String expected = read(id, "-simplified.xml");
         Assertions.assertEquals(expected, actual);
-
     }
 
     private String indent(String xml) throws TransformerException {

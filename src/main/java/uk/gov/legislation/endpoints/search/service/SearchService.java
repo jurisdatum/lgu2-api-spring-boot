@@ -18,12 +18,11 @@ public class SearchService {
     }
 
     public String getAtomSearchByTitle(String title, int page) throws IOException, InterruptedException {
-        return db.byTitle(title, page);
+        return db.byTitleAtom(title, page);
     }
     public DocumentList getJsonSearchByTitle(String title, int page) throws IOException, InterruptedException {
         SearchResults results = db.byTitleJson(title, page);
         return Converter.convert(results);
     }
-
 
 }
