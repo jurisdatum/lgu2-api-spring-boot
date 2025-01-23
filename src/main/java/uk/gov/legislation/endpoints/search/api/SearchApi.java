@@ -33,10 +33,10 @@ public interface SearchApi {
 
     @GetMapping(value = "/search-by-filter", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
     ResponseEntity<String> searchByAtom(
-            @RequestParam @NotBlank String title,
-            @RequestParam @NotBlank String type,
-            @RequestParam @NotBlank String year,
-            @RequestParam @NotBlank String number,
+            @RequestParam  String title,
+            @RequestParam  String type,
+            @RequestParam  String year,
+            @RequestParam  String number,
             @RequestParam(required = false, defaultValue = "1") int page
 
     ) throws IOException, InterruptedException;
@@ -44,10 +44,10 @@ public interface SearchApi {
 
     @GetMapping(value = "/search-by-filter", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<DocumentList> searchByJson(
-            @RequestParam @NotBlank String title,
-            @RequestParam @NotBlank String type,
-            @RequestParam @NotBlank String year,
-            @RequestParam @NotBlank String number,
+            @RequestParam  String title,
+            @RequestParam  String type,
+            @RequestParam  String year,
+            @RequestParam  String number,
             @RequestParam(required = false, defaultValue = "1") int page
 
     ) throws IOException, InterruptedException;
