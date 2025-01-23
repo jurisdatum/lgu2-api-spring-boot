@@ -25,4 +25,22 @@ public class SearchService {
         return Converter.convert(results);
     }
 
+    public String getAtomSearchByTitleAndTypeAndYearAndNumber(
+            String title,
+            String type,
+            String year,
+            String number,
+            int page) throws IOException, InterruptedException {
+        return db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year,number, page);
+    }
+
+    public DocumentList getJsonSearchByTitleAndTypeAndYearAndNumber(
+            String title,
+            String type,
+            String year,
+            String number,
+            int page) throws IOException, InterruptedException {
+        SearchResults results = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year,number, page);
+        return Converter.convert(results);
+    }
 }

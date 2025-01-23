@@ -1,13 +1,14 @@
 package uk.gov.legislation.endpoints.search.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import uk.gov.legislation.endpoints.documents.DocumentList;
 import uk.gov.legislation.endpoints.search.api.SearchApi;
 import uk.gov.legislation.endpoints.search.service.SearchService;
 
 import java.io.IOException;
+
+import static uk.gov.legislation.endpoints.documents.service.DocumentsService.validateType;
 
 @RestController
 public class SearchApiController implements SearchApi {
@@ -19,13 +20,37 @@ public class SearchApiController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity <?> search(String title, int page, String acceptHeader) throws IOException, InterruptedException {
-        if(acceptHeader.equals(MediaType.APPLICATION_JSON_VALUE)) {
+    public ResponseEntity <DocumentList> searchJson(String title, int page) throws IOException, InterruptedException {
             return ResponseEntity.ok(searchService.getJsonSearchByTitle(title, page));
         }
-        else if(acceptHeader.equals(MediaType.APPLICATION_ATOM_XML_VALUE)) {
-            return ResponseEntity.ok(searchService.getAtomSearchByTitle(title, page));
-        }
-        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body("Unsupported format");
 
-    }}
+    @Override
+    public ResponseEntity <String> searchAtom(String title, int page) throws IOException, InterruptedException {
+        return ResponseEntity.ok(searchService.getAtomSearchByTitle(title, page));
+    }
+
+    @Override
+    public ResponseEntity <DocumentList> searchByJson(
+            String title,
+            String type,
+            String year,
+            String number,
+            int page) throws IOException, InterruptedException {
+        validateType(type);
+            return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
+        }
+
+    @Override
+    public ResponseEntity <String> searchByAtom(
+            String title,
+            String type,
+            String year,
+            String number,
+            int page) throws IOException, InterruptedException {
+        validateType(type);
+        return ResponseEntity.ok(searchService.getAtomSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
+
+    }
+}
+
+
