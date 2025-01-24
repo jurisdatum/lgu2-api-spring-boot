@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.exceptions.ErrorResponse;
 
 import java.io.IOException;
@@ -25,7 +25,7 @@ public interface DocumentsApi {
             @ApiResponse(responseCode = "200", description = "Successfully fetched document list",
                     content = {
                         @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = DocumentList.class)),
+                            schema = @Schema(implementation = PageOfDocuments.class)),
                         @Content(mediaType = MediaType.APPLICATION_ATOM_XML_VALUE)
                     }),
             @ApiResponse(responseCode = "400", description = "Invalid document type",
@@ -35,7 +35,7 @@ public interface DocumentsApi {
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
-    ResponseEntity<DocumentList> getDocs(
+    ResponseEntity<PageOfDocuments> getDocs(
             @PathVariable String type,
             @RequestParam(value = "page", defaultValue = "1") int page
     ) throws IOException, InterruptedException;
@@ -52,7 +52,7 @@ public interface DocumentsApi {
             @ApiResponse(responseCode = "200", description = "Successfully fetched document list",
                     content = {
                         @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = DocumentList.class)),
+                            schema = @Schema(implementation = PageOfDocuments.class)),
                         @Content(mediaType = MediaType.APPLICATION_ATOM_XML_VALUE)
                     }),
             @ApiResponse(responseCode = "400", description = "Invalid document type",
@@ -62,7 +62,7 @@ public interface DocumentsApi {
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
-    ResponseEntity<DocumentList> getDocsByTypeAndYear(
+    ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(
             @PathVariable String type,
             @PathVariable int year,
             @RequestParam(value = "page", defaultValue = "1") int page

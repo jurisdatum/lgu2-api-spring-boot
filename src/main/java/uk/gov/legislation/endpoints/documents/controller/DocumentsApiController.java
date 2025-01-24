@@ -2,9 +2,9 @@ package uk.gov.legislation.endpoints.documents.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.endpoints.documents.api.DocumentsApi;
 import uk.gov.legislation.endpoints.documents.service.DocumentsService;
-import uk.gov.legislation.endpoints.documents.DocumentList;
 
 import java.io.IOException;
 
@@ -18,7 +18,7 @@ public class DocumentsApiController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<DocumentList> getDocs(String type, int page)
+    public ResponseEntity<PageOfDocuments> getDocs(String type, int page)
             throws IOException, InterruptedException {
         return ResponseEntity.ok(documentsService.getDocumentsByType(type, page));
     }
@@ -30,7 +30,7 @@ public class DocumentsApiController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<DocumentList> getDocsByTypeAndYear(String type, int year, int page)
+    public ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(String type, int year, int page)
             throws IOException, InterruptedException {
         return ResponseEntity.ok(documentsService.getDocumentsByTypeAndYear(type, year, page));
     }
