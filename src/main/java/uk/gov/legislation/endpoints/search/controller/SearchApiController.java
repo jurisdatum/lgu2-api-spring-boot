@@ -20,37 +20,35 @@ public class SearchApiController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity <DocumentList> searchJson(String title, int page) throws IOException, InterruptedException {
-            return ResponseEntity.ok(searchService.getJsonSearchByTitle(title, page));
-        }
-
-    @Override
-    public ResponseEntity <String> searchAtom(String title, int page) throws IOException, InterruptedException {
-        return ResponseEntity.ok(searchService.getAtomSearchByTitle(title, page));
+    public ResponseEntity<DocumentList> searchByJson(
+            String title,
+            String type,
+            Integer year,
+            Integer number,
+            int page) throws IOException, InterruptedException {
+        if (title != null && title.isBlank())
+            title = null;
+        if (type != null && type.isBlank())
+            type = null;
+        if (type != null)
+            validateType(type);
+        return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
     }
 
     @Override
-    public ResponseEntity <DocumentList> searchByJson(
+    public ResponseEntity<String> searchByAtom(
             String title,
             String type,
-            String year,
-            String number,
+            Integer year,
+            Integer number,
             int page) throws IOException, InterruptedException {
-        validateType(type);
-            return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
-        }
-
-    @Override
-    public ResponseEntity <String> searchByAtom(
-            String title,
-            String type,
-            String year,
-            String number,
-            int page) throws IOException, InterruptedException {
-        validateType(type);
+        if (title != null && title.isBlank())
+            title = null;
+        if (type != null && type.isBlank())
+            type = null;
+        if (type != null)
+            validateType(type);
         return ResponseEntity.ok(searchService.getAtomSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
-
     }
+
 }
-
-
