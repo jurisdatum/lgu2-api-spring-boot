@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
  A class to convert SearchResults into DocumentList objects.
  */
 @Component
+@Deprecated
 public class Converter {
 
 

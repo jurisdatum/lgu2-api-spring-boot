@@ -1,24 +1,19 @@
 package uk.gov.legislation.api.test;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.SearchResults;
-import uk.gov.legislation.endpoints.documents.Converter;
-import uk.gov.legislation.endpoints.documents.DocumentList;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
-public class FeedConversionTest {
+class FeedConversionTest {
 
-    private final ObjectMapper mapper = new ObjectMapper()
-        .registerModules(new JavaTimeModule())
-        .enable(SerializationFeature.INDENT_OUTPUT)
-        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
+    private final ObjectMapper mapper = UnappliedEffectsTest.mapper;
 
     @Test
     void ukpga() throws IOException {
@@ -33,12 +28,8 @@ public class FeedConversionTest {
             expected = new String(input.readAllBytes(), StandardCharsets.UTF_8);
         }
         SearchResults results = SearchResults.parse(atom);
-        DocumentList list = Converter.convert(results);
-        ObjectMapper mapper = new ObjectMapper()
-            .registerModules(new JavaTimeModule())
-            .enable(SerializationFeature.INDENT_OUTPUT)
-            .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS);
-        String actual = mapper.writeValueAsString(list);
+        PageOfDocuments response = DocumentsFeedConverter.convert(results);
+        String actual = mapper.writeValueAsString(response);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -55,8 +46,8 @@ public class FeedConversionTest {
             expected = new String(input.readAllBytes(), StandardCharsets.UTF_8);
         }
         SearchResults results = SearchResults.parse(atom);
-        DocumentList list = Converter.convert(results);
-        String actual = mapper.writeValueAsString(list);
+        PageOfDocuments response = DocumentsFeedConverter.convert(results);
+        String actual = mapper.writeValueAsString(response);
         Assertions.assertEquals(expected, actual);
     }
 
