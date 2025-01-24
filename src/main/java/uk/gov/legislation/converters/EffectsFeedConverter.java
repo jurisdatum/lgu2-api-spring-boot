@@ -76,12 +76,12 @@ public class EffectsFeedConverter {
         effect.source.extent = ExtentConverter.convert(simple.affectingExtent);
 
         if (!simple.commencementAuthority.isEmpty()) {
-            effect.commencementAuthority = new Effect.Provisions();
-            effect.commencementAuthority.rich = simple.commencementAuthority.stream().map(RichTextConverter::convert).toList();
-            effect.commencementAuthority.plain = effect.commencementAuthority.rich.stream().map(node -> node.text).collect(Collectors.joining());
+            effect.commencement = new Effect.Provisions();
+            effect.commencement.rich = simple.commencementAuthority.stream().map(RichTextConverter::convert).toList();
+            effect.commencement.plain = effect.commencement.rich.stream().map(node -> node.text).collect(Collectors.joining());
         }
 
-        effect.inForceDates= simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();
+        effect.inForce = simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();
 
         return effect;
     }

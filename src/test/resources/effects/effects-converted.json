@@ -52,7 +52,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 170(4)(c)",
       "rich" : [ {
         "type" : "link",
@@ -61,7 +61,7 @@
         "href" : "ukpga/2022/30/section/170/4/c"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -106,7 +106,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 57(5)(a)",
       "rich" : [ {
         "type" : "link",
@@ -115,7 +115,7 @@
         "href" : "ukpga/2015/7/section/57/5/a"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -165,7 +165,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -174,7 +174,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -228,7 +228,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -237,7 +237,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -294,7 +294,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -303,7 +303,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -353,7 +353,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -362,7 +362,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -411,7 +411,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -420,7 +420,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -465,7 +465,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -474,7 +474,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -519,7 +519,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -528,7 +528,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -578,7 +578,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 170(4)(c)",
       "rich" : [ {
         "type" : "link",
@@ -587,7 +587,7 @@
         "href" : "ukpga/2022/30/section/170/4/c"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -632,7 +632,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -641,7 +641,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -694,7 +694,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -703,7 +703,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -764,7 +764,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 11(3)",
       "rich" : [ {
         "type" : "link",
@@ -773,7 +773,7 @@
         "href" : "ukpga/2004/22/section/11/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -823,7 +823,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -832,7 +832,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -886,7 +886,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -895,7 +895,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -950,7 +950,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 212(2)",
       "rich" : [ {
         "type" : "link",
@@ -959,7 +959,7 @@
         "href" : "asc/2023/3/section/212/2"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -1008,7 +1008,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 9(3)",
       "rich" : [ {
         "type" : "link",
@@ -1017,7 +1017,7 @@
         "href" : "mwa/2011/3/section/9/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -1062,7 +1062,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 9(3)",
       "rich" : [ {
         "type" : "link",
@@ -1071,7 +1071,7 @@
         "href" : "mwa/2011/3/section/9/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -1116,7 +1116,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 9(3)",
       "rich" : [ {
         "type" : "link",
@@ -1125,7 +1125,7 @@
         "href" : "mwa/2011/3/section/9/3"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
@@ -1170,7 +1170,7 @@
       },
       "extent" : [ ]
     },
-    "commencementAuthority" : {
+    "commencement" : {
       "plain" : "s. 170(4)(c)",
       "rich" : [ {
         "type" : "link",
@@ -1179,7 +1179,7 @@
         "href" : "ukpga/2022/30/section/170/4/c"
       } ]
     },
-    "inForceDates" : [ {
+    "inForce" : [ {
       "date" : null,
       "applied" : false,
       "prospective" : true
