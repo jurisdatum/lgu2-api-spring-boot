@@ -1,7 +1,7 @@
 package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.PageOfDocuments;
-import uk.gov.legislation.data.marklogic.SearchResults;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.util.Collections;
 import java.util.List;

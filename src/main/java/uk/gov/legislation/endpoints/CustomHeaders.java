@@ -1,7 +1,7 @@
 package uk.gov.legislation.endpoints;
 
 import org.springframework.http.HttpHeaders;
-import uk.gov.legislation.data.marklogic.Legislation;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
 
 public class CustomHeaders {
 

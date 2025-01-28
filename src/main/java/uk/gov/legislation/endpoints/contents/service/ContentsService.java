@@ -6,7 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.converters.TableOfContentsConverter;
-import uk.gov.legislation.data.marklogic.Legislation;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Clml2Akn;

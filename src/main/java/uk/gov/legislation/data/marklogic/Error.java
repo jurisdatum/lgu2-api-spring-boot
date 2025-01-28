@@ -12,7 +12,7 @@ import java.util.List;
 @JacksonXmlRootElement()
 public class Error {
 
-    static Error parse(String xml) throws JsonProcessingException {
+    public static Error parse(String xml) throws JsonProcessingException {
         XmlMapper mapper = new XmlMapper();
         return mapper.readValue(xml, Error.class);
     }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
-import uk.gov.legislation.data.marklogic.SearchResults;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

@@ -1,8 +1,10 @@
-package uk.gov.legislation.data.marklogic;
+package uk.gov.legislation.data.marklogic.legislation;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
+import uk.gov.legislation.data.marklogic.Error;
+import uk.gov.legislation.data.marklogic.MarkLogic;
 import uk.gov.legislation.exceptions.DocumentFetchException;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 import uk.gov.legislation.exceptions.NoDocumentException;
@@ -23,7 +25,7 @@ public class Legislation {
     }
 
     public Response getDocument(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        LegislationParameters params = new LegislationParameters(type, year, number)
+        Parameters params = new Parameters(type, year, number)
                 .version(version)
                 .lang(language);
         return getAndFollowRedirect(params);
@@ -35,7 +37,7 @@ public class Legislation {
     private static final Optional<String> CONTENTS_VIEW = Optional.of("contents");
 
     public Response getTableOfContents(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        LegislationParameters params = new LegislationParameters(type, year, number)
+        Parameters params = new Parameters(type, year, number)
                 .version(version)
                 .view(CONTENTS_VIEW)
                 .lang(language);
@@ -45,7 +47,7 @@ public class Legislation {
     /** Get document section
      */
     public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
-        LegislationParameters params = new LegislationParameters(type, year, number)
+        Parameters params = new Parameters(type, year, number)
                 .version(version)
                 .section(Optional.of(section))
                 .lang(language);
@@ -58,11 +60,11 @@ public class Legislation {
 
     public record Redirect(String type, String year, int number, Optional<String> version) {
 
-        static Redirect make(LegislationParameters params) {
+        static Redirect make(Parameters params) {
             return new Redirect(params.type(), params.year(), params.number(), params.version());
         }
 
-        static Optional<Redirect> make(boolean afterRedirect, LegislationParameters params) {
+        static Optional<Redirect> make(boolean afterRedirect, Parameters params) {
             if (afterRedirect)
                 return Optional.of(make(params));
             return Optional.empty();
@@ -74,11 +76,11 @@ public class Legislation {
 
     private final Logger logger = LoggerFactory.getLogger(Legislation.class);
 
-    private Response getAndFollowRedirect(LegislationParameters params) {
+    private Response getAndFollowRedirect(Parameters params) {
         return getAndFollowRedirect(params, false);
     }
 
-    private Response getAndFollowRedirect(LegislationParameters params, boolean afterRedirect) {
+    private Response getAndFollowRedirect(Parameters params, boolean afterRedirect) {
         String xml;
         try {
             xml = db.get(ENDPOINT, params.buildQuery());
@@ -102,7 +104,7 @@ public class Legislation {
         return handleError(error, params);
     }
 
-    private Response handleError(Error error, LegislationParameters oldParams) {
+    private Response handleError(Error error, Parameters oldParams) {
         if (error.statusCode >= 400)
             throw new NoDocumentException(error);  // don't use error.toString()
         if (!error.header.name.equals("Location"))
@@ -112,7 +114,7 @@ public class Legislation {
         Links.Components comp = Links.parse(location);
         if (comp == null)
             throw new IllegalStateException("Invalid redirect location: " + location);
-        LegislationParameters newParams = new LegislationParameters(comp.type(), comp.year(), comp.number())
+        Parameters newParams = new Parameters(comp.type(), comp.year(), comp.number())
             .version(comp.version())
             .view(oldParams.view())
             .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))

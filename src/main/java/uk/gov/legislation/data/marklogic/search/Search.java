@@ -1,8 +1,7 @@
-package uk.gov.legislation.data.marklogic.queries;
+package uk.gov.legislation.data.marklogic.search;
 
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.data.marklogic.MarkLogic;
-import uk.gov.legislation.data.marklogic.SearchResults;
 import uk.gov.legislation.util.Type;
 import java.io.IOException;
 import java.net.URLEncoder;

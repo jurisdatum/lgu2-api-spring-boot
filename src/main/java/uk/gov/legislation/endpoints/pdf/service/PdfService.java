@@ -4,7 +4,7 @@ import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.Legislation;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.io.IOException;

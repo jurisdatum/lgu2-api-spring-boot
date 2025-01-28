@@ -3,8 +3,8 @@ package uk.gov.legislation.endpoints.search.service;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
-import uk.gov.legislation.data.marklogic.SearchResults;
-import uk.gov.legislation.data.marklogic.queries.Search;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
+import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
 

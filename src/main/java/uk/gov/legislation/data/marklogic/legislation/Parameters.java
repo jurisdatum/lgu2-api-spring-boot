@@ -1,10 +1,10 @@
-package uk.gov.legislation.data.marklogic;
+package uk.gov.legislation.data.marklogic.legislation;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
-public class LegislationParameters {
+public class Parameters {
 
     private final String type;
     private final String year;
@@ -14,7 +14,7 @@ public class LegislationParameters {
     private Optional<String> section;
     private Optional<String> lang;
 
-    public LegislationParameters(String type, String year, int number) {
+    public Parameters(String type, String year, int number) {
         if (type == null)
             throw new IllegalArgumentException();
         if (year == null)
@@ -35,25 +35,25 @@ public class LegislationParameters {
     public int number() { return number; }
 
     public Optional<String> version() { return version; }
-    public LegislationParameters version(Optional<String> version) {
+    public Parameters version(Optional<String> version) {
         this.version = version;
         return this;
     }
 
     public Optional<String> view() { return view; }
-    public LegislationParameters view(Optional<String> view) {
+    public Parameters view(Optional<String> view) {
         this.view = view;
         return this;
     }
 
     public Optional<String> section() { return section; }
-    public LegislationParameters section(Optional<String> section) {
+    public Parameters section(Optional<String> section) {
         this.section = section;
         return this;
     }
 
     public Optional<String> lang() { return lang; }
-    public LegislationParameters lang(Optional<String> lang) {
+    public Parameters lang(Optional<String> lang) {
         this.lang = lang;
         return this;
     }
