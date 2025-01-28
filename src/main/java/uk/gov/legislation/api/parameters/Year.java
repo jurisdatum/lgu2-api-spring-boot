@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-@Parameter(description = "A four digit calendar year", example = "2024")
+@Parameter(description = "A four digit calendar year", example = "2025")
 public @interface Year { }

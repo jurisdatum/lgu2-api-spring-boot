@@ -25,11 +25,11 @@ public class EffectsController implements EffectsApi {
 
     public String atom(
         String targetType,
-        String targetYear,
+        Integer targetYear,
         Integer targetNumber,
         String targetTitle,
         String sourceType,
-        String sourceYear,
+        Integer sourceYear,
         Integer sourceNumber,
         String sourceTitle,
         int page
@@ -50,11 +50,11 @@ public class EffectsController implements EffectsApi {
 
     public PageOfEffects json(
         String targetType,
-        String targetYear,
+        Integer targetYear,
         Integer targetNumber,
         String targetTitle,
         String sourceType,
-        String sourceYear,
+        Integer sourceYear,
         Integer sourceNumber,
         String sourceTitle,
         int page

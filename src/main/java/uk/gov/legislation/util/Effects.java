@@ -1,7 +1,7 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.transform.simple.UnappliedEffect;
-import uk.gov.legislation.transform.simple.UnappliedEffect.RichTextNode;
+import uk.gov.legislation.transform.simple.RichTextNode;
+import uk.gov.legislation.transform.simple.effects.Effect;
 
 import java.util.List;
 import java.util.Set;
@@ -17,7 +17,7 @@ public class Effects {
 
     static final Predicate<RichTextNode> isSection = node -> RichTextNode.SECTION_TYPE.equals(node.type);
 
-    static final Predicate<UnappliedEffect> isPlainText = effect -> effect.affectedProvisions.stream()
+    static final Predicate<Effect> isPlainText = effect -> effect.affectedProvisions.stream()
         .noneMatch(isSection);
 
     /**
@@ -27,10 +27,10 @@ public class Effects {
      * @param includeWhole retain those targeting no particular section
      * @return
      */
-    public static List<UnappliedEffect> removeThoseWithNoRelevantSection(List<UnappliedEffect> effects, Set<String> ids, boolean includeWhole) {
+    public static List<Effect> removeThoseWithNoRelevantSection(List<Effect> effects, Set<String> ids, boolean includeWhole) {
         if (ids.isEmpty())
             return effects;
-        Predicate<UnappliedEffect> someSectionsAreRelevant = effect -> effect.affectedProvisions.stream()
+        Predicate<Effect> someSectionsAreRelevant = effect -> effect.affectedProvisions.stream()
             .filter(isSection).anyMatch(n -> ids.contains(n.ref));
         if (includeWhole)
             return effects.stream().filter(isPlainText.or(someSectionsAreRelevant)).toList();

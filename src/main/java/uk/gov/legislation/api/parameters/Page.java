@@ -9,5 +9,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.PARAMETER)
-@Parameter(description = "Title words for search", example = "Finance Act")
-public @interface Title { }
+@Parameter(description = "The page number for paged results", example = "1")
+public @interface Page { }

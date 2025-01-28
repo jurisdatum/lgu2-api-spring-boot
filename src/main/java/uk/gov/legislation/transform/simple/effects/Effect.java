@@ -2,7 +2,7 @@ package uk.gov.legislation.transform.simple.effects;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import uk.gov.legislation.transform.simple.UnappliedEffect;
+import uk.gov.legislation.transform.simple.RichTextNode;
 
 import java.util.Collections;
 import java.util.List;
@@ -42,7 +42,7 @@ public class Effect {
     public String affectedProvisionsText;
 
     @JacksonXmlProperty(localName = "AffectedProvisions")
-    public List<UnappliedEffect.RichTextNode> affectedProvisions = Collections.emptyList();
+    public List<RichTextNode> affectedProvisions = Collections.emptyList();
 
     @JacksonXmlProperty(localName = "AffectedExtent", isAttribute = true)
     public String affectedExtent;
@@ -71,7 +71,7 @@ public class Effect {
     public String affectingProvisionsText;
 
     @JacksonXmlProperty(localName = "AffectingProvisions")
-    public List<UnappliedEffect.RichTextNode> affectingProvisions = Collections.emptyList();
+    public List<RichTextNode> affectingProvisions = Collections.emptyList();
 
     @JacksonXmlProperty(localName = "AffectingExtent", isAttribute = true)
     public String affectingExtent;
@@ -86,9 +86,9 @@ public class Effect {
 
     @JacksonXmlElementWrapper(localName = "InForceDates")
     @JacksonXmlProperty(localName = "InForce")
-    public List<UnappliedEffect.InForce> inForceDates = Collections.emptyList();
+    public List<InForce> inForceDates = Collections.emptyList();
 
     @JacksonXmlProperty(localName = "CommencementAuthority")
-    public List<UnappliedEffect.RichTextNode> commencementAuthority = Collections.emptyList();
+    public List<RichTextNode> commencementAuthority = Collections.emptyList();
 
 }

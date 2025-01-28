@@ -1,10 +1,29 @@
 [ {
+  "id" : "key-05ccd5d9047901e84edea944467e0ab2",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingTitle" : "Water Act 2014",
   "affectingProvisionsText" : "s. 79(4)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -16,17 +35,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : "E+W+S+N.I.",
-  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -43,12 +51,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-b7ec36e10fbbebda09d50f93f0150ab8",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply conferred (temp. until 15.5.2039)",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "Act",
+  "affectedProvisions" : [ {
+    "type" : "text",
+    "text" : "Act",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2014,
   "affectingNumber" : 21,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingTitle" : "Water Act 2014",
   "affectingProvisionsText" : "s. 81(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -60,17 +87,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
-  "affectedProvisionsText" : "Act",
-  "affectedProvisions" : [ {
-    "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : "E+W+S+N.I.",
-  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -87,23 +103,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-9f40eff4aabeafb17afaec32bf3adb5c",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2016,
-  "affectingNumber" : 14,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2016/14",
-  "affectingProvisionsText" : "s. 30(3)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 30(3)",
-    "ref" : "section-30-3",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2016/14/section/30/3",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Pt. 20C",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -115,6 +123,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2016,
+  "affectingNumber" : 14,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2016/14",
+  "affectingTitle" : "Bank of England and Financial Services Act 2016",
+  "affectingProvisionsText" : "s. 30(3)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 30(3)",
+    "ref" : "section-30-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2016/14/section/30/3",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -131,23 +155,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-0140b0bab4e2adf4d449c7fca67df6a1",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "s. 22(2)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 22(2)",
-    "ref" : "section-22-2",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/2",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 31(1)(aa)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -159,6 +175,22 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "s. 22(2)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 22(2)",
+    "ref" : "section-22-2",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/2",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -175,12 +207,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-2c60a029232f828b8c5dbdfba9c798fd",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 32A",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 32A",
+    "ref" : "section-32A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "s. 22(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -192,17 +243,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 32A",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 32A",
-    "ref" : "section-32A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -219,12 +259,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-fcc0de8be4391c23dec47137ddcec2a4",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply (with modifications) conferred",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 32A",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 32A",
+    "ref" : "section-32A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "s. 23(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -236,17 +295,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 32A",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 32A",
-    "ref" : "section-32A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -263,23 +311,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-e67f7d8b98a3b70a471b8a49d867eb84",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "s. 22(4)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 22(4)",
-    "ref" : "section-22-4",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 36A and cross-heading",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -298,6 +338,22 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "s. 22(4)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 22(4)",
+    "ref" : "section-22-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -314,30 +370,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-3a025cb5620dc74f1b2f670bf6408371",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "Sch. 8 para. 4",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 8 ",
-    "ref" : "schedule-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 4",
-    "ref" : "schedule-8-paragraph-4",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/4",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 71J and cross-heading",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -356,6 +397,29 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "Sch. 8 para. 4",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 8 ",
+    "ref" : "schedule-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 4",
+    "ref" : "schedule-8-paragraph-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/4",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -372,23 +436,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-875cc899be978a92b596eb35963a5fdf",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 8(9)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 8(9)",
-    "ref" : "regulation-8-9",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/8/9",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 86(9A)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -400,6 +456,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 8(9)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 8(9)",
+    "ref" : "regulation-8-9",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/8/9",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -416,23 +488,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-62f9ebcef830ae282962af1b813987d9",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 10(5)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 10(5)",
-    "ref" : "regulation-10-5",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/10/5",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 87A(11)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -444,6 +508,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 10(5)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 10(5)",
+    "ref" : "regulation-10-5",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/10/5",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -460,23 +540,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-e94fd82d7ebd04b9c7170c141f20c314",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 30(2)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 30(2)(b)",
-    "ref" : "regulation-30-2-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 91(1A)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -488,6 +560,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 30(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(b)",
+    "ref" : "regulation-30-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -504,23 +592,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-88a5235d47a1f9dff629be79e310f19d",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 30(2)(a)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 30(2)(a)",
-    "ref" : "regulation-30-2-a",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 91(1A)(e)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -532,6 +612,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 30(2)(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(a)",
+    "ref" : "regulation-30-2-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -548,23 +644,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-f22c04ada6692c04c5853c1b3ce00f60",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "word omitted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 310,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "affectingProvisionsText" : "reg. 5(11)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 5(11)(b)",
-    "ref" : "regulation-5-11-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/11/b",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 124(10)(c)(i)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -576,6 +664,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "affectingTitle" : "The Market Abuse (Amendment) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 5(11)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(11)(b)",
+    "ref" : "regulation-5-11-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/11/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -592,23 +696,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-1b6544d7af86f0dee5166b56c2d79ff3",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "word inserted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 310,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "affectingProvisionsText" : "reg. 5(12)(a)(i)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 5(12)(a)(i)",
-    "ref" : "regulation-5-12-a-i",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/i",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 129(7)(a)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -620,6 +716,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "affectingTitle" : "The Market Abuse (Amendment) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 5(12)(a)(i)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(12)(a)(i)",
+    "ref" : "regulation-5-12-a-i",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -636,23 +748,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-9f4d2636661658e584be975ef736bdfb",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "omitted and word",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 310,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
-  "affectingProvisionsText" : "reg. 5(12)(a)(ii)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 5(12)(a)(ii)",
-    "ref" : "regulation-5-12-a-ii",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/ii",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 129(7)(c)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -664,6 +768,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 310,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/310",
+  "affectingTitle" : "The Market Abuse (Amendment) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 5(12)(a)(ii)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 5(12)(a)(ii)",
+    "ref" : "regulation-5-12-a-ii",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/ii",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -680,12 +800,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-3f1bd96525c93768fff2391b9658bd21",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 214(5A)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 214(5A)",
+    "ref" : "section-214-5A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "Sch. 8 para. 8",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -704,17 +843,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 214(5A)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 214(5A)",
-    "ref" : "section-214-5A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -731,12 +859,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-fd568cacd551775f059585d7a7104604",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 234I(9)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 234I(9)",
+    "ref" : "section-234I-9",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2024,
   "affectingNumber" : 13,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
+  "affectingTitle" : "Digital Markets, Competition and Consumers Act 2024",
   "affectingProvisionsText" : "Sch. 29 para. 3(2)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -755,17 +902,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
-  "affectedProvisionsText" : "s. 234I(9)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 234I(9)",
-    "ref" : "section-234I-9",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -787,12 +923,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-c94c102b94bff398c285f0c68bceacf2",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 234J(6)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 234J(6)",
+    "ref" : "section-234J-6",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2024,
   "affectingNumber" : 13,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2024/13",
+  "affectingTitle" : "Digital Markets, Competition and Consumers Act 2024",
   "affectingProvisionsText" : "Sch. 29 para. 3(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -811,17 +966,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
-  "affectedProvisionsText" : "s. 234J(6)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 234J(6)",
-    "ref" : "section-234J-6",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -843,12 +987,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-6bd371d6bc6ef10b3da4519ea6aecf1b",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 367A",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 367A",
+    "ref" : "section-367A",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "Sch. 8 para. 10",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -867,17 +1030,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 367A",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 367A",
-    "ref" : "section-367A",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -894,30 +1046,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-a4e0c0b46392b2949d5da900239e2f19",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "word inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "Sch. 8 para. 12(2)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 8 ",
-    "ref" : "schedule-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 12(2)(b)",
-    "ref" : "schedule-8-paragraph-12-2-b",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 395(13)(bc)-(be)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -943,6 +1080,29 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "Sch. 8 para. 12(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 8 ",
+    "ref" : "schedule-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 12(2)(b)",
+    "ref" : "schedule-8-paragraph-12-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -959,12 +1119,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-d25543ee0cbc0ff32265d4bd6421bf49",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 395(13)(h)(i)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 395(13)(h)(i)",
+    "ref" : "section-395-13-h-i",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "Sch. 8 para. 12(2)(c)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -983,17 +1162,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 395(13)(h)(i)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 395(13)(h)(i)",
-    "ref" : "section-395-13-h-i",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -1010,12 +1178,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-7ac28ab801b516daf7fa1fb9eca8a371",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 395(14)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 395(14)",
+    "ref" : "section-395-14",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "Sch. 8 para. 12(3)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1034,17 +1221,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 395(14)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 395(14)",
-    "ref" : "section-395-14",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -1061,12 +1237,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-ed88e1aa30d0adc7d1880e40d06035a9",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "applied",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 398(8)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 398(8)",
+    "ref" : "section-398-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
   "affectingClass" : "UnitedKingdomStatutoryInstrument",
   "affectingYear" : 2024,
   "affectingNumber" : 102,
   "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/102",
+  "affectingTitle" : "The Securitisation Regulations 2024",
   "affectingProvisionsText" : "reg. 34(7)(8)(f)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1085,17 +1280,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "s. 398(8)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 398(8)",
-    "ref" : "section-398-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : "2024-01-30",
@@ -1124,12 +1308,31 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-c00514942197fe9622352b7129a7cb29",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "s. 427A(3)",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 427A(3)",
+    "ref" : "section-427A-3",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : "E+W+S+N.I.",
+  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2002,
   "affectingNumber" : 40,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2002/40",
+  "affectingTitle" : "Enterprise Act 2002",
   "affectingProvisionsText" : "Sch. 17 para. 59",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1148,17 +1351,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
-  "affectedProvisionsText" : "s. 427A(3)",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 427A(3)",
-    "ref" : "section-427A-3",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : "E+W+S+N.I.",
-  "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A.",
   "inForceDates" : [ {
     "date" : null,
@@ -1175,30 +1367,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-351bc17b224a6085482c0de133c1bb4a",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "Sch. 8 para. 18",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 8 ",
-    "ref" : "schedule-8",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 18",
-    "ref" : "schedule-8-paragraph-18",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 1ZA para. 32(c) and word",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1224,6 +1401,29 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "Sch. 8 para. 18",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 8 ",
+    "ref" : "schedule-8",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 18",
+    "ref" : "schedule-8-paragraph-18",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -1240,30 +1440,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-abb334800fe3123a9c453d646a5962c5",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2023,
-  "affectingNumber" : 29,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2023/29",
-  "affectingProvisionsText" : "Sch. 10 para. 19(a)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 10 ",
-    "ref" : "schedule-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "para. 19(a)",
-    "ref" : "schedule-10-paragraph-19-a",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 2A para. 19(2)(b)(iia)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1289,6 +1474,29 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2023,
+  "affectingNumber" : 29,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2023/29",
+  "affectingTitle" : "Financial Services and Markets Act 2023",
+  "affectingProvisionsText" : "Sch. 10 para. 19(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 10 ",
+    "ref" : "schedule-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10",
+    "error" : null,
+    "missing" : false
+  }, {
+    "type" : "section",
+    "text" : "para. 19(a)",
+    "ref" : "schedule-10-paragraph-19-a",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : "2023-06-29",
@@ -1305,23 +1513,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-6ca6fc8c64f818e454714c91e07697f2",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply (with modifications) conferred",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "s. 23(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 23(10)",
-    "ref" : "section-23-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 2A 2B",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1340,6 +1540,22 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "s. 23(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 23(10)",
+    "ref" : "section-23-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -1356,23 +1572,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-61b01e0bec5b297c5597aa9704f371c6",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply (with modifications) conferred",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "s. 23(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 23(10)",
-    "ref" : "section-23-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 2A",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1384,72 +1592,11 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
-  "notes" : null,
-  "inForceDates" : [ {
-    "date" : null,
-    "applied" : false,
-    "prospective" : true,
-    "qualification" : ""
-  } ],
-  "commencementAuthority" : [ {
-    "type" : "section",
-    "text" : "s. 49(5)",
-    "ref" : "section-49-5",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
-    "error" : null,
-    "missing" : false
-  } ]
-}, {
-  "requiresApplied" : true,
-  "type" : "inserted",
   "affectingClass" : "UnitedKingdomPublicGeneralAct",
   "affectingYear" : 2021,
   "affectingNumber" : 22,
   "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
-  "affectingProvisionsText" : "Sch. 7",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 7",
-    "ref" : "schedule-7",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "Sch. 2B",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 2B",
-    "ref" : "schedule-2B",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
-  "notes" : null,
-  "inForceDates" : [ {
-    "date" : null,
-    "applied" : false,
-    "prospective" : true,
-    "qualification" : ""
-  } ],
-  "commencementAuthority" : [ {
-    "type" : "section",
-    "text" : "s. 49(5)",
-    "ref" : "section-49-5",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
-    "error" : null,
-    "missing" : false
-  } ]
-}, {
-  "requiresApplied" : true,
-  "type" : "power to apply (with modifications) conferred",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2021,
-  "affectingNumber" : 22,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
   "affectingProvisionsText" : "s. 23(10)",
   "affectingProvisions" : [ {
     "type" : "section",
@@ -1461,17 +1608,6 @@
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
-  "affectedProvisionsText" : "Sch. 2B",
-  "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "Sch. 2B",
-    "ref" : "schedule-2B",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
-    "error" : "Section missing in legislation",
-    "missing" : true
-  } ],
-  "affectedExtent" : null,
-  "affectedEffectsExtent" : null,
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -1488,23 +1624,119 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-146b1815125d882430250621162b81da",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2024,
-  "affectingNumber" : 1083,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
-  "affectingProvisionsText" : "reg. 10(b)",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "Sch. 2B",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2B",
+    "ref" : "schedule-2B",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "Sch. 7",
   "affectingProvisions" : [ {
     "type" : "section",
-    "text" : "reg. 10(b)",
-    "ref" : "regulation-10-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b",
+    "text" : "Sch. 7",
+    "ref" : "schedule-7",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7",
     "error" : null,
     "missing" : false
   } ],
   "affectingExtent" : null,
   "affectingEffectsExtent" : "E+W+S+N.I.",
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : null,
+    "applied" : false,
+    "prospective" : true,
+    "qualification" : ""
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 49(5)",
+    "ref" : "section-49-5",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "id" : "key-aac44921d3994325926d8f41aeb37761",
+  "applied" : false,
+  "requiresApplied" : true,
+  "type" : "power to apply (with modifications) conferred",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
+  "affectedProvisionsText" : "Sch. 2B",
+  "affectedProvisions" : [ {
+    "type" : "section",
+    "text" : "Sch. 2B",
+    "ref" : "schedule-2B",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B",
+    "error" : "Section missing in legislation",
+    "missing" : true
+  } ],
+  "affectedExtent" : null,
+  "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2021,
+  "affectingNumber" : 22,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2021/22",
+  "affectingTitle" : "Financial Services Act 2021",
+  "affectingProvisionsText" : "s. 23(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 23(10)",
+    "ref" : "section-23-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "notes" : null,
+  "inForceDates" : [ {
+    "date" : null,
+    "applied" : false,
+    "prospective" : true,
+    "qualification" : ""
+  } ],
+  "commencementAuthority" : [ {
+    "type" : "section",
+    "text" : "s. 49(5)",
+    "ref" : "section-49-5",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5",
+    "error" : null,
+    "missing" : false
+  } ]
+}, {
+  "id" : "key-c79d974c7a04c516fb02ba4b35ecb1f1",
+  "applied" : false,
+  "requiresApplied" : true,
+  "type" : "inserted",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 6 para. 4A(8)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1523,6 +1755,22 @@
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2024,
+  "affectingNumber" : 1083,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2024/1083",
+  "affectingTitle" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+  "affectingProvisionsText" : "reg. 10(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 10(b)",
+    "ref" : "regulation-10-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : null,
   "inForceDates" : [ {
     "date" : "2024-12-31",
@@ -1539,23 +1787,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-a5848184868fb09bd796f96db116dad6",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "inserted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 38(5)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 38(5)(b)",
-    "ref" : "regulation-38-5-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 11A para. 5(3)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1574,6 +1814,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 38(5)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 38(5)(b)",
+    "ref" : "regulation-38-5-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -1590,23 +1846,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-939a37929efc4d8ee2527c61acc808b2",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 662,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/662",
-  "affectingProvisionsText" : "reg. 13(1)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 13(1)",
-    "ref" : "regulation-13-1",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Sch. 17A para. 12",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -1625,6 +1873,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 662,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/662",
+  "affectingTitle" : "The Investment Exchanges, Clearing Houses and Central Securities Depositories (Amendment) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 13(1)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 13(1)",
+    "ref" : "regulation-13-1",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)",
   "inForceDates" : [ {
     "date" : "2020-12-31",

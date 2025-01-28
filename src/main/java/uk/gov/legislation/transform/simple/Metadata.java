@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
 
@@ -145,7 +146,7 @@ public class Metadata {
     @JacksonXmlProperty(localName = "ancestors")
     private List<Ancestor> ancestors = Collections.emptyList();
 
-    public List<uk.gov.legislation.endpoints.document.responses.Level> ancestors() {
+    public List<uk.gov.legislation.api.responses.Level> ancestors() {
         return ancestors.stream().map(Level::convert).toList();
     }
 
@@ -154,7 +155,7 @@ public class Metadata {
     @JacksonXmlProperty(localName = "descendants")
     private List<Descendant> descendants = Collections.emptyList();
 
-    public List<uk.gov.legislation.endpoints.document.responses.Level> descendants() {
+    public List<uk.gov.legislation.api.responses.Level> descendants() {
         return descendants.stream().map(Level::convert).toList();
     }
 
@@ -162,6 +163,6 @@ public class Metadata {
 
     @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public List<UnappliedEffect> rawEffects = Collections.emptyList();
+    public List<Effect> rawEffects = Collections.emptyList();
 
 }

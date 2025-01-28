@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.document.service;
+package uk.gov.legislation.converters;
 
 import uk.gov.legislation.util.Extent;
 

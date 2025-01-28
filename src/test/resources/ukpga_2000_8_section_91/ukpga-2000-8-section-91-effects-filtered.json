@@ -1,21 +1,13 @@
 [ {
+  "id" : "key-e94fd82d7ebd04b9c7170c141f20c314",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 30(2)(b)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 30(2)(b)",
-    "ref" : "regulation-30-2-b",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 91(1A)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -27,6 +19,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 30(2)(b)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(b)",
+    "ref" : "regulation-30-2-b",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -43,23 +51,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-88a5235d47a1f9dff629be79e310f19d",
+  "applied" : false,
   "requiresApplied" : false,
   "type" : "words substituted",
-  "affectingClass" : "UnitedKingdomStatutoryInstrument",
-  "affectingYear" : 2019,
-  "affectingNumber" : 707,
-  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
-  "affectingProvisionsText" : "reg. 30(2)(a)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "reg. 30(2)(a)",
-    "ref" : "regulation-30-2-a",
-    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "E+W+S+N.I.",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 91(1A)(e)",
   "affectedProvisions" : [ {
     "type" : "section",
@@ -71,6 +71,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomStatutoryInstrument",
+  "affectingYear" : 2019,
+  "affectingNumber" : 707,
+  "affectingURI" : "http://www.legislation.gov.uk/id/uksi/2019/707",
+  "affectingTitle" : "The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019",
+  "affectingProvisionsText" : "reg. 30(2)(a)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "reg. 30(2)(a)",
+    "ref" : "regulation-30-2-a",
+    "uri" : "http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "E+W+S+N.I.",
   "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
   "inForceDates" : [ {
     "date" : "2020-12-31",
@@ -87,23 +103,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-05ccd5d9047901e84edea944467e0ab2",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply conferred (temp. until 15.5.2039)",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2014,
-  "affectingNumber" : 21,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "affectingProvisionsText" : "s. 79(4)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 79(4)",
-    "ref" : "section-79-4",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
@@ -115,6 +123,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingTitle" : "Water Act 2014",
+  "affectingProvisionsText" : "s. 79(4)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 79(4)",
+    "ref" : "section-79-4",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,
@@ -131,23 +155,15 @@
     "missing" : false
   } ]
 }, {
+  "id" : "key-b7ec36e10fbbebda09d50f93f0150ab8",
+  "applied" : false,
   "requiresApplied" : true,
   "type" : "power to apply conferred (temp. until 15.5.2039)",
-  "affectingClass" : "UnitedKingdomPublicGeneralAct",
-  "affectingYear" : 2014,
-  "affectingNumber" : 21,
-  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
-  "affectingProvisionsText" : "s. 81(10)",
-  "affectingProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 81(10)",
-    "ref" : "section-81-10",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10",
-    "error" : null,
-    "missing" : false
-  } ],
-  "affectingExtent" : null,
-  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectedClass" : "UnitedKingdomPublicGeneralAct",
+  "affectedYear" : 2000,
+  "affectedNumber" : 8,
+  "affectedURI" : "http://www.legislation.gov.uk/id/ukpga/2000/8",
+  "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
@@ -159,6 +175,22 @@
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
+  "affectingClass" : "UnitedKingdomPublicGeneralAct",
+  "affectingYear" : 2014,
+  "affectingNumber" : 21,
+  "affectingURI" : "http://www.legislation.gov.uk/id/ukpga/2014/21",
+  "affectingTitle" : "Water Act 2014",
+  "affectingProvisionsText" : "s. 81(10)",
+  "affectingProvisions" : [ {
+    "type" : "section",
+    "text" : "s. 81(10)",
+    "ref" : "section-81-10",
+    "uri" : "http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10",
+    "error" : null,
+    "missing" : false
+  } ],
+  "affectingExtent" : null,
+  "affectingEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
   "notes" : null,
   "inForceDates" : [ {
     "date" : null,

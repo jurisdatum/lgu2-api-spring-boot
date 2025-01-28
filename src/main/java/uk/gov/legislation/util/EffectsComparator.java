@@ -1,6 +1,7 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.transform.simple.UnappliedEffect;
+import uk.gov.legislation.transform.simple.RichTextNode;
+import uk.gov.legislation.transform.simple.effects.Effect;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -11,13 +12,13 @@ import java.util.regex.Pattern;
 
 public class EffectsComparator {
 
-    private static final Comparator<UnappliedEffect> BY_AFFECTED_PROVISION = (UnappliedEffect e1, UnappliedEffect e2) -> {
+    private static final Comparator<Effect> BY_AFFECTED_PROVISION = (Effect e1, Effect e2) -> {
         Optional<String> id1 = e1.affectedProvisions.stream()
-            .filter(node -> node.type.equals(UnappliedEffect.RichTextNode.SECTION_TYPE))
+            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
             .map(node -> node.ref)
             .findFirst();
         Optional<String> id2 = e2.affectedProvisions.stream()
-            .filter(node -> node.type.equals(UnappliedEffect.RichTextNode.SECTION_TYPE))
+            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
             .map(node -> node.ref)
             .findFirst();
         if (id1.isEmpty() && id2.isEmpty())
@@ -41,9 +42,9 @@ public class EffectsComparator {
             .compare(tokens1, tokens2);
     }
 
-    public static final Comparator<UnappliedEffect> INSTANCE = BY_AFFECTED_PROVISION
-        .thenComparing((UnappliedEffect e) -> e.type)
-        .thenComparing((UnappliedEffect e) -> e.affectingURI);
+    public static final Comparator<Effect> INSTANCE = BY_AFFECTED_PROVISION
+        .thenComparing((Effect e) -> e.type)
+        .thenComparing((Effect e) -> e.affectingURI);
 
 
     /* from unapplied_effects_xhtml_core.xsl */

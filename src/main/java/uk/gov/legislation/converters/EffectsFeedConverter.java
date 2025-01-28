@@ -2,8 +2,8 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.PageOfEffects;
-import uk.gov.legislation.transform.simple.UnappliedEffect;
 import uk.gov.legislation.transform.simple.effects.Entry;
+import uk.gov.legislation.transform.simple.effects.InForce;
 import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
@@ -16,7 +16,7 @@ public class EffectsFeedConverter {
     public static PageOfEffects convert(Page atom) {
         PageOfEffects page = new PageOfEffects();
         page.meta = convertMetadata(atom);
-        page.effects = convertEffects(atom.entries);
+        page.effects = convertEntries(atom.entries);
         return page;
     }
 
@@ -25,16 +25,26 @@ public class EffectsFeedConverter {
         meta.page = atom.page;
         meta.pageSize = atom.itemsPerPage;
         meta.totalPages = atom.totalPages;
+        meta.startIndex = atom.startIndex;
+        meta.totalResults = atom.totalResults;
         meta.updated = atom.updated;
         return meta;
     }
 
-    private static List<Effect> convertEffects(List<Entry> entries) {
-        return entries.stream().map(EffectsFeedConverter::convertEffect).toList();
+    private static List<Effect> convertEntries(List<Entry> entries) {
+        return entries.stream().map(EffectsFeedConverter::convertEntry).toList();
     }
 
-    private static Effect convertEffect(Entry entry) {
+    private static Effect convertEntry(Entry entry) {
         uk.gov.legislation.transform.simple.effects.Effect simple = entry.content.effect;
+        return convertEffect(simple);
+    }
+
+    public static List<Effect> convertEffects(List<uk.gov.legislation.transform.simple.effects.Effect> simple) {
+        return simple.stream().map(EffectsFeedConverter::convertEffect).toList();
+    }
+
+    public static Effect convertEffect(uk.gov.legislation.transform.simple.effects.Effect simple) {
 
         Effect effect = new Effect();
         effect.applied = simple.applied;
@@ -51,6 +61,7 @@ public class EffectsFeedConverter {
         effect.target.provisions = new Effect.Provisions();
         effect.target.provisions.plain = simple.affectedProvisionsText;
         effect.target.provisions.rich = simple.affectedProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.target.extent = ExtentConverter.convert(simple.affectedExtent);
 
         effect.source = new Effect.Source();
         effect.source.id = Links.shorten(simple.affectingURI);
@@ -62,6 +73,7 @@ public class EffectsFeedConverter {
         effect.source.provisions = new Effect.Provisions();
         effect.source.provisions.plain = simple.affectingProvisionsText;
         effect.source.provisions.rich = simple.affectingProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.source.extent = ExtentConverter.convert(simple.affectingExtent);
 
         if (!simple.commencementAuthority.isEmpty()) {
             effect.commencementAuthority = new Effect.Provisions();
@@ -74,7 +86,7 @@ public class EffectsFeedConverter {
         return effect;
     }
 
-    private static Effect.InForce convertInForceDate(UnappliedEffect.InForce clml) {
+    private static Effect.InForce convertInForceDate(InForce clml) {
         Effect.InForce inForce = new Effect.InForce();
         inForce.date = clml.date;
         inForce.applied = clml.applied;
