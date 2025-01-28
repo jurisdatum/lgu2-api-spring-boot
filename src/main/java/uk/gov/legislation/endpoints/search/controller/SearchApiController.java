@@ -2,7 +2,7 @@ package uk.gov.legislation.endpoints.search.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.endpoints.search.api.SearchApi;
 import uk.gov.legislation.endpoints.search.service.SearchService;
 
@@ -20,7 +20,7 @@ public class SearchApiController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<DocumentList> searchByJson(
+    public ResponseEntity<PageOfDocuments> searchByJson(
             String title,
             String type,
             Integer year,
