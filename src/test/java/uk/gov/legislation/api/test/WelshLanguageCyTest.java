@@ -29,7 +29,7 @@ class WelshLanguageCyTest {
 
     @Test
     @Description("Perform the GET request with Accept-Language header 'cy'")
-    void testGetDocumentClmlWithAcceptCyLanguageHeader() throws JsonProcessingException {
+    void testGetDocumentJsonWithAcceptCyLanguageHeader() throws JsonProcessingException {
         Response response = RestAssured.given()
                 .param("version", "made")
                 .header("Accept-Language", "cy")
@@ -38,6 +38,42 @@ class WelshLanguageCyTest {
         ObjectMapper mapper = new ObjectMapper();
         String actualResponse = response.getBody().asString();
         String expectedResponse = ExpectedWelshResponseDataCy.DOCUMENT_WELSH_RESPONSE_CY_JSON;
+
+        // Assert status code and content type
+        response.then().statusCode(200).contentType("application/json");
+
+        // Compare JSON objects
+        assertEquals(mapper.readTree(expectedResponse), mapper.readTree(actualResponse));
+    }
+
+    @Test
+    @Description("Perform the GET request for (/content) with Accept-Language header 'cy'")
+    void testGetContentsJsonWithAcceptCyLanguageHeader() throws JsonProcessingException {
+        Response response = RestAssured.given()
+                .header("Accept-Language", "cy")
+                .get("/contents/wsi/2024/1002");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String actualResponse = response.getBody().asString();
+        String expectedResponse = ExpectedWelshResponseDataCy.CONTENT_WELSH_RESPONSE_CY_JSON;
+
+        // Assert status code and content type
+        response.then().statusCode(200).contentType("application/json");
+
+        // Compare JSON objects
+        assertEquals(mapper.readTree(expectedResponse), mapper.readTree(actualResponse));
+    }
+
+    @Test
+    @Description("Perform the GET request for (/fragment) with Accept-Language header 'cy'")
+    void testGetFragmentsJsonWithAcceptCyLanguageHeader() throws JsonProcessingException {
+        Response response = RestAssured.given()
+                .header("Accept-Language", "cy")
+                .get("/fragment/wsi/2024/1002/regulation-2");
+
+        ObjectMapper mapper = new ObjectMapper();
+        String actualResponse = response.getBody().asString();
+        String expectedResponse = ExpectedWelshResponseDataCy.FRAGMENT_WELSH_RESPONSE_CY_JSON;
 
         // Assert status code and content type
         response.then().statusCode(200).contentType("application/json");

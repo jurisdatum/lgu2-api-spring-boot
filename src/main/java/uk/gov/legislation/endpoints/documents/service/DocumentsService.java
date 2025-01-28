@@ -41,7 +41,7 @@ public class DocumentsService {
         return db.byTypeAndYearAtom(type, year, page);
     }
 
-    private void validateType(String type) {
+    public static void validateType(String type) {
         if (!Types.isValidShortType(type)) {
             throw new UnknownTypeException(type);
         }

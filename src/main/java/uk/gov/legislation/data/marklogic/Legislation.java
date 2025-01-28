@@ -23,7 +23,9 @@ public class Legislation {
     }
 
     public Response getDocument(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version).lang(language);
+        LegislationParameters params = new LegislationParameters(type, year, number)
+                .version(version)
+                .lang(language);
         return getAndFollowRedirect(params);
     }
 
@@ -32,15 +34,21 @@ public class Legislation {
 
     private static final Optional<String> CONTENTS_VIEW = Optional.of("contents");
 
-    public Response getTableOfContents(String type, String year, int number, Optional<String> version) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version).view(CONTENTS_VIEW);
+    public Response getTableOfContents(String type, String year, int number, Optional<String> version, Optional<String> language) {
+        LegislationParameters params = new LegislationParameters(type, year, number)
+                .version(version)
+                .view(CONTENTS_VIEW)
+                .lang(language);
         return getAndFollowRedirect(params);
     }
 
     /** Get document section
      */
-    public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version) {
-        LegislationParameters params = new LegislationParameters(type, year, number).version(version).section(Optional.of(section));
+    public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
+        LegislationParameters params = new LegislationParameters(type, year, number)
+                .version(version)
+                .section(Optional.of(section))
+                .lang(language);
         return getAndFollowRedirect(params);
     }
 
