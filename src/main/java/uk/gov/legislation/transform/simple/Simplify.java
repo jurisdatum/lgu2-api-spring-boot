@@ -2,11 +2,8 @@ package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Component;
-import uk.gov.legislation.config.Configuration;
-import uk.gov.legislation.exceptions.InvalidURISyntaxException;
+import org.springframework.stereotype.Service;
 import uk.gov.legislation.exceptions.TransformationException;
-import uk.gov.legislation.exceptions.XSLTCompilationException;
 import uk.gov.legislation.transform.Helper;
 
 import javax.xml.transform.Source;
@@ -14,52 +11,31 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
-import java.util.Optional;
+import java.util.Objects;
 
-@Component
+@Service
 public class Simplify {
 
-    private final Configuration stylesheetConfig;
+    private static final String STYLESHEET = "/transforms/simplify.xsl";
+
     private final XsltExecutable executable;
 
-    public Simplify(Configuration stylesheetConfig) {
-        this.stylesheetConfig = stylesheetConfig;
-        this.executable = compileXslt();
-    }
-    private String processDocument() {
-      return stylesheetConfig.getStylesheetSimplifyPath();
-    }
-
-    private XsltExecutable compileXslt() {
+    public Simplify() {
+        String systemId;
         try {
-            String systemId = getStylesheetURI();
-            Source source = new StreamSource(systemId);
-            return compileXsltSource(source);
-        } catch (URISyntaxException | SaxonApiException e) {
-            throw new XSLTCompilationException("Error compiling XSLT");
+            systemId = Objects.requireNonNull(getClass().getResource(STYLESHEET)).toURI().toASCIIString();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
         }
-    }
-
-    private String getStylesheetURI() throws URISyntaxException {
-        URI uri = Optional.ofNullable(this.getClass().getResource(processDocument()))
-                .map(resource -> {
-                    try {
-                        return resource.toURI();
-                    }
-                    catch(URISyntaxException e) {
-                        throw new InvalidURISyntaxException("Invalid URI syntax for stylesheet", e);
-                    }
-                })
-                .orElseThrow(() -> new URISyntaxException(processDocument(), "Stylesheet not found"));
-        return uri.toASCIIString();
-    }
-
-    private XsltExecutable compileXsltSource(Source source) throws SaxonApiException {
+        Source source = new StreamSource(systemId);
         XsltCompiler compiler = Helper.processor.newXsltCompiler();
-        return compiler.compile(source);
+        try {
+            executable = compiler.compile(source);
+        } catch (SaxonApiException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void transform(Source clml, Serializer destination, Parameters params) throws SaxonApiException {

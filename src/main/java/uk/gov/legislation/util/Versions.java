@@ -22,4 +22,20 @@ public class Versions {
         return false;
     }
 
+//    public static Optional<LocalDate> getLastDate(List<String> versions) {
+//        return versions.stream()
+//                .filter(Versions::isDate)
+//                .reduce((first, second) -> second)
+//                .map(v -> LocalDate.parse(v, DateTimeFormatter.ISO_LOCAL_DATE));
+//    }
+//
+//    public static boolean isDate(String version) {
+//        try {
+//            LocalDate.parse(version, DateTimeFormatter.ISO_LOCAL_DATE);
+//            return true;
+//        } catch (DateTimeParseException e) {
+//            return false;
+//        }
+//    }
+
 }

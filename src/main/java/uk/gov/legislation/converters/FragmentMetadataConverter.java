@@ -5,6 +5,7 @@ import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
+import uk.gov.legislation.util.UpToDate;
 
 import java.util.List;
 import java.util.Set;
@@ -21,6 +22,7 @@ public class FragmentMetadataConverter {
         converted.ancestors = simple.ancestors();
         converted.descendants = simple.descendants();
         converted.unappliedEffects = convertEffects(simple);
+        UpToDate.setUpToDate(converted);
         return converted;
     }
 

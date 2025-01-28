@@ -6,17 +6,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class Configuration {
 
-    @Value("${stylesheet.simplify.path}")
-    private String stylesheetSimplifyPath;
-
     @Value("${stylesheet.akn.path}")
     private String stylesheetAknPath;
-
-    public String getStylesheetSimplifyPath() {
-        return stylesheetSimplifyPath;
-    }
 
     public String getStylesheetAknPath() {
         return stylesheetAknPath;
     }
+
 }

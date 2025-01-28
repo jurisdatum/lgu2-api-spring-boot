@@ -31,6 +31,10 @@ public class Effect {
     @Schema
     public List<InForce> inForce;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Schema(nullable = true)
+    public Boolean outstanding;
+
     /* */
 
     public static class Source {
@@ -87,6 +91,10 @@ public class Effect {
         @JsonInclude(JsonInclude.Include.NON_EMPTY)
         @Schema(nullable = true)
         public String description;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        @Schema(nullable = true)
+        public Boolean outstanding;
 
     }
 

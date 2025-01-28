@@ -79,11 +79,11 @@ public class Metadata {
 
     public List<String> versions() {
         LinkedHashSet<String> set = new LinkedHashSet<>(_versions);
-        if (set.contains("current")) { // FixMe this might put current version out of order
+        if (set.contains("current")) {
             set.remove("current");
             set.add(this.version());
         }
-        set.remove("prospective"); // FixMe
+        // remove "prospective"?
         return set.stream().toList();
     }
 
