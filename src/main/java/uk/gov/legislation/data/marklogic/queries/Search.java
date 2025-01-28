@@ -15,74 +15,59 @@ public class Search {
 
     private final MarkLogic db;
 
-    /**
-     * Constructor to initialize the Search service with a database instance.
-     *
-     * @param db the MarkLogic database instance
-     */
     public Search(MarkLogic db) {
         this.db = db;
     }
 
-    /**
-     * Fetches search results by type and page.
-     */
-    public SearchResults byType(String type, int page) throws IOException, InterruptedException {
-        String xml = byTypeAtom(type, page);
-        return SearchResults.parse(xml);
-    }
+    /* fetch by title, type, year and number */
 
-    /**
-     * Fetches search results by title and page.
-     */
+    public String getAtomByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, int page) throws IOException, InterruptedException {
 
-    public SearchResults byTitleJson(String title, int page) throws IOException, InterruptedException {
-        String xml = byTitleAtom(title, page);
-        return SearchResults.parse(xml);
-    }
+        StringBuilder queryBuilder = new StringBuilder();
+        queryBuilder.append("?page=").append(page);
 
-    // series can be 'w', 's', 'ni', 'l', 'c'
-
-    /**
-     * Constructs the query for fetching search results by type and page.
-     */
-    public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
-        String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&page=" + page;
-        if (Type.WSI.shortName().equals(type)) {
-            query += "&series=w";
-        } else if (Type.NISI.shortName().equals(type)) {
-            query += "&series=ni";
+        if (title != null && !title.isBlank()) {
+            queryBuilder.append("&title=").append(URLEncoder.encode(title, StandardCharsets.UTF_8));
         }
+        if (type != null && !type.isBlank()) {
+            queryBuilder.append("&type=").append(URLEncoder.encode(type, StandardCharsets.US_ASCII));
+            if (Type.WSI.shortName().equals(type)) {
+                queryBuilder.append("&series=w");
+            } else if (Type.NISI.shortName().equals(type)) {
+                queryBuilder.append("&series=ni");
+            }
+        }
+        if (year != null) {
+            queryBuilder.append("&year=").append(year);
+        }
+        if (number != null) {
+            queryBuilder.append("&number=").append(number);
+        }
+        String query = queryBuilder.toString();
         return db.get(ENDPOINT, query);
     }
 
-    /**
-     * Constructs the query for fetching search results by title and page.
-     */
-    public String byTitleAtom(String title, int page) throws IOException, InterruptedException {
-        String query = "?title=" + URLEncoder.encode(title, StandardCharsets.UTF_8) + "&page=" + page;
-        return db.get(ENDPOINT, query);
+    public SearchResults getJsonByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, int page) throws IOException, InterruptedException {
+        String atom = getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
+        return SearchResults.parse(atom);
     }
 
-    /**
-     * Fetches search results by type, year, and page.
-     */
-    public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
-        String xml = byTypeAndYearAtom(type, year, page);
-        return SearchResults.parse(xml);
-    }
+    /* fetch by type and year */
 
-    /**
-     * Constructs the query for fetching search results by type, year, and page.
-     */
     public String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
-        String query = "?type=" + URLEncoder.encode(type, StandardCharsets.US_ASCII) + "&year=" + year + "&page=" + page;
-        if (Type.WSI.shortName().equals(type)) {
-            query += "&series=w";
-        } else if (Type.NISI.shortName().equals(type)) {
-            query += "&series=ni";
-        }
-        return db.get(ENDPOINT, query);
+        return getAtomByTitleAndTypeAndYearAndNumber(null, type, year, null, page);
+    }
+    public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
+        return getJsonByTitleAndTypeAndYearAndNumber(null, type, year, null, page);
+    }
+
+    /* fetch by type */
+
+    public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
+        return getAtomByTitleAndTypeAndYearAndNumber(null, type, null, null, page);
+    }
+    public SearchResults byType(String type, int page) throws IOException, InterruptedException {
+        return getJsonByTitleAndTypeAndYearAndNumber(null, type, null, null, page);
     }
 
 }

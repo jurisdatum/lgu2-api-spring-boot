@@ -17,11 +17,22 @@ public class SearchService {
         this.db = db;
     }
 
-    public String getAtomSearchByTitle(String title, int page) throws IOException, InterruptedException {
-        return db.byTitleAtom(title, page);
+    public String getAtomSearchByTitleAndTypeAndYearAndNumber(
+            String title,
+            String type,
+            Integer year,
+            Integer number,
+            int page) throws IOException, InterruptedException {
+        return db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
     }
-    public DocumentList getJsonSearchByTitle(String title, int page) throws IOException, InterruptedException {
-        SearchResults results = db.byTitleJson(title, page);
+
+    public DocumentList getJsonSearchByTitleAndTypeAndYearAndNumber(
+            String title,
+            String type,
+            Integer year,
+            Integer number,
+            int page) throws IOException, InterruptedException {
+        SearchResults results = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
         return Converter.convert(results);
     }
 
