@@ -7,12 +7,12 @@ import java.time.format.DateTimeFormatter;
 
 public class ErrorResponse {
 
-    private final int status;
-    private final String error;
-    private final String message;
-    private final String timestamp;
+    public final int status;
+    public final String error;
+    public final String message;
+    public final String timestamp;
 
-    public ErrorResponse(int status, String error, String message) {
+    ErrorResponse(int status, String error, String message) {
         this.status = status;
         this.error = error;
         this.message = message;
