@@ -26,10 +26,10 @@ public class Effect {
     public Source source;
 
     @Schema(nullable = true)
-    public Provisions commencementAuthority;
+    public Provisions commencement;
 
     @Schema
-    public List<InForce> inForceDates;
+    public List<InForce> inForce;
 
     /* */
 

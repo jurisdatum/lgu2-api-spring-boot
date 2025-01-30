@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.marklogic;
+package uk.gov.legislation.data.marklogic.search;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -6,6 +6,7 @@ import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Types;
 
+import java.util.Collections;
 import java.util.List;
 
 public class DocumentMetadataConverter {
@@ -39,9 +40,9 @@ public class DocumentMetadataConverter {
         converted.formats = simple.formats();
     }
 
-    protected static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
+    static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
         if (altNums == null)
-            return null;
+            return Collections.emptyList();
         return altNums.stream().map(DocumentMetadataConverter::convertAltNumber).toList();
     }
 

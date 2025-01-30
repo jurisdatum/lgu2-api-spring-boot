@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.Legislation;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 
 import java.util.Optional;

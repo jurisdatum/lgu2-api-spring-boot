@@ -45,7 +45,7 @@ class UnappliedEffectsTest {
         return Stream.of("ukpga/2000/8/section/91" , "ukpga/2023/29/2024-11-01");
     }
 
-    private final ObjectMapper mapper = new ObjectMapper()
+    static final ObjectMapper mapper = new ObjectMapper()
         .registerModules(new JavaTimeModule())
         .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .enable(SerializationFeature.INDENT_OUTPUT);

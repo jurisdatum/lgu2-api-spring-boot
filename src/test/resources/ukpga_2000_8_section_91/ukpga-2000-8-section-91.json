@@ -294,7 +294,7 @@
           },
           "extent" : [ ]
         },
-        "commencementAuthority" : {
+        "commencement" : {
           "plain" : "reg. 1(2)",
           "rich" : [ {
             "type" : "link",
@@ -303,7 +303,7 @@
             "href" : "uksi/2019/707/regulation/1/2"
           } ]
         },
-        "inForceDates" : [ {
+        "inForce" : [ {
           "date" : "2020-12-31",
           "applied" : false,
           "description" : "wholly in force"
@@ -348,7 +348,7 @@
           },
           "extent" : [ ]
         },
-        "commencementAuthority" : {
+        "commencement" : {
           "plain" : "reg. 1(2)",
           "rich" : [ {
             "type" : "link",
@@ -357,7 +357,7 @@
             "href" : "uksi/2019/707/regulation/1/2"
           } ]
         },
-        "inForceDates" : [ {
+        "inForce" : [ {
           "date" : "2020-12-31",
           "applied" : false,
           "description" : "wholly in force"
@@ -401,7 +401,7 @@
           },
           "extent" : [ ]
         },
-        "commencementAuthority" : {
+        "commencement" : {
           "plain" : "s. 94(3)",
           "rich" : [ {
             "type" : "link",
@@ -410,7 +410,7 @@
             "href" : "ukpga/2014/21/section/94/3"
           } ]
         },
-        "inForceDates" : [ {
+        "inForce" : [ {
           "date" : null,
           "applied" : false,
           "prospective" : true,
@@ -454,7 +454,7 @@
           },
           "extent" : [ ]
         },
-        "commencementAuthority" : {
+        "commencement" : {
           "plain" : "s. 94(3)",
           "rich" : [ {
             "type" : "link",
@@ -463,7 +463,7 @@
             "href" : "ukpga/2014/21/section/94/3"
           } ]
         },
-        "inForceDates" : [ {
+        "inForce" : [ {
           "date" : null,
           "applied" : false,
           "prospective" : true,

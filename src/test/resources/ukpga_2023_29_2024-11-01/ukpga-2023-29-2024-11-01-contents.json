@@ -57,8 +57,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -103,8 +103,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -149,8 +149,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-02-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -195,8 +195,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -246,8 +246,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -292,8 +292,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -343,8 +343,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-01-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -389,8 +389,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -440,8 +440,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -491,8 +491,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -542,8 +542,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -588,8 +588,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -639,8 +639,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -690,8 +690,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -741,8 +741,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -792,8 +792,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -843,8 +843,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "wholly in force"
@@ -894,8 +894,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "wholly in force"
@@ -945,8 +945,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "wholly in force"
@@ -996,8 +996,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1042,8 +1042,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1088,8 +1088,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1144,8 +1144,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1195,8 +1195,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1246,8 +1246,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1292,8 +1292,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-03-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1343,8 +1343,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-03-31",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1394,8 +1394,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-03-31",
         "applied" : false,
         "description" : "wholly in force"
@@ -1445,8 +1445,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-03-31",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1491,8 +1491,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-06-30",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1542,8 +1542,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-06-30",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1593,8 +1593,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-06-30",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1639,8 +1639,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-12-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1690,8 +1690,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-12-01",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1741,8 +1741,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1792,8 +1792,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2025-12-01",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1838,8 +1838,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1889,8 +1889,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "for specified purposes"
@@ -1940,8 +1940,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -1991,8 +1991,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "wholly in force"
@@ -2042,8 +2042,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "in force in so far as not already in force"
@@ -2093,8 +2093,8 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : null,
-      "inForceDates" : [ {
+      "commencement" : null,
+      "inForce" : [ {
         "date" : "2026-07-06",
         "applied" : false,
         "description" : "wholly in force"
@@ -2144,7 +2144,7 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : {
+      "commencement" : {
         "plain" : "reg. 1(2)(b)",
         "rich" : [ {
           "type" : "link",
@@ -2153,7 +2153,7 @@
           "href" : "uksi/2024/1083/regulation/1/2/b"
         } ]
       },
-      "inForceDates" : [ {
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "wholly in force"
@@ -2203,7 +2203,7 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : {
+      "commencement" : {
         "plain" : "reg. 1(2)(b)",
         "rich" : [ {
           "type" : "link",
@@ -2212,7 +2212,7 @@
           "href" : "uksi/2024/1083/regulation/1/2/b"
         } ]
       },
-      "inForceDates" : [ {
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "wholly in force"
@@ -2262,7 +2262,7 @@
         },
         "extent" : [ ]
       },
-      "commencementAuthority" : {
+      "commencement" : {
         "plain" : "reg. 1(2)(b)",
         "rich" : [ {
           "type" : "link",
@@ -2271,7 +2271,7 @@
           "href" : "uksi/2024/1083/regulation/1/2/b"
         } ]
       },
-      "inForceDates" : [ {
+      "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
         "description" : "wholly in force"

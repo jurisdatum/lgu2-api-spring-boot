@@ -1,8 +1,5 @@
 package uk.gov.legislation.api.test;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,16 +33,11 @@ class EffectsFeedTest {
         assertEquals(expected, actual);
     }
 
-    private final ObjectMapper mapper = new ObjectMapper()
-        .registerModules(new JavaTimeModule())
-        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-        .enable(SerializationFeature.INDENT_OUTPUT);
-
     @Test
     void parse() throws IOException, SaxonApiException {
         String atom = read("/effects/effects.feed");
         Page feed = simplifier.parse(atom);
-        String actual = mapper.writeValueAsString(feed);
+        String actual = UnappliedEffectsTest.mapper.writeValueAsString(feed);
         String expected = read("/effects/effects.json");
         assertEquals(expected, actual);
     }
@@ -55,7 +47,7 @@ class EffectsFeedTest {
         String atom = read("/effects/effects.feed");
         Page feed = simplifier.parse(atom);
         PageOfEffects converted = EffectsFeedConverter.convert(feed);
-        String actual = mapper.writeValueAsString(converted);
+        String actual = UnappliedEffectsTest.mapper.writeValueAsString(converted);
         String expected = read("/effects/effects-converted.json");
         assertEquals(expected, actual);
     }

@@ -30,7 +30,7 @@ public abstract class CommonMetadata {
     public int number;
 
     @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public List<AltNumber> altNumbers;
 
     @Schema(example = "2024-01-25")

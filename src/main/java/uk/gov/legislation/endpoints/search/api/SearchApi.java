@@ -5,7 +5,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.api.responses.PageOfDocuments;
 
 import java.io.IOException;
 
@@ -24,7 +24,7 @@ public interface SearchApi {
 
 
     @GetMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<DocumentList> searchByJson(
+    ResponseEntity<PageOfDocuments> searchByJson(
             @RequestParam(required = false) String title,
             @RequestParam(required = false) String type,
             @RequestParam(required = false) Integer year,

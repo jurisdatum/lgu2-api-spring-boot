@@ -1,10 +1,10 @@
 package uk.gov.legislation.endpoints.search.service;
 
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.SearchResults;
-import uk.gov.legislation.data.marklogic.queries.Search;
-import uk.gov.legislation.endpoints.documents.Converter;
-import uk.gov.legislation.endpoints.documents.DocumentList;
+import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.converters.DocumentsFeedConverter;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
+import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
 
@@ -26,14 +26,14 @@ public class SearchService {
         return db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
     }
 
-    public DocumentList getJsonSearchByTitleAndTypeAndYearAndNumber(
+    public PageOfDocuments getJsonSearchByTitleAndTypeAndYearAndNumber(
             String title,
             String type,
             Integer year,
             Integer number,
             int page) throws IOException, InterruptedException {
         SearchResults results = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
-        return Converter.convert(results);
+        return DocumentsFeedConverter.convert(results);
     }
 
 }
