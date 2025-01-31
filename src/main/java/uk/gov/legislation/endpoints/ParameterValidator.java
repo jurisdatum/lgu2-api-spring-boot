@@ -18,13 +18,14 @@ public class ParameterValidator {
             throw new IllegalArgumentException("Title cannot be blank.");
         }
     }
+
     public static void validateType(String type) {
-        if(type != null && type.isBlank()) {
+        if (type != null && type.isBlank()) {
             throw new UnknownTypeException(type);
         }
         if (!Types.isValidShortType(type)) {
             throw new UnknownTypeException(type);
         }
     }
-}
 
+}
