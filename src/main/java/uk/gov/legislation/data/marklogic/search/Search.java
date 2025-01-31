@@ -20,7 +20,7 @@ public class Search {
 
     /* fetch by title, type, year and number */
 
-    public String getAtomByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, int page) throws IOException, InterruptedException {
+    public String getAtomByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, String language,int page) throws IOException, InterruptedException {
 
         StringBuilder queryBuilder = new StringBuilder();
         queryBuilder.append("?page=").append(page);
@@ -42,31 +42,34 @@ public class Search {
         if (number != null) {
             queryBuilder.append("&number=").append(number);
         }
+        if (language != null) {
+            queryBuilder.append("&lang=").append(language);
+        }
         String query = queryBuilder.toString();
         return db.get(ENDPOINT, query);
     }
 
-    public SearchResults getJsonByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, int page) throws IOException, InterruptedException {
-        String atom = getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
+    public SearchResults getJsonByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, String language, int page) throws IOException, InterruptedException {
+        String atom = getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
         return SearchResults.parse(atom);
     }
 
     /* fetch by type and year */
 
     public String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
-        return getAtomByTitleAndTypeAndYearAndNumber(null, type, year, null, page);
+        return getAtomByTitleAndTypeAndYearAndNumber(null, type, year, null, null, page);
     }
-    public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
-        return getJsonByTitleAndTypeAndYearAndNumber(null, type, year, null, page);
+    public SearchResults byTypeAndYear(String type, int year,  int page) throws IOException, InterruptedException {
+        return getJsonByTitleAndTypeAndYearAndNumber(null, type, year, null, null, page);
     }
 
     /* fetch by type */
 
     public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
-        return getAtomByTitleAndTypeAndYearAndNumber(null, type, null, null, page);
+        return getAtomByTitleAndTypeAndYearAndNumber(null, type, null, null, null, page);
     }
     public SearchResults byType(String type, int page) throws IOException, InterruptedException {
-        return getJsonByTitleAndTypeAndYearAndNumber(null, type, null, null, page);
+        return getJsonByTitleAndTypeAndYearAndNumber(null, type, null, null,null, page);
     }
 
 }
