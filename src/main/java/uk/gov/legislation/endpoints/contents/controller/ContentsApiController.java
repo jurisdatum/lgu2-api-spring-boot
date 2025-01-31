@@ -9,7 +9,7 @@ import uk.gov.legislation.endpoints.contents.service.ContentsService;
 import java.util.Optional;
 import java.util.function.Function;
 
-import static uk.gov.legislation.endpoints.Language.validateLanguage;
+import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 
 
 /**
@@ -40,8 +40,8 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
-        return getDocumentContentsClml(type, Integer.toString(year), number, version, validatedLanguage);
+        validateLanguage(language);
+        return getDocumentContentsClml(type, Integer.toString(year), number, version, language);
     }
     /**
      * @param monarch   An abbreviation of the monarch, relative to which the year is given, e.g., 'Vict'
@@ -49,9 +49,9 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
+        validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsClml(type, regnalYear, number, version, validatedLanguage);
+        return getDocumentContentsClml(type, regnalYear, number, version, language);
     }
     private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return contentsService.fetchAndTransform(type, year, number, version, Function.identity(), validatedLanguage);
@@ -63,14 +63,14 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
-        return getDocumentContentsAkn(type, Integer.toString(year), number, version, validatedLanguage);
+        validateLanguage(language);
+        return getDocumentContentsAkn(type, Integer.toString(year), number, version, language);
     }
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
+        validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsAkn(type, regnalYear, number, version, validatedLanguage);
+        return getDocumentContentsAkn(type, regnalYear, number, version, language);
     }
     private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return contentsService.fetchAndTransform(type, year, number, version, contentsService::transformToAkn, validatedLanguage);
@@ -82,14 +82,14 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
-        return getDocumentContentsJson(type, Integer.toString(year), number, version, validatedLanguage);
+        validateLanguage(language);
+        return getDocumentContentsJson(type, Integer.toString(year), number, version, language);
     }
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        String validatedLanguage = validateLanguage(language);
+        validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentContentsJson(type, regnalYear, number, version, validatedLanguage);
+        return getDocumentContentsJson(type, regnalYear, number, version, language);
     }
     private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return contentsService.fetchAndTransform(type, year, number, version, contentsService::simplifyToTableOfContents, validatedLanguage);

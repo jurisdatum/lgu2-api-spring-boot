@@ -5,10 +5,9 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
-import uk.gov.legislation.exceptions.UnknownTypeException;
-import uk.gov.legislation.util.Types;
-
 import java.io.IOException;
+
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @Service
 public class DocumentsService {
@@ -41,10 +40,6 @@ public class DocumentsService {
         return db.byTypeAndYearAtom(type, year, page);
     }
 
-    public static void validateType(String type) {
-        if (!Types.isValidShortType(type)) {
-            throw new UnknownTypeException(type);
-        }
-    }
+
 
 }
