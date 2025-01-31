@@ -8,7 +8,8 @@ import uk.gov.legislation.endpoints.search.service.SearchService;
 
 import java.io.IOException;
 
-import static uk.gov.legislation.endpoints.documents.service.DocumentsService.validateType;
+import static uk.gov.legislation.endpoints.ParameterValidator.*;
+
 
 @RestController
 public class SearchApiController implements SearchApi {
@@ -25,14 +26,12 @@ public class SearchApiController implements SearchApi {
             String type,
             Integer year,
             Integer number,
-            int page) throws IOException, InterruptedException {
-        if (title != null && title.isBlank())
-            title = null;
-        if (type != null && type.isBlank())
-            type = null;
-        if (type != null)
-            validateType(type);
-        return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
+            int page,
+            String language) throws IOException, InterruptedException {
+        validateType(type);
+        validateTitle(title);
+        validateLanguage(language);
+        return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, language, page));
     }
 
     @Override
@@ -41,14 +40,12 @@ public class SearchApiController implements SearchApi {
             String type,
             Integer year,
             Integer number,
-            int page) throws IOException, InterruptedException {
-        if (title != null && title.isBlank())
-            title = null;
-        if (type != null && type.isBlank())
-            type = null;
-        if (type != null)
-            validateType(type);
-        return ResponseEntity.ok(searchService.getAtomSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, page));
+            int page,
+            String language) throws IOException, InterruptedException {
+        validateType(type);
+        validateTitle(title);
+        validateLanguage(language);
+        return ResponseEntity.ok(searchService.getAtomSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, language, page));
     }
 
 }

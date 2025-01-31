@@ -22,8 +22,10 @@ public class SearchService {
             String type,
             Integer year,
             Integer number,
-            int page) throws IOException, InterruptedException {
-        return db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
+            String language,
+            int page
+            ) throws IOException, InterruptedException {
+        return db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
     }
 
     public PageOfDocuments getJsonSearchByTitleAndTypeAndYearAndNumber(
@@ -31,8 +33,10 @@ public class SearchService {
             String type,
             Integer year,
             Integer number,
-            int page) throws IOException, InterruptedException {
-        SearchResults results = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, page);
+            String language,
+            int page
+            ) throws IOException, InterruptedException {
+        SearchResults results = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
         return DocumentsFeedConverter.convert(results);
     }
 
