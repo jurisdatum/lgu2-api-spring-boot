@@ -1,5 +1,6 @@
 package uk.gov.legislation.util;
 
+import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 
@@ -7,16 +8,22 @@ import java.time.LocalDate;
 
 public class UpToDate {
 
+    public static void setUpToDate(DocumentMetadata meta) {
+        LocalDate today = LocalDate.now();
+        meta.unappliedEffects.forEach(e -> markEffect(e, today));
+        meta.upToDate = meta.unappliedEffects.stream().noneMatch(effect -> effect.outstanding);
+    }
+
     public static void setUpToDate(FragmentMetadata meta) {
         LocalDate today = LocalDate.now();
         setUpToDate(meta, today);
     }
-    public static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {
+    private static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {
         meta.upToDate = UpToDate.mark(meta.unappliedEffects, cutoff);
     }
 
     // returns true if the fragment is up-to-date (e.g. none of the effects are outstanding
-    public static boolean mark(FragmentMetadata.Effects effects, LocalDate cutoff) {
+    private static boolean mark(FragmentMetadata.Effects effects, LocalDate cutoff) {
         effects.fragment.forEach(e -> markEffect(e, cutoff));
         effects.ancestor.forEach(e -> markEffect(e, cutoff));
         return effects.fragment.stream().noneMatch(effect -> effect.outstanding)

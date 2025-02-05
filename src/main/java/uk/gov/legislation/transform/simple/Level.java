@@ -25,7 +25,7 @@ public class Level {
 
     uk.gov.legislation.api.responses.Level convert() {
         uk.gov.legislation.api.responses.Level other = new uk.gov.legislation.api.responses.Level();
-        other.name = this.name;
+        other.element = this.name;
         other.id = this.id;
         other.href = Links.shorten(uri);
         other.number = this.number;

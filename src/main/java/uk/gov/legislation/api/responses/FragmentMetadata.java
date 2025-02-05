@@ -18,6 +18,9 @@ public class FragmentMetadata extends CommonMetadata {
     public String next;
 
     @Schema
+    public Level fragmentInfo;
+
+    @Schema
     public List<Level> ancestors;
 
     @Schema
@@ -32,7 +35,7 @@ public class FragmentMetadata extends CommonMetadata {
 
     public static class Effects {
 
-        @Schema(description = "directly affecting the fragment or one of its descendants")
+        @Schema(description = "directly affecting the fragment or any of its descendants")
         public List<Effect> fragment;
 
         @Schema(description = "affecting one of the fragment's ancestors")

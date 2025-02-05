@@ -28,8 +28,6 @@ public class Effects {
      * @return
      */
     public static List<Effect> removeThoseWithNoRelevantSection(List<Effect> effects, Set<String> ids, boolean includeWhole) {
-        if (ids.isEmpty())
-            return effects;
         Predicate<Effect> someSectionsAreRelevant = effect -> effect.affectedProvisions.stream()
             .filter(isSection).anyMatch(n -> ids.contains(n.ref));
         if (includeWhole)

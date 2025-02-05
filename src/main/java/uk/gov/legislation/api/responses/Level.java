@@ -5,7 +5,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 public class Level {
 
     @Schema(example = "P1")
-    public String name;
+    public String element;
 
     @Schema(example = "section-91")
     public String id;
