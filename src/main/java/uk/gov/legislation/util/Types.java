@@ -1,5 +1,7 @@
 package uk.gov.legislation.util;
 
+import uk.gov.legislation.exceptions.UnknownTypeException;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -37,12 +39,13 @@ public class Types {
     }
 
     public static List<Type> primarilyAppliesToUK() {
-        return List.of( Type.UKPGA, Type.UKLA, Type.UKSI, Type.UKMD, Type.UKMO, Type.UKSRO ); // ToDo UKPPA, UKDSI
+        return Arrays.stream(Type.values()).filter(
+                type->type.country().equals(Type.Country.UK)).toList();
     }
     public static List<Type> possiblyAppliesToUK() {
-        return List.of( Type.ASP, Type.NIA, Type.AOSP, Type.AEP, Type.AIP, Type.APGB, // ToDo GBLA. GBPPA
-                Type.NISR, Type.ANAW, Type.MWA, Type.UKCM, Type.WSI, Type.SSI, Type.NISI, Type.UKCI, // ToDo ASC
-                Type.MNIA, Type.APNI, Type.NISRO ); // ToDo draft types
+        return Arrays.stream(Type.values()).filter(
+                type->!type.country().equals(Type.Country.UK)).toList();
     }
-
+    //ToDo GBPPA- > not found
+    //ToDo draft types
 }
