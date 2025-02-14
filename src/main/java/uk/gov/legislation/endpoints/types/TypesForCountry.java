@@ -9,15 +9,15 @@ import java.util.List;
 public class TypesForCountry {
 
     @JsonProperty(index = 1)
-    @Schema(allowableValues = {"UK"})
+    @Schema(allowableValues = {"UK", "WALES", "SCOTLAND", "NORTHERN_IRELAND"})
     private String country;
 
     @JsonProperty(index = 2)
-    @Schema(description = "types that exclusively or primarily apply to the country")
-    private List<TypeWrapper> primarily;
+    @Schema(description = "Types that exclusively or primarily apply to the country")
+    private List <TypeWrapper> primarily;
 
     @JsonProperty(index = 3)
-    @Schema(description = "types that may contain legislation that applies to the country")
+    @Schema(description = "Types that may contain legislation that applies to the country")
     private List<TypeWrapper> possibly;
 
     public TypesForCountry(String country, List<TypeWrapper> primarily, List<TypeWrapper> possibly) {

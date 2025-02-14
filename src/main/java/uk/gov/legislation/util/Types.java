@@ -1,14 +1,14 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.exceptions.UnknownTypeException;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Types {
+
+    private static final Set<Type> POSSIBLY_WALES = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA,Type.AEP,Type.APGB ,Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI);// not found -> GBPPA
+    private static final Set<Type> POSSIBLY_SCOTLAND = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA, Type.APGB, Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI);  // not found -> GBPPA
+    private static final Set<Type> POSSIBLY_NORTHERN_IRELAND = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA, Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI); // not found -> GBPPA
 
     private static final Set<String> ShortNames = Arrays.stream(Type.values()).map(Type::shortName).collect(Collectors.toSet());
 
@@ -46,6 +46,31 @@ public class Types {
         return Arrays.stream(Type.values()).filter(
                 type->!type.country().equals(Type.Country.UK)).toList();
     }
-    //ToDo GBPPA- > not found
-    //ToDo draft types
+
+    public static List<Type> primarilyAppliesToWales() {
+        return Arrays.stream(Type.values()).filter(
+                type -> type.country().equals(Type.Country.WALES)).toList();
+    }
+
+    public static List<Type> possiblyAppliesToWales() {
+        return new ArrayList <>(POSSIBLY_WALES);
+    }
+
+    public static List<Type> primarilyAppliesToScotland() {
+        return Arrays.stream(Type.values()).filter(
+                type -> type.country().equals(Type.Country.SCOTLAND)).toList();
+    }
+
+    public static List<Type> possiblyAppliesToScotland() {
+        return new ArrayList<>(POSSIBLY_SCOTLAND);
+    }
+
+    public static List<Type> primarilyAppliesToNorthernIreland() {
+        return Arrays.stream(Type.values()).filter(
+                type -> type.country().equals(Type.Country.NORTHERN_IRELAND)).toList();
+    }
+
+    public static List<Type> possiblyAppliesToNorthernIreland() {
+        return new ArrayList<>(POSSIBLY_NORTHERN_IRELAND);
+    }
 }

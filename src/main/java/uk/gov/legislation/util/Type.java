@@ -36,8 +36,8 @@ public enum Type {
 
     // Great Britain Acts
     APGB("GreatBritainAct", Category.Primary, Country.GREAT_BRITAIN),
-    GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN),
-
+    GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN)     //todo not found -> GBPPA
+    ,
     // England Acts
     UKCM("UnitedKingdomChurchMeasure", Category.Primary, Country.ENGLAND),
     UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.ENGLAND),

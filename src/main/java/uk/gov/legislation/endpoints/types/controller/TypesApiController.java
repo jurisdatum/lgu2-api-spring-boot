@@ -30,12 +30,32 @@ public class TypesApiController implements TypesApi {
 
     /**
      * Fetch types specific to the UK.
-     *
      * @return ResponseEntity containing a TypesForCountry object.
      */
     @Override
     public ResponseEntity<TypesForCountry> getUkSpecificTypes() {
         return ResponseEntity.ok(typesService.fetchUkSpecificTypes());
+    }
+    /**
+     * Fetch types specific to the WELSH.
+     */
+    @Override
+    public ResponseEntity<TypesForCountry> getWalesSpecificTypes() {
+        return ResponseEntity.ok(typesService.fetchWalesSpecificTypes());
+    }
+    /**
+     * Fetch types specific to the SCOTLAND.
+     */
+    @Override
+    public ResponseEntity<TypesForCountry> getScotlandSpecificTypes() {
+        return ResponseEntity.ok(typesService.fetchScotlandSpecificTypes());
+    }
+    /**
+     * Fetch types specific to the NORTHERN_IRELAND.
+     */
+    @Override
+    public ResponseEntity<TypesForCountry> getNorthernIrelandSpecificTypes() {
+        return ResponseEntity.ok(typesService.fetchNorthernIrelandSpecificTypes());
     }
 }
 
