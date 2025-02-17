@@ -1,53 +1,36 @@
 package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Component;
-import uk.gov.legislation.config.Configuration;
-import uk.gov.legislation.exceptions.XSLTCompilationException;
+import org.springframework.stereotype.Service;
+
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
-import java.util.Optional;
 import java.util.Properties;
-import java.util.function.Supplier;
 
-@Component
+@Service
 public class Akn2Html {
 
+    private static final String STYLESHEET = "/transforms/akn2html/akn2html.xsl";
+
     private final XsltExecutable executable;
-    private final Configuration stylSheetAknPath;
 
-    public Akn2Html(Configuration stylSheetAknPath) {
-        this.stylSheetAknPath = stylSheetAknPath;
-        this.executable = compileXslt();
+    public Akn2Html() {
+        XsltCompiler compiler = Helper.processor.newXsltCompiler();
+        Source source;
+        try {
+            String systemId = this.getClass().getResource(STYLESHEET).toURI().toASCIIString();
+            source = new StreamSource(systemId);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            executable = compiler.compile(source);
+        } catch (SaxonApiException e) {
+            throw new RuntimeException(e);
+        }
     }
-
-    public String getStylSheetAknPath() {
-        return stylSheetAknPath.getStylesheetAknPath();
-    }
-
-    private XsltExecutable compileXslt() {
-        return safelyCompileXsl(
-                getStylSheetAknPath(),
-                Helper.processor::newXsltCompiler
-        );
-    }
-
-    private XsltExecutable safelyCompileXsl(String stylesheetPath, Supplier <XsltCompiler> compilerSupplier) {
-        return Optional.ofNullable(this.getClass().getResource(stylesheetPath))
-                .map(resource -> {
-                    try {
-                        String systemId = resource.toURI().toASCIIString();
-                        Source source = new StreamSource(systemId);
-                        return compilerSupplier.get().compile(source);
-                    } catch (SaxonApiException | URISyntaxException e) {
-                        throw new XSLTCompilationException("Failed to compile XSLT", e);
-                    }
-                })
-                .orElseThrow(() -> new IllegalArgumentException("Stylesheet resource not found: " + stylesheetPath));
-    }
-
 
     private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
         XsltTransformer transform = executable.load();
