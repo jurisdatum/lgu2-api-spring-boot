@@ -12,7 +12,7 @@
 <xsl:output method="xml" version="1.0" encoding="utf-8" omit-xml-declaration="yes" indent="no" />
 
 <xsl:strip-space elements="*" />
-<xsl:preserve-space elements="Text Emphasis Strong Underline SmallCaps Superior Inferior Uppercase Underline Expanded Strike Definition Proviso Abbreviation Acronym Term Span Citation CitationSubRef InternalLink ExternalLink InlineAmendment Addition Substitution Repeal" />
+<xsl:preserve-space elements="ukm:AffectedProvisions ukm:AffectingProvisions ukm:SectionRange Text Emphasis Strong Underline SmallCaps Superior Inferior Uppercase Underline Expanded Strike Definition Proviso Abbreviation Acronym Term Span Citation CitationSubRef InternalLink ExternalLink InlineAmendment Addition Substitution Repeal" />
 
 <xsl:param name="is-fragment" as="xs:boolean" select="false()" />
 <xsl:param name="include-contents" as="xs:boolean" select="true()" />

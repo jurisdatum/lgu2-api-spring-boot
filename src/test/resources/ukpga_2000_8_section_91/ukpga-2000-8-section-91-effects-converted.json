@@ -640,6 +640,9 @@
         "href" : "ukpga/2000/8/schedule/2A",
         "missing" : true
       }, {
+        "type" : "text",
+        "text" : " "
+      }, {
         "type" : "link",
         "text" : "2B",
         "id" : "schedule-2B",

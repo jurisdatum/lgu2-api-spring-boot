@@ -683,6 +683,9 @@
             "id" : "regulation-5-c",
             "href" : "uksi/2024/1071/regulation/5/c"
           }, {
+            "type" : "text",
+            "text" : " "
+          }, {
             "type" : "link",
             "text" : "Sch.",
             "id" : "schedule",

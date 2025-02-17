@@ -801,6 +801,7 @@
                      text="Sch. 2A"
                      missing="true"
                      error="Section missing in legislation"/>
+               <node xmlns="" type="text" text=" "/>
                <node xmlns=""
                      type="section"
                      ref="schedule-2B"

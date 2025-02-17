@@ -1531,6 +1531,13 @@
     "error" : "Section missing in legislation",
     "missing" : true
   }, {
+    "type" : "text",
+    "text" : " ",
+    "ref" : null,
+    "uri" : null,
+    "error" : null,
+    "missing" : false
+  }, {
     "type" : "section",
     "text" : "2B",
     "ref" : "schedule-2B",

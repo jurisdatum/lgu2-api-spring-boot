@@ -2479,6 +2479,9 @@
             "id" : "section-87E",
             "href" : "ukpga/2000/8/section/87E"
           }, {
+            "type" : "text",
+            "text" : " "
+          }, {
             "type" : "link",
             "text" : "87F",
             "id" : "section-87F",
@@ -2538,6 +2541,9 @@
             "text" : "s. 87H",
             "id" : "section-87H",
             "href" : "ukpga/2000/8/section/87H"
+          }, {
+            "type" : "text",
+            "text" : " "
           }, {
             "type" : "link",
             "text" : "87I",
@@ -7808,6 +7814,9 @@
             "id" : "schedule-2A",
             "href" : "ukpga/2000/8/schedule/2A",
             "missing" : true
+          }, {
+            "type" : "text",
+            "text" : " "
           }, {
             "type" : "link",
             "text" : "2B",
