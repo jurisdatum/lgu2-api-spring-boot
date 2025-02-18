@@ -13,12 +13,14 @@ import java.util.regex.Pattern;
 public class EffectsComparator {
 
     private static final Comparator<Effect> BY_AFFECTED_PROVISION = (Effect e1, Effect e2) -> {
-        Optional<String> id1 = e1.affectedProvisions.stream()
-            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
+        Optional<String> id1 = Effects.flatten(e1.affectedProvisions)
+            .filter(node -> node instanceof RichTextNode.Section)
+            .map(RichTextNode.Section.class::cast)
             .map(node -> node.ref)
             .findFirst();
-        Optional<String> id2 = e2.affectedProvisions.stream()
-            .filter(node -> node.type.equals(RichTextNode.SECTION_TYPE))
+        Optional<String> id2 = Effects.flatten(e2.affectedProvisions)
+            .filter(node -> node instanceof RichTextNode.Section)
+            .map(RichTextNode.Section.class::cast)
             .map(node -> node.ref)
             .findFirst();
         if (id1.isEmpty() && id2.isEmpty())

@@ -60,7 +60,7 @@ public class EffectsFeedConverter {
         effect.target.cite = Cites.make(simple.affectedClass, simple.affectedYear, simple.affectedNumber);
         effect.target.provisions = new Effect.Provisions();
         effect.target.provisions.plain = simple.affectedProvisionsText;
-        effect.target.provisions.rich = simple.affectedProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.target.provisions.rich = RichTextConverter.convert(simple.affectedProvisions);
         effect.target.extent = ExtentConverter.convert(simple.affectedExtent);
 
         effect.source = new Effect.Source();
@@ -72,13 +72,13 @@ public class EffectsFeedConverter {
         effect.source.cite = Cites.make(simple.affectingClass, simple.affectingYear, simple.affectingNumber);
         effect.source.provisions = new Effect.Provisions();
         effect.source.provisions.plain = simple.affectingProvisionsText;
-        effect.source.provisions.rich = simple.affectingProvisions.stream().map(RichTextConverter::convert).toList();
+        effect.source.provisions.rich = RichTextConverter.convert(simple.affectingProvisions);
         effect.source.extent = ExtentConverter.convert(simple.affectingExtent);
 
         if (!simple.commencementAuthority.isEmpty()) {
             effect.commencement = new Effect.Provisions();
-            effect.commencement.rich = simple.commencementAuthority.stream().map(RichTextConverter::convert).toList();
-            effect.commencement.plain = effect.commencement.rich.stream().map(node -> node.text).collect(Collectors.joining());
+            effect.commencement.rich = RichTextConverter.convert(simple.commencementAuthority);
+            effect.commencement.plain = effect.commencement.rich.stream().filter(node -> node.text != null).map(node -> node.text).collect(Collectors.joining());
         }
 
         effect.inForce = simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();

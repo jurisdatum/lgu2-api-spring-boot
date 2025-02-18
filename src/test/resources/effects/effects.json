@@ -325,11 +325,7 @@
           "missing" : false
         }, {
           "type" : "text",
-          "text" : " ",
-          "ref" : null,
-          "uri" : null,
-          "error" : null,
-          "missing" : false
+          "text" : " "
         }, {
           "type" : "section",
           "text" : "Sch.",
@@ -768,26 +764,29 @@
         "affectedTitle" : "Building Act 1984",
         "affectedProvisionsText" : "s. 56(1)-(4)",
         "affectedProvisions" : [ {
-          "type" : "section",
-          "text" : "s. 56(1)",
-          "ref" : "section-56-1",
+          "type" : "range",
+          "start" : "section-56-1",
+          "end" : "section-56-4",
           "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1",
-          "error" : null,
-          "missing" : false
-        }, {
-          "type" : "text",
-          "text" : "-",
-          "ref" : null,
-          "uri" : null,
-          "error" : null,
-          "missing" : false
-        }, {
-          "type" : "section",
-          "text" : "(4)",
-          "ref" : "section-56-4",
-          "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4",
-          "error" : null,
-          "missing" : false
+          "upTo" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4",
+          "children" : [ {
+            "type" : "section",
+            "text" : "s. 56(1)",
+            "ref" : "section-56-1",
+            "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1",
+            "error" : null,
+            "missing" : false
+          }, {
+            "type" : "text",
+            "text" : "-"
+          }, {
+            "type" : "section",
+            "text" : "(4)",
+            "ref" : "section-56-4",
+            "uri" : "http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4",
+            "error" : null,
+            "missing" : false
+          } ]
         } ],
         "affectedExtent" : "E+W",
         "affectedEffectsExtent" : null,
@@ -852,11 +851,7 @@
           "missing" : false
         }, {
           "type" : "text",
-          "text" : " ",
-          "ref" : null,
-          "uri" : null,
-          "error" : null,
-          "missing" : false
+          "text" : " "
         }, {
           "type" : "section",
           "text" : "(5)",
@@ -882,11 +877,7 @@
           "missing" : false
         }, {
           "type" : "text",
-          "text" : " ",
-          "ref" : null,
-          "uri" : null,
-          "error" : null,
-          "missing" : false
+          "text" : " "
         }, {
           "type" : "section",
           "text" : "Sch.",

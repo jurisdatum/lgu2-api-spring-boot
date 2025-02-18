@@ -115,11 +115,7 @@
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : "Act"
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
@@ -167,11 +163,7 @@
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : "Act"
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",

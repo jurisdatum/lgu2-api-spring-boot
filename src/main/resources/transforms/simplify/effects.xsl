@@ -23,7 +23,9 @@
 </xsl:template>
 
 <xsl:template match="ukm:SectionRange">
-    <xsl:apply-templates />
+    <node type="range" start="{ @Start }" end="{ @End }" uri="{ @URI }" upTo="{ @UpTo }">
+        <xsl:apply-templates />
+    </node>
 </xsl:template>
 
 <xsl:template match="ukm:Section">
