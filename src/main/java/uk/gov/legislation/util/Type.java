@@ -11,6 +11,8 @@ public enum Type {
     UKMO("UnitedKingdomMinisterialOrder", Category.Secondary, Country.UK),
     UKSRO("UnitedKingdomStatutoryRuleOrOrder", Category.Secondary, Country.UK),
     UKDSI("UnitedKingdomDraftStatutoryInstrument", Category.Secondary, Country.UK),
+    UKCM("UnitedKingdomChurchMeasure", Category.Primary, Country.UK),
+    UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.UK),
 
     // Wales Acts
     ASC("WelshParliamentAct", Category.Primary, Country.WALES),
@@ -39,8 +41,6 @@ public enum Type {
     GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN)     //todo not found -> GBPPA
     ,
     // England Acts
-    UKCM("UnitedKingdomChurchMeasure", Category.Primary, Country.ENGLAND),
-    UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.ENGLAND),
     AEP("EnglandAct", Category.Primary, Country.ENGLAND);
 
     public enum Category { Primary, Secondary }

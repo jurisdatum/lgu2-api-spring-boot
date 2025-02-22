@@ -9,7 +9,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import uk.gov.legislation.endpoints.types.TypeWrapper;
 import uk.gov.legislation.endpoints.types.TypesForCountry;
 import uk.gov.legislation.exceptions.ErrorResponse;
@@ -17,10 +16,9 @@ import uk.gov.legislation.exceptions.ErrorResponse;
 import java.util.List;
 
 @Tag(name = "Document types", description = "APIs for fetching document types and their country-specific applicability")
-@RequestMapping("/types")
 public interface TypesApi {
 
-    @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "/types", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch all document types")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully fetched document types",
@@ -32,7 +30,7 @@ public interface TypesApi {
     })
     ResponseEntity <List <TypeWrapper>> getAllTypes();
 
-    @GetMapping(value = "/uk", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "types/uk", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch document types specific to the UK")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully fetched UK-specific document types",
@@ -44,15 +42,15 @@ public interface TypesApi {
     })
     ResponseEntity<TypesForCountry> getUkSpecificTypes();
 
-    @GetMapping(value = "/wales", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "types/wales", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch document types specific to Wales")
     ResponseEntity<TypesForCountry> getWalesSpecificTypes();
 
-    @GetMapping(value = "/scotland", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "types/scotland", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch document types specific to Scotland")
     ResponseEntity<TypesForCountry> getScotlandSpecificTypes();
 
-    @GetMapping(value = "/northern-ireland", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "types/ni", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch document types specific to Northern Ireland")
     ResponseEntity<TypesForCountry> getNorthernIrelandSpecificTypes();
 }
