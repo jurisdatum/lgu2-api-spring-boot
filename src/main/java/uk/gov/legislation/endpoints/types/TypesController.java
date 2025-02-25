@@ -1,11 +1,10 @@
-package uk.gov.legislation.endpoints.types.controller;
+package uk.gov.legislation.endpoints.types;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.endpoints.types.TypeWrapper;
-import uk.gov.legislation.endpoints.types.TypesForCountry;
-import uk.gov.legislation.endpoints.types.api.TypesApi;
+import uk.gov.legislation.api.responses.TypeWrapper;
+import uk.gov.legislation.api.responses.TypesForCountry;
 import uk.gov.legislation.util.Type;
 import uk.gov.legislation.util.Types;
 
@@ -13,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @RestController
-public class TypesApiController implements TypesApi {
+public class TypesController implements TypesApi {
 
     /**
      * Fetch all available types.

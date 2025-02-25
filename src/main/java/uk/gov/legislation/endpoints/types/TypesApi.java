@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.types.api;
+package uk.gov.legislation.endpoints.types;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -10,8 +10,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import uk.gov.legislation.endpoints.types.TypeWrapper;
-import uk.gov.legislation.endpoints.types.TypesForCountry;
+import uk.gov.legislation.api.responses.TypeWrapper;
+import uk.gov.legislation.api.responses.TypesForCountry;
 import uk.gov.legislation.exceptions.ErrorResponse;
 
 import java.util.List;
