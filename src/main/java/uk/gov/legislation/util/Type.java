@@ -38,8 +38,9 @@ public enum Type {
 
     // Great Britain Acts
     APGB("GreatBritainAct", Category.Primary, Country.GREAT_BRITAIN),
-    GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN)     //todo not found -> GBPPA
-    ,
+    GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN),
+    GBPPA("GreatBritainPrivateOrPersonalAct", Category.Primary, Country.GREAT_BRITAIN),
+
     // England Acts
     AEP("EnglandAct", Category.Primary, Country.ENGLAND);
 
@@ -75,5 +76,5 @@ public enum Type {
     public Type.Country country() {
         return country;
     }
-}
 
+}

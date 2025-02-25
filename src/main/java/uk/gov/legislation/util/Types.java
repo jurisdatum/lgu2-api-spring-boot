@@ -1,26 +1,19 @@
 package uk.gov.legislation.util;
 
-
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class Types {
-
-    private static final Set<Type> POSSIBLY_WALES = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA,Type.AEP,Type.APGB ,Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI);// not found -> GBPPA
-    private static final Set<Type> POSSIBLY_SCOTLAND = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA, Type.APGB, Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI);  // not found -> GBPPA
-    private static final Set<Type> POSSIBLY_NORTHERN_IRELAND = Set.of(Type.UKPGA, Type.UKLA, Type.UKPPA, Type.GBLA, Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI); // not found -> GBPPA
-
-    private static final Set<String> ShortNames = Arrays.stream(Type.values()).map(Type::shortName).collect(Collectors.toSet());
-
-    public static boolean isValidShortType(String type) {
-        return ShortNames.contains(type);
-    }
 
     private static final Map<String, String> ShortToLong = Arrays.stream(Type.values())
             .collect(Collectors.toMap(Type::shortName, Type::longName));
 
     private static final Map<String, String> LongToShort = ShortToLong.entrySet().stream()
             .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
+
+    public static boolean isValidShortType(String type) {
+        return ShortToLong.containsKey(type);
+    }
 
     public static String shortToLong(String shortType) {
         return ShortToLong.get(shortType);
@@ -38,39 +31,42 @@ public class Types {
         return Type.valueOf(type.toUpperCase());
     }
 
-    public static List<Type> primarilyAppliesToUK() {
-        return Arrays.stream(Type.values()).filter(
-                type->type.country().equals(Type.Country.UK)).toList();
-    }
-    public static List<Type> possiblyAppliesToUK() {
-        return Arrays.stream(Type.values()).filter(
-                type->!type.country().equals(Type.Country.UK)).toList();
-    }
+    /* by country */
 
-    public static List<Type> primarilyAppliesToWales() {
-        return Arrays.stream(Type.values()).filter(
-                type -> type.country().equals(Type.Country.WALES)).toList();
-    }
+    public static final List<Type> PRIMARILY_UK = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.UKSI,
+        Type.UKMD, Type.UKMO, Type.UKSRO, Type.UKDSI
+    );
+    public static final List<Type> POSSIBLY_UK = List.of(
+        Type.ASP, Type.NIA, Type.AOSP, Type.AEP, Type.AIP, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.NISR, Type.ANAW, Type.ASC, Type.MWA, Type.UKCM,
+        Type.WSI, Type.SSI, Type.NISI, Type.UKCI, Type.MNIA, Type.APNI, Type.NISRO,
+        Type.NIDSR, Type.SDSI
+    );
 
-    public static List<Type> possiblyAppliesToWales() {
-        return new ArrayList <>(POSSIBLY_WALES);
-    }
+    public static final List<Type> PRIMARILY_WALES = List.of(
+        Type.ASC, Type.WSI, Type.ANAW, Type.MWA
+    );
+    public static final List<Type> POSSIBLY_WALES = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.AEP, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
 
-    public static List<Type> primarilyAppliesToScotland() {
-        return Arrays.stream(Type.values()).filter(
-                type -> type.country().equals(Type.Country.SCOTLAND)).toList();
-    }
+    public static final List<Type> PRIMARILY_SCOTLAND = List.of(
+        Type.ASP, Type.AOSP, Type.SSI, Type.SDSI
+    );
+    public static final List<Type> POSSIBLY_SCOTLAND = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
 
-    public static List<Type> possiblyAppliesToScotland() {
-        return new ArrayList<>(POSSIBLY_SCOTLAND);
-    }
+    public static final List<Type> PRIMARILY_NORTHERN_IRELAND = List.of(
+        Type.NIA, Type.AIP, Type.NISR, Type.NISI,
+        Type.MNIA, Type.APNI, Type.NISRO, Type.NIDSR
+    );
+    public static final List<Type> POSSIBLY_NORTHERN_IRELAND = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
 
-    public static List<Type> primarilyAppliesToNorthernIreland() {
-        return Arrays.stream(Type.values()).filter(
-                type -> type.country().equals(Type.Country.NORTHERN_IRELAND)).toList();
-    }
-
-    public static List<Type> possiblyAppliesToNorthernIreland() {
-        return new ArrayList<>(POSSIBLY_NORTHERN_IRELAND);
-    }
 }

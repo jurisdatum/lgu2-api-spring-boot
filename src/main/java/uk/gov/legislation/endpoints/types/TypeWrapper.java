@@ -15,12 +15,12 @@ public class TypeWrapper {
 
     @JsonProperty(index = 1)
     @Schema(allowableValues = {
-            "ukpga", "ukla", "ukppa", "uksi", "ukmd", "ukmo", "uksro", "ukdsi",  // UK Acts
-            "asc", "wsi", "anaw", "mwa",  // Wales Acts
-            "asp", "aosp", "ssi", "sdsi",  // Scotland Acts
-            "nia", "aip", "nisr", "nisi", "mnia", "apni", "nisro", "nidsr",  // Northern Ireland Acts
-            "apgb", "gbla",  // Great Britain Acts
-            "ukcm", "ukci", "aep"  // England Acts
+            "ukpga", "ukla", "ukppa", "uksi", "ukmd", "ukmo", "uksro", "ukdsi", "ukcm", "ukci",  // UK
+            "asc", "wsi", "anaw", "mwa",  // Wales
+            "asp", "aosp", "ssi", "sdsi",  // Scotland
+            "nia", "aip", "nisr", "nisi", "mnia", "apni", "nisro", "nidsr",  // Northern Ireland
+            "apgb", "gbla",  // Great Britain
+            "aep"  // England
     })
     public String shortName() {
         return type.shortName();
@@ -31,13 +31,13 @@ public class TypeWrapper {
             "UnitedKingdomPublicGeneralAct", "UnitedKingdomLocalAct", "UnitedKingdomPrivateOrPersonalAct",
             "UnitedKingdomStatutoryInstrument", "UnitedKingdomMinisterialDirection",
             "UnitedKingdomMinisterialOrder", "UnitedKingdomStatutoryRuleOrOrder", "UnitedKingdomDraftStatutoryInstrument",
+            "UnitedKingdomChurchMeasure", "UnitedKingdomChurchInstrument",
             "WelshParliamentAct", "WelshStatutoryInstrument", "WelshNationalAssemblyAct", "WelshAssemblyMeasure",
             "ScottishAct", "ScottishOldAct", "ScottishStatutoryInstrument", "ScottishDraftStatutoryInstrument",
             "NorthernIrelandAct", "IrelandAct", "NorthernIrelandStatutoryRule", "NorthernIrelandOrderInCouncil",
             "NorthernIrelandAssemblyMeasure", "NorthernIrelandParliamentAct", "NorthernIrelandStatutoryRuleOrOrder",
             "NorthernIrelandDraftStatutoryRule",
-            "GreatBritainAct", "GreatBritainLocalAct",
-            "UnitedKingdomChurchMeasure", "UnitedKingdomChurchInstrument", "EnglandAct"
+            "GreatBritainAct", "GreatBritainLocalAct", "EnglandAct"
     })
     public String longName() {
         return type.longName();

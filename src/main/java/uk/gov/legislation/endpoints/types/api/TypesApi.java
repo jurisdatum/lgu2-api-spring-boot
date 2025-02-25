@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import uk.gov.legislation.endpoints.types.TypeWrapper;
 import uk.gov.legislation.endpoints.types.TypesForCountry;
 import uk.gov.legislation.exceptions.ErrorResponse;
@@ -23,36 +24,20 @@ public interface TypesApi {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Successfully fetched document types",
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = TypeWrapper.class))),
-            @ApiResponse(responseCode = "500", description = "Internal server error",
-                    content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
-                            schema = @Schema(implementation = ErrorResponse.class)))
+                        schema = @Schema(implementation = TypeWrapper.class)))
     })
-    ResponseEntity <List <TypeWrapper>> getAllTypes();
+    ResponseEntity<List<TypeWrapper>> getAllTypes();
 
-    @GetMapping(value = "types/uk", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Fetch document types specific to the UK")
+    @GetMapping(value = "/types/{country}", produces = MediaType.APPLICATION_JSON_VALUE)
+    @Operation(summary = "Fetch document types related to a specific country")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Successfully fetched UK-specific document types",
+            @ApiResponse(responseCode = "200", description = "Successfully fetched country-specific document types",
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = TypesForCountry.class))),
-            @ApiResponse(responseCode = "500", description = "Internal server error",
+            @ApiResponse(responseCode = "400", description = "Unrecognized country",
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
-    ResponseEntity<TypesForCountry> getUkSpecificTypes();
+    ResponseEntity<TypesForCountry> getTypesForCountry(@PathVariable String country);
 
-    @GetMapping(value = "types/wales", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Fetch document types specific to Wales")
-    ResponseEntity<TypesForCountry> getWalesSpecificTypes();
-
-    @GetMapping(value = "types/scotland", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Fetch document types specific to Scotland")
-    ResponseEntity<TypesForCountry> getScotlandSpecificTypes();
-
-    @GetMapping(value = "types/ni", produces = MediaType.APPLICATION_JSON_VALUE)
-    @Operation(summary = "Fetch document types specific to Northern Ireland")
-    ResponseEntity<TypesForCountry> getNorthernIrelandSpecificTypes();
 }
-
-

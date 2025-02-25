@@ -43,12 +43,12 @@ public class Cites {
     private static String make(Type type, int year, int number) {
         return switch (type) {
             case UKPGA, UKPPA, NIA, AOSP, AEP, AIP, APGB -> year + " c. " + number;
-            case UKLA, GBLA -> year + " c. " + Roman.toLowerRoman(number);
+            case UKLA, GBLA, GBPPA -> year + " c. " + Roman.toLowerRoman(number);
             case ASP, ANAW, ASC -> year + " " + type.shortName() + " " + number;
             case MWA -> year + " nawm " + number;
             case MNIA, APNI -> year + " Chapter " + number;
-            case UKSI, UKCM, UKMD, UKMO, UKSRO, WSI, SSI, NISI, NISR, UKCI, NISRO, UKDSI, NIDSR, SDSI -> year + " No. " + number;
-            // Fixme  related to drafts
+            case UKSI, UKCM, UKMD, UKMO, UKSRO, WSI, SSI, NISI, NISR, UKCI, NISRO -> year + " No. " + number;
+            case UKDSI, NIDSR, SDSI -> "";  // ToDo
         };
     }
 
