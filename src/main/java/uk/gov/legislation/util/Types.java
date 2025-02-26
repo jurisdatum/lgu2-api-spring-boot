@@ -1,24 +1,19 @@
 package uk.gov.legislation.util;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Types {
-
-    private static final Set<String> ShortNames = Arrays.stream(Type.values()).map(Type::shortName).collect(Collectors.toSet());
-
-    public static boolean isValidShortType(String type) {
-        return ShortNames.contains(type);
-    }
 
     private static final Map<String, String> ShortToLong = Arrays.stream(Type.values())
             .collect(Collectors.toMap(Type::shortName, Type::longName));
 
     private static final Map<String, String> LongToShort = ShortToLong.entrySet().stream()
             .collect(Collectors.toMap(Map.Entry::getValue, Map.Entry::getKey));
+
+    public static boolean isValidShortType(String type) {
+        return ShortToLong.containsKey(type);
+    }
 
     public static String shortToLong(String shortType) {
         return ShortToLong.get(shortType);
@@ -36,13 +31,42 @@ public class Types {
         return Type.valueOf(type.toUpperCase());
     }
 
-    public static List<Type> primarilyAppliesToUK() {
-        return List.of( Type.UKPGA, Type.UKLA, Type.UKSI, Type.UKMD, Type.UKMO, Type.UKSRO ); // ToDo UKPPA, UKDSI
-    }
-    public static List<Type> possiblyAppliesToUK() {
-        return List.of( Type.ASP, Type.NIA, Type.AOSP, Type.AEP, Type.AIP, Type.APGB, // ToDo GBLA. GBPPA
-                Type.NISR, Type.ANAW, Type.MWA, Type.UKCM, Type.WSI, Type.SSI, Type.NISI, Type.UKCI, // ToDo ASC
-                Type.MNIA, Type.APNI, Type.NISRO ); // ToDo draft types
-    }
+    /* by country */
+
+    public static final List<Type> PRIMARILY_UK = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.UKSI,
+        Type.UKMD, Type.UKMO, Type.UKSRO, Type.UKDSI
+    );
+    public static final List<Type> POSSIBLY_UK = List.of(
+        Type.ASP, Type.NIA, Type.AOSP, Type.AEP, Type.AIP, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.NISR, Type.ANAW, Type.ASC, Type.MWA, Type.UKCM,
+        Type.WSI, Type.SSI, Type.NISI, Type.UKCI, Type.MNIA, Type.APNI, Type.NISRO,
+        Type.NIDSR, Type.SDSI
+    );
+
+    public static final List<Type> PRIMARILY_WALES = List.of(
+        Type.ASC, Type.WSI, Type.ANAW, Type.MWA
+    );
+    public static final List<Type> POSSIBLY_WALES = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.AEP, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
+
+    public static final List<Type> PRIMARILY_SCOTLAND = List.of(
+        Type.ASP, Type.AOSP, Type.SSI, Type.SDSI
+    );
+    public static final List<Type> POSSIBLY_SCOTLAND = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.APGB, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
+
+    public static final List<Type> PRIMARILY_NORTHERN_IRELAND = List.of(
+        Type.NIA, Type.AIP, Type.NISR, Type.NISI,
+        Type.MNIA, Type.APNI, Type.NISRO, Type.NIDSR
+    );
+    public static final List<Type> POSSIBLY_NORTHERN_IRELAND = List.of(
+        Type.UKPGA, Type.UKLA, Type.UKPPA, Type.GBLA, Type.GBPPA,
+        Type.UKSI, Type.UKMD, Type.UKSRO, Type.UKDSI
+    );
 
 }

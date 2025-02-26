@@ -41,49 +41,15 @@ public class Cites {
     }
 
     private static String make(Type type, int year, int number) {
-        switch (type) {
-            case UKPGA:
-            // case UKPPA:
-            case NIA:
-            case AOSP:
-            case AEP:
-            case AIP:
-            case APGB:
-                return year + " c. " + number;
-            case UKLA:
-//            case GBLA:
-                return year + " c. " + Roman.toLowerRoman(number);
-            case ASP:
-            case ANAW:
-//            case ASC:
-                return year + " " + type.shortName() + " " + number;
-            // case GBPPA:
-            case MWA:
-                return year + " nawm " + number;
-            case MNIA:
-            case APNI:
-                return year + " Chapter " + number;
-            case UKSI:
-            case UKCM:
-            case UKMD:
-            case UKMO:
-            case UKSRO:
-            case WSI:
-            case SSI:
-            case NISI:
-            case NISR:
-            case UKCI:
-            case NISRO:
-                return year + " No. " + number;
-//            case UKDSI:
-//                return "";
-//            case NIDSR:
-//                return "";
-//            case SDSI:
-//                return "";
-            default:
-                throw new IllegalArgumentException(type.shortName());
-        }
+        return switch (type) {
+            case UKPGA, UKPPA, NIA, AOSP, AEP, AIP, APGB -> year + " c. " + number;
+            case UKLA, GBLA, GBPPA -> year + " c. " + Roman.toLowerRoman(number);
+            case ASP, ANAW, ASC -> year + " " + type.shortName() + " " + number;
+            case MWA -> year + " nawm " + number;
+            case MNIA, APNI -> year + " Chapter " + number;
+            case UKSI, UKCM, UKMD, UKMO, UKSRO, WSI, SSI, NISI, NISR, UKCI, NISRO -> year + " No. " + number;
+            case UKDSI, NIDSR, SDSI -> "";  // ToDo
+        };
     }
 
     /* */

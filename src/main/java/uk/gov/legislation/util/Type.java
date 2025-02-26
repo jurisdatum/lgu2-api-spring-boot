@@ -2,61 +2,79 @@ package uk.gov.legislation.util;
 
 public enum Type {
 
-    UKPGA("UnitedKingdomPublicGeneralAct", Category.Primary),
-    UKLA("UnitedKingdomLocalAct", Category.Primary),
-//    CULA?
-//    UKPPA("UnitedKingdomPrivateOrPersonalAct", Category.Primary),
+    // United Kingdom Acts
+    UKPGA("UnitedKingdomPublicGeneralAct", Category.Primary, Country.UK),
+    UKLA("UnitedKingdomLocalAct", Category.Primary, Country.UK),
+    UKPPA("UnitedKingdomPrivateOrPersonalAct", Category.Primary, Country.UK),
+    UKSI("UnitedKingdomStatutoryInstrument", Category.Secondary, Country.UK),
+    UKMD("UnitedKingdomMinisterialDirection", Category.Secondary, Country.UK),
+    UKMO("UnitedKingdomMinisterialOrder", Category.Secondary, Country.UK),
+    UKSRO("UnitedKingdomStatutoryRuleOrOrder", Category.Secondary, Country.UK),
+    UKDSI("UnitedKingdomDraftStatutoryInstrument", Category.Secondary, Country.UK),
+    UKCM("UnitedKingdomChurchMeasure", Category.Primary, Country.UK),
+    UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.UK),
 
-    ASP("ScottishAct", Category.Primary),
-    NIA("NorthernIrelandAct", Category.Primary),
-    AOSP("ScottishOldAct", Category.Primary),
-    AEP("EnglandAct", Category.Primary),
-    AIP("IrelandAct", Category.Primary),
-    APGB("GreatBritainAct", Category.Primary),
-//    GBLA("GreatBritainLocalAct", Category.Primary),
-//    GBPPA
-    ANAW("WelshNationalAssemblyAct", Category.Primary),
-//    ASC("WelshParliamentAct", Category.Primary),
-    MWA("WelshAssemblyMeasure", Category.Primary),
-    UKCM("UnitedKingdomChurchMeasure", Category.Primary),
-    MNIA("NorthernIrelandAssemblyMeasure", Category.Primary),
-    APNI("NorthernIrelandParliamentAct", Category.Primary),
+    // Wales Acts
+    ASC("WelshParliamentAct", Category.Primary, Country.WALES),
+    WSI("WelshStatutoryInstrument", Category.Secondary, Country.WALES),
+    ANAW("WelshNationalAssemblyAct", Category.Primary, Country.WALES),
+    MWA("WelshAssemblyMeasure", Category.Primary, Country.WALES),
 
-    UKSI("UnitedKingdomStatutoryInstrument", Category.Secondary),
-    UKMD("UnitedKingdomMinisterialDirection", Category.Secondary),
-    UKMO("UnitedKingdomMinisterialOrder", Category.Secondary),
-    UKSRO("UnitedKingdomStatutoryRuleOrOrder", Category.Secondary),
-//    UKDSI("UnitedKingdomDraftStatutoryInstrument", Category.Secondary),
+    // Scotland Acts
+    ASP("ScottishAct", Category.Primary, Country.SCOTLAND),
+    AOSP("ScottishOldAct", Category.Primary, Country.SCOTLAND),
+    SSI("ScottishStatutoryInstrument", Category.Secondary, Country.SCOTLAND),
+    SDSI("ScottishDraftStatutoryInstrument", Category.Secondary, Country.SCOTLAND),
 
-    WSI("WelshStatutoryInstrument", Category.Secondary),
-    SSI("ScottishStatutoryInstrument", Category.Secondary),
-    NISI("NorthernIrelandOrderInCouncil", Category.Secondary),
-    NISR("NorthernIrelandStatutoryRule", Category.Secondary),
+    // Northern Ireland Acts
+    NIA("NorthernIrelandAct", Category.Primary, Country.NORTHERN_IRELAND),
+    AIP("IrelandAct", Category.Primary, Country.NORTHERN_IRELAND),
+    NISR("NorthernIrelandStatutoryRule", Category.Secondary, Country.NORTHERN_IRELAND),
+    NISI("NorthernIrelandOrderInCouncil", Category.Secondary, Country.NORTHERN_IRELAND),
+    MNIA("NorthernIrelandAssemblyMeasure", Category.Primary, Country.NORTHERN_IRELAND),
+    APNI("NorthernIrelandParliamentAct", Category.Primary, Country.NORTHERN_IRELAND),
+    NISRO("NorthernIrelandStatutoryRuleOrOrder", Category.Secondary, Country.NORTHERN_IRELAND),
+    NIDSR("NorthernIrelandDraftStatutoryRule", Category.Secondary, Country.NORTHERN_IRELAND),
 
-    UKCI("UnitedKingdomChurchInstrument", Category.Secondary),
-    NISRO("NorthernIrelandStatutoryRuleOrOrder", Category.Secondary);
-//    NIDSR("NorthernIrelandDraftStatutoryRule", Category.Secondary),
-//    SDSI("ScottishDraftStatutoryInstrument", Category.Secondary);
-//    WDSI ?
-//    NIDSI ?
-    // "eur", "eudn", "eudr", "eut"
-    // "ukia" sia wia niia
+    // Great Britain Acts
+    APGB("GreatBritainAct", Category.Primary, Country.GREAT_BRITAIN),
+    GBLA("GreatBritainLocalAct", Category.Primary, Country.GREAT_BRITAIN),
+    GBPPA("GreatBritainPrivateOrPersonalAct", Category.Primary, Country.GREAT_BRITAIN),
+
+    // England Acts
+    AEP("EnglandAct", Category.Primary, Country.ENGLAND);
 
     public enum Category { Primary, Secondary }
 
-    private final String longName;
-
-    private final Category category;
-
-    Type(String longName, Category classification) {
-        this.longName = longName;
-        this.category = classification;
+    public enum Country {
+        UK, SCOTLAND, WALES, NORTHERN_IRELAND, ENGLAND, GREAT_BRITAIN
     }
 
-    public String shortName() { return name().toLowerCase(); }
+    private final String longName;
+    private final Category category;
+    private final Country country;
 
-    public String longName() { return longName; }
+    // Constructor
+    Type(String longName, Category category, Country country) {
+        this.longName = longName;
+        this.category = category;
+        this.country = country;
+    }
 
-    public Category category() { return category; }
+    public String shortName() {
+        return name().toLowerCase();
+    }
+
+    public String longName() {
+        return longName;
+    }
+
+    public Type.Category category() {
+        return category;
+    }
+
+    public Type.Country country() {
+        return country;
+    }
 
 }

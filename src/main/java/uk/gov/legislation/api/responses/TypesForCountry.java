@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.types;
+package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -9,15 +9,15 @@ import java.util.List;
 public class TypesForCountry {
 
     @JsonProperty(index = 1)
-    @Schema(allowableValues = {"UK"})
+    @Schema(allowableValues = {"UNITED_KINGDOM", "WALES", "SCOTLAND", "NORTHERN_IRELAND"})
     private String country;
 
     @JsonProperty(index = 2)
-    @Schema(description = "types that exclusively or primarily apply to the country")
+    @Schema(description = "Types that exclusively or primarily apply to the country")
     private List<TypeWrapper> primarily;
 
     @JsonProperty(index = 3)
-    @Schema(description = "types that may contain legislation that applies to the country")
+    @Schema(description = "Types that may contain legislation that applies to the country")
     private List<TypeWrapper> possibly;
 
     public TypesForCountry(String country, List<TypeWrapper> primarily, List<TypeWrapper> possibly) {
@@ -27,4 +27,3 @@ public class TypesForCountry {
     }
 
 }
-

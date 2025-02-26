@@ -60,7 +60,7 @@ public class Metadata {
     public String version() {
         if (valid != null)
             return valid.toString();
-        return FirstVersion.get(longType);
+        return FirstVersion.getFirstVersion(longType);
     }
 
     public String status;
