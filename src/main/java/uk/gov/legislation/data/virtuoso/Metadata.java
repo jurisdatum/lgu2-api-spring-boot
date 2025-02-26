@@ -1,5 +1,6 @@
 package uk.gov.legislation.data.virtuoso;
 
+import org.springframework.stereotype.Component;
 import uk.gov.legislation.data.virtuoso.model.Interpretation;
 import uk.gov.legislation.data.virtuoso.model.Item;
 import uk.gov.legislation.data.virtuoso.model.Resources;
@@ -13,9 +14,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Component
 public class Metadata {
+private final Virtuoso virtuoso;
 
-    public static Item get(String type, int year, int number) throws IOException, InterruptedException {
+    public Metadata(Virtuoso virtuoso) {
+        this.virtuoso = virtuoso;
+    }
+
+    public  Item get(String type, int year, int number) throws IOException, InterruptedException {
         JsonResults json = getJson(type, year, number);
         List<Statement> triples = triples(json);
         if (triples.isEmpty())
@@ -35,11 +42,12 @@ public class Metadata {
                 interps.add(interp);
             }
         }
+        assert item != null;
         item.interpretations = interps;
         return item;
     }
 
-    private static JsonResults getJson(String type, int year, int number) throws IOException, InterruptedException {
+    private JsonResults getJson(String type, int year, int number) throws IOException, InterruptedException {
         String query = """
             PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
             SELECT ?s ?p ?o
@@ -50,8 +58,7 @@ public class Metadata {
                }
             }
             """.formatted(type, year, number);
-        JsonResults results = Virtuoso.query(query);
-        return results;
+        return virtuoso.query(query);
     }
 
     private static List<Statement> triples(JsonResults json) {
