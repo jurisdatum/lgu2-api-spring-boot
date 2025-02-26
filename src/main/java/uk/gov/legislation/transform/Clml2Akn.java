@@ -15,7 +15,7 @@ import java.util.Properties;
 @Service
 public class Clml2Akn {
 
-    private static final String stylesheet = "/transforms/clml2akn/clml2akn.xsl";
+    private static final String STYLESHEET = "/transforms/clml2akn/clml2akn.xsl";
 
     private final XsltExecutable executable;
 
@@ -23,7 +23,7 @@ public class Clml2Akn {
         XsltCompiler compiler = Helper.processor.newXsltCompiler();
         Source source;
         try {
-            String systemId = this.getClass().getResource(stylesheet).toURI().toASCIIString();
+            String systemId = this.getClass().getResource(STYLESHEET).toURI().toASCIIString();
             source = new StreamSource(systemId);
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);

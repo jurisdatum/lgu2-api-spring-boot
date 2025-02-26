@@ -1,0 +1,693 @@
+{
+  "id" : "ukpga/2000/8",
+  "longType" : "UnitedKingdomPublicGeneralAct",
+  "shortType" : "ukpga",
+  "year" : 2000,
+  "number" : 8,
+  "date" : "2000-06-14",
+  "cite" : "2000 c. 8",
+  "version" : "2024-11-01",
+  "status" : "revised",
+  "title" : "Financial Services and Markets Act 2000",
+  "extent" : [ "E", "W", "S", "NI" ],
+  "lang" : "en",
+  "publisher" : "Statute Law Database",
+  "modified" : "2024-11-01",
+  "versions" : [ "2013-04-01", "2017-12-08", "2020-12-31" ],
+  "schedules" : true,
+  "formats" : [ "xml", "pdf" ],
+  "fragment" : "schedule/6/paragraph/4A",
+  "prev" : "schedule/6/paragraph/3E",
+  "next" : "schedule/6/paragraph/4B",
+  "fragmentInfo" : {
+    "element" : "P1",
+    "id" : "schedule-6-paragraph-4A",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "number" : "4A",
+    "title" : "Introduction",
+    "label" : "Schedule 6 paragraph 4A"
+  },
+  "ancestors" : [ {
+    "element" : "Schedule",
+    "id" : "schedule-6",
+    "href" : "ukpga/2000/8/schedule/6",
+    "number" : "SCHEDULE 6",
+    "title" : null,
+    "label" : "SCHEDULE 6"
+  }, {
+    "element" : "Part",
+    "id" : "schedule-6-part-1D",
+    "href" : "ukpga/2000/8/schedule/6/part/1D",
+    "number" : "PART 1D",
+    "title" : "Part 4A permission: conditions for which the PRA is responsible in relation to insurers etc.",
+    "label" : "PART 1D"
+  }, {
+    "element" : "P1",
+    "id" : "schedule-6-paragraph-4A",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "number" : "4A",
+    "title" : "Introduction",
+    "label" : "Schedule 6 paragraph 4A"
+  } ],
+  "descendants" : [ {
+    "element" : "P1",
+    "id" : "schedule-6-paragraph-4A",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "number" : "4A",
+    "title" : "Introduction",
+    "label" : "Schedule 6 paragraph 4A"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-1",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/1",
+    "number" : "1",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-2",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/2",
+    "number" : "2",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-3",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/3",
+    "number" : "3",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-4",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4",
+    "number" : "4",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-4-a",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4/a",
+    "number" : "a",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-4-b",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4/b",
+    "number" : "b",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-5",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/5",
+    "number" : "5",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-6",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6",
+    "number" : "6",
+    "title" : null,
+    "label" : "P2"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-6-a",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/a",
+    "number" : "a",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-6-b",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/b",
+    "number" : "b",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-6-c",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/c",
+    "number" : "c",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P3",
+    "id" : "schedule-6-paragraph-4A-6-d",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/d",
+    "number" : "d",
+    "title" : null,
+    "label" : "P3"
+  }, {
+    "element" : "P2",
+    "id" : "schedule-6-paragraph-4A-7",
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7",
+    "number" : "7",
+    "title" : null,
+    "label" : "P2"
+  } ],
+  "unappliedEffects" : {
+    "fragment" : [ {
+      "applied" : false,
+      "required" : true,
+      "type" : "words omitted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(iii)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(iii)",
+            "id" : "regulation-10-a-iii",
+            "href" : "uksi/2024/1083/regulation/10/a/iii"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "words substituted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(i)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(i)",
+            "id" : "regulation-10-a-i",
+            "href" : "uksi/2024/1083/regulation/10/a/i"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "words substituted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(ii)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(ii)",
+            "id" : "regulation-10-a-ii",
+            "href" : "uksi/2024/1083/regulation/10/a/ii"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    } ],
+    "ancestor" : [ {
+      "applied" : false,
+      "required" : true,
+      "type" : "power to apply conferred (temp. until 15.5.2039)",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Act",
+          "rich" : [ {
+            "type" : "text",
+            "text" : "Act"
+          } ]
+        },
+        "extent" : [ "E", "W", "S", "NI" ]
+      },
+      "source" : {
+        "id" : "ukpga/2014/21",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2014,
+        "number" : 21,
+        "title" : "Water Act 2014",
+        "cite" : "2014 c. 21",
+        "provisions" : {
+          "plain" : "s. 79(4)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "s. 79(4)",
+            "id" : "section-79-4",
+            "href" : "ukpga/2014/21/section/79/4"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "s. 94(3)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 94(3)",
+          "id" : "section-94-3",
+          "href" : "ukpga/2014/21/section/94/3"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : null,
+        "applied" : false,
+        "prospective" : true,
+        "description" : "with effect in accordance with",
+        "outstanding" : false
+      } ],
+      "outstanding" : false
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "power to apply conferred (temp. until 15.5.2039)",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Act",
+          "rich" : [ {
+            "type" : "text",
+            "text" : "Act"
+          } ]
+        },
+        "extent" : [ "E", "W", "S", "NI" ]
+      },
+      "source" : {
+        "id" : "ukpga/2014/21",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2014,
+        "number" : 21,
+        "title" : "Water Act 2014",
+        "cite" : "2014 c. 21",
+        "provisions" : {
+          "plain" : "s. 81(10)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "s. 81(10)",
+            "id" : "section-81-10",
+            "href" : "ukpga/2014/21/section/81/10"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "s. 94(3)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "s. 94(3)",
+          "id" : "section-94-3",
+          "href" : "ukpga/2014/21/section/94/3"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : null,
+        "applied" : false,
+        "prospective" : true,
+        "description" : "with effect in accordance with",
+        "outstanding" : false
+      } ],
+      "outstanding" : false
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "inserted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(8)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(8)",
+            "id" : "schedule-6-paragraph-4A-8",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/8"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(b)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(b)",
+            "id" : "regulation-10-b",
+            "href" : "uksi/2024/1083/regulation/10/b"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "words omitted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(iii)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(iii)",
+            "id" : "regulation-10-a-iii",
+            "href" : "uksi/2024/1083/regulation/10/a/iii"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "words substituted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(i)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(i)",
+            "id" : "regulation-10-a-i",
+            "href" : "uksi/2024/1083/regulation/10/a/i"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    }, {
+      "applied" : false,
+      "required" : true,
+      "type" : "words substituted",
+      "target" : {
+        "id" : "ukpga/2000/8",
+        "longType" : "UnitedKingdomPublicGeneralAct",
+        "year" : 2000,
+        "number" : 8,
+        "title" : "Financial Services and Markets Act 2000",
+        "cite" : "2000 c. 8",
+        "provisions" : {
+          "plain" : "Sch. 6 para. 4A(7)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "Sch. 6 ",
+            "id" : "schedule-6",
+            "href" : "ukpga/2000/8/schedule/6"
+          }, {
+            "type" : "link",
+            "text" : "para. 4A(7)",
+            "id" : "schedule-6-paragraph-4A-7",
+            "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "source" : {
+        "id" : "uksi/2024/1083",
+        "longType" : "UnitedKingdomStatutoryInstrument",
+        "year" : 2024,
+        "number" : 1083,
+        "title" : "The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024",
+        "cite" : "2024 No. 1083",
+        "provisions" : {
+          "plain" : "reg. 10(a)(ii)",
+          "rich" : [ {
+            "type" : "link",
+            "text" : "reg. 10(a)(ii)",
+            "id" : "regulation-10-a-ii",
+            "href" : "uksi/2024/1083/regulation/10/a/ii"
+          } ]
+        },
+        "extent" : [ ]
+      },
+      "commencement" : {
+        "plain" : "reg. 1(2)(b)",
+        "rich" : [ {
+          "type" : "link",
+          "text" : "reg. 1(2)(b)",
+          "id" : "regulation-1-2-b",
+          "href" : "uksi/2024/1083/regulation/1/2/b"
+        } ]
+      },
+      "inForce" : [ {
+        "date" : "2024-12-31",
+        "applied" : false,
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
+    } ]
+  },
+  "upToDate" : false
+}

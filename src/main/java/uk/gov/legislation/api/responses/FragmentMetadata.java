@@ -1,5 +1,6 @@
 package uk.gov.legislation.api.responses;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.List;
@@ -17,6 +18,9 @@ public class FragmentMetadata extends CommonMetadata {
     public String next;
 
     @Schema
+    public Level fragmentInfo;
+
+    @Schema
     public List<Level> ancestors;
 
     @Schema
@@ -25,9 +29,13 @@ public class FragmentMetadata extends CommonMetadata {
     @Schema
     public Effects unappliedEffects;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Schema(nullable = true)
+    public Boolean upToDate;
+
     public static class Effects {
 
-        @Schema(description = "directly affecting the fragment or one of its descendants")
+        @Schema(description = "directly affecting the fragment or any of its descendants")
         public List<Effect> fragment;
 
         @Schema(description = "affecting one of the fragment's ancestors")

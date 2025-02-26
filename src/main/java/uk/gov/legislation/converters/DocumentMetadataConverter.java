@@ -4,7 +4,9 @@ import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.util.Cites;
+import uk.gov.legislation.util.EffectsComparator;
 import uk.gov.legislation.util.Types;
+import uk.gov.legislation.util.UpToDate;
 
 import java.util.Collections;
 import java.util.List;
@@ -14,7 +16,11 @@ public class DocumentMetadataConverter {
     public static DocumentMetadata convert(Metadata simple) {
         DocumentMetadata converted = new DocumentMetadata();
         convert(simple, converted);
-        converted.unappliedEffects = EffectsFeedConverter.convertEffects(simple.rawEffects);
+        converted.unappliedEffects = simple.rawEffects.stream()
+            .sorted(EffectsComparator.INSTANCE)
+            .map(EffectsFeedConverter::convertEffect).toList();
+        // maybe don't do this if version is not current
+        UpToDate.setUpToDate(converted);
         return converted;
     }
 

@@ -5,6 +5,7 @@ import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
+import uk.gov.legislation.util.UpToDate;
 
 import java.util.List;
 import java.util.Set;
@@ -20,7 +21,10 @@ public class FragmentMetadataConverter {
         converted.next = simple.next();
         converted.ancestors = simple.ancestors();
         converted.descendants = simple.descendants();
+        converted.fragmentInfo = converted.descendants.getFirst();
         converted.unappliedEffects = convertEffects(simple);
+        // maybe don't do this if version is not current
+        UpToDate.setUpToDate(converted);
         return converted;
     }
 
@@ -30,8 +34,10 @@ public class FragmentMetadataConverter {
             .collect(Collectors.toSet());
         Set<String> ancestorIds = metadata.ancestors().stream()
             .map(level -> level.id)
-            .filter(id -> !id.equals(metadata.fragment()))
             .collect(Collectors.toSet());
+        String fragmentId = metadata.descendants().stream().findFirst().map(level -> level.id).orElse(null);
+        ancestorIds.remove(fragmentId);
+
         List<Effect> all = metadata.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
         List<Effect> direct = Effects.removeThoseWithNoRelevantSection(all, descendantIds, false);
         List<Effect> ancestor = Effects.removeThoseWithNoRelevantSection(all, ancestorIds, true);

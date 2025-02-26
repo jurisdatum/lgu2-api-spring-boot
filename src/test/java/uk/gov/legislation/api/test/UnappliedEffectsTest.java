@@ -98,10 +98,17 @@ class UnappliedEffectsTest {
     @MethodSource("provide")
     void filtered(String id) throws Exception {
         String clml = read(id, ".xml");
-        Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
-        Set<String> ids = meta.ancestors().stream().map(l -> l.id).collect(Collectors.toSet());
-        meta.descendants().stream().map(l -> l.id).forEach(ids::add);
-        List<uk.gov.legislation.transform.simple.effects.Effect> effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects, ids, true);
+        Metadata meta;
+        List<uk.gov.legislation.transform.simple.effects.Effect> effects;
+        if (TransformTest.isFragment(id)) {
+            meta = simplifier.extractFragmentMetadata(clml);
+            Set<String> ids = meta.ancestors().stream().map(l -> l.id).collect(Collectors.toSet());
+            meta.descendants().stream().map(l -> l.id).forEach(ids::add);
+            effects = Effects.removeThoseWithNoRelevantSection(meta.rawEffects, ids, true);
+        } else {
+            meta = simplifier.extractDocumentMetadata(clml);
+            effects = meta.rawEffects;
+        }
         String actual = mapper.writeValueAsString(effects);
         String expected = read(id,"-effects-filtered.json");
         Assertions.assertEquals(expected, actual);

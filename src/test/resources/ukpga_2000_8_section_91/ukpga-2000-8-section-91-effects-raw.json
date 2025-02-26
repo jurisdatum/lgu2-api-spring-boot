@@ -624,6 +624,9 @@
     "error" : "Section missing in legislation",
     "missing" : true
   }, {
+    "type" : "text",
+    "text" : " "
+  }, {
     "type" : "section",
     "text" : "2B",
     "ref" : "schedule-2B",
@@ -788,11 +791,7 @@
     "missing" : true
   }, {
     "type" : "text",
-    "text" : " and cross-heading",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : " and cross-heading"
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
@@ -1055,11 +1054,7 @@
     "missing" : true
   }, {
     "type" : "text",
-    "text" : " and cross-heading",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : " and cross-heading"
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
@@ -1231,26 +1226,29 @@
   "affectedTitle" : "Financial Services and Markets Act 2000",
   "affectedProvisionsText" : "s. 395(13)(bc)-(be)",
   "affectedProvisions" : [ {
-    "type" : "section",
-    "text" : "s. 395(13)(bc)",
-    "ref" : "section-395-13-bc",
+    "type" : "range",
+    "start" : "section-395-13-bc",
+    "end" : "section-395-13-be",
     "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc",
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "text",
-    "text" : "-",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
-  }, {
-    "type" : "section",
-    "text" : "(be)",
-    "ref" : "section-395-13-be",
-    "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be",
-    "error" : null,
-    "missing" : false
+    "upTo" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be",
+    "children" : [ {
+      "type" : "section",
+      "text" : "s. 395(13)(bc)",
+      "ref" : "section-395-13-bc",
+      "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc",
+      "error" : null,
+      "missing" : false
+    }, {
+      "type" : "text",
+      "text" : "-"
+    }, {
+      "type" : "section",
+      "text" : "(be)",
+      "ref" : "section-395-13-be",
+      "uri" : "http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be",
+      "error" : null,
+      "missing" : false
+    } ]
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
@@ -1437,11 +1435,7 @@
     "missing" : false
   }, {
     "type" : "text",
-    "text" : " and word",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : " and word"
   } ],
   "affectedExtent" : null,
   "affectedEffectsExtent" : null,
@@ -1496,11 +1490,7 @@
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : "Act"
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",
@@ -1548,11 +1538,7 @@
   "affectedProvisionsText" : "Act",
   "affectedProvisions" : [ {
     "type" : "text",
-    "text" : "Act",
-    "ref" : null,
-    "uri" : null,
-    "error" : null,
-    "missing" : false
+    "text" : "Act"
   } ],
   "affectedExtent" : "E+W+S+N.I.",
   "affectedEffectsExtent" : "S+A+M+E+A+S+A+F+F+E+C+T+E+D",

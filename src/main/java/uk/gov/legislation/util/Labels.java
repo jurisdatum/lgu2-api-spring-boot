@@ -1,6 +1,5 @@
 package uk.gov.legislation.util;
 
-
 import uk.gov.legislation.transform.simple.Level;
 
 import static org.springframework.util.StringUtils.capitalize;

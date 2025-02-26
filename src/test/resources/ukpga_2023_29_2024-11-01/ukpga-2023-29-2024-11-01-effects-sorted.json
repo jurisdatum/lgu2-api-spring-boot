@@ -625,6 +625,9 @@
     "error" : null,
     "missing" : false
   }, {
+    "type" : "text",
+    "text" : " "
+  }, {
     "type" : "section",
     "text" : "Sch.",
     "ref" : "schedule",
