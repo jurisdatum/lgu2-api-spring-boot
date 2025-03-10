@@ -1,6 +1,7 @@
 package uk.gov.legislation.data.virtuoso;
 
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 import java.net.URI;
@@ -14,12 +15,22 @@ import java.nio.charset.StandardCharsets;
 @Component
 public class Virtuoso {
 
-    public final URI VIRTUSO_URL= URI.create("http://e-leg-poc-lon-nlb-access-553dd9d8d29abe0c.elb.eu-west-2.amazonaws.com:8890/sparql");
+    private final URI VIRTUOSO_URL;
+
+    public Virtuoso(Environment env) {
+        String host = env.getProperty("VIRTUOSO_HOST");
+        String port = env.getProperty("VIRTUOSO_PORT");
+
+        if (host == null || port == null) {
+            throw new IllegalArgumentException("VIRTUOSO_HOST or VIRTUOSO_PORT cannot be null");
+        }
+        this.VIRTUOSO_URL = URI.create("http://" + host + ":" + port + "/sparql");
+    }
 
     // Query method called from metadata api
     JsonResults query(String query) throws IOException, InterruptedException {
         String body = "query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
-        HttpRequest request = HttpRequest.newBuilder().uri(VIRTUSO_URL)
+        HttpRequest request = HttpRequest.newBuilder().uri(VIRTUOSO_URL)
                 .POST(HttpRequest.BodyPublishers.ofString(body))
                 .header("Content-Type", "application/x-www-form-urlencoded")
                 .header("Accept", "application/sparql-results+json")
@@ -37,11 +48,11 @@ public class Virtuoso {
                 .header("Accept", acceptHeader);
 
         if (isGetRequest) {
-            URI getUri = URI.create(VIRTUSO_URL + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+            URI getUri = URI.create(VIRTUOSO_URL + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
             requestBuilder.uri(getUri).GET();
         } else {
             String body = "query=" + query;
-            requestBuilder.uri(URI.create(String.valueOf(VIRTUSO_URL)))
+            requestBuilder.uri(URI.create(String.valueOf(VIRTUOSO_URL)))
                     .POST(HttpRequest.BodyPublishers.ofString(body))
                     .header("Content-Type", "application/x-www-form-urlencoded");
         }
