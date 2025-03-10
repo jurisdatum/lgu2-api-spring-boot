@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.contents.controller;
+package uk.gov.legislation.endpoints.contents;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -8,7 +8,6 @@ import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.data2.Effects;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.contents.api.ContentsApi;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
@@ -22,14 +21,14 @@ import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 
 
 @RestController
-public class ContentsApiController implements ContentsApi {
+public class ContentsController implements ContentsApi {
 
     private final Legislation markLogic;
     private final Clml2Akn clml2akn;
     private final Simplify simplifier;
     private final Effects effects;
 
-    public ContentsApiController(Legislation markLogic, Simplify simplifier, Clml2Akn clml2akn, Effects effects) {
+    public ContentsController(Legislation markLogic, Simplify simplifier, Clml2Akn clml2akn, Effects effects) {
         this.markLogic = markLogic;
         this.clml2akn = clml2akn;
         this.simplifier = simplifier;

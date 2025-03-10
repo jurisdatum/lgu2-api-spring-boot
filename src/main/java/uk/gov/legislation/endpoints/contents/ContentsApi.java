@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.contents.api;
+package uk.gov.legislation.endpoints.contents;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
