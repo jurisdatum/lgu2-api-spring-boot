@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.search.api;
+package uk.gov.legislation.endpoints.search;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;

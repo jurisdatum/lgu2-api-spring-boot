@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.search.controller;
+package uk.gov.legislation.endpoints.search;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,7 +6,6 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
-import uk.gov.legislation.endpoints.search.api.SearchApi;
 
 import java.io.IOException;
 
@@ -14,11 +13,11 @@ import static uk.gov.legislation.endpoints.ParameterValidator.*;
 
 
 @RestController
-public class SearchApiController implements SearchApi {
+public class SearchController implements SearchApi {
 
     private final Search db;
 
-    public SearchApiController(Search db) {
+    public SearchController(Search db) {
         this.db = db;
     }
 
