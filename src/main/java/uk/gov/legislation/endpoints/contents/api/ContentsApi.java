@@ -65,7 +65,8 @@ public interface ContentsApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestParam(required = false, defaultValue = "false") boolean inForce,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
@@ -74,6 +75,7 @@ public interface ContentsApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestParam(required = false, defaultValue = "false") boolean inForce,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) throws Exception;
 
 }

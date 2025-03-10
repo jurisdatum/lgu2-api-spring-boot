@@ -3,6 +3,7 @@ package uk.gov.legislation.api.responses;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public class TableOfContents {
@@ -53,6 +54,10 @@ public class TableOfContents {
 
         @Schema(example = "section-1")
         public String ref;
+
+        @Schema
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public LocalDate inForce;
 
         @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
         @JsonInclude(JsonInclude.Include.NON_NULL)

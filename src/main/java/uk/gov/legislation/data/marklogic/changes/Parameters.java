@@ -20,7 +20,10 @@ public class Parameters {
     private Integer affectingNumber;
     private String affectingTitle;
 
+    private String effect;
+
     private Integer page;
+    private Integer resultsCount;
 
     public static Builder builder() {
         return new Builder();
@@ -96,14 +99,35 @@ public class Parameters {
             return this;
         }
 
+        public Builder type(String type) {
+            params.effect = type;
+            return this;
+        }
+
         public Builder page(int page) {
             params.page = page;
             return this;
         }
+
+        public Builder pageSize(int size) {
+            params.resultsCount = size;
+            return this;
+        }
+
         public Parameters build() {
             return params;
         }
 
+    }
+
+    public static Parameters comingIntoForce(String type, int year, int number) {
+        return builder()
+            .affectedType(type)
+            .affectedYear(year)
+            .affectedNumber(number)
+            .type("coming into force")
+            .pageSize(1000)
+            .build();
     }
 
 }

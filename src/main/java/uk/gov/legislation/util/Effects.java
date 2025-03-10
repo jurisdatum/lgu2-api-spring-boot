@@ -56,6 +56,16 @@ public class Effects {
         return false;
     }
 
+    public static boolean relatesTo(Effect effect, String id) {
+        List<RichTextNode.Section> sections = getAffectedSections(effect);
+        if (sections.isEmpty())
+            return false;
+        if (sections.stream().anyMatch(n -> id.equals(n.ref)))
+            return true;
+        List<RichTextNode.Range> ranges = getAffectedRanges(effect);
+        return ranges.stream().anyMatch(range -> rangeIncludes(range, id));
+    }
+
     static boolean relatesTo(Effect effect, Set<String> ids, boolean includeWhole) {
         List<RichTextNode.Section> sections = getAffectedSections(effect);
         if (sections.isEmpty())
