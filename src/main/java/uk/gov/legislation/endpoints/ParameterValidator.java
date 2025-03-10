@@ -20,12 +20,12 @@ public class ParameterValidator {
     }
 
     public static void validateType(String type) {
-        if (type != null && type.isBlank()) {
+        if (type == null)
+            return;
+        if (type.isBlank())
             throw new UnknownTypeException(type);
-        }
-        if (!Types.isValidShortType(type)) {
+        if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
-        }
     }
 
 }
