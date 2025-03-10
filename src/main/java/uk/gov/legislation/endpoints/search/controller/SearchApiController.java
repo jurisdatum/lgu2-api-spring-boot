@@ -3,8 +3,10 @@ package uk.gov.legislation.endpoints.search.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.converters.DocumentsFeedConverter;
+import uk.gov.legislation.data.marklogic.search.Search;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.api.SearchApi;
-import uk.gov.legislation.endpoints.search.service.SearchService;
 
 import java.io.IOException;
 
@@ -14,10 +16,10 @@ import static uk.gov.legislation.endpoints.ParameterValidator.*;
 @RestController
 public class SearchApiController implements SearchApi {
 
-    private final SearchService searchService;
+    private final Search db;
 
-    public SearchApiController(SearchService searchService) {
-        this.searchService = searchService;
+    public SearchApiController(Search db) {
+        this.db = db;
     }
 
     @Override
@@ -31,7 +33,9 @@ public class SearchApiController implements SearchApi {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
-        return ResponseEntity.ok(searchService.getJsonSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, language, page));
+        SearchResults raw = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
+        PageOfDocuments converted = DocumentsFeedConverter.convert(raw);
+        return ResponseEntity.ok(converted);
     }
 
     @Override
@@ -45,7 +49,8 @@ public class SearchApiController implements SearchApi {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
-        return ResponseEntity.ok(searchService.getAtomSearchByTitleAndTypeAndYearAndNumber(title,type,year,number, language, page));
+        String atom = db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
+        return ResponseEntity.ok(atom);
     }
 
 }
