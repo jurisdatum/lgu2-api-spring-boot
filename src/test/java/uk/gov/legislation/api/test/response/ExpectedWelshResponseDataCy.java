@@ -53,7 +53,8 @@ public class ExpectedWelshResponseDataCy {
                         "formats": [
                             "xml"
                         ],
-                        "unappliedEffects": []
+                        "unappliedEffects": [],
+                        "upToDate": true
                     },
                     "contents": {
                         "title": "Rheoliadau Addysg (Diwygiadau sy’n Ymwneud â Chydlynu Trefniadau Derbyn Ysgolion) (Cymru) 2024",
@@ -106,9 +107,17 @@ public class ExpectedWelshResponseDataCy {
                           "fragment": "regulation/2",
                           "prev": "regulation/1",
                           "next": "regulation/3",
+                          "fragmentInfo": {
+                              "element": "P1",
+                              "id": "regulation-2",
+                              "href": "wsi/2024/1002/regulation/2/made/welsh",
+                              "number": "2",
+                              "title": "Diwygio Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024",
+                              "label": "Regulation 2"
+                          },
                           "ancestors": [
                               {
-                                  "name": "P1",
+                                  "element": "P1",
                                   "id": "regulation-2",
                                   "href": "wsi/2024/1002/regulation/2/made/welsh",
                                   "number": "2",
@@ -118,7 +127,7 @@ public class ExpectedWelshResponseDataCy {
                           ],
                           "descendants": [
                               {
-                                  "name": "P1",
+                                  "element": "P1",
                                   "id": "regulation-2",
                                   "href": "wsi/2024/1002/regulation/2/made/welsh",
                                   "number": "2",
@@ -126,7 +135,7 @@ public class ExpectedWelshResponseDataCy {
                                   "label": "Regulation 2"
                               },
                               {
-                                  "name": "P2",
+                                  "element": "P2",
                                   "id": "regulation-2-1",
                                   "href": "wsi/2024/1002/regulation/2/1/made/welsh",
                                   "number": "1",
@@ -134,7 +143,7 @@ public class ExpectedWelshResponseDataCy {
                                   "label": "P2"
                               },
                               {
-                                  "name": "P2",
+                                  "element": "P2",
                                   "id": "regulation-2-2",
                                   "href": "wsi/2024/1002/regulation/2/2/made/welsh",
                                   "number": "2",
@@ -142,7 +151,7 @@ public class ExpectedWelshResponseDataCy {
                                   "label": "P2"
                               },
                               {
-                                  "name": "P3",
+                                  "element": "P3",
                                   "id": "regulation-2-2-a",
                                   "href": "wsi/2024/1002/regulation/2/2/a/made/welsh",
                                   "number": "a",
@@ -150,7 +159,7 @@ public class ExpectedWelshResponseDataCy {
                                   "label": "P3"
                               },
                               {
-                                  "name": "P3",
+                                  "element": "P3",
                                   "id": "regulation-2-2-b",
                                   "href": "wsi/2024/1002/regulation/2/2/b/made/welsh",
                                   "number": "b",
@@ -158,7 +167,7 @@ public class ExpectedWelshResponseDataCy {
                                   "label": "P3"
                               },
                               {
-                                  "name": "P2",
+                                  "element": "P2",
                                   "id": "regulation-2-3",
                                   "href": "wsi/2024/1002/regulation/2/3/made/welsh",
                                   "number": "3",
@@ -169,7 +178,8 @@ public class ExpectedWelshResponseDataCy {
                           "unappliedEffects": {
                               "fragment": [],
                               "ancestor": []
-                          }
+                          },
+                          "upToDate": true
                       },
                       "html": "<article class=\\"act secondary wsi\\"><div class=\\"body\\"><section class=\\"hcontainer regulation\\" id=\\"regulation-2\\" data-uk-target=\\"true\\"><h2><span class=\\"heading\\">Diwygio Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024</span><span class=\\"num\\">2.</span></h2><section class=\\"paragraph\\" id=\\"regulation-2-1\\"><h2><span class=\\"num\\">(1)</span></h2><div class=\\"content\\">\\n<div class=\\"p\\">Mae Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024<a class=\\"fnRef\\" id=\\"ref-d1e128\\" href=\\"#d1e128\\">3</a> wedi eu diwygio fel a ganlyn.</div>\\n</div></section><section class=\\"paragraph\\" id=\\"regulation-2-2\\"><h2><span class=\\"num\\">(2)</span></h2><div class=\\"intro\\"><p>Yn rheoliad 2(1)—</p></div><div class=\\"level para1\\" id=\\"regulation-2-2-a\\"><h3><span class=\\"num\\">(a)</span></h3><div class=\\"content\\">\\n<p>yn y diffiniad o “cynllun Gweinidogion Cymru”, yn lle “is-adran” rhodder “adran”, a</p>\\n</div></div><div class=\\"level para1\\" id=\\"regulation-2-2-b\\"><h3><span class=\\"num\\">(b)</span></h3><div class=\\"content\\">\\n<p>hepgorer y diffiniad o “diwrnod gwaith”.</p>\\n</div></div></section><section class=\\"paragraph\\" id=\\"regulation-2-3\\"><h2><span class=\\"num\\">(3)</span></h2><div class=\\"content\\">\\n<p>Yn rheoliad 7(3)(a), yn lle “578(1)” rhodder “578”.</p>\\n</div></section></section></div><footer class=\\"footnotes\\"><div class=\\"authorialNote footnote\\" id=\\"f00003\\" data-marker=\\"3\\"><a class=\\"marker\\" id=\\"d1e128\\" href=\\"#ref-d1e128\\">3</a>\\n\\n\\n<p><cite><a href=\\"http://www.legislation.gov.uk/id/wsi/2024/698/welsh\\">O.S. 2024/698 (Cy. 96)</a></cite>.</p>\\n\\n\\n</div></footer></article>"
                   }
