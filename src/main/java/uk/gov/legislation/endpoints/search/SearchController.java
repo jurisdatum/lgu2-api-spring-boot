@@ -11,7 +11,6 @@ import java.io.IOException;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
 
-
 @RestController
 public class SearchController implements SearchApi {
 
@@ -19,6 +18,21 @@ public class SearchController implements SearchApi {
 
     public SearchController(Search db) {
         this.db = db;
+    }
+
+    @Override
+    public ResponseEntity<String> searchByAtom(
+            String title,
+            String type,
+            Integer year,
+            Integer number,
+            int page,
+            String language) throws IOException, InterruptedException {
+        validateType(type);
+        validateTitle(title);
+        validateLanguage(language);
+        String atom = db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
+        return ResponseEntity.ok(atom);
     }
 
     @Override
@@ -35,21 +49,6 @@ public class SearchController implements SearchApi {
         SearchResults raw = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
         PageOfDocuments converted = DocumentsFeedConverter.convert(raw);
         return ResponseEntity.ok(converted);
-    }
-
-    @Override
-    public ResponseEntity<String> searchByAtom(
-            String title,
-            String type,
-            Integer year,
-            Integer number,
-            int page,
-            String language) throws IOException, InterruptedException {
-        validateType(type);
-        validateTitle(title);
-        validateLanguage(language);
-        String atom = db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
-        return ResponseEntity.ok(atom);
     }
 
 }
