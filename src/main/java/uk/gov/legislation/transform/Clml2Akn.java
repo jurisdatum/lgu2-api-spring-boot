@@ -60,6 +60,11 @@ public class Clml2Akn {
         return transform(stream);
     }
 
+    public String transformToString(String clml) throws SaxonApiException {
+        XdmNode akn = transform(clml);
+        return serialize(akn);
+    }
+
     static final Properties Properties = new Properties();
     static {
         Properties.setProperty(Serializer.Property.INDENT.toString(), "yes");

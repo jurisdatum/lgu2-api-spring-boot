@@ -9,7 +9,7 @@ import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.data2.Effects;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.contents.api.ContentsApi;
-import uk.gov.legislation.endpoints.contents.service.ContentsService;
+import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.effects.Effect;
@@ -17,7 +17,6 @@ import uk.gov.legislation.util.InForce;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Function;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 
@@ -26,24 +25,19 @@ import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 public class ContentsApiController implements ContentsApi {
 
     private final Legislation markLogic;
+    private final Clml2Akn clml2akn;
     private final Simplify simplifier;
     private final Effects effects;
-    private final ContentsService contentsService;
-    /**
-     * Constructor that initializes the ContentsApiController with the required contents service.
-     *
-     * @param contentsService  Service that provides methods to fetch and transform document contents
-     */
-    public ContentsApiController(Legislation markLogic, Simplify simplifier, Effects effects, ContentsService contentsService) {
+
+    public ContentsApiController(Legislation markLogic, Simplify simplifier, Clml2Akn clml2akn, Effects effects) {
         this.markLogic = markLogic;
+        this.clml2akn = clml2akn;
         this.simplifier = simplifier;
         this.effects = effects;
-        this.contentsService = contentsService;
     }
 
     /**
      * Retrieves the document contents in CLML (Custom Markup Language) XML format.
-     *
      * @param type     The document type identifier
      * @param year     The publication year of the document
      * @param number   The document number
@@ -52,7 +46,6 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
         return getDocumentContentsClml(type, Integer.toString(year), number, version, language);
     }
     /**
@@ -61,31 +54,37 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
         String regnalYear = String.join("/", monarch, years);
         return getDocumentContentsClml(type, regnalYear, number, version, language);
     }
-    private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version, String validatedLanguage) {
-        return contentsService.fetchAndTransform(type, year, number, version, Function.identity(), validatedLanguage);
+
+    private ResponseEntity<String> getDocumentContentsClml(String type, String year, int number, Optional<String> version, String language) {
+        validateLanguage(language);
+        Legislation.Response leg = markLogic.getTableOfContents(type, year, number, version, Optional.of(language));
+        String body = leg.clml();
+        HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
+        return ResponseEntity.ok().headers(headers).body(body);
     }
 
-    /**
-     * Retrieves the document contents in AKN (Akoma Ntoso) XML format.
-     * Converts the CLML format to AKN XML format using the contents service.
-     */
+    /* Akoma Ntoso */
+
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+    public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, String language) throws Exception {
         return getDocumentContentsAkn(type, Integer.toString(year), number, version, language);
     }
+
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, String language) throws Exception {
         String regnalYear = String.join("/", monarch, years);
         return getDocumentContentsAkn(type, regnalYear, number, version, language);
     }
-    private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version, String validatedLanguage) {
-        return contentsService.fetchAndTransform(type, year, number, version, contentsService::transformToAkn, validatedLanguage);
+
+    private ResponseEntity<String> getDocumentContentsAkn(String type, String year, int number, Optional<String> version, String language) throws Exception {
+        validateLanguage(language);
+        Legislation.Response leg = markLogic.getTableOfContents(type, year, number, version, Optional.of(language));
+        String akn = clml2akn.transformToString(leg.clml());
+        HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
+        return ResponseEntity.ok().headers(headers).body(akn);
     }
 
     /* JSON */
