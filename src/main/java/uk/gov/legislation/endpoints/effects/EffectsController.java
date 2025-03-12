@@ -32,6 +32,7 @@ public class EffectsController implements EffectsApi {
         Integer sourceYear,
         Integer sourceNumber,
         String sourceTitle,
+        String type,
         int page
     ) throws IOException, InterruptedException {
         Parameters params = Parameters.builder()
@@ -43,6 +44,7 @@ public class EffectsController implements EffectsApi {
             .affectingYear(sourceYear)
             .affectingNumber(sourceNumber)
             .affectingTitle(sourceTitle)
+            .type(type)
             .page(page)
             .build();
         return db.fetch(params);
@@ -57,9 +59,10 @@ public class EffectsController implements EffectsApi {
         Integer sourceYear,
         Integer sourceNumber,
         String sourceTitle,
+        String type,
         int page
     ) throws IOException, InterruptedException, SaxonApiException {
-        String atom = atom(targetType, targetYear, targetNumber, targetTitle, sourceType, sourceYear, sourceNumber, sourceTitle, page);
+        String atom = atom(targetType, targetYear, targetNumber, targetTitle, sourceType, sourceYear, sourceNumber, sourceTitle, type, page);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);
     }

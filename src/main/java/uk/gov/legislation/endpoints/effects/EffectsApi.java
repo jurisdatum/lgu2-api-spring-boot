@@ -24,6 +24,7 @@ public interface EffectsApi {
         @RequestParam(required = false) @Year Integer sourceYear,
         @RequestParam(required = false) @Number Integer sourceNumber,
         @RequestParam(required = false) @Title String sourceTitle,
+        @RequestParam(required = false) String type,
         @RequestParam(required = false, defaultValue = "1") @Page int page
     ) throws IOException, InterruptedException;
 
@@ -37,6 +38,7 @@ public interface EffectsApi {
         @RequestParam(required = false) Integer sourceYear,
         @RequestParam(required = false) Integer sourceNumber,
         @RequestParam(required = false) String sourceTitle,
+        @RequestParam(required = false) String type,
         @RequestParam(required = false, defaultValue = "1") int page
     ) throws IOException, InterruptedException, SaxonApiException;
 
