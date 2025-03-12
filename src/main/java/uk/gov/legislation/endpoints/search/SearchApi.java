@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.search.api;
+package uk.gov.legislation.endpoints.search;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
@@ -21,8 +21,6 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false, defaultValue = "1") int page,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language
-
-
     ) throws IOException, InterruptedException;
 
 
@@ -34,8 +32,6 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false, defaultValue = "1") int page,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language
-
-
     ) throws IOException, InterruptedException;
 
 }
