@@ -28,7 +28,7 @@ public class Virtuoso {
     }
 
     // Query method called from metadata api
-    JsonResults query(String query) throws IOException, InterruptedException {
+    public JsonResults query(String query) throws IOException, InterruptedException {
         String body = "query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
         HttpRequest request = HttpRequest.newBuilder().uri(VIRTUOSO_URL)
                 .POST(HttpRequest.BodyPublishers.ofString(body))
