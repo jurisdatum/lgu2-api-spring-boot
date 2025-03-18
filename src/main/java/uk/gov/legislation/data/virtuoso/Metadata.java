@@ -22,13 +22,26 @@ public class Metadata {
         this.virtuoso = virtuoso;
     }
 
-    /**
-     * Retrieves an Item based on type, year, and number.
-     * Fetches RDF data, processes statements, and maps them to an Item object.
-     */
-    public  Item get(String type, int year, int number) throws IOException, InterruptedException {
-        JsonResults json = getJson(type, year, number);
-        List<Statement> triples = triples(json);
+    /* for a single document */
+
+    public String get(String type, int year, int number, String format) throws IOException, InterruptedException {
+        String query = """
+            PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
+            SELECT ?s ?p ?o
+            WHERE {
+               GRAPH ?g {
+                  <http://www.legislation.gov.uk/id/%s/%s/%d> a leg:Item .
+                  ?s ?p ?o
+               }
+            }
+            """.formatted(type, year, number);
+        return virtuoso.query(query, format);
+    }
+
+    public Item get(String type, int year, int number) throws IOException, InterruptedException {
+        String json = get(type, year, number, "application/sparql-results+json");
+        JsonResults parsed = JsonResults.parse(json);
+        List<Statement> triples = triples(parsed);
         if (triples.isEmpty())
             return null;
         Map<URI, Map<URI, List<TypedValue>>> grouped = Statement.groupBySubjectAndPredicate(triples);
@@ -51,24 +64,7 @@ public class Metadata {
         return item;
     }
 
-
-    /**
-     * Create Query for getting single Metadata Item
-     */
-    private JsonResults getJson(String type, int year, int number) throws IOException, InterruptedException {
-        String query = """
-            PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
-            SELECT ?s ?p ?o
-            WHERE {
-               GRAPH ?g {
-                  <http://www.legislation.gov.uk/id/%s/%s/%d> a leg:Item .
-                  ?s ?p ?o
-               }
-            }
-            """.formatted(type, year, number);
-        return virtuoso.query(query);
-    }
-
+    /* for a list of documents */
 
     public List<MetadataItem> getListOfMetadata(String type, int year, int limit, int offset) throws IOException, InterruptedException {
         JsonResults json = getJsonListOfMetadata(type, year, limit, offset);
