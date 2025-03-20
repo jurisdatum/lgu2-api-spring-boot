@@ -41,6 +41,7 @@ public class Virtuoso {
         }
         return JsonResults.parse(response.body());
     }
+
     // Query method called from sparql api
     public String query(String query, boolean isGetRequest, HttpServletRequest requests) throws IOException, InterruptedException {
         String acceptHeader = determineAcceptHeader(requests);
@@ -79,9 +80,12 @@ public class Virtuoso {
 
         return switch (format.toLowerCase()) {
             case "application/json" -> "application/sparql-results+json";
-            case "application/xml" -> "application/sparql-results+xml";
-            case "text/csv", "text/plain" -> format;
-            default -> "application/sparql-results+json";
+            case "application/rdf+xml" -> "application/rdf+xml";
+            case "application/sparql-results+xml", "application/xml" -> "application/sparql-results+xml";
+            case "text/csv" -> "text/csv";
+            case "text/plain" -> "text/plain";
+            case "text/turtle" -> "text/turtle";
+            default -> throw new IllegalArgumentException("Invalid Header: "+ format); // Default to JSON if unknown
         };
     }
 }
