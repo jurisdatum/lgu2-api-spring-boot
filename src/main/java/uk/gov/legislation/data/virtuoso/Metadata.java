@@ -2,6 +2,7 @@ package uk.gov.legislation.data.virtuoso;
 
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.data.virtuoso.model.*;
+import uk.gov.legislation.data.virtuoso.queries.SparqlQueries;
 import uk.gov.legislation.data.virtuoso.rdf.RdfMapper;
 import uk.gov.legislation.data.virtuoso.rdf.Statement;
 import uk.gov.legislation.data.virtuoso.rdf.TypedValue;
@@ -16,10 +17,11 @@ import java.util.Map;
 @Component
 public class Metadata {
 
-    private final Virtuoso virtuoso;
 
-    public Metadata(Virtuoso virtuoso) {
-        this.virtuoso = virtuoso;
+    private final SparqlQueries queries;
+
+    public Metadata(SparqlQueries queries) {
+        this.queries = queries;
     }
 
     /**
@@ -27,7 +29,7 @@ public class Metadata {
      * Fetches RDF data, processes statements, and maps them to an Item object.
      */
     public  Item get(String type, int year, int number) throws IOException, InterruptedException {
-        JsonResults json = getJson(type, year, number);
+        JsonResults json = queries.getJsonMetadata(type, year, number);
         List<Statement> triples = triples(json);
         if (triples.isEmpty())
             return null;
@@ -52,26 +54,8 @@ public class Metadata {
     }
 
 
-    /**
-     * Create Query for getting single Metadata Item
-     */
-    private JsonResults getJson(String type, int year, int number) throws IOException, InterruptedException {
-        String query = """
-            PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
-            SELECT ?s ?p ?o
-            WHERE {
-               GRAPH ?g {
-                  <http://www.legislation.gov.uk/id/%s/%s/%d> a leg:Item .
-                  ?s ?p ?o
-               }
-            }
-            """.formatted(type, year, number);
-        return virtuoso.query(query);
-    }
-
-
     public List<MetadataItem> getListOfMetadata(String type, int year, int limit, int offset) throws IOException, InterruptedException {
-        JsonResults json = getJsonListOfMetadata(type, year, limit, offset);
+        JsonResults json = queries.getJsonListOfMetadata(type, year, limit, offset);
         List<Statement> triples = triple(json);
 
         if (triples.isEmpty()) return Collections.emptyList();
@@ -92,28 +76,6 @@ public class Metadata {
             items.add(filteredItem);
         }
         return items;
-    }
-
-    /**
-     * Constructs SPARQL query to fetch JSON results for metadata Item List.
-     */
-    private JsonResults getJsonListOfMetadata(String type, int year, int limit, int offset) throws IOException, InterruptedException {
-        String query = """
-                 PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
-                 SELECT * {
-                 ?item a [leg:acronym '%s'] ;
-                 leg:year %d ;
-                 leg:year ?year ;
-                 leg:title ?title ;
-                 leg:number ?number ;
-                 leg:citation ?cite .
-                 }
-                 ORDER BY DESC(?number)
-                 LIMIT %d
-                 OFFSET %d
-              
-                """.formatted(type, year,limit, offset);
-        return virtuoso.query(query);
     }
 
     /**
