@@ -1,10 +1,9 @@
-package uk.gov.legislation.endpoints.ld.sparql.controller;
+package uk.gov.legislation.endpoints.ld.sparql;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.endpoints.ld.Helper;
-import uk.gov.legislation.endpoints.ld.sparql.api.SparqlApi;
 
 @RestController
 public class SparqlController implements SparqlApi {

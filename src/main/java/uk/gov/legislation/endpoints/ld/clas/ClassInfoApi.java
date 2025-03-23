@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.classinfo.api;
+package uk.gov.legislation.endpoints.ld.clas;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @Tag(name = "Linked Data", description = "APIs for fetching class information")
 public interface ClassInfoApi {
 
-    @GetMapping(value = "/def/legislation/{className}",
+    @GetMapping(value = "/ld/class/{className}",
             produces = {
                     "application/json",
                     "application/rdf+xml",

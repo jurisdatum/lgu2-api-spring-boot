@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.sparql.api;
+package uk.gov.legislation.endpoints.ld.sparql;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
