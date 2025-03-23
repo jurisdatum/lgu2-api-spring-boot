@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @Tag(name = "Linked Data", description = "APIs for fetching class information")
 public interface ClassInfoApi {
 
-    @GetMapping(value = "/ld/class/{className}",
+    @GetMapping(value = "/ld/class/{name}",
             produces = {
                     "application/json",
                     "application/rdf+xml",
