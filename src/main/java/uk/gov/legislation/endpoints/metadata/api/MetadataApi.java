@@ -6,8 +6,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.data.virtuoso.model.Item;
 import uk.gov.legislation.data.virtuoso.model.MetadataItem;
 
 import java.io.IOException;
@@ -16,8 +16,20 @@ import java.util.List;
 @Tag(name = "Linked Data", description = "APIs for fetching metadata information")
 public interface MetadataApi {
 
-    @GetMapping(value = "/metadata/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<Item> getMetadata(
+    @GetMapping(
+            value = "/metadata/{type}/{year}/{number}",
+            produces = {
+                    "application/json",
+                    "application/rdf+xml",
+                    "application/sparql-results+json",
+                    "application/sparql-results+xml",
+                    "application/xml",
+                    "text/csv",
+                    "text/plain",
+                    "text/turtle"
+            }
+    )
+    ResponseEntity<String> getMetadata(
             @PathVariable
             @Parameter(description = "Type of ACT", example = "ukpga")
             String type,
@@ -26,8 +38,9 @@ public interface MetadataApi {
             int year,
             @PathVariable
             @Parameter(description = "Number", example = "1")
-            int number
-    ) throws IOException, InterruptedException;
+            int number,
+            @RequestHeader(value = "Accept") String accept
+    ) throws Exception;
 
     @GetMapping(value = "/metadata/{type}/{year}", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<List<MetadataItem>> getMetadataList(

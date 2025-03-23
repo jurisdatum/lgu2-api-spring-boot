@@ -17,42 +17,11 @@ import java.util.Map;
 @Component
 public class Metadata {
 
-
     private final SparqlQueries queries;
 
     public Metadata(SparqlQueries queries) {
         this.queries = queries;
     }
-
-    /**
-     * Retrieves an Item based on type, year, and number.
-     * Fetches RDF data, processes statements, and maps them to an Item object.
-     */
-    public  Item get(String type, int year, int number) throws IOException, InterruptedException {
-        JsonResults json = queries.getJsonMetadata(type, year, number);
-        List<Statement> triples = triples(json);
-        if (triples.isEmpty())
-            return null;
-        Map<URI, Map<URI, List<TypedValue>>> grouped = Statement.groupBySubjectAndPredicate(triples);
-        Item item = null;
-        List<Interpretation> interps = new ArrayList<>();
-        RdfMapper mapper = new RdfMapper();
-        for (Map.Entry<URI, Map<URI, List<TypedValue>>> entry: grouped.entrySet()) {
-            if (Resources.isItem(entry.getValue())) {
-                item = mapper.read(entry.getValue(), Item.class);
-                item.uri = entry.getKey();
-            }
-            if (Resources.isInterpretation(entry.getValue())) {
-                Interpretation interp = mapper.read(entry.getValue(), Interpretation.class);
-                interp.uri = entry.getKey();
-                interps.add(interp);
-            }
-        }
-        assert item != null;
-        item.interpretations = interps;
-        return item;
-    }
-
 
     public List<MetadataItem> getListOfMetadata(String type, int year, int limit, int offset) throws IOException, InterruptedException {
         JsonResults json = queries.getJsonListOfMetadata(type, year, limit, offset);
@@ -110,22 +79,6 @@ public class Metadata {
         }
 
         return statements;
-    }
-
-    /**
-     * Converts JSON results into a list of RDF statements using iteration.
-     */
-
-    private static List<Statement> triples(JsonResults json) {
-        List<Statement> triples = new ArrayList<>();
-        for (Map<String, JsonResults.Value> binding: json.results.bindings) {
-            URI subject = URI.create(binding.get("s").value);
-            URI predicate = URI.create(binding.get("p").value);
-            JsonResults.Value object = binding.get("o");
-            Statement triple = new Statement(subject, predicate, object);
-            triples.add(triple);
-        }
-        return triples;
     }
 
 }
