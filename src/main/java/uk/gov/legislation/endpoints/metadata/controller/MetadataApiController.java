@@ -6,26 +6,23 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.data.virtuoso.Metadata;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.model.Item;
-import uk.gov.legislation.data.virtuoso.model.MetadataItem;
 import uk.gov.legislation.endpoints.metadata.api.MetadataApi;
 
-import java.io.IOException;
 import java.util.List;
 
 @RestController
 public class MetadataApiController implements MetadataApi {
 
     private final uk.gov.legislation.data.virtuoso.queries.Item itemQuery;
-    private final Metadata metadata;
+    private final uk.gov.legislation.data.virtuoso.queries.Items itemsQuery;
     private final ObjectMapper jsonMapper;
     private final XmlMapper xmlMapper;
 
-    public MetadataApiController(uk.gov.legislation.data.virtuoso.queries.Item item, Metadata metadata, ObjectMapper mapper) {
+    public MetadataApiController(uk.gov.legislation.data.virtuoso.queries.Item item, uk.gov.legislation.data.virtuoso.queries.Items items, ObjectMapper mapper) {
         this.itemQuery = item;
-        this.metadata = metadata;
+        this.itemsQuery = items;
         this.jsonMapper = mapper;
         this.xmlMapper = new XmlMapper();
     }
@@ -54,13 +51,24 @@ public class MetadataApiController implements MetadataApi {
     }
 
     @Override
-    public ResponseEntity <List <MetadataItem>> getMetadataList(String type, int year, int page, int pageSize) throws IOException, InterruptedException {
-        int offset = (page - 1) * pageSize;
-        List <MetadataItem> items = metadata.getListOfMetadata(type, year, pageSize, offset);
-        if(items.isEmpty()) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No metadata found");
+    public ResponseEntity<String> getMetadataList(String type, int year, int page, int pageSize, String accept) throws Exception {
+
+        final int offset = (page - 1) * pageSize;
+
+        if (Virtuoso.Formats.contains(accept)) {
+            String data = itemsQuery.get(type, year, pageSize, offset, accept);
+            return ResponseEntity.ok().header(CONTENT_TYPE, accept).body(data);
         }
-        return ResponseEntity.ok(items);
+
+        List<Item> items = itemsQuery.get(type, year, pageSize, offset);
+
+        if ("application/xml".equals(accept)) {
+            String xml = xmlMapper.writeValueAsString(items);
+            return ResponseEntity.ok().header(CONTENT_TYPE, accept).body(xml);
+        }
+
+        String json = jsonMapper.writeValueAsString(items);
+        return ResponseEntity.ok().header(CONTENT_TYPE, "application/json").body(json);
     }
 
 }
