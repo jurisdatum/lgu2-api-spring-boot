@@ -18,7 +18,9 @@ public class SparqlController implements SparqlApi {
     public ResponseEntity<String> sparql(String query, String accept) throws Exception {
         String format = Helper.getFormat(accept);
         String response = virtuoso.query(query, format);
-        return ResponseEntity.ok().body(response);
+        return ResponseEntity.ok()
+            .header("Content-Type", format)
+            .body(response);
     }
 
 }
