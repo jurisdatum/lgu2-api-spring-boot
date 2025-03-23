@@ -17,7 +17,7 @@ import java.util.List;
 public interface MetadataApi {
 
     @GetMapping(value = "/metadata/{type}/{year}/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity <Item> getMetadata(
+    ResponseEntity<Item> getMetadata(
             @PathVariable
             @Parameter(description = "Type of ACT", example = "ukpga")
             String type,
@@ -30,7 +30,7 @@ public interface MetadataApi {
     ) throws IOException, InterruptedException;
 
     @GetMapping(value = "/metadata/{type}/{year}", produces = MediaType.APPLICATION_JSON_VALUE)
-     ResponseEntity<List<MetadataItem>> getMetadataList(
+    ResponseEntity<List<MetadataItem>> getMetadataList(
             @PathVariable
             @Parameter(description = "Type of ACT", example = "ukpga")
             String type,
@@ -41,6 +41,4 @@ public interface MetadataApi {
             @RequestParam(defaultValue = "5") int pageSize
     ) throws IOException, InterruptedException;
 
-
 }
-
