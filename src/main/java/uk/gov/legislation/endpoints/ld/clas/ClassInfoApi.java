@@ -24,7 +24,7 @@ public interface ClassInfoApi {
     )
     ResponseEntity<String> getClassInfo(
             @PathVariable
-            @Parameter(description = "Type of class", example = "Item") String className,
+            @Parameter(description = "Type of class", example = "Item") String name,
             @RequestHeader(value = "Accept") String accept
     ) throws Exception;
 
