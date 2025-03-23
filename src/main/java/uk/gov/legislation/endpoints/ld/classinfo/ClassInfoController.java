@@ -1,16 +1,16 @@
-package uk.gov.legislation.endpoints.ld.clas;
+package uk.gov.legislation.endpoints.ld.classinfo;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.data.virtuoso.queries.SparqlQueries;
+import uk.gov.legislation.data.virtuoso.queries.ClassInfo;
 import uk.gov.legislation.endpoints.ld.Helper;
 
 @RestController
 public class ClassInfoController implements ClassInfoApi {
 
-    private final SparqlQueries queries;
+    private final ClassInfo queries;
 
-    public ClassInfoController(SparqlQueries queries) {
+    public ClassInfoController(ClassInfo queries) {
         this.queries = queries;
     }
 

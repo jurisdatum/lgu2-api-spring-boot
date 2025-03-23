@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.metadata.api;
+package uk.gov.legislation.endpoints.ld.metadata;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;

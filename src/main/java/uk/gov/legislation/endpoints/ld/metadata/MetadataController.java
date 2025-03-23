@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.metadata.controller;
+package uk.gov.legislation.endpoints.ld.metadata;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
@@ -8,19 +8,18 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.model.Item;
-import uk.gov.legislation.endpoints.metadata.api.MetadataApi;
 
 import java.util.List;
 
 @RestController
-public class MetadataApiController implements MetadataApi {
+public class MetadataController implements MetadataApi {
 
     private final uk.gov.legislation.data.virtuoso.queries.Item itemQuery;
     private final uk.gov.legislation.data.virtuoso.queries.Items itemsQuery;
     private final ObjectMapper jsonMapper;
     private final XmlMapper xmlMapper;
 
-    public MetadataApiController(uk.gov.legislation.data.virtuoso.queries.Item item, uk.gov.legislation.data.virtuoso.queries.Items items, ObjectMapper mapper) {
+    public MetadataController(uk.gov.legislation.data.virtuoso.queries.Item item, uk.gov.legislation.data.virtuoso.queries.Items items, ObjectMapper mapper) {
         this.itemQuery = item;
         this.itemsQuery = items;
         this.jsonMapper = mapper;
