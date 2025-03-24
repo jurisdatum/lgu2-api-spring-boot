@@ -34,7 +34,8 @@ public interface MetadataApi {
             @PathVariable
             @Parameter(description = "Number", example = "1")
             int number,
-            @RequestHeader(value = "Accept") String accept
+            @RequestHeader(value = "Accept")
+            @Parameter(hidden = true)String accept
     ) throws Exception;
 
     @GetMapping(
@@ -59,7 +60,8 @@ public interface MetadataApi {
             int year,
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "5") int pageSize,
-            @RequestHeader(value = "Accept") String accept
+            @RequestHeader(value = "Accept")
+            @Parameter(hidden = true)String accept
     ) throws Exception;
 
 }

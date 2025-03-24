@@ -41,7 +41,8 @@ public interface SparqlApi {
                             """
             )
             String query,
-            @RequestHeader(value = "Accept") String accept
+            @RequestHeader(value = "Accept")
+            @Parameter(hidden = true)String accept
     ) throws Exception;
 
 }
