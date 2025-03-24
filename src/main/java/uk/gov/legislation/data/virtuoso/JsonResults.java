@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class JsonResults {
 
-    static JsonResults parse(String json) throws JsonProcessingException {
+    public static JsonResults parse(String json) throws JsonProcessingException {
         ObjectMapper mapper = new ObjectMapper()
             .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return mapper.readValue(json, JsonResults.class);

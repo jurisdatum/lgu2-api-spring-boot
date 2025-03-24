@@ -1,7 +1,9 @@
-package uk.gov.legislation.data.virtuoso;
+package uk.gov.legislation.data.virtuoso.queries;
 
+import org.springframework.stereotype.Repository;
+import uk.gov.legislation.data.virtuoso.JsonResults;
+import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.model.Interpretation;
-import uk.gov.legislation.data.virtuoso.model.Item;
 import uk.gov.legislation.data.virtuoso.model.Resources;
 import uk.gov.legislation.data.virtuoso.rdf.RdfMapper;
 import uk.gov.legislation.data.virtuoso.rdf.Statement;
@@ -13,34 +15,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class Metadata {
+@Repository
+public class Item {
 
-    public static Item get(String type, int year, int number) throws IOException, InterruptedException {
-        JsonResults json = getJson(type, year, number);
-        List<Statement> triples = triples(json);
-        if (triples.isEmpty())
-            return null;
-        Map<URI, Map<URI, List<TypedValue>>> grouped = Statement.groupBySubjectAndPredicate(triples);
-        Item item = null;
-        List<Interpretation> interps = new ArrayList<>();
-        RdfMapper mapper = new RdfMapper();
-        for (Map.Entry<URI, Map<URI, List<TypedValue>>> entry: grouped.entrySet()) {
-            if (Resources.isItem(entry.getValue())) {
-                item = mapper.read(entry.getValue(), Item.class);
-                item.uri = entry.getKey();
-            }
-            if (Resources.isInterpretation(entry.getValue())) {
-                Interpretation interp = mapper.read(entry.getValue(), Interpretation.class);
-                interp.uri = entry.getKey();
-                interps.add(interp);
-            }
-        }
-        item.interpretations = interps;
-        return item;
-    }
+    private final Virtuoso virtuoso;
 
-    private static JsonResults getJson(String type, int year, int number) throws IOException, InterruptedException {
-        String query = """
+    public Item(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+
+    public String makeSparqlQuery(String type, int year, int number) {
+        return """
             PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
             SELECT ?s ?p ?o
             WHERE {
@@ -50,8 +33,37 @@ public class Metadata {
                }
             }
             """.formatted(type, year, number);
-        JsonResults results = Virtuoso.query(query);
-        return results;
+    }
+
+    public String get(String type, int year, int number, String format) throws IOException, InterruptedException {
+        String query = makeSparqlQuery(type, year, number);
+        return virtuoso.query(query, format);
+    }
+
+    public uk.gov.legislation.data.virtuoso.model.Item get(String type, int year, int number) throws IOException, InterruptedException {
+        String json = get(type, year, number, "application/sparql-results+json");
+        JsonResults parsed = JsonResults.parse(json);
+        List<Statement> triples = triples(parsed);
+        if (triples.isEmpty())
+            return null;
+        Map<URI, Map<URI, List<TypedValue>>> grouped = Statement.groupBySubjectAndPredicate(triples);
+        uk.gov.legislation.data.virtuoso.model.Item item = null;
+        List<Interpretation> interps = new ArrayList<>();
+        RdfMapper mapper = new RdfMapper();
+        for (Map.Entry<URI, Map<URI, List<TypedValue>>> entry: grouped.entrySet()) {
+            if (Resources.isItem(entry.getValue())) {
+                item = mapper.read(entry.getValue(), uk.gov.legislation.data.virtuoso.model.Item.class);
+                item.uri = entry.getKey();
+            }
+            if (Resources.isInterpretation(entry.getValue())) {
+                Interpretation interp = mapper.read(entry.getValue(), Interpretation.class);
+                interp.uri = entry.getKey();
+                interps.add(interp);
+            }
+        }
+        assert item != null;
+        item.interpretations = interps;
+        return item;
     }
 
     private static List<Statement> triples(JsonResults json) {

@@ -17,9 +17,9 @@ public class Resources {
 
     }
 
-    static class Leg {
+    public static class Leg {
 
-        static final String Prefix = "http://www.legislation.gov.uk/def/legislation/";
+        public static final String Prefix = "http://www.legislation.gov.uk/def/legislation/";
 
         static final String Item = Prefix + "Item";
         static final String Interpretation = Prefix + "Interpretation";

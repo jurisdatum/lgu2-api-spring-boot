@@ -1,6 +1,7 @@
 package uk.gov.legislation.data.virtuoso.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import uk.gov.legislation.data.virtuoso.model.Resources.Leg;
 import uk.gov.legislation.data.virtuoso.model.Resources.RDF;
@@ -9,7 +10,7 @@ import uk.gov.legislation.data.virtuoso.rdf.RdfProperty;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
-
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Item {
 
     @JsonProperty(index = 0)
