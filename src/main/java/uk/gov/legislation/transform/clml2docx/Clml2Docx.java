@@ -14,32 +14,34 @@ import javax.xml.transform.stream.StreamSource;
 import net.sf.saxon.s9api.DocumentBuilder;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
+import org.springframework.stereotype.Service;
 import uk.gov.legislation.transform.clml2docx.Delegate.Resource;
 
 /**
  * Convert a CLML file to docx. 
  */
-public class TransformClmlToDocx {
+@Service
+public class Clml2Docx {
 	
 	private final Delegate delegate;
 	private final XSLT xslt;
-	private Logger logger = Logger.getLogger(TransformClmlToDocx.class.getName());
+	private final Logger logger = Logger.getLogger(Clml2Docx.class.getName());
 	
 	/**
 	 * 
 	 * @param delegate Provides access to the API that provides the source data
 	 * @throws IOException
 	 */
-	public TransformClmlToDocx(Delegate delegate) throws IOException {
+	public Clml2Docx(Delegate delegate) throws IOException {
 		this.delegate = delegate;
 		this.xslt = new XSLT(delegate);  
 	}
 	
-	public TransformClmlToDocx() throws IOException {
+	public Clml2Docx() throws IOException {
 		this.delegate = new LegislationApiDelegate();
 		this.xslt = new XSLT(delegate);
 	}
-	
+
 	/**
 	 * Convert a CLML file to docx
 	 * @param clml CLML to convert
@@ -108,7 +110,7 @@ public class TransformClmlToDocx {
 	 * @return Modified cache of the images
 	 * @throws IOException
 	 */
-	private LinkedHashMap<String, byte[]> fetchLinkedResources(List<String> resourceURIs, Map<String, Resource> cache) throws IOException {
+	private LinkedHashMap<String, byte[]> fetchLinkedResources(List<String> resourceURIs, Map<String, Resource> cache) {
 		LinkedHashMap<String, byte[]> resources = new LinkedHashMap<>();
 		for (String uri : resourceURIs) {
 			Resource resource;
@@ -134,7 +136,7 @@ public class TransformClmlToDocx {
 	 * Note that it doesn't match the logic used by the PDF generator, so it may use different crests 
 	 * It's also using crest images inside the jar, instead of fetching them from the website.  
 	 * @param clml CLML to convert
-	 * @param cache Existing cache of the images
+	 * @param resources Existing cache of the images
 	 * @throws IOException
 	 */
 	private void fetchCrest(XdmNode clml, LinkedHashMap<String, byte[]> resources) throws IOException {
@@ -167,8 +169,9 @@ public class TransformClmlToDocx {
 		}
 		if (crest != null) {
 			// read the crest from the embedded resources
-			InputStream input = getClass().getResourceAsStream("/images/" + crest);
+			InputStream input = getClass().getResourceAsStream("/transforms/clml2docx/images/" + crest);
 			byte[] image = input.readAllBytes();
+			input.close();
 			resources.put("crest.png", image);
 		}
 	}

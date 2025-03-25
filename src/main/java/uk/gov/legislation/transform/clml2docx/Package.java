@@ -22,10 +22,6 @@ import javax.xml.transform.stream.StreamResult;
 
 import net.sf.saxon.s9api.XdmNode;
 
-/**
- * Constructs an Office Open XML (OOXML) format file (docx) 
- * https://en.wikipedia.org/wiki/Office_Open_XML  
- */
 public class Package {
 	
 	XdmNode document;
@@ -37,7 +33,7 @@ public class Package {
 	XdmNode relationships;
 	XdmNode footnoteRelationships;
 	Map<String, byte[]> resources = new LinkedHashMap<>();
-	Logger logger = Logger.getLogger(Package.class.getName());
+	final Logger logger = Logger.getLogger(Package.class.getName());
 	
 	private final String[] components = new String[] {
 		"_rels/.rels",
@@ -46,7 +42,6 @@ public class Package {
 		"[Content_Types].xml"
 	};
 	
-	private ByteArrayOutputStream baos;
 	private ZipOutputStream zip;
 		
 	/**
@@ -55,7 +50,7 @@ public class Package {
 	 * @throws IOException
 	 */
 	byte[] save() throws IOException {
-		baos = new ByteArrayOutputStream();
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		zip = new ZipOutputStream(baos);
 		saveComponents();
 		saveCoreProperties();
@@ -77,8 +72,9 @@ public class Package {
 	private void saveComponents() throws IOException {
 		logger.log(Level.FINE, "bundling static components");
 		for (String component : components) {
-			InputStream input = this.getClass().getResourceAsStream("/components/" + component);
+			InputStream input = this.getClass().getResourceAsStream("/transforms/clml2docx/components/" + component);
 			byte[] data = input.readAllBytes();
+			input.close();
 			zip.putNextEntry(new ZipEntry(component));
 	        zip.write(data, 0, data.length);
 	        zip.closeEntry();
@@ -151,7 +147,7 @@ public class Package {
 	}
 
 	/**
-	 * Save the cross references into the docx file
+	 * Save the cross-references into the docx file
 	 * @throws IOException
 	 */	
 	private void saveRelationships() throws IOException {
@@ -162,7 +158,7 @@ public class Package {
 	}
 
 	/**
-	 * Save the footnote cross references into the docx file
+	 * Save the footnote cross-references into the docx file
 	 * @throws IOException
 	 */	
 	private void saveFootnoteRelationships() throws IOException {
