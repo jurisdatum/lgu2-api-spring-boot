@@ -25,13 +25,13 @@ public class DocumentApiController implements DocumentApi {
 
     private final DocumentService documentService;
     private final Legislation marklogic;
-    private final Transforms transform;
+    private final Transforms transforms;
 
 
-    public DocumentApiController(DocumentService documentService, Legislation marklogic, Transforms transform) {
+    public DocumentApiController(DocumentService documentService, Legislation marklogic, Transforms transforms) {
         this.documentService = documentService;
         this.marklogic = marklogic;
-        this.transform = transform;
+        this.transforms = transforms;
     }
 
     /**
@@ -172,7 +172,7 @@ public class DocumentApiController implements DocumentApi {
     private ResponseEntity<byte[]> docx(String type, String year, int number, Optional<String> version, String language) throws Exception {
         validateLanguage(language);
         Legislation.Response leg = marklogic.getDocument(type, year, number, version, Optional.of(language));
-        byte[] docx = transform.clml2docx(leg.clml());
+        byte[] docx = transforms.clml2docx(leg.clml());
         return CustomHeaders.ok(docx, leg.redirect());
     }
 

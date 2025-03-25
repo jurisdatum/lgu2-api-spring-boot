@@ -1,11 +1,16 @@
 package uk.gov.legislation.endpoints.fragment.controller;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.fragment.api.FragmentApi;
 import uk.gov.legislation.endpoints.fragment.service.FragmentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
+import uk.gov.legislation.transform.Transforms;
+
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -21,16 +26,14 @@ public class FragmentApiController implements FragmentApi {
 
     private final FragmentService fragmentService;
     private final TransformationService transformationService;
+    private final Legislation marklogic;
+    private final Transforms transforms;
 
-    /**
-     * Constructs a new FragmentApiController with the given fragment and transformation services.
-     *
-     * @param fragmentService        Service responsible for document retrieval
-     * @param transformationService  Service responsible for transforming documents into various formats
-     */
-    public FragmentApiController(FragmentService fragmentService, TransformationService transformationService) {
+    public FragmentApiController(FragmentService fragmentService, TransformationService transformationService, Legislation marklogic, Transforms transforms) {
         this.fragmentService = fragmentService;
         this.transformationService = transformationService;
+        this.marklogic = marklogic;
+        this.transforms = transforms;
     }
 
     /**
@@ -117,6 +120,26 @@ public class FragmentApiController implements FragmentApi {
     }
     private ResponseEntity<Fragment> getFragmentJson(String type, String year, int number, String section, Optional<String> version, String validatedLanguage) {
         return fragmentService.fetchAndTransform(type, year, number, section, version, transformationService::transformToJsonResponse, validatedLanguage);
+    }
+
+    /* Word (.docx) */
+
+    @Override
+    public ResponseEntity<byte[]> docx(String type, int year, int number, String section, Optional<String> version, String language) throws Exception {
+        return docx(type, Integer.toString(year), number, section, version, language);
+    }
+
+    @Override
+    public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, String section, Optional<String> version, String language) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        return docx(type, regnalYear, number, section, version, language);
+    }
+
+    private ResponseEntity<byte[]> docx(String type, String year, int number, String section, Optional<String> version, String language) throws Exception {
+        validateLanguage(language);
+        Legislation.Response leg = marklogic.getDocumentSection(type, year, number, section, version, Optional.of(language));
+        byte[] docx = transforms.clml2docx(leg.clml());
+        return CustomHeaders.ok(docx, leg.redirect());
     }
 
 }
