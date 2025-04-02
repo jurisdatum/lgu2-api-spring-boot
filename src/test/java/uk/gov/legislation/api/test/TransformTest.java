@@ -14,9 +14,11 @@ import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
 import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.UpToDate;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.time.LocalDate;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -106,12 +108,15 @@ class TransformTest {
             .registerModules(new JavaTimeModule())
             .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
             .enable(SerializationFeature.INDENT_OUTPUT);
+        LocalDate cutoff = LocalDate.of(2025, 3, 30);
         String actual;
         if (isFragment(id)) {
             Fragment fragment = fragmentService.transformToJsonResponse(clml);
+            UpToDate.setUpToDate(fragment.meta, cutoff);
             actual = mapper.writeValueAsString(fragment);
         } else {
             Document document = documentService.transformToJsonResponse(clml);
+            UpToDate.setUpToDate(document.meta, cutoff);
             actual = mapper.writeValueAsString(document);
         }
         String expected = read(id, ".json");
