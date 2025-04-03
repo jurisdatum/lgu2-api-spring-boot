@@ -10,7 +10,10 @@ public class UpToDate {
 
     public static void setUpToDate(DocumentMetadata meta) {
         LocalDate today = LocalDate.now();
-        meta.unappliedEffects.forEach(e -> markEffect(e, today));
+        setUpToDate(meta, today);
+    }
+    public static void setUpToDate(DocumentMetadata meta, LocalDate cutoff) {
+        meta.unappliedEffects.forEach(e -> markEffect(e, cutoff));
         meta.upToDate = meta.unappliedEffects.stream().noneMatch(effect -> effect.outstanding);
     }
 
@@ -18,7 +21,7 @@ public class UpToDate {
         LocalDate today = LocalDate.now();
         setUpToDate(meta, today);
     }
-    private static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {
+    public static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {
         meta.upToDate = UpToDate.mark(meta.unappliedEffects, cutoff);
     }
 

@@ -10,7 +10,9 @@ import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.endpoints.Application;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.util.UpToDate;
 
+import java.time.LocalDate;
 import java.util.stream.Stream;
 
 import static uk.gov.legislation.api.test.TransformTest.read;
@@ -35,6 +37,8 @@ class TocTest {
         String clml = read(id, "-contents.xml");
         Contents simple = simplifier.contents(clml);
         TableOfContents toc = TableOfContentsConverter.convert(simple);
+        LocalDate cutoff = LocalDate.of(2025, 3, 30);
+        UpToDate.setUpToDate(toc.meta, cutoff);
         String actual = UnappliedEffectsTest.mapper.writeValueAsString(toc);
         String expected = read(id, "-contents.json");
         Assertions.assertEquals(expected, actual);
