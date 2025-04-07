@@ -4,24 +4,38 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
 
+import java.util.List;
+import java.util.Locale;
+
 public class ParameterValidator {
 
 
-    public static void validateLanguage(String languageHeader) {
+    public static void validateLanguage(String acceptLanguageHeader) {
+        final List<Locale> supportedLocales = List.of(
+                Locale.forLanguageTag("en"),
+                Locale.forLanguageTag("cy"),
+                Locale.forLanguageTag("en-GB"),
+                Locale.forLanguageTag("cy-GB")
+        );
 
-        String[] languages = languageHeader.split(",");
+        List<Locale.LanguageRange> ranges = Locale.LanguageRange.parse(acceptLanguageHeader);
 
-        for (String language : languages) {
-            String lang = language.split(";")[0].trim();
-            /// Only compare the base language tag (e.g., "en-US" -> "en")
-            if (lang.startsWith("en") || lang.startsWith("cy")) {
-                return;
-            }
+        boolean isValid = ranges.stream()
+                .anyMatch(range -> {
+                    String code = range.getRange().toLowerCase(Locale.ROOT);
+                    return supportedLocales.stream()
+                            .anyMatch(locale ->
+                                    code.equals(locale.toLanguageTag()) ||
+                                            code.startsWith(locale.getLanguage() + "-")
+                            );
+                });
+
+        if (!isValid) {
+            throw new UnsupportedLanguageException(
+                    "Unsupported language. Supported: " +
+                            supportedLocales.stream().map(Locale::toLanguageTag).toList()
+            );
         }
-
-        throw new UnsupportedLanguageException(
-                "Unsupported Language: '" + languageHeader + "'. Only 'en' and 'cy' are supported.");
-
     }
 
     public static void validateTitle(String title) {
