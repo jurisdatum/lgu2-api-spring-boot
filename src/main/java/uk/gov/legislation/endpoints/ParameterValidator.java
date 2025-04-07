@@ -6,11 +6,22 @@ import uk.gov.legislation.util.Types;
 
 public class ParameterValidator {
 
-    public static void validateLanguage(String language) {
-        if (!language.equals("en") && !language.equals("cy")) {
-            throw new UnsupportedLanguageException("Unsupported Language, only (en and cy) is acceptable language: "
-                    + language + " is not acceptable");
+
+    public static void validateLanguage(String languageHeader) {
+
+        String[] languages = languageHeader.split(",");
+
+        for (String language : languages) {
+            String lang = language.split(";")[0].trim();
+            /// Only compare the base language tag (e.g., "en-US" -> "en")
+            if (lang.startsWith("en") || lang.startsWith("cy")) {
+                return;
+            }
         }
+
+        throw new UnsupportedLanguageException(
+                "Unsupported Language: '" + languageHeader + "'. Only 'en' and 'cy' are supported.");
+
     }
 
     public static void validateTitle(String title) {
