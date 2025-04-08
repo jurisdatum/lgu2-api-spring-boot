@@ -11,6 +11,7 @@ import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.responses.Document;
 
+import java.util.Locale;
 import java.util.Optional;
 
 /**
@@ -90,7 +91,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            Locale locale);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<Document> getDocumentJson(
@@ -99,6 +100,6 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            Locale locale);
 
 }

@@ -9,7 +9,14 @@ import java.util.Locale;
 
 public class ParameterValidator {
 
+    public static String extractLanguage(Locale locale) {
+        String language = locale.getLanguage();
+        if ("en".equals(language) || "cy".equals(language))
+            return language;
+        throw new UnsupportedLanguageException("Unsupported language: " + language);
+    }
 
+    @Deprecated(forRemoval = true)
     public static void validateLanguage(String acceptLanguageHeader) {
         final List<Locale> supportedLocales = List.of(
                 Locale.forLanguageTag("en"),

@@ -9,8 +9,10 @@ import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.util.Constants;
 
+import java.util.Locale;
 import java.util.Optional;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.extractLanguage;
 import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 
 
@@ -119,19 +121,18 @@ public class DocumentApiController implements DocumentApi {
     }
 
     @Override
-    public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
-        return getDocumentJson(type, Integer.toString(year), number, version, language);
+    public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version, Locale locale) {
+        return getDocumentJson(type, Integer.toString(year), number, version, locale);
     }
 
     @Override
-    public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+    public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentJson(type, regnalYear, number, version, language);
+        return getDocumentJson(type, regnalYear, number, version, locale);
     }
 
-    private ResponseEntity<Document> getDocumentJson(String type, String year, int number, Optional<String> version, String language ) {
+    private ResponseEntity<Document> getDocumentJson(String type, String year, int number, Optional<String> version, Locale locale) {
+        String language = extractLanguage(locale);
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
