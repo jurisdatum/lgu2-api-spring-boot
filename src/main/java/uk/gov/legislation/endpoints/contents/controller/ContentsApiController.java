@@ -3,8 +3,11 @@ package uk.gov.legislation.endpoints.contents.controller;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.TableOfContents;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.contents.api.ContentsApi;
 import uk.gov.legislation.endpoints.contents.service.ContentsService;
+import uk.gov.legislation.transform.Transforms;
 
 import java.util.Optional;
 import java.util.function.Function;
@@ -20,13 +23,18 @@ import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
 public class ContentsApiController implements ContentsApi {
 
     private final ContentsService contentsService;
+    private final Legislation marklogic;
+    private final Transforms transforms;
+
     /**
      * Constructor that initializes the ContentsApiController with the required contents service.
      *
      * @param contentsService  Service that provides methods to fetch and transform document contents
      */
-    public ContentsApiController(ContentsService contentsService) {
+    public ContentsApiController(ContentsService contentsService, Legislation marklogic, Transforms transforms) {
         this.contentsService = contentsService;
+        this.marklogic = marklogic;
+        this.transforms = transforms;
     }
 
     /**
@@ -93,6 +101,24 @@ public class ContentsApiController implements ContentsApi {
     }
     private ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String year, int number, Optional<String> version, String validatedLanguage) {
         return contentsService.fetchAndTransform(type, year, number, version, contentsService::simplifyToTableOfContents, validatedLanguage);
+    }
+
+    /* Word (.docx) */
+
+    @Override
+    public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, String language) throws Exception {
+        return docx(type, Integer.toString(year), number, version, language);
+    }
+    @Override
+    public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, String language) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        return docx(type, regnalYear, number, version, language);
+    }
+    private ResponseEntity<byte[]> docx(String type, String year, int number, Optional<String> version, String language) throws Exception {
+        validateLanguage(language);
+        Legislation.Response toc = marklogic.getTableOfContents(type, year, number, version, Optional.of(language));
+        byte[] docx = transforms.clml2docx(toc.clml());
+        return CustomHeaders.ok(docx, toc.redirect());
     }
 
 }

@@ -101,4 +101,24 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
 
+
+    /* Word (.docx) */
+
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable int year,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) throws Exception;
+
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language) throws Exception;
+
 }
