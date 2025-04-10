@@ -9,41 +9,22 @@ import java.util.Locale;
 
 public class ParameterValidator {
 
-    public static String extractLanguage(Locale locale) {
-        String language = locale.getLanguage();
-        if ("en".equals(language) || "cy".equals(language))
-            return language;
-        throw new UnsupportedLanguageException("Unsupported language: " + language);
-    }
+    public static String extractLanguage(String language) {
+        if (language == null) {
+            throw new UnsupportedLanguageException("Unsupported language: null");
+        }
 
-    @Deprecated(forRemoval = true)
-    public static void validateLanguage(String acceptLanguageHeader) {
-        final List<Locale> supportedLocales = List.of(
+        List<Locale> supportedLocales = List.of(
                 Locale.forLanguageTag("en"),
-                Locale.forLanguageTag("cy"),
-                Locale.forLanguageTag("en-GB"),
-                Locale.forLanguageTag("cy-GB")
+                Locale.forLanguageTag("cy")
         );
 
-        List<Locale.LanguageRange> ranges = Locale.LanguageRange.parse(acceptLanguageHeader);
+        List<Locale.LanguageRange> languageRanges = Locale.LanguageRange.parse(language);
+        Locale matchedLocale = Locale.lookup(languageRanges, supportedLocales);
 
-        boolean isValid = ranges.stream()
-                .anyMatch(range -> {
-                    String code = range.getRange().toLowerCase(Locale.ROOT);
-                    return supportedLocales.stream()
-                            .anyMatch(locale ->
-                                    code.equals(locale.toLanguageTag()) ||
-                                            code.startsWith(locale.getLanguage() + "-")
-                            );
-                });
-
-        if (!isValid) {
-            throw new UnsupportedLanguageException(
-                    "Unsupported language. Supported: " +
-                            supportedLocales.stream().map(Locale::toLanguageTag).toList()
-            );
-        }
+        return matchedLocale.getLanguage();
     }
+
 
     public static void validateTitle(String title) {
         if (title != null && title.isBlank()) {

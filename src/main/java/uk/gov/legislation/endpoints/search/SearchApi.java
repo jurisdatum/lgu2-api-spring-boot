@@ -20,7 +20,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language
     ) throws IOException, InterruptedException;
 
 
@@ -31,7 +31,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language
     ) throws IOException, InterruptedException;
 
 }

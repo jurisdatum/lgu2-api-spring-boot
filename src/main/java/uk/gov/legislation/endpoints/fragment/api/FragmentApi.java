@@ -1,6 +1,7 @@
 package uk.gov.legislation.endpoints.fragment.api;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,11 +27,13 @@ public interface FragmentApi {
     @Operation(summary = "get a document fragment, e.g., a section (calendar year)")
     ResponseEntity <String> getFragmentClml(
             @PathVariable @Type String type,
-            @PathVariable @Year int year,
-            @PathVariable @Number int number,
+            @PathVariable @Year Integer year,
+            @PathVariable @Number Integer number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional <String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
     @Operation(summary = "get a document fragment, e.g., a section (regnal year)")
@@ -41,7 +44,9 @@ public interface FragmentApi {
             @PathVariable @Number int number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional <String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     /* Akoma Ntoso */
 
@@ -52,7 +57,9 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/akn+xml")
     ResponseEntity<String> getFragmentAkn(
@@ -62,7 +69,9 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     /* HTML5 */
 
@@ -73,7 +82,9 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "text/html")
     ResponseEntity<String> getFragmentHtml(
@@ -83,7 +94,9 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     /* JSON */
 
@@ -94,7 +107,9 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/json")
     ResponseEntity<Fragment> getFragmentJson(
@@ -104,6 +119,8 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
 }

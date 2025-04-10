@@ -9,7 +9,7 @@ import uk.gov.legislation.endpoints.contents.service.ContentsService;
 import java.util.Optional;
 import java.util.function.Function;
 
-import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
+import static uk.gov.legislation.endpoints.ParameterValidator.extractLanguage;
 
 
 /**
@@ -40,7 +40,7 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         return getDocumentContentsClml(type, Integer.toString(year), number, version, language);
     }
     /**
@@ -49,7 +49,7 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         String regnalYear = String.join("/", monarch, years);
         return getDocumentContentsClml(type, regnalYear, number, version, language);
     }
@@ -63,12 +63,13 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         return getDocumentContentsAkn(type, Integer.toString(year), number, version, language);
     }
+
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         String regnalYear = String.join("/", monarch, years);
         return getDocumentContentsAkn(type, regnalYear, number, version, language);
     }
@@ -82,12 +83,13 @@ public class ContentsApiController implements ContentsApi {
      */
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         return getDocumentContentsJson(type, Integer.toString(year), number, version, language);
     }
+
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        validateLanguage(language);
+        extractLanguage(language);
         String regnalYear = String.join("/", monarch, years);
         return getDocumentContentsJson(type, regnalYear, number, version, language);
     }
