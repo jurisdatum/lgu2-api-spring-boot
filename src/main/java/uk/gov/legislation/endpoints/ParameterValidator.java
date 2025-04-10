@@ -4,14 +4,29 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
 
+import java.util.List;
+import java.util.Locale;
+
 public class ParameterValidator {
 
-    public static void validateLanguage(String language) {
-        if (!language.equals("en") && !language.equals("cy")) {
-            throw new UnsupportedLanguageException("Unsupported Language, only (en and cy) is acceptable language: "
-                    + language + " is not acceptable");
+    public static String extractLanguage(String language) {
+        if (language == null) {
+            throw new UnsupportedLanguageException("Unsupported language: null");
         }
+
+        List<Locale> supportedLocales = List.of(
+                Locale.forLanguageTag("en"),
+                Locale.forLanguageTag("cy")
+        );
+
+        List<Locale.LanguageRange> languageRanges = Locale.LanguageRange.parse(language);
+        Locale matchedLocale = Locale.lookup(languageRanges, supportedLocales);
+        if (matchedLocale == null) {
+            throw new UnsupportedLanguageException("Unsupported language: " + language);
+        }
+        return matchedLocale.getLanguage();
     }
+
 
     public static void validateTitle(String title) {
         if (title != null && title.isBlank()) {

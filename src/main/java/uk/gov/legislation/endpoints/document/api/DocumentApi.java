@@ -1,6 +1,7 @@
 package uk.gov.legislation.endpoints.document.api;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -29,7 +30,7 @@ public interface DocumentApi {
             @PathVariable @Year int year,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(summary = "get a document with a regnal year")
@@ -39,7 +40,7 @@ public interface DocumentApi {
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     /**
      * Retrieves document content in AKN format.
@@ -50,7 +51,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentAkn(
@@ -59,7 +60,7 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     /**
      * Retrieves document content in HTML format.
@@ -70,7 +71,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
     ResponseEntity<String> getDocumentHtml(
@@ -79,7 +80,7 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US") String language);
 
     /**
      * Retrieves document metadata and HTML content in JSON format.
@@ -90,7 +91,9 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<Document> getDocumentJson(
@@ -99,7 +102,9 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            @RequestHeader(value = "Accept-Language", defaultValue = "en") String language);
+            @Parameter(description = "Accept-Language header", example = "en-US")
+            @RequestHeader(value = "Accept-Language", defaultValue = "en-US", required = false) String language
+    );
 
 
     /* Word (.docx) */
