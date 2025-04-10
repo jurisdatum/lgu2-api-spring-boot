@@ -21,7 +21,9 @@ public class ParameterValidator {
 
         List<Locale.LanguageRange> languageRanges = Locale.LanguageRange.parse(language);
         Locale matchedLocale = Locale.lookup(languageRanges, supportedLocales);
-
+        if (matchedLocale == null) {
+            throw new UnsupportedLanguageException("Unsupported language: " + language);
+        }
         return matchedLocale.getLanguage();
     }
 
