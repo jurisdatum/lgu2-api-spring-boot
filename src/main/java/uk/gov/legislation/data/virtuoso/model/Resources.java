@@ -21,10 +21,11 @@ public class Resources {
 
         public static final String Prefix = "http://www.legislation.gov.uk/def/legislation/";
 
-        static final String Item = Prefix + "Item";
-        static final String Interpretation = Prefix + "Interpretation";
-        static final String OriginalInterpretation = Prefix + "OriginalInterpretation";
-        static final String CurrentInterpretation = Prefix + "CurrentInterpretation";
+        public static final String Item = Prefix + "Item";
+        public static final String Interpretation = Prefix + "Interpretation";
+        public static final String Legislation = Prefix + "Legislation";
+        public static final String OriginalInterpretation = Prefix + "OriginalInterpretation";
+        public static final String CurrentInterpretation = Prefix + "CurrentInterpretation";
 
         /* document types */
 

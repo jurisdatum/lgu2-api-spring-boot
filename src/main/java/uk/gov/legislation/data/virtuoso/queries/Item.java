@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Repository
+@Repository("virtuosoQueryItem1")
 public class Item {
 
     private final Virtuoso virtuoso;
