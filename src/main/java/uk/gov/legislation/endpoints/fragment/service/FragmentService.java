@@ -32,7 +32,7 @@ public class FragmentService {
         long end = System.currentTimeMillis();
         logger.debug("It took {} miliseconds to fetch the CLML", end - start);
         T body = transform.apply(leg.clml());
-        HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
+        HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
     }
 

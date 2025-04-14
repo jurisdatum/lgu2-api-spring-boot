@@ -10,15 +10,20 @@ public class CustomHeaders {
     static final String NUMBER_HEADER = "X-Document-Number";
     static final String VERSION_HEADER = "X-Document-Version";
 
-    public static HttpHeaders makeHeaders(Legislation.Redirect redirect) {
+    public static HttpHeaders make(String language, Legislation.Redirect redirect) {
         HttpHeaders headers = new HttpHeaders();
-        headers.set(TYPE_HEADER, redirect.type());
-        headers.set(YEAR_HEADER, redirect.year());
-        headers.set(NUMBER_HEADER, Integer.toString(redirect.number()));
-        headers.set(VERSION_HEADER, redirect.version().orElse("current"));
+        if (language != null) {
+            headers.set(HttpHeaders.CONTENT_LANGUAGE, language);
+        }
+        if (redirect != null) {
+            headers.set(TYPE_HEADER, redirect.type());
+            headers.set(YEAR_HEADER, redirect.year());
+            headers.set(NUMBER_HEADER, Integer.toString(redirect.number()));
+            headers.set(VERSION_HEADER, redirect.version().orElse("current"));
+        }
         return headers;
     }
 
-    private CustomHeaders() {
-    }
+    private CustomHeaders() { }
+
 }
