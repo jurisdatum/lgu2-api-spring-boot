@@ -8,6 +8,7 @@ import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.io.IOException;
+
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
 
 @RestController
@@ -28,10 +29,10 @@ public class SearchController implements SearchApi {
             int page,
             String language) throws IOException, InterruptedException {
         validateType(type);
-                validateTitle(title);
-                extractLanguage(language);
-                String atom = db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
-                return ResponseEntity.ok(atom);
+        validateTitle(title);
+        validateLanguage(language);
+        String atom = db.getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
+        return ResponseEntity.ok(atom);
     }
 
     @Override
@@ -43,10 +44,11 @@ public class SearchController implements SearchApi {
             int page,
             String language) throws IOException, InterruptedException {
         validateType(type);
-                validateTitle(title);
-                extractLanguage(language);
-                SearchResults raw = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
-                PageOfDocuments converted = DocumentsFeedConverter.convert(raw);
-                return ResponseEntity.ok(converted);
+        validateTitle(title);
+        validateLanguage(language);
+        SearchResults raw = db.getJsonByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
+        PageOfDocuments converted = DocumentsFeedConverter.convert(raw);
+        return ResponseEntity.ok(converted);
     }
+
 }

@@ -6,10 +6,10 @@ import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.endpoints.fragment.api.FragmentApi;
 import uk.gov.legislation.endpoints.fragment.service.FragmentService;
 import uk.gov.legislation.endpoints.fragment.service.TransformationService;
+
+import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Function;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.extractLanguage;
 
 
 /**
@@ -45,9 +45,8 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity <String> getFragmentClml(String type, Integer year, Integer number, String section,
-            Optional <String> version, String language) {
-        extractLanguage(language);
-        return getFragmentClml(type, Integer.toString(year), number, section, version, language);
+            Optional <String> version, Locale locale) {
+        return getFragmentClml(type, Integer.toString(year), number, section, version, locale);
     }
 
     /**
@@ -56,14 +55,14 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number,
-            String section, Optional<String> version, String language) {
-        extractLanguage(language);
+            String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentClml(type, regnalYear, number, section, version, language);
+        return getFragmentClml(type, regnalYear, number, section, version, locale);
     }
     private ResponseEntity<String> getFragmentClml(String type, String year, int number, String section,
-            Optional<String> version, String validatedLanguage) {
-        return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity(), validatedLanguage);
+            Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
+        return fragmentService.fetchAndTransform(type, year, number, section, version, Function.identity(), language);
     }
 
     /**
@@ -72,22 +71,18 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section,
-            Optional<String> version, String language) {
-
-        extractLanguage(language);
-        return getFragmentAkn(type, Integer.toString(year), number, section, version, language);
+            Optional<String> version, Locale locale) {
+        return getFragmentAkn(type, Integer.toString(year), number, section, version, locale);
     }
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, String monarch, String years, int number,
-            String section, Optional<String> version, String language) {
-
-        extractLanguage(language);
+            String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentAkn(type, regnalYear, number, section, version, language);
+        return getFragmentAkn(type, regnalYear, number, section, version, locale);
     }
     private ResponseEntity<String> getFragmentAkn(String type, String year, int number, String section,
-            Optional<String> version, String language) {
-
+            Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return fragmentService.fetchAndTransform(type, year, number, section, version,
                 transformationService::transformToAkn, language);
     }
@@ -98,22 +93,18 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section,
-            Optional<String> version, String language) {
-
-        extractLanguage(language);
-        return getFragmentHtml(type, Integer.toString(year), number, section, version, language);
+            Optional<String> version, Locale locale) {
+        return getFragmentHtml(type, Integer.toString(year), number, section, version, locale);
     }
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, String monarch, String years, int number,
-            String section, Optional<String> version, String language) {
-
-        extractLanguage(language);
+            String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentHtml(type, regnalYear, number, section, version, language);
+        return getFragmentHtml(type, regnalYear, number, section, version, locale);
     }
     private ResponseEntity<String> getFragmentHtml(String type, String year, int number, String section,
-            Optional<String> version, String language) {
-
+            Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return fragmentService.fetchAndTransform(type, year, number, section, version,
                 clml -> transformationService.transformToHtml(clml, true), language);
     }
@@ -124,22 +115,18 @@ public class FragmentApiController implements FragmentApi {
      */
     @Override
     public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section,
-            Optional<String> version, String language) {
-
-        extractLanguage(language);
-        return getFragmentJson(type, Integer.toString(year), number, section, version, language);
+            Optional<String> version, Locale locale) {
+        return getFragmentJson(type, Integer.toString(year), number, section, version, locale);
     }
     @Override
     public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number,
-            String section, Optional<String> version, String language) {
-
-        extractLanguage(language);
+            String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getFragmentJson(type, regnalYear, number, section, version, language);
+        return getFragmentJson(type, regnalYear, number, section, version, locale);
     }
     private ResponseEntity<Fragment> getFragmentJson(String type, String year, int number, String section,
-            Optional<String> version, String language) {
-
+            Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return fragmentService.fetchAndTransform(type, year, number, section, version,
                 transformationService::transformToJsonResponse, language);
     }

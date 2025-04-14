@@ -12,8 +12,6 @@ import uk.gov.legislation.util.Constants;
 import java.util.Locale;
 import java.util.Optional;
 
-import static uk.gov.legislation.endpoints.ParameterValidator.extractLanguage;
-
 
 /**
  * Controller for document-related API operations.
@@ -31,8 +29,8 @@ public class DocumentApiController implements DocumentApi {
      * Fetches CLML content based on document details.
      */
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, String language) {
-        extractLanguage(language);
+    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return documentService.fetchAndTransform(
                 clml -> clml,
                 type,
@@ -44,8 +42,8 @@ public class DocumentApiController implements DocumentApi {
     }
 
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        extractLanguage(language);
+    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         String regnalYear = String.join("/", monarch, years);
         return documentService.fetchAndTransform(
                 clml -> clml,
@@ -60,19 +58,18 @@ public class DocumentApiController implements DocumentApi {
     // could add a private getDocumentClml method to match the other three content types
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, String language) {
-        extractLanguage(language);
-        return getDocumentAkn(type, Integer.toString(year), number, version, language);
+    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) {
+        return getDocumentAkn(type, Integer.toString(year), number, version, locale);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        extractLanguage(language);
+    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentAkn(type, regnalYear, number, version, language);
+        return getDocumentAkn(type, regnalYear, number, version, locale);
     }
 
-    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, String language) {
+    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -90,19 +87,18 @@ public class DocumentApiController implements DocumentApi {
     }
 
     @Override
-    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version, String language) {
-        extractLanguage(language);
-        return getDocumentHtml(type, Integer.toString(year), number, version, language);
+    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) {
+        return getDocumentHtml(type, Integer.toString(year), number, version, locale);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, String language) {
-        extractLanguage(language);
+    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentHtml(type, regnalYear, number, version, language);
+        return getDocumentHtml(type, regnalYear, number, version, locale);
     }
 
-    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, String language) {
+    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, Locale locale) {
+        String language = locale.getLanguage();
         return documentService.fetchAndTransform(
                 clml -> {
                     try {
@@ -121,20 +117,20 @@ public class DocumentApiController implements DocumentApi {
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version,
-            String locale) {
+            Locale locale) {
         return getDocumentJson(type, Integer.toString(year), number, version, locale);
     }
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number,
-            Optional<String> version, String locale) {
+            Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
         return getDocumentJson(type, regnalYear, number, version, locale);
     }
 
     private ResponseEntity<Document> getDocumentJson(String type, String year, int number, Optional<String> version,
-            String locale) {
-        String language = extractLanguage(locale);
+            Locale locale) {
+        String language = locale.getLanguage();
         return documentService.fetchAndTransform(
                 clml -> {
                     try {

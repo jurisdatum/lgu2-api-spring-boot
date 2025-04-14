@@ -4,29 +4,7 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
 
-import java.util.List;
-import java.util.Locale;
-
 public class ParameterValidator {
-
-    public static String extractLanguage(String language) {
-        if (language == null) {
-            throw new UnsupportedLanguageException("Unsupported language: null");
-        }
-
-        List<Locale> supportedLocales = List.of(
-                Locale.forLanguageTag("en"),
-                Locale.forLanguageTag("cy")
-        );
-
-        List<Locale.LanguageRange> languageRanges = Locale.LanguageRange.parse(language);
-        Locale matchedLocale = Locale.lookup(languageRanges, supportedLocales);
-        if (matchedLocale == null) {
-            throw new UnsupportedLanguageException("Unsupported language: " + language);
-        }
-        return matchedLocale.getLanguage();
-    }
-
 
     public static void validateTitle(String title) {
         if (title != null && title.isBlank()) {
@@ -41,6 +19,15 @@ public class ParameterValidator {
             throw new UnknownTypeException(type);
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
+    }
+
+    // used only for query parameter for search endpoint
+    public static void validateLanguage(String language) {
+        if (language == null)
+            return;
+        if ("en".equals(language) || "cy".equals(language))
+            return;
+        throw new UnsupportedLanguageException(language);
     }
 
 }
