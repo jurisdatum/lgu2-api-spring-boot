@@ -98,4 +98,23 @@ public interface ContentsApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
+    /* Word (.docx) */
+
+    @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable int year,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            Locale locale) throws Exception;
+
+    @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            Locale locale) throws Exception;
+
 }

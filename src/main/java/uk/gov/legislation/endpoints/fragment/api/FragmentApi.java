@@ -129,4 +129,25 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
+    /* Word (.docx) */
+
+    @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable int year,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional<String> version,
+            Locale locale) throws Exception;
+
+    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    ResponseEntity<byte[]> docx(
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @PathVariable String section,
+            @RequestParam Optional<String> version,
+            Locale locale) throws Exception;
+
 }

@@ -1,12 +1,16 @@
 package uk.gov.legislation.endpoints.document.controller;
 
 import net.sf.saxon.s9api.SaxonApiException;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
 import uk.gov.legislation.endpoints.document.service.DocumentService;
 import uk.gov.legislation.exceptions.TransformationException;
+import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.util.Constants;
 
 import java.util.Locale;
@@ -20,9 +24,14 @@ import java.util.Optional;
 public class DocumentApiController implements DocumentApi {
 
     private final DocumentService documentService;
+    private final Legislation marklogic;
+    private final Transforms transforms;
 
-    public DocumentApiController(DocumentService documentService) {
+
+    public DocumentApiController(DocumentService documentService, Legislation marklogic, Transforms transforms) {
         this.documentService = documentService;
+        this.marklogic = marklogic;
+        this.transforms = transforms;
     }
 
     /**
@@ -146,4 +155,26 @@ public class DocumentApiController implements DocumentApi {
                 language
         );
     }
+
+    /* Word (.docx) */
+
+    @Override
+    public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        return docx(type, Integer.toString(year), number, version, locale);
+    }
+
+    @Override
+    public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        String regnalYear = String.join("/", monarch, years);
+        return docx(type, regnalYear, number, version, locale);
+    }
+
+    private ResponseEntity<byte[]> docx(String type, String year, int number, Optional<String> version, Locale locale) throws Exception {
+        String language = locale.getLanguage();
+        Legislation.Response leg = marklogic.getDocument(type, year, number, version, Optional.of(language));
+        byte[] docx = transforms.clml2docx(leg.clml());
+        HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
+        return ResponseEntity.ok().headers(headers).body(docx);
+    }
+
 }
