@@ -2,9 +2,9 @@ package uk.gov.legislation.data.virtuoso.queries;
 
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.JsonResults;
+import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.model.Interpretation;
-import uk.gov.legislation.data.virtuoso.model.Resources;
 import uk.gov.legislation.data.virtuoso.rdf.RdfMapper;
 import uk.gov.legislation.data.virtuoso.rdf.Statement;
 import uk.gov.legislation.data.virtuoso.rdf.TypedValue;

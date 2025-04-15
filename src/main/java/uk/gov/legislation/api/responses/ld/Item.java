@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.virtuoso.model2;
+package uk.gov.legislation.api.responses.ld;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;

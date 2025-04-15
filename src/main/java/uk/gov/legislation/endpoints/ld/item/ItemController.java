@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
-import uk.gov.legislation.data.virtuoso.model2.Item;
+import uk.gov.legislation.api.responses.ld.Item;
 
 @RestController
 public class ItemController {

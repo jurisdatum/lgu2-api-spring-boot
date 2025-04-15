@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
-import uk.gov.legislation.data.virtuoso.model2.Interpretation;
+import uk.gov.legislation.api.responses.ld.Interpretation;
 
 @RestController
 public class InterpretationController {

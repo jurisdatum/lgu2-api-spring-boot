@@ -1,9 +1,9 @@
-package uk.gov.legislation.data.virtuoso.converters;
+package uk.gov.legislation.converters.ld;
 
+import uk.gov.legislation.api.responses.ld.Item;
+import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ValueAndLanguage;
-import uk.gov.legislation.data.virtuoso.model.Resources;
-import uk.gov.legislation.data.virtuoso.model2.Item;
 
 public class ItemConverter {
 
@@ -28,6 +28,7 @@ public class ItemConverter {
         item.welshCommentaryCitation = ValueAndLanguage.get(ld.commentaryCitation, "cy");
         item.originalLanguages = ld.originalLanguageOfTextIsoCode.stream()
             .map(value -> value.value).toList();
+        item.interpretations = ld.interpretation;
         return item;
     }
 

@@ -1,8 +1,8 @@
-package uk.gov.legislation.data.virtuoso.converters;
+package uk.gov.legislation.converters.ld;
 
+import uk.gov.legislation.api.responses.ld.Interpretation;
+import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.jsonld.InterpretationLD;
-import uk.gov.legislation.data.virtuoso.model.Resources;
-import uk.gov.legislation.data.virtuoso.model2.Interpretation;
 
 import java.net.URI;
 

@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.virtuoso.model;
+package uk.gov.legislation.data.virtuoso;
 
 import uk.gov.legislation.data.virtuoso.rdf.TypedValue;
 
@@ -9,11 +9,11 @@ import java.util.Set;
 
 public class Resources {
 
-    static class RDF {
+    public static class RDF {
 
-        static final String Prefix = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
+        public static final String Prefix = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
-        static final String Type = Prefix + "type";
+        public static final String Type = Prefix + "type";
 
     }
 
@@ -29,23 +29,23 @@ public class Resources {
 
         /* document types */
 
-        static final String UKPGA = Prefix + "UnitedKingdomPublicGeneralAct";
-        static Set<String> DocumentTypes = Set.of(
+        public static final String UKPGA = Prefix + "UnitedKingdomPublicGeneralAct";
+        public static final Set<String> DocumentTypes = Set.of(
             UKPGA
         );
 
         /* properties */
 
-        static final String Year = Prefix + "year";
-        static final String Number = Prefix + "number";
-        static final String Title = Prefix + "title";
-        static final String Citation = Prefix + "citation";
-        static final String FullCitation = Prefix + "fullCitation";
-        static final String CommentaryCitation = Prefix + "commentaryCitation";
-        static final String OriginalLanguage = Prefix + "originalLanguageOfTextIsoCode";
-        static final String Language = Prefix + "languageOfTextIsoCode";
-        static final String ShortTitle = Prefix + "shortTitle";
-        static final String LongTitle = Prefix + "longTitle";
+        public static final String Year = Prefix + "year";
+        public static final String Number = Prefix + "number";
+        public static final String Title = Prefix + "title";
+        public static final String Citation = Prefix + "citation";
+        public static final String FullCitation = Prefix + "fullCitation";
+        public static final String CommentaryCitation = Prefix + "commentaryCitation";
+        public static final String OriginalLanguage = Prefix + "originalLanguageOfTextIsoCode";
+        public static final String Language = Prefix + "languageOfTextIsoCode";
+        public static final String ShortTitle = Prefix + "shortTitle";
+        public static final String LongTitle = Prefix + "longTitle";
 
     }
 

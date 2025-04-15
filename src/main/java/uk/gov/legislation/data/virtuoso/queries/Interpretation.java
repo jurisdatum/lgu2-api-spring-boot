@@ -4,9 +4,9 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 import org.springframework.stereotype.Repository;
+import uk.gov.legislation.converters.ld.InterpretationConverter;
+import uk.gov.legislation.converters.ld.ItemConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.converters.InterpretationConverter;
-import uk.gov.legislation.data.virtuoso.converters.ItemConverter;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.InterpretationLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
@@ -36,7 +36,7 @@ public class Interpretation {
         return virtuoso.query(query, format);
     }
 
-    public uk.gov.legislation.data.virtuoso.model2.Interpretation get(String type, int year, int number, String version) throws IOException, InterruptedException {
+    public uk.gov.legislation.api.responses.ld.Interpretation get(String type, int year, int number, String version) throws IOException, InterruptedException {
         String json = get(type, year, number, version, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         ObjectNode item0;
@@ -53,7 +53,7 @@ public class Interpretation {
         }
         InterpretationLD interpretation1 = InterpretationLD.convert(interpretation0);
         ItemLD item1 = ItemLD.convert(item0);
-        uk.gov.legislation.data.virtuoso.model2.Interpretation interpretation2 = InterpretationConverter.convert(interpretation1);
+        uk.gov.legislation.api.responses.ld.Interpretation interpretation2 = InterpretationConverter.convert(interpretation1);
         interpretation2.item = ItemConverter.convert(item1);
         return interpretation2;
     }
