@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import uk.gov.legislation.api.responses.ld.Item;
+import uk.gov.legislation.data.virtuoso.Virtuoso;
 
 @RestController
 public class ItemController {
@@ -35,12 +36,12 @@ public class ItemController {
     )
     public ResponseEntity<Object> get(NativeWebRequest request, @PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
         MediaType media = new HeaderContentNegotiationStrategy().resolveMediaTypes(request).getFirst();
-        if (media == null || MediaType.ALL.equals(media) || MediaType.APPLICATION_JSON.equals(media) || MediaType.APPLICATION_XML.equals(media)) {
-            Item response = query.get(type, year, number);
-            return ResponseEntity.ok(response);
+        if (Virtuoso.Formats.contains(media.toString())) {
+            String data = query.get(type, year, number, media.toString());
+            return ResponseEntity.ok(data);
         }
-        String data = query.get(type, year, number, media.toString());
-        return ResponseEntity.ok(data);
+        Item response = query.get(type, year, number);
+        return ResponseEntity.ok(response);
     }
 
 }

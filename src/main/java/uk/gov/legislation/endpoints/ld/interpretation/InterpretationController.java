@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import uk.gov.legislation.api.responses.ld.Interpretation;
+import uk.gov.legislation.data.virtuoso.Virtuoso;
 
 @RestController
 public class InterpretationController {
@@ -36,12 +37,12 @@ public class InterpretationController {
     )
     public ResponseEntity<Object> get(NativeWebRequest request, @PathVariable String type, @PathVariable int year, @PathVariable int number, @RequestParam(required = false) String version) throws Exception {
         MediaType media = new HeaderContentNegotiationStrategy().resolveMediaTypes(request).getFirst();
-        if (media == null || MediaType.ALL.equals(media) || MediaType.APPLICATION_JSON.equals(media) || MediaType.APPLICATION_XML.equals(media)) {
-            Interpretation response = query.get(type, year, number, version);
-            return ResponseEntity.ok(response);
+        if (Virtuoso.Formats.contains(media.toString())) {
+            String data = query.get(type, year, number, version, media.toString());
+            return ResponseEntity.ok(data);
         }
-        String data = query.get(type, year, number, version, media.toString());
-        return ResponseEntity.ok(data);
+        Interpretation response = query.get(type, year, number, version);
+        return ResponseEntity.ok(response);
     }
 
 }

@@ -23,6 +23,7 @@ public class Item {
     public String title;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshTitle;
 
     @JsonProperty
@@ -35,12 +36,15 @@ public class Item {
     public String commentaryCitation;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshCitation;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshFullCitation;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshCommentaryCitation;
 
     @JsonProperty
