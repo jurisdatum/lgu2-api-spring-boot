@@ -1,5 +1,6 @@
 package uk.gov.legislation.endpoints.ld.interpretation;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.accept.HeaderContentNegotiationStrategy;
@@ -8,15 +9,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.api.responses.ld.Interpretation;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
+import uk.gov.legislation.data.virtuoso.queries.InterpretationQuery;
+
+import java.util.Optional;
 
 @RestController
 public class InterpretationController {
 
-    private final uk.gov.legislation.data.virtuoso.queries.Interpretation query;
+    private final InterpretationQuery query;
 
-    public InterpretationController(uk.gov.legislation.data.virtuoso.queries.Interpretation query) {
+    public InterpretationController(InterpretationQuery query) {
         this.query = query;
     }
 
@@ -41,8 +46,10 @@ public class InterpretationController {
             String data = query.get(type, year, number, version, media.toString());
             return ResponseEntity.ok(data);
         }
-        Interpretation response = query.get(type, year, number, version);
-        return ResponseEntity.ok(response);
+        Optional<Interpretation> response = query.get(type, year, number, version);
+        if (response.isEmpty())
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        return ResponseEntity.ok(response.get());
     }
 
 }

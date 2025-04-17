@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 import org.springframework.stereotype.Repository;
+import uk.gov.legislation.api.responses.ld.Interpretation;
 import uk.gov.legislation.converters.ld.InterpretationConverter;
 import uk.gov.legislation.converters.ld.ItemConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
@@ -12,13 +13,14 @@ import uk.gov.legislation.data.virtuoso.jsonld.InterpretationLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 
 import java.io.IOException;
+import java.util.Optional;
 
-@Repository("virtuosoQueryInterpretation")
-public class Interpretation {
+@Repository
+public class InterpretationQuery {
 
     private final Virtuoso virtuoso;
 
-    public Interpretation(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
     String makeSparqlQuery(String type, int year, int number, String version) {
         String workUri = "http://www.legislation.gov.uk/id/%s/%s/%d".formatted(type, year, number);
@@ -36,9 +38,11 @@ public class Interpretation {
         return virtuoso.query(query, format);
     }
 
-    public uk.gov.legislation.api.responses.ld.Interpretation get(String type, int year, int number, String version) throws IOException, InterruptedException {
+    public Optional<Interpretation> get(String type, int year, int number, String version) throws IOException, InterruptedException {
         String json = get(type, year, number, version, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
+        if (graph == null)
+            return Optional.empty();
         ObjectNode item0;
         ObjectNode interpretation0;
         ObjectNode o0 = (ObjectNode) graph.get(0);
@@ -53,9 +57,9 @@ public class Interpretation {
         }
         InterpretationLD interpretation1 = InterpretationLD.convert(interpretation0);
         ItemLD item1 = ItemLD.convert(item0);
-        uk.gov.legislation.api.responses.ld.Interpretation interpretation2 = InterpretationConverter.convert(interpretation1);
+        Interpretation interpretation2 = InterpretationConverter.convert(interpretation1);
         interpretation2.item = ItemConverter.convert(item1);
-        return interpretation2;
+        return Optional.of(interpretation2);
     }
 
 }

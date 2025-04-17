@@ -1,5 +1,7 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.api.responses.ld.Item;
 import uk.gov.legislation.api.responses.ld.PageOfItems;
@@ -11,13 +13,15 @@ import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 import java.io.IOException;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.StreamSupport;
 
-@Repository("virtuosoQueryItems")
-public class Items2 {
+@Repository
+public class ItemsQuery {
 
     private final Virtuoso virtuoso;
 
-    public Items2(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public ItemsQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
     public static String makeSparqlQuery(String type, int year, int pageSize, int offset) {
         return """
@@ -45,9 +49,13 @@ public class Items2 {
         return virtuoso.query(query, format);
     }
 
-    public PageOfItems get(String type, int year, int pageSize, int offset) throws IOException, InterruptedException {
+    public Optional<PageOfItems> get(String type, int year, int pageSize, int offset) throws IOException, InterruptedException {
         String json = get(type, year, pageSize, offset, "application/ld+json");
-        List<Item> items = Graph.stream(json)
+        ArrayNode graph = Graph.extract(json);
+        if (graph == null)
+            return Optional.empty();
+        List<Item> items = StreamSupport.stream(graph.spliterator(), false)
+            .map(ObjectNode.class::cast)
             .map(ItemLD::convert)
             .map(ItemConverter::convert)
             .sorted(Comparator.comparing(o -> ((Item) o).number)
@@ -60,7 +68,7 @@ public class Items2 {
         page.meta.page = offset / pageSize + 1;
         page.meta.pageSize = pageSize;
         page.items = items;
-        return page;
+        return Optional.of(page);
     }
 
 }

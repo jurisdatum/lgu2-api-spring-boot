@@ -10,13 +10,14 @@ import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 
 import java.io.IOException;
+import java.util.Optional;
 
-@Repository("virtuosoQueryItem")
-public class Item2 {
+@Repository
+public class ItemQuery {
 
     private final Virtuoso virtuoso;
 
-    public Item2(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public ItemQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
     public String makeSparqlQuery(String type, int year, int number) {
         String uri = "http://www.legislation.gov.uk/id/%s/%s/%d".formatted(type, year, number);
@@ -28,12 +29,13 @@ public class Item2 {
         return virtuoso.query(query, format);
     }
 
-    public Item get(String type, int year, int number) throws IOException, InterruptedException {
+    public Optional<Item> get(String type, int year, int number) throws IOException, InterruptedException {
         String json = get(type, year, number, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
-        ObjectNode item0 = (ObjectNode) graph.get(0);
-        ItemLD item1 = ItemLD.convert(item0);
-        return ItemConverter.convert(item1);
+        return Optional.ofNullable(graph)
+            .map(grph -> (ObjectNode) grph.get(0))
+            .map(ItemLD::convert)
+            .map(ItemConverter::convert);
     }
 
 }
