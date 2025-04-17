@@ -20,7 +20,8 @@ public class Search {
 
     /* fetch by title, type, year and number */
 
-    public String getAtomByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, String language, int page) throws IOException, InterruptedException {
+    public String getAtomByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number,
+            String language, int page) throws IOException, InterruptedException {
 
         StringBuilder queryBuilder = new StringBuilder();
         queryBuilder.append("?page=").append(page);
@@ -49,7 +50,8 @@ public class Search {
         return db.get(ENDPOINT, query);
     }
 
-    public SearchResults getJsonByTitleAndTypeAndYearAndNumber(String title, String type, Integer year, Integer number, String language, int page) throws IOException, InterruptedException {
+    public SearchResults getJsonByTitleAndTypeAndYearAndNumber(String title, String type, Integer year,
+            Integer number, String language, int page) throws IOException, InterruptedException {
         String atom = getAtomByTitleAndTypeAndYearAndNumber(title, type, year, number, language, page);
         return SearchResults.parse(atom);
     }

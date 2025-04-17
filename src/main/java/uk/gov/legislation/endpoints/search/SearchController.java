@@ -21,7 +21,7 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<String> searchByAtom(
+    public ResponseEntity <String> searchByAtom(
             String title,
             String type,
             Integer year,
@@ -36,7 +36,7 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<PageOfDocuments> searchByJson(
+    public ResponseEntity <PageOfDocuments> searchByJson(
             String title,
             String type,
             Integer year,

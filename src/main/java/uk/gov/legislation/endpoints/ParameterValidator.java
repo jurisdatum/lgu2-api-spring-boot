@@ -6,13 +6,6 @@ import uk.gov.legislation.util.Types;
 
 public class ParameterValidator {
 
-    public static void validateLanguage(String language) {
-        if (!language.equals("en") && !language.equals("cy")) {
-            throw new UnsupportedLanguageException("Unsupported Language, only (en and cy) is acceptable language: "
-                    + language + " is not acceptable");
-        }
-    }
-
     public static void validateTitle(String title) {
         if (title != null && title.isBlank()) {
             throw new IllegalArgumentException("Title cannot be blank.");
@@ -26,6 +19,15 @@ public class ParameterValidator {
             throw new UnknownTypeException(type);
         if (!Types.isValidShortType(type))
             throw new UnknownTypeException(type);
+    }
+
+    // used only for query parameter for search endpoint
+    public static void validateLanguage(String language) {
+        if (language == null)
+            return;
+        if ("en".equals(language) || "cy".equals(language))
+            return;
+        throw new UnsupportedLanguageException(language);
     }
 
 }

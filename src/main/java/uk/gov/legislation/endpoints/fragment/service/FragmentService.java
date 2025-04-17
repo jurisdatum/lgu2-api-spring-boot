@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 
+import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Function;
 
@@ -24,13 +25,14 @@ public class FragmentService {
 
     /* helper */
 
-    public  <T> ResponseEntity <T> fetchAndTransform(String type, String year, int number, String section, Optional<String> version, Function<String, T> transform, String language) {
+    public  <T> ResponseEntity <T> fetchAndTransform(String type, String year, int number, String section,
+            Optional<String> version, Function<String, T> transform, String language) {
         long start = System.currentTimeMillis();
-        Legislation.Response leg = db.getDocumentSection(type, year, number, section, version, Optional.of(language));
+        Legislation.Response leg = db.getDocumentSection(type, year, number, section, version, Optional.of(String.valueOf(language)));
         long end = System.currentTimeMillis();
         logger.debug("It took {} miliseconds to fetch the CLML", end - start);
         T body = transform.apply(leg.clml());
-        HttpHeaders headers = leg.redirect().map(CustomHeaders::makeHeaders).orElse(null);
+        HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
     }
 
