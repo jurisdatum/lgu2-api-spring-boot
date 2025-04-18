@@ -42,7 +42,7 @@ public interface DocumentApi {
             @PathVariable @Year int year,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(
@@ -62,7 +62,7 @@ public interface DocumentApi {
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /**
      * Retrieves document content in AKN format.
@@ -73,7 +73,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentAkn(
@@ -82,7 +82,7 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /**
      * Retrieves document content in HTML format.
@@ -93,7 +93,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
     ResponseEntity<String> getDocumentHtml(
@@ -102,7 +102,7 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /**
      * Retrieves document metadata and HTML content in JSON format.
@@ -113,7 +113,7 @@ public interface DocumentApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<Document> getDocumentJson(
@@ -122,7 +122,7 @@ public interface DocumentApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
 
     /* Word (.docx) */

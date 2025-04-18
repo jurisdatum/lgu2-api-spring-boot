@@ -1,6 +1,5 @@
 package uk.gov.legislation.endpoints.document.controller;
 
-import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,10 +7,7 @@ import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.endpoints.document.api.DocumentApi;
-import uk.gov.legislation.endpoints.document.service.DocumentService;
-import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Transforms;
-import uk.gov.legislation.util.Constants;
 
 import java.util.Locale;
 import java.util.Optional;
@@ -23,158 +19,93 @@ import java.util.Optional;
 @RestController
 public class DocumentApiController implements DocumentApi {
 
-    private final DocumentService documentService;
     private final Legislation marklogic;
+
     private final Transforms transforms;
 
-
-    public DocumentApiController(DocumentService documentService, Legislation marklogic, Transforms transforms) {
-        this.documentService = documentService;
+    public DocumentApiController(Legislation marklogic, Transforms transforms) {
         this.marklogic = marklogic;
         this.transforms = transforms;
     }
 
-    /**
-     * Fetches CLML content based on document details.
-     */
+    /* CLML */
+
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) {
-        String language = locale.getLanguage();
-        return documentService.fetchAndTransform(
-                clml -> clml,
-                type,
-                Integer.toString(year),
-                number,
-                version,
-                language
-        );
+    public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, clml -> clml);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
-        String language = locale.getLanguage();
+    public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return documentService.fetchAndTransform(
-                clml -> clml,
-                type,
-                regnalYear,
-                number,
-                version,
-                language
-        );
+        return fetchAndTransform(type, regnalYear, number, version, locale, clml -> clml);
     }
 
-    // could add a private getDocumentClml method to match the other three content types
+    /* Akoma Ntoso */
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) {
-        return getDocumentAkn(type, Integer.toString(year), number, version, locale);
+    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2akn);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentAkn(type, regnalYear, number, version, locale);
+        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2akn);
     }
 
-    private ResponseEntity<String> getDocumentAkn(String type, String year, int number, Optional<String> version, Locale locale) {
-        String language = locale.getLanguage();
-        return documentService.fetchAndTransform(
-                clml -> {
-                    try {
-                        return documentService.transformToAkn(clml);
-                    } catch (SaxonApiException e) {
-                        throw new TransformationException(Constants.TRANSFORMATION_FAIL_AKN.getError(), e);
-                    }
-                },
-                type,
-                year,
-                number,
-                version,
-                language
-        );
+    /* HTML */
+
+    @Override
+    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        Transform<String> transform = clml -> transforms.clml2html(clml, true);
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transform);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return getDocumentHtml(type, Integer.toString(year), number, version, locale);
-    }
-
-    @Override
-    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+    public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentHtml(type, regnalYear, number, version, locale);
+        Transform<String> transform = clml -> transforms.clml2html(clml, true);
+        return fetchAndTransform(type, regnalYear, number, version, locale, transform);
     }
 
-    private ResponseEntity<String> getDocumentHtml(String type, String year, int number, Optional<String> version, Locale locale) {
-        String language = locale.getLanguage();
-        return documentService.fetchAndTransform(
-                clml -> {
-                    try {
-                        return documentService.transformToHtml(clml);
-                    } catch (SaxonApiException e) {
-                        throw new TransformationException(Constants.TRANSFORMATION_FAIL_HTML.getError(), e);
-                    }
-                },
-                type,
-                year,
-                number,
-                version,
-                language
-        );
+    /* JSON */
+
+    @Override
+    public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2document);
     }
 
     @Override
-    public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version,
-            Locale locale) {
-        return getDocumentJson(type, Integer.toString(year), number, version, locale);
-    }
-
-    @Override
-    public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number,
-            Optional<String> version, Locale locale) {
+    public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return getDocumentJson(type, regnalYear, number, version, locale);
-    }
-
-    private ResponseEntity<Document> getDocumentJson(String type, String year, int number, Optional<String> version,
-            Locale locale) {
-        String language = locale.getLanguage();
-        return documentService.fetchAndTransform(
-                clml -> {
-                    try {
-                        return documentService.transformToJsonResponse(clml);
-                    } catch (SaxonApiException e) {
-                        throw new TransformationException(Constants.TRANSFORMATION_FAIL_JSON.getError(), e);
-                    }
-                },
-                type,
-                year,
-                number,
-                version,
-                language
-        );
+        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2document);
     }
 
     /* Word (.docx) */
 
     @Override
     public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return docx(type, Integer.toString(year), number, version, locale);
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2docx);
     }
 
     @Override
     public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return docx(type, regnalYear, number, version, locale);
+        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2docx);
     }
 
-    private ResponseEntity<byte[]> docx(String type, String year, int number, Optional<String> version, Locale locale) throws Exception {
+    /* helper */
+
+    @FunctionalInterface
+    public interface Transform<T> { T apply(String t) throws Exception; }
+
+    public <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Locale locale, Transform<T> transform) throws Exception {
         String language = locale.getLanguage();
         Legislation.Response leg = marklogic.getDocument(type, year, number, version, Optional.of(language));
-        byte[] docx = transforms.clml2docx(leg.clml());
+        T body = transform.apply(leg.clml());
         HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).body(docx);
+        return ResponseEntity.ok().headers(headers).body(body);
     }
 
 }
