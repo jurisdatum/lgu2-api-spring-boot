@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-import uk.gov.legislation.endpoints.Application;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
 

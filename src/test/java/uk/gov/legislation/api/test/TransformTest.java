@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.endpoints.Application;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.UpToDate;
