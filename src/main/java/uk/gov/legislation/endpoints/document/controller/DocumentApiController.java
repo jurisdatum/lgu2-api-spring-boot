@@ -12,10 +12,6 @@ import uk.gov.legislation.transform.Transforms;
 import java.util.Locale;
 import java.util.Optional;
 
-
-/**
- * Controller for document-related API operations.
- */
 @RestController
 public class DocumentApiController implements DocumentApi {
 
@@ -100,7 +96,7 @@ public class DocumentApiController implements DocumentApi {
     @FunctionalInterface
     public interface Transform<T> { T apply(String t) throws Exception; }
 
-    public <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Locale locale, Transform<T> transform) throws Exception {
+    private <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Locale locale, Transform<T> transform) throws Exception {
         String language = locale.getLanguage();
         Legislation.Response leg = marklogic.getDocument(type, year, number, version, Optional.of(language));
         T body = transform.apply(leg.clml());
