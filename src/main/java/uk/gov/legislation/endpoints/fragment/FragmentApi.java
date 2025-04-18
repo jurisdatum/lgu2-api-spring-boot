@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.fragment.api;
+package uk.gov.legislation.endpoints.fragment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

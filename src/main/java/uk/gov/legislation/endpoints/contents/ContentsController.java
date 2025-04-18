@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.contents.controller;
+package uk.gov.legislation.endpoints.contents;
 
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -6,20 +6,19 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.contents.api.ContentsApi;
-import uk.gov.legislation.endpoints.document.controller.DocumentApiController.Transform;
+import uk.gov.legislation.endpoints.document.DocumentController.Transform;
 import uk.gov.legislation.transform.Transforms;
 
 import java.util.Locale;
 import java.util.Optional;
 
 @RestController
-public class ContentsApiController implements ContentsApi {
+public class ContentsController implements ContentsApi {
 
     private final Legislation marklogic;
     private final Transforms transforms;
 
-    public ContentsApiController(Legislation marklogic, Transforms transforms) {
+    public ContentsController(Legislation marklogic, Transforms transforms) {
         this.marklogic = marklogic;
         this.transforms = transforms;
     }
