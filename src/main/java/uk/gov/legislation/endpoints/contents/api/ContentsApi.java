@@ -38,7 +38,7 @@ public interface ContentsApi {
             @PathVariable @Year int year,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(
@@ -58,7 +58,7 @@ public interface ContentsApi {
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* Akoma Ntoso */
 
@@ -68,7 +68,7 @@ public interface ContentsApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
@@ -77,7 +77,7 @@ public interface ContentsApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* JSON */
 
@@ -87,7 +87,7 @@ public interface ContentsApi {
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
@@ -96,7 +96,7 @@ public interface ContentsApi {
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* Word (.docx) */
 

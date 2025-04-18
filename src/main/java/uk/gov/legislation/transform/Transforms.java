@@ -4,13 +4,12 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import org.springframework.stereotype.Service;
-import uk.gov.legislation.api.responses.Document;
-import uk.gov.legislation.api.responses.DocumentMetadata;
-import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.api.responses.FragmentMetadata;
+import uk.gov.legislation.api.responses.*;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
+import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
@@ -62,6 +61,11 @@ public class Transforms {
         Metadata simple = simplifier.extractFragmentMetadata(doc);
         FragmentMetadata converted = FragmentMetadataConverter.convert(simple);
         return new Fragment(converted, html);
+    }
+
+    public TableOfContents clml2toc(String clml) throws SaxonApiException, JsonProcessingException {
+        Contents simple = simplifier.contents(clml);
+        return TableOfContentsConverter.convert(simple);
     }
 
     public byte[] clml2docx(String clml) throws IOException, SaxonApiException {
