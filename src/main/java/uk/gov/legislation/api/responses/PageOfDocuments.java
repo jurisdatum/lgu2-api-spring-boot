@@ -3,7 +3,6 @@ package uk.gov.legislation.api.responses;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -29,7 +28,7 @@ public class PageOfDocuments {
         public int totalPages;
 
         @Schema
-        public LocalDateTime updated; // ToDo check zoned?
+        public ZonedDateTime updated;
 
         @Schema
         public Counts counts;

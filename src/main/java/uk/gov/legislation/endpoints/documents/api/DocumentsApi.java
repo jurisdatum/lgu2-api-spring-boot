@@ -11,10 +11,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.context.request.NativeWebRequest;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.exceptions.ErrorResponse;
-
-import java.io.IOException;
 
 @Tag(name = "Document lists", description = "APIs for fetching document lists and feeds")
 public interface DocumentsApi {
@@ -37,14 +36,12 @@ public interface DocumentsApi {
     })
     ResponseEntity<PageOfDocuments> getDocs(
             @PathVariable String type,
-            @RequestParam(value = "page", defaultValue = "1") int page
-    ) throws IOException, InterruptedException;
+            @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
     ResponseEntity<String> getFeed(
             @PathVariable String type,
-            @RequestParam(value = "page", defaultValue = "1") int page
-    ) throws IOException, InterruptedException;
+            @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     @Operation(summary = "Fetch documents by type and year in Atom or JSON format")
@@ -65,14 +62,23 @@ public interface DocumentsApi {
     ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(
             @PathVariable String type,
             @PathVariable int year,
-            @RequestParam(value = "page", defaultValue = "1") int page
-    ) throws IOException, InterruptedException;
+            @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
     ResponseEntity<String> getFeedByTypeAndYear(
             @PathVariable String type,
             @PathVariable int year,
-            @RequestParam(value = "page", defaultValue = "1") int page
-    ) throws IOException, InterruptedException;
+            @RequestParam(defaultValue = "1") int page) throws Exception;
+
+
+    @GetMapping(
+        value = "/documents/new/{region:all|uk|scotland|wales|ni}",
+        produces = {
+            MediaType.APPLICATION_ATOM_XML_VALUE,
+            MediaType.APPLICATION_JSON_VALUE }
+    )
+    ResponseEntity<Object> getNew(NativeWebRequest request,
+        @PathVariable String region,
+        @RequestParam(defaultValue = "1") int page) throws Exception;
 
 }
