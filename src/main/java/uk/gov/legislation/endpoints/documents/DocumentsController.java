@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.documents.controller;
+package uk.gov.legislation.endpoints.documents;
 
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -8,20 +8,19 @@ import org.springframework.web.context.request.NativeWebRequest;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.LastUpdated;
 import uk.gov.legislation.data2.SearchService;
-import uk.gov.legislation.endpoints.documents.api.DocumentsApi;
 
 import java.time.ZonedDateTime;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @RestController
-public class DocumentsApiController implements DocumentsApi {
+public class DocumentsController implements DocumentsApi {
 
     private final SearchService search;
 
     private final ContentNegotiationManager negotiation;
 
-    public DocumentsApiController(SearchService search, ContentNegotiationManager negotiation) {
+    public DocumentsController(SearchService search, ContentNegotiationManager negotiation) {
         this.search = search;
         this.negotiation = negotiation;
     }
