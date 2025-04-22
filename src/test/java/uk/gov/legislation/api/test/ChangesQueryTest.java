@@ -13,4 +13,12 @@ class ChangesQueryTest {
         Assertions.assertEquals(expected, actual);
     }
 
+    @Test
+    void search() {
+        String actual = uk.gov.legislation.data.marklogic.search.Parameters.builder()
+            .type("ukpga").year(1968).build().toQuery();
+        String expected = "?type=ukpga&year=1968";
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
