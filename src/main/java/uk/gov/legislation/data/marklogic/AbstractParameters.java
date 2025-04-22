@@ -1,7 +1,5 @@
 package uk.gov.legislation.data.marklogic;
 
-import java.lang.invoke.MethodHandles;
-import java.lang.invoke.VarHandle;
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.net.URLEncoder;
@@ -24,25 +22,17 @@ public abstract class AbstractParameters {
 
     public String toQuery() {
         Map<String, String> params = new LinkedHashMap<>();
-        Class<?> clazz = this.getClass();
-        MethodHandles.Lookup lookup;
-        try {
-            lookup = MethodHandles.privateLookupIn(clazz, MethodHandles.lookup());
-        } catch (IllegalAccessException e) {
-            throw new RuntimeException("Lookup failed for class: " + clazz, e);
-        }
-        for (Field field: clazz.getDeclaredFields()) {
+        for (Field field: getClass().getDeclaredFields()) {
             if (Modifier.isStatic(field.getModifiers()))
                 continue;
             if (field.isSynthetic())
                 continue;
-            VarHandle handle;
+            Object value;
             try {
-                handle = lookup.unreflectVarHandle(field);
+                value = field.get(this);
             } catch (IllegalAccessException e) {
                 continue;
             }
-            Object value = handle.get(this);
             if (value == null)
                 continue;
             String key = makeKey(field);

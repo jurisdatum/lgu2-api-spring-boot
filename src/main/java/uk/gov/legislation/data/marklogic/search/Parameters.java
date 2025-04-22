@@ -3,19 +3,18 @@ package uk.gov.legislation.data.marklogic.search;
 import uk.gov.legislation.data.marklogic.AbstractParameters;
 import uk.gov.legislation.util.Type;
 
-@SuppressWarnings("unused")
 public class Parameters extends AbstractParameters {
 
     // could be an enum
-    private String series;
+    public String series;
 
-    private String type;
+    public String type;
 
-    private Integer year;
+    public Integer year;
 
-    private Sort sort;
+    public Sort sort;
 
-    private Integer page;
+    public Integer page;
 
     public enum Sort {
 
