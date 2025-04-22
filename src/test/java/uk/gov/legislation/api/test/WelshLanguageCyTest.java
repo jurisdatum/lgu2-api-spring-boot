@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.context.annotation.Description;
 import uk.gov.legislation.api.test.response.ExpectedWelshResponseDataCy;
-import uk.gov.legislation.endpoints.Application;
+import uk.gov.legislation.Application;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

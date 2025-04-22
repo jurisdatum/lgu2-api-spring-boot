@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
-import uk.gov.legislation.endpoints.Application;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 

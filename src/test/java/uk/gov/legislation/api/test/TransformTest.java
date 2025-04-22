@@ -10,9 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.endpoints.Application;
-import uk.gov.legislation.endpoints.document.service.DocumentService;
-import uk.gov.legislation.endpoints.fragment.service.TransformationService;
+import uk.gov.legislation.Application;
+import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.UpToDate;
 
@@ -25,13 +24,11 @@ import java.util.stream.Stream;
 @SpringBootTest(classes = Application.class)
 class TransformTest {
 
-    private final DocumentService documentService;
-    private final TransformationService fragmentService;
+    private final Transforms transforms;
 
     @Autowired
-    TransformTest(DocumentService docService, TransformationService fragService) {
-        this.documentService = docService;
-        this.fragmentService = fragService;
+    TransformTest(Transforms transforms) {
+        this.transforms = transforms;
     }
 
     static Stream<String> provide() {
@@ -72,7 +69,7 @@ class TransformTest {
     @MethodSource("provide")
     void akn(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = isFragment(id) ? fragmentService.transformToAkn(clml) : documentService.transformToAkn(clml);
+        String actual = transforms.clml2akn(clml);
         String expected = read(id, ".akn.xml");
         actual = replaceAknDate(actual);
         expected = replaceAknDate(expected);
@@ -93,7 +90,7 @@ class TransformTest {
     @MethodSource("provide")
     void html(String id) throws Exception {
         String clml = read(id, ".xml");
-        String actual = isFragment(id) ? fragmentService.transformToHtml(clml, true) : documentService.transformToHtml(clml);
+        String actual = transforms.clml2html(clml, true);
         String expected = read(id, ".html");
         actual = replaceHtmlDate(actual);
         expected = replaceHtmlDate(expected);
@@ -111,11 +108,11 @@ class TransformTest {
         LocalDate cutoff = LocalDate.of(2025, 3, 30);
         String actual;
         if (isFragment(id)) {
-            Fragment fragment = fragmentService.transformToJsonResponse(clml);
+            Fragment fragment = transforms.clml2fragment(clml);
             UpToDate.setUpToDate(fragment.meta, cutoff);
             actual = mapper.writeValueAsString(fragment);
         } else {
-            Document document = documentService.transformToJsonResponse(clml);
+            Document document = transforms.clml2document(clml);
             UpToDate.setUpToDate(document.meta, cutoff);
             actual = mapper.writeValueAsString(document);
         }

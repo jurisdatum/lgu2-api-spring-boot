@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints;
+package uk.gov.legislation;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;

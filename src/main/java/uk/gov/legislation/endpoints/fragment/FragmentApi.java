@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.fragment.api;
+package uk.gov.legislation.endpoints.fragment;
 
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -37,13 +37,13 @@ public interface FragmentApi {
             )
         }
     )
-    ResponseEntity <String> getFragmentClml(
+    ResponseEntity<String> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Year Integer year,
             @PathVariable @Number Integer number,
             @PathVariable @Section String section,
-            @RequestParam @Version Optional <String> version,
-            Locale locale);
+            @RequestParam @Version Optional<String> version,
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
     @Operation(
@@ -57,14 +57,14 @@ public interface FragmentApi {
             )
         }
     )
-    ResponseEntity <String> getFragmentClml(
+    ResponseEntity<String> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @PathVariable @Section String section,
-            @RequestParam @Version Optional <String> version,
-            Locale locale);
+            @RequestParam @Version Optional<String> version,
+            Locale locale) throws Exception;
 
     /* Akoma Ntoso */
 
@@ -75,7 +75,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/akn+xml")
     ResponseEntity<String> getFragmentAkn(
@@ -85,7 +85,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* HTML5 */
 
@@ -96,7 +96,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "text/html")
     ResponseEntity<String> getFragmentHtml(
@@ -106,7 +106,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* JSON */
 
@@ -117,7 +117,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/json")
     ResponseEntity<Fragment> getFragmentJson(
@@ -127,7 +127,7 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale);
+            Locale locale) throws Exception;
 
     /* Word (.docx) */
 
