@@ -1,5 +1,6 @@
 package uk.gov.legislation.endpoints.ld.metadata;
 
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Tag(name = "Linked Data", description = "APIs for fetching metadata information")
 public interface MetadataApi {
 
+    @Operation(deprecated = true)
     @GetMapping(
             value = "/metadata/{type}/{year}/{number}",
             produces = {
@@ -38,6 +40,7 @@ public interface MetadataApi {
             @Parameter(hidden = true)String accept
     ) throws Exception;
 
+    @Operation(deprecated = true)
     @GetMapping(
             value = "/metadata/{type}/{year}",
             produces = {
