@@ -28,6 +28,9 @@ public class InterpretationLD {
     @JsonProperty
     public ValueAndLanguage shortTitle;
 
+    @JsonProperty
+    public ValueAndLanguage orderTitle;
+
     public static InterpretationLD convert(ObjectNode node) {
         return Graph.mapper.convertValue(node, InterpretationLD.class);
     }

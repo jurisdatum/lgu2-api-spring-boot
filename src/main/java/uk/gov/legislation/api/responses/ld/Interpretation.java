@@ -14,10 +14,16 @@ public class Interpretation {
     public String language;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String longTitle;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String shortTitle;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String orderTitle;
 
     @JsonProperty
     public boolean original;

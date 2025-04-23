@@ -12,8 +12,9 @@ public class InterpretationConverter {
         Interpretation interpretation = new Interpretation();
         interpretation.uri = URI.create(ld.id);
         interpretation.language = ld.languageOfTextIsoCode.value;
-        interpretation.longTitle = ld.longTitle.value;
-        interpretation.shortTitle = ld.shortTitle.value;
+        interpretation.longTitle = (ld.longTitle == null) ? null : ld.longTitle.value;
+        interpretation.shortTitle = (ld.shortTitle == null) ? null : ld.shortTitle.value;
+        interpretation.orderTitle = (ld.orderTitle == null) ? null : ld.orderTitle.value;
         interpretation.original = ld.type.stream().anyMatch(t -> t.equals(Resources.Leg.OriginalInterpretation));
         interpretation.current = ld.type.stream().anyMatch(t -> t.equals(Resources.Leg.CurrentInterpretation));
         return interpretation;
