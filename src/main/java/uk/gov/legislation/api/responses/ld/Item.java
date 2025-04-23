@@ -17,6 +17,10 @@ public class Item {
     public int year;
 
     @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String session;
+
+    @JsonProperty
     public int number;
 
     @JsonProperty

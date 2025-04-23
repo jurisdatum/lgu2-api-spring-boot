@@ -17,6 +17,7 @@ public class ItemConverter {
             .findFirst()
             .orElse(null);
         item.year = ld.year;
+        item.session = ld.session == null ? null : ld.session.toString().substring(41);
         item.number = ld.number;
         item.title = ValueAndLanguage.get(ld.title, "en");
         item.welshTitle = ValueAndLanguage.get(ld.title, "cy");

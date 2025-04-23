@@ -22,7 +22,7 @@ public class InterpretationQuery {
 
     public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
-    String makeSparqlQuery(String type, int year, int number, String version) {
+    String makeSparqlQuery(String type, String year, int number, String version) {
         String workUri = "http://www.legislation.gov.uk/id/%s/%s/%d".formatted(type, year, number);
         String exprUri = "http://www.legislation.gov.uk/%s/%s/%d".formatted(type, year, number);
         if (version != null)
@@ -33,12 +33,12 @@ public class InterpretationQuery {
             """.formatted(workUri, exprUri);
     }
 
-    public String get(String type, int year, int number, String version, String format) throws IOException, InterruptedException {
+    public String get(String type, String year, int number, String version, String format) throws IOException, InterruptedException {
         String query = makeSparqlQuery(type, year, number, version);
         return virtuoso.query(query, format);
     }
 
-    public Optional<Interpretation> get(String type, int year, int number, String version) throws IOException, InterruptedException {
+    public Optional<Interpretation> get(String type, String year, int number, String version) throws IOException, InterruptedException {
         String json = get(type, year, number, version, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         if (graph == null)

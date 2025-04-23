@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 
+import java.net.URI;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.StreamSupport;
@@ -23,7 +24,10 @@ public class ItemLD {
     public int year;
 
     @JsonProperty
-    public String calendarYear;
+    public URI calendarYear;
+
+    @JsonProperty
+    public URI session;
 
     @JsonProperty
     public int number;
@@ -76,7 +80,11 @@ public class ItemLD {
 
     @JsonSetter("originalLanguageOfTextIsoCode")
     public void setOriginalLanguageOfTextIsoCode(JsonNode node) {
-        this.originalLanguageOfTextIsoCode = oneOrMany(node, ValueAndType.class);
+        if (node instanceof TextNode) {
+            this.originalLanguageOfTextIsoCode = Collections.singletonList(ValueAndType.convert(node));
+        } else {
+            this.originalLanguageOfTextIsoCode = oneOrMany(node, ValueAndType.class);
+        }
     }
 
     public static ItemLD convert(ObjectNode node) {
