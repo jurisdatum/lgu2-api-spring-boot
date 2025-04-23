@@ -10,7 +10,6 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +29,7 @@ public class SearchResults {
     public String id;
 
     @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
-    public LocalDateTime updated;
+    public ZonedDateTime updated;
 
     @JacksonXmlProperty(namespace = "http://a9.com/-/spec/opensearch/1.1/")
     public int itemsPerPage;

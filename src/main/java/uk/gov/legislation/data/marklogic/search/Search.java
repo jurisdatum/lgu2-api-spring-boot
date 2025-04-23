@@ -3,6 +3,7 @@ package uk.gov.legislation.data.marklogic.search;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.data.marklogic.MarkLogic;
 import uk.gov.legislation.util.Type;
+
 import java.io.IOException;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
@@ -56,22 +57,16 @@ public class Search {
         return SearchResults.parse(atom);
     }
 
-    /* fetch by type and year */
+    /* get with Parameters */
 
-    public String byTypeAndYearAtom(String type, int year, int page) throws IOException, InterruptedException {
-        return getAtomByTitleAndTypeAndYearAndNumber(null, type, year, null, null, page);
-    }
-    public SearchResults byTypeAndYear(String type, int year, int page) throws IOException, InterruptedException {
-        return getJsonByTitleAndTypeAndYearAndNumber(null, type, year, null, null, page);
+    public String getAtom(Parameters params) throws IOException, InterruptedException {
+        String query = params.toQuery();
+        return db.get(ENDPOINT, query);
     }
 
-    /* fetch by type */
-
-    public String byTypeAtom(String type, int page) throws IOException, InterruptedException {
-        return getAtomByTitleAndTypeAndYearAndNumber(null, type, null, null, null, page);
-    }
-    public SearchResults byType(String type, int page) throws IOException, InterruptedException {
-        return getJsonByTitleAndTypeAndYearAndNumber(null, type, null, null, null, page);
+    public SearchResults get(Parameters params) throws IOException, InterruptedException {
+        String atom = getAtom(params);
+        return SearchResults.parse(atom);
     }
 
 }
