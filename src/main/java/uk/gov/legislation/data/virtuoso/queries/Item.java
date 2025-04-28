@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+@Deprecated(forRemoval = true)
 @Repository("virtuosoQueryItem1")
 public class Item {
 

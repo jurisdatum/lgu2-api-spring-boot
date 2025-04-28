@@ -9,6 +9,7 @@ import uk.gov.legislation.data.virtuoso.rdf.RdfProperty;
 import java.net.URI;
 import java.util.List;
 
+@Deprecated(forRemoval = true)
 public class Interpretation {
 
     public URI uri;

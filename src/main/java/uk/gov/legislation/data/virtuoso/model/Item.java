@@ -11,6 +11,8 @@ import uk.gov.legislation.data.virtuoso.rdf.RdfProperty;
 import java.net.URI;
 import java.util.List;
 import java.util.Optional;
+
+@Deprecated(forRemoval = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Item {
 

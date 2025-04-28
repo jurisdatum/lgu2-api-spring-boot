@@ -3,7 +3,7 @@ package uk.gov.legislation.data.virtuoso.queries;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
-import uk.gov.legislation.api.responses.ld.Clazz;
+import uk.gov.legislation.api.responses.ld.ClassResponse;
 import uk.gov.legislation.converters.ld.ClassConverter;
 import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
@@ -32,7 +32,7 @@ public class ClassQuery {
         return virtuoso.query(query, format);
     }
 
-    public Optional<Clazz> get(String name) throws IOException, InterruptedException {
+    public Optional<ClassResponse> get(String name) throws IOException, InterruptedException {
         String json = get(name, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         return Optional.ofNullable(graph)

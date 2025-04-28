@@ -8,7 +8,7 @@ import java.net.URI;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = false)
-public class Clazz {
+public class ClassResponse {
 
     @JsonProperty
     public URI uri;

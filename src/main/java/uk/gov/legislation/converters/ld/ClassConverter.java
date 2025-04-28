@@ -1,7 +1,7 @@
 package uk.gov.legislation.converters.ld;
 
 import org.slf4j.LoggerFactory;
-import uk.gov.legislation.api.responses.ld.Clazz;
+import uk.gov.legislation.api.responses.ld.ClassResponse;
 import uk.gov.legislation.data.virtuoso.jsonld.ClassLD;
 
 import java.util.Collections;
@@ -10,8 +10,8 @@ import java.util.List;
 
 public class ClassConverter {
 
-    public static Clazz convert(ClassLD ld) {
-        Clazz clazz = new Clazz();
+    public static ClassResponse convert(ClassLD ld) {
+        ClassResponse clazz = new ClassResponse();
         clazz.uri = ld.id;
         clazz.other = new HashMap<>(ld.other);
         oneOrMany(clazz, "subClassOf");
@@ -26,7 +26,7 @@ public class ClassConverter {
         return uri.substring(uri.lastIndexOf('/') + 1);
     }
 
-    private static void oneOrMany(Clazz clazz, String key) {
+    private static void oneOrMany(ClassResponse clazz, String key) {
         Object value = clazz.other.get(key);
         switch (value) {
             case String one -> {

@@ -5,6 +5,8 @@ import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 
 import java.io.IOException;
+
+@Deprecated(forRemoval = true)
 @Component
 public class ClassInfo {
 
