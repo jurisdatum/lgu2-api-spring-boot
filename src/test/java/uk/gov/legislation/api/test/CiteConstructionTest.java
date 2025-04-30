@@ -7,7 +7,7 @@ import uk.gov.legislation.util.Cites;
 import java.util.Collection;
 import java.util.Collections;
 
-public class CiteConstructionTest {
+class CiteConstructionTest {
 
     @Test
     void ukla() {
@@ -26,14 +26,14 @@ public class CiteConstructionTest {
     @Test
     void nia() {
         String actual = Cites.make("nia", 2024, 1, null);
-        String expected = "2024 c. 1";
+        String expected = "2024 c. 1 (N.I.)";
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void aosp() {
         String actual = Cites.make("aosp", 1707, 8, null);
-        String expected = "1707 c. 8";
+        String expected = "1707 c. 8 [S]";
         Assertions.assertEquals(expected, actual);
     }
 
@@ -43,7 +43,7 @@ public class CiteConstructionTest {
     void aep() {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "6_Ann"));
         String actual = Cites.make("aep", 1706, 11, altNumbers);
-        String expected = "1706 c. 11 (Regnal. 6_Ann)";
+        String expected = "1706 (6 Ann.) c. 11";
         Assertions.assertEquals(expected, actual);
     }
 
@@ -51,7 +51,7 @@ public class CiteConstructionTest {
     void aip() {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "40_Geo_3"));
         String actual = Cites.make("aip", 1800, 38, altNumbers);
-        String expected = "1800 c. 38 (Regnal. 40_Geo_3)";
+        String expected = "1800 (40 Geo. 3) c. 38 [I]";
         Assertions.assertEquals(expected, actual);
     }
 
@@ -59,17 +59,17 @@ public class CiteConstructionTest {
     void apgb() {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
         String actual = Cites.make("apgb", 1800, 88, altNumbers);
-        String expected = "1800 c. 88 (Regnal. 39_and_40_Geo_3)";
+        String expected = "1800 (39 & 40 Geo. 3) c. 88";
         Assertions.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void gbla() {
-//        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
-//        String actual = Cites.make("gbla", 1800, 120, altNumbers);
-//        String expected = "1800 c. cxx (Regnal. 39_and_40_Geo_3)";
-//        Assertions.assertEquals(expected, actual);
-//    }
+    @Test
+    void gbla() {
+        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
+        String actual = Cites.make("gbla", 1800, 120, altNumbers);
+        String expected = "1800 (39 & 40 Geo. 3) c. cxx";
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     void anaw() {
@@ -78,12 +78,12 @@ public class CiteConstructionTest {
         Assertions.assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void asc() {
-//        String actual = Cites.make("asc", 2024, 6, null);
-//        String expected = "2024 asc 6";
-//        Assertions.assertEquals(expected, actual);
-//    }
+    @Test
+    void asc() {
+        String actual = Cites.make("asc", 2024, 6, null);
+        String expected = "2024 asc 6";
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     void mwa() {
@@ -102,14 +102,21 @@ public class CiteConstructionTest {
     @Test
     void mnia() {
         String actual = Cites.make("mnia", 1974, 4, null);
-        String expected = "1974 Chapter 4";
+        String expected = "1974 c. 4 (N.I.)";
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void apni() {
         String actual = Cites.make("apni", 1972, 15, null);
-        String expected = "1972 Chapter 15";
+        String expected = "1972 c. 15 (N.I.)";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ssi() {
+        String actual = Cites.make("ssi", 2024, 193, null);
+        String expected = "S.S.I. 2024/193";
         Assertions.assertEquals(expected, actual);
     }
 
@@ -117,7 +124,7 @@ public class CiteConstructionTest {
     void wsi() {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("W", "169"));
         String actual = Cites.make("wsi", 2024, 998, altNumbers);
-        String expected = "2024 No. 998 (W. 169)";
+        String expected = "S.I. 2024/998 (W. 169)";
         Assertions.assertEquals(expected, actual);
     }
 
@@ -125,7 +132,7 @@ public class CiteConstructionTest {
     void nisi() {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("NI", "1"));
         String actual = Cites.make("nisi", 2016, 999, altNumbers);
-        String expected = "2016 No. 999 (N.I. 1)";
+        String expected = "S.I. 2016/999 (N.I. 1)";
         Assertions.assertEquals(expected, actual);
     }
 

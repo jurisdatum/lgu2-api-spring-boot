@@ -68,7 +68,7 @@ public class DocumentsFeedConverter {
         doc.year = entry.year == null ? 0 : entry.year.value;
         doc.number = entry.number == null ? 0 : entry.number.value;
         doc.altNumbers = convertAltNumbers(entry.altNumbers);
-        doc.cite = Cites.make2(doc.longType, doc.year, doc.number, doc.altNumbers);
+        doc.cite = Cites.convertNumbersAndMake(doc.longType, doc.year, doc.number, doc.altNumbers);
         doc.title = entry.title;
         doc.altTitle = entry.altTitle;
         doc.published = entry.published;

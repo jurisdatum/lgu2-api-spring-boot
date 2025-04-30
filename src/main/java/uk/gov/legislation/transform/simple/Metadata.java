@@ -1,6 +1,5 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -28,7 +27,6 @@ public class Metadata {
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "altNumber")
-    @JsonIgnore
     public List<AltNum> altNums;
 
     public static class AltNum implements uk.gov.legislation.util.AltNumber {
