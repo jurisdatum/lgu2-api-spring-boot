@@ -29,6 +29,8 @@ public class Virtuoso {
 
     public static final Set<String> Formats = Set.of(
         "application/rdf+xml",
+        "application/rdf+json",
+        "application/ld+json",
         "application/sparql-results+json",
         "application/sparql-results+xml",
         "text/csv",

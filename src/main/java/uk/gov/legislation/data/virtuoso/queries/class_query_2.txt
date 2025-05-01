@@ -1,0 +1,13 @@
+# use this for all properties of parent classes
+CONSTRUCT {
+  ?class ?p ?o .
+  ?parent ?p2 ?o2 .
+}
+WHERE {
+  VALUES (?class) { (<http://www.legislation.gov.uk/def/legislation/UnitedKingdomPublicGeneralAct>) }
+  ?class ?p ?o .
+  OPTIONAL {
+    ?class <http://www.w3.org/2000/01/rdf-schema#subClassOf> ?parent .
+    ?parent ?p2 ?o2 .
+  }
+}

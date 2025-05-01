@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
+@Deprecated(forRemoval = true)
 @Repository
 public class Items {
 

@@ -1,26 +1,37 @@
 package uk.gov.legislation.endpoints.ld.classinfo;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
-import uk.gov.legislation.data.virtuoso.queries.ClassInfo;
-import uk.gov.legislation.endpoints.ld.Helper;
+import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.server.ResponseStatusException;
+import uk.gov.legislation.data.virtuoso.Virtuoso;
+import uk.gov.legislation.data.virtuoso.queries.ClassQuery;
 
 @RestController
 public class ClassInfoController implements ClassInfoApi {
 
-    private final ClassInfo queries;
+    private final ClassQuery query;
 
-    public ClassInfoController(ClassInfo queries) {
-        this.queries = queries;
+    private final ContentNegotiationManager negotiation;
+
+    public ClassInfoController(ClassQuery query, ContentNegotiationManager negotiation) {
+        this.query = query;
+        this.negotiation = negotiation;
     }
 
     @Override
-    public ResponseEntity<String> getClassInfo(String name, String accept) throws Exception {
-        String format = Helper.getFormat(accept);
-        String results = queries.getClassData(name, format);
-        return ResponseEntity.ok()
-            .header("Content-Type", format)
-            .body(results);
+    public ResponseEntity<?> getClassInfo(NativeWebRequest request, String name) throws Exception {
+        MediaType media = negotiation.resolveMediaTypes(request).getFirst();
+        if (Virtuoso.Formats.contains(media.toString())) {
+            String data = query.get(name, media.toString());
+            return ResponseEntity.ok(data);
+        }
+        return query.get(name)
+            .map(ResponseEntity::ok)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
 }
