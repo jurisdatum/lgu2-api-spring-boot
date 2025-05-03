@@ -11,6 +11,8 @@ import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.InterpretationQuery;
 
+import java.util.Locale;
+
 @RestController
 @Tag(name = "Linked Data")
 @RequestMapping(
@@ -44,8 +46,9 @@ public class InterpretationController {
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
-            @RequestParam(required = false) String version) throws Exception {
-        return getEither(request, type, Integer.toString(year), number, version);
+            @RequestParam(required = false) String version,
+            Locale locale) throws Exception {
+        return getEither(request, type, Integer.toString(year), number, version, locale);
     }
 
     @GetMapping("/{type}/{reign}/{session}/{number}")
@@ -54,22 +57,25 @@ public class InterpretationController {
             @PathVariable String reign,
             @PathVariable String session,
             @PathVariable int number,
-            @RequestParam(required = false) String version) throws Exception {
+            @RequestParam(required = false) String version,
+            Locale locale) throws Exception {
         String regnal = reign + "/" + session;
-        return getEither(request, type, regnal, number, version);
+        return getEither(request, type, regnal, number, version, locale);
     }
 
     private ResponseEntity<?> getEither(NativeWebRequest request,
             String type,
             String year,
             int number,
-            String version) throws Exception {
+            String version,
+            Locale locale) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
+        boolean welsh = "cy".equals(locale.getLanguage());
         if (Virtuoso.Formats.contains(media.toString())) {
-            String data = query.get(type, year, number, version, media.toString());
+            String data = query.get(type, year, number, version, welsh, media.toString());
             return ResponseEntity.ok(data);
         }
-        return query.get(type, year, number, version)
+        return query.get(type, year, number, version, welsh)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

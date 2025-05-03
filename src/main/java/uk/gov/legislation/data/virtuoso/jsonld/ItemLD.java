@@ -15,7 +15,7 @@ import java.util.stream.StreamSupport;
 public class ItemLD {
 
     @JsonProperty("@id")
-    public String id;
+    public URI id;
 
     @JsonProperty("@type")
     public List<String> type;

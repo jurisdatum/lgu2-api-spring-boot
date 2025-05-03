@@ -3,12 +3,13 @@ package uk.gov.legislation.api.responses.ld;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.net.URI;
 import java.util.List;
 
 public class Item {
 
     @JsonProperty
-    public String uri;
+    public URI uri;
 
     @JsonProperty
     public String type;

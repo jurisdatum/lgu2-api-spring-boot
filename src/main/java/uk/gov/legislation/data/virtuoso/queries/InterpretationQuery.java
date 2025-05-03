@@ -22,26 +22,30 @@ public class InterpretationQuery {
 
     public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
-    String makeSparqlQuery(String type, String year, int number, String version) {
+    String makeSparqlQuery(String type, String year, int number, String version, boolean welsh) {
         String workUri = "http://www.legislation.gov.uk/id/%s/%s/%d".formatted(type, year, number);
         String exprUri = "http://www.legislation.gov.uk/%s/%s/%d".formatted(type, year, number);
         if (version != null)
             exprUri += "/" + version;
+        if (welsh)
+            exprUri += "/welsh";
         return """
             CONSTRUCT { ?s ?p ?o . }
             WHERE { VALUES ?s { <%s> <%s> } ?s ?p ?o . }
             """.formatted(workUri, exprUri);
     }
 
-    public String get(String type, String year, int number, String version, String format) throws IOException, InterruptedException {
-        String query = makeSparqlQuery(type, year, number, version);
+    public String get(String type, String year, int number, String version, boolean welsh, String format) throws IOException, InterruptedException {
+        String query = makeSparqlQuery(type, year, number, version, welsh);
         return virtuoso.query(query, format);
     }
 
-    public Optional<Interpretation> get(String type, String year, int number, String version) throws IOException, InterruptedException {
-        String json = get(type, year, number, version, "application/ld+json");
+    public Optional<Interpretation> get(String type, String year, int number, String version, boolean welsh) throws IOException, InterruptedException {
+        String json = get(type, year, number, version, welsh, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         if (graph == null)
+            return Optional.empty();
+        if (graph.size() < 2)
             return Optional.empty();
         ObjectNode item0;
         ObjectNode interpretation0;
