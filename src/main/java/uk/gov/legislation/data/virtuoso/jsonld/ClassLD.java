@@ -17,7 +17,7 @@ public class ClassLD {
     public URI id;
 
     @JsonProperty("@type")
-    public URI type;
+    public String type;
 
     public final Map<String, Object> other = new HashMap<>();
 
