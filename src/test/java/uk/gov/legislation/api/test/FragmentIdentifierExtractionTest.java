@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.util.Links;
 
-public class FragmentIdentifierExtractionTest {
+class FragmentIdentifierExtractionTest {
 
     @Test
 	void fragments() {

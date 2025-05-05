@@ -2,7 +2,7 @@
 
 <xsl:mode on-no-match="shallow-copy" />
 
-<xsl:strip-space elements="feed entry" />
+<xsl:strip-space elements="atom:feed atom:entry" xmlns:atom="http://www.w3.org/2005/Atom" />
 
 <xsl:output indent="yes" />
 

@@ -20,7 +20,7 @@ import java.util.Locale;
 @SpringBootApplication(scanBasePackages = "uk.gov.legislation")
 @Configuration
 @PropertySource("classpath:application-secrets.properties")
-@OpenAPIDefinition(info = @Info(title = "api.legislation.gov.uk", version = "0.0.1", description = "the API for www.legislation.gov.uk"))
+@OpenAPIDefinition(info = @Info(title = "api.legislation.gov.uk", version = "0.0.2", description = "the API for www.legislation.gov.uk"))
 public class Application implements WebMvcConfigurer {
 
 	public static void main(String[] args) {
