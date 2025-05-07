@@ -12,6 +12,8 @@ import uk.gov.legislation.data.virtuoso.jsonld.MonarchLD;
 import java.io.IOException;
 import java.util.Optional;
 
+import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
+
 @Service
   public class MonarchQuery {
 
@@ -42,17 +44,7 @@ import java.util.Optional;
 
     private static String buildMonarchQuery(String monarchName) {
         String uri = String.format(MONARCH_URI_TEMPLATE, monarchName);
-        return buildSingleConstructQuery(uri);
+        return makeSingleConstructQuery(uri);
     }
 
-    private static String buildSingleConstructQuery(String uri) {
-        return """
-            CONSTRUCT {
-              <%s> ?p ?o .
-            }
-            WHERE {
-              <%s> ?p ?o .
-            }
-            """.formatted(uri, uri);
-    }
 }
