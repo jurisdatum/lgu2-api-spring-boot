@@ -41,41 +41,108 @@ public class InterpretationController {
         this.negotiation = negotiation;
     }
 
-    @GetMapping("/{type}/{year}/{number}")
-    public ResponseEntity<?> getCalendar(NativeWebRequest request,
+    @GetMapping("/{type}/{year:\\d{4}}/{number}")
+    public ResponseEntity<?> getCalendarYearAndNumber(NativeWebRequest request,
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam(required = false) String version,
             Locale locale) throws Exception {
-        return getEither(request, type, Integer.toString(year), number, version, locale);
+        return helper(request, type, Integer.toString(year), Integer.toString(number), version, locale);
     }
 
-    @GetMapping("/{type}/{reign}/{session}/{number}")
-    public ResponseEntity<?> getRegnal(NativeWebRequest request,
+    @GetMapping("/{type}/{year:\\d{4}}/{date}/{number}")
+    public ResponseEntity<?> getYearAndSpecificDate(NativeWebRequest request,
             @PathVariable String type,
-            @PathVariable String reign,
-            @PathVariable String session,
+            @PathVariable int year,
+            @PathVariable String date,
             @PathVariable int number,
             @RequestParam(required = false) String version,
             Locale locale) throws Exception {
-        String regnal = reign + "/" + session;
-        return getEither(request, type, regnal, number, version, locale);
+        String middle = year + "/" + date;
+        return helper(request, type, middle, Integer.toString(number), version, locale);
     }
 
-    private ResponseEntity<?> getEither(NativeWebRequest request,
+    @GetMapping("/{type}/{reign}/{session}/{number}")
+    public ResponseEntity<?> getRegnalYearAndNumber(NativeWebRequest request,
+            @PathVariable String type,
+            @PathVariable String reign,
+            @PathVariable String session,
+            @PathVariable String number,
+            @RequestParam(required = false) String version,
+            Locale locale) throws Exception {
+        String regnal = reign + "/" + session;
+        return helper(request, type, regnal, number, version, locale);
+    }
+
+    @GetMapping("/{type}/{reign}/{session}/{statute}/{number}")
+    public ResponseEntity<?> getRegnalYearWithStatuteNameAndNumber(NativeWebRequest request,
+            @PathVariable String type,
+            @PathVariable String reign,
+            @PathVariable String session,
+            @PathVariable String statute,
+            @PathVariable String number,
+            @RequestParam(required = false) String version,
+            Locale locale) throws Exception {
+        String middle = reign + "/" + session + "/" + statute;
+        return helper(request, type, middle, number, version, locale);
+    }
+
+    // this is duplicative of /{type}/{reign}/{session}/{number}, included only for specification
+    @GetMapping("/aep/{reign}/{statute}/{number}")
+    public ResponseEntity<?> getAEPStatuteNameAndNumber(NativeWebRequest request,
+            @PathVariable String reign,
+            @PathVariable String statute,
+            @PathVariable String number,
+            Locale locale) throws Exception {
+        String type = "aep";
+        String middle = reign + "/" + statute;
+        return helper(request, type, middle, number, null, locale);
+    }
+
+    // for tempincert URIs with number
+    @GetMapping("/aep/{statute}/{number}")
+    public ResponseEntity<?> getAEPStatuteNameAndNumber(NativeWebRequest request,
+            @PathVariable String statute,
+            @PathVariable String number,
+            Locale locale) throws Exception {
+        String type = "aep";
+        String middle = "tempincert/" + statute;
+        return helper(request, type, middle, number, null, locale);
+    }
+
+    // for tempincert URIs without number
+    @GetMapping("/aep/{statute}")
+    public ResponseEntity<?> getAEPStatuteNameAlone(NativeWebRequest request,
+            @PathVariable String statute,
+            Locale locale) throws Exception {
+        String type = "aep";
+        String middle = "tempincert/" + statute;
+        return helper(request, type, middle, null, null, locale);
+    }
+
+    @GetMapping("/eut/{treaty}")
+    public ResponseEntity<?> getEuropeanUnionTreaty(NativeWebRequest request,
+            @PathVariable String treaty,
+            @RequestParam(required = false) String version,
+            Locale locale) throws Exception {
+        return helper(request, "eut", treaty, null, version, locale);
+    }
+
+    private ResponseEntity<?> helper(NativeWebRequest request,
             String type,
-            String year,
-            int number,
+            String middle,
+            String number,
             String version,
             Locale locale) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         boolean welsh = "cy".equals(locale.getLanguage());
         if (Virtuoso.Formats.contains(media.toString())) {
-            String data = query.get(type, year, number, version, welsh, media.toString());
+            String data = query.get(type, middle, number, version, welsh, media.toString());
             return ResponseEntity.ok(data);
         }
-        return query.get(type, year, number, version, welsh)
+        // only two possibilities remain: application/json and application/xml
+        return query.get(type, middle, number, version, welsh)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

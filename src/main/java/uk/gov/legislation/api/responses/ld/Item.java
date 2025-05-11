@@ -22,7 +22,8 @@ public class Item {
     public String session;
 
     @JsonProperty
-    public int number;
+    @JsonInclude(JsonInclude.Include.ALWAYS)
+    public Integer number;
 
     @JsonProperty
     public String title;
@@ -54,6 +55,14 @@ public class Item {
 
     @JsonProperty
     public List<String> originalLanguages;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public URI parent;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    public List<URI> children;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_EMPTY)

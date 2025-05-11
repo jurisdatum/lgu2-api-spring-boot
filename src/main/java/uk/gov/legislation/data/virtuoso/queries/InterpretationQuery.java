@@ -22,9 +22,21 @@ public class InterpretationQuery {
 
     public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
-    String makeSparqlQuery(String type, String year, int number, String version, boolean welsh) {
-        String workUri = "http://www.legislation.gov.uk/id/%s/%s/%d".formatted(type, year, number);
-        String exprUri = "http://www.legislation.gov.uk/%s/%s/%d".formatted(type, year, number);
+    /**
+     * @param type    the first component of the URI, cannot be null
+     * @param middle  the following components of the URI, can contain slashes, cannot be null
+     * @param number  can be null
+     * @param version can be null
+     * @param welsh   whether to append /welsh
+     * @return the SPARQL query string
+     */
+    String makeSparqlQuery(String type, String middle, String number, String version, boolean welsh) {
+        String workUri = "http://www.legislation.gov.uk/id/%s/%s".formatted(type, middle);
+        String exprUri = "http://www.legislation.gov.uk/%s/%s".formatted(type, middle);
+        if (number != null) {
+            workUri += "/" + number;
+            exprUri += "/" + number;
+        }
         if (version != null)
             exprUri += "/" + version;
         if (welsh)
@@ -35,13 +47,13 @@ public class InterpretationQuery {
             """.formatted(workUri, exprUri);
     }
 
-    public String get(String type, String year, int number, String version, boolean welsh, String format) throws IOException, InterruptedException {
-        String query = makeSparqlQuery(type, year, number, version, welsh);
+    public String get(String type, String middle, String number, String version, boolean welsh, String format) throws IOException, InterruptedException {
+        String query = makeSparqlQuery(type, middle, number, version, welsh);
         return virtuoso.query(query, format);
     }
 
-    public Optional<Interpretation> get(String type, String year, int number, String version, boolean welsh) throws IOException, InterruptedException {
-        String json = get(type, year, number, version, welsh, "application/ld+json");
+    public Optional<Interpretation> get(String type, String middle, String number, String version, boolean welsh) throws IOException, InterruptedException {
+        String json = get(type, middle, number, version, welsh, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         if (graph == null)
             return Optional.empty();

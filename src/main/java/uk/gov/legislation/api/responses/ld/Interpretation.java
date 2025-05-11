@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.net.URI;
+import java.util.List;
 
 public class Interpretation {
 
@@ -14,22 +15,25 @@ public class Interpretation {
     public String language;
 
     @JsonProperty
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String longTitle;
-
-    @JsonProperty
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String shortTitle;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String orderTitle;
+    public String longTitle;
 
     @JsonProperty
     public boolean original;
 
     @JsonProperty
     public boolean current;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public URI parent;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    public List<URI> children;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)

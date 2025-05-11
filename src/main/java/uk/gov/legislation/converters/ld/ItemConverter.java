@@ -29,6 +29,8 @@ public class ItemConverter {
         item.welshCommentaryCitation = ValueAndLanguage.get(ld.commentaryCitation, "cy");
         item.originalLanguages = ld.originalLanguageOfTextIsoCode.stream()
             .map(value -> value.value).toList();
+        item.parent = ld.within;
+        item.children = ld.contains;
         item.interpretations = ld.interpretation;
         return item;
     }
