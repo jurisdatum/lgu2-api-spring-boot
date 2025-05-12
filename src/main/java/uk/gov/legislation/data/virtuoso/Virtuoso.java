@@ -1,5 +1,6 @@
 package uk.gov.legislation.data.virtuoso;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
 
@@ -13,6 +14,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Set;
 
 @Repository
+@ConditionalOnProperty(name = "virtuoso.enabled", havingValue = "true", matchIfMissing = true)
 public class Virtuoso {
 
     private final String endpoint;
