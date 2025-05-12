@@ -1,9 +1,9 @@
 package uk.gov.legislation.data.marklogic;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -13,7 +13,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 @Component
-@ConditionalOnProperty(name = "marklogic.enabled", havingValue = "true", matchIfMissing = true)
 public class MarkLogic {
 
     private final HttpClient httpClient;
