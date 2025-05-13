@@ -3,6 +3,7 @@ package uk.gov.legislation.data.marklogic;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;

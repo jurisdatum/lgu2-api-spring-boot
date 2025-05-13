@@ -39,6 +39,27 @@ public class InterpretationLD {
     @JsonProperty
     public ValueAndLanguage orderTitle;
 
+    @JsonProperty
+    public ValueAndLanguage statuteTitle;
+
+    @JsonProperty
+    public ValueAndLanguage statuteTitleAbbreviated;
+
+    @JsonProperty
+    public ValueAndLanguage alternativeStatuteTitle;
+
+    @JsonProperty
+    public ValueAndLanguage europeanUnionTitle;
+
+    @JsonProperty
+    public ValueAndLanguage subjectDescription;
+
+    @JsonProperty
+    public URI within;
+
+    @JsonProperty
+    public List<URI> contains;
+
     public static InterpretationLD convert(ObjectNode node) {
         return Graph.mapper.convertValue(node, InterpretationLD.class);
     }

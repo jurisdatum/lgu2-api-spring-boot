@@ -30,7 +30,7 @@ public class ItemLD {
     public URI session;
 
     @JsonProperty
-    public int number;
+    public Integer number;
 
     @JsonProperty
     public List<ValueAndLanguage> title;
@@ -63,6 +63,12 @@ public class ItemLD {
     public void setCommentaryCitation(JsonNode node) {
         this.commentaryCitation = oneOrMany(node, ValueAndLanguage.class);
     }
+
+    @JsonProperty
+    public URI within;
+
+    @JsonProperty
+    public List<URI> contains;
 
     @JsonProperty
     public List<String> interpretation;
