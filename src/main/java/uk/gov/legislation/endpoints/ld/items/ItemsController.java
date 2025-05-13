@@ -39,10 +39,10 @@ public class ItemsController {
         this.negotiation = negotiation;
     }
 
-    @GetMapping("/{type}/{year}")
+    @GetMapping(path = {"/{type}", "/{type}/{year}"})
     public ResponseEntity<?> typeAndYear(NativeWebRequest request,
             @PathVariable String type,
-            @PathVariable int year,
+            @PathVariable(required = false) Integer year,
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "10") int pageSize) throws Exception {
         final int offset = (page - 1) * pageSize;
