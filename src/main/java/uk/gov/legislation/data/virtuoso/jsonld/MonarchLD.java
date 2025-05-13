@@ -5,13 +5,24 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 
-public record MonarchLD(
-    @JsonProperty("@id") URI id,
-    @JsonProperty("@type") String type,
-    @JsonProperty String label,
-    @JsonProperty String regnalName,
-    @JsonProperty Integer regnalNumber
-) {
+public class MonarchLD {
+
+    @JsonProperty("@id")
+    public URI id;
+
+    @JsonProperty("@type")
+    public String type;
+
+    @JsonProperty
+    public String label;
+
+    @JsonProperty
+    public String regnalName;
+
+    @JsonProperty
+    public Integer regnalNumber;
+
+
     public static MonarchLD fromJsonNode(ObjectNode node) {
         return Graph.mapper.convertValue(node, MonarchLD.class);
     }

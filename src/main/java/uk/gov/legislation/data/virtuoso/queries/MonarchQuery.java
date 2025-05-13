@@ -2,7 +2,7 @@ package uk.gov.legislation.data.virtuoso.queries;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 import uk.gov.legislation.api.responses.ld.Monarch;
 import uk.gov.legislation.converters.ld.MonarchConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
@@ -14,7 +14,7 @@ import java.util.Optional;
 
 import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
 
-@Service
+  @Repository
   public class MonarchQuery {
 
     private final Virtuoso virtuoso;

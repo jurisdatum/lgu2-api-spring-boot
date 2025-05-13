@@ -7,12 +7,13 @@ public final class MonarchConverter {
     private MonarchConverter() {}
 
     public static Monarch convert(MonarchLD ld) {
-        return new Monarch(
-            ld.id(),
-            ld.type(),
-            ld.label(),
-            ld.regnalName(),
-            ld.regnalNumber()
-        );
+        Monarch monarch = new Monarch();
+        monarch.uri = ld.id;
+        monarch.type = ld.type;
+        monarch.label = ld.label;
+        monarch.name = ld.regnalName;
+        monarch.number = ld.regnalNumber;
+
+        return monarch;
     }
 }

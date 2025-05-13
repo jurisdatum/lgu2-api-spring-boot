@@ -4,10 +4,24 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.net.URI;
 
-public record Monarch(
-    @JsonProperty URI uri,
-    @JsonProperty String type,
-    @JsonProperty String label,
-    @JsonProperty String name,
-    @JsonProperty Integer number
-) {}
+public class Monarch {
+
+    @JsonProperty
+    public URI uri;
+
+    @JsonProperty
+    public String type;
+
+    @JsonProperty
+    public String label;
+
+    @JsonProperty
+    public String name;
+
+    @JsonProperty
+    public Integer number;
+
+    public Monarch() {
+    }
+
+}
