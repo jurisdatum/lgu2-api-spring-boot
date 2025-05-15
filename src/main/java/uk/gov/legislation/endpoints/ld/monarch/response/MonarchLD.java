@@ -1,7 +1,6 @@
-package uk.gov.legislation.data.virtuoso.jsonld;
+package uk.gov.legislation.endpoints.ld.monarch.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 
@@ -21,9 +20,4 @@ public class MonarchLD {
 
     @JsonProperty
     public Integer regnalNumber;
-
-
-    public static MonarchLD fromJsonNode(ObjectNode node) {
-        return Graph.mapper.convertValue(node, MonarchLD.class);
-    }
 }

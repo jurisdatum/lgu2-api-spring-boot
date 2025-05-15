@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.responses.ld;
+package uk.gov.legislation.endpoints.ld.monarch.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -23,5 +23,4 @@ public class Monarch {
 
     public Monarch() {
     }
-
 }
