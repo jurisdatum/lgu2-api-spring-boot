@@ -18,7 +18,7 @@ public class PageOfItems {
         public String type;
 
         @JsonProperty
-        public int year;
+        public Integer year;
 
         @JsonProperty
         public int page;
