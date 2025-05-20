@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 
 import java.io.IOException;
+import java.time.LocalDate;
 
 @Tag(name = "Search")
 public interface SearchApi {
@@ -18,8 +19,9 @@ public interface SearchApi {
             @RequestParam(required = false) String type,
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer number,
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false) String language
+            @RequestParam(required = false) String language,
+            @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false, defaultValue = "1") int page
     ) throws IOException, InterruptedException;
 
 
@@ -29,8 +31,9 @@ public interface SearchApi {
             @RequestParam(required = false) String type,
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer number,
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false) String language
+            @RequestParam(required = false) String language,
+            @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false, defaultValue = "1") int page
     ) throws IOException, InterruptedException;
 
 }

@@ -3,6 +3,8 @@ package uk.gov.legislation.data.marklogic.search;
 import uk.gov.legislation.data.marklogic.AbstractParameters;
 import uk.gov.legislation.util.Type;
 
+import java.time.LocalDate;
+
 public class Parameters extends AbstractParameters {
 
     // could be an enum
@@ -11,6 +13,14 @@ public class Parameters extends AbstractParameters {
     public String type;
 
     public Integer year;
+
+    public Integer number;
+
+    public String title;
+
+    public String language;
+
+    public LocalDate published;
 
     public Sort sort;
 
@@ -45,8 +55,28 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
-        public Builder year(int year) {
+        public Builder year(Integer year) {
             params.year = year;
+            return this;
+        }
+
+        public Builder number(Integer num) {
+            params.number = num;
+            return this;
+        }
+
+        public Builder title(String title) {
+            params.title = title;
+            return this;
+        }
+
+        public Builder language(String language) {
+            params.language = language;
+            return this;
+        }
+
+        public Builder published(LocalDate published) {
+            params.published = published;
             return this;
         }
 
@@ -55,7 +85,7 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
-        public Builder page(int page) {
+        public Builder page(Integer page) {
             params.page = page;
             return this;
         }
