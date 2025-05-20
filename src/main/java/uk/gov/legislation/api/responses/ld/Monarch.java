@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.monarch.response;
+package uk.gov.legislation.api.responses.ld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
