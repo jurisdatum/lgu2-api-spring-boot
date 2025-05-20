@@ -34,7 +34,8 @@ public class DocumentsFeedConverter {
 
     private static PageOfDocuments.Counts convertCounts(SearchResults.Facets facets) {
         PageOfDocuments.Counts counts = new PageOfDocuments.Counts();
-        counts.total = facets.facetYears.entries.stream()
+        if (facets.facetYears.entries != null)
+            counts.total = facets.facetYears.entries.stream()
                 .mapToInt(facet -> facet.total)
                 .sum();
         counts.byType = Facets.convertTypeFacets(facets.facetTypes);
