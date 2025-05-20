@@ -12,37 +12,27 @@ public class Reign {
     public URI uri;
 
     @JsonProperty
-    public String type;
-
-    @JsonProperty
     public String label;
 
     @JsonProperty
-    public Integer endYear;
+    public List<String> monarchs;
 
     @JsonProperty
-    public Integer endRegnalYear;
-
-    @JsonProperty
-    public Integer startYear;
-
-    @JsonProperty
-    public Integer startRegnalYear;
+    public LocalDate startDate;
 
     @JsonProperty
     public LocalDate endDate;
 
     @JsonProperty
-    public String monarch;
+    public Integer startYear;
 
     @JsonProperty
-    public List<Integer> overlappingYears;
+    public Integer endYear;
 
     @JsonProperty
-    public List<Integer> overlappingRegnalYears;
+    public Integer startRegnalYear;
 
     @JsonProperty
-    public LocalDate startDate;
-
+    public Integer endRegnalYear;
 
 }

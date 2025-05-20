@@ -3,30 +3,23 @@ package uk.gov.legislation.converters.ld;
 import uk.gov.legislation.api.responses.ld.Reign;
 import uk.gov.legislation.data.virtuoso.jsonld.ReignLD;
 
-import java.util.ArrayList;
+import static uk.gov.legislation.converters.ld.LDConverter.extractDateAtEndOfUri;
+import static uk.gov.legislation.converters.ld.LDConverter.extractIntegerAtEndOfUri;
 
 public class ReignConverter {
 
-    public static Reign convertToReign(ReignLD reignLD) {
-        if (reignLD == null) {
-            return null;
-        }
-
+    public static Reign convert(ReignLD ld) {
         Reign reign = new Reign();
-
-        reign.uri = reignLD.id;
-        reign.type = (reignLD.type != null) ? reignLD.type : "Reign";
-        reign.label = reignLD.label;
-        reign.endYear = reignLD.endCalendarYear;
-        reign.endRegnalYear = reignLD.endRegnalYear;
-        reign.startYear = reignLD.startCalendarYear;
-        reign.startRegnalYear = reignLD.startRegnalYear;
-        reign.endDate = reignLD.endDate;
-        reign.monarch = reignLD.monarch;
-        reign.overlappingYears = (reignLD.overlapsCalendarYear != null) ? reignLD.overlapsCalendarYear : new ArrayList<>();
-        reign.overlappingRegnalYears = (reignLD.overlapsRegnalYear != null) ? reignLD.overlapsRegnalYear : new ArrayList<>();
-        reign.startDate = reignLD.startDate;
-
+        reign.uri = ld.id;
+        reign.label = ld.label;
+        reign.monarchs = ld.monarch.stream().map(LDConverter::extractLastComponentOfUri).toList();
+        reign.startDate = extractDateAtEndOfUri(ld.startDate);
+        reign.endDate = extractDateAtEndOfUri(ld.endDate);
+        reign.startYear = extractIntegerAtEndOfUri(ld.startCalendarYear);
+        reign.endYear = extractIntegerAtEndOfUri(ld.endCalendarYear);
+        reign.startRegnalYear = extractIntegerAtEndOfUri(ld.startRegnalYear);
+        reign.endRegnalYear = extractIntegerAtEndOfUri(ld.endRegnalYear);
         return reign;
     }
+
 }
