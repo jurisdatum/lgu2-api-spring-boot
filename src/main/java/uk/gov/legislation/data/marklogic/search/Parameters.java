@@ -26,6 +26,8 @@ public class Parameters extends AbstractParameters {
 
     public Integer page;
 
+    public Integer resultsCount; // page size
+
     public enum Sort {
 
         RELEVANCE,
@@ -87,6 +89,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder page(Integer page) {
             params.page = page;
+            return this;
+        }
+
+        public Builder pageSize(Integer pageSize) {
+            params.resultsCount = pageSize;
             return this;
         }
 

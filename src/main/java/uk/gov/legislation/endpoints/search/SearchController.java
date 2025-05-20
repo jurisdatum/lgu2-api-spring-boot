@@ -1,7 +1,9 @@
 package uk.gov.legislation.endpoints.search;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
@@ -30,7 +32,8 @@ public class SearchController implements SearchApi {
             Integer number,
             String language,
             LocalDate published,
-            int page) throws IOException, InterruptedException {
+            int page,
+            int pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
@@ -55,7 +58,8 @@ public class SearchController implements SearchApi {
             Integer number,
             String language,
             LocalDate published,
-            int page) throws IOException, InterruptedException {
+            int page,
+            int pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
@@ -67,11 +71,12 @@ public class SearchController implements SearchApi {
             .language(language)
             .published(published)
             .page(page)
+            .pageSize(pageSize)
             .build();
         return Optional.of(db.get(params))
             .map(DocumentsFeedConverter::convert)
             .map(ResponseEntity::ok)
-            .get();
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
 }

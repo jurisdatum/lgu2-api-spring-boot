@@ -21,7 +21,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false, defaultValue = "1") int page
+            @RequestParam(required = false, defaultValue = "1") int page,
+            @RequestParam(required = false, defaultValue = "20") int pageSize
     ) throws IOException, InterruptedException;
 
 
@@ -33,7 +34,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false, defaultValue = "1") int page
+            @RequestParam(required = false, defaultValue = "1") int page,
+            @RequestParam(required = false, defaultValue = "20") int pageSize
     ) throws IOException, InterruptedException;
 
 }
