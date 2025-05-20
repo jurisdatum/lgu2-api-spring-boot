@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.reign.controller;
+package uk.gov.legislation.endpoints.ld.reign;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -10,7 +10,6 @@ import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.converters.ld.ReignConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.ReignQuery;
-import uk.gov.legislation.endpoints.ld.reign.api.ReignApi;
 
 @RestController
 public class ReignController implements ReignApi {

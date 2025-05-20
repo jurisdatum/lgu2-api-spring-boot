@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.reign.api;
+package uk.gov.legislation.endpoints.ld.reign;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
