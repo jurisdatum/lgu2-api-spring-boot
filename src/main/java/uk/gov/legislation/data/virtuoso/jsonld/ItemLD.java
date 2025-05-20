@@ -3,14 +3,14 @@ package uk.gov.legislation.data.virtuoso.jsonld;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 
 import java.net.URI;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.StreamSupport;
+
+import static uk.gov.legislation.data.virtuoso.jsonld.Helper.oneOrMany;
 
 public class ItemLD {
 
@@ -95,17 +95,6 @@ public class ItemLD {
 
     public static ItemLD convert(ObjectNode node) {
         return Graph.mapper.convertValue(node, ItemLD.class);
-    }
-
-    /* for fields that are sometimes an object and sometimes an array */
-    private static <T> List<T> oneOrMany(JsonNode node, Class<T> t) {
-        if (node instanceof ArrayNode)
-            return StreamSupport.stream(node.spliterator(), false)
-                .map(o -> Graph.mapper.convertValue(o, t))
-                .toList();
-        return Collections.singletonList(
-            Graph.mapper.convertValue(node, t)
-        );
     }
 
 }
