@@ -9,6 +9,7 @@ import java.util.stream.StreamSupport;
 
 import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
 
+@Deprecated(forRemoval = true)
 public class ChapterFacets {
 
     public record ChapterCount(String chapter, String label, int count) {}

@@ -14,6 +14,7 @@ import java.util.stream.StreamSupport;
 
 import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
 
+@Deprecated(forRemoval = true)
 public class TypeFacets {
 
     public record TypeCount(String type, String label, int count) {}
