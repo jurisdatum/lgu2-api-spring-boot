@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.monarch.controller;
+package uk.gov.legislation.endpoints.ld.monarch;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -9,7 +9,6 @@ import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.MonarchQuery;
-import uk.gov.legislation.endpoints.ld.monarch.api.MonarchApi;
 
 @RestController
 public class MonarchController implements MonarchApi {
