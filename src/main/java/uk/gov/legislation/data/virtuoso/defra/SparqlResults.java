@@ -48,7 +48,7 @@ public class SparqlResults {
             simple.uri = URI.create(item.item.value);
             simple.title = item.title.value;
             simple.year = Integer.parseInt(item.year.value);
-            simple.number = Integer.parseInt(item.number.value);
+            simple.number = item.number.value;
             simple.type = item.typeLabel.value;
             return simple;
         }).toList();
@@ -59,13 +59,14 @@ public class SparqlResults {
         @JsonProperty
         public URI uri;
 
+        @JsonProperty
         public String title;
 
         @JsonProperty
         public int year;
 
         @JsonProperty
-        public int number;
+        public String number;
 
         @JsonProperty
         public String type;

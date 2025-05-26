@@ -1,13 +1,10 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import java.net.URI;
-import java.net.http.HttpResponse;
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -35,7 +32,6 @@ public class LabeledFacets {
             " ?x <" + label + "> ?label .";
         String query = FACET_QUERY.formatted("?x ?label", where, "?x ?label");
         return defra.getSparqlResultsJson(query)
-            .thenApply(HttpResponse::body)
             .thenApply(LabeledFacets::parse);
     }
 
@@ -46,23 +42,23 @@ public class LabeledFacets {
     private static List<Count> parse(String json) {
         JsonNode tree;
         try {
-            tree = new ObjectMapper()
-                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                .readTree(json);
+            tree = DefraLex.mapper.readTree(json);
         } catch (JsonProcessingException e) {
             throw new CompletionException(e);
         }
         ArrayNode bindings = (ArrayNode) tree.get("results").get("bindings");
         return StreamSupport.stream(bindings.spliterator(), false)
-            .map(binding -> {
-                URI uri = URI.create(getBinding(binding, "x"));
-                String id = uri.toString().substring(uri.toString().lastIndexOf('/') + 1);
-                String label = getBinding(binding, "label");
-                int count = Integer.parseInt(getBinding(binding, "cnt"));
-                return new Count(uri, id, label, count);
-            })
+            .map(LabeledFacets::map)
             .sorted(Comparator.comparingInt(Count::count).reversed())
             .toList();
+    }
+
+    private static Count map(JsonNode binding) {
+        URI uri = URI.create(getBinding(binding, "x"));
+        String id = uri.toString().substring(uri.toString().lastIndexOf('/') + 1);
+        String label = getBinding(binding, "label");
+        int count = Integer.parseInt(getBinding(binding, "cnt"));
+        return new Count(uri, id, label, count);
     }
 
 }

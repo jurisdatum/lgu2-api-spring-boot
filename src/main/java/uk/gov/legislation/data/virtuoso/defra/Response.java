@@ -7,6 +7,9 @@ import java.util.List;
 public class Response {
 
     @JsonProperty
+    public Parameters query;
+
+    @JsonProperty
     public Counts counts = new Response.Counts();
 
     @JsonProperty

@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.virtuoso.defra.DefraLex;
+import uk.gov.legislation.data.virtuoso.defra.Parameters;
 import uk.gov.legislation.data.virtuoso.defra.Response;
 
 import java.util.concurrent.CompletionStage;
@@ -23,10 +24,29 @@ public class DefraLexController {
 
     @GetMapping("/items")
     public CompletionStage<Response> x(
+            @RequestParam(required = false) String status,
+            @RequestParam(required = false) String type,
+            @RequestParam(required = false) Integer year,
+            @RequestParam(required = false) String chapter,
+            @RequestParam(required = false) String extent,
+            @RequestParam(required = false) String source,
+            @RequestParam(required = false) String regulator,
+            @RequestParam(required = false) String subject,
+            @RequestParam(required = false) Integer review,
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int pageSize
-            ) {
-        return query.fetchItems();
+            @RequestParam(defaultValue = "10") int pageSize) {
+        Parameters params = Parameters.builder()
+            .status(status)
+            .type(type)
+            .year(year)
+            .chapter(chapter)
+            .extent(extent)
+            .source(source)
+            .regulator(regulator)
+            .subject(subject)
+            .review(review)
+            .build();
+        return query.fetch(params);
     }
 
 }
