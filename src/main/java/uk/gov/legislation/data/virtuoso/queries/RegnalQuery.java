@@ -1,6 +1,8 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -16,61 +18,49 @@ import java.io.IOException;
 import java.util.Optional;
 
 import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
-import static uk.gov.legislation.data.virtuoso.queries.ReignQuery.*;
 
 @Repository
 public class RegnalQuery {
 
     private final Virtuoso virtuoso;
-    private static final String REGNAL_URI_TEMPLATE = "http://www.legislation.gov.uk/id/regnal/%s/%s";
+    private static final ObjectMapper mapper = new ObjectMapper()
+        .registerModule(new JavaTimeModule())
+        .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 
     public RegnalQuery(Virtuoso virtuoso) {
         this.virtuoso = virtuoso;
     }
-
-    public String getRegnalData(String regnal, Integer regnalYear, String format) throws IOException, InterruptedException {
-        String query = buildRegnalQuery(regnal, regnalYear);
-        return virtuoso.query(query, format);
+    private static String constructQueryForRegnal(String regnal, Integer regnalYear) {
+        return makeSingleConstructQuery(String.format("http://www.legislation.gov.uk/id/regnal/%s/%s", regnal, regnalYear));
     }
 
-
-    private static String buildRegnalQuery(String regnal, Integer regnalYear) {
-        String uri = String.format(RegnalQuery.REGNAL_URI_TEMPLATE, regnal, regnalYear);
-        return makeSingleConstructQuery(uri);
+    public String fetchRawData(String regnal, Integer regnalYear, String format)
+        throws IOException, InterruptedException {
+        return virtuoso.query(constructQueryForRegnal(regnal, regnalYear), format);
     }
 
-    private static final ObjectMapper mapper = new ObjectMapper().registerModule(new JavaTimeModule()).disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
+    public Optional<Regnal> fetchMappedData(String reign, Integer regnalYear)
+        throws IOException, InterruptedException {
+        ArrayNode graphNodes = Graph.extract(fetchRawData(reign, regnalYear, "application/ld+json"));
 
-    public Optional <Regnal> getRegnalAsJsonLd(String reign, Integer regnalYear) throws IOException, InterruptedException {
-        String json = getRegnalData(reign, regnalYear, "application/ld+json");
-        ArrayNode graph = Graph.extract(json);
+        return Optional.ofNullable(graphNodes)
+            .filter(nodes -> !nodes.isEmpty())
+            .map(nodes -> nodes.get(0))
+            .filter(JsonNode::isObject)
+            .map(ObjectNode.class::cast)
+            .map(node -> {
+                try {
+                    return mapper.treeToValue(node, RegnalLD.class);
+                }
+                catch(JsonProcessingException e) {
+                    throw new RuntimeException(e);
+                }
 
-        if(graph == null || graph.isEmpty()) {
-            return Optional.empty();
-        }
-
-        ObjectNode regnalNode;
-        regnalNode = (ObjectNode) graph.get(0);
-        processRegnalFields(regnalNode);
-
-        RegnalLD regnalLD = mapper.treeToValue(regnalNode, RegnalLD.class);
-        return Optional.of(RegnalConverter.convertToRegnal(regnalLD));
-    }
-
-    private void processRegnalFields(ObjectNode node) {
-
-        processUriField(node, "endCalendarYear");
-        processUriField(node, "startCalendarYear");
-        processUriField(node, "yearOfReign");
-        processUriField(node, "reign");
-
-        processDateField(node, "endDate");
-        processDateField(node, "startDate");
-
-        processUriArrayField(node, "overlapsCalendarYear");
-        processUriArrayField(node, "overlapsRegnalYear");
+            })
+            .map(RegnalConverter::convert);
     }
 }
+
 
 
 

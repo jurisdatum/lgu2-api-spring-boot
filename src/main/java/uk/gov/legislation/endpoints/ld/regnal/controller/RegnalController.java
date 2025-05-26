@@ -26,12 +26,12 @@ public class RegnalController implements RegnalApi {
     public ResponseEntity <?> getRegnalYearInfo(NativeWebRequest request, String reign, Integer regnalYear) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
-            String result = query.getRegnalData(reign,regnalYear, media.toString());
+            String result = query.fetchRawData(reign,regnalYear, media.toString());
             return ResponseEntity.ok()
                 .contentType(media)
                 .body(result);
         }
-        return query.getRegnalAsJsonLd(reign, regnalYear)
+        return query.fetchMappedData(reign, regnalYear)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
