@@ -49,7 +49,7 @@ public class DefraLex {
                 ?type  rdfs:label  ?typeLabel .
                 OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
             }
-            ORDER  BY DESC(?year) ?number
+            ORDER BY DESC(?year) ?number
             LIMIT  %d
             OFFSET %d
           }
@@ -61,6 +61,7 @@ public class DefraLex {
           ?type  rdfs:label  ?typeLabel .
           OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
         }
+        ORDER BY DESC(?year) ?number
     """;
 
     static final String FACET_QUERY = """
