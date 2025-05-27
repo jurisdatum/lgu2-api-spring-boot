@@ -37,7 +37,7 @@ public class DefraLex {
     private static final String RESULTS_QUERY = """
         PREFIX :     <http://www.legislation.gov.uk/def/legislation/>
         PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?item ?year ?number ?title ?typeLabel
+        SELECT ?item ?year ?number ?title ?typeLabel ?reviewDate
         WHERE  {
           { SELECT DISTINCT ?item
             WHERE  {
@@ -46,17 +46,20 @@ public class DefraLex {
                     :year   ?year ;
                     :number ?number ;
                     :title  ?title .
-                    ?type  rdfs:label  ?typeLabel .            }
+                ?type  rdfs:label  ?typeLabel .
+                OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
+            }
             ORDER  BY DESC(?year) ?number
             LIMIT  %d
             OFFSET %d
           }
           # Re‑bind properties for the selected ?item URIs
           ?item  <http://defra-lex.legislation.gov.uk/def/type>  ?type ;
-                 :year   ?year ;
-                 :number ?number ;
-                 :title  ?title .
+              :year   ?year ;
+              :number ?number ;
+              :title  ?title .
           ?type  rdfs:label  ?typeLabel .
+          OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
         }
     """;
 
@@ -76,7 +79,7 @@ public class DefraLex {
     }
 
     private CompletableFuture<List<SparqlResults.SimpleItem>> fetchMainResults(String where, int limit, int offset) {
-        String query = RESULTS_QUERY.formatted(where, 10, 0);
+        String query = RESULTS_QUERY.formatted(where, limit, offset);
         return getSparqlResultsJson(query)
             .thenApply(body -> {
                 SparqlResults sr;
@@ -117,7 +120,12 @@ public class DefraLex {
     }
 
     private static String makeWhereClause(String prop, Integer value) {
-        String object = "\"" + value + "\"^^<http://www.w3.org/2001/XMLSchema#int>";
+        String type = "http://www.w3.org/2001/XMLSchema#int";
+        return makeWhereClause(prop, value, type);
+    }
+
+    private static String makeWhereClause(String prop, Integer value, String type) {
+        String object = "\"%d\"^^<%s>".formatted(value, type);
         return " ?item <" + prop + "> " + object + " .";
     }
 
@@ -157,7 +165,8 @@ public class DefraLex {
             where += makeWhereClause(Properties.LEG_CONTENTS, uri);
         }
         if (params.review != null) {
-            where += makeWhereClause(Properties.REVIEW_YEAR, params.review);
+            String gYear = "http://www.w3.org/2001/XMLSchema#gYear";
+            where += makeWhereClause(Properties.REVIEW_YEAR, params.review, gYear);
         }
 
         // make sure these are set so response contains them

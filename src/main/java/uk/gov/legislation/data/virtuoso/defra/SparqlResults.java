@@ -3,6 +3,7 @@ package uk.gov.legislation.data.virtuoso.defra;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.List;
 
 public class SparqlResults {
@@ -33,6 +34,9 @@ public class SparqlResults {
         @JsonProperty
         public Value typeLabel;
 
+        @JsonProperty
+        public Value reviewDate;
+
     }
 
     public static class Value {
@@ -50,6 +54,8 @@ public class SparqlResults {
             simple.year = Integer.parseInt(item.year.value);
             simple.number = item.number.value;
             simple.type = item.typeLabel.value;
+            if (item.reviewDate != null)
+                simple.review = LocalDate.parse(item.reviewDate.value);
             return simple;
         }).toList();
     }
@@ -70,6 +76,9 @@ public class SparqlResults {
 
         @JsonProperty
         public String type;
+
+        @JsonProperty
+        public LocalDate review;
 
     }
 
