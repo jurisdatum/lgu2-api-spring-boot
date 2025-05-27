@@ -75,7 +75,7 @@ public class DefraLex {
             .thenApply(HttpResponse::body);
     }
 
-    private CompletableFuture<List<SparqlResults.SimpleItem>> fetchMainResults(String where) {
+    private CompletableFuture<List<SparqlResults.SimpleItem>> fetchMainResults(String where, int limit, int offset) {
         String query = RESULTS_QUERY.formatted(where, 10, 0);
         return getSparqlResultsJson(query)
             .thenApply(body -> {
@@ -160,53 +160,44 @@ public class DefraLex {
             where += makeWhereClause(Properties.REVIEW_YEAR, params.review);
         }
 
-        CompletableFuture<List<SparqlResults.SimpleItem>> results = fetchMainResults(where);
+        // make sure these are set so response contains them
+        if (params.pageSize == null)
+            params.pageSize = Parameters.DEFAULT_PAGE_SIZE;
+        if (params.page == null)
+            params.page = Parameters.DEFAULT_PAGE;
+        final int offset = (params.page - 1) * params.pageSize;
+        var results = fetchMainResults(where, params.pageSize, offset);
 
-        CompletableFuture<List<LabeledFacets.Count>> byStatus = params.status == null
-            ? LabeledFacets.fetch(this, where, Properties.STATUS)
-            : CompletableFuture.completedFuture(null);
+        var byStatus = LabeledFacets.fetch(this, where, Properties.STATUS);
 
-        CompletableFuture<List<LabeledFacets.Count>> typeCounts = params.type == null
-            ? LabeledFacets.fetch(this, where, Properties.TYPE)
-            : CompletableFuture.completedFuture(null);
+        var typeCounts = LabeledFacets.fetch(this, where, Properties.TYPE);
 
-        CompletableFuture<List<YearFacets.Count>> yearCounts = params.year == null
-            ? YearFacets.fetch(this, where)
-            : CompletableFuture.completedFuture(null);
+        var yearCounts = YearFacets.fetch(this, where);
 
-        CompletableFuture<List<LabeledFacets.Count>> chapterCounts = params.chapter == null
-            ? LabeledFacets.fetch(this, where, Properties.CHAPTER)
-            : CompletableFuture.completedFuture(null);
+        var chapterCounts = LabeledFacets.fetch(this, where, Properties.CHAPTER);
 
-        CompletableFuture<List<LabeledFacets.Count>> byExtent = params.extent == null
-            ? LabeledFacets.fetch(this, where, Properties.EXTENT)
-            : CompletableFuture.completedFuture(null);
+        var byExtent = LabeledFacets.fetch(this, where, Properties.EXTENT);
 
-        CompletableFuture<List<LabeledFacets.Count>> sourceCounts = params.source == null
-            ? LabeledFacets.fetch(this, where, Properties.SOURCE)
-            : CompletableFuture.completedFuture(null);
+        var sourceCounts = LabeledFacets.fetch(this, where, Properties.SOURCE);
 
-        CompletableFuture<List<LabeledFacets.Count>> regulatorCounts = params.regulator == null
-            ? LabeledFacets.fetch(this, where, Properties.IS_REGULATED_BY, LabeledFacets.PREF_LABEL)
-            : CompletableFuture.completedFuture(null);
+        var regulatorCounts = LabeledFacets.fetch(this, where, Properties.IS_REGULATED_BY, LabeledFacets.PREF_LABEL);
 
-        CompletableFuture<List<LabeledFacets.Count>> bySubject = params.subject == null
-            ? LabeledFacets.fetch(this, where, Properties.LEG_CONTENTS)
-            : CompletableFuture.completedFuture(null);
+        var bySubject = LabeledFacets.fetch(this, where, Properties.LEG_CONTENTS);
 
-        CompletableFuture<List<YearFacets.Count>> byReviewDate = params.review == null
-            ? YearFacets.fetch(this, where, Properties.REVIEW_YEAR)
-            : CompletableFuture.completedFuture(null);
+        var byReviewDate = YearFacets.fetch(this, where, Properties.REVIEW_YEAR);
+
+        var total = Total.get(this, where);
 
         CompletableFuture<Void> allDone =
             CompletableFuture.allOf(
-                results, byStatus, typeCounts, yearCounts, chapterCounts,
+                results, total, byStatus, typeCounts, yearCounts, chapterCounts,
                 byExtent, sourceCounts, regulatorCounts, bySubject, byReviewDate
             );
 
         Function<Void, Response> assembleResponse = ignored -> {
             Response response = new Response();
             response.query = params;
+            response.counts.total = total.join();
             response.counts.byStatus = byStatus.join();
             response.counts.byType = typeCounts.join();
             response.counts.byYear = yearCounts.join();

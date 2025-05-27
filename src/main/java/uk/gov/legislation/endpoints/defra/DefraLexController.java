@@ -45,6 +45,8 @@ public class DefraLexController {
             .regulator(regulator)
             .subject(subject)
             .review(review)
+            .page(page)
+            .pageSize(pageSize)
             .build();
         return query.fetch(params);
     }

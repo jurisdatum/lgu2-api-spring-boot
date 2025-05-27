@@ -10,12 +10,15 @@ public class Response {
     public Parameters query;
 
     @JsonProperty
-    public Counts counts = new Response.Counts();
+    public Counts counts = new Counts();
 
     @JsonProperty
     public List<SparqlResults.SimpleItem> results;
 
     public static class Counts {
+
+        @JsonProperty
+        public Integer total;
 
         @JsonProperty
         public List<LabeledFacets.Count> byStatus;
