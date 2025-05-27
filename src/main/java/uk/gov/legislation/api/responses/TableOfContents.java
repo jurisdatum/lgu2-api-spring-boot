@@ -1,9 +1,12 @@
 package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.util.Extent;
 
 import java.util.List;
+import java.util.Set;
 
 public class TableOfContents {
 
@@ -53,6 +56,9 @@ public class TableOfContents {
 
         @Schema(example = "section-1")
         public String ref;
+
+        @JsonProperty
+        public Set<Extent> extent;
 
         @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
         @JsonInclude(JsonInclude.Include.NON_NULL)
