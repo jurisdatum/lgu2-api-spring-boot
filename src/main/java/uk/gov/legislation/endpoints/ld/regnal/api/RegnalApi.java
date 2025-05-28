@@ -31,4 +31,5 @@ public interface RegnalApi {
         @Parameter(description = "RegnalYear", example = "1")
         @PathVariable Integer regnalYear
     ) throws Exception;
+
 }
