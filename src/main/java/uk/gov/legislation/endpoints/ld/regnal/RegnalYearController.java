@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.regnal.controller;
+package uk.gov.legislation.endpoints.ld.regnal;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -7,18 +7,17 @@ import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.converters.ld.RegnalConverter;
+import uk.gov.legislation.converters.ld.RegnalYearConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.queries.RegnalQuery;
-import uk.gov.legislation.endpoints.ld.regnal.api.RegnalApi;
+import uk.gov.legislation.data.virtuoso.queries.RegnalYearQuery;
 
 @RestController
-public class RegnalController implements RegnalApi {
+public class RegnalYearController implements RegnalYearApi {
 
     private final ContentNegotiationManager negotiation;
-    private final RegnalQuery query;
+    private final RegnalYearQuery query;
 
-    public RegnalController(ContentNegotiationManager negotiation, RegnalQuery query) {
+    public RegnalYearController(ContentNegotiationManager negotiation, RegnalYearQuery query) {
         this.negotiation = negotiation;
         this.query = query;
     }
@@ -33,7 +32,7 @@ public class RegnalController implements RegnalApi {
                 .body(result);
         }
         return query.fetchMappedData(reign, regnalYear)
-            .map(RegnalConverter::convert)
+            .map(RegnalYearConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

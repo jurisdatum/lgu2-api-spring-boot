@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URI;
 import java.time.LocalDate;
 
-public class Regnal {
+public class RegnalYear {
 
     @JsonProperty
     public URI uri;

@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.net.URI;
 import java.util.List;
 
-public class RegnalLD {
+public class RegnalYearLD {
 
     @JsonProperty("@id")
     public URI id;
@@ -38,8 +38,8 @@ public class RegnalLD {
     @JsonProperty
     public URI startDate;
 
-    public static RegnalLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, RegnalLD.class);
+    public static RegnalYearLD convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, RegnalYearLD.class);
     }
 
 }

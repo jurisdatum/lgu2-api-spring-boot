@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.regnal.api;
+package uk.gov.legislation.endpoints.ld.regnal;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -9,7 +9,7 @@ import org.springframework.web.context.request.NativeWebRequest;
 
 @Tag(name = "Linked Data", description = "endpoint for fetching information about a specific regnal year within a " +
     "reign")
-public interface RegnalApi {
+public interface RegnalYearApi {
 
     @GetMapping(path = "/ld/regnal/{reign}/{regnalYear}",
         produces = {
