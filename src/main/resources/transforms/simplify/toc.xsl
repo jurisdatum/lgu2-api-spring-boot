@@ -30,6 +30,7 @@
             <xsl:sequence select="$name" />
         </xsl:attribute>
         <xsl:call-template name="ref" />
+        <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </item>
 </xsl:template>
@@ -37,6 +38,7 @@
 <xsl:template match="ContentsAppendix">
     <appendix name="appendix">
         <xsl:call-template name="ref" />
+        <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </appendix>
 </xsl:template>
@@ -51,6 +53,7 @@
 <xsl:template match="ContentsSchedule">
     <schedule name="schedule">
         <xsl:call-template name="ref" />
+        <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </schedule>
 </xsl:template>
@@ -71,6 +74,7 @@
     <xsl:element name="{ if (exists(../following-sibling::ContentsSchedules)) then 'attachment1' else 'attachment' }">
         <xsl:attribute name="name">attachment</xsl:attribute>
         <xsl:call-template name="ref" />
+        <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </xsl:element>
 </xsl:template>
@@ -79,6 +83,14 @@
     <xsl:attribute name="ref">
         <xsl:sequence select="@ContentRef" />
     </xsl:attribute>
+</xsl:template>
+
+<xsl:template name="toc-extent">
+    <xsl:if test="exists(@RestrictExtent)">
+        <xsl:attribute name="extent">
+            <xsl:sequence select="@RestrictExtent" />
+        </xsl:attribute>
+    </xsl:if>
 </xsl:template>
 
 <xsl:template match="ContentsNumber">

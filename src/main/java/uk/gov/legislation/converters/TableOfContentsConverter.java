@@ -32,6 +32,7 @@ public class TableOfContentsConverter {
         converted.number = item.number;
         converted.title = item.title;
         converted.ref = item.ref;
+        converted.extent = ExtentConverter.convert(item.extent);
         converted.children = convertItems(item.children);
         return converted;
     }

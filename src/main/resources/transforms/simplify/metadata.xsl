@@ -37,7 +37,19 @@
 
 <xsl:key name="document-uri" match="*[not(self::InternalLink)]" use="@DocumentURI"/>
 
-<xsl:variable name="target" as="element()?" select="key('document-uri', $dc-identifier)" />
+<xsl:variable name="target" as="element()?">
+    <xsl:variable name="id" as="xs:string">
+        <xsl:choose>
+            <xsl:when test="ends-with($dc-identifier, '/contents')">
+                <xsl:sequence select="substring-before($dc-identifier, '/contents')" />
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="$dc-identifier" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:variable>
+    <xsl:sequence select="key('document-uri', $id)" />
+</xsl:variable>
 
 <xsl:variable name="id-components" as="xs:string+">
     <xsl:variable name="id" as="xs:string" select="substring-after($dc-identifier, 'http://www.legislation.gov.uk/')" />

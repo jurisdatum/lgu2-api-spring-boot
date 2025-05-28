@@ -60,6 +60,9 @@ public class Contents {
 
         public String ref;
 
+        @JacksonXmlProperty(isAttribute = true)
+        public String extent;
+
         @JacksonXmlElementWrapper(useWrapping = false)
         @JacksonXmlProperty(localName = "item")
         public List<Item> children;
