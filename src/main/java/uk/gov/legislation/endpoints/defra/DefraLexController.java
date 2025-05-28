@@ -34,7 +34,7 @@ public class DefraLexController {
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) Integer review,
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int pageSize) {
+            @RequestParam(defaultValue = "20") int pageSize) {
         Parameters params = Parameters.builder()
             .status(status)
             .type(type)
