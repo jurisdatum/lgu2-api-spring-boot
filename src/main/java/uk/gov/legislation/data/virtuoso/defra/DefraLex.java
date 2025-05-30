@@ -95,7 +95,7 @@ public class DefraLex {
 
     private static class Properties {
 
-        private static final String STATUS = "http://defra-lex.legislation.gov.uk/def/status";
+        private static final String IN_FORCE = "http://defra-lex.legislation.gov.uk/def/inforce";
 
         private static final String TYPE = "http://defra-lex.legislation.gov.uk/def/type";
 
@@ -130,13 +130,31 @@ public class DefraLex {
         return " ?item <" + prop + "> " + object + " .";
     }
 
+    private static String makeWhereClause(String prop, Boolean value) {
+        String object = "\"%s\"^^<http://www.w3.org/2001/XMLSchema#boolean>".formatted(value);
+        return " ?item <" + prop + "> " + object + " .";
+    }
+
     public CompletionStage<Response> fetch(Parameters params) {
 
         String where = "?item a <http://www.legislation.gov.uk/def/legislation/Item> .";
 
-        if (params.status != null) {
-            String uri = "http://defra-lex.legislation.gov.uk/id/status/" + params.status;
-            where += makeWhereClause(Properties.STATUS, uri);
+        if (params.inForce != null) {
+            where += makeWhereClause(Properties.IN_FORCE, params.inForce);
+        }
+        if (params.isCommencementOrder != null) {
+            String x = " ?item a <http://defra-lex.legislation.gov.uk/id/mechanicallaw/commencementOrder> ";
+            if (params.isCommencementOrder)
+                where += x + ".";
+            else
+                where += " FILTER NOT EXISTS {" + x + "}";
+        }
+        if (params.isRevocationOrder != null) {
+            String x = " ?item a <http://defra-lex.legislation.gov.uk/id/mechanicallaw/revocationOrder> ";
+            if (params.isRevocationOrder)
+                where += x + ".";
+            else
+                where += " FILTER NOT EXISTS {" + x + "}";
         }
         if (params.type != null) {
             String uri = "http://defra-lex.legislation.gov.uk/id/type/" + params.type;
@@ -178,7 +196,7 @@ public class DefraLex {
         final int offset = (params.page - 1) * params.pageSize;
         var results = fetchMainResults(where, params.pageSize, offset);
 
-        var byStatus = LabeledFacets.fetch(this, where, Properties.STATUS);
+        var byInForce = BooleanFacets.fetch(this, where, Properties.IN_FORCE);
 
         var typeCounts = LabeledFacets.fetch(this, where, Properties.TYPE);
 
@@ -200,7 +218,7 @@ public class DefraLex {
 
         CompletableFuture<Void> allDone =
             CompletableFuture.allOf(
-                results, total, byStatus, typeCounts, yearCounts, chapterCounts,
+                results, total, byInForce, typeCounts, yearCounts, chapterCounts,
                 byExtent, sourceCounts, regulatorCounts, bySubject, byReviewDate
             );
 
@@ -208,7 +226,7 @@ public class DefraLex {
             Response response = new Response();
             response.query = params;
             response.counts.total = total.join();
-            response.counts.byStatus = byStatus.join();
+            response.counts.byInForce = byInForce.join();
             response.counts.byType = typeCounts.join();
             response.counts.byYear = yearCounts.join();
             response.counts.byChapter = chapterCounts.join();

@@ -1,14 +1,16 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import uk.gov.legislation.data.marklogic.AbstractParameters;
-
-public class Parameters extends AbstractParameters {
+public class Parameters {
 
     public static final int DEFAULT_PAGE = 1;
 
     public static final int DEFAULT_PAGE_SIZE = 20;
 
-    public String status;
+    public Boolean inForce;
+
+    public Boolean isCommencementOrder;
+
+    public Boolean isRevocationOrder;
 
     public Integer year;
 
@@ -37,11 +39,20 @@ public class Parameters extends AbstractParameters {
 
         private final Parameters params = new Parameters();
 
-        private Builder() {
+        private Builder() { }
+
+        public Builder inForce(Boolean inForce) {
+            params.inForce = inForce;
+            return this;
         }
 
-        public Builder status(String status) {
-            params.status = status;
+        public Builder isCommencementOrder(Boolean isCommencementOrder) {
+            params.isCommencementOrder = isCommencementOrder;
+            return this;
+        }
+
+        public Builder isRevocationOrder(Boolean isRevocationOrder) {
+            params.isRevocationOrder = isRevocationOrder;
             return this;
         }
 

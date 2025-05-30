@@ -21,7 +21,7 @@ public class Response {
         public Integer total;
 
         @JsonProperty
-        public List<LabeledFacets.Count> byStatus;
+        public List<BooleanFacets.Count> byInForce;
 
         @JsonProperty
         public List<LabeledFacets.Count> byType;

@@ -24,7 +24,9 @@ public class DefraLexController {
 
     @GetMapping("/items")
     public CompletionStage<Response> x(
-            @RequestParam(required = false) String status,
+            @RequestParam(required = false) Boolean inForce,
+            @RequestParam(required = false) Boolean isCommencementOrder,
+            @RequestParam(required = false) Boolean isRevocationOrder,
             @RequestParam(required = false) String type,
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) String chapter,
@@ -36,7 +38,9 @@ public class DefraLexController {
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "20") int pageSize) {
         Parameters params = Parameters.builder()
-            .status(status)
+            .inForce(inForce)
+            .isCommencementOrder(isCommencementOrder)
+            .isRevocationOrder(isRevocationOrder)
             .type(type)
             .year(year)
             .chapter(chapter)
