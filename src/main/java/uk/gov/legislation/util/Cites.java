@@ -64,17 +64,17 @@ public class Cites {
         String regnalYear = RegnalYear.forCitation(regnal);
         return switch (type) {
             case UKPGA, UKPPA -> regnalYear + year + " c. " + number;
-            case APGB -> year + regnalYear + " c. " + number;
+            case APGB, AEP -> year + regnalYear + " c. " + number;
             case NIA -> year + " c. " + number + NI_DESIGNATION;
             case AOSP -> year + " c. " + number + " [S]";
-            case AEP -> year + regnalYear + " c. " + number;
             case AIP -> year + regnalYear + " c. " + number + " [I]";
             case UKLA, GBLA, GBPPA -> year + regnalYear + " c. " + Roman.toLowerRoman(number);
             case ASP, ANAW, ASC -> year + " " + type.shortName() + " " + number;
             case MWA -> year + " nawm " + number;
             case MNIA -> year + " c. " + number + NI_DESIGNATION;
             case APNI -> year + " c. " + number + NI_DESIGNATION;
-            case UKCM, UKMO -> year + " No. " + number;
+            case UKCM -> year + " No. " + number;
+            case UKMO -> "Ministerial Order " + year + "/" + number;
             case UKMD -> "No. " + year + "/" + number;
             case UKCI -> "Church Instrument  " + year + "/" + number;
             case UKSI, WSI, NISI -> SI_PREFIX + year + "/" + number;

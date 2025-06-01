@@ -17,6 +17,13 @@ class CiteConstructionTest {
     }
 
     @Test
+    void uksi() {
+        String actual = Cites.make("uksi", 2024, 1, null);
+        String expected = "S.I. 2024/1";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
     void asp() {
         String actual = Cites.make("asp", 2024, 13, null);
         String expected = "2024 asp 13";
@@ -133,6 +140,42 @@ class CiteConstructionTest {
         Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("NI", "1"));
         String actual = Cites.make("nisi", 2016, 999, altNumbers);
         String expected = "S.I. 2016/999 (N.I. 1)";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ukmo() {
+        String actual = Cites.make("ukmo", 2020, 12, null);
+        String expected = "Ministerial Order 2020/12";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void nisr() {
+        String actual = Cites.make("nisr", 2024, 193, null);
+        String expected = "S.R. 2024/193";
+        Assertions.assertEquals(expected, actual);
+    }
+
+
+    @Test
+    void ukci() {
+        String actual = Cites.make("ukci", 2024, 1, null);
+        String expected = "Church Instrument  2024/1";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void uksro() {
+        String actual = Cites.make("uksro", 1923, 405, null);
+        String expected = "S.R. & O. 1923/405";
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void ukpga() {
+        String actual = Cites.make("ukpga", 2024, 1, null);
+        String expected = "2024 c. 1";
         Assertions.assertEquals(expected, actual);
     }
 
