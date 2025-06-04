@@ -23,7 +23,7 @@ public class DatesController {
     }
 
     @GetMapping("/published")
-    public List<String> published() throws Exception {
+    public List<String> published() {
         return query.fetch();
     }
 

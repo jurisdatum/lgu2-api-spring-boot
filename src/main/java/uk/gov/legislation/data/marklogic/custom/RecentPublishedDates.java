@@ -2,7 +2,6 @@ package uk.gov.legislation.data.marklogic.custom;
 
 import org.springframework.stereotype.Repository;
 
-import java.io.IOException;
 import java.util.List;
 
 @Repository
@@ -26,7 +25,7 @@ public class RecentPublishedDates {
         return distinct-values(for $date in $dates return xs:date($date))[1 to 10]
         """;
 
-    public List<String> fetch() throws IOException, InterruptedException {
+    public List<String> fetch() {
         return custom.query(QUERY);
     }
 
