@@ -32,11 +32,11 @@ public interface SessionApi {
     @Operation(summary = "information about a parliamentary session")
     ResponseEntity<?> getSessionByLegislatureReign(
         NativeWebRequest request,
-        @Parameter(description = "Legislature", example = "Eliz1 ")
+        @Parameter(description = "Legislature", example = "UnitedKingdomParliament ")
         @PathVariable String legislature,
-        @Parameter(description = "Reign", example = "Eliz1")
+        @Parameter(description = "Reign", example = "Eliz2")
         @PathVariable String reign,
-        @Parameter(description = "Session", example = "tempincert")
+        @Parameter(description = "Session", example = "10-11")
         @PathVariable String session
     ) throws Exception;
 

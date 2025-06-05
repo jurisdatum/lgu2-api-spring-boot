@@ -24,7 +24,7 @@ public class SessionQuery {
 
 
     private static String constructQuery(String session) {
-        String uri = String.format("http://www.legislation.gov.uk/id/session/EnglishParliament/%s", session);
+        String uri = String.format("http://www.legislation.gov.uk/id/session/EnglishParliament/%s", session.trim());
         return makeSingleConstructQuery(uri);
     }
 
@@ -39,9 +39,14 @@ public class SessionQuery {
         return toMappedData(jsonData);
     }
 
-
     private static String constructQuery1(String legislature, String reign, String session) {
-        String uri = String.format("http://www.legislation.gov.uk/id/session/%s/%s/%s", legislature,reign,session);
+        String uri = String.format(
+            "http://www.legislation.gov.uk/id/session/%s/%s/%s",
+            legislature.trim(),
+            reign.trim(),
+            session.trim()
+        );
+
         return makeSingleConstructQuery(uri);
     }
     public String fetchRawData1(String legislature, String reign, String session, String format)
@@ -51,7 +56,7 @@ public class SessionQuery {
 
     public Optional<SessionLD> fetchMappedData1(String legislature, String reign, String session)
         throws IOException, InterruptedException {
-        String jsonData = fetchRawData1(legislature, reign, session, "application/ld+json");
+        String jsonData = fetchRawData1(legislature, reign, session,"application/ld+json");
         return toMappedData(jsonData);
     }
 
