@@ -3,9 +3,9 @@ package uk.gov.legislation.converters.ld;
 import java.net.URI;
 import java.time.LocalDate;
 
-public class LDConverter {
+class LDConverter {
 
-    public static String extractLastComponentOfUri(URI uri) {
+    static String extractLastComponentOfUri(URI uri) {
         if (uri == null)
             return null;
         String s = uri.toASCIIString();

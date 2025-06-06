@@ -10,7 +10,6 @@ import uk.gov.legislation.data.virtuoso.jsonld.SessionLD;
 import java.io.IOException;
 import java.util.Optional;
 
-
 import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
 
 @Repository
@@ -22,9 +21,8 @@ public class SessionQuery {
         this.virtuoso = virtuoso;
     }
 
-
     private static String constructQuery(String session) {
-        String uri = String.format("http://www.legislation.gov.uk/id/session/EnglishParliament/%s", session.trim());
+        String uri = String.format("http://www.legislation.gov.uk/id/session/EnglishParliament/%s", session);
         return makeSingleConstructQuery(uri);
     }
 
@@ -39,24 +37,22 @@ public class SessionQuery {
         return toMappedData(jsonData);
     }
 
-    private static String constructQuery1(String legislature, String reign, String session) {
+    private static String constructQuery(String legislature, String reign, String session) {
         String uri = String.format(
             "http://www.legislation.gov.uk/id/session/%s/%s/%s",
-            legislature.trim(),
-            reign.trim(),
-            session.trim()
+            legislature, reign, session
         );
-
         return makeSingleConstructQuery(uri);
     }
-    public String fetchRawData1(String legislature, String reign, String session, String format)
+
+    public String fetchRawData(String legislature, String reign, String session, String format)
         throws IOException, InterruptedException {
-        return virtuoso.query(constructQuery1(legislature, reign, session), format);
+        return virtuoso.query(constructQuery(legislature, reign, session), format);
     }
 
-    public Optional<SessionLD> fetchMappedData1(String legislature, String reign, String session)
+    public Optional<SessionLD> fetchMappedData(String legislature, String reign, String session)
         throws IOException, InterruptedException {
-        String jsonData = fetchRawData1(legislature, reign, session,"application/ld+json");
+        String jsonData = fetchRawData(legislature, reign, session,"application/ld+json");
         return toMappedData(jsonData);
     }
 
@@ -66,7 +62,5 @@ public class SessionQuery {
             .map(graph -> (ObjectNode) graph.get(0))
             .map(SessionLD::convert);
     }
+
 }
-
-
-

@@ -28,13 +28,13 @@ public class SessionController implements SessionApi {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
 
         if (Virtuoso.Formats.contains(media.toString())) {
-            String result = query.fetchRawData1(legislature, reign, session, media.toString());
+            String result = query.fetchRawData(legislature, reign, session, media.toString());
             return ResponseEntity.ok()
                 .contentType(media)
                 .body(result);
         }
 
-        return query.fetchMappedData1(legislature, reign, session)
+        return query.fetchMappedData(legislature, reign, session)
             .map(SessionConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
