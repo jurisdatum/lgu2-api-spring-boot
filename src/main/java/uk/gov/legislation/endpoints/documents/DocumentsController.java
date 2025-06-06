@@ -6,8 +6,11 @@ import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.LastUpdated;
-import uk.gov.legislation.data2.SearchService;
+import uk.gov.legislation.data.marklogic.search.Parameters;
+import uk.gov.legislation.data.marklogic.search.Search;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.time.ZonedDateTime;
 
@@ -16,11 +19,11 @@ import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 @RestController
 public class DocumentsController implements DocumentsApi {
 
-    private final SearchService search;
+    private final Search search;
 
     private final ContentNegotiationManager negotiation;
 
-    public DocumentsController(SearchService search, ContentNegotiationManager negotiation) {
+    public DocumentsController(Search search, ContentNegotiationManager negotiation) {
         this.search = search;
         this.negotiation = negotiation;
     }
@@ -28,45 +31,57 @@ public class DocumentsController implements DocumentsApi {
     @Override
     public ResponseEntity<PageOfDocuments> getDocs(String type, int page) throws Exception {
         validateType(type);
-        PageOfDocuments docs = search.byType(type, page);
+        Parameters params = Parameters.builder().type(type).page(page).build();
+        SearchResults results = search.get(params);
+        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
         return ResponseEntity.ok(docs);
     }
 
     @Override
     public ResponseEntity<String> getFeed(String type, int page) throws Exception {
         validateType(type);
-        String atom = search.byTypeAtom(type, page);
+        Parameters params = Parameters.builder().type(type).page(page).build();
+        String atom = search.getAtom(params);
         return ResponseEntity.ok(atom);
     }
 
     @Override
     public ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(String type, int year, int page) throws Exception {
         validateType(type);
-        PageOfDocuments docs = search.byTypeAndYear(type, year, page);
+        Parameters params = Parameters.builder().type(type).year(year).page(page).build();
+        SearchResults results = search.get(params);
+        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
         return ResponseEntity.ok(docs);
     }
 
     @Override
     public ResponseEntity<String> getFeedByTypeAndYear(String type, int year, int page) throws Exception {
         validateType(type);
-        String atom = search.byTypeAndYearAtom(type, year, page);
+        Parameters params = Parameters.builder().type(type).year(year).page(page).build();
+        String atom = search.getAtom(params);
         return ResponseEntity.ok(atom);
     }
 
     @Override
     public ResponseEntity<Object> getNew(NativeWebRequest request, String region, int page) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
+        Parameters params = Parameters.builder()
+            .type(region)
+            .sort(Parameters.Sort.PUBLISHED)
+            .page(page)
+            .build();
         if (media.equals(MediaType.APPLICATION_ATOM_XML)) {
-            String atom = search.getNewAtom(region, page);
+            String atom = search.getAtom(params);
             ZonedDateTime updated = LastUpdated.get(atom);
             return ResponseEntity.ok()
                 .lastModified(updated)
                 .body(atom);
         }
-        PageOfDocuments json = search.getNew(region, page);
+        SearchResults results = search.get(params);
+        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
         return ResponseEntity.ok()
-            .lastModified(json.meta.updated)
-            .body(json);
+            .lastModified(docs.meta.updated)
+            .body(docs);
     }
 
 }
