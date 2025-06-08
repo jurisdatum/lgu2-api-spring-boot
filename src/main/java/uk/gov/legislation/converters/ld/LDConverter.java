@@ -14,11 +14,15 @@ class LDConverter {
 
     static Integer extractIntegerAtEndOfUri(URI uri) {
         String num = extractLastComponentOfUri(uri);
+        if (num == null)
+            return null;
         return Integer.parseInt(num);
     }
 
     static LocalDate extractDateAtEndOfUri(URI uri) {
         String date = extractLastComponentOfUri(uri);
+        if (date == null)
+            return null;
         return LocalDate.parse(date);
     }
 

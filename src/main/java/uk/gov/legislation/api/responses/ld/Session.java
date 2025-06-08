@@ -1,12 +1,12 @@
 package uk.gov.legislation.api.responses.ld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.net.URI;
 import java.time.LocalDate;
-import java.util.List;
 
-public class Reign {
+public class Session {
 
     @JsonProperty
     public URI uri;
@@ -15,19 +15,17 @@ public class Reign {
     public String label;
 
     @JsonProperty
-    public List<String> monarchs;
+    @Schema(nullable = true)
+    public String description;
+
+    @JsonProperty
+    public String legislature;
 
     @JsonProperty
     public LocalDate startDate;
 
     @JsonProperty
     public LocalDate endDate;
-
-//    @JsonProperty
-//    public Integer startYear;
-//
-//    @JsonProperty
-//    public Integer endYear;
 
     @JsonProperty
     public Integer startRegnalYear;
