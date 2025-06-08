@@ -12,6 +12,7 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
+import java.io.IOException;
 import java.time.ZonedDateTime;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
@@ -32,38 +33,32 @@ public class DocumentsController implements DocumentsApi {
     public ResponseEntity<PageOfDocuments> getDocs(String type, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).page(page).build();
-        SearchResults results = search.get(params);
-        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
-        return ResponseEntity.ok(docs);
+        return getJson(params);
     }
 
     @Override
     public ResponseEntity<String> getFeed(String type, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).page(page).build();
-        String atom = search.getAtom(params);
-        return ResponseEntity.ok(atom);
+        return getAtom(params);
     }
 
     @Override
     public ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(String type, int year, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).year(year).page(page).build();
-        SearchResults results = search.get(params);
-        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
-        return ResponseEntity.ok(docs);
+        return getJson(params);
     }
 
     @Override
     public ResponseEntity<String> getFeedByTypeAndYear(String type, int year, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).year(year).page(page).build();
-        String atom = search.getAtom(params);
-        return ResponseEntity.ok(atom);
+        return getAtom(params);
     }
 
     @Override
-    public ResponseEntity<Object> getNew(NativeWebRequest request, String region, int page) throws Exception {
+    public ResponseEntity<?> getNew(NativeWebRequest request, String region, int page) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         Parameters params = Parameters.builder()
             .type(region)
@@ -71,12 +66,20 @@ public class DocumentsController implements DocumentsApi {
             .page(page)
             .build();
         if (media.equals(MediaType.APPLICATION_ATOM_XML)) {
-            String atom = search.getAtom(params);
-            ZonedDateTime updated = LastUpdated.get(atom);
-            return ResponseEntity.ok()
-                .lastModified(updated)
-                .body(atom);
+            return getAtom(params);
         }
+        return getJson(params);
+    }
+
+    private ResponseEntity<String> getAtom(Parameters params) throws IOException, InterruptedException {
+        String atom = search.getAtom(params);
+        ZonedDateTime updated = LastUpdated.get(atom);
+        return ResponseEntity.ok()
+            .lastModified(updated)
+            .body(atom);
+    }
+
+    private ResponseEntity<PageOfDocuments> getJson(Parameters params) throws IOException, InterruptedException {
         SearchResults results = search.get(params);
         PageOfDocuments docs = DocumentsFeedConverter.convert(results);
         return ResponseEntity.ok()
