@@ -77,7 +77,7 @@ public interface DocumentsApi {
             MediaType.APPLICATION_ATOM_XML_VALUE,
             MediaType.APPLICATION_JSON_VALUE }
     )
-    ResponseEntity<Object> getNew(NativeWebRequest request,
+    ResponseEntity<?> getNew(NativeWebRequest request,
         @PathVariable String region,
         @RequestParam(defaultValue = "1") int page) throws Exception;
 
