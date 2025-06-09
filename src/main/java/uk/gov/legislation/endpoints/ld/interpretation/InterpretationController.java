@@ -94,10 +94,11 @@ public class InterpretationController {
             @PathVariable String reign,
             @PathVariable String statute,
             @PathVariable String number,
+            @RequestParam(required = false) String version,
             Locale locale) throws Exception {
         String type = "aep";
         String middle = reign + "/" + statute;
-        return helper(request, type, middle, number, null, locale);
+        return helper(request, type, middle, number, version, locale);
     }
 
     // for tempincert URIs with number
@@ -105,20 +106,22 @@ public class InterpretationController {
     public ResponseEntity<?> getAEPStatuteNameAndNumber(NativeWebRequest request,
             @PathVariable String statute,
             @PathVariable String number,
+            @RequestParam(required = false) String version,
             Locale locale) throws Exception {
         String type = "aep";
         String middle = "tempincert/" + statute;
-        return helper(request, type, middle, number, null, locale);
+        return helper(request, type, middle, number, version, locale);
     }
 
     // for tempincert URIs without number
     @GetMapping("/aep/{statute}")
     public ResponseEntity<?> getAEPStatuteNameAlone(NativeWebRequest request,
             @PathVariable String statute,
+            @RequestParam(required = false) String version,
             Locale locale) throws Exception {
         String type = "aep";
         String middle = "tempincert/" + statute;
-        return helper(request, type, middle, null, null, locale);
+        return helper(request, type, middle, null, version, locale);
     }
 
     @GetMapping("/eut/{treaty}")
