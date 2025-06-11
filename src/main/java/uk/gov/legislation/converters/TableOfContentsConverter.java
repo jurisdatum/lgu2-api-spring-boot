@@ -10,6 +10,8 @@ public class TableOfContentsConverter {
     public static TableOfContents convert(Contents simple) {
         TableOfContents toc = new TableOfContents();
         toc.meta = DocumentMetadataConverter.convert(simple.meta);
+        if (simple.contents == null)
+            return toc;
         toc.contents = new TableOfContents.Contents();
         toc.contents.title = simple.contents.title;
         toc.contents.body = convertItems(simple.contents.body);
