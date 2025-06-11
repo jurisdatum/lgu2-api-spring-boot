@@ -10,9 +10,6 @@ public class Monarch {
     public URI uri;
 
     @JsonProperty
-    public String type;
-
-    @JsonProperty
     public String label;
 
     @JsonProperty
@@ -21,6 +18,4 @@ public class Monarch {
     @JsonProperty
     public Integer number;
 
-    public Monarch() {
-    }
 }

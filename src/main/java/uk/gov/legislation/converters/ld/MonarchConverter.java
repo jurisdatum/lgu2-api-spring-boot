@@ -8,7 +8,6 @@ public class MonarchConverter {
     public static Monarch convert(MonarchLD ld) {
         Monarch monarch = new Monarch();
         monarch.uri = ld.id;
-        monarch.type = ld.type;
         monarch.label = ld.label;
         monarch.name = ld.regnalName;
         monarch.number = ld.regnalNumber;

@@ -9,7 +9,4 @@ public class Legislature {
     @JsonProperty
     public URI uri;
 
-    @JsonProperty
-    public String type = "Legislature";
-
 }
