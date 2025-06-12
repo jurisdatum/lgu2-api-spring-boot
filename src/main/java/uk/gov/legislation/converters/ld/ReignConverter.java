@@ -15,8 +15,6 @@ public class ReignConverter {
         reign.monarchs = ld.monarch.stream().map(LDConverter::extractLastComponentOfUri).toList();
         reign.startDate = extractDateAtEndOfUri(ld.startDate);
         reign.endDate = extractDateAtEndOfUri(ld.endDate);
-//        reign.startYear = extractIntegerAtEndOfUri(ld.startCalendarYear);
-//        reign.endYear = extractIntegerAtEndOfUri(ld.endCalendarYear);
         reign.startRegnalYear = extractIntegerAtEndOfUri(ld.startRegnalYear);
         reign.endRegnalYear = extractIntegerAtEndOfUri(ld.endRegnalYear);
         return reign;

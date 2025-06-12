@@ -23,12 +23,6 @@ public class Reign {
     @JsonProperty
     public LocalDate endDate;
 
-//    @JsonProperty
-//    public Integer startYear;
-//
-//    @JsonProperty
-//    public Integer endYear;
-
     @JsonProperty
     public Integer startRegnalYear;
 
