@@ -14,6 +14,10 @@
   "publisher" : "Statute Law Database",
   "modified" : "2024-11-01",
   "versions" : [ "2013-04-01", "2017-12-08", "2020-12-31" ],
+  "has" : {
+    "introduction" : true,
+    "schedules" : true
+  },
   "schedules" : true,
   "formats" : [ "xml", "pdf" ],
   "fragment" : "schedule/6/paragraph/4A",

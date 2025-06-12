@@ -42,6 +42,14 @@ public class DocumentMetadataConverter {
         converted.publisher = simple.publisher;
         converted.modified = simple.modified;
         converted.versions = simple.versions();
+
+        if (simple.hasParts != null) {
+            converted.has.introduction = simple.hasParts.introduction != null;
+            converted.has.signature = simple.hasParts.signature != null;
+            converted.has.schedules = simple.hasParts.schedules != null;
+            converted.has.note = simple.hasParts.note != null;
+        }
+
         converted.schedules = simple.schedules;
         converted.formats = simple.formats();
     }

@@ -90,6 +90,28 @@ public class Metadata {
     @JsonSetter
     public void setVersions(List<String> value) { _versions = value; }
 
+
+
+    @JacksonXmlProperty
+    public HasParts hasParts;
+
+    public static class HasParts {
+
+        @JacksonXmlProperty
+        public String introduction;
+
+        @JacksonXmlProperty
+        public String signature;
+
+        @JacksonXmlProperty
+        public String schedules;
+
+        @JacksonXmlProperty
+        public String note;
+
+    }
+
+    @Deprecated
     public boolean schedules;
 
     @JsonSetter("schedules")
