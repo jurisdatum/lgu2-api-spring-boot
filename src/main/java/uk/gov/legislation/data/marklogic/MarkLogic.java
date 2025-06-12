@@ -1,9 +1,11 @@
 package uk.gov.legislation.data.marklogic;
 
-import org.springframework.core.env.Environment;
+import jakarta.annotation.PostConstruct;
+import jakarta.validation.constraints.NotBlank;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -13,31 +15,39 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
 @Component
+@ConfigurationProperties(prefix = "marklogic")
+@Validated
 public class MarkLogic {
 
-    private final HttpClient httpClient;
-    private final String baseUri;
-    private final String authHeader;
+    @NotBlank private String host;
+    @NotBlank private String username;
+    @NotBlank private String password;
+              private long port;
 
-    /**
-     * Using constructor-based injection for better testability and immutability.
-     */
-    public MarkLogic(Environment env) {
+    private HttpClient httpClient;
+    private String baseUri;
+    private String authHeader;
+
+    @PostConstruct
+    public void init() {
         this.httpClient = HttpClient.newHttpClient();
-
-        String host = env.getProperty("MARKLOGIC_HOST");
-        String port = env.getProperty("MARKLOGIC_PORT");
-        String username = env.getProperty("MARKLOGIC_USERNAME");
-        String password = env.getProperty("MARKLOGIC_PASSWORD");
-
         this.baseUri = String.format("http://%s:%s/queries/", host, port);
         this.authHeader = createAuthHeader(username, password);
     }
 
     private String createAuthHeader(String username, String password) {
         String credentials = username + ":" + password;
-        String encodedCredentials = Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
-        return "Basic " + encodedCredentials;
+        return "Basic " + Base64.getEncoder().encodeToString(credentials.getBytes(StandardCharsets.UTF_8));
+    }
+
+    // setters — for binding!
+    public void setHost(String host) {this.host = host;
+    }
+    public void setUsername(String username) {this.username = username;
+    }
+    public void setPassword(String password) {this.password = password;
+    }
+    public void setPort(long port) {this.port = port;
     }
 
     /**
@@ -51,9 +61,9 @@ public class MarkLogic {
     public String get(String endpoint, String query) throws IOException, InterruptedException {
         URI uri = URI.create(baseUri + endpoint + query);
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(uri)
-                .header("Authorization", authHeader)
-                .build();
+            .uri(uri)
+            .header("Authorization", authHeader)
+            .build();
 
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         if (response.statusCode() >= 400) {
@@ -61,5 +71,4 @@ public class MarkLogic {
         }
         return response.body();
     }
-
 }
