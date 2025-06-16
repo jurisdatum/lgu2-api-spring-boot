@@ -81,7 +81,7 @@ public class DocumentsController implements DocumentsApi {
 
     private ResponseEntity<PageOfDocuments> getJson(Parameters params) throws IOException, InterruptedException {
         SearchResults results = search.get(params);
-        PageOfDocuments docs = DocumentsFeedConverter.convert(results);
+        PageOfDocuments docs = DocumentsFeedConverter.convert(results, null);
         return ResponseEntity.ok()
             .lastModified(docs.meta.updated)
             .body(docs);

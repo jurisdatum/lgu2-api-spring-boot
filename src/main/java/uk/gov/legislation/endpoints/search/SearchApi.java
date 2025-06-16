@@ -1,5 +1,7 @@
 package uk.gov.legislation.endpoints.search;
 
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +23,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false, defaultValue = "20") int pageSize
+            @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
+            @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;
 
 
@@ -34,8 +36,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false, defaultValue = "1") int page,
-            @RequestParam(required = false, defaultValue = "20") int pageSize
+            @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
+            @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;
 
 }

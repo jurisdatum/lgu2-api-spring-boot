@@ -3,6 +3,7 @@ package uk.gov.legislation.converters;
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
+import uk.gov.legislation.endpoints.search.SearchParameters;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
 
@@ -14,9 +15,10 @@ import java.util.stream.Collectors;
 
 public class DocumentsFeedConverter {
 
-    public static PageOfDocuments convert(SearchResults atom) {
+    public static PageOfDocuments convert(SearchResults atom, SearchParameters query) {
         PageOfDocuments page = new PageOfDocuments();
         page.meta = convertMeta(atom);
+        page.meta.query = query;
         page.documents = convertDocuments(atom.entries);
         return page;
     }
