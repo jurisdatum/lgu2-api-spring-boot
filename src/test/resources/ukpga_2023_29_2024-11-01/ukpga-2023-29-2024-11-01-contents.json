@@ -2378,6 +2378,13 @@
   },
   "contents" : {
     "title" : "Financial Services and Markets Act 2023",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ ]
+    },
     "body" : [ {
       "name" : "part",
       "number" : "PART 1",

@@ -109,6 +109,9 @@ public class Metadata {
         @JacksonXmlProperty
         public String note;
 
+        @JacksonXmlProperty
+        public String earlierOrders;
+
     }
 
     @Deprecated

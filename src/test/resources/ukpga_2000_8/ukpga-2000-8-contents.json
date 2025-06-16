@@ -9884,6 +9884,13 @@
   },
   "contents" : {
     "title" : "Financial Services and Markets Act 2000",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W", "S", "NI" ]
+    },
     "body" : [ {
       "name" : "part",
       "number" : "Part I",

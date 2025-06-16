@@ -177,6 +177,7 @@
     <xsl:variable name="signature" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/signature']/@href" />
     <xsl:variable name="schedules" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
     <xsl:variable name="note" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/note']/@href" />
+    <xsl:variable name="earlier-orders" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/earlier-orders']/@href" />
     <hasParts>
         <xsl:if test="exists($introduction)">
             <introduction>
@@ -197,6 +198,11 @@
             <note>
                 <xsl:value-of select="$note" />
             </note>
+        </xsl:if>
+        <xsl:if test="exists($earlier-orders)">
+            <earlierOrders>
+                <xsl:value-of select="$earlier-orders" />
+            </earlierOrders>
         </xsl:if>
     </hasParts>
 </xsl:template>
