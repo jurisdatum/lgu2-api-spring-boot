@@ -10,6 +10,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,10 @@ public class SearchResults {
 
 public static class Facets {
 
+    @JacksonXmlElementWrapper(localName = "facetPublishDates")
+    @JacksonXmlProperty(localName = "facetPublishDate")
+    public List<FacetPublishDate> facetPublishDates;
+
     @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
     public FacetTypes facetTypes;
 
@@ -78,6 +83,16 @@ public static class FacetType {
 
     @JacksonXmlProperty(isAttribute = true)
     public int value;
+
+}
+
+public static class FacetPublishDate {
+
+    @JacksonXmlProperty(isAttribute = true)
+    public LocalDate date;
+
+    @JacksonXmlProperty(isAttribute = true)
+    public int total;
 
 }
 
