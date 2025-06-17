@@ -29,14 +29,16 @@ public class DocumentsFeedConverter {
         meta.pageSize = atom.itemsPerPage;
         meta.totalPages = atom.morePages;
         meta.updated = atom.updated;
-        meta.counts = convertCounts(atom.facets);
+        meta.counts = convertCounts(atom.facets, atom.totalResults);
         meta.subjects = convertSubjects(atom.facets.subjects);
         return meta;
     }
 
-    private static PageOfDocuments.Counts convertCounts(SearchResults.Facets facets) {
+    private static PageOfDocuments.Counts convertCounts(SearchResults.Facets facets, Integer total) {
         PageOfDocuments.Counts counts = new PageOfDocuments.Counts();
-        if (facets.facetYears.entries != null)
+        if (total != null)
+            counts.total = total;
+        else if (facets.facetYears.entries != null)
             counts.total = facets.facetYears.entries.stream()
                 .mapToInt(facet -> facet.total)
                 .sum();

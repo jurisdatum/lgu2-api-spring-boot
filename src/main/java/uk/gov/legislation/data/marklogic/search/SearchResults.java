@@ -46,6 +46,9 @@ public class SearchResults {
     @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
     public Facets facets;
 
+    @JacksonXmlProperty(namespace = "http://a9.com/-/spec/opensearch/1.1/")
+    public Integer totalResults;
+
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "entry")
     public List<Entry> entries;
