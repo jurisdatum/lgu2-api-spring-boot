@@ -2,6 +2,7 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.endpoints.search.SearchParameters;
 
 import java.time.ZonedDateTime;
 import java.util.Collection;
@@ -17,6 +18,9 @@ public class PageOfDocuments {
 
     @Schema(name = "ListMetadata")
     public static class Meta {
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public SearchParameters query;
 
         @Schema
         public int page;

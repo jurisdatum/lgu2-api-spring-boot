@@ -43,6 +43,8 @@ public class Cites {
             .map(RegnalYear::parse)
             .orElse(null);
         String base = Cites.make(type, year, regnal, number);
+        if (base == null)
+            return null;
         String extra = altNumbers.stream()
             .filter(a -> !"Regnal".equals(a.category()))
             .map(a -> " (" + convertCategory(a) + "." + " " + a.value() + ")")
@@ -62,6 +64,8 @@ public class Cites {
     @SuppressWarnings("DuplicateBranchesInSwitch")
     private static String make(Type type, int year, RegnalYear regnal, int number) {
         String regnalYear = RegnalYear.forCitation(regnal);
+        if (type == null)
+            return null;
         return switch (type) {
             case UKPGA, UKPPA -> regnalYear + year + " c. " + number;
             case APGB, AEP -> year + regnalYear + " c. " + number;

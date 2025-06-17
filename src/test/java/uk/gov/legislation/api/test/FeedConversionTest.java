@@ -28,7 +28,7 @@ class FeedConversionTest {
             expected = new String(input.readAllBytes(), StandardCharsets.UTF_8);
         }
         SearchResults results = SearchResults.parse(atom);
-        PageOfDocuments response = DocumentsFeedConverter.convert(results);
+        PageOfDocuments response = DocumentsFeedConverter.convert(results, null);
         String actual = mapper.writeValueAsString(response);
         Assertions.assertEquals(expected, actual);
     }
@@ -46,7 +46,7 @@ class FeedConversionTest {
             expected = new String(input.readAllBytes(), StandardCharsets.UTF_8);
         }
         SearchResults results = SearchResults.parse(atom);
-        PageOfDocuments response = DocumentsFeedConverter.convert(results);
+        PageOfDocuments response = DocumentsFeedConverter.convert(results, null);
         String actual = mapper.writeValueAsString(response);
         Assertions.assertEquals(expected, actual);
     }

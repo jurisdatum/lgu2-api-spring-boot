@@ -32,8 +32,8 @@ public class SearchController implements SearchApi {
             Integer number,
             String language,
             LocalDate published,
-            int page,
-            int pageSize) throws IOException, InterruptedException {
+            Integer page,
+            Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
@@ -58,12 +58,12 @@ public class SearchController implements SearchApi {
             Integer number,
             String language,
             LocalDate published,
-            int page,
-            int pageSize) throws IOException, InterruptedException {
+            Integer page,
+            Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateTitle(title);
         validateLanguage(language);
-        Parameters params = Parameters.builder()
+        SearchParameters params = SearchParameters.builder()
             .type(type)
             .year(year)
             .number(number)
@@ -73,8 +73,8 @@ public class SearchController implements SearchApi {
             .page(page)
             .pageSize(pageSize)
             .build();
-        return Optional.of(db.get(params))
-            .map(DocumentsFeedConverter::convert)
+        return Optional.of(db.get(params.convert()))
+            .map(results -> DocumentsFeedConverter.convert(results, params))
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }

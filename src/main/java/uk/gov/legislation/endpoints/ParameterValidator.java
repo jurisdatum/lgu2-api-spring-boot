@@ -4,6 +4,8 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
 
+import java.util.Set;
+
 public class ParameterValidator {
 
     public static void validateTitle(String title) {
@@ -12,13 +14,21 @@ public class ParameterValidator {
         }
     }
 
+    public static final Set<String> OTHER_TYPES = Set.of(
+        "primary+secondary", "primary", "secondary",
+        "all", "eu-origin"
+    );
+
     public static void validateType(String type) {
         if (type == null)
             return;
         if (type.isBlank())
             throw new UnknownTypeException(type);
-        if (!Types.isValidShortType(type))
-            throw new UnknownTypeException(type);
+        if (Types.isValidShortType(type))
+            return;
+        if (OTHER_TYPES.contains(type))
+            return;
+        throw new UnknownTypeException(type);
     }
 
     // used only for query parameter for search endpoint
