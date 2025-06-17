@@ -7,7 +7,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = false)
@@ -19,10 +20,12 @@ public class ClassLD {
     @JsonProperty("@type")
     public String type;
 
-    public final Map<String, Object> other = new HashMap<>();
+    public final Map<String, Object> other = new LinkedHashMap<>();
 
     @JsonAnySetter
     public void set(String key, Object value) {
+        if ("subClassOf".equals(key) && value instanceof String s)
+            value = List.of(s);
         other.put(key, value);
     }
 
