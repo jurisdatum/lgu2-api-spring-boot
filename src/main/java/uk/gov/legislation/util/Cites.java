@@ -88,6 +88,8 @@ public class Cites {
             case UKDSI -> SI_PREFIX + year + " (draft)";
             case SDSI -> "S.S.I. " + year + " (draft)";
             case NIDSR -> SI_PREFIX + year + " (N.I.) (draft)";
+            case EUR, EUDN, EUDR -> year + " No. " + number;
+            case EUT -> null;
         };
     }
 

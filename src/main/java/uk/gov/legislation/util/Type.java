@@ -42,12 +42,18 @@ public enum Type {
     GBPPA("GreatBritainPrivateOrPersonalAct", Category.Primary, Country.GREAT_BRITAIN),
 
     // England Acts
-    AEP("EnglandAct", Category.Primary, Country.ENGLAND);
+    AEP("EnglandAct", Category.Primary, Country.ENGLAND),
 
-    public enum Category { Primary, Secondary }
+    // European Union
+    EUR("EuropeanUnionRegulation", Category.EURetained, Country.EU),
+    EUDN("EuropeanUnionDecision", Category.EURetained, Country.EU),
+    EUDR("EuropeanUnionDirective", Category.EURetained, Country.EU),
+    EUT("EuropeanUnionTreaty", Category.EURetained, Country.EU);
+
+    public enum Category { Primary, Secondary, EURetained }
 
     public enum Country {
-        UK, SCOTLAND, WALES, NORTHERN_IRELAND, ENGLAND, GREAT_BRITAIN
+        UK, SCOTLAND, WALES, NORTHERN_IRELAND, ENGLAND, GREAT_BRITAIN, EU
     }
 
     private final String longName;
