@@ -21,8 +21,14 @@ public class TableOfContents {
         @Schema
         public String title;
 
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Item introduction;
+
         @Schema
         public List<Item> body;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Item signature;
 
         @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
         @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -39,6 +45,12 @@ public class TableOfContents {
         @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public List<Item> attachments;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Item explanatoryNote;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Item earlierOrders;
 
     }
 
@@ -63,6 +75,46 @@ public class TableOfContents {
         @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public List<Item> children;
+
+    }
+
+    public static class Introduction extends Item {
+
+        public Introduction() {
+            name = "introduction";
+            title = "Introductory Text";
+            ref = "introduction";
+        }
+
+    }
+
+    public static class Signature extends Item {
+
+        public Signature() {
+            name = "signature";
+            title = "Signature";
+            ref = "signature";
+        }
+
+    }
+
+    public static class ExplanatoryNote extends Item {
+
+        public ExplanatoryNote() {
+            name = "explanatoryNote";
+            title = "Explanatory Note";
+            ref = "note";
+        }
+
+    }
+
+    public static class EarlierOrders extends Item {
+
+        public EarlierOrders() {
+            name = "earlierOrders";
+            title = "Note as to Earlier Commencement Orders";
+            ref = "earlier-orders";
+        }
 
     }
 

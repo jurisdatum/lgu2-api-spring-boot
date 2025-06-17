@@ -25,6 +25,7 @@
         <xsl:apply-templates select="dc:modified" />
         <xsl:call-template name="versions" />
         <xsl:call-template name="schedules" />
+        <xsl:call-template name="has-parts" />
         <xsl:call-template name="formats" />
         <xsl:if test="$is-fragment">
             <xsl:call-template name="fragment-info" />
@@ -169,6 +170,41 @@
     <schedules>
         <xsl:value-of select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
     </schedules>
+</xsl:template>
+
+<xsl:template name="has-parts">
+    <xsl:variable name="introduction" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/introduction']/@href" />
+    <xsl:variable name="signature" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/signature']/@href" />
+    <xsl:variable name="schedules" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/schedules']/@href" />
+    <xsl:variable name="note" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/note']/@href" />
+    <xsl:variable name="earlier-orders" as="xs:string?" select="atom:link[@rel='http://www.legislation.gov.uk/def/navigation/earlier-orders']/@href" />
+    <hasParts>
+        <xsl:if test="exists($introduction)">
+            <introduction>
+                <xsl:value-of select="$introduction" />
+            </introduction>
+        </xsl:if>
+        <xsl:if test="exists($signature)">
+            <signature>
+                <xsl:value-of select="$signature" />
+            </signature>
+        </xsl:if>
+        <xsl:if test="exists($schedules)">
+            <schedules>
+                <xsl:value-of select="$schedules" />
+            </schedules>
+        </xsl:if>
+        <xsl:if test="exists($note)">
+            <note>
+                <xsl:value-of select="$note" />
+            </note>
+        </xsl:if>
+        <xsl:if test="exists($earlier-orders)">
+            <earlierOrders>
+                <xsl:value-of select="$earlier-orders" />
+            </earlierOrders>
+        </xsl:if>
+    </hasParts>
 </xsl:template>
 
 <xsl:template name="formats">

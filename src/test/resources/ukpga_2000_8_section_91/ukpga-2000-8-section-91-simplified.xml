@@ -25,6 +25,10 @@
          <hasVersion>2024-01-30</hasVersion>
       </hasVersions>
       <schedules>http://www.legislation.gov.uk/ukpga/2000/8/schedules</schedules>
+      <hasParts>
+         <introduction>http://www.legislation.gov.uk/ukpga/2000/8/introduction</introduction>
+         <schedules>http://www.legislation.gov.uk/ukpga/2000/8/schedules</schedules>
+      </hasParts>
       <formats>
          <format name="xml"/>
          <format name="pdf"

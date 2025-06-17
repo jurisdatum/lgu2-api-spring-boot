@@ -34,6 +34,10 @@
          <hasVersion>current</hasVersion>
       </hasVersions>
       <schedules>http://www.legislation.gov.uk/ukpga/2023/29/schedules/2024-11-01</schedules>
+      <hasParts>
+         <introduction>http://www.legislation.gov.uk/ukpga/2023/29/introduction/2024-11-01</introduction>
+         <schedules>http://www.legislation.gov.uk/ukpga/2023/29/schedules/2024-11-01</schedules>
+      </hasParts>
       <formats>
          <format name="xml"/>
          <format name="pdf"

@@ -1,6 +1,7 @@
 package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.util.Extent;
 
@@ -63,7 +64,10 @@ public abstract class CommonMetadata {
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
     public List<String> versions;
 
-    @Schema
+    @JsonProperty
+    public Has has = new Has();
+
+    @Schema(deprecated = true)
     public boolean schedules;
 
     @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
@@ -77,6 +81,22 @@ public abstract class CommonMetadata {
 
         @Schema(example = "1")
         public String value;
+
+    }
+
+    public static class Has {
+
+        @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+        public boolean introduction;
+
+        @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+        public boolean signature;
+
+        @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+        public boolean schedules;
+
+        @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+        public boolean note;
 
     }
 
