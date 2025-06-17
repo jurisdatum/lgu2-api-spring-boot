@@ -55,14 +55,13 @@ public class SearchController implements SearchApi {
         return ResponseEntity.ok(atom);
     }
 
-    private static final ResponseStatusException BAD_REQUEST =
-        new ResponseStatusException(HttpStatus.BAD_REQUEST);
-
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
         if (year != null && (startYear != null || endYear != null))
-            throw BAD_REQUEST;
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                "`year` cannot be combined with `startYear` or `endYear`");
         if (startYear != null && endYear != null && startYear > endYear)
-            throw BAD_REQUEST;
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                "`startYear` must be ≤ `endYear`");
     }
 
     @Override
