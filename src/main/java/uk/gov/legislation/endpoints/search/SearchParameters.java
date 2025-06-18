@@ -14,6 +14,12 @@ public class SearchParameters {
     public Integer year;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Integer startYear;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Integer endYear;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer number;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -49,6 +55,16 @@ public class SearchParameters {
 
         public SearchParameters.Builder year(Integer year) {
             params.year = year;
+            return this;
+        }
+
+        public SearchParameters.Builder startYear(Integer year) {
+            params.startYear = year;
+            return this;
+        }
+
+        public SearchParameters.Builder endYear(Integer year) {
+            params.endYear = year;
             return this;
         }
 
@@ -97,6 +113,8 @@ public class SearchParameters {
         return Parameters.builder()
             .type(type)
             .year(year)
+            .startYear(startYear)
+            .endYear(endYear)
             .number(number)
             .title(title)
             .language(language)

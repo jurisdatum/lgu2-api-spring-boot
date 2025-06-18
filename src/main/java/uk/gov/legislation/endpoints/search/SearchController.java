@@ -29,17 +29,22 @@ public class SearchController implements SearchApi {
             String title,
             String type,
             Integer year,
+            Integer startYear,
+            Integer endYear,
             Integer number,
             String language,
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
+        validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
+            .startYear(startYear)
+            .endYear(endYear)
             .number(number)
             .title(title)
             .language(language)
@@ -50,22 +55,36 @@ public class SearchController implements SearchApi {
         return ResponseEntity.ok(atom);
     }
 
+    public static void validateYears(Integer year, Integer startYear, Integer endYear) {
+        if (year != null && (startYear != null || endYear != null))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                "`year` cannot be combined with `startYear` or `endYear`");
+        if (startYear != null && endYear != null && startYear > endYear)
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                "`startYear` must be ≤ `endYear`");
+    }
+
     @Override
     public ResponseEntity<PageOfDocuments> searchByJson(
             String title,
             String type,
             Integer year,
+            Integer startYear,
+            Integer endYear,
             Integer number,
             String language,
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
+        validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
         SearchParameters params = SearchParameters.builder()
             .type(type)
             .year(year)
+            .startYear(startYear)
+            .endYear(endYear)
             .number(number)
             .title(title)
             .language(language)

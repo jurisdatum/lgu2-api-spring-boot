@@ -14,6 +14,10 @@ public class Parameters extends AbstractParameters {
 
     public Integer year;
 
+    public Integer startYear;
+
+    public Integer endYear;
+
     public Integer number;
 
     public String title;
@@ -59,6 +63,16 @@ public class Parameters extends AbstractParameters {
 
         public Builder year(Integer year) {
             params.year = year;
+            return this;
+        }
+
+        public Builder startYear(Integer year) {
+            params.startYear = year;
+            return this;
+        }
+
+        public Builder endYear(Integer year) {
+            params.endYear = year;
             return this;
         }
 
