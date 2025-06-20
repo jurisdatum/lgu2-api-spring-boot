@@ -19,6 +19,8 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
+
+    // FixMe this sometimes obscures error unrelated to user input
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
@@ -28,6 +30,7 @@ public class GlobalExceptionHandler {
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
+
     @ExceptionHandler(NoDocumentException.class)
     public ResponseEntity <ErrorResponse> handleNoDocumentException(NoDocumentException ex) {
         ErrorResponse errorResponse = new ErrorResponse(

@@ -58,7 +58,7 @@ public class Legislation {
 
     public record Response(String clml, Optional<Redirect> redirect) { }
 
-    public record Redirect(String type, String year, int number, Optional<String> version) {
+    public record Redirect(String type, String year, long number, Optional<String> version) {
 
         static Redirect make(Parameters params) {
             return new Redirect(params.type(), params.year(), params.number(), params.version());

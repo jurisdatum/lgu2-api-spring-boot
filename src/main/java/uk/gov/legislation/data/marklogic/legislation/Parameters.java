@@ -8,13 +8,13 @@ public class Parameters {
 
     private final String type;
     private final String year;
-    private final int number;
+    private final long number;
     private Optional<String> version;
     private Optional<String> view;
     private Optional<String> section;
     private Optional<String> lang;
 
-    public Parameters(String type, String year, int number) {
+    public Parameters(String type, String year, long number) {
         if (type == null)
             throw new IllegalArgumentException();
         if (year == null)
@@ -32,7 +32,7 @@ public class Parameters {
 
     public String year() { return year; }
 
-    public int number() { return number; }
+    public long number() { return number; }
 
     public Optional<String> version() { return version; }
     public Parameters version(Optional<String> version) {
