@@ -174,6 +174,9 @@ public static class Entry {
         }
     }
 
+    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+    public String summary;
+
     @JacksonXmlProperty(localName = "DocumentMainType", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     public Value mainType;
 
