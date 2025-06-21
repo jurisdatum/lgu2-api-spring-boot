@@ -117,6 +117,9 @@ public class PageOfDocuments {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         public String altTitle;
 
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String description;
+
         @Schema
         public ZonedDateTime published;
 

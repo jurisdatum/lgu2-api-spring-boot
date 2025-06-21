@@ -68,7 +68,12 @@ public class DocumentsFeedConverter {
 
     private static PageOfDocuments.Document convertDocument(SearchResults.Entry entry) {
         PageOfDocuments.Document doc = new PageOfDocuments.Document();
-        doc.id = entry.id.substring(33);
+        if (entry.id.startsWith("http://www.legislation.gov.uk/id/"))
+            doc.id = entry.id.substring(33);
+        else if (entry.id.startsWith("http://www.legislation.gov.uk/"))
+            doc.id = entry.id.substring(30);
+        else
+            doc.id = entry.id;
         doc.longType = entry.mainType == null ? null : entry.mainType.value;
         doc.year = entry.year == null ? 0 : entry.year.value;
         doc.number = entry.number == null ? 0 : entry.number.value;
@@ -76,6 +81,7 @@ public class DocumentsFeedConverter {
         doc.cite = Cites.convertNumbersAndMake(doc.longType, doc.year, doc.number, doc.altNumbers);
         doc.title = entry.title;
         doc.altTitle = entry.altTitle;
+        doc.description = entry.summary;
         doc.published = entry.published;
         doc.updated = entry.updated;
         doc.version = getVersion(entry.links);

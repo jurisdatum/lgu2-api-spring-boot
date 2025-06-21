@@ -15,7 +15,8 @@ public class ParameterValidator {
     }
 
     public static final Set<String> OTHER_TYPES = Set.of(
-        "primary+secondary", "primary", "secondary",
+        "primary", "secondary", "primary+secondary",
+        "uk", "scotland", "wales", "ni",
         "all", "eu-origin"
     );
 
