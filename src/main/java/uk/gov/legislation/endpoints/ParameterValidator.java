@@ -15,9 +15,8 @@ public class ParameterValidator {
         }
     }
 
-    private static final Set<String> OTHER_TYPES = Set.of(
-        "primary", "secondary", "primary+secondary",
-        "primary+eu-origin", "secondary+eu-origin",
+    private static final Set<String> GROUP_TYPES = Set.of(
+        "primary", "secondary",
         "uk", "scotland", "wales",
         "ni", "all", "eu-origin"
     );
@@ -41,7 +40,7 @@ public class ParameterValidator {
     }
 
     private static boolean isUnknownType(String type) {
-        return type.isBlank() || (!Types.isValidShortType(type) && !OTHER_TYPES.contains(type));
+        return type.isBlank() || (!Types.isValidShortType(type) && !GROUP_TYPES.contains(type));
     }
 
     // used only for query parameter for search endpoint
