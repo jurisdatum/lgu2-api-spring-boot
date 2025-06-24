@@ -4,11 +4,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class SearchParameters {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String type;
+    public List<String> type;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer year;
@@ -48,7 +49,7 @@ public class SearchParameters {
 
         private Builder() { }
 
-        public SearchParameters.Builder type(String type) {
+        public SearchParameters.Builder type(List<String> type) {
             params.type = type;
             return this;
         }

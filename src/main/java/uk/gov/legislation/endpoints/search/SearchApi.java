@@ -11,6 +11,7 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 
 @Tag(name = "Search")
 public interface SearchApi {
@@ -18,7 +19,7 @@ public interface SearchApi {
     @GetMapping(value = "/search", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
     ResponseEntity<String> searchByAtom(
             @RequestParam(required = false) String title,
-            @RequestParam(required = false) String type,
+            @RequestParam(required = false) List<String> type,
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer startYear,
             @RequestParam(required = false) Integer endYear,
@@ -33,7 +34,7 @@ public interface SearchApi {
     @GetMapping(value = "/search", produces = MediaType.APPLICATION_JSON_VALUE)
     ResponseEntity<PageOfDocuments> searchByJson(
             @RequestParam(required = false) String title,
-            @RequestParam(required = false) String type,
+            @RequestParam(required = false) List<String> type,
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer startYear,
             @RequestParam(required = false) Integer endYear,

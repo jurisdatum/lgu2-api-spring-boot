@@ -4,11 +4,12 @@ import uk.gov.legislation.data.marklogic.AbstractParameters;
 import uk.gov.legislation.util.Type;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Parameters extends AbstractParameters {
 
     // could be an enum
-    public String series;
+    public  String series;
 
     public String type;
 
@@ -49,7 +50,7 @@ public class Parameters extends AbstractParameters {
 
         private final Parameters params = new Parameters();
 
-        private Builder() { }
+        public Builder() { }
 
         public Builder type(String type) {
             params.type = type;
@@ -57,6 +58,19 @@ public class Parameters extends AbstractParameters {
                 params.series = "w";
             } else if (Type.NISI.shortName().equals(type)) {
                 params.series = "ni";
+            }
+            return this;
+        }
+
+        public Builder type(List<String> types) {
+            if (types != null && !types.isEmpty()) {
+                params.type = String.join("+", types);
+
+                if (types.contains(Type.WSI.shortName())) {
+                    params.series = "w";
+                } else if (types.contains(Type.NISI.shortName())) {
+                    params.series = "ni";
+                }
             }
             return this;
         }
