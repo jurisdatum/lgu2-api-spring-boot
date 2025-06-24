@@ -17,8 +17,10 @@ public class ParameterValidator {
 
     private static final Set<String> GROUP_TYPES = Set.of(
         "primary", "secondary",
-        "uk", "scotland", "wales",
-        "ni", "all", "eu-origin"
+        "primary+secondary",  // for convenience of front-end
+        "uk", "scotland", "wales", "ni",
+        "eu-origin"
+        // "drafts", "impacts"
     );
 
     public static void validateType(String type) {
@@ -28,19 +30,19 @@ public class ParameterValidator {
         }
     }
 
-     //used it for search endpoint
+    // used for search endpoint
     public static void validateType(List<String> types) {
         if (types == null || types.isEmpty()) return;
 
         for (String type : types) {
-            if (type == null || isUnknownType(type)) {
+            if (isUnknownType(type)) {
                 throw new UnknownTypeException(type);
             }
         }
     }
 
     private static boolean isUnknownType(String type) {
-        return type.isBlank() || (!Types.isValidShortType(type) && !GROUP_TYPES.contains(type));
+        return !Types.isValidShortType(type) && !GROUP_TYPES.contains(type);
     }
 
     // used only for query parameter for search endpoint
@@ -51,4 +53,5 @@ public class ParameterValidator {
             return;
         throw new UnsupportedLanguageException(language);
     }
+
 }

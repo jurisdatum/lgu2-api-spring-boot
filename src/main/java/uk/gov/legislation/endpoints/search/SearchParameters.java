@@ -9,7 +9,7 @@ import java.util.List;
 public class SearchParameters {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public List<String> type;
+    public List<String> types;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer year;
@@ -49,8 +49,8 @@ public class SearchParameters {
 
         private Builder() { }
 
-        public SearchParameters.Builder type(List<String> type) {
-            params.type = type;
+        public SearchParameters.Builder types(List<String> types) {
+            params.types = types;
             return this;
         }
 
@@ -112,7 +112,7 @@ public class SearchParameters {
 
     public Parameters convert() {
         return Parameters.builder()
-            .type(type)
+            .type(types)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)

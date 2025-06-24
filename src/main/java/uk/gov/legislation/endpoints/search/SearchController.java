@@ -82,7 +82,7 @@ public class SearchController implements SearchApi {
         validateTitle(title);
         validateLanguage(language);
         SearchParameters params = SearchParameters.builder()
-            .type(type)
+            .types(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
