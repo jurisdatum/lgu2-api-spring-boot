@@ -15,6 +15,7 @@
         <xsl:call-template name="regnal-year" />
         <xsl:apply-templates select="ukm:*/ukm:Number" />
         <xsl:apply-templates select="ukm:*/ukm:AlternativeNumber" />
+        <xsl:apply-templates select="ukm:*/ukm:ISBN" />
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
@@ -136,6 +137,12 @@
 
 <xsl:template match="ukm:AlternativeNumber">
     <altNumber category="{ @Category }" value="{ @Value }" />
+</xsl:template>
+
+<xsl:template match="ukm:ISBN">
+    <isbn>
+        <xsl:value-of select="@Value" />
+    </isbn>
 </xsl:template>
 
 <xsl:template match="ukm:EnactmentDate">

@@ -2,10 +2,6 @@ package uk.gov.legislation.util;
 
 public class ISBN {
 
-    public static String format(long isbn) {
-        return format(Long.toString(isbn));
-    }
-
     public static String format(String isbn) {
         if (isbn.length() == 13)
             return isbn.substring(0, 3) + "-" + format(isbn.substring(3));

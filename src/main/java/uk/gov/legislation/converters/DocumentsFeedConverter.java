@@ -5,6 +5,7 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.SearchParameters;
 import uk.gov.legislation.util.Cites;
+import uk.gov.legislation.util.ISBN;
 import uk.gov.legislation.util.Links;
 
 import java.util.Collections;
@@ -73,10 +74,13 @@ public class DocumentsFeedConverter {
         doc.year = entry.year == null ? 0 : entry.year.value;
         if (entry.number != null)
             doc.number = entry.number.value;
-        else if (entry.isbn != null)
-            doc.number = entry.isbn.value;
+        if (entry.isbn != null)
+            doc.isbn = entry.isbn.value;
         doc.altNumbers = convertAltNumbers(entry.altNumbers);
-        doc.cite = Cites.convertNumbersAndMake(doc.longType, doc.year, doc.number, doc.altNumbers);
+        if (doc.number != null)
+            doc.cite = Cites.convertNumbersAndMake(doc.longType, doc.year, doc.number, doc.altNumbers);
+        else if (doc.isbn != null)
+            doc.cite = "ISBN " + ISBN.format(doc.isbn);
         doc.title = entry.title;
         doc.altTitle = entry.altTitle;
         doc.published = entry.published;

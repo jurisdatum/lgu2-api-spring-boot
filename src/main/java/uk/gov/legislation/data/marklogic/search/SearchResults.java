@@ -184,7 +184,7 @@ public static class Entry {
     public IntValue number;
 
     @JacksonXmlProperty(localName = "ISBN", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public LongValue isbn;
+    public Value isbn;
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "AlternativeNumber", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
@@ -223,13 +223,6 @@ public static class IntValue {
 
     @JacksonXmlProperty(localName = "Value", isAttribute = true)
     public int value;
-
-}
-
-public static class LongValue {
-
-    @JacksonXmlProperty(localName = "Value", isAttribute = true)
-    public long value;
 
 }
 
