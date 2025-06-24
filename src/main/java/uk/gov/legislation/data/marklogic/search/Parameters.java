@@ -63,14 +63,18 @@ public class Parameters extends AbstractParameters {
         }
 
         public Builder type(List<String> types) {
-            if (types != null && !types.isEmpty()) {
-                params.type = String.join("+", types);
-
-                if (types.contains(Type.WSI.shortName())) {
-                    params.series = "w";
-                } else if (types.contains(Type.NISI.shortName())) {
-                    params.series = "ni";
-                }
+            if (types == null || types.isEmpty()) {
+                params.type = null;
+                params.series = null;
+                return this;
+            }
+            params.type = String.join("+", types);
+            if (types.contains(Type.WSI.shortName())) {
+                params.series = "w";
+            } else if (types.contains(Type.NISI.shortName())) {
+                params.series = "ni";
+            } else {
+                params.series = null;
             }
             return this;
         }
