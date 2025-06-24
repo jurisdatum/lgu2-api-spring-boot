@@ -11,6 +11,7 @@ import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
@@ -27,7 +28,7 @@ public class SearchController implements SearchApi {
     @Override
     public ResponseEntity<String> searchByAtom(
             String title,
-            String type,
+            List<String> type,
             Integer year,
             Integer startYear,
             Integer endYear,
@@ -67,7 +68,7 @@ public class SearchController implements SearchApi {
     @Override
     public ResponseEntity<PageOfDocuments> searchByJson(
             String title,
-            String type,
+            List <String> type,
             Integer year,
             Integer startYear,
             Integer endYear,
@@ -81,7 +82,7 @@ public class SearchController implements SearchApi {
         validateTitle(title);
         validateLanguage(language);
         SearchParameters params = SearchParameters.builder()
-            .type(type)
+            .types(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
