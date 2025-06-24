@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 
 public class Cites {
 
-    public static String make(String type, int year, int number) {
+    public static String make(String type, int year, long number) {
         return make(Types.get(type), year, number, Collections.emptyList());
     }
 
-    public static String make(String type, int year, int number, Collection<? extends AltNumber> altNumbers) {
+    public static String make(String type, int year, long number, Collection<? extends AltNumber> altNumbers) {
         return make(Types.get(type), year, number, altNumbers);
     }
 
-    public static String convertNumbersAndMake(String type, int year, int number, List<CommonMetadata.AltNumber> altNumbers) {
+    public static String convertNumbersAndMake(String type, int year, long number, List<CommonMetadata.AltNumber> altNumbers) {
         if (altNumbers == null)
             altNumbers = List.of();
         List<AltNumberWrapper> wrapped = altNumbers.stream()
@@ -26,7 +26,7 @@ public class Cites {
         return make(Types.get(type), year, number, wrapped);
     }
 
-    public static String make(Type type, int year, int number, Collection<? extends AltNumber> altNumbers) {
+    public static String make(Type type, int year, long number, Collection<? extends AltNumber> altNumbers) {
         if (altNumbers == null)
             altNumbers = List.of();
         if (altNumbers.stream().anyMatch(a -> "W".equals(a.category()))) {
@@ -62,7 +62,9 @@ public class Cites {
     private static final String NI_DESIGNATION = " (N.I.)";
 
     @SuppressWarnings("DuplicateBranchesInSwitch")
-    private static String make(Type type, int year, RegnalYear regnal, int number) {
+    private static String make(Type type, int year, RegnalYear regnal, long number) {
+        if (number >= 1_000_000_000)
+            return "ISBN " + ISBN.format(number);
         String regnalYear = RegnalYear.forCitation(regnal);
         if (type == null)
             return null;
@@ -72,7 +74,7 @@ public class Cites {
             case NIA -> year + " c. " + number + NI_DESIGNATION;
             case AOSP -> year + " c. " + number + " [S]";
             case AIP -> year + regnalYear + " c. " + number + " [I]";
-            case UKLA, GBLA, GBPPA -> year + regnalYear + " c. " + Roman.toLowerRoman(number);
+            case UKLA, GBLA, GBPPA -> year + regnalYear + " c. " + Roman.toLowerRoman((int) number);
             case ASP, ANAW, ASC -> year + " " + type.shortName() + " " + number;
             case MWA -> year + " nawm " + number;
             case MNIA -> year + " c. " + number + NI_DESIGNATION;

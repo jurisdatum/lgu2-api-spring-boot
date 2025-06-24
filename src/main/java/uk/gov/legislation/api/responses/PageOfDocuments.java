@@ -101,7 +101,7 @@ public class PageOfDocuments {
         public int year;
 
         @Schema
-        public int number;
+        public long number;
 
         @Schema
         // FixMe this should probably have the same @JsonInclude(JsonInclude.Include.NON_EMPTY) as CommonMetadata
