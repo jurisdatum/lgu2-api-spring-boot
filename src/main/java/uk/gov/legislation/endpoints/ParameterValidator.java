@@ -15,7 +15,7 @@ public class ParameterValidator {
         }
     }
 
-    public static final Set<String> OTHER_TYPES = Set.of(
+    private static final Set<String> OTHER_TYPES = Set.of(
         "primary", "secondary", "primary+secondary",
         "primary+eu-origin", "secondary+eu-origin",
         "uk", "scotland", "wales",
@@ -23,29 +23,25 @@ public class ParameterValidator {
     );
 
     public static void validateType(String type) {
-        if (type == null)
-            return;
-        if (type.isBlank())
+        if (type == null) return;
+        if (isUnknownType(type)) {
             throw new UnknownTypeException(type);
-        if (Types.isValidShortType(type))
-            return;
-        if (OTHER_TYPES.contains(type))
-            return;
-        throw new UnknownTypeException(type);
+        }
     }
 
-    // validate types for /search endpoint
+     //used it for search endpoint
     public static void validateType(List<String> types) {
-        if(types == null || types.isEmpty())
-            return;
-        for(String type : types) {
-            if(type == null || type.isBlank()) {
-                throw new UnknownTypeException(type);
-            }
-            if(!Types.isValidShortType(type) && !OTHER_TYPES.contains(type)) {
+        if (types == null || types.isEmpty()) return;
+
+        for (String type : types) {
+            if (type == null || isUnknownType(type)) {
                 throw new UnknownTypeException(type);
             }
         }
+    }
+
+    private static boolean isUnknownType(String type) {
+        return type.isBlank() || (!Types.isValidShortType(type) && !OTHER_TYPES.contains(type));
     }
 
     // used only for query parameter for search endpoint
@@ -56,5 +52,4 @@ public class ParameterValidator {
             return;
         throw new UnsupportedLanguageException(language);
     }
-
 }
