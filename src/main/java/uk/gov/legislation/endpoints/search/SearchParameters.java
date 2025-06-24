@@ -90,6 +90,7 @@ public class SearchParameters {
             params.published = published;
             return this;
         }
+
         public SearchParameters.Builder text(String text) {
             params.text = text;
             return this;
