@@ -23,7 +23,7 @@ public class Metadata {
 
     public String regnalYear;
 
-    public int number;
+    public Integer number;
 
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "altNumber")
@@ -48,6 +48,8 @@ public class Metadata {
         }
 
     }
+
+    public String isbn;
 
     public LocalDate date;
 

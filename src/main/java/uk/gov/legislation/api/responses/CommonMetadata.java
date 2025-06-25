@@ -28,11 +28,14 @@ public abstract class CommonMetadata {
     public String regnalYear;
 
     @Schema(example = "1")
-    public int number;
+    public Integer number;
 
     @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public List<AltNumber> altNumbers;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String isbn;
 
     @Schema(example = "2024-01-25")
     public LocalDate date;

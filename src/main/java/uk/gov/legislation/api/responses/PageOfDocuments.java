@@ -101,11 +101,14 @@ public class PageOfDocuments {
         public int year;
 
         @Schema
-        public int number;
+        public Integer number;
 
         @Schema
         // FixMe this should probably have the same @JsonInclude(JsonInclude.Include.NON_EMPTY) as CommonMetadata
         public List<CommonMetadata.AltNumber> altNumbers;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String isbn;
 
         @Schema
         public String cite;

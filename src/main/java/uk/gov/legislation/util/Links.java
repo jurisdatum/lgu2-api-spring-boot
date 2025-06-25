@@ -10,7 +10,7 @@ public class Links {
     public record Components(
         String type,
         String year,
-        int number,
+        long number,
         Optional<String> fragment,  // with slashes, e.g., section/1
         Optional<String> version,
         Optional<String> language  // can be empty, 'english' or 'welsh'
@@ -38,7 +38,7 @@ public class Links {
         }
         final String type = matcher.group(1);
         final String year = matcher.group(2);
-        final int number = Integer.parseInt(matcher.group(3));
+        final long number = Long.parseLong(matcher.group(3));
         link = link.substring(matcher.end());
 
         if (link.isEmpty())

@@ -3,10 +3,7 @@ package uk.gov.legislation.converters;
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.util.Cites;
-import uk.gov.legislation.util.EffectsComparator;
-import uk.gov.legislation.util.Types;
-import uk.gov.legislation.util.UpToDate;
+import uk.gov.legislation.util.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -32,8 +29,12 @@ public class DocumentMetadataConverter {
         converted.regnalYear = simple.regnalYear;
         converted.number = simple.number;
         converted.altNumbers = convertAltNumbers(simple.altNums);
+        converted.isbn = simple.isbn;
         converted.date = simple.date;
-        converted.cite = Cites.make(simple.longType, simple.year, simple.number, simple.altNums);
+        if (simple.number != null)
+            converted.cite = Cites.make(simple.longType, simple.year, simple.number, simple.altNums);
+        else if (simple.isbn != null)
+            converted.cite = "ISBN " + ISBN.format(simple.isbn);
         converted.version = simple.version();
         converted.status = simple.status;
         converted.title = simple.title;
