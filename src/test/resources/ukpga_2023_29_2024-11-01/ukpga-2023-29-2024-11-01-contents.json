@@ -11,7 +11,7 @@
     "version" : "2024-11-01",
     "status" : "revised",
     "title" : "Financial Services and Markets Act 2023",
-    "extent" : [ ],
+    "extent" : [ "E", "W", "S", "NI" ],
     "lang" : "en",
     "publisher" : "Statute Law Database",
     "modified" : "2024-11-04",
@@ -2384,7 +2384,7 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
-      "extent" : [ ]
+      "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
       "name" : "part",
