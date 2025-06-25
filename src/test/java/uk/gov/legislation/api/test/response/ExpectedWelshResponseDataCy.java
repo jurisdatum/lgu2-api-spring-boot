@@ -44,7 +44,7 @@ public class ExpectedWelshResponseDataCy {
                         "version": "made",
                         "status": "final",
                         "title": "Rheoliadau Addysg (Diwygiadau sy’n Ymwneud â Chydlynu Trefniadau Derbyn Ysgolion) (Cymru) 2024",
-                        "extent": [],
+                        "extent": ["E", "W", "S", "NI"],
                         "lang": "cy",
                         "publisher": "King's Printer of Acts of Parliament",
                         "modified": "2024-10-09",
