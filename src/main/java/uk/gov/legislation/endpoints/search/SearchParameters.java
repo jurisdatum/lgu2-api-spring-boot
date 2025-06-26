@@ -1,6 +1,7 @@
 package uk.gov.legislation.endpoints.search;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 
 import java.time.LocalDate;
@@ -8,6 +9,7 @@ import java.util.List;
 
 public class SearchParameters {
 
+    @JsonProperty("type")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<String> types;
 
