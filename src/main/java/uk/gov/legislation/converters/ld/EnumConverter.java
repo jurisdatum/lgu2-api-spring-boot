@@ -16,19 +16,19 @@ public class EnumConverter implements Converter<String, Parameters.Sort> {
     );
 
     @Override
-    public Parameters.Sort convert(String source) {
-        if (source == null) {
+    public Parameters.Sort convert(String sort) {
+        if (sort == null) {
             return null;
         }
         // First check case-insensitive matches (like "title", "year")
-        Parameters.Sort mapped = CASE_INSENSITIVE_VALUES.get(source.toLowerCase());
+        Parameters.Sort mapped = CASE_INSENSITIVE_VALUES.get(sort.toLowerCase());
         if (mapped != null) {
             return mapped;
         }
         try {
-            return Parameters.Sort.valueOf(source);
+            return Parameters.Sort.valueOf(sort);
         } catch (IllegalArgumentException e) {
-            throw new UnknownTypeException("Invalid sort type: " + source);
+            throw new UnknownTypeException("Invalid sort type: " + sort);
         }
     }
 }

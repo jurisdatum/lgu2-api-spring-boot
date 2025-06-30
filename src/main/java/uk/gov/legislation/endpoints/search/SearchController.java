@@ -42,7 +42,18 @@ public class SearchController implements SearchApi {
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
-        Parameters params = Parameters.builder().type(type).year(year).startYear(startYear).endYear(endYear).number(number).title(title).language(language).published(published).sort(sort).page(page).build();
+        Parameters params = Parameters.builder()
+            .type(type)
+            .year(year)
+            .startYear(startYear)
+            .endYear(endYear)
+            .number(number)
+            .title(title)
+            .language(language)
+            .published(published)
+            .sort(sort)
+            .page(page)
+            .build();
         String atom = db.getAtom(params);
         return ResponseEntity.ok(atom);
         }
