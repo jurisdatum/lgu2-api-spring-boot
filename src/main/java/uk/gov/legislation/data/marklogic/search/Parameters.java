@@ -36,7 +36,7 @@ public class Parameters extends AbstractParameters {
         RELEVANCE,
         PUBLISHED,
         TITLE,
-        YEAR;
+        TYPE;
 
 
         @Override
