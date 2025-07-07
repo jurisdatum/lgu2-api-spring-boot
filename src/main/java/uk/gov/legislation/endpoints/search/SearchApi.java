@@ -27,8 +27,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false) @Parameter(description = "Sort by title or year only",
-            schema = @Schema(allowableValues = {"title", "type"}))Parameters.Sort sort,
+            @RequestParam(required = false) @Parameter(description = "Sort by")Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;
@@ -44,8 +43,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
-            @RequestParam(required = false) @Parameter(description = "Sort by title or year only",
-                schema = @Schema(allowableValues = {"title", "type"}))Parameters.Sort sort,
+            @RequestParam(required = false) @Parameter(description = "Sort by")Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;
