@@ -12,7 +12,10 @@ public class EnumConverter implements Converter<String, Parameters.Sort> {
 
     private static final Map <String, Parameters.Sort> CASE_INSENSITIVE_VALUES = Map.of(
         "title", Parameters.Sort.TITLE,
-        "type", Parameters.Sort.TYPE
+        "year", Parameters.Sort.YEAR,
+        "type", Parameters.Sort.TYPE,
+        "published", Parameters.Sort.PUBLISHED,
+        "relevance", Parameters.Sort.RELEVANCE
     );
 
     @Override
