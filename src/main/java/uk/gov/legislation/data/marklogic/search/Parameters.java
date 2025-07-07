@@ -21,6 +21,8 @@ public class Parameters extends AbstractParameters {
 
     public String title;
 
+    public String subject;
+
     public String language;
 
     public LocalDate published;
@@ -86,6 +88,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder title(String title) {
             params.title = title;
+            return this;
+        }
+
+        public Builder subject(String subject) {
+            params.subject = subject;
             return this;
         }
 
