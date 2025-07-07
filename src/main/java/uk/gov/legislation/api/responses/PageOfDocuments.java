@@ -124,6 +124,10 @@ public class PageOfDocuments {
         public String description;
 
         @Schema
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String subject;
+
+        @Schema
         public ZonedDateTime published;
 
         @Schema

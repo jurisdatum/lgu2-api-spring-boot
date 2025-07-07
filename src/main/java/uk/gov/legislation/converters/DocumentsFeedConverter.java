@@ -81,6 +81,8 @@ public class DocumentsFeedConverter {
             doc.number = entry.number.value;
         if (entry.isbn != null)
             doc.isbn = entry.isbn.value;
+        if (entry.subject != null)
+            doc.subject = entry.subject.value;
         doc.altNumbers = convertAltNumbers(entry.altNumbers);
         if (doc.number != null)
             doc.cite = Cites.convertNumbersAndMake(doc.longType, doc.year, doc.number, doc.altNumbers);

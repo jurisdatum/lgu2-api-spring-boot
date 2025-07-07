@@ -2,10 +2,10 @@ package uk.gov.legislation.endpoints;
 
 import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
+import uk.gov.legislation.util.Alphabet;
 import uk.gov.legislation.util.Types;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ParameterValidator {
 
@@ -54,4 +54,17 @@ public class ParameterValidator {
         throw new UnsupportedLanguageException(language);
     }
 
+    public static String validateSubject(Alphabet initialLetter, String heading) {
+        if (initialLetter != null) {
+            return initialLetter.name();
+        }
+        if (heading == null || heading.isBlank()) {
+            return null;
+        }
+        String trimmed = heading.trim();
+        if (!trimmed.matches("^[A-Z]+(\\s+[A-Z]+)*$")) {
+            return null;
+        }
+        return trimmed;
+    }
 }

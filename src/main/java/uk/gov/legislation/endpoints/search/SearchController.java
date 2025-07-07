@@ -8,6 +8,7 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
+import uk.gov.legislation.util.Alphabet;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -36,12 +37,15 @@ public class SearchController implements SearchApi {
             String language,
             LocalDate published,
             Parameters.Sort sort,
+            Alphabet initialLetter,
+            String heading,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
+        String s = validateSubject(initialLetter, heading);
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
@@ -52,6 +56,7 @@ public class SearchController implements SearchApi {
             .language(language)
             .published(published)
             .sort(sort)
+            .subject(s)
             .page(page)
             .build();
         String atom = db.getAtom(params);
@@ -78,12 +83,15 @@ public class SearchController implements SearchApi {
             String language,
             LocalDate published,
             Parameters.Sort sort,
+            Alphabet initialLetter,
+            String heading,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
+        String s = validateSubject(initialLetter, heading);
         SearchParameters params = SearchParameters.builder()
             .types(type)
             .year(year)
@@ -94,6 +102,7 @@ public class SearchController implements SearchApi {
             .language(language)
             .published(published)
             .sort(sort)
+            .subject(s)
             .page(page)
             .pageSize(pageSize)
             .build();

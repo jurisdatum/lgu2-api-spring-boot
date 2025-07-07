@@ -36,6 +36,9 @@ public class SearchParameters {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Parameters.Sort sort;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String subject;
+
 //    @JsonInclude(JsonInclude.Include.NON_NULL)
 //    public String orderBy;
 
@@ -98,6 +101,11 @@ public class SearchParameters {
             return this;
         }
 
+        public SearchParameters.Builder subject(String subject) {
+            params.subject = subject;
+            return this;
+        }
+
 //        public SearchParameters.Builder orderBy(String orderBy) {
 //            params.orderBy = orderBy;
 //            return this;
@@ -130,6 +138,7 @@ public class SearchParameters {
             .language(language)
             .published(published)
             .sort(sort)
+            .subject(subject)
 //            .sort("published".equals(orderBy) ? Parameters.Sort.PUBLISHED : null)
             .page(page)
             .pageSize(pageSize)
