@@ -203,6 +203,15 @@ public static class Entry {
 
     }
 
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "Subject", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Subject> subjects;
+
+    public static class Subject {
+        @JacksonXmlProperty(localName = "Value", isAttribute = true)
+        public String value;
+    }
+
     @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
     public ZonedDateTime updated;
 
