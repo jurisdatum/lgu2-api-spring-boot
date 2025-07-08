@@ -39,6 +39,7 @@ public class DocumentMetadataConverter {
         converted.status = simple.status;
         converted.title = simple.title;
         converted.extent = ExtentConverter.convert(simple.extent);
+        converted.subjects = convertSubjects(simple);
         converted.lang = simple.lang;
         converted.publisher = simple.publisher;
         converted.modified = simple.modified;
@@ -66,6 +67,18 @@ public class DocumentMetadataConverter {
         converted.category = simple.category;
         converted.value = simple.value;
         return converted;
+    }
+
+    /* return null for non-secondary types */
+    private static List<String> convertSubjects(Metadata simple) {
+        Type type = Types.get(simple.longType);
+        if (type == null)
+            return null;
+        if (!type.category().equals(Type.Category.Secondary))
+            return null;
+        if (simple.subjects == null)
+            return List.of();
+        return simple.subjects;
     }
 
 }

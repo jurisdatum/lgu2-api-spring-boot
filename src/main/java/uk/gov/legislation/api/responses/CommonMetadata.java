@@ -55,6 +55,9 @@ public abstract class CommonMetadata {
     @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
     public Set<Extent> extent;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public List<String> subjects;
+
     @Schema
     public String lang;
 

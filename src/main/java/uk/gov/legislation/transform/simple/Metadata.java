@@ -69,6 +69,10 @@ public class Metadata {
 
     public String extent;
 
+    @JacksonXmlElementWrapper(localName = "subjects")
+    @JacksonXmlProperty(localName = "subject")
+    public List<String> subjects;
+
     public String lang;
 
     public String publisher;
