@@ -23,8 +23,12 @@ public class FragmentMetadataConverter {
         converted.descendants = simple.descendants();
         converted.fragmentInfo = converted.descendants.getFirst();
         converted.unappliedEffects = convertEffects(simple);
-        // maybe don't do this if version is not current
-        UpToDate.setUpToDate(converted);
+        if ("revised".equals(simple.status) && simple.version().equals(simple.versions().getLast())) {
+            if (converted.pointInTime == null)
+                UpToDate.setUpToDate(converted);
+            else
+                UpToDate.setUpToDate(converted, converted.pointInTime);
+        }
         return converted;
     }
 
