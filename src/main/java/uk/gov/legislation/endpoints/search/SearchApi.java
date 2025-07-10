@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.data.marklogic.search.Parameters;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -27,6 +28,7 @@ public interface SearchApi {
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false) @Parameter(description = "Sort by")Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;
@@ -43,6 +45,7 @@ public interface SearchApi {
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false) @Parameter(description = "Sort by")Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
     ) throws IOException, InterruptedException;

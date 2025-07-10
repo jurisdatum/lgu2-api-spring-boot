@@ -36,7 +36,11 @@ public class Parameters extends AbstractParameters {
     public enum Sort {
 
         RELEVANCE,
-        PUBLISHED;
+        PUBLISHED,
+        TITLE,
+        YEAR,
+        TYPE;
+
 
         @Override
         public String toString() {
