@@ -79,6 +79,8 @@ public abstract class CommonMetadata {
     @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
     public List<String> formats;
 
+    @Schema(nullable = true)
+    public LocalDate pointInTime;
 
     public static class AltNumber {
 

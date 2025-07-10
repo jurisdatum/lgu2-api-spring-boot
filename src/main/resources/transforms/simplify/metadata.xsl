@@ -9,6 +9,7 @@
 
 <xsl:template match="ukm:Metadata">
     <meta>
+        <xsl:apply-templates select="dc:identifier[1]" />
         <xsl:call-template name="id" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentMainType" />
         <xsl:apply-templates select="ukm:*/ukm:Year" />
@@ -35,6 +36,12 @@
         </xsl:if>
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" />
     </meta>
+</xsl:template>
+
+<xsl:template match="dc:identifier">
+    <dc:identifier>
+        <xsl:value-of select="." />
+    </dc:identifier>
 </xsl:template>
 
 <xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />

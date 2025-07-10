@@ -8,12 +8,34 @@ import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Optional;
 
 public class Metadata {
+
+    @JacksonXmlProperty(localName = "identifier", namespace = "http://purl.org/dc/elements/1.1/")
+    public String dcIdentifier;
+
+    public Optional<LocalDate> getPointInTime() {
+        if ("final".equals(status))
+            return Optional.empty();
+        Links.Components comps = Links.parse(dcIdentifier);
+        if (comps == null)
+            return Optional.empty();
+        if (comps.version().isEmpty())
+            return Optional.empty();
+        LocalDate date;
+        try {
+            date = LocalDate.parse(comps.version().get());
+        } catch (DateTimeParseException e) {
+            return Optional.empty();
+        }
+        return Optional.of(date);
+    }
+
 
     public String id;
 

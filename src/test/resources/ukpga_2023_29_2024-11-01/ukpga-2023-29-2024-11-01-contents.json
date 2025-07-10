@@ -22,6 +22,7 @@
     },
     "schedules" : true,
     "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "2024-11-01",
     "unappliedEffects" : [ {
       "applied" : false,
       "required" : true,

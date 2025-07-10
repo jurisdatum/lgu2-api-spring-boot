@@ -13,11 +13,16 @@ public class DocumentMetadataConverter {
     public static DocumentMetadata convert(Metadata simple) {
         DocumentMetadata converted = new DocumentMetadata();
         convert(simple, converted);
+        // perhaps this should be combined with fragment metadata
         converted.unappliedEffects = simple.rawEffects.stream()
             .sorted(EffectsComparator.INSTANCE)
             .map(EffectsFeedConverter::convertEffect).toList();
-        // maybe don't do this if version is not current
-        UpToDate.setUpToDate(converted);
+        if ("revised".equals(simple.status) && simple.version().equals(simple.versions().getLast())) {
+            if (converted.pointInTime == null)
+                UpToDate.setUpToDate(converted);
+            else
+                UpToDate.setUpToDate(converted, converted.pointInTime);
+        }
         return converted;
     }
 
@@ -54,6 +59,7 @@ public class DocumentMetadataConverter {
 
         converted.schedules = simple.schedules;
         converted.formats = simple.formats();
+        converted.pointInTime = simple.getPointInTime().orElse(null);
     }
 
     static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
