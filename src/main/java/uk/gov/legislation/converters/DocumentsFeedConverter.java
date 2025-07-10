@@ -4,9 +4,7 @@ import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.SearchParameters;
-import uk.gov.legislation.util.Cites;
-import uk.gov.legislation.util.ISBN;
-import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.*;
 
 import java.util.Collections;
 import java.util.List;
@@ -89,11 +87,24 @@ public class DocumentsFeedConverter {
         doc.title = entry.title;
         doc.altTitle = entry.altTitle;
         doc.description = entry.summary;
+        doc.subjects = getSubjects(doc.longType, entry);
         doc.published = entry.published;
         doc.updated = entry.updated;
         doc.version = getVersion(entry.links);
         doc.formats = getFormats(entry.links);
         return doc;
+    }
+
+    /* return null for non-secondary types */
+    private static List<String> getSubjects(String longType, SearchResults.Entry entry) {
+        Type type = Types.get(longType);
+        if (type == null)
+            return null;
+        if (!type.category().equals(Type.Category.Secondary))
+            return null;
+        if (entry.subjects == null)
+            return List.of();
+        return entry.subjects.stream().map(s -> s.value).toList();
     }
 
     /* alt numbers */
