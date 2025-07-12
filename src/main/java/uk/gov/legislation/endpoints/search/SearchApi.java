@@ -26,6 +26,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
+            @RequestParam(required = false) List<String> extent,
+            @RequestParam(defaultValue = "false") boolean isExclusivelyExtends,
             @RequestParam(required = false) LocalDate published,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
@@ -42,6 +44,8 @@ public interface SearchApi {
             @RequestParam(required = false) Integer number,
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
+            @RequestParam(required = false) List<String> extent,
+            @RequestParam(defaultValue = "false") boolean isExclusivelyExtends,
             @RequestParam(required = false) LocalDate published,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize

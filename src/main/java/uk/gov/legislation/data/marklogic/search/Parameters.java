@@ -1,7 +1,6 @@
 package uk.gov.legislation.data.marklogic.search;
 
 import uk.gov.legislation.data.marklogic.AbstractParameters;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -24,6 +23,8 @@ public class Parameters extends AbstractParameters {
     public String subject;
 
     public String language;
+
+    public String extent;
 
     public LocalDate published;
 
@@ -98,6 +99,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder language(String language) {
             params.language = language;
+            return this;
+        }
+
+        public Builder extent(String extent) {
+            params.extent = extent;
             return this;
         }
 
