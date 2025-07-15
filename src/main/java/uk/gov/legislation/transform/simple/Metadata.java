@@ -9,6 +9,7 @@ import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.Versions;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
 import java.util.*;
 
 public class Metadata {
