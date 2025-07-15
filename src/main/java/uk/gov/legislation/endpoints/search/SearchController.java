@@ -33,6 +33,7 @@ public class SearchController implements SearchApi {
             Integer startYear,
             Integer endYear,
             Integer number,
+            String subject,
             String language,
             LocalDate published,
             Integer page,
@@ -48,6 +49,7 @@ public class SearchController implements SearchApi {
             .endYear(endYear)
             .number(number)
             .title(title)
+            .subject(subject)
             .language(language)
             .published(published)
             .page(page)
@@ -73,6 +75,7 @@ public class SearchController implements SearchApi {
             Integer startYear,
             Integer endYear,
             Integer number,
+            String subject,
             String language,
             LocalDate published,
             Integer page,
@@ -88,6 +91,7 @@ public class SearchController implements SearchApi {
             .endYear(endYear)
             .number(number)
             .title(title)
+            .subject(subject)
             .language(language)
             .published(published)
             .page(page)

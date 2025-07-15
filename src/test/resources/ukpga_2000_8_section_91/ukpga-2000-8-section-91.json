@@ -22,6 +22,7 @@
     },
     "schedules" : true,
     "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
     "fragment" : "section/91",
     "prev" : "section/90B",
     "next" : "section/92",

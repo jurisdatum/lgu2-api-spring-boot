@@ -13,6 +13,27 @@ import java.util.*;
 
 public class Metadata {
 
+    @JacksonXmlProperty(localName = "identifier", namespace = "http://purl.org/dc/elements/1.1/")
+    public String dcIdentifier;
+
+    public Optional<LocalDate> getPointInTime() {
+        if ("final".equals(status))
+            return Optional.empty();
+        Links.Components comps = Links.parse(dcIdentifier);
+        if (comps == null)
+            return Optional.empty();
+        if (comps.version().isEmpty())
+            return Optional.empty();
+        LocalDate date;
+        try {
+            date = LocalDate.parse(comps.version().get());
+        } catch (DateTimeParseException e) {
+            return Optional.empty();
+        }
+        return Optional.of(date);
+    }
+
+
     public String id;
 
     public String longType;
@@ -66,6 +87,10 @@ public class Metadata {
     public String title;
 
     public String extent;
+
+    @JacksonXmlElementWrapper(localName = "subjects")
+    @JacksonXmlProperty(localName = "subject")
+    public List<String> subjects;
 
     public String lang;
 
