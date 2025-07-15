@@ -6,12 +6,10 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.Versions;
 
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class Metadata {
 
@@ -77,14 +75,18 @@ public class Metadata {
 
     private List<String> _versions;
 
-    public List<String> versions() {
-        LinkedHashSet<String> set = new LinkedHashSet<>(_versions);
+    public SortedSet<String> versions() {
+        SortedSet<String> set = new TreeSet<>(Versions.COMPARATOR);
+        set.addAll(_versions);
         if (set.contains("current")) {
             set.remove("current");
             set.add(this.version());
         }
-        // remove "prospective"?
-        return set.stream().toList();
+        if ("final".equals(status)) {
+            String first = FirstVersion.getFirstVersion(longType);
+            set.add(first);
+        }
+        return set;
     }
 
     @JacksonXmlElementWrapper(localName = "hasVersions")
