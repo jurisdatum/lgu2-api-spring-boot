@@ -8,6 +8,7 @@ import uk.gov.legislation.util.Extent;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
 
 public abstract class CommonMetadata {
 
@@ -68,7 +69,7 @@ public abstract class CommonMetadata {
     public LocalDate modified;
 
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
-    public List<String> versions;
+    public SortedSet<String> versions;
 
     @JsonProperty
     public Has has = new Has();

@@ -1,5 +1,6 @@
 package uk.gov.legislation.util;
 
+import java.util.Comparator;
 import java.util.regex.Pattern;
 
 public class Versions {
@@ -13,29 +14,25 @@ public class Versions {
             return true;
         if (s.equals("created"))
             return true;
+        if (s.equals("adopted"))
+            return true;
         if (s.equals("current"))
             return true;
         if (s.equals("prospective"))
             return true;
-        if (date.matcher(s).matches())
-            return true;
-        return false;
+        return date.matcher(s).matches();
     }
 
-//    public static Optional<LocalDate> getLastDate(List<String> versions) {
-//        return versions.stream()
-//                .filter(Versions::isDate)
-//                .reduce((first, second) -> second)
-//                .map(v -> LocalDate.parse(v, DateTimeFormatter.ISO_LOCAL_DATE));
-//    }
-//
-//    public static boolean isDate(String version) {
-//        try {
-//            LocalDate.parse(version, DateTimeFormatter.ISO_LOCAL_DATE);
-//            return true;
-//        } catch (DateTimeParseException e) {
-//            return false;
-//        }
-//    }
+    private static int rank(String s) {
+        return switch (s) {
+            case "enacted", "made", "created", "adopted" -> 0;
+            case "prospective" -> 2;
+            default -> 1;
+        };
+    }
+
+    public static final Comparator<String> COMPARATOR = Comparator
+        .comparingInt(Versions::rank)
+        .thenComparing(Comparator.naturalOrder());
 
 }

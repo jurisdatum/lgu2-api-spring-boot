@@ -19,7 +19,7 @@ public class ExpectedWelshResponseDataCy {
                  "lang": "cy",
                  "publisher": "King's Printer of Acts of Parliament",
                  "modified": "2024-10-09",
-                 "versions": [],
+                 "versions": ["made"],
                  "schedules": false,
                  "formats": [
                      "xml"
@@ -49,7 +49,7 @@ public class ExpectedWelshResponseDataCy {
                         "lang": "cy",
                         "publisher": "King's Printer of Acts of Parliament",
                         "modified": "2024-10-09",
-                        "versions": [],
+                        "versions": ["made"],
                         "schedules": false,
                         "formats": [
                             "xml"
@@ -101,7 +101,7 @@ public class ExpectedWelshResponseDataCy {
                           "lang": "cy",
                           "publisher": "King's Printer of Acts of Parliament",
                           "modified": "2024-10-09",
-                          "versions": [],
+                          "versions": ["made"],
                           "schedules": false,
                           "formats": [
                               "xml"
