@@ -37,7 +37,6 @@ public class SearchController implements SearchApi {
             String language,
             LocalDate published,
             Parameters.Sort sort,
-
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -82,7 +81,6 @@ public class SearchController implements SearchApi {
             String language,
             LocalDate published,
             Parameters.Sort sort,
-
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
