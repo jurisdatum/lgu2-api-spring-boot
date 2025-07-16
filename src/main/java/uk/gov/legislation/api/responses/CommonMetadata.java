@@ -8,6 +8,7 @@ import uk.gov.legislation.util.Extent;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
+import java.util.SortedSet;
 
 public abstract class CommonMetadata {
 
@@ -55,6 +56,9 @@ public abstract class CommonMetadata {
     @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
     public Set<Extent> extent;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public List<String> subjects;
+
     @Schema
     public String lang;
 
@@ -65,7 +69,7 @@ public abstract class CommonMetadata {
     public LocalDate modified;
 
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
-    public List<String> versions;
+    public SortedSet<String> versions;
 
     @JsonProperty
     public Has has = new Has();
@@ -76,6 +80,8 @@ public abstract class CommonMetadata {
     @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
     public List<String> formats;
 
+    @Schema(nullable = true)
+    public LocalDate pointInTime;
 
     public static class AltNumber {
 

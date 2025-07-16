@@ -33,9 +33,11 @@ public class SearchController implements SearchApi {
             Integer startYear,
             Integer endYear,
             Integer number,
+            String subject,
             String language,
             LocalDate published,
             Parameters.Sort sort,
+
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -49,9 +51,11 @@ public class SearchController implements SearchApi {
             .endYear(endYear)
             .number(number)
             .title(title)
+            .subject(subject)
             .language(language)
             .published(published)
             .sort(sort)
+=
             .page(page)
             .build();
         String atom = db.getAtom(params);
@@ -75,9 +79,11 @@ public class SearchController implements SearchApi {
             Integer startYear,
             Integer endYear,
             Integer number,
+            String subject,
             String language,
             LocalDate published,
             Parameters.Sort sort,
+
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -91,9 +97,11 @@ public class SearchController implements SearchApi {
             .endYear(endYear)
             .number(number)
             .title(title)
+            .subject(subject)
             .language(language)
             .published(published)
             .sort(sort)
+
             .page(page)
             .pageSize(pageSize)
             .build();

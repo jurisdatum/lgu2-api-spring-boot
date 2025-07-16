@@ -22,6 +22,7 @@
     },
     "schedules" : true,
     "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
     "unappliedEffects" : [ {
       "applied" : false,
       "required" : true,

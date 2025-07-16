@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
-import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 
@@ -51,7 +51,7 @@ class MetadataExtractionTest {
     @Test
     void versions() throws SaxonApiException, JsonProcessingException {
 		Contents simple = this.simplifier.contents(CLML);
-		List<String> versions = simple.meta.versions();
+		List<String> versions = simple.meta.versions().stream().toList();
 		Assertions.assertEquals(3, versions.size(), "There should be exactly three versions");
 		Assertions.assertEquals("enacted", versions.get(0), "First version should be 'enacted'");
 		Assertions.assertEquals("2017-01-16", versions.get(1), "Second version should be '2017-01-16'");

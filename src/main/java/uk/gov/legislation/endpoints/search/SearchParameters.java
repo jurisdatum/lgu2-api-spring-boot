@@ -29,12 +29,18 @@ public class SearchParameters {
     public String title;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String subject;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String language;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate published;
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Parameters.Sort sort;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String q;
 
 //    @JsonInclude(JsonInclude.Include.NON_NULL)
 //    public String orderBy;
@@ -83,6 +89,10 @@ public class SearchParameters {
             return this;
         }
 
+        public SearchParameters.Builder subject(String subject) {
+            params.subject = subject;
+            return this;
+        }
         public SearchParameters.Builder language(String language) {
             params.language = language;
             return this;
@@ -127,9 +137,11 @@ public class SearchParameters {
             .endYear(endYear)
             .number(number)
             .title(title)
+            .subject(subject)
             .language(language)
             .published(published)
             .sort(sort)
+
 //            .sort("published".equals(orderBy) ? Parameters.Sort.PUBLISHED : null)
             .page(page)
             .pageSize(pageSize)

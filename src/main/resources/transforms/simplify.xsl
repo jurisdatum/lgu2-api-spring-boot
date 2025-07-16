@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- I don't believe this file is used any longer -->
+
 <xsl:transform version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
    xmlns:xs="http://www.w3.org/2001/XMLSchema"
    xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
@@ -37,6 +39,7 @@
         <xsl:apply-templates select="ukm:*/ukm:Number" />
         <xsl:apply-templates select="ukm:*/ukm:AlternativeNumber" />
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
+        <xsl:apply-templates select="ukm:*/ukm:Made" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
@@ -146,7 +149,7 @@
     <altNumber category="{ @Category }" value="{ @Value }" />
 </xsl:template>
 
-<xsl:template match="ukm:EnactmentDate">
+<xsl:template match="ukm:EnactmentDate | ukm:Made">
     <date>
         <xsl:value-of select="@Date" />
     </date>

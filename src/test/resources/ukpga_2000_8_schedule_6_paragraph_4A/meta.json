@@ -21,6 +21,7 @@
   },
   "schedules" : true,
   "formats" : [ "xml", "pdf" ],
+  "pointInTime" : null,
   "fragment" : "schedule/6/paragraph/4A",
   "prev" : "schedule/6/paragraph/3E",
   "next" : "schedule/6/paragraph/4B",
@@ -211,10 +212,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -272,10 +271,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -333,10 +330,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     } ],
     "ancestor" : [ {
       "applied" : false,
@@ -389,10 +384,8 @@
         "date" : null,
         "applied" : false,
         "prospective" : true,
-        "description" : "with effect in accordance with",
-        "outstanding" : false
-      } ],
-      "outstanding" : false
+        "description" : "with effect in accordance with"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -444,10 +437,8 @@
         "date" : null,
         "applied" : false,
         "prospective" : true,
-        "description" : "with effect in accordance with",
-        "outstanding" : false
-      } ],
-      "outstanding" : false
+        "description" : "with effect in accordance with"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -505,10 +496,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -566,10 +555,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -627,10 +614,8 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     }, {
       "applied" : false,
       "required" : true,
@@ -688,11 +673,9 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force",
-        "outstanding" : true
-      } ],
-      "outstanding" : true
+        "description" : "wholly in force"
+      } ]
     } ]
   },
-  "upToDate" : false
+  "upToDate" : null
 }

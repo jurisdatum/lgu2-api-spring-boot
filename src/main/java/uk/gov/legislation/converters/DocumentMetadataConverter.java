@@ -13,11 +13,16 @@ public class DocumentMetadataConverter {
     public static DocumentMetadata convert(Metadata simple) {
         DocumentMetadata converted = new DocumentMetadata();
         convert(simple, converted);
+        // perhaps this should be combined with fragment metadata
         converted.unappliedEffects = simple.rawEffects.stream()
             .sorted(EffectsComparator.INSTANCE)
             .map(EffectsFeedConverter::convertEffect).toList();
-        // maybe don't do this if version is not current
-        UpToDate.setUpToDate(converted);
+        if ("revised".equals(simple.status) && simple.version().equals(simple.versions().getLast())) {
+            if (converted.pointInTime == null)
+                UpToDate.setUpToDate(converted);
+            else
+                UpToDate.setUpToDate(converted, converted.pointInTime);
+        }
         return converted;
     }
 
@@ -39,6 +44,7 @@ public class DocumentMetadataConverter {
         converted.status = simple.status;
         converted.title = simple.title;
         converted.extent = ExtentConverter.convert(simple.extent);
+        converted.subjects = convertSubjects(simple);
         converted.lang = simple.lang;
         converted.publisher = simple.publisher;
         converted.modified = simple.modified;
@@ -53,6 +59,7 @@ public class DocumentMetadataConverter {
 
         converted.schedules = simple.schedules;
         converted.formats = simple.formats();
+        converted.pointInTime = simple.getPointInTime().orElse(null);
     }
 
     static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
@@ -66,6 +73,18 @@ public class DocumentMetadataConverter {
         converted.category = simple.category;
         converted.value = simple.value;
         return converted;
+    }
+
+    /* return null for non-secondary types */
+    private static List<String> convertSubjects(Metadata simple) {
+        Type type = Types.get(simple.longType);
+        if (type == null)
+            return null;
+        if (!type.category().equals(Type.Category.Secondary))
+            return null;
+        if (simple.subjects == null)
+            return List.of();
+        return simple.subjects;
     }
 
 }

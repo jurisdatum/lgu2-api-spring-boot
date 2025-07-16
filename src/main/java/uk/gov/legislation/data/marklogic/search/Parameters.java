@@ -21,9 +21,13 @@ public class Parameters extends AbstractParameters {
 
     public String title;
 
+    public String subject;
+
     public String language;
 
     public LocalDate published;
+
+    public String text;
 
     public Sort sort;
 
@@ -93,6 +97,11 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
+        public Builder subject(String subject) {
+            params.subject = subject;
+            return this;
+        }
+
         public Builder language(String language) {
             params.language = language;
             return this;
@@ -100,6 +109,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder published(LocalDate published) {
             params.published = published;
+            return this;
+        }
+
+        public Builder text(String text) {
+            params.text = text;
             return this;
         }
 

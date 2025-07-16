@@ -6,14 +6,34 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.Versions;
 
 import java.time.LocalDate;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Optional;
+import java.time.format.DateTimeParseException;
+import java.util.*;
 
 public class Metadata {
+
+    @JacksonXmlProperty(localName = "identifier", namespace = "http://purl.org/dc/elements/1.1/")
+    public String dcIdentifier;
+
+    public Optional<LocalDate> getPointInTime() {
+        if ("final".equals(status))
+            return Optional.empty();
+        Links.Components comps = Links.parse(dcIdentifier);
+        if (comps == null)
+            return Optional.empty();
+        if (comps.version().isEmpty())
+            return Optional.empty();
+        LocalDate date;
+        try {
+            date = LocalDate.parse(comps.version().get());
+        } catch (DateTimeParseException e) {
+            return Optional.empty();
+        }
+        return Optional.of(date);
+    }
+
 
     public String id;
 
@@ -69,6 +89,10 @@ public class Metadata {
 
     public String extent;
 
+    @JacksonXmlElementWrapper(localName = "subjects")
+    @JacksonXmlProperty(localName = "subject")
+    public List<String> subjects;
+
     public String lang;
 
     public String publisher;
@@ -77,14 +101,18 @@ public class Metadata {
 
     private List<String> _versions;
 
-    public List<String> versions() {
-        LinkedHashSet<String> set = new LinkedHashSet<>(_versions);
+    public SortedSet<String> versions() {
+        SortedSet<String> set = new TreeSet<>(Versions.COMPARATOR);
+        set.addAll(_versions);
         if (set.contains("current")) {
             set.remove("current");
             set.add(this.version());
         }
-        // remove "prospective"?
-        return set.stream().toList();
+        if ("final".equals(status)) {
+            String first = FirstVersion.getFirstVersion(longType);
+            set.add(first);
+        }
+        return set;
     }
 
     @JacksonXmlElementWrapper(localName = "hasVersions")

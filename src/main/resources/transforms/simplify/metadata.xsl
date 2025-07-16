@@ -9,6 +9,7 @@
 
 <xsl:template match="ukm:Metadata">
     <meta>
+        <xsl:apply-templates select="dc:identifier[1]" />
         <xsl:call-template name="id" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentMainType" />
         <xsl:apply-templates select="ukm:*/ukm:Year" />
@@ -17,10 +18,12 @@
         <xsl:apply-templates select="ukm:*/ukm:AlternativeNumber" />
         <xsl:apply-templates select="ukm:*/ukm:ISBN" />
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
+        <xsl:apply-templates select="ukm:*/ukm:Made" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
         <xsl:call-template name="extent" />
+        <xsl:call-template name="subjects" />
         <xsl:apply-templates select="dc:language" />
         <xsl:apply-templates select="dc:publisher" />
         <xsl:apply-templates select="dc:modified" />
@@ -33,6 +36,12 @@
         </xsl:if>
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" />
     </meta>
+</xsl:template>
+
+<xsl:template match="dc:identifier">
+    <dc:identifier>
+        <xsl:value-of select="." />
+    </dc:identifier>
 </xsl:template>
 
 <xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
@@ -145,7 +154,7 @@
     </isbn>
 </xsl:template>
 
-<xsl:template match="ukm:EnactmentDate">
+<xsl:template match="ukm:EnactmentDate | ukm:Made">
     <date>
         <xsl:value-of select="@Date" />
     </date>
@@ -157,6 +166,20 @@
     <extent>
         <xsl:value-of select="$target/ancestor-or-self::*[exists(@RestrictExtent)][1]/@RestrictExtent" />
     </extent>
+</xsl:template>
+
+<!-- subjects -->
+
+<xsl:template name="subjects">
+    <xsl:if test="exists(ukm:SecondaryMetadata)">
+        <subjects>
+            <xsl:for-each select="dc:subject[@scheme='SIheading']">
+                <subject>
+                    <xsl:value-of select="." />
+                </subject>
+            </xsl:for-each>
+        </subjects>
+    </xsl:if>
 </xsl:template>
 
 <!-- versions -->
