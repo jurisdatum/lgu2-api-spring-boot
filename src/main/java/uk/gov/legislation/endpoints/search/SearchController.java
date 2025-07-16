@@ -55,7 +55,6 @@ public class SearchController implements SearchApi {
             .language(language)
             .published(published)
             .sort(sort)
-=
             .page(page)
             .build();
         String atom = db.getAtom(params);
@@ -101,7 +100,6 @@ public class SearchController implements SearchApi {
             .language(language)
             .published(published)
             .sort(sort)
-
             .page(page)
             .pageSize(pageSize)
             .build();
