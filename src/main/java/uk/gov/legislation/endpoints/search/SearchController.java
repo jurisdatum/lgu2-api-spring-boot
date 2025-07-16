@@ -36,6 +36,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            String q,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -52,6 +53,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .text(q)
             .page(page)
             .build();
         String atom = db.getAtom(params);
@@ -78,6 +80,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            String q,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -94,6 +97,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .q(q)
             .page(page)
             .pageSize(pageSize)
             .build();
