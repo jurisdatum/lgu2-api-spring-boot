@@ -19,6 +19,11 @@ public class DocumentsFeedConverter {
         page.meta = convertMeta(atom);
         page.meta.query = query;
         page.documents = convertDocuments(atom.entries);
+        if (query != null && query.subject != null && query.subject.length() == 1) {
+            page.meta.subjects = page.meta.subjects.stream()
+                .filter(s -> s.regionMatches(true, 0, query.subject, 0, 1))
+                .toList();
+        }
         return page;
     }
 
