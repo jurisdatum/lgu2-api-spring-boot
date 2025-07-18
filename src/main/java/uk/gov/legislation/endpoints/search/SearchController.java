@@ -36,7 +36,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
-            String q,
+            Parameters.Sort sort,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -53,12 +53,12 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
-            .text(q)
+            .sort(sort)
             .page(page)
             .build();
         String atom = db.getAtom(params);
         return ResponseEntity.ok(atom);
-    }
+        }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
         if (year != null && (startYear != null || endYear != null))
@@ -80,7 +80,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
-            String q,
+            Parameters.Sort sort,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
         validateType(type);
@@ -97,7 +97,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
-            .q(q)
+            .sort(sort)
             .page(page)
             .pageSize(pageSize)
             .build();
@@ -106,5 +106,4 @@ public class SearchController implements SearchApi {
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
-
 }
