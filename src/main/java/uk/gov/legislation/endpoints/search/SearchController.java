@@ -8,6 +8,7 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
+import uk.gov.legislation.util.NumberSeries;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
+import static uk.gov.legislation.util.NumberSeries.extractSeriesFromNumber;
 
 @RestController
 public class SearchController implements SearchApi {
@@ -32,7 +34,7 @@ public class SearchController implements SearchApi {
             Integer year,
             Integer startYear,
             Integer endYear,
-            Integer number,
+            String number,
             String subject,
             String language,
             List<String> extent,
@@ -45,12 +47,14 @@ public class SearchController implements SearchApi {
         validateTitle(title);
         validateLanguage(language);
         String e = validateExtent(extent, isExclusivelyExtends);
+        NumberSeries s = extractSeriesFromNumber(number);
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
-            .number(number)
+            .number(s.number())
+            .series(s.series())
             .title(title)
             .subject(subject)
             .language(language)
@@ -78,7 +82,7 @@ public class SearchController implements SearchApi {
             Integer year,
             Integer startYear,
             Integer endYear,
-            Integer number,
+            String number,
             String subject,
             String language,
             List<String> extent,
@@ -91,12 +95,14 @@ public class SearchController implements SearchApi {
         validateTitle(title);
         validateLanguage(language);
         String e = validateExtent(extent, isExclusivelyExtends);
+        NumberSeries s = extractSeriesFromNumber(number);
         SearchParameters params = SearchParameters.builder()
             .types(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
-            .number(number)
+            .number(s.number())
+            .series(s.series())
             .title(title)
             .subject(subject)
             .language(language)

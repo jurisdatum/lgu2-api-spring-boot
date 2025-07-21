@@ -26,6 +26,9 @@ public class SearchParameters {
     public Integer number;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String series;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String title;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -77,8 +80,13 @@ public class SearchParameters {
             return this;
         }
 
-        public SearchParameters.Builder number(Integer num) {
+        public SearchParameters.Builder number(int num) {
             params.number = num;
+            return this;
+        }
+
+        public SearchParameters.Builder series(String series) {
+            params.series = series;
             return this;
         }
 
@@ -134,6 +142,7 @@ public class SearchParameters {
             .startYear(startYear)
             .endYear(endYear)
             .number(number)
+            .series(series)
             .title(title)
             .subject(subject)
             .language(language)

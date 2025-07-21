@@ -18,6 +18,8 @@ public class Parameters extends AbstractParameters {
 
     public Integer number;
 
+    public String series;
+
     public String title;
 
     public String subject;
@@ -84,6 +86,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder number(Integer num) {
             params.number = num;
+            return this;
+        }
+
+        public Builder series(String series) {
+            params.series = series;
             return this;
         }
 

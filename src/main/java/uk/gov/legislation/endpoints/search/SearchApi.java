@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
 
+
 @Tag(name = "Search")
 public interface SearchApi {
 
@@ -23,7 +24,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer startYear,
             @RequestParam(required = false) Integer endYear,
-            @RequestParam(required = false) Integer number,
+            @RequestParam(required = false) String number,
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) List<String> extent,
@@ -41,7 +42,7 @@ public interface SearchApi {
             @RequestParam(required = false) Integer year,
             @RequestParam(required = false) Integer startYear,
             @RequestParam(required = false) Integer endYear,
-            @RequestParam(required = false) Integer number,
+            @RequestParam(required = false) String number,
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) List<String> extent,
