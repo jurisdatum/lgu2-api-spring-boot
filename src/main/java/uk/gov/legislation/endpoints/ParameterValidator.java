@@ -4,7 +4,11 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
 
+import java.time.LocalDate;
 import java.util.*;
+
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.springframework.util.CollectionUtils.isEmpty;
 
 public class ParameterValidator {
 
@@ -79,6 +83,32 @@ public class ParameterValidator {
         return finalResult;
     }
 
+
+    public static boolean areAllParamsEmpty(
+        String title,
+        List<String> type,
+        Integer year,
+        Integer startYear,
+        Integer endYear,
+        String number,
+        String subject,
+        String language,
+        List<String> extent,
+        LocalDate published,
+        Integer page) {
+
+        return isBlank(title)
+            && isEmpty(type)
+            && year == null
+            && startYear == null
+            && endYear == null
+            && isBlank(number)
+            && isBlank(subject)
+            && isBlank(language)
+            && isEmpty(extent)
+            && published == null
+            && page == null;
+    }
 
 
 }

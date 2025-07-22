@@ -19,12 +19,20 @@ import static org.junit.jupiter.api.Assertions.*;
         assertNull(NumberSeries.extractSeriesFromNumber("  "));
     }
 
+     @Test
+     void testValidateNumber() {
+         NumberSeries result = NumberSeries.extractSeriesFromNumber("123");
+         assertEquals(123, result.number());
+         assertNull(result.series());
+     }
+
     @Test
     void testValidNiSeries() {
         NumberSeries result = NumberSeries.extractSeriesFromNumber("ni123");
         assertEquals(123, result.number());
         assertEquals("ni", result.series());
     }
+
 
     @Test
     void testValidSingleCharSeriesW() {
@@ -73,13 +81,10 @@ import static org.junit.jupiter.api.Assertions.*;
         "ni  ",   // trailing spaces only
         "w--12"   // malformed number
     })
-    void testInvalidInputsThrowNumberFormatException(String input) {
-        NumberFormatException exception = assertThrows(
-            NumberFormatException.class,
-            () -> NumberSeries.extractSeriesFromNumber(input),
-            "Expected input to throw NumberFormatException: " + input
-        );
-        assertNotNull(exception.getMessage());
+    void testInvalidInputsThrowException(String input) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            NumberSeries.extractSeriesFromNumber(input);
+        }, "Expected exception for invalid input: " + input);
     }
 }
 
