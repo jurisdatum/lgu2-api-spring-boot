@@ -29,6 +29,7 @@ public interface SearchApi {
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false) String q,
             @RequestParam(required = false) @Sort Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize
@@ -46,6 +47,7 @@ public interface SearchApi {
             @RequestParam(required = false) String subject,
             @RequestParam(required = false) String language,
             @RequestParam(required = false) LocalDate published,
+            @RequestParam(required = false) String q,
             @RequestParam(required = false) @Sort Parameters.Sort sort,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "1")) Integer page,
             @RequestParam(required = false) @Parameter(schema = @Schema(defaultValue = "20")) Integer pageSize

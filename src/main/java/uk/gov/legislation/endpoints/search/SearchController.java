@@ -36,6 +36,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            String q,
             Parameters.Sort sort,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
@@ -53,6 +54,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .text(q)
             .sort(sort)
             .page(page)
             .build();
@@ -80,6 +82,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            String q,
             Parameters.Sort sort,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
@@ -97,6 +100,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .q(q)
             .sort(sort)
             .page(page)
             .pageSize(pageSize)
