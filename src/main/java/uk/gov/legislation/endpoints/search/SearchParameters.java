@@ -80,7 +80,7 @@ public class SearchParameters {
             return this;
         }
 
-        public SearchParameters.Builder number(int num) {
+        public SearchParameters.Builder number(Integer num) {
             params.number = num;
             return this;
         }

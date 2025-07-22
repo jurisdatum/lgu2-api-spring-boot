@@ -42,29 +42,20 @@ public class SearchController implements SearchApi {
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
-        if (areAllParamsEmpty(
-            title, type, year, startYear, endYear, number, subject,
-            language, extent, published, page)) {
-            throw new ResponseStatusException(
-                HttpStatus.BAD_REQUEST,
-                "At least one search parameter must be provided.");
-        }
+
         validateType(type);
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
         String e = validateExtent(extent, isExclusivelyExtends);
         NumberSeries s = extractSeriesFromNumber(number);
-        if (s == null || s.number() == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid NumberSeries Request"+ s);
-        }
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
-            .number(s.number())
-            .series(s.series())
+            .number(s==null ? null :s.number())
+            .series(s==null ? null :s.series())
             .title(title)
             .subject(subject)
             .language(language)
@@ -100,29 +91,20 @@ public class SearchController implements SearchApi {
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
-        if(areAllParamsEmpty(
-            title, type, year, startYear, endYear, number, subject,
-            language, extent, published, page)) {
-            throw new ResponseStatusException(
-                HttpStatus.BAD_REQUEST,
-                "At least one search parameter must be provided.");
-        }
+
         validateType(type);
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
         String e = validateExtent(extent, isExclusivelyExtends);
         NumberSeries s = extractSeriesFromNumber(number);
-        if (s == null || s.number() == null) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid NumberSeries Request");
-        }
         SearchParameters params = SearchParameters.builder()
             .types(type)
             .year(year)
             .startYear(startYear)
             .endYear(endYear)
-            .number(s.number())
-            .series(s.series())
+            .number(s==null ? null :s.number())
+            .series(s==null ? null :s.series())
             .title(title)
             .subject(subject)
             .language(language)

@@ -83,33 +83,5 @@ public class ParameterValidator {
         return finalResult;
     }
 
-
-    public static boolean areAllParamsEmpty(
-        String title,
-        List<String> type,
-        Integer year,
-        Integer startYear,
-        Integer endYear,
-        String number,
-        String subject,
-        String language,
-        List<String> extent,
-        LocalDate published,
-        Integer page) {
-
-        return isBlank(title)
-            && isEmpty(type)
-            && year == null
-            && startYear == null
-            && endYear == null
-            && isBlank(number)
-            && isBlank(subject)
-            && isBlank(language)
-            && isEmpty(extent)
-            && published == null
-            && page == null;
-    }
-
-
 }
 

@@ -84,7 +84,7 @@ import static org.junit.jupiter.api.Assertions.*;
     void testInvalidInputsThrowException(String input) {
         assertThrows(IllegalArgumentException.class, () -> {
             NumberSeries.extractSeriesFromNumber(input);
-        }, "Expected exception for invalid input: " + input);
+        });
     }
 }
 
