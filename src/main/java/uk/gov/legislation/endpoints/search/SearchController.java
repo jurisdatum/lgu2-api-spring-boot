@@ -60,7 +60,7 @@ public class SearchController implements SearchApi {
             .build();
         String atom = db.getAtom(params);
         return ResponseEntity.ok(atom);
-        }
+    }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
         if (year != null && (startYear != null || endYear != null))

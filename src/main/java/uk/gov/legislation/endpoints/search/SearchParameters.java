@@ -138,6 +138,7 @@ public class SearchParameters {
             .subject(subject)
             .language(language)
             .published(published)
+            .text(q)
             .sort(sort)
             .page(page)
             .pageSize(pageSize)
