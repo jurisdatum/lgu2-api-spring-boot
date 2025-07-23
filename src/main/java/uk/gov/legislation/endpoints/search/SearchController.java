@@ -35,6 +35,7 @@ public class SearchController implements SearchApi {
             Integer number,
             String subject,
             String language,
+            List<String> extent,
             LocalDate published,
             String q,
             Parameters.Sort sort,
@@ -44,6 +45,7 @@ public class SearchController implements SearchApi {
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
+        String e = validateExtent(extent);
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
@@ -53,6 +55,7 @@ public class SearchController implements SearchApi {
             .title(title)
             .subject(subject)
             .language(language)
+            .extent(e)
             .published(published)
             .text(q)
             .sort(sort)
@@ -81,6 +84,7 @@ public class SearchController implements SearchApi {
             Integer number,
             String subject,
             String language,
+            List<String> extent,
             LocalDate published,
             String q,
             Parameters.Sort sort,
@@ -90,6 +94,7 @@ public class SearchController implements SearchApi {
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
+        String e = validateExtent(extent);
         SearchParameters params = SearchParameters.builder()
             .types(type)
             .year(year)
@@ -99,6 +104,7 @@ public class SearchController implements SearchApi {
             .title(title)
             .subject(subject)
             .language(language)
+            .extent(e)
             .published(published)
             .q(q)
             .sort(sort)
