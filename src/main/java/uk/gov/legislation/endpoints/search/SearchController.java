@@ -36,7 +36,6 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             List<String> extent,
-            boolean isExclusivelyExtends,
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
@@ -44,7 +43,7 @@ public class SearchController implements SearchApi {
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
-        String e = validateExtent(extent, isExclusivelyExtends);
+        String e = validateExtent(extent);
         Parameters params = Parameters.builder()
             .type(type)
             .year(year)
@@ -82,7 +81,6 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             List<String> extent,
-            boolean isExclusivelyExtends,
             LocalDate published,
             Integer page,
             Integer pageSize) throws IOException, InterruptedException {
@@ -90,7 +88,7 @@ public class SearchController implements SearchApi {
         validateYears(year, startYear, endYear);
         validateTitle(title);
         validateLanguage(language);
-        String e = validateExtent(extent, isExclusivelyExtends);
+        String e = validateExtent(extent);
         SearchParameters params = SearchParameters.builder()
             .types(type)
             .year(year)

@@ -52,34 +52,53 @@ public class ParameterValidator {
         throw new UnsupportedLanguageException(language);
     }
 
-    public static String validateExtent(List<String> extentList, boolean isExclusivelyExtends) {
-        if (extentList == null || extentList.isEmpty()) return null;
+    public static String validateExtent(List <String> extentList) {
+        if(extentList == null || extentList.isEmpty())
+            return null;
 
-        Map<String, String> validMap = Map.of(
-            "england", "E", "E", "E",
-            "wales", "W", "W", "W",
-            "scotland", "S", "S", "S",
-            "ni", "N.I.", "N.I.", "N.I."
-        );
-        LinkedHashSet<String> result = new LinkedHashSet<>();
+        boolean isExclusive = false;
+        List <String> cleanList = new ArrayList <>();
 
-        for (String input : extentList) {
+        for(String input : extentList) {
             String trimmed = input.trim();
-            String code = validMap.get(trimmed);
-            if (code == null) {
-                throw new IllegalArgumentException("Invalid extent value: " + trimmed);
+            String lower = trimmed.toLowerCase();
+
+            if(lower.equals("only")) {
+                isExclusive = true;
+            }
+            else {
+                cleanList.add(trimmed);
+            }
+        }
+        LinkedHashSet <String> result = getValidExtent(cleanList);
+        String finalResult = String.join("+", result);
+        return isExclusive ? "=" + finalResult : finalResult;
+    }
+
+    private static LinkedHashSet <String> getValidExtent(List <String> cleanList) {
+        Map <String, String> validMap = Map.ofEntries(
+            Map.entry("england", "E"),
+            Map.entry("E", "E"),
+
+            Map.entry("wales", "W"),
+            Map.entry("W", "W"),
+
+            Map.entry("scotland", "S"),
+            Map.entry("S", "S"),
+
+            Map.entry("ni", "N.I."),
+            Map.entry("N.I.", "N.I."));
+
+        LinkedHashSet <String> result = new LinkedHashSet <>();
+
+        for(String input : cleanList) {
+            String code = validMap.get(input);
+            if(code == null) {
+                throw new IllegalArgumentException("Invalid extent value: " + input);
             }
             result.add(code);
         }
-        String finalResult = String.join("+", result);
-
-        if (isExclusivelyExtends) {
-            finalResult = "=" + finalResult;
-        }
-        return finalResult;
+        return result;
     }
-
-
-
 }
 
