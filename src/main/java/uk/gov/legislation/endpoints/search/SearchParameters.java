@@ -40,8 +40,8 @@ public class SearchParameters {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String q;
 
-//    @JsonInclude(JsonInclude.Include.NON_NULL)
-//    public String orderBy;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Parameters.Sort sort;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer page;
@@ -106,10 +106,10 @@ public class SearchParameters {
             return this;
         }
 
-//        public SearchParameters.Builder orderBy(String orderBy) {
-//            params.orderBy = orderBy;
-//            return this;
-//        }
+        public SearchParameters.Builder sort(Parameters.Sort sort) {
+            params.sort = sort;
+            return this;
+        }
 
         public SearchParameters.Builder page(Integer page) {
             params.page = page;
@@ -139,7 +139,7 @@ public class SearchParameters {
             .language(language)
             .published(published)
             .text(q)
-//            .sort("published".equals(orderBy) ? Parameters.Sort.PUBLISHED : null)
+            .sort(sort)
             .page(page)
             .pageSize(pageSize)
             .build();
