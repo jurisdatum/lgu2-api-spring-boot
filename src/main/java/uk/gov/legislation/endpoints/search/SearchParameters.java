@@ -26,6 +26,9 @@ public class SearchParameters {
     public Integer number;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String series;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String title;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -33,6 +36,9 @@ public class SearchParameters {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String language;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String extent;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate published;
@@ -82,6 +88,11 @@ public class SearchParameters {
             return this;
         }
 
+        public SearchParameters.Builder series(String series) {
+            params.series = series;
+            return this;
+        }
+
         public SearchParameters.Builder title(String title) {
             params.title = title;
             return this;
@@ -93,6 +104,11 @@ public class SearchParameters {
         }
         public SearchParameters.Builder language(String language) {
             params.language = language;
+            return this;
+        }
+
+        public SearchParameters.Builder extent(String extent) {
+            params.extent = extent;
             return this;
         }
 
@@ -134,9 +150,11 @@ public class SearchParameters {
             .startYear(startYear)
             .endYear(endYear)
             .number(number)
+            .series(series)
             .title(title)
             .subject(subject)
             .language(language)
+            .extent(extent)
             .published(published)
             .text(q)
             .sort(sort)
