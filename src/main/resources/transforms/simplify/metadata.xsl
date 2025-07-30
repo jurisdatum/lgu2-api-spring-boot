@@ -242,9 +242,22 @@
         <xsl:if test="exists(following-sibling::*)">
             <format name="xml" />
         </xsl:if>
-        <xsl:variable name="alternative" as="element()?" select="ukm:Alternatives/ukm:Alternative[ends-with(@URI, '.pdf')][not(@Language=('Welsh','Mixed'))]" /> <!-- ToDo -->
-        <xsl:if test="exists($alternative)">
-            <format name="pdf" uri="{ $alternative/@URI }" />
+        <xsl:variable name="pdfs" as="element(ukm:Alternative)*">
+            <!-- sometimes there is more than one "alternative" PDF even for the same language, e.g., uksi/1995/311 -->
+            <xsl:variable name="all" as="element(ukm:Alternative)*" select="ukm:Alternatives/ukm:Alternative[ends-with(@URI, '.pdf')]" />
+            <xsl:choose>
+                <xsl:when test="dc:language = 'cy'">
+                    <xsl:sequence select="$all[@Language='Welsh']" />
+                    <xsl:sequence select="$all[@Language='Mixed']" />
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:sequence select="$all[not(@Language=('Welsh','Mixed'))]" />
+                    <xsl:sequence select="$all[@Language='Mixed']" />
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:if test="exists($pdfs)">
+            <format name="pdf" uri="{ $pdfs[1]/@URI }" />
         </xsl:if>
     </formats>
 </xsl:template>
