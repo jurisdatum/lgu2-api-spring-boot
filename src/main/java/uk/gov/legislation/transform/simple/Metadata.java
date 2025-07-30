@@ -118,37 +118,38 @@ public class Metadata {
 
     private List<String> _versions;
 
-    private static final String REPEALED = " repealed";
-
-    public SortedSet<String> versions() {
-        TreeSet<String> set = new TreeSet<>(Versions.COMPARATOR);
-        set.addAll(_versions);
-        if (set.contains("current")) {
-            set.remove("current");
-            if (this.valid != null)
-                set.add(this.valid.toString());  // TODO check
-        }
-        if ("final".equals(status)) {
-            String first = FirstVersion.getFirstVersion(longType);
-            set.add(first);
-        }
-        if (!set.isEmpty()) {
-            String last = set.last();
-            if (last.endsWith(REPEALED)) {
-                set.pollLast();
-                String base = last.substring(0, last.length() - REPEALED.length());
-                set.add(base);
-            }
-        }
-        return set;
-    }
-
     @JacksonXmlElementWrapper(localName = "hasVersions")
     @JacksonXmlProperty(localName = "hasVersion")
     @JsonSetter
     public void setVersions(List<String> value) { _versions = value; }
 
+    private TreeSet<String> _versions2;
 
+    private static final String REPEALED = " repealed";
+
+    public SortedSet<String> versions() {
+        if (_versions2 != null)
+            return _versions2;
+        _versions2 = new TreeSet<>(Versions.COMPARATOR);
+        _versions2.addAll(_versions);
+        if (_versions2.remove("current")) {
+            if (this.valid != null)
+                _versions2.add(this.valid.toString());  // TODO check
+        }
+        if ("final".equals(status)) {
+            String first = FirstVersion.getFirstVersion(longType);
+            _versions2.add(first);
+        }
+        if (!_versions2.isEmpty()) {
+            String last = _versions2.last();
+            if (last.endsWith(REPEALED)) {
+                _versions2.pollLast();
+                String base = last.substring(0, last.length() - REPEALED.length());
+                _versions2.add(base);
+            }
+        }
+        return _versions2;
+    }
 
     @JacksonXmlProperty
     public HasParts hasParts;
