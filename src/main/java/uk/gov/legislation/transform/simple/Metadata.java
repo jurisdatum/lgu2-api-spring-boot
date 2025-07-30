@@ -77,10 +77,27 @@ public class Metadata {
     @JsonSetter("valid")
     public void setValid(String value) { valid = LocalDate.parse(value); }
 
+    private static Optional<LocalDate> tryParseDate(String s) {
+        try {
+            return Optional.of(LocalDate.parse(s));
+        } catch (DateTimeParseException e) {
+            return Optional.empty();
+        }
+    }
+
     public String version() {
-        if (valid != null)
+        if (valid == null)
+            return FirstVersion.getFirstVersion(longType);
+        Optional<LocalDate> last = versions().reversed().stream()
+            .map(Metadata::tryParseDate)
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .findFirst();
+        if (last.isEmpty())
             return valid.toString();
-        return FirstVersion.getFirstVersion(longType);
+        if (valid.isAfter(last.get()))
+            return last.get().toString();
+        return valid.toString();
     }
 
     public String status;
@@ -101,16 +118,27 @@ public class Metadata {
 
     private List<String> _versions;
 
+    private static final String REPEALED = " repealed";
+
     public SortedSet<String> versions() {
-        SortedSet<String> set = new TreeSet<>(Versions.COMPARATOR);
+        TreeSet<String> set = new TreeSet<>(Versions.COMPARATOR);
         set.addAll(_versions);
         if (set.contains("current")) {
             set.remove("current");
-            set.add(this.version());
+            if (this.valid != null)
+                set.add(this.valid.toString());  // TODO check
         }
         if ("final".equals(status)) {
             String first = FirstVersion.getFirstVersion(longType);
             set.add(first);
+        }
+        if (!set.isEmpty()) {
+            String last = set.last();
+            if (last.endsWith(REPEALED)) {
+                set.pollLast();
+                String base = last.substring(0, last.length() - REPEALED.length());
+                set.add(base);
+            }
         }
         return set;
     }
