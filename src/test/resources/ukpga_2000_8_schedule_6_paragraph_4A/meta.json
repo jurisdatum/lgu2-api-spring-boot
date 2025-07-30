@@ -7,7 +7,7 @@
   "isbn" : "010540800X",
   "date" : "2000-06-14",
   "cite" : "2000 c. 8",
-  "version" : "2024-11-01",
+  "version" : "2020-12-31",
   "status" : "revised",
   "title" : "Financial Services and Markets Act 2000",
   "extent" : [ "E", "W", "S", "NI" ],
@@ -212,8 +212,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     }, {
       "applied" : false,
       "required" : true,
@@ -271,8 +273,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     }, {
       "applied" : false,
       "required" : true,
@@ -330,8 +334,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     } ],
     "ancestor" : [ {
       "applied" : false,
@@ -384,8 +390,10 @@
         "date" : null,
         "applied" : false,
         "prospective" : true,
-        "description" : "with effect in accordance with"
-      } ]
+        "description" : "with effect in accordance with",
+        "outstanding" : false
+      } ],
+      "outstanding" : false
     }, {
       "applied" : false,
       "required" : true,
@@ -437,8 +445,10 @@
         "date" : null,
         "applied" : false,
         "prospective" : true,
-        "description" : "with effect in accordance with"
-      } ]
+        "description" : "with effect in accordance with",
+        "outstanding" : false
+      } ],
+      "outstanding" : false
     }, {
       "applied" : false,
       "required" : true,
@@ -496,8 +506,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     }, {
       "applied" : false,
       "required" : true,
@@ -555,8 +567,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     }, {
       "applied" : false,
       "required" : true,
@@ -614,8 +628,10 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     }, {
       "applied" : false,
       "required" : true,
@@ -673,9 +689,11 @@
       "inForce" : [ {
         "date" : "2024-12-31",
         "applied" : false,
-        "description" : "wholly in force"
-      } ]
+        "description" : "wholly in force",
+        "outstanding" : true
+      } ],
+      "outstanding" : true
     } ]
   },
-  "upToDate" : null
+  "upToDate" : false
 }
