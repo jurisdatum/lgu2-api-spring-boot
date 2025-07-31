@@ -27,6 +27,8 @@ public class Parameters extends AbstractParameters {
 
     public LocalDate published;
 
+    public LocalDate version;
+
     public String text;
 
     public Sort sort;
@@ -109,6 +111,11 @@ public class Parameters extends AbstractParameters {
 
         public Builder published(LocalDate published) {
             params.published = published;
+            return this;
+        }
+
+        public Builder version(LocalDate version) {
+            params.version = version;
             return this;
         }
 

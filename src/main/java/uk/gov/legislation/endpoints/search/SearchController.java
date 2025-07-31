@@ -36,6 +36,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            LocalDate version,
             String q,
             Parameters.Sort sort,
             Integer page,
@@ -54,6 +55,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .version(version)
             .text(q)
             .sort(sort)
             .page(page)
@@ -82,6 +84,7 @@ public class SearchController implements SearchApi {
             String subject,
             String language,
             LocalDate published,
+            LocalDate version,
             String q,
             Parameters.Sort sort,
             Integer page,
@@ -100,6 +103,7 @@ public class SearchController implements SearchApi {
             .subject(subject)
             .language(language)
             .published(published)
+            .version(version)
             .q(q)
             .sort(sort)
             .page(page)

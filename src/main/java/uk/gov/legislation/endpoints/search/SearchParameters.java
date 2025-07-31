@@ -38,6 +38,9 @@ public class SearchParameters {
     public LocalDate published;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
+    public LocalDate version;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public String q;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -101,6 +104,11 @@ public class SearchParameters {
             return this;
         }
 
+        public SearchParameters.Builder version(LocalDate version) {
+            params.version = version;
+            return this;
+        }
+
         public SearchParameters.Builder q(String text) {
             params.q = text;
             return this;
@@ -138,6 +146,7 @@ public class SearchParameters {
             .subject(subject)
             .language(language)
             .published(published)
+            .version(version)
             .text(q)
             .sort(sort)
             .page(page)
