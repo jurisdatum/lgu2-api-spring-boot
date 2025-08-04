@@ -7,8 +7,6 @@ import java.util.List;
 
 public class Parameters extends AbstractParameters {
 
-//    public  String series;  // could be an enum
-
     public String type;
 
     public Integer year;
@@ -18,6 +16,8 @@ public class Parameters extends AbstractParameters {
     public Integer endYear;
 
     public Integer number;
+
+    public Series series;
 
     public String title;
 
@@ -43,6 +43,16 @@ public class Parameters extends AbstractParameters {
 //        YEAR,
         TYPE;
 
+
+        @Override
+        public String toString() {
+            return name().toLowerCase();
+        }
+    }
+
+    public enum Series {
+
+        W, S, C, L, NI;
 
         @Override
         public String toString() {
@@ -87,8 +97,9 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
-        public Builder number(Integer num) {
+        public Builder number(Integer num, Series series) {
             params.number = num;
+            params.series = num == null ? null : series;
             return this;
         }
 
