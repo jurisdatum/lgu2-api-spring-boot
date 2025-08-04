@@ -23,7 +23,7 @@ public class SearchParameters {
     public Integer endYear;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer number;
+    public String number;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String title;
@@ -77,7 +77,7 @@ public class SearchParameters {
             return this;
         }
 
-        public SearchParameters.Builder number(Integer num) {
+        public SearchParameters.Builder number(String num) {
             params.number = num;
             return this;
         }
@@ -125,24 +125,6 @@ public class SearchParameters {
             return params;
         }
 
-    }
-
-    public Parameters convert() {
-        return Parameters.builder()
-            .type(types)
-            .year(year)
-            .startYear(startYear)
-            .endYear(endYear)
-            .number(number)
-            .title(title)
-            .subject(subject)
-            .language(language)
-            .published(published)
-            .text(q)
-            .sort(sort)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
     }
 
 }
