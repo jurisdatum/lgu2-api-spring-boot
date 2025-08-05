@@ -10,8 +10,6 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
@@ -26,41 +24,14 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<String> searchByAtom(
-            String title,
-            List<String> type,
-            Integer year,
-            Integer startYear,
-            Integer endYear,
-            String number,
-            String subject,
-            String language,
-            LocalDate published,
-            String q,
-            Parameters.Sort sort,
-            Integer page,
-            Integer pageSize) throws IOException, InterruptedException {
-        validateType(type);
-        validateYears(year, startYear, endYear);
-        validateTitle(title);
-        validateLanguage(language);
-        SearchParameters params = SearchParameters.builder()
-            .types(type)
-            .year(year)
-            .startYear(startYear)
-            .endYear(endYear)
-            .number(number)
-            .title(title)
-            .subject(subject)
-            .language(language)
-            .published(published)
-            .q(q)
-            .sort(sort)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
-        Parameters params2 = convert(params);
-        String atom = db.getAtom(params2);
+    public ResponseEntity<String> searchByAtom(SearchParameters param)
+        throws IOException, InterruptedException {
+
+        validateType(param.types);
+        validateYears(param.year, param.startYear, param.endYear);
+        validateTitle(param.title);
+        validateLanguage(param.language);
+        String atom = db.getAtom(convert(param));
         return ResponseEntity.ok(atom);
     }
 
@@ -74,42 +45,16 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<PageOfDocuments> searchByJson(
-            String title,
-            List <String> type,
-            Integer year,
-            Integer startYear,
-            Integer endYear,
-            String number,
-            String subject,
-            String language,
-            LocalDate published,
-            String q,
-            Parameters.Sort sort,
-            Integer page,
-            Integer pageSize) throws IOException, InterruptedException {
-        validateType(type);
-        validateYears(year, startYear, endYear);
-        validateTitle(title);
-        validateLanguage(language);
-        SearchParameters params = SearchParameters.builder()
-            .types(type)
-            .year(year)
-            .startYear(startYear)
-            .endYear(endYear)
-            .number(number)
-            .title(title)
-            .subject(subject)
-            .language(language)
-            .published(published)
-            .q(q)
-            .sort(sort)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
-        Parameters params2 = convert(params);
-        return Optional.of(db.get(params2))
-            .map(results -> DocumentsFeedConverter.convert(results, params))
+    public ResponseEntity<PageOfDocuments> searchByJson(SearchParameters param)
+        throws IOException, InterruptedException {
+
+        validateType(param.types);
+        validateYears(param.year, param.startYear, param.endYear);
+        validateTitle(param.title);
+        validateLanguage(param.language);
+
+        return Optional.of(db.get(convert(param)))
+            .map(results -> DocumentsFeedConverter.convert(results, param))
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }

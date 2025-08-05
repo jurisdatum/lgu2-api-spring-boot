@@ -49,82 +49,107 @@ public class SearchParameters {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer pageSize;
 
-    public static SearchParameters.Builder builder() { return new SearchParameters.Builder(); }
-
-    public static class Builder {
-
-        private final SearchParameters params = new SearchParameters();
-
-        private Builder() { }
-
-        public SearchParameters.Builder types(List<String> types) {
-            params.types = types;
-            return this;
-        }
-
-        public SearchParameters.Builder year(Integer year) {
-            params.year = year;
-            return this;
-        }
-
-        public SearchParameters.Builder startYear(Integer year) {
-            params.startYear = year;
-            return this;
-        }
-
-        public SearchParameters.Builder endYear(Integer year) {
-            params.endYear = year;
-            return this;
-        }
-
-        public SearchParameters.Builder number(String num) {
-            params.number = num;
-            return this;
-        }
-
-        public SearchParameters.Builder title(String title) {
-            params.title = title;
-            return this;
-        }
-
-        public SearchParameters.Builder subject(String subject) {
-            params.subject = subject;
-            return this;
-        }
-        public SearchParameters.Builder language(String language) {
-            params.language = language;
-            return this;
-        }
-
-        public SearchParameters.Builder published(LocalDate published) {
-            params.published = published;
-            return this;
-        }
-
-        public SearchParameters.Builder q(String text) {
-            params.q = text;
-            return this;
-        }
-
-        public SearchParameters.Builder sort(Parameters.Sort sort) {
-            params.sort = sort;
-            return this;
-        }
-
-        public SearchParameters.Builder page(Integer page) {
-            params.page = page;
-            return this;
-        }
-
-        public SearchParameters.Builder pageSize(Integer pageSize) {
-            params.pageSize = pageSize;
-            return this;
-        }
-
-        public SearchParameters build() {
-            return params;
-        }
-
+    public Integer getEndYear() {
+        return endYear;
     }
 
+    public void setEndYear(Integer endYear) {
+        this.endYear = endYear;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public Integer getPage() {
+        return page;
+    }
+
+    public void setPage(Integer page) {
+        this.page = page;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public LocalDate getPublished() {
+        return published;
+    }
+
+    public void setPublished(LocalDate published) {
+        this.published = published;
+    }
+
+    public String getQ() {
+        return q;
+    }
+
+    public void setQ(String q) {
+        this.q = q;
+    }
+
+    public Parameters.Sort getSort() {
+        return sort;
+    }
+
+    public void setSort(Parameters.Sort sort) {
+        this.sort = sort;
+    }
+
+    public Integer getStartYear() {
+        return startYear;
+    }
+
+    public void setStartYear(Integer startYear) {
+        this.startYear = startYear;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List <String> getTypes() {
+        return types;
+    }
+
+    public void setTypes(List <String> types) {
+        this.types = types;
+    }
+
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
 }
