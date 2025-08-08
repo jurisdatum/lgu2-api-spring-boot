@@ -2,6 +2,7 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
+import uk.gov.legislation.api.responses.meta.AssociatedDocument;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.util.*;
 
@@ -60,6 +61,8 @@ public class DocumentMetadataConverter {
         converted.schedules = simple.schedules;
         converted.formats = simple.formats();
         converted.pointInTime = simple.getPointInTime().orElse(null);
+        converted.alternatives = AssociatedDocumentConverter.convert(simple.alternatives, AssociatedDocument.Type.Alternative);
+        converted.associated = AssociatedDocumentConverter.convertAssociated(simple);
     }
 
     static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
