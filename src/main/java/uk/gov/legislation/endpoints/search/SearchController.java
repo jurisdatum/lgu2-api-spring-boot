@@ -27,10 +27,10 @@ public class SearchController implements SearchApi {
     public ResponseEntity<String> searchByAtom(SearchParameters param)
         throws IOException, InterruptedException {
 
-        validateType(param.types);
-        validateYears(param.year, param.startYear, param.endYear);
-        validateTitle(param.title);
-        validateLanguage(param.language);
+        validateType(param.getTypes());
+        validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
+        validateTitle(param.getTitle());
+        validateLanguage(param.getLanguage());
         String atom = db.getAtom(convert(param));
         return ResponseEntity.ok(atom);
     }
@@ -48,10 +48,10 @@ public class SearchController implements SearchApi {
     public ResponseEntity<PageOfDocuments> searchByJson(SearchParameters param)
         throws IOException, InterruptedException {
 
-        validateType(param.types);
-        validateYears(param.year, param.startYear, param.endYear);
-        validateTitle(param.title);
-        validateLanguage(param.language);
+        validateType(param.getTypes());
+        validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
+        validateTitle(param.getTitle());
+        validateLanguage(param.getLanguage());
 
         return Optional.of(db.get(convert(param)))
             .map(results -> DocumentsFeedConverter.convert(results, param))
@@ -61,20 +61,20 @@ public class SearchController implements SearchApi {
 
     private static Parameters convert(SearchParameters params) {
         var builder = Parameters.builder()
-            .type(params.types)
-            .year(params.year)
-            .startYear(params.startYear)
-            .endYear(params.endYear)
-            .title(params.title)
-            .subject(params.subject)
-            .language(params.language)
-            .published(params.published)
-            .text(params.q)
-            .sort(params.sort)
-            .page(params.page)
-            .pageSize(params.pageSize);
+            .type(params.getTypes())
+            .year(params.getYear())
+            .startYear(params.getStartYear())
+            .endYear(params.getEndYear())
+            .title(params.getTitle())
+            .subject(params.getSubject())
+            .language(params.getLanguage())
+            .published(params.getPublished())
+            .text(params.getQ())
+            .sort(params.getSort())
+            .page(params.getPage())
+            .pageSize(params.getPageSize());
         try {
-            NumberAndSeries.parse(params.number)
+            NumberAndSeries.parse(params.getNumber())
                 .ifPresent(x -> builder.number(x.number(), x.series()));
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
