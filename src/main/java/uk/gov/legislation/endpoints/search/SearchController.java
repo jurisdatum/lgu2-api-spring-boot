@@ -27,12 +27,16 @@ public class SearchController implements SearchApi {
     public ResponseEntity<String> searchByAtom(SearchParameters param)
         throws IOException, InterruptedException {
 
+        validateSearchParameters(param);
+        String atom = db.getAtom(convert(param));
+        return ResponseEntity.ok(atom);
+    }
+
+    private static void validateSearchParameters(SearchParameters param) {
         validateType(param.getTypes());
         validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
         validateTitle(param.getTitle());
         validateLanguage(param.getLanguage());
-        String atom = db.getAtom(convert(param));
-        return ResponseEntity.ok(atom);
     }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
@@ -48,10 +52,7 @@ public class SearchController implements SearchApi {
     public ResponseEntity<PageOfDocuments> searchByJson(SearchParameters param)
         throws IOException, InterruptedException {
 
-        validateType(param.getTypes());
-        validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
-        validateTitle(param.getTitle());
-        validateLanguage(param.getLanguage());
+        validateSearchParameters(param);
 
         return Optional.of(db.get(convert(param)))
             .map(results -> DocumentsFeedConverter.convert(results, param))
