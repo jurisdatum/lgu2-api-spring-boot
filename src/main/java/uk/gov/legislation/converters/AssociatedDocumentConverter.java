@@ -8,6 +8,11 @@ import uk.gov.legislation.transform.simple.Metadata;
 import java.util.List;
 import java.util.stream.Stream;
 
+/**
+ * Converts simplified metadata objects into clean API response objects for associated documents.
+ * Handles the mapping from various document types (notes, correction slips, impact assessments, etc.)
+ * to a unified AssociatedDocument representation.
+ */
 public class AssociatedDocumentConverter {
 
     static List<AssociatedDocument> convertAssociated(Metadata simple) {

@@ -5,6 +5,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.net.URI;
 import java.time.LocalDate;
 
+/**
+ * Represents a document associated with a piece of legislation, such as explanatory notes,
+ * impact assessments, correction slips, alternative formats, or other supplementary documents.
+ * Provides a unified API response format for all types of related documents.
+ */
 public class AssociatedDocument {
 
     /** See schemaLegislationMetadata.xsd */
