@@ -10,8 +10,6 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.util.List;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
@@ -26,42 +24,19 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<String> searchByAtom(
-            String title,
-            List<String> type,
-            Integer year,
-            Integer startYear,
-            Integer endYear,
-            String number,
-            String subject,
-            String language,
-            LocalDate published,
-            String q,
-            Parameters.Sort sort,
-            Integer page,
-            Integer pageSize) throws IOException, InterruptedException {
-        validateType(type);
-        validateYears(year, startYear, endYear);
-        validateTitle(title);
-        validateLanguage(language);
-        SearchParameters params = SearchParameters.builder()
-            .types(type)
-            .year(year)
-            .startYear(startYear)
-            .endYear(endYear)
-            .number(number)
-            .title(title)
-            .subject(subject)
-            .language(language)
-            .published(published)
-            .q(q)
-            .sort(sort)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
-        Parameters params2 = convert(params);
-        String atom = db.getAtom(params2);
+    public ResponseEntity<String> searchByAtom(SearchParameters param)
+        throws IOException, InterruptedException {
+
+        validateSearchParameters(param);
+        String atom = db.getAtom(convert(param));
         return ResponseEntity.ok(atom);
+    }
+
+    private static void validateSearchParameters(SearchParameters param) {
+        validateType(param.getTypes());
+        validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
+        validateTitle(param.getTitle());
+        validateLanguage(param.getLanguage());
     }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
@@ -74,62 +49,33 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<PageOfDocuments> searchByJson(
-            String title,
-            List <String> type,
-            Integer year,
-            Integer startYear,
-            Integer endYear,
-            String number,
-            String subject,
-            String language,
-            LocalDate published,
-            String q,
-            Parameters.Sort sort,
-            Integer page,
-            Integer pageSize) throws IOException, InterruptedException {
-        validateType(type);
-        validateYears(year, startYear, endYear);
-        validateTitle(title);
-        validateLanguage(language);
-        SearchParameters params = SearchParameters.builder()
-            .types(type)
-            .year(year)
-            .startYear(startYear)
-            .endYear(endYear)
-            .number(number)
-            .title(title)
-            .subject(subject)
-            .language(language)
-            .published(published)
-            .q(q)
-            .sort(sort)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
-        Parameters params2 = convert(params);
-        return Optional.of(db.get(params2))
-            .map(results -> DocumentsFeedConverter.convert(results, params))
+    public ResponseEntity<PageOfDocuments> searchByJson(SearchParameters param)
+        throws IOException, InterruptedException {
+
+        validateSearchParameters(param);
+
+        return Optional.of(db.get(convert(param)))
+            .map(results -> DocumentsFeedConverter.convert(results, param))
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
     private static Parameters convert(SearchParameters params) {
         var builder = Parameters.builder()
-            .type(params.types)
-            .year(params.year)
-            .startYear(params.startYear)
-            .endYear(params.endYear)
-            .title(params.title)
-            .subject(params.subject)
-            .language(params.language)
-            .published(params.published)
-            .text(params.q)
-            .sort(params.sort)
-            .page(params.page)
-            .pageSize(params.pageSize);
+            .type(params.getTypes())
+            .year(params.getYear())
+            .startYear(params.getStartYear())
+            .endYear(params.getEndYear())
+            .title(params.getTitle())
+            .subject(params.getSubject())
+            .language(params.getLanguage())
+            .published(params.getPublished())
+            .text(params.getQ())
+            .sort(params.getSort())
+            .page(params.getPage())
+            .pageSize(params.getPageSize());
         try {
-            NumberAndSeries.parse(params.number)
+            NumberAndSeries.parse(params.getNumber())
                 .ifPresent(x -> builder.number(x.number(), x.series()));
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());

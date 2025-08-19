@@ -2,129 +2,155 @@ package uk.gov.legislation.endpoints.search;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * Search parameters for legislation search endpoints.
+ * <p>
+ * Used as a {@code @ParameterObject} for Spring parameter binding from query parameters
+ * and for JSON serialization/deserialization. Note the special naming convention:
+ * {@code getTypes()}/{@code setType()} to handle the "type" parameter that can have multiple values.
+ */
 public class SearchParameters {
+
+    private List<String> types;
+    private Integer year;
+    private Integer startYear;
+    private Integer endYear;
+    private String number;
+    private String title;
+    private String subject;
+    private String language;
+    private LocalDate published;
+    private String q;
+    private Parameters.Sort sort;
+    private Integer page;
+    private Integer pageSize;
 
     @JsonProperty("type")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public List<String> types;
+    public List<String> getTypes() {
+        return types;
+    }
+
+    public void setType(List<String> types) {
+        this.types = types;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer year;
+    public Integer getYear() {
+        return year;
+    }
+
+    public void setYear(Integer year) {
+        this.year = year;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer startYear;
+    public Integer getStartYear() {
+        return startYear;
+    }
+
+    public void setStartYear(Integer startYear) {
+        this.startYear = startYear;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer endYear;
+    public Integer getEndYear() {
+        return endYear;
+    }
+
+    public void setEndYear(Integer endYear) {
+        this.endYear = endYear;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String number;
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String title;
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String subject;
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String language;
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public LocalDate published;
+    public LocalDate getPublished() {
+        return published;
+    }
+
+    public void setPublished(LocalDate published) {
+        this.published = published;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String q;
+    public String getQ() {
+        return q;
+    }
+
+    public void setQ(String q) {
+        this.q = q;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Parameters.Sort sort;
+    @Sort
+    public Parameters.Sort getSort() {
+        return sort;
+    }
+
+    public void setSort(Parameters.Sort sort) {
+        this.sort = sort;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer page;
+    @Schema(defaultValue = "1")
+    public Integer getPage() {
+        return page;
+    }
+
+    public void setPage(Integer page) {
+        this.page = page;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Integer pageSize;
+    @Schema(defaultValue = "20")
+    public Integer getPageSize() {
+        return pageSize;
+    }
 
-    public static SearchParameters.Builder builder() { return new SearchParameters.Builder(); }
-
-    public static class Builder {
-
-        private final SearchParameters params = new SearchParameters();
-
-        private Builder() { }
-
-        public SearchParameters.Builder types(List<String> types) {
-            params.types = types;
-            return this;
-        }
-
-        public SearchParameters.Builder year(Integer year) {
-            params.year = year;
-            return this;
-        }
-
-        public SearchParameters.Builder startYear(Integer year) {
-            params.startYear = year;
-            return this;
-        }
-
-        public SearchParameters.Builder endYear(Integer year) {
-            params.endYear = year;
-            return this;
-        }
-
-        public SearchParameters.Builder number(String num) {
-            params.number = num;
-            return this;
-        }
-
-        public SearchParameters.Builder title(String title) {
-            params.title = title;
-            return this;
-        }
-
-        public SearchParameters.Builder subject(String subject) {
-            params.subject = subject;
-            return this;
-        }
-        public SearchParameters.Builder language(String language) {
-            params.language = language;
-            return this;
-        }
-
-        public SearchParameters.Builder published(LocalDate published) {
-            params.published = published;
-            return this;
-        }
-
-        public SearchParameters.Builder q(String text) {
-            params.q = text;
-            return this;
-        }
-
-        public SearchParameters.Builder sort(Parameters.Sort sort) {
-            params.sort = sort;
-            return this;
-        }
-
-        public SearchParameters.Builder page(Integer page) {
-            params.page = page;
-            return this;
-        }
-
-        public SearchParameters.Builder pageSize(Integer pageSize) {
-            params.pageSize = pageSize;
-            return this;
-        }
-
-        public SearchParameters build() {
-            return params;
-        }
-
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 
 }
