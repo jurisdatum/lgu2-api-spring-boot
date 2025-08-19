@@ -85,6 +85,23 @@ public class Metadata {
         }
     }
 
+    /**
+     * Determines the appropriate version identifier for this legislation document or fragment.
+     *
+     * <p>The version logic follows these rules:
+     * <ol>
+     * <li>If no dct:valid date exists, this is an original (unrevised) version.
+     *     Returns the type-specific original version name (enacted, made, created, or adopted).</li>
+     * <li>If dct:valid date exists, this is a revised document that should have dated versions.
+     *     If no dated versions are found (defensive fallback), returns the dct:valid date.</li>
+     * <li>For document fragments: if dct:valid date is after the last actual revision date
+     *     (due to other document parts being amended more recently), returns the fragment's
+     *     last actual revision date instead of the overall document valid date.</li>
+     * <li>Otherwise, returns the dct:valid date as the current version.</li>
+     * </ol>
+     *
+     * @return the version identifier string (either a type-specific name or an ISO date)
+     */
     public String version() {
         if (valid == null)
             return FirstVersion.getFirstVersion(longType);
