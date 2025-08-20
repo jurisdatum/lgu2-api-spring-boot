@@ -77,10 +77,44 @@ public class Metadata {
     @JsonSetter("valid")
     public void setValid(String value) { valid = LocalDate.parse(value); }
 
+    private static Optional<LocalDate> tryParseDate(String s) {
+        try {
+            return Optional.of(LocalDate.parse(s));
+        } catch (DateTimeParseException e) {
+            return Optional.empty();
+        }
+    }
+
+    /**
+     * Determines the appropriate version identifier for this legislation document or fragment.
+     *
+     * <p>The version logic follows these rules:
+     * <ol>
+     * <li>If no dct:valid date exists, this is an original (unrevised) version.
+     *     Returns the type-specific original version name (enacted, made, created, or adopted).</li>
+     * <li>If dct:valid date exists, this is a revised document that should have dated versions.
+     *     If no dated versions are found (defensive fallback), returns the dct:valid date.</li>
+     * <li>For document fragments: if dct:valid date is after the last actual revision date
+     *     (due to other document parts being amended more recently), returns the fragment's
+     *     last actual revision date instead of the overall document valid date.</li>
+     * <li>Otherwise, returns the dct:valid date as the current version.</li>
+     * </ol>
+     *
+     * @return the version identifier string (either a type-specific name or an ISO date)
+     */
     public String version() {
-        if (valid != null)
+        if (valid == null)
+            return FirstVersion.getFirstVersion(longType);
+        Optional<LocalDate> last = versions().reversed().stream()
+            .map(Metadata::tryParseDate)
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .findFirst();
+        if (last.isEmpty())
             return valid.toString();
-        return FirstVersion.getFirstVersion(longType);
+        if (valid.isAfter(last.get()))
+            return last.get().toString();
+        return valid.toString();
     }
 
     public String status;
@@ -101,26 +135,38 @@ public class Metadata {
 
     private List<String> _versions;
 
-    public SortedSet<String> versions() {
-        SortedSet<String> set = new TreeSet<>(Versions.COMPARATOR);
-        set.addAll(_versions);
-        if (set.contains("current")) {
-            set.remove("current");
-            set.add(this.version());
-        }
-        if ("final".equals(status)) {
-            String first = FirstVersion.getFirstVersion(longType);
-            set.add(first);
-        }
-        return set;
-    }
-
     @JacksonXmlElementWrapper(localName = "hasVersions")
     @JacksonXmlProperty(localName = "hasVersion")
     @JsonSetter
     public void setVersions(List<String> value) { _versions = value; }
 
+    private TreeSet<String> _versions2;
 
+    private static final String REPEALED = " repealed";
+
+    public SortedSet<String> versions() {
+        if (_versions2 != null)
+            return _versions2;
+        _versions2 = new TreeSet<>(Versions.COMPARATOR);
+        _versions2.addAll(_versions);
+        if (_versions2.remove("current")) {
+            if (this.valid != null)
+                _versions2.add(this.valid.toString());  // TODO check
+        }
+        if ("final".equals(status)) {
+            String first = FirstVersion.getFirstVersion(longType);
+            _versions2.add(first);
+        }
+        if (!_versions2.isEmpty()) {
+            String last = _versions2.last();
+            if (last.endsWith(REPEALED)) {
+                _versions2.pollLast();
+                String base = last.substring(0, last.length() - REPEALED.length());
+                _versions2.add(base);
+            }
+        }
+        return _versions2;
+    }
 
     @JacksonXmlProperty
     public HasParts hasParts;
