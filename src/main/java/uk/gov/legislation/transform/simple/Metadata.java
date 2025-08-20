@@ -264,4 +264,71 @@ public class Metadata {
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     public List<Effect> rawEffects = Collections.emptyList();
 
+    /* notes|memorandum|executive-note|policy-note */
+
+    @JacksonXmlProperty(localName = "Notes", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public Notes notes;
+
+    public static class Notes {
+
+        @JacksonXmlElementWrapper(localName = "Alternatives", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        @JacksonXmlProperty(localName = "Alternative", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public List<Alternative> alternatives;
+
+        // ToDo there can be correction slips to notes?
+
+    }
+
+    @JacksonXmlElementWrapper(localName = "PolicyEqualityStatements", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "PolicyEqualityStatement", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> policyEqualityStatements;
+
+    @JacksonXmlElementWrapper(localName = "Alternatives", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "Alternative", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> alternatives;
+
+    @JacksonXmlElementWrapper(localName = "CorrectionSlips", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "CorrectionSlip", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> correctionSlips;
+
+    @JacksonXmlElementWrapper(localName = "CodesOfPractice", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "CodeOfPractice", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> codesOfPractice;
+
+    @JacksonXmlElementWrapper(localName = "CodesOfConduct", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "CodeOfConduct", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> codesOfConduct;
+
+    @JacksonXmlElementWrapper(localName = "TablesOfOrigins", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "TableOfOrigins", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> tablesOfOrigins;
+
+    @JacksonXmlElementWrapper(localName = "TablesOfDestinations", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "TableOfDestinations", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> tablesOfDestinations;
+
+    @JacksonXmlElementWrapper(localName = "OrdersInCouncil", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "OrderInCouncil", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> ordersInCouncil;
+
+    @JacksonXmlElementWrapper(localName = "ImpactAssessments", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "ImpactAssessment", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<ImpactAssessment> impactAssessments;
+
+    @JacksonXmlElementWrapper(localName = "OtherDocuments", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "OtherDocument", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> otherDocuments;
+
+    @JacksonXmlElementWrapper(localName = "ExplanatoryDocuments", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "ExplanatoryDocuments", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> explanatoryDocuments;
+
+    @JacksonXmlElementWrapper(localName = "TranspositionNotes", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "TranspositionNote", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<Alternative> transpositionNotes;
+
+    @JacksonXmlElementWrapper(localName = "UKRPCOpinions", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    @JacksonXmlProperty(localName = "UKRPCOpinion", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<ImpactAssessment> ukrpcOpinions;
+
 }

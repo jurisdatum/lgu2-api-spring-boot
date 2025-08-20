@@ -22,6 +22,14 @@
   "schedules" : true,
   "formats" : [ "xml", "pdf" ],
   "pointInTime" : null,
+  "alternatives" : [ {
+    "type" : "Alternative",
+    "uri" : "http://www.legislation.gov.uk/ukpga/2000/8/pdfs/ukpga_20000008_en.pdf",
+    "name" : "Print Version",
+    "date" : "2008-03-02",
+    "size" : null
+  } ],
+  "associated" : [ ],
   "fragment" : "schedule/6/paragraph/4A",
   "prev" : "schedule/6/paragraph/3E",
   "next" : "schedule/6/paragraph/4B",

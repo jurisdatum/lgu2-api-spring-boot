@@ -35,6 +35,20 @@
             <xsl:call-template name="fragment-info" />
         </xsl:if>
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" />
+        <xsl:apply-templates select="ukm:Notes" />
+        <xsl:apply-templates select="ukm:PolicyEqualityStatements" />
+        <xsl:apply-templates select="ukm:Alternatives" />
+        <xsl:apply-templates select="ukm:CorrectionSlips" />
+        <xsl:apply-templates select="ukm:CodesOfPractice" />
+        <xsl:apply-templates select="ukm:CodesOfConduct" />
+        <xsl:apply-templates select="ukm:TablesOfOrigins" />
+        <xsl:apply-templates select="ukm:TablesOfDestinations" />
+        <xsl:apply-templates select="ukm:OrdersInCouncil" />
+        <xsl:apply-templates select="ukm:ImpactAssessments" />
+        <xsl:apply-templates select="ukm:OtherDocuments" />
+        <xsl:apply-templates select="ukm:ExplanatoryDocuments" />
+        <xsl:apply-templates select="ukm:TranspositionNotes" />
+        <xsl:apply-templates select="ukm:UKRPCOpinions" />
     </meta>
 </xsl:template>
 

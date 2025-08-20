@@ -1953,5 +1953,24 @@
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
       </ukm:UnappliedEffects>
+      <ukm:Notes xmlns="http://www.legislation.gov.uk/namespaces/legislation"
+                 xmlns:atom="http://www.w3.org/2005/Atom"
+                 xmlns:dc="http://purl.org/dc/elements/1.1/"
+                 xmlns:dct="http://purl.org/dc/terms/"
+                 xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ukm:Note IdURI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/notes"
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/section/91/notes"/>
+      </ukm:Notes>
+      <ukm:Alternatives xmlns="http://www.legislation.gov.uk/namespaces/legislation"
+                        xmlns:atom="http://www.w3.org/2005/Atom"
+                        xmlns:dc="http://purl.org/dc/elements/1.1/"
+                        xmlns:dct="http://purl.org/dc/terms/"
+                        xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+         <ukm:Alternative Date="2008-03-02"
+                          URI="http://www.legislation.gov.uk/ukpga/2000/8/pdfs/ukpga_20000008_en.pdf"
+                          Title="Print Version"/>
+      </ukm:Alternatives>
    </meta>
 </leg>

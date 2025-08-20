@@ -3,6 +3,7 @@ package uk.gov.legislation.api.responses;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.api.responses.meta.AssociatedDocument;
 import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
@@ -108,5 +109,13 @@ public abstract class CommonMetadata {
         public boolean note;
 
     }
+
+    @JsonProperty
+    @Schema(description = "alternative formats")
+    public List<AssociatedDocument> alternatives;
+
+    @JsonProperty
+    @Schema(description = "associated documents, e.g., explanatory notes, impact assessments, correction slips, etc.")
+    public List<AssociatedDocument> associated;
 
 }

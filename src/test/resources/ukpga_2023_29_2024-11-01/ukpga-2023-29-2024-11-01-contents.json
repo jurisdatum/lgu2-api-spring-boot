@@ -23,6 +23,26 @@
     "schedules" : true,
     "formats" : [ "xml", "pdf" ],
     "pointInTime" : "2024-11-01",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpga_20230029_en.pdf",
+      "name" : null,
+      "date" : "2023-07-10",
+      "size" : 1839003
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpgaen_20230029_en.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2023-08-29",
+      "size" : 2946678
+    }, {
+      "type" : "CorrectionSlip",
+      "uri" : "http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpgacs_20230029_en_001.pdf",
+      "name" : "Correction Slip",
+      "date" : "2024-04-11",
+      "size" : 113253
+    } ],
     "unappliedEffects" : [ {
       "applied" : false,
       "required" : true,
