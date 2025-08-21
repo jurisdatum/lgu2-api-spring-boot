@@ -31,7 +31,7 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
     
     - name: Build with Maven
-      run: ./mvnw clean package -DskipTests
+      run: mvn clean package -DskipTests
     
     - name: Generate deployment info
       id: deployment-info
