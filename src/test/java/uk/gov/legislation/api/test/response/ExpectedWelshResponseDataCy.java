@@ -22,7 +22,8 @@ public class ExpectedWelshResponseDataCy {
                  "versions": ["made"],
                  "schedules": false,
                  "formats": [
-                     "xml"
+                     "xml",
+                     "pdf"
                  ],
                  "pointInTime" : null,
                  "unappliedEffects": [],
@@ -52,7 +53,8 @@ public class ExpectedWelshResponseDataCy {
                         "versions": ["made"],
                         "schedules": false,
                         "formats": [
-                            "xml"
+                            "xml",
+                            "pdf"
                         ],
                         "pointInTime" : null,
                         "unappliedEffects": [],
@@ -104,7 +106,8 @@ public class ExpectedWelshResponseDataCy {
                           "versions": ["made"],
                           "schedules": false,
                           "formats": [
-                              "xml"
+                              "xml",
+                              "pdf"
                           ],
                           "fragment": "regulation/2",
                           "prev": "regulation/1",
