@@ -1,0 +1,82 @@
+name: Deploy to AWS Elastic Beanstalk
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    
+    permissions:
+      id-token: write   # Required for AWS OIDC
+      contents: read    # Required to checkout code
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up JDK 21
+      uses: actions/setup-java@v4
+      with:
+        java-version: '21'
+        distribution: 'corretto'
+    
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+        role-session-name: GitHubActions-Deploy
+        aws-region: ${{ secrets.AWS_REGION }}
+    
+    - name: Build with Maven
+      run: mvn clean package -DskipTests
+    
+    - name: Generate deployment info
+      id: deployment-info
+      run: |
+        TIMESTAMP=$(date +%Y%m%d%H%M%S)
+        COMMIT_SHA=$(git rev-parse --short HEAD)
+        VERSION_LABEL="api-${TIMESTAMP}-${COMMIT_SHA}"
+        JAR_NAME="api-${TIMESTAMP}.jar"
+        echo "version-label=${VERSION_LABEL}" >> $GITHUB_OUTPUT
+        echo "jar-name=${JAR_NAME}" >> $GITHUB_OUTPUT
+        echo "timestamp=${TIMESTAMP}" >> $GITHUB_OUTPUT
+    
+    - name: Upload JAR to S3
+      run: |
+        cp target/*.jar ${{ steps.deployment-info.outputs.jar-name }}
+        aws s3 cp ${{ steps.deployment-info.outputs.jar-name }} s3://lgu2-code/api/
+    
+    - name: Create Elastic Beanstalk application version
+      run: |
+        aws elasticbeanstalk create-application-version \
+          --application-name LGU2-Middle-Tier \
+          --version-label ${{ steps.deployment-info.outputs.version-label }} \
+          --source-bundle S3Bucket=lgu2-code,S3Key=api/${{ steps.deployment-info.outputs.jar-name }} \
+          --description "Deployed from GitHub Actions - commit ${{ github.sha }}"
+    
+    - name: Deploy to Elastic Beanstalk
+      run: |
+        aws elasticbeanstalk update-environment \
+          --application-name LGU2-Middle-Tier \
+          --environment-name LGU2-Middle-Tier \
+          --version-label ${{ steps.deployment-info.outputs.version-label }}
+    
+    - name: Wait for deployment to complete
+      run: |
+        echo "Waiting for deployment to complete..."
+        aws elasticbeanstalk wait environment-updated \
+          --application-name LGU2-Middle-Tier \
+          --environment-name LGU2-Middle-Tier
+        echo "Deployment completed successfully!"
+    
+    - name: Get environment URL
+      run: |
+        CNAME=$(aws elasticbeanstalk describe-environments \
+          --application-name LGU2-Middle-Tier \
+          --environment-names LGU2-Middle-Tier \
+          --query 'Environments[0].CNAME' \
+          --output text)
+        echo "🚀 Application deployed to: http://${CNAME}"
