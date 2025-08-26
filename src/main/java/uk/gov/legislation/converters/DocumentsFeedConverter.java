@@ -139,13 +139,13 @@ public class DocumentsFeedConverter {
             .orElse(null);
     }
 
-    private static List<String> getFormats(List<SearchResults.Link> links) {
+    private static SortedSet<String> getFormats(List<SearchResults.Link> links) {
         return links.stream()
             .filter(l -> "alternate".equals(l.rel))
             .map(l -> l.type)
             .filter(t -> "application/xml".equals(t) || "application/pdf".equals(t))
             .map(t -> t.substring(12))
-            .toList();
+            .collect(Collectors.toCollection(TreeSet::new));
     }
 
 }

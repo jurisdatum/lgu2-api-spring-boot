@@ -366,7 +366,7 @@
     "published" : "2024-11-07T16:20:25.454689Z",
     "updated" : "2024-11-07T16:40:51Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "wsi/2024/1129",
     "longType" : "WelshStatutoryInstrument",
@@ -384,7 +384,7 @@
     "published" : "2024-11-08T03:04:28.236314Z",
     "updated" : "2024-11-08T03:09:23Z",
     "version" : "made",
-    "formats" : [ "pdf", "pdf" ]
+    "formats" : [ "pdf" ]
   }, {
     "id" : "wsi/2024/1126",
     "longType" : "WelshStatutoryInstrument",
@@ -403,7 +403,7 @@
     "published" : "2024-11-07T13:23:34.489155Z",
     "updated" : "2024-11-07T15:09:37Z",
     "version" : "made",
-    "formats" : [ "xml", "xml", "pdf", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1122",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -418,7 +418,7 @@
     "published" : "2024-11-07T10:41:52.870972Z",
     "updated" : "2024-11-07T10:57:07Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "wsi/2024/1121",
     "longType" : "WelshStatutoryInstrument",
@@ -455,7 +455,7 @@
     "published" : "2024-11-07T09:51:06.927897Z",
     "updated" : "2024-11-07T10:01:11Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "wsi/2024/1119",
     "longType" : "WelshStatutoryInstrument",
@@ -474,7 +474,7 @@
     "published" : "2024-11-08T13:11:55.912895Z",
     "updated" : "2024-11-08T13:12:04Z",
     "version" : "made",
-    "formats" : [ "xml", "xml", "pdf", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1118",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -489,7 +489,7 @@
     "published" : "2024-11-07T09:15:38.233155Z",
     "updated" : "2024-11-07T09:25:49Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1116",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -504,7 +504,7 @@
     "published" : "2024-11-07T13:38:41.595156Z",
     "updated" : "2024-11-07T13:43:52Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1115",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -519,7 +519,7 @@
     "published" : "2024-11-07T12:12:47.474738Z",
     "updated" : "2024-11-07T12:17:44Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1114",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -534,7 +534,7 @@
     "published" : "2024-11-07T13:38:50.801294Z",
     "updated" : "2024-11-07T13:44:01Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1113",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -549,7 +549,7 @@
     "published" : "2024-11-07T13:23:24.95671Z",
     "updated" : "2024-11-07T13:28:32Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1112",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -564,7 +564,7 @@
     "published" : "2024-11-07T12:17:53.250955Z",
     "updated" : "2024-11-07T12:22:51Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1111",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -579,7 +579,7 @@
     "published" : "2024-11-07T12:07:39.061044Z",
     "updated" : "2024-11-07T12:13:06Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1110",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -594,7 +594,7 @@
     "published" : "2024-11-06T15:57:41.564173Z",
     "updated" : "2024-11-06T16:02:39Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "wsi/2024/1109",
     "longType" : "WelshStatutoryInstrument",
@@ -613,7 +613,7 @@
     "published" : "2024-11-08T13:11:45.373078Z",
     "updated" : "2024-11-08T13:11:46Z",
     "version" : "made",
-    "formats" : [ "xml", "xml", "pdf", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1108",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -631,7 +631,7 @@
     "published" : "2024-11-06T10:54:39.588789Z",
     "updated" : "2024-11-06T11:25:05Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   }, {
     "id" : "uksi/2024/1106",
     "longType" : "UnitedKingdomStatutoryInstrument",
@@ -646,6 +646,6 @@
     "published" : "2024-11-05T16:32:40.605665Z",
     "updated" : "2024-11-10T00:10:00Z",
     "version" : "made",
-    "formats" : [ "xml", "pdf" ]
+    "formats" : [ "pdf", "xml" ]
   } ]
 }
