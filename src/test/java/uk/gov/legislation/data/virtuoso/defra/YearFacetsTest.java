@@ -62,6 +62,32 @@ import static org.mockito.Mockito.when;
                    }
                """,
                List.of()
+           ),
+           // Test case to validate year-descending sort behavior.
+           // 2023 should come before 2019 even though the input has 2019 first.
+           // This proves results are sorted by year descending, not input order.
+           new ValidTestCase(
+               "out of order years",
+               """
+                   {
+                       "results": {
+                           "bindings": [
+                               {
+                                   "year": { "value": "2019" },
+                                   "cnt": { "value": "8" }
+                               },
+                               {
+                                   "year": { "value": "2023" },
+                                   "cnt": { "value": "12" }
+                               }
+                           ]
+                       }
+                   }
+               """,
+               List.of(
+                   new CountExpectation(2023, 12),
+                   new CountExpectation(2019, 8)
+               )
            )
        );
     }
