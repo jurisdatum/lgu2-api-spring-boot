@@ -7,6 +7,7 @@ import uk.gov.legislation.endpoints.search.SearchParameters;
 import java.time.ZonedDateTime;
 import java.util.Collection;
 import java.util.List;
+import java.util.SortedSet;
 
 public class PageOfDocuments {
 
@@ -136,7 +137,7 @@ public class PageOfDocuments {
         public String version;
 
         @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
-        public List<String> formats;
+        public SortedSet<String> formats;
 
     }
 
