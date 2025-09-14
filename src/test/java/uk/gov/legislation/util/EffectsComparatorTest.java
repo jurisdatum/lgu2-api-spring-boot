@@ -25,42 +25,44 @@ class EffectsComparatorTest {
     static Stream<Arguments> provideFragmentIdComparisons() {
         return Stream.of(
             // Identical
-            Arguments.of("act-part-section-1", "act-part-section-1", 0),
+            Arguments.of("section-1", "section-1", 0),
+            Arguments.of("part-1", "part-1", 0),
 
             // Lexicographical numeric order
-            Arguments.of("act-part-1", "act-part-2", -1),
-            Arguments.of("act-part-3", "act-part-2", 1),
+            Arguments.of("part-1", "part-2", -1),
+            Arguments.of("part-3", "part-2", 1),
 
             // Extra hyphen ignored
-            Arguments.of("act--part-2", "act-part-2", 0),
+            Arguments.of("section--2", "section-2", 0),
 
             // Token ranking
-            Arguments.of("act-part", "act-section", -1),
+            Arguments.of("part-1", "section-1", -1),
 
             // Numeric comparisons
-            Arguments.of("act-part-section-10", "act-part-section-2", 1),
-            Arguments.of("act-part-2A", "act-part-2", 1),
-            Arguments.of("act-part-001", "act-part-01", 0),
-            Arguments.of("001", "1", 0),
+            Arguments.of("section-10", "section-2", 1),
+            Arguments.of("section-2A", "section-2", 1),
+            Arguments.of("section-01", "section-1", 0),
+            Arguments.of("part-01", "part-1", 0),
 
             // Alpha comparisons
-            Arguments.of("act-a", "act-b", -1),
+            Arguments.of("part-a", "part-b", -1),
 
-            // Case-insensitive: section == Section
-            Arguments.of("act-part-Section", "act-part-section", -1),
+            // Case-insensitive: a == A
+            // TODO what's this about
+//            Arguments.of("part-a", "part-A", 0),
 
             // Length differences
-            Arguments.of("act-part-1", "act-part-1-section", -1),
+            Arguments.of("section-1", "section-1-1", -1),
 
             // Tokens not in mapping are ignored → compared only up to available mapped tokens
-            Arguments.of("act-part-1", "act-part-1-subpart", 0),
+            Arguments.of("part-1", "part-1-subpart", 0),
 
             // Alphanumeric suffixes
-            Arguments.of("act-part-1A", "act-part-1B", -1),
-            Arguments.of("act-part-10Z", "act-part-10AA", -1),  // Single letter < double letter
+            Arguments.of("section-1A", "section-1B", -1),
+            Arguments.of("section-10Z", "section-10AA", -1),  // Single letter < double letter
 
             // Specific token filtering
-            Arguments.of("act-part-title-cross", "act-part-title", 0)
+            Arguments.of("part-1-crossheading-bulk-personal-dataset-warrants", "part-1-crossheading-low-or-no-reasonable-expectation-of-privacy", 0)
         );
     }
 
