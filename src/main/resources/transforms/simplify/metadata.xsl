@@ -282,12 +282,27 @@
     <fragment>
         <xsl:value-of select="dc:identifier" />
     </fragment>
-    <prev>
-        <xsl:value-of select="atom:link[@rel='prev']/@href" />
-    </prev>
-    <next>
-        <xsl:value-of select="atom:link[@rel='next']/@href" />
-    </next>
+    <!--
+         Capture the raw @title from Atom prev/next links. MarkLogic
+         generates a semicolon-separated list of label components.
+         The API currently exposes only the first component as the label.
+    -->
+    <xsl:if test="exists(atom:link[@rel='prev'])">
+        <prev>
+            <xsl:value-of select="atom:link[@rel='prev']/@href" />
+        </prev>
+        <prevTitle>
+            <xsl:value-of select="atom:link[@rel='prev']/@title" />
+        </prevTitle>
+    </xsl:if>
+    <xsl:if test="exists(atom:link[@rel='next'])">
+        <next>
+            <xsl:value-of select="atom:link[@rel='next']/@href" />
+        </next>
+        <nextTitle>
+            <xsl:value-of select="atom:link[@rel='next']/@title" />
+        </nextTitle>
+    </xsl:if>
     <ancestors>
         <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
             <xsl:call-template name="ancestor-or-descendant">

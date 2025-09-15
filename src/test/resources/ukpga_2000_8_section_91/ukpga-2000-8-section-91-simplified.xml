@@ -38,7 +38,9 @@
       </formats>
       <fragment>http://www.legislation.gov.uk/ukpga/2000/8/section/91</fragment>
       <prev>http://www.legislation.gov.uk/ukpga/2000/8/section/90B</prev>
+      <prevTitle>Provision; Section 90B</prevTitle>
       <next>http://www.legislation.gov.uk/ukpga/2000/8/section/92</next>
+      <nextTitle>Provision; Section 92</nextTitle>
       <ancestors>
          <ancestor name="Part"
                    id="part-VI"

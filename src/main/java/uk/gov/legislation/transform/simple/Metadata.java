@@ -8,6 +8,7 @@ import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.Versions;
 
+import java.net.URI;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 import java.util.*;
@@ -223,20 +224,60 @@ public class Metadata {
 
     /* fragment info */
 
+    public URI fragmentUri;
     private String fragment;
-    public String fragment() { return fragment; }
-    @JsonSetter("fragment")
-    public void setFragment(String value) { fragment = Links.extractFragmentIdentifierFromLink(value); }
 
+    @Deprecated(forRemoval = true)
+    public String fragment() { return fragment; }
+
+    @JsonSetter("fragment")
+    public void setFragment(String value) {
+        fragmentUri = URI.create(value);
+        fragment = Links.extractFragmentIdentifierFromLink(value);
+    }
+
+    /* info for prev and next links */
+
+    public URI prevUri;
     private String prev;
+
+    @Deprecated(forRemoval = true)  // use prevUri
     public String prev() { return prev; }
     @JsonSetter("prev")
-    public void setPrev(String value) { prev = Links.extractFragmentIdentifierFromLink(value); }
 
-    private String next;
+    public void setPrev(String value) {
+        prevUri = URI.create(value);
+        prev = Links.extractFragmentIdentifierFromLink(value);
+    }
+
+    /**
+     * Raw label string from the Atom {@code link[@rel='prev']/@title} attribute.
+     * The MarkLogic script generates this as a semicolon‑separated list of
+     * components (e.g. "Provision; Section 2"). The converter uses only the
+     * first component as the API label for now.
+     */
+    @JacksonXmlProperty
+    public String prevTitle;
+
+    public URI nextUri;
+    private String next;  // to remove
+
+    @Deprecated(forRemoval = true)  // use nextUri
     public String next() { return next; }
     @JsonSetter("next")
-    public void setNext(String value) { next = Links.extractFragmentIdentifierFromLink(value); }
+
+    public void setNext(String value) {
+        nextUri = URI.create(value);
+        next = Links.extractFragmentIdentifierFromLink(value);
+    }
+
+    /**
+     * Raw label string from the Atom {@code link[@rel='next']/@title} attribute.
+     * Like {@link #prevTitle}, this is semicolon‑separated; only the first
+     * component is exposed by the API at present.
+     */
+    @JacksonXmlProperty
+    public String nextTitle;
 
     /* ancestors and descendants */
 
