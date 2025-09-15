@@ -15,16 +15,15 @@
 	xmlns:ldapp="#ldapp"
 	exclude-result-prefixes="xs math ukl ukm uk html fo local ldapp">
 
-<xsl:param name="standalone" as="xs:boolean" select="true()" />
-<xsl:param name="css-path" as="xs:string" select="''" />
-<xsl:param name="images-path" as="xs:string" select="'/static/lgu1/images/'" />
+<xsl:param name="css-path" as="xs:string" select="'/sites/all/themes/vsrs/css/pages/'" />
+<xsl:param name="images-path" as="xs:string" select="'/images/'" />
 <xsl:param name="ldapp" as="xs:boolean" select="ldapp:is-ldapp(.)" />
 
 <xsl:include href="ldapp.xsl" />
 <xsl:include href="annotations.xsl" />
 <xsl:include href="repeals.xsl" />
 
-<xsl:output method="html" include-content-type="no" encoding="utf-8" indent="yes" omit-xml-declaration="yes" />
+<xsl:output method="xml" include-content-type="no" encoding="utf-8" indent="yes"  omit-xml-declaration="yes"/>
 
 <xsl:strip-space elements="*" />
 <xsl:preserve-space elements="block p docTitle docNumber docDate num heading subheading ref def term abbr date inline b i u sup sub span a mod quotedText ins" />
@@ -49,7 +48,6 @@
 <xsl:key name="note" match="note" use="@eId" />
 <xsl:key name="note-ref" match="noteRef" use="substring(@href, 2)" />
 
-
 <xsl:variable name="doc-short-type" as="xs:string" select="/akomaNtoso/*/@name" />
 
 <xsl:function name="local:doc-category-from-short-type" as="xs:string?">
@@ -66,6 +64,9 @@
 		</xsl:when>
 		<xsl:when test="$short-type = $eu-short-types">
 			<xsl:sequence select="'euretained'" />
+		</xsl:when>
+		<xsl:when test="$short-type = ('ExplanatoryMemorandum', 'ExplanatoryNote')">
+			<xsl:sequence select="'secondary'" />
 		</xsl:when>
 	</xsl:choose>
 </xsl:function>
@@ -95,9 +96,9 @@
 <xsl:template name="add-extent-attribute">
 	<xsl:if test="exists(self::act) or exists(@eId)">
 		<xsl:variable name="id" as="xs:string?" select="@eId" />
-		<xsl:variable name="restriction" as="element()?" select="key('extent-restrictions', $id)" />
+		<xsl:variable name="restriction" as="element()*" select="key('extent-restrictions', $id)" />
 		<xsl:if test="exists($restriction)">
-			<xsl:variable name="extent" as="element(TLCLocation)" select="key('id', substring($restriction/@refersTo, 2))" />
+		  <xsl:variable name="extent" as="element(TLCLocation)" select="key('id', substring($restriction[1]/@refersTo, 2))" />
 			<xsl:attribute name="data-x-extent">
 				<xsl:value-of select="$extent/@showAs" />
 			</xsl:attribute>
@@ -110,9 +111,9 @@
 <xsl:template name="add-restrict-date-attributes">
 	<xsl:if test="exists(self::act) or exists(@eId)">
 		<xsl:variable name="id" as="xs:string?" select="@eId" />
-		<xsl:variable name="restriction" as="element()?" select="key('temporal-restrictions', $id)" />
+	  <xsl:variable name="restriction" as="element()*" select="key('temporal-restrictions', $id)" />
 		<xsl:if test="exists($restriction)">
-			<xsl:variable name="group" as="element(temporalGroup)" select="key('id', substring($restriction/@refersTo, 2))" />
+		  <xsl:variable name="group" as="element(temporalGroup)" select="key('id', substring($restriction[1]/@refersTo, 2))" />
 			<xsl:variable name="interval" as="element(timeInterval)" select="$group/*" />
 			<xsl:if test="exists($interval/@start)">
 				<xsl:variable name="event" as="element(eventRef)" select="key('id', substring($interval/@start, 2))" />
@@ -141,8 +142,8 @@
 <xsl:template name="add-status-attribute">
 	<xsl:if test="exists(@eId)">
 		<xsl:variable name="id" as="xs:string" select="@eId" />
-		<xsl:variable name="status" as="element(uk:status)?" select="key('status', $id)" />
-		<xsl:variable name="concept" as="element(TLCConcept)?" select="key('tlc-concept', substring($status/@refersTo, 2))" />
+		<xsl:variable name="status" as="element(uk:status)*" select="key('status', $id)" />
+		<xsl:variable name="concept" as="element(TLCConcept)?" select="key('tlc-concept', substring($status[1]/@refersTo, 2))" />
 		<xsl:if test="exists($concept)">
 			<xsl:attribute name="data-x-status">
 				<xsl:value-of select="$concept/@showAs" />
@@ -156,7 +157,7 @@
 <xsl:template name="add-confers-power-attribute">
 	<xsl:if test="exists(self::act) or exists(@eId)">
 		<xsl:variable name="id" as="xs:string?" select="@eId" />
-		<xsl:variable name="restriction" as="element(uk:confersPower)?" select="key('confers-power', $id)" />
+		<xsl:variable name="restriction" as="element(uk:confersPower)*" select="key('confers-power', $id)" />
 		<xsl:if test="exists($restriction)">
 			<xsl:attribute name="data-x-confers-power">
 				<xsl:text>true</xsl:text>
@@ -187,7 +188,9 @@
 
 <!-- templates -->
 
-<xsl:template match="akomaNtoso[$standalone = true()]">
+<xsl:template match="akomaNtoso">
+	<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
+</xsl:text>
 	<html>
 		<head>
 			<meta charset="utf-8" />
@@ -224,47 +227,18 @@
 				<xsl:with-param name="effective-document-category" select="$doc-category" tunnel="yes" />
 				<xsl:with-param name="within-schedule" select="false()" tunnel="yes" />
 			</xsl:apply-templates>
-<!--			<xsl:call-template name="footnotes" />-->
+			<xsl:call-template name="footnotes" />
 		</body>
 	</html>
 </xsl:template>
 
-<xsl:template match="akomaNtoso[$standalone = false()]">
-	<xsl:apply-templates>
-		<xsl:with-param name="effective-document-category" select="$doc-category" tunnel="yes" />
-		<xsl:with-param name="within-schedule" select="false()" tunnel="yes" />
-	</xsl:apply-templates>
-<!--			<xsl:call-template name="footnotes" />-->
-</xsl:template>
-
-<!--<xsl:variable name="document-title">-->
-<!--	<xsl:choose>-->
-<!--		<xsl:when test="//shortTitle">-->
-<!--			<xsl:value-of select="(//shortTitle)[1]" />-->
-<!--		</xsl:when>-->
-<!--		<xsl:when test="//docTitle">-->
-<!--			<xsl:value-of select="(//docTitle)[1]" />-->
-<!--		</xsl:when>-->
-<!--		<xsl:otherwise>-->
-<!--			<xsl:value-of select="//FRBRWork/FRBRthis/@value" />-->
-<!--		</xsl:otherwise>-->
-<!--	</xsl:choose>-->
-<!--</xsl:variable>-->
 
 <!-- document types -->
 
 <xsl:template match="act">
-	<article>
-		<xsl:attribute name="class">
-			<xsl:value-of select="local-name()" />
-			<xsl:text> </xsl:text>
-			<xsl:value-of select="$doc-category" />
-			<xsl:text> </xsl:text>
-			<xsl:value-of select="@name" />
-		</xsl:attribute>
+	<article class="{ string-join((local-name(), $doc-category, @name), ' ') }">
 		<xsl:call-template name="add-restrict-attributes" />
 		<xsl:apply-templates />
-		<xsl:call-template name="footnotes" />
 	</article>
 </xsl:template>
 
@@ -272,11 +246,9 @@
 <!-- metadata -->
 
 <xsl:template match="meta">
-	<xsl:if test="$standalone">
-		<div class="meta" vocab="{namespace-uri()}/" style="display:none">
-			<xsl:apply-templates select="identification" />
-		</div>
-	</xsl:if>
+	<div class="meta" vocab="{namespace-uri()}/" style="display:none">
+		<xsl:apply-templates select="identification" />
+	</div>
 </xsl:template>
 
 <xsl:template match="meta/*">
@@ -350,12 +322,13 @@
 	</div>
 </xsl:template>
 
+<!-- adapted from legislation-primary.xsl in tna.legislation.transformations.clml-html-fo/src/legislation/html -->
 <xsl:template name="add-crest">
 	<xsl:if test="$doc-category = 'primary'">
 		<p class="crest">
 			<xsl:choose>
 				<xsl:when test="$doc-short-type = 'asp'">
-					<img src="{ concat($images-path, 'crests/asp.gif') }" alt="Royal arms" title="Royal arms" width="150" height="133"/>
+					<img src="{ concat($images-path, 'crests/scottishroyalarm.gif') }" alt="Royal arms" title="Royal arms" width="150" height="133"/>
 				</xsl:when>
 				<xsl:when test="$doc-short-type = 'mwa'">
 					<img src="{ concat($images-path, 'crests/mwa.gif') }" alt="Welsh Royal arms" title="Welsh Royal arms" width="147" height="188"/>
@@ -532,7 +505,7 @@
 	<xsl:param name="indent" as="xs:integer" select="0" tunnel="yes" />
 	<xsl:call-template name="p3">
 		<xsl:with-param name="class" select="if (empty(num)) then 'no-num' else ()" />
-	<xsl:with-param name="indent" select="$indent" tunnel="yes" />
+		<xsl:with-param name="indent" select="$indent" tunnel="yes" />
 	</xsl:call-template>
 </xsl:template>
 
@@ -556,10 +529,10 @@
 			</h2>
 			<xsl:apply-templates select="num/authorialNote[@class='referenceNote']" />
 		</xsl:if>
+		<xsl:call-template name="annotations" />
 		<xsl:apply-templates select="*[not(self::num) and not(self::heading) and not(self::subheading)]">
 			<xsl:with-param name="within-prospective" select="$is-prospective or $within-prospective" tunnel="yes" />
 		</xsl:apply-templates>
-		<xsl:call-template name="annotations" />
 	</section>
 </xsl:template>
 
@@ -578,7 +551,7 @@
 			</xsl:with-param>
 		</xsl:call-template>
 		<h2>
-			<xsl:apply-templates select="num | heading | subheading" />
+			<xsl:apply-templates select="num | heading | subheading" />			
 		</h2>
 		<xsl:apply-templates select="*[not(self::num) and not(self::heading) and not(self::subheading)]">
 			<xsl:with-param name="indent" select="1" tunnel="yes" />	<!-- this isn't correct for secondary uk legislation -->
@@ -594,7 +567,7 @@
 	<section>
 		<xsl:call-template name="attrs" />
 		<h2>
-			<xsl:apply-templates select="num | heading | subheading" />
+			<xsl:apply-templates select="num | heading | subheading" />			
 		</h2>
 		<xsl:apply-templates select="*[not(self::num) and not(self::heading) and not(self::subheading)]">
 			<xsl:with-param name="indent" select="2" tunnel="yes" />
@@ -615,7 +588,7 @@
 		</xsl:call-template>
 		<xsl:if test="num | heading | subheading">	<!-- needed b/c this template is now used as default for hcontainer -->
 			<xsl:element name="h{$plevel}">
-				<xsl:apply-templates select="num | heading | subheading" />
+				<xsl:apply-templates select="num | heading | subheading" />			
 			</xsl:element>
 		</xsl:if>
 		<xsl:apply-templates select="*[not(self::num) and not(self::heading) and not(self::subheading)]">
@@ -973,7 +946,7 @@
 			<xsl:choose>
 				<xsl:when test="$indent gt 0 and exists(@class)">
 					<xsl:sequence select="concat(@class, ' level-', string($indent))" />
-					</xsl:when>
+				</xsl:when>
 				<xsl:when test="$indent gt 0">
 					<xsl:sequence select="concat('level-', string($indent))" />
 				</xsl:when>
@@ -1090,13 +1063,13 @@
 			<xsl:otherwise>
 				<xsl:apply-templates />
 			</xsl:otherwise>
-		</xsl:choose>
+		</xsl:choose> 
 	</xsl:element>
 </xsl:template>
 
 <xsl:template match="math:semantics">
 	<xsl:element name="{local-name()}">
-		<xsl:copy-of select="@*"/>
+		<xsl:copy-of select="@*"/> 
 		<xsl:apply-templates />
 		<xsl:if test="../@altimg">
 			<annotation-xml encoding="MathML-Presentation">
@@ -1108,7 +1081,7 @@
 
 <xsl:template match="math:*">
 	<xsl:element name="{local-name()}">
-		<xsl:copy-of select="@*" />
+		<xsl:copy-of select="@*" /> 
 		<xsl:apply-templates />
 	</xsl:element>
 </xsl:template>
@@ -1129,13 +1102,13 @@
 <xsl:template match="noteRef">
 	<xsl:choose>
 		<xsl:when test="@uk:name = 'commentary' or tokenize(@class, ' ') = 'commentary'">
-			<xsl:variable name="commentary" as="element(note)?" select="key('id', substring(@href, 2))" />
+			<xsl:variable name="commentary" as="element(note)*" select="key('id', substring(@href, 2))" />
 			<xsl:choose>
 				<xsl:when test="$commentary/@ukl:Type='F'">
 					<a class="fnRef" id="ref-{ substring(@href, 2) }" href="{ @href }">
 						<xsl:call-template name="add-class-attribute" />
 						<xsl:apply-templates select="@* except (@href, @class)" />
-						<xsl:value-of select="$commentary/@marker" />
+						<xsl:value-of select="($commentary[@ukl:Type='F'])[1]/@marker" />
 					</a>
 				</xsl:when>
 				<xsl:otherwise>
@@ -1145,7 +1118,7 @@
 						<xsl:value-of select="$commentary/@marker" />
 					</span>
 				</xsl:otherwise>
-				</xsl:choose>
+			</xsl:choose>
 		</xsl:when>
 		<xsl:when test="exists(ancestor::ref)">
 			<span>

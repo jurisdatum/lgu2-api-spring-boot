@@ -9,9 +9,10 @@
 	xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:local="http://www.jurisdatum.com/tna/clml2akn"
-	exclude-result-prefixes="xs local">
+	xmlns:saxon="http://saxon.sf.net/"
+	exclude-result-prefixes="xs local saxon">
 
-<xsl:output method="xml" version="1.0" encoding="utf-8" omit-xml-declaration="no" indent="yes" suppress-indentation="block p num heading subheading" />
+<xsl:output method="xml" version="1.0" encoding="utf-8" omit-xml-declaration="no" indent="yes" saxon:suppress-indentation="block p num heading subheading" />
 
 <xsl:strip-space elements="*" />
 <xsl:preserve-space elements="Text Emphasis Strong Underline SmallCaps Superior Inferior Uppercase Underline Expanded Strike Definition Proviso Abbreviation Acronym Term Span Citation CitationSubRef InternalLink ExternalLink InlineAmendment Addition Substitution Repeal" />
@@ -75,8 +76,8 @@
 		</conclusions>
 	</xsl:if>
 	<xsl:if test="exists(*[not(self::PrimaryPrelims) and not(self::Body) and not(self::Appendix) and not(self::Schedules) and not(self::ExplanatoryNotes) and not (self::Include)])">
-		<xsl:message terminate="yes">
-			<xsl:sequence select="*/local-name()" />
+		<xsl:message terminate="no">
+			<xsl:text>UNEXPECTED ELEMENT FOUND IN PRIMARY OUTPUT: </xsl:text><xsl:sequence select="*/local-name()" />
 		</xsl:message>
 	</xsl:if>
 </xsl:template>
@@ -99,8 +100,8 @@
 		</conclusions>
 	</xsl:if>
 	<xsl:if test="exists(*[not(self::SecondaryPrelims) and not(self::Body) and not(self::Appendix) and not(self::Schedules) and not(self::ExplanatoryNotes) and not(self::EarlierOrders) and not (self::Include)])">
-		<xsl:message terminate="yes">
-			<xsl:sequence select="*/local-name()" />
+		<xsl:message terminate="no">
+			<xsl:text>UNEXPECTED ELEMENT FOUND IN SECONDARY OUTPUT: </xsl:text><xsl:sequence select="*/local-name()" />
 		</xsl:message>
 	</xsl:if>
 </xsl:template>
@@ -146,16 +147,13 @@
 </xsl:template>
 
 
-<!-- FixMe: this should someday be removed -->
-<xsl:template match="Q{http://www.tso.co.uk/assets/namespace/error}Warning" />
-
-
 <!-- default -->
 
 <xsl:template match="*">
-	<xsl:message terminate="yes">
-		<xsl:sequence select="." />
+	<xsl:message terminate="no">
+		NO TEMPLATE MATCH FOR: <xsl:sequence select="." />
 	</xsl:message>
+	<xsl:apply-templates/>
 </xsl:template>
 
 </xsl:transform>

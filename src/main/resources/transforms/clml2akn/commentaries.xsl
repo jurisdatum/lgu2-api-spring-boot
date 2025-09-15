@@ -13,13 +13,13 @@
 
 <xsl:template name="notes">
 	<xsl:variable name="all-unique-commentary-ids-in-reference-order" as="xs:string*">
-		<xsl:variable name="anchor" as="element()?" select="//*[not(self::InternalLink)][@DocumentURI = $dc-identifier]" />
-		<xsl:variable name="anchor" as="element()?" select="if ($anchor/self::P1/parent::P1group) then $anchor/parent::* else $anchor" />
+		<xsl:variable name="anchor" as="element()*" select="//*[not(self::InternalLink)][@DocumentURI = $dc-identifier]" />
+		<xsl:variable name="anchor" as="element()*" select="if ($anchor/self::P1/parent::P1group) then ($anchor[self::P1/parent::P1group])[1]/parent::* else $anchor[1]" />
 		<xsl:variable name="anchor" as="element()" select="if (exists($anchor)) then $anchor else /*" />
 		<xsl:variable name="all-elements" as="element()*" select="( $anchor/descendant::CommentaryRef | $anchor/descendant-or-self::*[exists(@CommentaryRef)] )" />
 		<xsl:sequence select="local:get-unique-commentary-ids($all-elements)" />
 	</xsl:variable>
-
+	
 	<xsl:variable name="all-commentaries-in-reference-order" as="element(Commentary)*">
 		<xsl:variable name="root" as="document-node()" select="root()" />
 		<xsl:for-each select="$all-unique-commentary-ids-in-reference-order">
@@ -45,7 +45,7 @@
 			<xsl:sequence select="key('id', ., $root)" />
 		</xsl:for-each>
 	</xsl:variable>
-
+	
 	<xsl:if test="exists($all-commentaries-in-reference-order) or exists($all-margin-notes-in-reference-order)">
 		<notes source="#">
 			<xsl:apply-templates select="$all-commentaries-in-reference-order[@Type='I']" />
@@ -220,7 +220,7 @@
 </xsl:template>
 
 <xsl:template match="CommentaryRef">
-	<xsl:variable name="commentary" as="element(Commentary)?" select="key('id', @Ref)[self::Commentary]" />	<!-- self::Commentary b/c of errors in ukpga/1974/7 -->
+	<xsl:variable name="commentary" as="element(Commentary)*" select="key('id', @Ref)[self::Commentary]" />	<!-- self::Commentary b/c of errors in ukpga/1974/7 -->
 	<xsl:if test="exists($commentary) and $commentary/@Type = ('F', 'M', 'X')">
 		<noteRef href="#{ @Ref }" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary" />
 	</xsl:if>
