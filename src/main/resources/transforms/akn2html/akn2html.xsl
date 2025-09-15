@@ -15,15 +15,16 @@
 	xmlns:ldapp="#ldapp"
 	exclude-result-prefixes="xs math ukl ukm uk html fo local ldapp">
 
-<xsl:param name="css-path" as="xs:string" select="'/sites/all/themes/vsrs/css/pages/'" />
-<xsl:param name="images-path" as="xs:string" select="'/images/'" />
+<xsl:param name="standalone" as="xs:boolean" select="true()" />
+<xsl:param name="css-path" as="xs:string" select="''" />
+<xsl:param name="images-path" as="xs:string" select="'/static/lgu1/images/'" />
 <xsl:param name="ldapp" as="xs:boolean" select="ldapp:is-ldapp(.)" />
 
 <xsl:include href="ldapp.xsl" />
 <xsl:include href="annotations.xsl" />
 <xsl:include href="repeals.xsl" />
 
-<xsl:output method="xml" include-content-type="no" encoding="utf-8" indent="yes"  omit-xml-declaration="yes"/>
+<xsl:output method="html" include-content-type="no" encoding="utf-8" indent="yes" omit-xml-declaration="yes" />
 
 <xsl:strip-space elements="*" />
 <xsl:preserve-space elements="block p docTitle docNumber docDate num heading subheading ref def term abbr date inline b i u sup sub span a mod quotedText ins" />
@@ -188,9 +189,7 @@
 
 <!-- templates -->
 
-<xsl:template match="akomaNtoso">
-	<xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
-</xsl:text>
+<xsl:template match="akomaNtoso[$standalone]">
 	<html>
 		<head>
 			<meta charset="utf-8" />
@@ -227,9 +226,15 @@
 				<xsl:with-param name="effective-document-category" select="$doc-category" tunnel="yes" />
 				<xsl:with-param name="within-schedule" select="false()" tunnel="yes" />
 			</xsl:apply-templates>
-			<xsl:call-template name="footnotes" />
 		</body>
 	</html>
+</xsl:template>
+
+<xsl:template match="akomaNtoso[not($standalone)]">
+	<xsl:apply-templates>
+		<xsl:with-param name="effective-document-category" select="$doc-category" tunnel="yes" />
+		<xsl:with-param name="within-schedule" select="false()" tunnel="yes" />
+	</xsl:apply-templates>
 </xsl:template>
 
 
@@ -239,6 +244,7 @@
 	<article class="{ string-join((local-name(), $doc-category, @name), ' ') }">
 		<xsl:call-template name="add-restrict-attributes" />
 		<xsl:apply-templates />
+		<xsl:call-template name="footnotes" />
 	</article>
 </xsl:template>
 
@@ -246,9 +252,11 @@
 <!-- metadata -->
 
 <xsl:template match="meta">
-	<div class="meta" vocab="{namespace-uri()}/" style="display:none">
-		<xsl:apply-templates select="identification" />
-	</div>
+	<xsl:if test="$standalone">
+		<div class="meta" vocab="{namespace-uri()}/" style="display:none">
+			<xsl:apply-templates select="identification" />
+		</div>
+	</xsl:if>
 </xsl:template>
 
 <xsl:template match="meta/*">
