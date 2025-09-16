@@ -278,7 +278,7 @@
 		<w:r>
 			<w:t xml:space="preserve"> </w:t>
 		</w:r>
-		<xsl:variable name="lead-in" as="element()" select="$amendment/*[@id = $partial-refs]" />
+		<xsl:variable name="lead-in" as="element()?" select="$amendment/*[@id = $partial-refs]" />
 		<xsl:apply-templates select="$lead-in" mode="lead-in">
 			<xsl:with-param name="within-extract" as="xs:boolean" select="true()" tunnel="yes" />
 			<xsl:with-param name="extract-is-amendment" as="xs:boolean" select="true()" tunnel="yes" />
