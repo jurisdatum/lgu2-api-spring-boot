@@ -41,6 +41,14 @@
     "title" : "Introduction",
     "label" : "Schedule 6 paragraph 4A"
   },
+  "prevInfo" : {
+    "href" : "ukpga/2000/8/schedule/6/paragraph/3E",
+    "label" : "Paragraph"
+  },
+  "nextInfo" : {
+    "href" : "ukpga/2000/8/schedule/6/paragraph/4B",
+    "label" : "Paragraph"
+  },
   "ancestors" : [ {
     "element" : "Schedule",
     "id" : "schedule-6",

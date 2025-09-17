@@ -42,6 +42,14 @@
       "title" : "Penalties for breach of Part 6 rules",
       "label" : "Section 91"
     },
+    "prevInfo" : {
+      "href" : "ukpga/2000/8/section/90B",
+      "label" : "Provision"
+    },
+    "nextInfo" : {
+      "href" : "ukpga/2000/8/section/92",
+      "label" : "Provision"
+    },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-VI",
