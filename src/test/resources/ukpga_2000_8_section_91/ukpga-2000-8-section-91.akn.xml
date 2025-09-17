@@ -176,7 +176,7 @@
                </p>
             </note>
          </notes>
-         <proprietary xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
             <dc:identifier>http://www.legislation.gov.uk/ukpga/2000/8/section/91</dc:identifier>
             <dc:title>Financial Services and Markets Act 2000</dc:title>
             <dc:description>An Act to make provision about the regulation of financial services and markets; to provide for the transfer of certain statutory functions relating to building societies, friendly societies, industrial and provident societies and certain other mutual societies; and for connected purposes.</dc:description>
@@ -188,38 +188,6 @@
             <dc:modified>2024-12-06</dc:modified>
             <dc:contributor>Expert Participation</dc:contributor>
             <dct:valid>2024-11-22</dct:valid>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="self" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.xml" type="application/xml"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2000/8/resources" title="More Resources"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/notes" title="Explanatory Notes"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/ukpga/2000/8/notes/contents" title="Explanatory Notes Table of Contents"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2000/8" title="whole act"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2000/8/introduction" title="introduction"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2000/8/body" title="body"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukpga/2000/8/schedules" title="schedules"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.rdf" title="RDF/XML"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.akn" title="AKN"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.xht" title="HTML snippet"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.htm" title="Website (XHTML) Default View"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.csv" title="CSV"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.pdf" title="PDF"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/data.html" title="HTML5 snippet"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2000/8/contents" title="Table of Contents"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/replaces" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2020-12-31" title="2020-12-31"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/enacted" title="enacted"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2001-12-01" title="2001-12-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2005-07-01" title="2005-07-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2006-11-08" title="2006-11-08"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2013-04-01" title="2013-04-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2015-11-26" title="2015-11-26"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2016-07-03" title="2016-07-03"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2019-07-21" title="2019-07-21"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2020-12-31" title="2020-12-31"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2000/8/section/91/2024-01-30" title="2024-01-30"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="up" href="http://www.legislation.gov.uk/ukpga/2000/8" title="Entire legislation"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="prev" href="http://www.legislation.gov.uk/ukpga/2000/8/section/90B" title="Provision; Section 90B"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="prevInForce" href="http://www.legislation.gov.uk/ukpga/2000/8/section/90B" title="Provision; Section 90B"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="next" href="http://www.legislation.gov.uk/ukpga/2000/8/section/92" title="Provision; Section 92"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="nextInForce" href="http://www.legislation.gov.uk/ukpga/2000/8/section/92" title="Provision; Section 92"/>
             <ukm:PrimaryMetadata>
                <ukm:DocumentClassification>
                   <ukm:DocumentCategory Value="primary"/>

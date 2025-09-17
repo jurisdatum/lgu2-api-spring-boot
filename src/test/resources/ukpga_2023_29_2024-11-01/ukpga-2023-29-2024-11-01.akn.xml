@@ -6461,7 +6461,7 @@
                </p>
             </note>
          </notes>
-         <proprietary xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
             <dc:identifier>http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01</dc:identifier>
             <dc:title>Financial Services and Markets Act 2023</dc:title>
             <dc:language>en</dc:language>
@@ -6469,43 +6469,6 @@
             <dc:modified>2024-11-04</dc:modified>
             <dc:contributor>Expert Participation</dc:contributor>
             <dct:valid>2024-11-01</dct:valid>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="self" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.xml" type="application/xml"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2023/29/resources" title="More Resources"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/ukpga/2023/29/notes" title="Explanatory Notes"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/ukpga/2023/29/notes/contents" title="Explanatory Notes Table of Contents"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01" title="whole act"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2023/29/introduction/2024-11-01" title="introduction"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2023/29/body/2024-11-01" title="body"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukpga/2023/29/schedules/2024-11-01" title="schedules"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.rdf" title="RDF/XML"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.akn" title="AKN"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.xht" title="HTML snippet"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.htm" title="Website (XHTML) Default View"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.csv" title="CSV"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.pdf" title="PDF"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-11-01/data.html" title="HTML5 snippet"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="alternate" href="http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpga_20230029_en.pdf" type="application/pdf" title="Original PDF"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2023/29/contents/2024-11-01" title="Table of Contents"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/replaces" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-10-29" title="2024-10-29"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/enacted" title="enacted"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-06-29" title="2023-06-29"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-07-11" title="2023-07-11"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-08-29" title="2023-08-29"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-09-06" title="2023-09-06"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-11-06" title="2023-11-06"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-12-14" title="2023-12-14"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-12-26" title="2023-12-26"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2023-12-31" title="2023-12-31"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-01-01" title="2024-01-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-01-08" title="2024-01-08"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-01-30" title="2024-01-30"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-02-07" title="2024-02-07"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-03-01" title="2024-03-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-04-05" title="2024-04-05"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-06-30" title="2024-06-30"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-08-01" title="2024-08-01"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29/2024-10-29" title="2024-10-29"/>
-            <atom:link xmlns="http://www.legislation.gov.uk/namespaces/legislation" rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2023/29" title="current"/>
             <ukm:PrimaryMetadata>
                <ukm:DocumentClassification>
                   <ukm:DocumentCategory Value="primary"/>
