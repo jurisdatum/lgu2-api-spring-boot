@@ -9,8 +9,8 @@ import net.sf.saxon.serialize.Emitter;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.Properties;
 
 public class Helper {
@@ -61,8 +61,7 @@ public class Helper {
     }
 
     public static XdmNode parse(String xml) throws SaxonApiException {
-        ByteArrayInputStream stream = new ByteArrayInputStream(xml.getBytes());
-        Source source = new StreamSource(stream);
+        Source source = new StreamSource(new StringReader(xml));
         DocumentBuilder builder = processor.newDocumentBuilder();
         return builder.build(source);
     }

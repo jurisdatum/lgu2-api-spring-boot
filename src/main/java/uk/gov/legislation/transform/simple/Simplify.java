@@ -7,8 +7,8 @@ import uk.gov.legislation.transform.Helper;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
@@ -56,9 +56,8 @@ public class Simplify {
     }
 
     public String transform(String clml, Parameters params) throws SaxonApiException {
-        ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes());
+        Source source = new StreamSource(new StringReader(clml));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
-        Source source = new StreamSource(input);
         Serializer destination = executable.getProcessor().newSerializer(output);
         transform(source, destination, params);
         return output.toString(StandardCharsets.UTF_8);
