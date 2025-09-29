@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="aosp">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/aosp/1707/8"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/aosp/1707/8"/>
+               <FRBRdate date="1707-01-01" name="estimated"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/OldScottishParliament"/>
+               <FRBRcountry value="GB-SCT"/>
+               <FRBRnumber value="8"/>
+               <FRBRname value="1707 c. 8 [S]"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/aosp/1707/8/2007-01-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aosp/1707/8/2007-01-01"/>
+               <FRBRdate date="2007-01-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/aosp/1707/8/2007-01-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aosp/1707/8/2007-01-01/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef date="2007-01-01" eId="date-2007-01-01" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-s" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-s" type="jurisdiction"/>
+               <restriction href="#paragraph-p3" refersTo="#extent-s" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2007-01-01" type="jurisdiction"/>
+               <restriction href="#paragraph-p3" refersTo="#period-to-2007-01-01" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:match href="#paragraph-p3" value="false"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-to-2007-01-01">
+               <timeInterval end="#date-2007-01-01" refersTo="#"/>
+            </temporalGroup>
+            <temporalGroup eId="period-from-2007-01-01">
+               <timeInterval start="#date-2007-01-01" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCLocation eId="extent-s" href="" showAs="S"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c920137" marker="F1">
+               <p>Words repealed by <ref eId="c00029" href="http://www.legislation.gov.uk/id/ukpga/1964/80">Statute Law Revision (Scotland) Act 1906 (c. 38) and Statute Law Revision (Scotland) Act 1964 (c. 80)</ref>, <ref eId="c00030" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1964/80/schedule/1">Sch. 1</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c920138" marker="F2">
+               <p>Words repealed by <ref eId="c00031" href="http://www.legislation.gov.uk/id/ukpga/1969/15">Representation of the People Act 1969 (c. 15)</ref>, <ref eId="c00032" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1969/15/schedule/3/part/II">Sch. 3 Pt. II</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c920139" marker="F3">
+               <p>Words repealed by <ref eId="c00033" href="http://www.legislation.gov.uk/id/ukpga/1906/38">Statute Law Revision (Scotland) Act 1906 (c. 38)</ref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/aosp/1707/8/paragraph/p3/2007-01-01</dc:identifier>
+            <dc:title>Election Act 1707(repealed)</dc:title>
+            <dc:description>Act settling the . . . Commoners to Represent Scotland in the Parliament of Great Britain</dc:description>
+            <dc:date>1979-03-31</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>2007-01-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="ScottishOldAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1707"/>
+               <ukm:Number Value="8"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="0"/>
+               <ukm:BodyParagraphs Value="0"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <p> . . . <noteRef href="#c920137" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> It is always hereby expressly Provided and Declared that none shall be capable to . . . <noteRef href="#c920138" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> be Elected for any of the said Estates but such as are Twenty one years of age compleat . . . <noteRef href="#c920139" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+         </p>
+      </body>
+   </act>
+</akomaNtoso>

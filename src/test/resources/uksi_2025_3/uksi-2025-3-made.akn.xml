@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="uksi">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/uksi/2025/3"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/uksi/2025/3"/>
+               <FRBRdate date="2025-01-03" name="made"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/government/uk"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRsubtype value="regulation"/>
+               <FRBRnumber value="3"/>
+               <FRBRname value="S.I. 2025/3"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/uksi/2025/3/made"/>
+               <FRBRuri value="http://www.legislation.gov.uk/uksi/2025/3/made"/>
+               <FRBRdate date="2025-01-03" name="made"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/uksi/2025/3/made/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/uksi/2025/3/made/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#made" date="2025-01-03" eId="date-made" source="#"/>
+            <eventRef refersTo="#laid" date="2025-01-06" eId="date-laid-1" source="#united-kingdom-parliament"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCOrganization eId="united-kingdom-parliament" href="" showAs="UnitedKingdomParliament"/>
+            <TLCEvent eId="made" href="" showAs="Made"/>
+            <TLCEvent eId="laid" href="" showAs="Laid"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/uksi/2025/3/made</dc:identifier>
+            <dc:title>The Social Security (Miscellaneous Amendments) Regulations 2025</dc:title>
+            <dc:publisher>King's Printer of Acts of Parliament</dc:publisher>
+            <dc:modified>2025-01-06</dc:modified>
+            <dc:subject scheme="SIheading">SOCIAL SECURITY</dc:subject>
+            <dc:description>These Regulations make amendments to the State Pension Credit Regulations 2002 (S.I. 2002/1792) (“the SPC Regulations”), the Housing Benefit Regulations 2006 (S.I. 2006/213) (“the Housing Benefit Regulations”), the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006 (S.I. 2006/214) (“the Pension Age Housing Benefit Regulations”), the Universal Credit Regulations 2013 (S.I. 2013/376) (“the Universal Credit Regulations”), the Universal Credit (Transitional Provisions) Regulations 2014 (S.I. 2014/1230) (“the Transitional Regulations”) and the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019 (S.I. 2019/167) (“Commencement Order No. 32”).</dc:description>
+            <ukm:SecondaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="secondary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/>
+                  <ukm:DocumentStatus Value="final"/>
+                  <ukm:DocumentMinorType Value="regulation"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2025"/>
+               <ukm:Number Value="3"/>
+               <ukm:Made Date="2025-01-03"/>
+               <ukm:Laid Date="2025-01-06" Time="00:00:00" Class="UnitedKingdomParliament"/>
+               <ukm:ISBN Value="9780348267662"/>
+            </ukm:SecondaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/notes"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf" Date="2025-01-06" Title="UK Explanatory Memorandum" Size="76463"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf" Date="2025-01-06" Size="235678" Print="true"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="7"/>
+               <ukm:BodyParagraphs Value="7"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface eId="preface">
+         <block name="correctionRubric">This Statutory Instrument has been printed to correct errors in <ref eId="c00001" href="http://www.legislation.gov.uk/id/uksi/2017/213">S.I. 2017/213</ref>, <ref eId="c00002" href="http://www.legislation.gov.uk/id/uksi/2018/676">S.I. 2018/676</ref>, <ref eId="c00003" href="http://www.legislation.gov.uk/id/uksi/2019/1152">S.I. 2019/1152</ref>, <ref eId="c00004" href="http://www.legislation.gov.uk/id/uksi/2021/786">S.I. 2021/786</ref>, <ref eId="c00005" href="http://www.legislation.gov.uk/id/uksi/2022/177">S.I. 2022/177</ref> and <ref eId="c00006" href="http://www.legislation.gov.uk/id/uksi/2022/752">S.I. 2022/752</ref> and is being issued free of charge to all known recipients of those Statutory Instruments.</block>
+         <block name="banner">Statutory Instruments</block>
+         <block name="number">
+            <docNumber>2025 No. 3</docNumber>
+         </block>
+         <container name="subjects">
+            <container name="subject">
+               <block name="subject">
+                  <concept refersTo="#">SOCIAL SECURITY</concept>
+               </block>
+            </container>
+         </container>
+         <block name="title">
+            <docTitle>The Social Security (Miscellaneous Amendments) Regulations 2025</docTitle>
+         </block>
+         <container name="dates">
+            <block name="madeDate" refersTo="#date-made">
+               <span>Made</span>
+               <docDate date="2025-01-03">3rd January 2025</docDate>
+            </block>
+            <block name="laidDate" refersTo="#date-laid-1">
+               <span>Laid before Parliament</span>
+               <docDate date="2025-01-06">6th January 2025</docDate>
+            </block>
+            <block name="commenceDate" refersTo="#date-cif-1">
+               <span>Coming into force in accordance with regulation 1(2), (3) and (4)</span>
+            </block>
+         </container>
+      </preface>
+      <preamble>
+         <formula name="enactingText">
+            <p>The Secretary of State makes these Regulations in exercise of the powers conferred by sections 123(1)(d), 130A(2), (3) and (5) and 175(1) and (3) of the Social Security Contributions and Benefits Act 1992<authorialNote class="footnote" eId="f00001" marker="1">
+                  <p>
+                     <ref eId="c00019" href="http://www.legislation.gov.uk/id/ukpga/1992/4">1992 c. 4</ref>. Section 123(1) has been amended but the amendments are not relevant to these Regulations. Section 130A was inserted by section 30(2) of the Welfare Reform Act <ref eId="c00020" href="http://www.legislation.gov.uk/id/ukpga/2007/5">2007 (c. 5)</ref> and amended by section 69(2) of the Welfare Reform Act <ref eId="c00021" href="http://www.legislation.gov.uk/id/ukpga/2012/5">2012 (c. 5)</ref>; there are other amendments but none is relevant. See section 137(1) for the meaning given to “prescribed”. Section 175(1) was amended by paragraph 29 of Schedule 3 to the Social Security Contributions (Transfer of Functions, etc.) Act <ref eId="c00022" href="http://www.legislation.gov.uk/id/ukpga/1999/2">1999 (c. 2)</ref>.</p>
+               </authorialNote>, sections 2(3)(b) and 19(1) of the State Pension Credit Act 2002<authorialNote class="footnote" eId="f00002" marker="2">
+                  <p>
+                     <ref eId="c00023" href="http://www.legislation.gov.uk/id/ukpga/2002/16">2002 c. 16</ref>. Section 175(1) and (3) of the Social Security Contributions and Benefits Act <ref eId="c00024" href="http://www.legislation.gov.uk/id/ukpga/1992/4">1992 (c. 4)</ref> is applied by section 19(1). See section 17(1) for the meaning given to “prescribed”.</p>
+               </authorialNote> and sections 11(4), 32 and 42(1) to (3) of, and paragraphs 1(1), 4, 6 and 7 of Schedule 6 to, the Welfare Reform Act 2012<authorialNote class="footnote" eId="f00003" marker="3">
+                  <p>
+                     <ref eId="c00025" href="http://www.legislation.gov.uk/id/ukpga/2012/5">2012 c. 5</ref>. See section 40 for the meaning given to “prescribed”.</p>
+               </authorialNote>.</p>
+            <p>In accordance with section 173(1)(b) of the Social Security Administration Act 1992<authorialNote class="footnote" eId="f00004" marker="4">
+                  <p>
+                     <ref eId="c00026" href="http://www.legislation.gov.uk/id/ukpga/1992/5">1992 c. 5</ref>.</p>
+               </authorialNote>, the Social Security Advisory Committee has agreed that the proposals in respect of these Regulations should not be referred to it.</p>
+            <p>In respect of regulations 3 and 4, in accordance with section 176(1) of the Social Security Administration Act 1992<authorialNote class="footnote" eId="f00005" marker="5">
+                  <p>Subsection (1) has been amended but the amendments are not relevant.</p>
+               </authorialNote>, the Secretary of State has consulted with organisations appearing to the Secretary of State to be representative of the authorities concerned.</p>
+            <p>In respect of regulation 5, in accordance with section 29(7) of the Scotland Act 2016<authorialNote class="footnote" eId="f00006" marker="6">
+                  <p>
+                     <ref eId="c00027" href="http://www.legislation.gov.uk/id/ukpga/2016/11">2016 c. 11</ref>.</p>
+               </authorialNote>, the Secretary of State has consulted with the Scottish Ministers.</p>
+         </formula>
+      </preamble>
+      <body>
+         <hcontainer name="regulation" eId="regulation-1">
+            <heading>Citation, commencement and extent</heading>
+            <num>1.</num>
+            <paragraph eId="regulation-1-1">
+               <num>(1)</num>
+               <content>
+                  <p>These Regulations may be cited as the Social Security (Miscellaneous Amendments) Regulations 2025.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-1-2">
+               <num>(2)</num>
+               <content>
+                  <p>Subject to paragraphs (3) and (4), these Regulations come into force on 27th January 2025.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-1-3">
+               <num>(3)</num>
+               <content>
+                  <p>Regulation 6(2)(b) (and regulation 6(1) insofar as it relates to regulation 6(2)(b)) and regulation 7(2) (and regulation 7(1) insofar as it relates to regulation 7(2)) come into force on 6th April 2025.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-1-4">
+               <num>(4)</num>
+               <content>
+                  <p>Regulation 6(8) (and regulation 6(1) insofar as it relates to regulation 6(8)) comes into force on 1st June 2025.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-1-5">
+               <num>(5)</num>
+               <content>
+                  <p>This regulation and regulation 7 extend to England and Wales, Scotland and Northern Ireland.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-1-6">
+               <num>(6)</num>
+               <content>
+                  <p>Regulations 2 to 6 extend to England and Wales and Scotland.</p>
+               </content>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-2">
+            <heading>Amendment of the State Pension Credit Regulations 2002</heading>
+            <num>2.</num>
+            <paragraph eId="regulation-2-1">
+               <num>(1)</num>
+               <content>
+                  <p>The State Pension Credit Regulations 2002<authorialNote class="footnote" eId="f00007" marker="7">
+                        <p>
+                           <ref eId="c00028" href="http://www.legislation.gov.uk/id/uksi/2002/1792">S.I. 2002/1792</ref>. Schedule 2A was inserted by <ref eId="c00029" href="http://www.legislation.gov.uk/id/uksi/2018/676">S.I. 2018/676</ref>.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-2-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In Schedule 2A (additional amount applicable for claimants responsible for a child or qualifying young person)—</p>
+               </intro>
+               <level class="para1" eId="regulation-2-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>in paragraph 2(1) (general) after the definition of “child” insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <hcontainer name="definition">
+                                 <content>
+                                    <p>“<term refersTo="#term-foster-parent">foster parent</term>” has the meaning given in regulation 2 of the Universal Credit Regulations 2013<authorialNote class="footnote" eId="f00008" marker="8">
+                                          <p>
+                                             <ref eId="c00030" href="http://www.legislation.gov.uk/id/uksi/2013/376">S.I. 2013/376</ref>, amended by <ref eId="c00031" href="http://www.legislation.gov.uk/id/uksi/2024/341">S.I. 2024/341</ref>; there are other amending instruments but none is relevant.</p>
+                                       </authorialNote>;</p>
+                                 </content>
+                              </hcontainer>
+                           </quotedStructure>
+                           <inline name="appendText">;</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-2-2-b">
+                  <num>(b)</num>
+                  <intro>
+                     <p>in paragraph 4(3) (child or qualifying young person looked after by a local authority)—</p>
+                  </intro>
+                  <level class="para2" eId="regulation-2-2-b-i">
+                     <num>(i)</num>
+                     <content>
+                        <p>omit the “or” after paragraph (a);</p>
+                     </content>
+                  </level>
+                  <level class="para2" eId="regulation-2-2-b-ii">
+                     <num>(ii)</num>
+                     <content>
+                        <p>
+                           <mod>after paragraph (b) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                                 <p>; or</p>
+                                 <level class="para1">
+                                    <num>(c)</num>
+                                    <content>
+                                       <p>during which the child or qualifying young person is placed for adoption under the Adoption and Children Act 2002<authorialNote class="footnote" eId="f00009" marker="9">
+                                             <p>
+                                                <ref eId="c00032" href="http://www.legislation.gov.uk/id/ukpga/2002/38">2002 c. 38</ref>.</p>
+                                          </authorialNote> or the Adoption and Children (Scotland) Act 2007<authorialNote class="footnote" eId="f00010" marker="10">
+                                             <p>
+                                                <ref eId="c00033" href="http://www.legislation.gov.uk/id/asp/2007/4">2007 asp 4</ref>.</p>
+                                          </authorialNote>.</p>
+                                    </content>
+                                 </level>
+                              </quotedStructure>
+                              <inline name="appendText">.</inline>
+                           </mod>
+                        </p>
+                     </content>
+                  </level>
+               </level>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-3">
+            <heading>Amendment of the Housing Benefit Regulations 2006</heading>
+            <num>3.</num>
+            <paragraph eId="regulation-3-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Housing Benefit Regulations 2006<authorialNote class="footnote" eId="f00011" marker="11">
+                        <p>
+                           <ref eId="c00034" href="http://www.legislation.gov.uk/id/uksi/2006/213">S.I. 2006/213</ref>, amended by <ref eId="c00035" href="http://www.legislation.gov.uk/id/uksi/2017/213">S.I. 2017/213</ref>, <ref eId="c00036" href="http://www.legislation.gov.uk/id/uksi/2024/919">2024/919</ref>; there are other amending instruments but none is relevant.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-3-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In regulation 2(1) (interpretation), in the definition of “member of a couple who cannot share a bedroom”, in paragraph (a)—</p>
+               </intro>
+               <level class="para1" eId="regulation-3-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>in sub-paragraph (i) omit “at the higher rate in accordance with section 65(3) of the Act”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-3-2-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>in sub-paragraph (ia) omit “at the higher rate in accordance with regulation 6 of the Disability Assistance for Older People (Scotland) Regulations 2024<authorialNote class="footnote" eId="f00012" marker="12">
+                           <p>
+                              <ref eId="c00037" href="http://www.legislation.gov.uk/id/uksi/2024/919">S.I. 2024/919</ref>.</p>
+                        </authorialNote>”.</p>
+                  </content>
+               </level>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-4">
+            <heading>Amendment of the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006</heading>
+            <num>4.</num>
+            <paragraph eId="regulation-4-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006<authorialNote class="footnote" eId="f00013" marker="13">
+                        <p>
+                           <ref eId="c00038" href="http://www.legislation.gov.uk/id/uksi/2006/214">S.I. 2006/214</ref>, amended by <ref eId="c00039" href="http://www.legislation.gov.uk/id/uksi/2017/213">S.I. 2017/213</ref>, <ref eId="c00040" href="http://www.legislation.gov.uk/id/uksi/2022/177">2022/177</ref>, <ref eId="c00041" href="http://www.legislation.gov.uk/id/uksi/2024/919">2024/919</ref>; there are other amending instruments but none is relevant.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-4-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In regulation 2(1) (interpretation), in the definition of “member of a couple who cannot share a bedroom”, in paragraph (a)—</p>
+               </intro>
+               <level class="para1" eId="regulation-4-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>in sub-paragraph (i) omit “at the higher rate in accordance with section 65(3) of the Act”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-4-2-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>in sub-paragraph (ia) omit “at the higher rate in accordance with regulation 6 of the Disability Assistance for Older People (Scotland) Regulations 2024”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-4-2-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>omit the “or” after sub-paragraph (iii);</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-4-2-d">
+                  <num>(d)</num>
+                  <content>
+                     <p>
+                        <mod>for the “and” after sub-paragraph (iv) substitute <quotedText>“or”</quotedText>;</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-4-2-e">
+                  <num>(e)</num>
+                  <content>
+                     <p>
+                        <mod>for the “or” after sub-paragraph (iva) substitute <quotedText>“and”</quotedText>.</mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-5">
+            <heading>Amendment of the Universal Credit Regulations 2013</heading>
+            <num>5.</num>
+            <paragraph eId="regulation-5-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Universal Credit Regulations 2013<authorialNote class="footnote" eId="f00014" marker="14">
+                        <p>
+                           <ref eId="c00042" href="http://www.legislation.gov.uk/id/uksi/2013/376">S.I. 2013/376</ref>, amended by <ref eId="c00043" href="http://www.legislation.gov.uk/id/uksi/2013/2828">S.I. 2013/2828</ref>, <ref eId="c00044" href="http://www.legislation.gov.uk/id/uksi/2017/213">2017/213</ref>, <ref eId="c00045" href="http://www.legislation.gov.uk/id/uksi/2021/786">2021/786</ref>, <ref eId="c00046" href="http://www.legislation.gov.uk/id/uksi/2024/919">2024/919</ref>; there are other amending instruments but none is relevant.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-5-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In paragraph 12 (additional room) of Schedule 4 (housing costs element for renters)—</p>
+               </intro>
+               <level class="para1" eId="regulation-5-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>for sub-paragraph (6) substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <paragraph>
+                                 <num>(6)</num>
+                                 <intro>
+                                    <p>A renter satisfies the disabled child condition if they or another member of their extended benefit unit are responsible for a child who would (but for the provisions of this paragraph) be expected to share a bedroom and that child is—</p>
+                                 </intro>
+                                 <level class="para1">
+                                    <num>(a)</num>
+                                    <intro>
+                                       <p>in receipt of—</p>
+                                    </intro>
+                                    <level class="para2">
+                                       <num>(i)</num>
+                                       <content>
+                                          <p>the care component of disability living allowance at the middle or highest rate; or</p>
+                                       </content>
+                                    </level>
+                                    <level class="para2">
+                                       <num>(ii)</num>
+                                       <content>
+                                          <p>the care component of child disability payment at the middle or highest rate in accordance with regulation 11(5) of the DACYP Regulations; and</p>
+                                       </content>
+                                    </level>
+                                 </level>
+                                 <level class="para1">
+                                    <num>(b)</num>
+                                    <content>
+                                       <p>by virtue of their disability, not reasonably able to share a room with another child.</p>
+                                    </content>
+                                 </level>
+                              </paragraph>
+                           </quotedStructure>
+                           <inline name="appendText">;</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-5-2-b">
+                  <num>(b)</num>
+                  <intro>
+                     <p>in sub-paragraph (6A)(a)—</p>
+                  </intro>
+                  <level class="para2" eId="regulation-5-2-b-i">
+                     <num>(i)</num>
+                     <content>
+                        <p>in sub-paragraph (ii) omit “at the higher rate”;</p>
+                     </content>
+                  </level>
+                  <level class="para2" eId="regulation-5-2-b-ii">
+                     <num>(ii)</num>
+                     <content>
+                        <p>in sub-paragraph (iia) omit “at the higher rate in accordance with regulation 6 of the Disability Assistance for Older People (Scotland) Regulations 2024”.</p>
+                     </content>
+                  </level>
+               </level>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-6">
+            <heading>Amendment of the Universal Credit (Transitional Provisions) Regulations 2014</heading>
+            <num>6.</num>
+            <paragraph eId="regulation-6-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Universal Credit (Transitional Provisions) Regulations 2014<authorialNote class="footnote" eId="f00015" marker="15">
+                        <p>
+                           <ref eId="c00047" href="http://www.legislation.gov.uk/id/uksi/2014/1230">S.I. 2014/1230</ref>, amended by <ref eId="c00048" href="http://www.legislation.gov.uk/id/uksi/2018/65">S.I. 2018/65</ref>, <ref eId="c00049" href="http://www.legislation.gov.uk/id/uksi/2019/1152">2019/1152</ref>, <ref eId="c00050" href="http://www.legislation.gov.uk/id/uksi/2022/752">2022/752</ref>, <ref eId="c00051" href="http://www.legislation.gov.uk/id/uksi/2024/341">2024/341</ref>, <ref eId="c00052" href="http://www.legislation.gov.uk/id/uksi/2024/611">2024/611</ref>; there are other amending instruments but none is relevant.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-6-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In regulation 6A (restriction on claims for housing benefit, income support or a tax credit)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>after paragraph (8) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <paragraph>
+                                 <num>(9)</num>
+                                 <content>
+                                    <p>Despite anything in paragraph (6) or (7), or in the Tax Credits (Claims and Notifications) Regulations 2002<authorialNote class="footnote" eId="f00016" marker="16">
+                                          <p>
+                                             <ref eId="c00053" href="http://www.legislation.gov.uk/id/uksi/2022/214">S.I. 2022/214</ref>.</p>
+                                       </authorialNote>, a person may not make, or be treated as making, a claim for a tax credit in respect of the whole, or any part, of the tax year beginning on 6th April 2025 or any subsequent tax year.</p>
+                                 </content>
+                              </paragraph>
+                           </quotedStructure>
+                           <inline name="appendText">;</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-2-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>in paragraph (9) (as inserted by sub-paragraph (a)) omit “paragraph (6) or (7), or in”.</p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-3">
+               <num>(3)</num>
+               <intro>
+                  <p>In regulation 8A (transitional housing payment)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-3-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>in the opening words omit “or 46”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-3-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>in paragraphs (a) and (b) omit “or 46(1)”.</p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-4">
+               <num>(4)</num>
+               <content>
+                  <p>
+                     <mod>In regulation 11 (ongoing awards of tax credits) after paragraph (2) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                           <paragraph>
+                              <num>(3)</num>
+                              <content>
+                                 <p>This regulation applies in relation to a current tax year that ends on or before 5th April 2025 only.</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-6-5">
+               <num>(5)</num>
+               <intro>
+                  <p>In regulation 21 (other claimants with limited capability for work: credits only cases)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-5-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>in the heading omit “: credits only cases”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-5-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                        <mod>for paragraph (1)(a) (but not the “and” after it) substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <level class="para1">
+                                 <num>(a)</num>
+                                 <intro>
+                                    <p>an award of universal credit is made to a claimant—</p>
+                                 </intro>
+                                 <level class="para2">
+                                    <num>(i)</num>
+                                    <content>
+                                       <p>who was entitled to be credited with earnings equal to the lower earnings limit then in force under regulation 8B(2)(a)(iv), (iva) or (v) of the Social Security (Credits) Regulations 1975 (“<term refersTo="#term-the-1975-regulations">the 1975 Regulations</term>”)<authorialNote class="footnote" eId="f00017" marker="17">
+                                             <p>
+                                                <ref eId="c00054" href="http://www.legislation.gov.uk/id/uksi/1975/556">S.I. 1975/556</ref>. Regulation 8B was inserted by <ref eId="c00055" href="http://www.legislation.gov.uk/id/uksi/1996/2367">S.I. 1996/2367</ref>; relevant amending instruments are <ref eId="c00056" href="http://www.legislation.gov.uk/id/uksi/2010/385">S.I. 2010/385</ref>, <ref eId="c00057" href="http://www.legislation.gov.uk/id/uksi/2012/913">2012/913</ref>, the latter of which inserted paragraph (2)(a)(iva).</p>
+                                          </authorialNote> on the date on which the claim for universal credit was made or treated as made (the “relevant date”); or</p>
+                                    </content>
+                                 </level>
+                                 <level class="para2">
+                                    <num>(ii)</num>
+                                    <content>
+                                       <p>who claims or is treated as claiming universal credit within the period of one month beginning with the day after the day on which an award of new-style ESA or old-style ESA ends and would have been so entitled on the relevant date but for reaching the qualifying age for state pension credit;</p>
+                                    </content>
+                                 </level>
+                              </level>
+                           </quotedStructure>
+                           <inline name="appendText">.</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-6">
+               <num>(6)</num>
+               <intro>
+                  <p>In regulation 44 (migration notice)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-6-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>in paragraph (3), at the beginning insert <quotedText>“Subject to paragraphs (3A) and (3B),”</quotedText>;</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-6-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>in paragraph (3A), omit “But”;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-6-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>
+                        <mod>after paragraph (3A) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <paragraph>
+                                 <num>(3B)</num>
+                                 <intro>
+                                    <p>Where a migration notice is—</p>
+                                 </intro>
+                                 <level class="para1">
+                                    <num>(a)</num>
+                                    <content>
+                                       <p>issued to a person who is entitled to an award of a tax credit; and</p>
+                                    </content>
+                                 </level>
+                                 <level class="para1">
+                                    <num>(b)</num>
+                                    <content>
+                                       <p>issued on or after 27th January 2025 and before 6th April 2025,</p>
+                                    </content>
+                                 </level>
+                                 <wrapUp>
+                                    <p>the deadline day may be 6th April 2025.</p>
+                                 </wrapUp>
+                              </paragraph>
+                           </quotedStructure>
+                           <inline name="appendText">.</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-7">
+               <num>(7)</num>
+               <content>
+                  <p>
+                     <mod>In regulation 50 (Secretary of State to determine whether transitional protection applies) after paragraph (2) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                           <paragraph>
+                              <num>(3)</num>
+                              <content>
+                                 <p>A person who makes a claim for universal credit as a single person by virtue of regulation 3(3) of the Universal Credit Regulations is a single person for the purposes of paragraph (2)(a) and a member of a couple for the purposes of paragraph (2)(b).</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-6-8">
+               <num>(8)</num>
+               <intro>
+                  <p>In regulation 55 (the transitional element - initial amount and adjustment where other elements increase)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-8-a">
+                  <num>(a)</num>
+                  <intro>
+                     <p>in paragraph (4)—</p>
+                  </intro>
+                  <level class="para2" eId="regulation-6-8-a-i">
+                     <num>(i)</num>
+                     <content>
+                        <p>
+                           <mod>for “paragraph (5)” substitute <quotedText>“paragraphs (5) and (5A)”</quotedText>;</mod>
+                        </p>
+                     </content>
+                  </level>
+                  <level class="para2" eId="regulation-6-8-a-ii">
+                     <num>(ii)</num>
+                     <content>
+                        <p>
+                           <mod>after “the first time” insert <quotedText>“, or included again following a change of circumstances”</quotedText>;</mod>
+                        </p>
+                     </content>
+                  </level>
+               </level>
+               <level class="para1" eId="regulation-6-8-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                        <mod>after paragraph (5) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <paragraph>
+                                 <num>(5A)</num>
+                                 <content>
+                                    <p>There is to be no “relevant increase” with respect to the inclusion of a housing costs element in a case where the claimant was entitled to an award of housing benefit in respect of specified accommodation or temporary accommodation within the month ending with the first day of the assessment period in which the housing costs element is included.</p>
+                                 </content>
+                              </paragraph>
+                           </quotedStructure>
+                           <inline name="appendText">;</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-8-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>
+                        <mod>in paragraph (6) after “this regulation,” insert <quotedText>““housing costs element”,”</quotedText>.</mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-9">
+               <num>(9)</num>
+               <intro>
+                  <p>In regulation 60(1) (protection for full-time students until course completed)—</p>
+               </intro>
+               <level class="para1" eId="regulation-6-9-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>for “notified person”, in the first place it occurs, substitute <quotedText>“person who has made a qualifying claim”</quotedText>;</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-9-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                        <mod>for “on the day on which all awards of any existing benefit are to terminate as a consequence of a claim for universal credit” substitute <quotedText>“on the migration day”</quotedText>;</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-6-9-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>
+                        <mod>for “notified person”, in the second place it occurs, substitute <quotedText>“person”</quotedText>.</mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+            <paragraph eId="regulation-6-10">
+               <num>(10)</num>
+               <content>
+                  <p>
+                     <mod>In regulation 60B(1) (deferral of retirement pension income) before “claim” insert <quotedText>“qualifying”</quotedText>.</mod>
+                  </p>
+               </content>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="regulation" eId="regulation-7">
+            <heading>Amendment of the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019</heading>
+            <num>7.</num>
+            <paragraph eId="regulation-7-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019<authorialNote class="footnote" eId="f00018" marker="18">
+                        <p>
+                           <ref eId="c00058" href="http://www.legislation.gov.uk/id/uksi/2019/167">S.I. 2019/167</ref>, amended by <ref eId="c00059" href="http://www.legislation.gov.uk/id/uksi/2024/611">S.I. 2024/611</ref>; there are other amending instruments but none is relevant.</p>
+                     </authorialNote> is amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-7-2">
+               <num>(2)</num>
+               <content>
+                  <p>
+                     <mod>In article 3 (savings), after paragraph (9) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                           <paragraph>
+                              <num>(10)</num>
+                              <content>
+                                 <p>Paragraph (1) applies to a case of an award of a tax credit only if the period for which the award has effect ends before 6th April 2025.</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-7-3">
+               <num>(3)</num>
+               <intro>
+                  <p>In article 3A (tax credit closure notice)—</p>
+               </intro>
+               <level class="para1" eId="regulation-7-3-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>in paragraph (3), for “paragraph (4)” substitute <quotedText>“paragraphs (4) and (4A)”</quotedText>;</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-7-3-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                        <mod>after paragraph (4) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <paragraph>
+                                 <num>(4A)</num>
+                                 <content>
+                                    <p>Where the tax credit closure notice is issued on or after 27th January 2025 and before 6th April 2025, the deadline day may be 6th April 2025.</p>
+                                 </content>
+                              </paragraph>
+                           </quotedStructure>
+                           <inline name="appendText">.</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+            </paragraph>
+         </hcontainer>
+         <hcontainer name="signatures">
+            <hcontainer name="signatureBlock">
+               <content>
+                  <p>Signed by authority of the Secretary of State for Work and Pensions</p>
+                  <block name="signature">
+                     <signature refersTo="#">Stephen Timms</signature>
+                  </block>
+                  <block name="role">
+                     <role refersTo="#">Minister of State</role>
+                  </block>
+                  <block name="organization">
+                     <organization refersTo="#">Department for Work and Pensions</organization>
+                  </block>
+                  <block name="date">
+                     <date date="2025-01-03">3rd January 2025</date>
+                  </block>
+               </content>
+            </hcontainer>
+         </hcontainer>
+      </body>
+      <conclusions>
+         <blockContainer class="explanatoryNote">
+            <heading>Explanatory Note</heading>
+            <subheading>(This note is not part of the Regulations)</subheading>
+            <blockContainer ukl:Name="P">
+               <p>These Regulations make amendments to the State Pension Credit Regulations 2002 (<ref eId="c00007" href="http://www.legislation.gov.uk/id/uksi/2002/1792">S.I. 2002/1792</ref>) (“<term refersTo="#term-the-spc-regulations">the SPC Regulations</term>”), the Housing Benefit Regulations 2006 (<ref eId="c00008" href="http://www.legislation.gov.uk/id/uksi/2006/213">S.I. 2006/213</ref>) (“<term refersTo="#term-the-housing-benefit-regulations">the Housing Benefit Regulations</term>”), the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006 (<ref eId="c00009" href="http://www.legislation.gov.uk/id/uksi/2006/214">S.I. 2006/214</ref>) (“<term refersTo="#term-the-pension-age-housing-benefit-regulations">the Pension Age Housing Benefit Regulations</term>”), the Universal Credit Regulations 2013 (<ref eId="c00010" href="http://www.legislation.gov.uk/id/uksi/2013/376">S.I. 2013/376</ref>) (“<term refersTo="#term-the-universal-credit-regulations">the Universal Credit Regulations</term>”), the Universal Credit (Transitional Provisions) Regulations 2014 (<ref eId="c00011" href="http://www.legislation.gov.uk/id/uksi/2014/1230">S.I. 2014/1230</ref>) (“<term refersTo="#term-the-transitional-regulations">the Transitional Regulations</term>”) and the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019 (<ref eId="c00012" href="http://www.legislation.gov.uk/id/uksi/2019/167">S.I. 2019/167</ref>) (“Commencement Order No. 32”).</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 2 makes amendments to the SPC Regulations. The amendment to Schedule 2A inserts a definition of a foster parent and ensures that an additional amount applicable for claimants responsible for a child or qualifying young person can be paid where a child is placed for adoption with a claimant.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulations 3 and 4 amend the definition of “member of a couple who cannot share a bedroom” within regulation 2(1) of each of the Housing Benefit Regulations and the Pension Age Housing Benefit Regulations, extending the scope of the definition to a member of a couple who is in receipt of pension age disability payment at the lower or higher rate or any of the types of benefit that fall within the definition of “attendance allowance” in the respective Regulations, including attendance allowance under Part 3 of the Social Security Contributions and Benefits Act <ref eId="c00013" href="http://www.legislation.gov.uk/id/ukpga/1992/4">1992 (c. 4)</ref> at the lower or higher rate.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 4 also makes a clarifying amendment to the definition of “member of a couple who cannot share a bedroom” within regulation 2(1) of the Pension Age Housing Benefit Regulations.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 5 makes a clarifying amendment to the description of the disabled child condition in paragraph 12(6) of Schedule 4 to the Universal Credit Regulations.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 5 also amends paragraph 12(6A) of Schedule 4 to the Universal Credit Regulations to extend the scope of the “disabled person condition” through which a renter can be entitled to an additional bedroom for housing costs element purposes if they would (but for the operation of that provision) be expected to share a bedroom with a joint renter. The scope of the condition is extended to include a renter in receipt of pension age disability payment at the lower or higher rate or any of the types of benefit that fall within the definition of “attendance allowance” in the Universal Credit Regulations, including attendance allowance under section 64 of the Social Security Contributions and Benefits Act <ref eId="c00014" href="http://www.legislation.gov.uk/id/ukpga/1992/4">1992 (c. 4)</ref> at the lower or higher rate.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6 makes amendments to the Transitional Regulations.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(2)(a) amends regulation 6A to make it clear that the prohibition against new claims for a tax credit extends to deemed claims for a tax credit. Entitlement to tax credits will end for all claimants on 5th April 2025. In consequence, the amendment makes it clear that it will not be possible to make any kind of claim for a tax credit for the tax year beginning on 6th April 2025 or a subsequent tax year, including a deemed claim for a tax credit pursuant to regulation 11 or 12 of the Tax Credits (Claims and Notifications) Regulations 2002 (<ref eId="c00015" href="http://www.legislation.gov.uk/id/uksi/2002/2014">S.I. 2002/2014</ref>). Regulation 6(2)(b) repeals, from 6th April 2025, part of the text inserted by regulation 6(2)(a). That text will become redundant on that day because of a separate amendment made by regulation 8(2) of the Social Security and Universal Credit (Migration of Tax Credit Claimants and Miscellaneous Amendments) Regulations 2024 (<ref eId="c00016" href="http://www.legislation.gov.uk/id/uksi/2024/341">S.I. 2024/341</ref>).</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(3) amends regulation 8A to remove unnecessary cross-references to regulation 46.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(4) is an amendment consequential upon the expiry of tax credits.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(5) amends regulation 21 to provide that claimants who would have been entitled to credits of contributions and earnings on the grounds of limited capability for work had they not reached the qualifying age for state pension credit, may be treated as having limited capability for work, or limited capability for work and work-related activity, for the purposes of an award of universal credit. The claim for universal credit must have been made within one month beginning with the day after the day on which the award of employment and support allowance ended..</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(6) amends regulation 44 to ensure that tax credit recipients who are issued migration notices shortly before the expiry of tax credits (on 5th April 2025) can access the transitional protection to which the Transitional Regulations entitle them. The amendment does this by aligning the deadline day set out in the migration notice with the expiry of tax credits.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(7) amends regulation 50 which, among other things, deals with the effect that a change in a person’s couple status has on their entitlement to a transitional element upon migration to universal credit. The amendment ensures that a person who is part of a couple but makes a claim as a single person because they have an ineligible partner is excluded from the transitional element. Also excluded is a person who was single for legacy benefit purposes but becomes a member of couple upon migration to universal credit, even if they claim as a single person because their partner is ineligible.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 6(8) amends regulation 55 to provide that when calculating the adjustment of a transitional element there is no relevant increase when a claimant moves from Housing Benefit in respect of specified accommodation or temporary accommodation to the housing costs element in Universal Credit. The housing costs element must be awarded within one month beginning with the date that the Housing Benefit award ended.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulations 6(9) and (10) amend regulations 60 and 60B(1), which concern the conferral of transitional protection to students and persons over pension age who migrate to universal credit. The amendments ensure the protection is available to those persons who make a ‘qualifying claim’, meaning a claim that meets the requirements of regulation 48 of the Transitional Regulations.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 7(2) amends Commencement Order No. 32 to make it clear that child tax credit and working tax credit are abolished from the 2025-2026 tax year.</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>Regulation 7(3) makes the equivalent provision to that made by regulation 6(6) for the purposes of allowing a claimant issued with a tax credit closure notice to access transitional protection in state pension credit. Transitional protection for state pension credit is set out in Schedule 2B to the State Pension Credit Regulations 2002 (<ref eId="c00017" href="http://www.legislation.gov.uk/id/uksi/2002/1792">S.I. 2002/1792</ref>) and Schedule 2B to the State Pension Credit Regulations (Northern Ireland) 2003 (<ref eId="c00018" href="http://www.legislation.gov.uk/id/nisr/2003/28">S.R. 2003 No. 28</ref>).</p>
+            </blockContainer>
+            <blockContainer ukl:Name="P">
+               <p>A full impact assessment has not been produced for this instrument as no, or no significant, impact on the private, voluntary or public sector is foreseen.</p>
+            </blockContainer>
+         </blockContainer>
+      </conclusions>
+   </act>
+</akomaNtoso>

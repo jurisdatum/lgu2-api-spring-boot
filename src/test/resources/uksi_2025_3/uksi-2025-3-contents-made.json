@@ -1,0 +1,112 @@
+{
+  "meta" : {
+    "id" : "uksi/2025/3",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "shortType" : "uksi",
+    "year" : 2025,
+    "number" : 3,
+    "isbn" : "9780348267662",
+    "date" : "2025-01-03",
+    "cite" : "S.I. 2025/3",
+    "version" : "made",
+    "status" : "final",
+    "title" : "The Social Security (Miscellaneous Amendments) Regulations 2025",
+    "extent" : [ "E", "W", "S", "NI" ],
+    "subjects" : [ "SOCIAL SECURITY" ],
+    "lang" : null,
+    "publisher" : "King's Printer of Acts of Parliament",
+    "modified" : "2025-01-06",
+    "versions" : [ "made" ],
+    "has" : {
+      "introduction" : true,
+      "signature" : true,
+      "note" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf",
+      "name" : null,
+      "date" : "2025-01-06",
+      "size" : 235678
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf",
+      "name" : "UK Explanatory Memorandum",
+      "date" : "2025-01-06",
+      "size" : 76463
+    } ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "The Social Security (Miscellaneous Amendments) Regulations 2025",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W", "S", "NI" ]
+    },
+    "body" : [ {
+      "name" : "item",
+      "number" : "1",
+      "title" : "Citation, commencement and extent",
+      "ref" : "regulation-1",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "2",
+      "title" : "Amendment of the State Pension Credit Regulations 2002",
+      "ref" : "regulation-2",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "3",
+      "title" : "Amendment of the Housing Benefit Regulations 2006",
+      "ref" : "regulation-3",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "4",
+      "title" : "Amendment of the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006",
+      "ref" : "regulation-4",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "5",
+      "title" : "Amendment of the Universal Credit Regulations 2013",
+      "ref" : "regulation-5",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "6",
+      "title" : "Amendment of the Universal Credit (Transitional Provisions) Regulations 2014",
+      "ref" : "regulation-6",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "7",
+      "title" : "Amendment of the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019",
+      "ref" : "regulation-7",
+      "extent" : [ "E", "W", "S", "NI" ]
+    } ],
+    "signature" : {
+      "name" : "signature",
+      "number" : null,
+      "title" : "Signature",
+      "ref" : "signature",
+      "extent" : [ "E", "W", "S", "NI" ]
+    },
+    "explanatoryNote" : {
+      "name" : "explanatoryNote",
+      "number" : null,
+      "title" : "Explanatory Note",
+      "ref" : "note",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/nia/2022/21/enacted" IdURI="http://www.legislation.gov.uk/id/nia/2022/21" NumberOfProvisions="4" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/nia/2022/21/contents/enacted</dc:identifier><dc:title>School Age Act (Northern Ireland) 2022</dc:title><dc:description>Amend the meaning of “compulsory school age” in the Education Orders.</dc:description><dc:publisher>Government Printer for Northern Ireland</dc:publisher><dc:modified>2022-04-28</dc:modified>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/nia/2022/21/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/nia/2022/21/enacted" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/nia/2022/21/introduction/enacted" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/nia/2022/21/body/enacted" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/nia/2022/21/contents/enacted" title="Table of Contents"/>
+					
+					
+					
+					
+					<ukm:PrimaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="primary"/>
+<ukm:DocumentMainType Value="NorthernIrelandAct"/>
+<ukm:DocumentStatus Value="final"/>
+</ukm:DocumentClassification><ukm:Year Value="2022"/><ukm:Number Value="21"/><ukm:EnactmentDate Date="2022-04-27"/><ukm:ISBN Value="9780105962670"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf" Date="2022-04-28" Size="352718"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="4"/>
+									<ukm:BodyParagraphs Value="4"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Contents>
+<ContentsTitle>School Age Act (Northern Ireland) 2022</ContentsTitle>
+
+<ContentsItem ContentRef="section-1" IdURI="http://www.legislation.gov.uk/id/nia/2022/21/section/1" DocumentURI="http://www.legislation.gov.uk/nia/2022/21/section/1/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>1</ContentsNumber><ContentsTitle>Meaning of “compulsory school age”</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="section-2" IdURI="http://www.legislation.gov.uk/id/nia/2022/21/section/2" DocumentURI="http://www.legislation.gov.uk/nia/2022/21/section/2/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>2</ContentsNumber><ContentsTitle>Consequential amendments</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="section-3" IdURI="http://www.legislation.gov.uk/id/nia/2022/21/section/3" DocumentURI="http://www.legislation.gov.uk/nia/2022/21/section/3/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>3</ContentsNumber><ContentsTitle>Review</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="section-4" IdURI="http://www.legislation.gov.uk/id/nia/2022/21/section/4" DocumentURI="http://www.legislation.gov.uk/nia/2022/21/section/4/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>4</ContentsNumber><ContentsTitle>Commencement and short title</ContentsTitle></ContentsItem>
+
+</Contents><Primary><PrimaryPrelims DocumentURI="http://www.legislation.gov.uk/nia/2022/21/introduction/enacted" IdURI="http://www.legislation.gov.uk/id/nia/2022/21/introduction">
+<Title>School Age Act (Northern Ireland) 2022</Title>
+<Number>2022 Chapter 21</Number>
+<LongTitle>An Act to amend the meaning of “compulsory school age” in the Education Orders; and for connected purposes.</LongTitle>
+<DateOfEnactment>
+<DateText>[27th April 2022]</DateText>
+</DateOfEnactment>
+<PrimaryPreamble>
+<EnactingText>
+<Para>
+<Text>BE IT ENACTED by being passed by the Northern Ireland Assembly and assented to by Her Majesty as follows:</Text>
+</Para>
+</EnactingText>
+</PrimaryPreamble>
+</PrimaryPrelims></Primary></Legislation>

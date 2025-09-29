@@ -8,9 +8,9 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.util.Effects;
@@ -29,7 +29,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static uk.gov.legislation.api.test.TransformTest.read;
+import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
 
 @SpringBootTest(classes = Application.class)
 class UnappliedEffectsTest {

@@ -1,0 +1,94 @@
+{
+  "meta" : {
+    "id" : "ukpga/Geo6/6-7/48",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "shortType" : "ukpga",
+    "year" : 1943,
+    "regnalYear" : "Geo6/6-7",
+    "number" : 48,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "6_and_7_Geo_6"
+    } ],
+    "date" : "1943-11-11",
+    "cite" : " (6 & 7 Geo. 6)1943 c. 48",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Parliament (Elections and Meeting) Act 1943",
+    "extent" : [ "E", "W", "S", "NI" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "1991-02-01",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/pdfs/ukpga_19430048_en.pdf",
+      "name" : null,
+      "date" : "2025-03-24",
+      "size" : 3178982
+    } ],
+    "associated" : [ ],
+    "fragment" : "part/1",
+    "prev" : "introduction",
+    "next" : "part/III",
+    "fragmentInfo" : {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "number" : "Parts I, II",
+      "title" : null,
+      "label" : "Parts I, II"
+    },
+    "prevInfo" : {
+      "href" : "ukpga/Geo6/6-7/48/introduction/1991-02-01",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "ukpga/Geo6/6-7/48/part/III/1991-02-01",
+      "label" : "Part"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "number" : "Parts I, II",
+      "title" : null,
+      "label" : "Parts I, II"
+    } ],
+    "descendants" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "number" : "Parts I, II",
+      "title" : null,
+      "label" : "Parts I, II"
+    }, {
+      "element" : "P1",
+      "id" : "section-125",
+      "href" : "ukpga/Geo6/6-7/48/section/125/1991-02-01",
+      "number" : "1",
+      "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "label" : "Section 125"
+    }, {
+      "element" : "P1",
+      "id" : "section-2633",
+      "href" : "ukpga/Geo6/6-7/48/section/2633/1991-02-01",
+      "number" : "26–33",
+      "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      "label" : "Section 2633"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary ukpga\"><div class=\"body\"><section class=\"part\" id=\"part-1\" data-uk-target=\"true\"><h2><span class=\"num\">Parts I, II</span></h2><section class=\"section\" id=\"section-125\"><h2><span class=\"num\">1—25</span><span class=\"heading\">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <a class=\"noteRef commentary commentary\" id=\"ref-c591533\" href=\"#c591533\" data-uk-name=\"commentary\" data-ukl-Name=\"CommentaryRef\">F1</a></span></h2><div class=\"content\"><p></p></div><footer class=\"annotations\"><div>Annotations:</div><div><div>Amendments (Textual)</div><div class=\"note commentary F\"><p><span class=\"marker\"><a id=\"c591533\" href=\"#ref-c591533\">F1</a></span><cite class=\"subref\" data-from=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1\" data-upTo=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/25\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1\">Ss. 1–25</a></cite>, <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/1\">Schs. 1</a></cite>, <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/2\">2</a></cite>, <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/4\">4</a></cite>, <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/6\">6</a></cite> repealed by <cite><a href=\"http://www.legislation.gov.uk/id/ukpga/1948/65\">Representation of the People Act 1948 (c. 65)</a></cite>, <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/ukpga/1948/65/schedule/13\">Sch. 13</a></cite></p></div></div></footer></section><section class=\"section\" id=\"section-2633\"><h2><span class=\"num\">26–33</span><span class=\"heading\">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <a class=\"noteRef commentary commentary\" id=\"ref-c591534\" href=\"#c591534\" data-uk-name=\"commentary\" data-ukl-Name=\"CommentaryRef\">F2</a></span></h2><div class=\"content\"><p></p></div><footer class=\"annotations\"><div>Annotations:</div><div><div>Amendments (Textual)</div><div class=\"note commentary F\"><p><span class=\"marker\"><a id=\"c591534\" href=\"#ref-c591534\">F2</a></span><cite class=\"subref\" data-from=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/26\" data-upTo=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/33\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/26\">Ss. 26–33</a></cite>, <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/5\">Sch. 5</a></cite> repealed by <cite><a href=\"http://www.legislation.gov.uk/id/ukpga/1949/68\">Representation of the People Act 1949 (c. 68)</a></cite>, <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/ukpga/1949/68/schedule/9\">Sch. 9</a></cite></p></div></div></footer></section></section></div></article>"
+}

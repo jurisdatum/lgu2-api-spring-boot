@@ -1,0 +1,298 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/asp/2025/11/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11" NumberOfProvisions="128" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0" RestrictExtent="S" RestrictStartDate="2025-08-07"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07</dc:identifier><dc:title>Education (Scotland) Act 2025</dc:title><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2025-09-11</dc:modified><dc:contributor>Expert Participation</dc:contributor><dct:valid>2025-08-07</dct:valid>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/asp/2025/11/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/asp/2025/11/2025-08-07" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/asp/2025/11/introduction/2025-08-07" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/asp/2025/11/body/2025-08-07" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/asp/2025/11/schedules/2025-08-07" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/asp/2025/11/contents/2025-08-07" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/enacted" title="enacted"/><atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews" title="current"/>
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/asp/2025/11/part/1/2025-08-07" title="Part 1"/><atom:link rel="prev" href="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/supporting-provisions/2025-08-07" title="Crossheading; Part 1 Crossheading; Supporting provisions"/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/asp/2025/11/introduction/2025-08-07" title="Introduction; Introduction"/><atom:link rel="next" href="http://www.legislation.gov.uk/asp/2025/11/part/2/crossheading/establishment/2025-08-07" title="Crossheading; Part 2 Crossheading; Establishment"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/asp/2025/11/part/3/2025-08-07" title="Part; Part 3"/>
+					<ukm:PrimaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="primary"/><ukm:DocumentMainType Value="ScottishAct"/><ukm:DocumentStatus Value="revised"/></ukm:DocumentClassification><ukm:Year Value="2025"/><ukm:Number Value="11"/><ukm:EnactmentDate Date="2025-08-06"/><ukm:ISBN Value="9780105904403"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf" Date="2025-08-06" Size="1631326" Print="true"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="128"/>
+									<ukm:BodyParagraphs Value="67"/>
+									<ukm:ScheduleParagraphs Value="61"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Primary><Body DocumentURI="http://www.legislation.gov.uk/asp/2025/11/body/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/body" NumberOfProvisions="67" RestrictExtent="S" RestrictStartDate="2025-08-07"><Part DocumentURI="http://www.legislation.gov.uk/asp/2025/11/part/1/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/part/1" NumberOfProvisions="32" id="part-1" RestrictExtent="S" Match="false" Status="Prospective"><Number>Part 1</Number><Title>Qualifications Scotland</Title><Pblock DocumentURI="http://www.legislation.gov.uk/asp/2025/11/part/1/crossheading/reviews/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/part/1/crossheading/reviews" NumberOfProvisions="2" Match="false" Status="Prospective" id="part-1-crossheading-reviews" RestrictExtent="S">
+<Title>Reviews</Title>
+<P1group Match="false" Status="Prospective" RestrictExtent="S">
+<Title>Review of arrangements for assuring quality of qualifications</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31" id="section-31">
+<Pnumber><CommentaryRef Ref="key-b7c16a4b6880d0d41b0815be88bae4e9"/>31</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/1/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/1" id="section-31-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The Scottish Ministers must appoint a person to undertake a review of the effectiveness of Qualifications Scotland’s arrangements, made in accordance with section 3(a), for satisfying itself as to the quality of qualifications devised under section 2(1)(a).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/2/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/2" id="section-31-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The Scottish Ministers—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/2/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/2/a" id="section-31-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>must make an appointment under <InternalLink Ref="section-31-1" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/1" DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/1/2025-08-07">subsection (1)</InternalLink> as soon as reasonably practicable and, in any event, no later than 3 months after this section comes into force,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/2/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/2/b" id="section-31-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>must not appoint a person under <InternalLink Ref="section-31-1" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/1" DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/1/2025-08-07">subsection (1)</InternalLink> who is a member of, or a member of staff of, Qualifications Scotland.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/3/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/3" id="section-31-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>The person appointed under <InternalLink Ref="section-31-1" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/1" DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/1/2025-08-07">subsection (1)</InternalLink> must—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/3/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/3/a" id="section-31-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>after undertaking the review, prepare a report of the review,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/3/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/3/b" id="section-31-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>submit the report to the Scottish Ministers.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/4/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/4" id="section-31-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>The Scottish Ministers must—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/4/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/4/a" id="section-31-4-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>give a copy of the report to Qualifications Scotland,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/4/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/4/b" id="section-31-4-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>lay a copy of the report before the Scottish Parliament, and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/31/4/c/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/31/4/c" id="section-31-4-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>publish the report.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group Match="false" Status="Prospective" RestrictExtent="S">
+<Title>Review of accreditation function</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32" id="section-32">
+<Pnumber><CommentaryRef Ref="key-9e4d927f5896cb07efc7962b794fd21c"/>32</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/1/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/1" id="section-32-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The Scottish Ministers must, as soon as reasonably practicable after the end of the review period—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/1/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/1/a" id="section-32-1-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>undertake a review of the operation of the accreditation provisions,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/1/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/1/b" id="section-32-1-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>prepare a report on that review,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/1/c/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/1/c" id="section-32-1-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>publish the report and lay a copy of it before the Scottish Parliament.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/2/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/2" id="section-32-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The report must, in particular, set out—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/2/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/2/a" id="section-32-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>an assessment of the scope of the accreditation function,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/2/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/2/b" id="section-32-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>an assessment of whether the accreditation function should remain a function of Qualifications Scotland,</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/2/c/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/2/c" id="section-32-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>what steps (if any) the Scottish Ministers intend to take as a result of the findings of the review, including whether they intend to bring forward legislation in relation to the accreditation function.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3" id="section-32-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>If the Scottish Ministers state in the report that they intend to bring forward legislation in relation to the accreditation function, they must—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3/a" id="section-32-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>within 1 year of publication of the report, bring forward such legislation, or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3/b" id="section-32-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>as soon as reasonably practicable following the expiry of that period, lay a statement before the Scottish Parliament setting out—</Text>
+<P4 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/b/i/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3/b/i" id="section-32-3-b-i">
+<Pnumber>i</Pnumber>
+<P4para>
+<Text>whether they still intend to bring forward such legislation,</Text>
+</P4para>
+</P4>
+<P4 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/b/ii/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3/b/ii" id="section-32-3-b-ii">
+<Pnumber>ii</Pnumber>
+<P4para>
+<Text>where they still intend to bring forward such legislation, their timescales for doing so,</Text>
+</P4para>
+</P4>
+<P4 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/3/b/iii/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/3/b/iii" id="section-32-3-b-iii">
+<Pnumber>iii</Pnumber>
+<P4para>
+<Text>where they no longer intend to bring forward such legislation, their reasons for that.</Text>
+</P4para>
+</P4>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/4/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/4" id="section-32-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>The Scottish Ministers may delegate their functions under subsections (1)(a) and (b) to such person as they consider appropriate.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/5/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/5" id="section-32-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>When undertaking the review under subsection (1)(a), the Scottish Ministers (or, if applicable, the person to whom the review is delegated under subsection (4)) must consult—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/5/a/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/5/a" id="section-32-5-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>Qualifications Scotland, and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/5/b/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/5/b" id="section-32-5-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>such other persons as the Scottish Ministers (or, if applicable, the person to whom the review is delegated) consider appropriate.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/asp/2025/11/section/32/6/2025-08-07" IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/32/6" id="section-32-6">
+<Pnumber>6</Pnumber>
+<P2para>
+<Text>In this section—</Text>
+<UnorderedList Class="Definition" Decoration="none">
+<ListItem id="p01900">
+<Para>
+<Text>“<Term id="term-accreditation-function">accreditation function</Term>” means the function conferred by section 4(1),</Text>
+</Para>
+</ListItem>
+<ListItem id="p01904">
+<Para>
+<Text>“<Term id="term-accreditation-provisions">accreditation provisions</Term>” means—</Text>
+<OrderedList Type="alpha" Decoration="parens">
+<ListItem id="p01907">
+<Para>
+<Text>section 4,</Text>
+</Para>
+</ListItem>
+<ListItem id="p01911">
+<Para>
+<Text>section 24,</Text>
+</Para>
+</ListItem>
+<ListItem id="p01915">
+<Para>
+<Text>section 25,</Text>
+</Para>
+</ListItem>
+<ListItem id="p01919">
+<Para>
+<Text>paragraph 13 of schedule 1, and</Text>
+</Para>
+</ListItem>
+<ListItem id="p01923">
+<Para>
+<Text>paragraphs 10, 14 and 15 of schedule 1 insofar as they relate to the Accreditation Committee,</Text>
+</Para>
+</ListItem>
+</OrderedList>
+</Para>
+</ListItem>
+<ListItem id="p01928">
+<Para>
+<Text>“<Term id="term-bringing-forward-legislation">bringing forward legislation</Term>”, in relation to the accreditation provisions, means—</Text>
+<OrderedList Type="alpha" Decoration="parens">
+<ListItem id="p01931">
+<Para>
+<Text>laying before the Scottish Parliament for approval by resolution a draft Scottish statutory instrument under Part 2 of the Public Services Reform (Scotland) Act 2010 containing an order making provision in relation to the accreditation provisions, or</Text>
+</Para>
+</ListItem>
+<ListItem id="p01935">
+<Para>
+<Text>introducing a Bill to the Scottish Parliament which includes or consists of provision in relation to the accreditation provisions,</Text>
+</Para>
+</ListItem>
+</OrderedList>
+</Para>
+</ListItem>
+<ListItem id="p01940">
+<Para>
+<Text>“<Term id="term-review-period">review period</Term>” means the period of 2 years beginning with the day on which the accreditation provisions come into force (or, if they come into force on different days, the day on which the last of them comes into force).</Text>
+</Para>
+</ListItem>
+</UnorderedList>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</Pblock></Part></Body></Primary><Commentaries><Commentary Type="I" id="key-b7c16a4b6880d0d41b0815be88bae4e9"><Para><Text>S. 31  not in force at Royal Assent, see <CitationSubRef id="n467278d07e5794a5" SectionRef="section-66-2" URI="http://www.legislation.gov.uk/id/asp/2025/11/section/66/2" Operative="true">s. 66(2)</CitationSubRef></Text></Para></Commentary><Commentary Type="I" id="key-9e4d927f5896cb07efc7962b794fd21c"><Para><Text>S. 32  not in force at Royal Assent, see <CitationSubRef id="n885139c023ff05da" SectionRef="section-66-2" URI="http://www.legislation.gov.uk/id/asp/2025/11/section/66/2" Operative="true">s. 66(2)</CitationSubRef></Text></Para></Commentary></Commentaries></Legislation>

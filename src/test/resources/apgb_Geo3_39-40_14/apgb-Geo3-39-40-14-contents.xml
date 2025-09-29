@@ -1,0 +1,39 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/apgb/Geo3/39-40/14" IdURI="http://www.legislation.gov.uk/id/apgb/Geo3/39-40/14" NumberOfProvisions="2" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" RestrictExtent="E+W+S"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents</dc:identifier><dc:title>Meeting of Parliament Act 1799</dc:title><dc:description>An Act for empowering his Majesty to shorten the Time for the Meeting of Parliament in cases of Adjournment.</dc:description><dc:date>1979-03-31</dc:date><dc:type>text</dc:type><dc:format>text/xml</dc:format><dc:language>en</dc:language><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2011-05-26</dc:modified><dct:valid>1991-02-01</dct:valid>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/introduction" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/body" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/contents/1991-02-01" title="1991-02-01"/>
+					
+					
+					<ukm:PrimaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="primary"/><ukm:DocumentMainType Value="GreatBritainAct"/><ukm:DocumentStatus Value="revised"/></ukm:DocumentClassification><ukm:Year Value="1799"/><ukm:Number Value="14"/><ukm:AlternativeNumber Category="Regnal" Value="39_and_40_Geo_3"/><ukm:EnactmentDate Date="1799-10-12"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="2"/>
+									<ukm:BodyParagraphs Value="2"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Contents><ContentsTitle>Meeting of Parliament Act 1799</ContentsTitle><ContentsItem ContentRef="section-1." IdURI="http://www.legislation.gov.uk/id/apgb/Geo3/39-40/14/section/1." DocumentURI="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/section/1." RestrictExtent="E+W+S"><ContentsNumber>[1.]</ContentsNumber><ContentsTitle>His Majesty may issue his Royal Proclamation for the Meeting of Parliament in not less than 14 Days from the Date, notwithstanding any previous Adjournment to a longer Day.</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-2" IdURI="http://www.legislation.gov.uk/id/apgb/Geo3/39-40/14/section/2" DocumentURI="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/section/2" RestrictExtent="E+W+S"><ContentsNumber>2</ContentsNumber><ContentsTitle> How orders made by Parliament shall be deemed to have been appointed.</ContentsTitle></ContentsItem></Contents><Primary><PrimaryPrelims DocumentURI="http://www.legislation.gov.uk/apgb/Geo3/39-40/14/introduction" IdURI="http://www.legislation.gov.uk/id/apgb/Geo3/39-40/14/introduction"><Title>Meeting of Parliament Act 1799</Title><Number>1799 c.14</Number><LongTitle>An Act for empowering his Majesty to shorten the Time for the Meeting of Parliament in cases of Adjournment.</LongTitle><DateOfEnactment><DateText>[12th October 1799]</DateText></DateOfEnactment><PrimaryPreamble><IntroductoryText><P><Text><Strong><CommentaryRef Ref="c918804"/>Preamble.</Strong></Text></P><P><Text>Whereas by the <CommentaryRef Ref="c974590"/>Meeting of Parliament Act 1797 provision is made for empowering his Majesty, his heirs and successors, to shorten the time required for giving notice of the meeting of Parliament for the dispatch of business in the case of a prorogation of Parliament: And whereas it is expedient that a like power should be given to his Majesty, his heirs and successors, in cases of the adjournment of Parliament:</Text></P></IntroductoryText><EnactingTextOmitted/></PrimaryPreamble></PrimaryPrelims></Primary><Commentaries><Commentary id="c918804" Type="C"><Para><Text>Short title given by <Citation URI="http://www.legislation.gov.uk/id/ukpga/1896/14" id="c00001" Year="1896" Class="UnitedKingdomPublicGeneralAct" Number="14" Title="Short Titles Act 1896">Short Titles Act 1896 (c. 14)</Citation></Text></Para></Commentary><Commentary id="c974590" Type="M"><Para><Text><Citation URI="http://www.legislation.gov.uk/id/apgb/1797/127" id="c00002" Year="1797" Class="GreatBritainAct" Number="127">1797 c. 127</Citation>.</Text></Para></Commentary></Commentaries></Legislation>

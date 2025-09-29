@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="ukpga">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ukpga/1943/48"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ukpga/1943/48"/>
+               <FRBRdate date="1943-11-11" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="48"/>
+               <FRBRname value="1943 c. 48"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga/1943/48/1991-02-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga/1943/48/1991-02-01"/>
+               <FRBRdate date="1991-02-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga/1943/48/1991-02-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga/1943/48/1991-02-01/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="1943-11-11" eId="date-enacted" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#section-125" refersTo="#c591533"/>
+               <uk:commentary href="#section-2633" refersTo="#c591534"/>
+               <uk:commentary href="#section-34" refersTo="#c591535"/>
+               <uk:commentary href="#section-34" refersTo="#c591536"/>
+               <uk:commentary href="#schedule-1" refersTo="#c591537"/>
+               <uk:commentary href="#schedule-THREE" refersTo="#c591538"/>
+               <uk:commentary href="#schedule-FOUR" refersTo="#c591539"/>
+               <uk:commentary href="#schedule-FIVE" refersTo="#c591540"/>
+               <uk:commentary href="#schedule-SIX" refersTo="#c591541"/>
+               <uk:commentary href="#schedule-SEVEN" refersTo="#c591542"/>
+            </otherAnalysis>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e+w+s+ni" href="" showAs="E+W+S+N.I."/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591533" marker="F1">
+               <p>
+                  <rref eId="c00001" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/25">Ss. 1–25</rref>, <ref eId="c00002" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/1">Schs. 1</ref>, <ref eId="c00003" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/2">2</ref>, <ref eId="c00004" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/4">4</ref>, <ref eId="c00005" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/6">6</ref> repealed by <ref eId="c00006" href="http://www.legislation.gov.uk/id/ukpga/1948/65">Representation of the People Act 1948 (c. 65)</ref>, <ref eId="c00007" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/65/schedule/13">Sch. 13</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591534" marker="F2">
+               <p>
+                  <rref eId="c00008" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/26" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/33">Ss. 26–33</rref>, <ref eId="c00009" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/5">Sch. 5</ref> repealed by <ref eId="c00010" href="http://www.legislation.gov.uk/id/ukpga/1949/68">Representation of the People Act 1949 (c. 68)</ref>, <ref eId="c00011" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1949/68/schedule/9">Sch. 9</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591536" marker="F3">
+               <p>Words amend <ref eId="c00013" href="http://www.legislation.gov.uk/id/apgb/1797/127">Meeting of Parliament Act 1797 (c. 127)</ref>, <ref eId="c00014" class="subref operative" href="http://www.legislation.gov.uk/id/apgb/1797/127/section/1">s. 1</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591537" marker="F4">
+               <p>
+                  <rref eId="c00015" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/25">Ss. 1–25</rref>, <ref eId="c00016" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/1">Schs. 1</ref>, <ref eId="c00017" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/2">2</ref>, <ref eId="c00018" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/4">4</ref>, <ref eId="c00019" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/6">6</ref> repealed by <ref eId="c00020" href="http://www.legislation.gov.uk/id/ukpga/1948/65">Representation of the People Act 1948 (c. 65)</ref>, <ref eId="c00021" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/65/schedule/13">Sch. 13</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591538" marker="F5">
+               <p>
+                  <ref eId="c00022" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/3">Sch. 3</ref> repealed by <ref eId="c00023" href="http://www.legislation.gov.uk/id/ukpga/1945/5">Representation of the People Act 1945 (c. 5)</ref>, <ref eId="c00024" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1945/5/schedule/5">Sch. 5</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591539" marker="F6">
+               <p>
+                  <rref eId="c00025" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/25">Ss. 1–25</rref>, <ref eId="c00026" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/1">Schs. 1</ref>, <ref eId="c00027" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/2">2</ref>, <ref eId="c00028" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/4">4</ref>, <ref eId="c00029" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/6">6</ref> repealed by <ref eId="c00030" href="http://www.legislation.gov.uk/id/ukpga/1948/65">Representation of the People Act 1948 (c. 65)</ref>, <ref eId="c00031" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/65/schedule/13">Sch. 13</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591540" marker="F7">
+               <p>
+                  <rref eId="c00032" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/26" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/33">Ss. 26–33</rref>, <ref eId="c00033" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/5">Sch. 5</ref> repealed by <ref eId="c00034" href="http://www.legislation.gov.uk/id/ukpga/1949/68">Representation of the People Act 1949 (c. 68)</ref>, <ref eId="c00035" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1949/68/schedule/9">Sch. 9</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591541" marker="F8">
+               <p>
+                  <rref eId="c00036" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/1" upTo="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/section/25">Ss. 1–25</rref>, <ref eId="c00037" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/1">Schs. 1</ref>, <ref eId="c00038" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/2">2</ref>, <ref eId="c00039" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/4">4</ref>, <ref eId="c00040" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/6">6</ref> repealed by <ref eId="c00041" href="http://www.legislation.gov.uk/id/ukpga/1948/65">Representation of the People Act 1948 (c. 65)</ref>, <ref eId="c00042" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/65/schedule/13">Sch. 13</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c591542" marker="F9">
+               <p>
+                  <ref eId="c00043" class="subref" href="http://www.legislation.gov.uk/id/ukpga/Geo6/6-7/48/schedule/7">Sch. 7</ref> repealed by <ref eId="c00044" href="http://www.legislation.gov.uk/id/ukpga/1950/6">Statute Law Revision Act 1950 (c. 6)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="M" class="commentary M" eId="c591535" marker="M1">
+               <p>
+                  <ref eId="c00012" href="http://www.legislation.gov.uk/id/apgb/1797/127">1797 c. 127</ref>. </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/1991-02-01</dc:identifier>
+            <dc:title>Parliament (Elections and Meeting) Act 1943</dc:title>
+            <dc:description>An Act to make temporary provision as respects parliamentary elections and the registration of parliamentary electors and, in connection therewith, as respects the dissolution of parliament as from a future date and other matters; to consolidate and amend the law as to the officers to whom writs for parliamentary elections are to be directed, and the persons to whom and the manner in which they are to be conveyed; and to shorten the time required for summoning parliament when prorogued.</dc:description>
+            <dc:date>1979-03-31</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>1991-02-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomPublicGeneralAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1943"/>
+               <ukm:Number Value="48"/>
+               <ukm:AlternativeNumber Category="Regnal" Value="6_and_7_Geo_6"/>
+               <ukm:EnactmentDate Date="1943-11-11"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative Date="2025-03-24" Size="3178982" URI="http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/pdfs/ukpga_19430048_en.pdf" Print="true"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="10"/>
+               <ukm:BodyParagraphs Value="4"/>
+               <ukm:ScheduleParagraphs Value="6"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface eId="preface">
+         <block name="title">
+            <docTitle>Parliament (Elections and Meeting) Act 1943</docTitle>
+         </block>
+         <block name="number">
+            <docNumber>1943 CHAPTER 48 6 and 7 Geo 6</docNumber>
+         </block>
+         <longTitle>
+            <p>An Act to make temporary provision as respects parliamentary elections and the registration of parliamentary electors and, in connection therewith, as respects the dissolution of parliament as from a future date and other matters; to consolidate and amend the law as to the officers to whom writs for parliamentary elections are to be directed, and the persons to whom and the manner in which they are to be conveyed; and to shorten the time required for summoning parliament when prorogued.</p>
+         </longTitle>
+         <block name="dateOfEnactment" refersTo="#date-enacted">
+            <docDate date="1943-11-11">[11th November 1943]</docDate>
+         </block>
+      </preface>
+      <body>
+         <part eId="part-1">
+            <num>Parts I, II</num>
+            <section eId="section-125">
+               <num>1—25</num>
+               <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591533" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </heading>
+               <content>
+                  <p/>
+               </content>
+            </section>
+            <section eId="section-2633">
+               <num>26–33</num>
+               <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591534" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </heading>
+               <content>
+                  <p/>
+               </content>
+            </section>
+         </part>
+         <part eId="part-III">
+            <num>Part III</num>
+            <heading> Meeting of Parliament when Prorogued</heading>
+            <section eId="section-34">
+               <num>34</num>
+               <heading> Time for summoning parliament during prorogation.</heading>
+               <content>
+                  <p>The date appointed for the meeting of parliament by a proclamation issued under section one of the <noteRef href="#c591535" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>Meeting of Parliament Act 1797 (which relates to the summoning of parliament when prorogued), may be any day after the date of the proclamation; . . . . . . <noteRef href="#c591536" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </section>
+         </part>
+         <part eId="part-IV">
+            <num>Part IV</num>
+            <heading> General</heading>
+            <section eId="section-35">
+               <num>35</num>
+               <heading> Short title.</heading>
+               <content>
+                  <p>This Act may be cited as the Parliament (Elections and Meeting) Act 1943.</p>
+               </content>
+            </section>
+         </part>
+         <hcontainer name="schedules">
+            <hcontainer name="schedule" eId="schedule-1">
+               <num>
+                  <noteRef href="#c591537" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591537" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>FIRST AND SECOND SCHEDULES</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591537" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+            <hcontainer name="schedule" eId="schedule-THREE">
+               <num>
+                  <noteRef href="#c591538" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591538" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>SCHEDULE THREE</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591538" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+            <hcontainer name="schedule" eId="schedule-FOUR">
+               <num>
+                  <noteRef href="#c591539" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591539" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>SCHEDULE FOUR</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591539" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+            <hcontainer name="schedule" eId="schedule-FIVE">
+               <num>
+                  <noteRef href="#c591540" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591540" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>SCHEDULE FIVE</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591540" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+            <hcontainer name="schedule" eId="schedule-SIX">
+               <num>
+                  <noteRef href="#c591541" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591541" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>SCHEDULE SIX</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591541" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+            <hcontainer name="schedule" eId="schedule-SEVEN">
+               <num>
+                  <noteRef href="#c591542" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  <noteRef href="#c591542" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>SCHEDULE SEVEN</num>
+               <content>
+                  <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c591542" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+                  </p>
+               </content>
+            </hcontainer>
+         </hcontainer>
+      </body>
+   </act>
+</akomaNtoso>

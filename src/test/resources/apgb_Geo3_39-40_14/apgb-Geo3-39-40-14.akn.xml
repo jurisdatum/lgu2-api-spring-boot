@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="apgb">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/apgb/1799/14"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/apgb/1799/14"/>
+               <FRBRdate date="1799-10-12" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/ParliamentOfGreatBritain"/>
+               <FRBRcountry value="GB-GBN"/>
+               <FRBRnumber value="14"/>
+               <FRBRname value="1799 c. 14"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/apgb/1799/14/1991-02-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/apgb/1799/14/1991-02-01"/>
+               <FRBRdate date="1991-02-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/apgb/1799/14/1991-02-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/apgb/1799/14/1991-02-01/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="1799-10-12" eId="date-enacted" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w+s" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#preface" refersTo="#c918804"/>
+               <uk:commentary href="#preface" refersTo="#c974590"/>
+               <uk:commentary href="#section-1." refersTo="#c918806"/>
+               <uk:commentary href="#section-1." refersTo="#c918807"/>
+            </otherAnalysis>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e+w+s" href="" showAs="E+W+S"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="X" class="commentary X" eId="c918806" marker="X1">
+               <p>Unreliable marginal note</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c918807" marker="F1">
+               <p>Word substituted by virtue of <ref eId="c00003" href="http://www.legislation.gov.uk/id/ukpga/1870/81">Meeting of Parliament Act 1870 (c. 81)</ref>, <ref eId="c00004" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1870/81/section/2">s. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c918804" marker="C1">
+               <p>Short title given by <ref eId="c00001" href="http://www.legislation.gov.uk/id/ukpga/1896/14">Short Titles Act 1896 (c. 14)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="M" class="commentary M" eId="c974590" marker="M1">
+               <p>
+                  <ref eId="c00002" href="http://www.legislation.gov.uk/id/apgb/1797/127">1797 c. 127</ref>.</p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/apgb/Geo3/39-40/14</dc:identifier>
+            <dc:title>Meeting of Parliament Act 1799</dc:title>
+            <dc:description>An Act for empowering his Majesty to shorten the Time for the Meeting of Parliament in cases of Adjournment.</dc:description>
+            <dc:date>1979-03-31</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>1991-02-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="GreatBritainAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1799"/>
+               <ukm:Number Value="14"/>
+               <ukm:AlternativeNumber Category="Regnal" Value="39_and_40_Geo_3"/>
+               <ukm:EnactmentDate Date="1799-10-12"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="2"/>
+               <ukm:BodyParagraphs Value="2"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface eId="preface">
+         <block name="title">
+            <docTitle>Meeting of Parliament Act 1799</docTitle>
+         </block>
+         <block name="number">
+            <docNumber>1799 CHAPTER 14 39 and 40 Geo 3</docNumber>
+         </block>
+         <longTitle>
+            <p>An Act for empowering his Majesty to shorten the Time for the Meeting of Parliament in cases of Adjournment.</p>
+         </longTitle>
+         <block name="dateOfEnactment" refersTo="#date-enacted">
+            <docDate date="1799-10-12">[12th October 1799]</docDate>
+         </block>
+      </preface>
+      <preamble>
+         <p>
+            <b>Preamble.</b>
+         </p>
+         <p>Whereas by the <noteRef href="#c974590" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>Meeting of Parliament Act 1797 provision is made for empowering his Majesty, his heirs and successors, to shorten the time required for giving notice of the meeting of Parliament for the dispatch of business in the case of a prorogation of Parliament: And whereas it is expedient that a like power should be given to his Majesty, his heirs and successors, in cases of the adjournment of Parliament:</p>
+      </preamble>
+      <body>
+         <section eId="section-1.">
+            <num>[1.]</num>
+            <heading>
+               <noteRef href="#c918806" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>His Majesty may issue his Royal Proclamation for the Meeting of Parliament in not less than 14 Days from the Date, notwithstanding any previous Adjournment to a longer Day.</heading>
+            <content>
+               <p>In all cases where both Houses of Parliament shall stand adjourned for more than fourteen days from the day of the date of the proclamation herein-after mentioned, it shall and may be lawful for his Majesty, his heirs and successors, to issue his and their royal proclamation, by and with the advice of his and their privy council, thereby declaring that the said Parliament shall meet on a day, being not less than <ins class="first last" ukl:ChangeId="d30p64" ukl:CommentaryRef="c918807">
+                     <noteRef uk:name="commentary" href="#c918807" class="commentary"/>six</ins> days from the day of the date of such proclamation, and the Houses of Parliament shall thereupon stand adjourned to the day and place declared in such proclamation, notwithstanding any previous adjournment of the Houses of Parliament to any longer day, and notwithstanding any former law, usage or custom to the contrary.</p>
+            </content>
+         </section>
+         <section eId="section-2">
+            <num>2</num>
+            <heading> How orders made by Parliament shall be deemed to have been appointed.</heading>
+            <content>
+               <p>And all and singular the order or orders which shall have been made by either House of Parliament, and appointed for the day to which such House of Parliament shall have been adjourned or to any day or days subsequent thereto, other than and except any order or orders that shall have been specially appointed for particular days by either House of Parliament and declared to be so fixed notwithstanding any meeting of Parliament under this Act, and also except any order or orders made under the provisions of any Act of Parliament, shall be deemed and taken to have been appointed for the day on which the Parliament shall meet in pursuance of such proclamation.</p>
+            </content>
+         </section>
+      </body>
+   </act>
+</akomaNtoso>

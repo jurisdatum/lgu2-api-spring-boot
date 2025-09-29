@@ -1,0 +1,65 @@
+{
+  "meta" : {
+    "id" : "nia/2022/21",
+    "longType" : "NorthernIrelandAct",
+    "shortType" : "nia",
+    "year" : 2022,
+    "number" : 21,
+    "isbn" : "9780105962670",
+    "date" : "2022-04-27",
+    "cite" : "2022 c. 21 (N.I.)",
+    "version" : "enacted",
+    "status" : "final",
+    "title" : "School Age Act (Northern Ireland) 2022",
+    "extent" : [ ],
+    "lang" : null,
+    "publisher" : "Government Printer for Northern Ireland",
+    "modified" : "2022-04-28",
+    "versions" : [ "enacted" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf",
+      "name" : null,
+      "date" : "2022-04-28",
+      "size" : 352718
+    } ],
+    "associated" : [ ],
+    "fragment" : "introduction",
+    "prev" : null,
+    "next" : "section/1",
+    "fragmentInfo" : {
+      "element" : "PrimaryPrelims",
+      "id" : null,
+      "href" : "nia/2022/21/introduction/enacted",
+      "number" : "2022 Chapter 21",
+      "title" : "School Age Act (Northern Ireland) 2022",
+      "label" : "PrimaryPrelims"
+    },
+    "prevInfo" : null,
+    "nextInfo" : {
+      "href" : "nia/2022/21/section/1/enacted",
+      "label" : "Provision"
+    },
+    "ancestors" : [ ],
+    "descendants" : [ {
+      "element" : "PrimaryPrelims",
+      "id" : null,
+      "href" : "nia/2022/21/introduction/enacted",
+      "number" : "2022 Chapter 21",
+      "title" : "School Age Act (Northern Ireland) 2022",
+      "label" : "PrimaryPrelims"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary nia\"><div class=\"preface\" id=\"preface\" data-uk-target=\"true\"><p class=\"crest\"><img src=\"/static/lgu1/images/crests/ukpga.gif\" alt=\"Royal arms\" title=\"Royal arms\" width=\"156\" height=\"128\"></p><h1 class=\"block title\"><span class=\"docTitle\">School Age Act (Northern&nbsp;Ireland) 2022</span></h1><div class=\"block number\"><span class=\"docNumber\">2022 CHAPTER 21</span></div><div class=\"longTitle\"><p>An Act to amend the meaning of “compulsory school age” in the Education Orders; and for connected purposes.</p></div><div class=\"block dateOfEnactment\" data-refersTo=\"#date-enacted\">\n<time class=\"docDate\" datetime=\"2022-04-27\">[27th April 2022]</time>\n</div></div><div class=\"preamble\">\n<div class=\"formula enactingText\">\n\n<p>BE IT ENACTED by being passed by the Northern Ireland Assembly and assented to by Her Majesty as follows:</p>\n\n</div>\n</div><div class=\"body\"></div></article>"
+}

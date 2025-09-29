@@ -1,0 +1,46 @@
+{
+  "meta" : {
+    "id" : "aosp/1707/8",
+    "longType" : "ScottishOldAct",
+    "shortType" : "aosp",
+    "year" : 1707,
+    "number" : 8,
+    "date" : null,
+    "cite" : "1707 c. 8 [S]",
+    "version" : "2007-01-01",
+    "status" : "revised",
+    "title" : "Election Act 1707(repealed)",
+    "extent" : [ "S" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01", "2007-01-01" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : "2007-01-01",
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "Election Act 1707(repealed)",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "S" ]
+    },
+    "body" : [ {
+      "name" : "item",
+      "number" : "",
+      "title" : ". . . It is always hereby expressly Provided and...",
+      "ref" : "paragraph-p3",
+      "extent" : [ "S" ]
+    } ]
+  }
+}

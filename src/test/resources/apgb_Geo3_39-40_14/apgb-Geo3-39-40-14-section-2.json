@@ -1,0 +1,70 @@
+{
+  "meta" : {
+    "id" : "apgb/Geo3/39-40/14",
+    "longType" : "GreatBritainAct",
+    "shortType" : "apgb",
+    "year" : 1799,
+    "regnalYear" : "Geo3/39-40",
+    "number" : 14,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "39_and_40_Geo_3"
+    } ],
+    "date" : "1799-10-12",
+    "cite" : "1799 (39 & 40 Geo. 3) c. 14",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Meeting of Parliament Act 1799",
+    "extent" : [ "E", "W", "S" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : null,
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "fragment" : "section/2",
+    "prev" : "section/1.",
+    "next" : null,
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "apgb/Geo3/39-40/14/section/2",
+      "number" : "2",
+      "title" : "How orders made by Parliament shall be deemed to have been appointed.",
+      "label" : "Section 2"
+    },
+    "prevInfo" : {
+      "href" : "apgb/Geo3/39-40/14/section/1.",
+      "label" : "Provision"
+    },
+    "nextInfo" : null,
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "apgb/Geo3/39-40/14/section/2",
+      "number" : "2",
+      "title" : "How orders made by Parliament shall be deemed to have been appointed.",
+      "label" : "Section 2"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "apgb/Geo3/39-40/14/section/2",
+      "number" : "2",
+      "title" : "How orders made by Parliament shall be deemed to have been appointed.",
+      "label" : "Section 2"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary apgb\"><div class=\"body\"><section class=\"section\" id=\"section-2\" data-uk-target=\"true\"><h2><span class=\"num\">2</span><span class=\"heading\"> How orders made by Parliament shall be deemed to have been appointed.</span></h2><div class=\"content\"><p>And all and singular the order or orders which shall have been made by either House of Parliament, and appointed for the day to which such House of Parliament shall have been adjourned or to any day or days subsequent thereto, other than and except any order or orders that shall have been specially appointed for particular days by either House of Parliament and declared to be so fixed notwithstanding any meeting of Parliament under this Act, and also except any order or orders made under the provisions of any Act of Parliament, shall be deemed and taken to have been appointed for the day on which the Parliament shall meet in pursuance of such proclamation.</p></div></section></div></article>"
+}

@@ -12,6 +12,7 @@ public class Links {
         String year,
         long number,
         Optional<String> fragment,  // with slashes, e.g., section/1
+        boolean isContents,
         Optional<String> version,
         Optional<String> language  // can be empty, 'english' or 'welsh'
     ) { }
@@ -25,8 +26,8 @@ public class Links {
             link = link.substring(30);
         else if (link.startsWith("https://www.legislation.gov.uk/"))
             link = link.substring(31);
-        else
-            return null;
+//        else
+//            return null;
         if (link.startsWith("id/"))
             link = link.substring(3);
 
@@ -42,7 +43,7 @@ public class Links {
         link = link.substring(matcher.end());
 
         if (link.isEmpty())
-            return new Components(type, year, number, Optional.empty(), Optional.empty(), Optional.empty());
+            return new Components(type, year, number, Optional.empty(), false, Optional.empty(), Optional.empty());
 
         String[] split = link.split("/");
         if (split.length == 0)
@@ -51,7 +52,7 @@ public class Links {
         if (split[split.length - 1].equals("revision"))  // this might no longer be necessary?
             split = Arrays.copyOf(split, split.length - 1);
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), Optional.empty(), Optional.empty());
+            return new Components(type, year, number, Optional.empty(), false, Optional.empty(), Optional.empty());
 
         final Optional<String> language;
         if ("english".equalsIgnoreCase(split[split.length - 1]) || "welsh".equalsIgnoreCase(split[split.length - 1])) {
@@ -61,7 +62,7 @@ public class Links {
             language = Optional.empty();
         }
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), Optional.empty(), language);
+            return new Components(type, year, number, Optional.empty(), false, Optional.empty(), language);
 
         final Optional<String> version;
         if (Versions.isVersionLabel(split[split.length - 1])) {
@@ -71,15 +72,17 @@ public class Links {
             version = Optional.empty();
         }
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), version, language);
+            return new Components(type, year, number, Optional.empty(), false, version, language);
 
-        if ("contents".equals(split[split.length - 1]))  // FixMe find a way to capture 'contents'
+        boolean isContents = "contents".equals(split[split.length - 1]);
+        if ("contents".equals(split[split.length - 1])) {
             split = Arrays.copyOf(split, split.length - 1);
+        }
         if (split.length == 0)
-            return new Components(type, year, number, Optional.empty(), version, language);
+            return new Components(type, year, number, Optional.empty(), isContents, version, language);
 
         final Optional<String> fragment = Optional.of(String.join("/", split));
-        return new Components(type, year, number, fragment, version, language);
+        return new Components(type, year, number, fragment, isContents, version, language);
     }
 
     public static String shorten(String uri) {
@@ -95,6 +98,9 @@ public class Links {
         if (comp.fragment.isPresent()) {
             builder.append("/");
             builder.append(comp.fragment.get());
+        }
+        if (comp.isContents()) {
+            builder.append("/contents");
         }
         if (comp.version.isPresent()) {
             builder.append("/");

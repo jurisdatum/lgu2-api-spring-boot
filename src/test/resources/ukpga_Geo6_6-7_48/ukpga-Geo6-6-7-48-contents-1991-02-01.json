@@ -1,0 +1,176 @@
+{
+  "meta" : {
+    "id" : "ukpga/Geo6/6-7/48",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "shortType" : "ukpga",
+    "year" : 1943,
+    "regnalYear" : "Geo6/6-7",
+    "number" : 48,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "6_and_7_Geo_6"
+    } ],
+    "date" : "1943-11-11",
+    "cite" : " (6 & 7 Geo. 6)1943 c. 48",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Parliament (Elections and Meeting) Act 1943",
+    "extent" : [ "E", "W", "S", "NI" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "enacted", "1991-02-01" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "1991-02-01",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/pdfs/ukpga_19430048_en.pdf",
+      "name" : null,
+      "date" : "2025-03-24",
+      "size" : 3178982
+    } ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "Parliament (Elections and Meeting) Act 1943",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W", "S", "NI" ]
+    },
+    "body" : [ {
+      "name" : "part",
+      "number" : "Parts I, II",
+      "title" : null,
+      "ref" : "part-1",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "1—25",
+        "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+        "ref" : "section-125",
+        "extent" : [ "E", "W", "S", "NI" ]
+      }, {
+        "name" : "item",
+        "number" : "26–33",
+        "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
+        "ref" : "section-2633",
+        "extent" : [ "E", "W", "S", "NI" ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "Part III",
+      "title" : " Meeting of Parliament when Prorogued",
+      "ref" : "part-III",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "34",
+        "title" : " Time for summoning parliament during prorogation.",
+        "ref" : "section-34",
+        "extent" : [ "E", "W", "S", "NI" ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "Part IV",
+      "title" : " General",
+      "ref" : "part-IV",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "35",
+        "title" : " Short title.",
+        "ref" : "section-35",
+        "extent" : [ "E", "W", "S", "NI" ]
+      } ]
+    } ],
+    "schedules" : [ {
+      "name" : "schedule",
+      "number" : "FIRST AND SECOND SCHEDULES",
+      "title" : null,
+      "ref" : "schedule-1",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "SCHEDULE THREE",
+      "title" : null,
+      "ref" : "schedule-THREE",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "SCHEDULE FOUR",
+      "title" : null,
+      "ref" : "schedule-FOUR",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "SCHEDULE FIVE",
+      "title" : null,
+      "ref" : "schedule-FIVE",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "SCHEDULE SIX",
+      "title" : null,
+      "ref" : "schedule-SIX",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "SCHEDULE SEVEN",
+      "title" : null,
+      "ref" : "schedule-SEVEN",
+      "extent" : [ "E", "W", "S", "NI" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . ....",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    } ]
+  }
+}
