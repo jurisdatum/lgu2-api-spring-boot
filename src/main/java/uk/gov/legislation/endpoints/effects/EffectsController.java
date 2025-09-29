@@ -11,6 +11,8 @@ import uk.gov.legislation.transform.simple.effects.Page;
 
 import java.io.IOException;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 public class EffectsController implements EffectsApi {
 
@@ -34,6 +36,7 @@ public class EffectsController implements EffectsApi {
         String sourceTitle,
         int page
     ) throws IOException, InterruptedException {
+        validateType(targetType);
         Parameters params = Parameters.builder()
             .affectedType(targetType)
             .affectedYear(targetYear)
@@ -59,6 +62,7 @@ public class EffectsController implements EffectsApi {
         String sourceTitle,
         int page
     ) throws IOException, InterruptedException, SaxonApiException {
+        validateType(targetType);
         String atom = atom(targetType, targetYear, targetNumber, targetTitle, sourceType, sourceYear, sourceNumber, sourceTitle, page);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);

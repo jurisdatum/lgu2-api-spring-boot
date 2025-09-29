@@ -11,6 +11,8 @@ import uk.gov.legislation.data.virtuoso.defra.Response;
 
 import java.util.concurrent.CompletionStage;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 @Tag(name = "Linked Data")
 @RequestMapping(path = "/defra", produces = "application/json")
@@ -37,6 +39,7 @@ public class DefraLexController {
             @RequestParam(required = false) Integer review,
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "20") int pageSize) {
+        validateType(type);
         Parameters params = Parameters.builder()
             .inForce(inForce)
             .isCommencementOrder(isCommencementOrder)
