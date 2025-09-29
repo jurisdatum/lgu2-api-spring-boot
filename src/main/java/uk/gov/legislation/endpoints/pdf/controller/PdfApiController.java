@@ -9,6 +9,8 @@ import uk.gov.legislation.endpoints.pdf.service.PdfService;
 import uk.gov.legislation.exceptions.DocumentFetchException;
 import java.io.IOException;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 public class PdfApiController implements PdfApi {
 
@@ -20,22 +22,26 @@ public class PdfApiController implements PdfApi {
 
     @Override
     public ResponseEntity<Void> getPdf(String type, int year, int number, String version) {
+        validateType(type);
         return handlePdfRequest(type, Integer.toString(year), number, version, false);
     }
 
     @Override
     public ResponseEntity<Void> getPdfWithRegnalYear(String type, String monarch, String years, int number, String version) {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return handlePdfRequest(type, regnalYear, number, version, false);
     }
 
     @Override
     public ResponseEntity<Void> getPdfThumbnail(String type, int year, int number, String version) {
+        validateType(type);
         return handlePdfRequest(type, Integer.toString(year), number, version, true);
     }
 
     @Override
     public ResponseEntity<Void> getPdfThumbnailWithRegnalYear(String type, String monarch, String years, int number, String version) {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return handlePdfRequest(type, regnalYear, number, version, true);
     }
