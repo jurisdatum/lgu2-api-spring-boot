@@ -4,20 +4,21 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.beans.factory.annotation.Autowired;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.Transforms;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 import java.util.Optional;
+
 import static org.mockito.Mockito.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(FragmentController.class)
@@ -59,9 +60,11 @@ class FragmentControllerTest {
     void shouldUseDefaultLocale_whenNoAcceptLanguageHeaderProvided() throws Exception {
 
         String clmlXml = "<some><xml>...</xml></some>";
+        Optional<String> version = Optional.of("enacted");
+        Optional<String> language = Optional.of("en");
         Legislation.Response response = new Legislation.Response(clmlXml, Optional.empty());
 
-        when(marklogic.getDocumentSection(any(), any(), anyInt(), any(), any(), any()))
+        when(marklogic.getDocumentSection("ukla", "2020", 1, "section-1", version, language))
             .thenReturn(response);
 
         mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
@@ -72,8 +75,10 @@ class FragmentControllerTest {
             .andExpect(content().contentTypeCompatibleWith("application/xml"))
             .andExpect(content().string(clmlXml))
             .andExpect(header().string("Content-Language", "en"));
-    }
 
+        verify(marklogic).getDocumentSection("ukla", "2020", 1, "section-1", version, language);
+        verifyNoInteractions(transforms);
+    }
 
     @ParameterizedTest
     @ValueSource(strings = {"en", "cy"})
@@ -81,9 +86,11 @@ class FragmentControllerTest {
     void acceptLanguageHeader(String acceptLanguageHeader) throws Exception {
 
         String clmlXml = "<some><xml>...</xml></some>";
+        Optional<String> version = Optional.of("enacted");
+        Optional<String> language = Optional.of(acceptLanguageHeader);
         Legislation.Response response = new Legislation.Response(clmlXml, Optional.empty());
 
-        when(marklogic.getDocumentSection(any(), any(), anyInt(), any(), any(), any()))
+        when(marklogic.getDocumentSection("ukla", "2020", 1, "section-1", version, language))
             .thenReturn(response);
 
         mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
@@ -94,6 +101,9 @@ class FragmentControllerTest {
             .andExpect(content().contentTypeCompatibleWith("application/xml"))
             .andExpect(content().string(clmlXml))
             .andExpect(header().string("Content-Language", acceptLanguageHeader));
+
+        verify(marklogic).getDocumentSection("ukla", "2020", 1, "section-1", version, language);
+        verifyNoInteractions(transforms);
     }
 
 
@@ -204,4 +214,3 @@ class FragmentControllerTest {
         verifyNoMoreInteractions(transforms);
     }
 }
-
