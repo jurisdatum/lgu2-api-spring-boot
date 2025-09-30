@@ -45,7 +45,7 @@ class TransformTest {
         );
     }
 
-    private static String replaceAknDate(String akn) {
+    static String replaceAknDate(String akn) {
         return akn.replaceFirst("<FRBRdate date=\".+?\" name=\"transform\"/>", "<FRBRdate date=\"1001-01-01-00:00\" name=\"transform\"/>");
     }
 
@@ -66,7 +66,7 @@ class TransformTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    private static String replaceHtmlDate(String html) {
+    static String replaceHtmlDate(String html) {
         return html.replaceFirst("""
             <div property="FRBRdate" typeof="FRBRdate">
              {21}<meta property="date" content="[^"]+">

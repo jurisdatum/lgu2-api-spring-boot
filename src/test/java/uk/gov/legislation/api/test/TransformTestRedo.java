@@ -9,9 +9,10 @@ import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.util.UpToDate;
 
 import java.time.ZonedDateTime;
+import java.util.function.BiPredicate;
 
 import static uk.gov.legislation.api.test.TransformHelper.MAPPER;
-import static uk.gov.legislation.api.test.TransformTest.CUTOFF;
+import static uk.gov.legislation.api.test.TransformTest.*;
 
 public class TransformTestRedo {
 
@@ -32,13 +33,23 @@ public class TransformTestRedo {
 
     static void akn(ApplicationContext ctx, String id) throws Exception {
         Transforms transforms = ctx.getBean(Transforms.class);
-        redo(id, transforms::clml2akn, "akn.xml");
+        BiPredicate<String, String> compare = (String actual, String expected) -> {
+            actual = replaceAknDate(actual);
+            expected = replaceAknDate(expected);
+            return actual.equals(expected);
+        };
+        redo(id, transforms::clml2akn, compare, "akn.xml");
     }
 
     static void html(ApplicationContext ctx, String id) throws Exception {
         Transforms transforms = ctx.getBean(Transforms.class);
         ITransform clml2html = (String clml) -> transforms.clml2html(clml, true);
-        redo(id, clml2html, "html");
+        BiPredicate<String, String> compare = (String actual, String expected) -> {
+            actual = replaceHtmlDate(actual);
+            expected = replaceHtmlDate(expected);
+            return actual.equals(expected);
+        };
+        redo(id, clml2html, compare, "html");
     }
 
     static void json(ApplicationContext ctx, String id) throws Exception {
@@ -54,10 +65,10 @@ public class TransformTestRedo {
                 UpToDate.setUpToDate(document.meta, CUTOFF);
                 return MAPPER.writeValueAsString(document);
             } ;
-        redo(id, transform, "json");
+        redo(id, transform, String::equals, "json");
     }
 
-    static void redo(String id, ITransform transform, String format) throws Exception {
+    static void redo(String id, ITransform transform, BiPredicate<String, String> compare,  String format) throws Exception {
         String clml = TransformHelper.read(id, "xml");
         String actual = transform.apply(clml);
         String expected;
@@ -66,7 +77,7 @@ public class TransformTestRedo {
         } catch (NullPointerException e) {
             expected = ZonedDateTime.now().toString();
         }
-        if (actual.equals(expected)) {
+        if (compare.test(actual, expected)) {
             System.out.println("skipping " + id);
             return;
         }
