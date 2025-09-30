@@ -12,6 +12,8 @@ import uk.gov.legislation.transform.Transforms;
 import java.util.Locale;
 import java.util.Optional;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 public class FragmentController implements FragmentApi {
 
@@ -28,12 +30,14 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<String> getFragmentClml(String type, Integer year, Integer number, String section,
             Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, clml -> clml);
     }
 
     @Override
     public ResponseEntity<String> getFragmentClml(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, section, version, locale, clml -> clml);
     }
@@ -43,11 +47,13 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, int year, int number, String section,
             Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, transforms::clml2akn);
     }
     @Override
     public ResponseEntity<String> getFragmentAkn(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, section, version, locale, transforms::clml2akn);
     }
@@ -57,12 +63,14 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, int year, int number, String section,
             Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         Transform<String> transform = clml -> transforms.clml2html(clml, true);
         return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, transform);
     }
     @Override
     public ResponseEntity<String> getFragmentHtml(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         Transform<String> transform = clml -> transforms.clml2html(clml, true);
         return fetchAndTransform(type, regnalYear, number, section, version, locale, transform);
@@ -73,11 +81,13 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section,
             Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, transforms::clml2fragment);
     }
     @Override
     public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, section, version, locale, transforms::clml2fragment);
     }
@@ -86,11 +96,13 @@ public class FragmentController implements FragmentApi {
 
     @Override
     public ResponseEntity<byte[]> docx(String type, int year, int number, String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, transforms::clml2docx);
     }
 
     @Override
     public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, String section, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, section, version, locale, transforms::clml2docx);
     }

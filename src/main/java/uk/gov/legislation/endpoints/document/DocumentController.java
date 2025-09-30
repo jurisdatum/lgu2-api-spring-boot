@@ -11,6 +11,8 @@ import uk.gov.legislation.transform.Transforms;
 import java.util.Locale;
 import java.util.Optional;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 public class DocumentController implements DocumentApi {
 
@@ -27,11 +29,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<String> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, clml -> clml);
     }
 
     @Override
     public ResponseEntity<String> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, clml -> clml);
     }
@@ -40,11 +44,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2akn);
     }
 
     @Override
     public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2akn);
     }
@@ -53,12 +59,14 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<String> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         Transform<String> transform = clml -> transforms.clml2html(clml, true);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transform);
     }
 
     @Override
     public ResponseEntity<String> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         Transform<String> transform = clml -> transforms.clml2html(clml, true);
         return fetchAndTransform(type, regnalYear, number, version, locale, transform);
@@ -68,11 +76,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2document);
     }
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2document);
     }
@@ -81,11 +91,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2docx);
     }
 
     @Override
     public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2docx);
     }

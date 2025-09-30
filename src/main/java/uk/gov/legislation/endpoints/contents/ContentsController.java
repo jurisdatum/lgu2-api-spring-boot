@@ -12,6 +12,8 @@ import uk.gov.legislation.transform.Transforms;
 import java.util.Locale;
 import java.util.Optional;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
 @RestController
 public class ContentsController implements ContentsApi {
 
@@ -27,11 +29,13 @@ public class ContentsController implements ContentsApi {
 
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, clml -> clml);
     }
 
     @Override
     public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, clml -> clml);
     }
@@ -40,11 +44,13 @@ public class ContentsController implements ContentsApi {
 
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2akn);
     }
 
     @Override
     public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2akn);
     }
@@ -53,11 +59,13 @@ public class ContentsController implements ContentsApi {
 
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2toc);
     }
 
     @Override
     public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2toc);
     }
@@ -66,10 +74,12 @@ public class ContentsController implements ContentsApi {
 
     @Override
     public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2docx);
     }
     @Override
     public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+        validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2docx);
     }
