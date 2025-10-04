@@ -7,8 +7,8 @@ import uk.gov.legislation.transform.Helper;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
@@ -18,6 +18,9 @@ import java.util.Map;
 public class Simplify {
 
     private static final String STYLESHEET = "/transforms/simplify/legislation.xsl";
+
+    private static final QName IS_FRAGMENT_PARAM = new QName("is-fragment");
+    private static final QName INCLUDE_CONTENTS_PARAM = new QName("include-contents");
 
     private final XsltExecutable executable;
 
@@ -39,9 +42,9 @@ public class Simplify {
 
     private void transform(Source clml, Destination destination, Parameters params) throws SaxonApiException {
         Xslt30Transformer transformer = executable.load30();
-        Map<QName, XdmValue> params2 = new LinkedHashMap<>();
-        params2.put(new QName("is-fragment"), new XdmAtomicValue(params.isFragment()));
-        params2.put(new QName("include-contents"), new XdmAtomicValue(params.includeContents()));
+        Map<QName, XdmValue> params2 = new LinkedHashMap<>(2);
+        params2.put(IS_FRAGMENT_PARAM, new XdmAtomicValue(params.isFragment()));
+        params2.put(INCLUDE_CONTENTS_PARAM, new XdmAtomicValue(params.includeContents()));
         transformer.setStylesheetParameters(params2);
         transformer.transform(clml, destination);
     }
@@ -56,9 +59,8 @@ public class Simplify {
     }
 
     public String transform(String clml, Parameters params) throws SaxonApiException {
-        ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes());
+        Source source = new StreamSource(new StringReader(clml));
         ByteArrayOutputStream output = new ByteArrayOutputStream();
-        Source source = new StreamSource(input);
         Serializer destination = executable.getProcessor().newSerializer(output);
         transform(source, destination, params);
         return output.toString(StandardCharsets.UTF_8);

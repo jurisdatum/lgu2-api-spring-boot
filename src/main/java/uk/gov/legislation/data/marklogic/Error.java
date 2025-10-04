@@ -1,6 +1,7 @@
 package uk.gov.legislation.data.marklogic;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -13,9 +14,11 @@ import java.util.List;
 public class Error {
 
     public static Error parse(String xml) throws JsonProcessingException {
-        XmlMapper mapper = new XmlMapper();
-        return mapper.readValue(xml, Error.class);
+        return MAPPER.readValue(xml, Error.class);
     }
+
+    private static final XmlMapper MAPPER = (XmlMapper) new XmlMapper()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
     @JacksonXmlProperty(localName = "status-code")
     public int statusCode;

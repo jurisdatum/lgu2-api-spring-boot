@@ -1,12 +1,10 @@
 package uk.gov.legislation.transform.simple.effects;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.transform.Helper;
+import uk.gov.legislation.transform.simple.SimpleXmlMapper;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
@@ -47,13 +45,9 @@ public class EffectsSimplifier {
         return simple.toString();
     }
 
-    private static final XmlMapper Mapper = (XmlMapper) new XmlMapper()
-        .registerModules(new JavaTimeModule())
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-
     public Page parse(String atom) throws SaxonApiException, JsonProcessingException {
         String simple = simpify(atom);
-        return Mapper.readValue(simple, Page.class);
+        return SimpleXmlMapper.INSTANCE.readValue(simple, Page.class);
     }
 
 }

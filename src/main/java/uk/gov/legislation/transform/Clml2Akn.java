@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
@@ -56,8 +56,10 @@ public class Clml2Akn {
     }
 
     public XdmNode transform(String clml) throws SaxonApiException {
-        ByteArrayInputStream stream = new ByteArrayInputStream(clml.getBytes());
-        return transform(stream);
+        Source source = new StreamSource(new StringReader(clml));
+        XdmDestination destination = new XdmDestination();
+        transform(source, destination);
+        return destination.getXdmNode();
     }
 
     static final Properties Properties = new Properties();
