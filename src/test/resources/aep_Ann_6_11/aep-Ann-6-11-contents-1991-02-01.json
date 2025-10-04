@@ -1,0 +1,315 @@
+{
+  "meta" : {
+    "id" : "aep/Ann/6/11",
+    "longType" : "EnglandAct",
+    "shortType" : "aep",
+    "year" : 1706,
+    "regnalYear" : "Ann/6",
+    "number" : 11,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "6_Ann"
+    } ],
+    "date" : null,
+    "cite" : "1706 (6 Ann.) c. 11",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Union with Scotland Act 1706",
+    "extent" : [ "E", "W" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01", "1993-11-05" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : "1991-02-01",
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "Union with Scotland Act 1706",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W" ]
+    },
+    "body" : [ {
+      "name" : "part",
+      "number" : "ARTICLE I.",
+      "title" : null,
+      "ref" : "part-1",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " The Kingdoms United;     Ensigns Armorial",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE II.",
+      "title" : null,
+      "ref" : "part-2",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Succession to the Monarchy.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE III.",
+      "title" : null,
+      "ref" : "part-3",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Parliament.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE IIII.",
+      "title" : null,
+      "ref" : "part-4",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Trade and Navigation and other Rights.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE V.",
+      "title" : null,
+      "ref" : "part-5",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE VI.",
+      "title" : null,
+      "ref" : "part-6",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Regulations of Trade, Duties, &c.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE VII.",
+      "title" : null,
+      "ref" : "part-7",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Excise.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE VIII-XV.",
+      "title" : null,
+      "ref" : "part-8",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XVI.",
+      "title" : null,
+      "ref" : "part-9",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Coin.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XVII.",
+      "title" : null,
+      "ref" : "part-10",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XVIII.",
+      "title" : null,
+      "ref" : "part-11",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Laws concerning public rights.     Private rights",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE Xix.",
+      "title" : null,
+      "ref" : "part-12",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Court of Session.     Writers to the Signet admitted Lords of Session.     Court of Justiciary.     Other Courts.     Causes in Scotland not cognizable in Courts in Westminster Hall.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XX.",
+      "title" : null,
+      "ref" : "part-13",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Heritable Offices, &c.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XXI.",
+      "title" : null,
+      "ref" : "part-14",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Royal Burghs.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XXII.",
+      "title" : null,
+      "ref" : "part-15",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : "Sixteen Peers of Scotland.",
+        "ref" : "",
+        "extent" : [ "E", "W" ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XXIII.",
+      "title" : null,
+      "ref" : "part-16",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Privileges of the Sixteen Peers of Scotland.",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XXIV.",
+      "title" : null,
+      "ref" : "part-17",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Heraldry;     Great Seal;     Seal kept in Scotland;     Privy Seal, &c. in Scotland;     Regalia",
+        "ref" : "",
+        "extent" : [ ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "ARTICLE XXV.",
+      "title" : null,
+      "ref" : "part-18",
+      "extent" : [ "E", "W" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "",
+        "title" : " Laws inconsistent with the Articles, void;",
+        "ref" : "",
+        "extent" : [ ]
+      }, {
+        "name" : "item",
+        "number" : "II",
+        "title" : "Acts of Scotland herein mentioned, confirmed;     Universities and colleges of Saint Andrew, Glasgow, Aberdeen and Edinburgh, to continue;     Subjects not liable to Oath, Test, or Subscription, inconsistant with the Presbyterian Church Government;     Successor to swear to maintain the said Settlement of Religion;     This Act to be held a fundamental Condition of Union, and to be inserted in any Act of Parliament for concluding the said Union;     This Ratification of the said Articles not binding until they are ratified by Parliament of England, &c.;     Laws contrary to Articles void.",
+        "ref" : "section-II",
+        "extent" : [ "E", "W" ]
+      }, {
+        "name" : "item",
+        "number" : "III",
+        "title" : "Cap. 8 ante.",
+        "ref" : "section-III",
+        "extent" : [ "E", "W" ]
+      }, {
+        "name" : "item",
+        "number" : "IV",
+        "title" : "The said Articles and Act of Parliament of Scotland confirmed;",
+        "ref" : "section-IV",
+        "extent" : [ "E", "W" ]
+      }, {
+        "name" : "item",
+        "number" : "V",
+        "title" : "Cap. 8 ante, and the said Act of Parliament of Scotland to be observed as fundamental Conditions of the said Union; and the said Articles and Acts of Parliament to continue the Union.",
+        "ref" : "section-V",
+        "extent" : [ "E", "W" ]
+      }, {
+        "name" : "item",
+        "number" : "VI",
+        "title" : " Recital of Act of Parliament of Scotland for settling Election of the Sixteen Peers and Forty-five Members for Scotland.",
+        "ref" : "section-VI",
+        "extent" : [ "E", "W", "S", "NI" ]
+      }, {
+        "name" : "item",
+        "number" : "VII",
+        "title" : "The said Act declared valid as if it had been Part of the said Articles of Union",
+        "ref" : "section-VII",
+        "extent" : [ "E", "W" ]
+      } ]
+    } ]
+  }
+}

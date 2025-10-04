@@ -1,0 +1,1241 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1" NumberOfProvisions="35" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/ukla/2017/1/enacted</dc:identifier><dc:title>Faversham Oyster Fishery Company Act 2017</dc:title><dc:publisher>King's Printer of Acts of Parliament</dc:publisher><dc:modified>2021-07-30</dc:modified>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukla/2017/1/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukla/2017/1/enacted" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukla/2017/1/introduction/enacted" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukla/2017/1/body/enacted" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukla/2017/1/schedules/enacted" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.html" title="HTML5 snippet"/>
+
+					<atom:link rel="alternate" href="http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf" type="application/pdf" title="Original PDF"/>
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted" title="Table of Contents"/>
+					
+					
+					
+					
+					<ukm:PrimaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="primary"/>
+<ukm:DocumentMainType Value="UnitedKingdomLocalAct"/>
+<ukm:DocumentStatus Value="final"/>
+</ukm:DocumentClassification><ukm:Year Value="2017"/><ukm:Number Value="1"/><ukm:EnactmentDate Date="2017-04-27"/><ukm:ISBN Value="9780105459897"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf" Date="2017-05-18" Size="440723"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="35"/>
+									<ukm:BodyParagraphs Value="23"/>
+									<ukm:ScheduleParagraphs Value="12"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="1"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Primary>
+<PrimaryPrelims DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/introduction/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/introduction">
+<Title>Faversham Oyster Fishery Company Act 2017</Title>
+<Number>2017 Chapter i</Number>
+<LongTitle>An Act to provide for the alteration of the objects, powers and constitution of the Faversham Oyster Fishery Company; and for other purposes.</LongTitle>
+<DateOfEnactment>
+<DateText>[27th April 2017]</DateText>
+</DateOfEnactment>
+<PrimaryPreamble>
+<IntroductoryText>
+<P>
+<Text><SmallCaps>WHEREAS</SmallCaps>—</Text>
+<OrderedList Type="arabic" Decoration="parens">
+<ListItem>
+<Para>
+<Text>The Faversham Oyster Fishery Company (“the Company”) was incorporated pursuant to the Faversham Oyster Fishery Act 1930 (“the 1930 Act”) as the successor to the Company or Fraternity of the Free Fishermen and Dredgermen of Faversham, which, as described in that Act, had managed and carried on the Faversham Oyster Fishery from time out of mind:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The Company’s statutory business comprises the regulating, carrying on and management of the oyster fishery within the limits of the Manor and Hundred of Faversham in Kent and various incidental purposes:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The Company wishes to extend its activities to more general trading activities and to carry on activities beyond the oyster fishery and it would be of public advantage if the Company’s objects were changed so that it could carry out the business of a general commercial company and without certain of the restrictions and limitations imposed on the Company by the 1930 Act remaining applicable to it:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>For a number of years, the Company has, in accordance with the legislation by which it is governed, sent material on at least an annual basis to the shareholders listed on its register of shareholders at the addresses shown on the register. In a number of cases it is clear that either the shareholder must have died (due to the date on which the shareholder was first registered) or must have moved to a different address (because the material is returned):</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>It is expedient for the Company to be able to sell the shares of shareholders in cases where the shareholder is unlikely to be alive or where the whereabouts of the shareholder or the shareholder’s successor cannot be ascertained, in order to terminate uncertain legal relationships and to relieve the Company of the need to maintain assets to cover liabilities to those shareholders in respect 
+of unclaimed dividends:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>Certain statutory provisions regulating the Company’s affairs are outmoded having regard to present-day requirements and it is expedient to enable the Company’s powers to be modernised:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The objects of this Act cannot be attained without the authority of Parliament:</Text>
+</Para>
+</ListItem>
+</OrderedList>
+</P>
+</IntroductoryText>
+<EnactingText>
+<Para>
+<Text>May it therefore please your Majesty that it may be enacted, and be it enacted, by the Queen’s most Excellent Majesty, by and with the advice and consent of the Lords Spiritual and Temporal, and Commons, in this present Parliament assembled, and by the authority of the same, as follows, that is to say:—</Text>
+</Para>
+</EnactingText>
+</PrimaryPreamble>
+</PrimaryPrelims>
+<Body DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/body/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/body" NumberOfProvisions="23" NumberFormat="default">
+<Part DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/1" NumberOfProvisions="2" id="part-1">
+<Number>PART 1</Number>
+<Title>INTRODUCTORY</Title>
+<P1group>
+<Title>Citation</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/1" id="section-1">
+<Pnumber PuncAfter="">1</Pnumber>
+<P1para>
+<Text>This Act may be cited as the Faversham Oyster Fishery Company Act 2017.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Interpretation</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/2" id="section-2">
+<Pnumber PuncAfter="">2</Pnumber>
+<P1para>
+<Text>In this Act—</Text>
+<UnorderedList Decoration="none" Class="Definition">
+<ListItem>
+<Para>
+<Text>“the 1845 Act” means the Companies Clauses Consolidation Act 1845;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>“the 1863 Act” means the Companies Clauses Act 1863;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>“the 1930 Act” means the Faversham Oyster Fishery Company Act 1930;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>“the 2006 Act” means the Companies Act 2006;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>“the Company” means the Faversham Oyster Fishery Company incorporated by section 5 of the 1930 Act.</Text>
+</Para>
+</ListItem>
+</UnorderedList>
+</P1para>
+</P1>
+</P1group>
+</Part>
+<Part DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/2" NumberOfProvisions="12" id="part-2">
+<Number>PART 2</Number>
+<Title>CONSTITUTION AND POWERS OF THE COMPANY</Title>
+<P1group>
+<Title>Company name and adoption of model articles</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3" id="section-3">
+<Pnumber PuncAfter="">3</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/1" id="section-3-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Notwithstanding anything in regulations made under section 1042 of the 2006 Act (power to make regulations in respect of companies not registered under that Act) or anything in any enactment or other instrument constituting or regulating the Company, the Company may by special resolution adopt the model articles with such modifications as appear to it to be appropriate.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/2" id="section-3-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The model articles, as so adopted by the Company under subsection (1), may apply to the Company any provision of the 2006 Act as may be necessary or appropriate with such modifications as may be necessary or appropriate.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/3" id="section-3-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>So far as there is any inconsistency between a provision of any of the model articles adopted under subsection (1) (provision A) and a provision of the 1930 Act (provision B)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/3/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/3/a" id="section-3-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>until the day on which section 5 comes into force in accordance with section 20, provision B prevails;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/3/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/3/b" id="section-3-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>on and after that day, provision A prevails.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/4" id="section-3-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>In this section “the model articles” means the model articles for private companies limited by shares set out in Schedule 1 to the <Citation URI="http://www.legislation.gov.uk/id/uksi/2008/3229" id="c00001" Class="UnitedKingdomStatutoryInstrument" Year="2008" Number="3229">Companies (Model Articles) Regulations 2008 (S.I. 2008/3229)</Citation> or any regulations replacing those regulations.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3/5" id="section-3-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>Nothing shall require the alteration of the name of the Company in order for it to be registered under the 2006 Act, despite it being a company limited by shares.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Alteration of objects and powers</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/4" id="section-4">
+<Pnumber PuncAfter="">4</Pnumber>
+<P1para>
+<Text>For section 6 (general purposes of company) of the 1930 Act substitute—</Text>
+<BlockAmendment TargetClass="primary" Context="main" TargetSubClass="unknown" Format="double" NumberFormat="default">
+<P1group>
+<Title>The Company’s objects</Title>
+<P1>
+<Pnumber PuncAfter="">6</Pnumber>
+<P1para>
+<P2>
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The company’s objects are to carry on business as a general commercial company.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>Those objects include maintaining, preserving, managing and improving the fishery.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>Any references in this Act to the general purposes of the undertaking or the purposes of this Act are to be read as references to the company’s objects as mentioned in subsection (1).</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>Nothing in this Act affects the generality of subsection (1).</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Disapplication of Companies Clauses Acts</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/5" id="section-5">
+<Pnumber PuncAfter="">5</Pnumber>
+<P1para>
+<Text>No provision of the 1845 Act or the 1863 Act shall apply to the Company.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Liability of members</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/6/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/6" id="section-6">
+<Pnumber PuncAfter="">6</Pnumber>
+<P1para>
+<Text>The liability of the members of the Company is limited to the amount, if any, unpaid on the shares held by them.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Power to raise additional capital</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7" id="section-7">
+<Pnumber PuncAfter="">7</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/1" id="section-7-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>In section 16 of the 1930 Act (capital)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/1/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/1/a" id="section-7-1-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>for “thirty thousand pounds” substitute “£100,000”;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/1/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/1/b" id="section-7-1-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>for “thirty thousand shares” substitute “100,000 shares”.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/2" id="section-7-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>In section 20 of the 1930 Act (power to raise additional capital)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/2/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/2/a" id="section-7-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>omit “and to the provisions of Part II of the Companies Clauses Act 1863”;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/2/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/2/b" id="section-7-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>for “thirty thousand pounds” substitute “£100,000”;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/2/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7/2/c" id="section-7-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>omit the words after “one pound”.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Power to borrow</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/8/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/8" id="section-8">
+<Pnumber PuncAfter="">8</Pnumber>
+<P1para>
+<Text>For section 23 of the 1930 Act (power to borrow) substitute—</Text>
+<BlockAmendment TargetClass="primary" Context="main" TargetSubClass="unknown" Format="double" NumberFormat="default">
+<P1group>
+<Title>Power to borrow</Title>
+<P1>
+<Pnumber PuncAfter="">23</Pnumber>
+<P1para>
+<P2>
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The Company may from time to time borrow, by any methods it sees fit, such sums of money as it considers necessary for the purposes of its objects.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>A sum of money borrowed under subsection (1) by the Company may be borrowed upon the security of some or all of—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>its assets for the time being;</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>its revenues;</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>a combination of its assets and revenues,</Text>
+</P3para>
+</P3>
+<Text>in whatever way it sees fit.</Text>
+</P2para>
+</P2>
+<P2>
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>The Company may effect such arrangements as it thinks fit to mitigate against any financial risk incurred for the purposes of its objects.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Subscriptions for shares and loans</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/9/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/9" id="section-9">
+<Pnumber PuncAfter="">9</Pnumber>
+<P1para>
+<Text>For section 30 of the 1930 Act (subscriptions for shares or loans in other undertakings) substitute—</Text>
+<BlockAmendment TargetClass="primary" Context="main" TargetSubClass="unknown" Format="double" NumberFormat="default">
+<P1group>
+<Title>Subscription for shares or loans in other undertakings</Title>
+<P1>
+<Pnumber PuncAfter="">30</Pnumber>
+<P1para>
+<Text>The Company may—</Text>
+<P3>
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>subscribe for, purchase, hold and dispose of shares, stocks or securities in any other company;</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>subscribe for, purchase, hold and dispose of any interest in, or in securities in, any business other than a company; and</Text>
+</P3para>
+</P3>
+<P3>
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>lend money on mortgage bond or other security to any other company or business.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+</P1group>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Powers relating to land</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10" id="section-10">
+<Pnumber PuncAfter="">10</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/1" id="section-10-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The 1930 Act is amended as follows.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/2" id="section-10-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The existing text of section 50 (power to lease fishery) becomes subsection (1) of that section.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/3" id="section-10-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>After that subsection insert—</Text>
+<BlockAmendment TargetClass="primary" Context="main" TargetSubClass="unknown" Format="double" NumberFormat="default">
+<P2>
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The Company may grant leases or otherwise dispose of its interests in land purchased or leased under section 51 below.</Text>
+</P2para>
+</P2>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/4" id="section-10-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>In section 51 (purchasing or leasing land)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/4/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/4/a" id="section-10-4-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>omit “(by agreement but not otherwise)”;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/4/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10/4/b" id="section-10-4-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>omit “not exceeding ten acres”.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Repeal of outdated legislation</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/11/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/11" id="section-11">
+<Pnumber PuncAfter="">11</Pnumber>
+<P1para>
+<Text>The Schedule has effect.</Text>
+</P1para>
+</P1>
+</P1group>
+</Part>
+<Part DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/3" NumberOfProvisions="5" id="part-3">
+<Number>PART 3</Number>
+<Title>MISSING SHAREHOLDERS AND CLAIMS</Title>
+<P1group>
+<Title>Interpretation of Part 3</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12" id="section-12">
+<Pnumber PuncAfter="">12</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/1" id="section-12-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>In this Part—</Text>
+<UnorderedList Decoration="none" Class="Definition">
+<ListItem>
+<Para>
+<Text>a “claimant” means a person who has served a written notice on the Company and paid a deposit in accordance with section 13(5) during the notification period;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>a “missing shareholder” means a shareholder of the Company whose name is listed in the register of shareholders kept by the Company, and in respect of whom the conditions of subsection (2) have been met and includes a person entitled to the shares of that shareholder by transmission;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>“the notification period” means, in relation to a shareholder, the period beginning with the date of the first publication of the notice under section 13(1) and expiring at the end of the period of 18 months beginning with the day on which the further notice is first published under section 13(3);</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>a “shareholder notice” means a notice that—</Text>
+<OrderedList Type="alpha" Decoration="parens">
+<ListItem>
+<Para>
+<Text>is sent after the publication of a notice under section 13(1);</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>is sent by post to the address of the shareholder shown on the register of shareholders held by the Company;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>explains the effect of this Part;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>contains a notice for the recipient to complete and return which enables the recipient to claim in accordance with section 13(5) that the recipient is entitled to the interest of the shareholder in the shares in question; and</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>(in the case of a third notice) sets out the date on which the notification period expires.</Text>
+</Para>
+</ListItem>
+</OrderedList>
+</Para>
+</ListItem>
+</UnorderedList>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2" id="section-12-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>These are the conditions referred to in the definition of “missing shareholder” in subsection (1)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/a" id="section-12-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>the Company has sent the shareholder three shareholder notices in accordance with subsection (3);</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/b" id="section-12-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>the notification period has expired;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/c" id="section-12-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>in the case of each such notice—</Text>
+<P4 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/c/i/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/c/i" id="section-12-2-c-i">
+<Pnumber>i</Pnumber>
+<P4para>
+<Text>the notice has been returned to the Company marked undelivered (or some similar indication was given that the notice could not be delivered to the shareholder at the address to which the notice 
+had been sent), or</Text>
+</P4para>
+</P4>
+<P4 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/c/ii/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/c/ii" id="section-12-2-c-ii">
+<Pnumber>ii</Pnumber>
+<P4para>
+<Text>the notice has not been returned;</Text>
+</P4para>
+</P4>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/d/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/d" id="section-12-2-d">
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>before the first of those shareholder notices was sent, a period of 12 years had passed since the date on which a dividend or other sum became due for payment to the shareholder; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/2/e/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/2/e" id="section-12-2-e">
+<Pnumber>e</Pnumber>
+<P3para>
+<Text>the shareholder has not claimed that dividend or other sum.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/3" id="section-12-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>For the purposes of subsection (2)(a), the shareholder notices are sent in accordance with this subsection if the second and third of those notices are each sent no sooner than Day A and no later than Day B.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/4" id="section-12-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>In subsection (3)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/4/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/4/a" id="section-12-4-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>“Day A” means the day following the last day of the period of six months beginning with the day on which the previous notice was sent; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/4/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/4/b" id="section-12-4-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>“Day B” means the day following the last day of the period of 18 months beginning with the day on which the previous notice was sent.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12/5" id="section-12-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>For the purposes of this Part a person is entitled to a share by transmission if that person is the heir, successor or assign of the shareholder whose name is listed in the register of shareholders kept by the Company.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Notices and procedure for claims</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13" id="section-13">
+<Pnumber PuncAfter="">13</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/1" id="section-13-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Before sending a first shareholder notice to a shareholder, the Company must publish a notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/2" id="section-13-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>A shareholder notice may—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/2/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/2/a" id="section-13-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>in the case of a body corporate, be sent to an officer of that body;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/2/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/2/b" id="section-13-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>in the case of a partnership, be sent to any partner;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/2/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/2/c" id="section-13-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>in the case of an unincorporated association other than a partnership, be sent to any member of the governing body of that association.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/3" id="section-13-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>As soon as reasonably practicable following the sending of a third shareholder notice to a shareholder, the Company must publish a further notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question and setting out the date on which the notification period will expire.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/4" id="section-13-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>A notice published under subsection (1) or (3)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/4/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/4/a" id="section-13-4-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>must be published in each of two successive weeks in a local newspaper circulating in the district of Swale and in the London Gazette; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/4/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/4/b" id="section-13-4-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>may mention more than one shareholder.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/5" id="section-13-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>Any person may at any time during the notification period serve a written notice on the Company claiming that he or she is entitled to the interest of a shareholder in the shares in question, and any such notice shall be accompanied by a £50 deposit payable to the Company which shall be returned to the claimant in the event that the claimant succeeds in establishing the claim.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/6/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/6" id="section-13-6">
+<Pnumber>6</Pnumber>
+<P2para>
+<Text>A notice under subsection (5) may be served on the Company—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/6/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/6/a" id="section-13-6-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>by delivering it to the Company at the address given on the shareholder notice; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/6/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/6/b" id="section-13-6-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>by sending it by registered post or the recorded delivery service to the Company at that address.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/7/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/7" id="section-13-7">
+<Pnumber>7</Pnumber>
+<P2para>
+<Text>If, within a period of 56 days commencing on the receipt of a notice under subsection (5), any claimant establishes to the satisfaction of the Company in accordance with the provisions of the 1930 Act or the 2006 Act that he or she is the shareholder in respect of the shares in question or that the interest of the shareholder in the shares in question has been transmitted to the claimant, the 
+Company shall, subject to subsection (9)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/7/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/7/a" id="section-13-7-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>enter the name of the claimant in the register of shareholders; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/7/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/7/b" id="section-13-7-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>pay the claimant so much of the arrears of dividends or other sums for the relevant period (which shall bear no interest) as are owing to the claimant in respect of the shares to which the claimant is entitled.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/8/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/8" id="section-13-8">
+<Pnumber>8</Pnumber>
+<P2para>
+<Text>If it is necessary for a claimant to make any application for the purpose of establishing a claim to any shares, the period for establishment of the claim shall be extended until the expiry of 30 days after the date on which—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/8/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/8/a" id="section-13-8-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>proceedings on that application (including any proceedings on or in consequence of an appeal) have been determined and any time for appealing or further appealing has expired; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/8/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/8/b" id="section-13-8-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>that application or appeal is abandoned or withdrawn; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/8/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/8/c" id="section-13-8-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>a notice is served by post by the Company on the applicant indicating that in the reasonable opinion of the Company the applicant has failed to take any steps required of him in relation to that application or appeal,</Text>
+</P3para>
+</P3>
+<Text>whichever happens first.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/9/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/9" id="section-13-9">
+<Pnumber>9</Pnumber>
+<P2para>
+<Text>Before entering any claimant in the register of shareholders or paying the claimant any arrears of dividends or other sums, the Company may require the claimant to provide an indemnity in respect of any subsequent claims made against the Company in respect of that registration or that payment.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/10/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/10" id="section-13-10">
+<Pnumber>10</Pnumber>
+<P2para>
+<Text>In subsection (7)(b), the “relevant period” means the period of 12 years expiring at the end of the day on which the Company is satisfied under subsection (7).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/11/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13/11" id="section-13-11">
+<Pnumber>11</Pnumber>
+<P2para>
+<Text>In subsection (8), an “application” includes any application to the court under section 125 or Part 30 of the 2006 Act.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Sale of shares</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14" id="section-14">
+<Pnumber PuncAfter="">14</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/1" id="section-14-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The Company may sell any share of a missing shareholder in accordance with this section.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/2" id="section-14-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The Company may purchase any share of a missing shareholder to be sold under this section.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/3" id="section-14-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>The sale price of any shares to be sold under this section shall be determined by the Company’s auditor or accountant on the basis set out in subsection (4).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/4" id="section-14-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>The share value shall be determined by using the following formula—</Text>
+<Formula AltVersionRefs="v00001"><math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll"><mfrac linethickness="1" denomalign="center" numalign="center"><mrow><mi mathvariant="normal">xy</mi></mrow><mrow><mi mathvariant="normal">z</mi></mrow></mfrac><mo>+</mo><mi mathvariant="normal">A</mi></math>
+<Where>
+<Para>
+<Text>where—</Text>
+<UnorderedList Decoration="none" Class="Definition">
+<ListItem>
+<Para>
+<Text><Emphasis>x</Emphasis> is the value, on the date of the sale, of the whole of the Company’s issued share capital of the same class as the shares to be sold, calculated on the basis of an open market sale between a willing buyer and willing seller dealing with each other at arm’s length;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text><Emphasis>y</Emphasis> is the number of the shares to be sold;</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text><Emphasis>z</Emphasis> is the number, on that date, of issued shares in the same class; and</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text><Emphasis>A</Emphasis> is the total value of any dividends or other sums due for payment to the missing shareholder in respect of the shares to be sold.</Text>
+</Para>
+</ListItem>
+</UnorderedList>
+</Para>
+</Where>
+</Formula>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/5" id="section-14-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>To give effect to any sale of shares under this section, the Company may—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/5/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/5/a" id="section-14-5-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>authorise some person to transfer the shares in question;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/5/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/5/b" id="section-14-5-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>enter the name of the transferee in respect of the transferred shares in the register of shareholders even if no share certificate has been lodged for such shares; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/5/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/5/c" id="section-14-5-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>issue a new certificate to the transferee.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/6/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/6" id="section-14-6">
+<Pnumber>6</Pnumber>
+<P2para>
+<Text>An instrument of transfer executed by the person authorised under subsection (5)(a) shall be as effective as if it had been executed by the holder of, or the person entitled by transmission to, the shares.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/7/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/7" id="section-14-7">
+<Pnumber>7</Pnumber>
+<P2para>
+<Text>The transferee shall not be bound to see to the application of the purchase monies, nor shall the transferee’s title to the shares be affected by any irregularity or invalidity in the proceedings in reference to the sale.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/8/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/8" id="section-14-8">
+<Pnumber>8</Pnumber>
+<P2para>
+<Text>If, during the further issue period, any additional shares have been issued in respect of—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/8/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/8/a" id="section-14-8-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>shares held at the beginning of that period; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/8/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/8/b" id="section-14-8-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>additional shares previously issued during that period,</Text>
+</P3para>
+</P3>
+<Text>the Company may sell those additional shares.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/9/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/9" id="section-14-9">
+<Pnumber>9</Pnumber>
+<P2para>
+<Text>In subsection (8), “the further issue period” means the period that—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/9/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/9/a" id="section-14-9-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>begins with the date referred to in section 12(2)(d); and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/9/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/9/b" id="section-14-9-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>ends with the expiry of the notification period.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/10/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/10" id="section-14-10">
+<Pnumber>10</Pnumber>
+<P2para>
+<Text>The Company shall account to the missing shareholder for the net proceeds of a sale under this section by carrying all monies relating to the sale to a separate account.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/11/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/11" id="section-14-11">
+<Pnumber>11</Pnumber>
+<P2para>
+<Text>The Company shall be deemed to be a debtor to, and not a trustee for, the missing shareholder in respect of such monies.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/12/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/12" id="section-14-12">
+<Pnumber>12</Pnumber>
+<P2para>
+<Text>Monies carried to a separate account in accordance with subsection (10) may either be employed in the business of the Company or invested in such investments as the Board may think fit.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/13/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/13" id="section-14-13">
+<Pnumber>13</Pnumber>
+<P2para>
+<Text>If a person establishes to the Company’s satisfaction that he is the missing shareholder in respect of any shares sold under this section the Company must pay that person the monies carried to the separate account in accordance with subsection (10).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/14/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14/14" id="section-14-14">
+<Pnumber>14</Pnumber>
+<P2para>
+<Text>No interest shall be payable to the missing shareholder in respect of monies carried to a separate account in accordance with subsection (10) and the Company shall not be obliged to account for any money earned on those monies.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Notices in electronic form</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15" id="section-15">
+<Pnumber PuncAfter="">15</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/1" id="section-15-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>This section applies in relation to the serving of a notice under section 13(5) where the notice is transmitted to the Company—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/1/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/1/a" id="section-15-1-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>by means of an electronic communications network; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/1/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/1/b" id="section-15-1-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>by other means but in a form that requires the use of apparatus by the recipient to render it intelligible.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/2" id="section-15-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The transmission has effect for the purposes of this Part as service of the notice on the Company, but only if the Company has indicated to the person making the transmission its willingness to receive the notice in the form and manner used.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/3" id="section-15-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>An indication to a person for the purposes of subsection (2)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/3/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/3/a" id="section-15-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>must be given to the person in such manner as he may require;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/3/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/3/b" id="section-15-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>must state the address to be used;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/3/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/3/c" id="section-15-3-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>must be accompanied by such other information as the person requires for the making of the transmission; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/3/d/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/3/d" id="section-15-3-d">
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>may be modified or withdrawn at any time by a notice given to the person in such manner as he may require.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15/4" id="section-15-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>In this section “electronic communications network” has the same meaning as in the Communications Act 2003.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Saving for section 125 of 2006 Act</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/16/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/16" id="section-16">
+<Pnumber PuncAfter="">16</Pnumber>
+<P1para>
+<Text>This Part is without prejudice to section 125 of the 2006 Act (power of court to rectify register).</Text>
+</P1para>
+</P1>
+</P1group>
+</Part>
+<Part DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/4" NumberOfProvisions="4" id="part-4">
+<Number>PART 4</Number>
+<Title>FINAL PROVISIONS</Title>
+<P1group>
+<Title>Saving for rights over the fishery, etc</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17" id="section-17">
+<Pnumber PuncAfter="">17</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/1" id="section-17-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Nothing in this Act prejudices or otherwise affects the exclusive rights of the Company in respect of the fishery described in section 4 of the 1930 Act or otherwise existing at the time this Act was passed, including the protected rights.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/2" id="section-17-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>In subsection (1), the “protected rights” means—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/2/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/2/a" id="section-17-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>the rights of the Company in respect of the fishery registered at H.M. Land Registry with title number TT26459 at the time when the Bill for this Act was deposited in Parliament;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/2/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/2/b" id="section-17-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>the profit a prendre in respect of sporting rights enjoyed by the Company and registered at H.M. Land Registry with title number TT26458 at the time when the Bill for this Act was deposited in Parliament;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/2/c/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/2/c" id="section-17-2-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>the lease of mooring rights registered at H.M. Land Registry with title number TT26460 at the time when the Bill for this Act was deposited in Parliament; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/2/d/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17/2/d" id="section-17-2-d">
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>the profit a prendre of the Company in respect of fishing rights which is (to the extent that it applies in the County of Kent) registered at H.M. Land Registry with title number TT32268 at the time when the Bill for this Act was deposited in Parliament.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Saving for Port of Sheerness Limited and harbourmaster</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/18/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/18" id="section-18">
+<Pnumber PuncAfter="">18</Pnumber>
+<P1para>
+<Text>Nothing in this Act prejudices or otherwise affects the powers, duties and responsibilities of—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/18/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/18/a" id="section-18-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>Port of Sheerness Limited in its capacity as harbour authority for the Port of Sheerness; or</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/18/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/18/b" id="section-18-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>the harbourmaster for the Port of Sheerness.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Costs of this Act</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/19/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/19" id="section-19">
+<Pnumber PuncAfter="">19</Pnumber>
+<P1para>
+<Text>The costs, charges and expenses of the Company in securing this Act or otherwise in relation to it shall be paid by the Company and may in whole or in part be defrayed out of revenue.</Text>
+</P1para>
+</P1>
+</P1group>
+<P1group>
+<Title>Commencement</Title>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20" id="section-20">
+<Pnumber PuncAfter="">20</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/1" id="section-20-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>Sections 5 and 11 and the Schedule come into force on the appointed day.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/2" id="section-20-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>Part 3 comes into force on the day after the day on which the Company is first registered under the 2006 Act.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/3" id="section-20-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>Before the appointed day, the Company shall publish in the London Gazette notice of the day appointed, stating that it is the appointed day for the purposes of this Act.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/4" id="section-20-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>The publication of a notice under subsection (3) shall be conclusive evidence of the coming into force of a provision of this Act under subsection (1) of this section, and a photocopy or other reproduction, certified by a director of the Company or the Company secretary, of a page or part of a page of the London Gazette containing the notice shall be conclusive evidence of publication.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/5" id="section-20-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>In this section “the appointed day” means such day as may be fixed as regards the provisions mentioned in subsection (1) by the Company.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/6/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/6" id="section-20-6">
+<Pnumber>6</Pnumber>
+<P2para>
+<Text>The appointed day must not be before the date on which the Company is first registered under the 2006 Act (“the registration date”).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/7/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/7" id="section-20-7">
+<Pnumber>7</Pnumber>
+<P2para>
+<Text>Subsection (8) applies during the period (if any) beginning with the registration date and ending at the end of the day preceding the appointed day.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/8/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20/8" id="section-20-8">
+<Pnumber>8</Pnumber>
+<P2para>
+<Text>So far as there is any inconsistency between a provision of the 2006 Act which applies to the Company by virtue of the Company having been registered (provision A) and a provision mentioned in section 5 or the Schedule (“provision B”) then provision B prevails.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1>
+</P1group>
+</Part>
+</Body>
+<Schedules>
+<Schedule DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule" NumberOfProvisions="12" NumberFormat="default" id="schedule">
+<Number>SCHEDULE</Number>
+<TitleBlock>
+<Title>REPEALS</Title>
+</TitleBlock>
+<Reference>Section 11</Reference>
+<ScheduleBody>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/1" id="schedule-paragraph-1">
+<Pnumber PuncAfter="">1</Pnumber>
+<P1para>
+<Text>The following provisions of the 1930 Act are repealed.</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/2/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/2" id="schedule-paragraph-2">
+<Pnumber PuncAfter="">2</Pnumber>
+<P1para>
+<Text>In section 2 (Act divided into Parts) the words “Part IV.—Meetings, directors and administrative provisions”.</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/3/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/3" id="schedule-paragraph-3">
+<Pnumber PuncAfter="">3</Pnumber>
+<P1para>
+<Text>In section 3 (incorporation of general Acts)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/3/a/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/3/a" id="schedule-paragraph-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>the words “and Parts of Acts”; and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/3/b/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/3/b" id="schedule-paragraph-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>the references to the 1845 Act and Parts I, II and III of the 1863 Act.</Text>
+</P3para>
+</P3>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/4/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/4" id="schedule-paragraph-4">
+<Pnumber PuncAfter="">4</Pnumber>
+<P1para>
+<Text>Section 21 (new shares to be subject to same incidents as other shares).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/5/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/5" id="schedule-paragraph-5">
+<Pnumber PuncAfter="">5</Pnumber>
+<P1para>
+<Text>Section 24 (for appointment of receiver).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/6/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/6" id="schedule-paragraph-6">
+<Pnumber PuncAfter="">6</Pnumber>
+<P1para>
+<Text>Section 25 (debenture stock).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/7/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/7" id="schedule-paragraph-7">
+<Pnumber PuncAfter="">7</Pnumber>
+<P1para>
+<Text>Section 26 (priority of mortgages over other debts).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/8/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/8" id="schedule-paragraph-8">
+<Pnumber PuncAfter="">8</Pnumber>
+<P1para>
+<Text>Section 27 (application of moneys).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/9/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/9" id="schedule-paragraph-9">
+<Pnumber PuncAfter="">9</Pnumber>
+<P1para>
+<Text>Section 28 (company may incur temporary loans).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/10/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/10" id="schedule-paragraph-10">
+<Pnumber PuncAfter="">10</Pnumber>
+<P1para>
+<Text>Section 29 (as to disposal of shares or stock).</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/11/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/11" id="schedule-paragraph-11">
+<Pnumber PuncAfter="">11</Pnumber>
+<P1para>
+<Text>In section 33 (company not bound to regard trusts) the words after “subject”.</Text>
+</P1para>
+</P1>
+<P1 DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/12/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/12" id="schedule-paragraph-12">
+<Pnumber PuncAfter="">12</Pnumber>
+<P1para>
+<Text>Part IV (meetings, directors and administrative provisions).</Text>
+</P1para>
+</P1>
+</ScheduleBody>
+</Schedule>
+</Schedules>
+</Primary><Versions><Version id="v00001" Description="Equation graphical version" RestrictOutput="false"><Figure><Image ResourceRef="r00001" Width="38.88pt" Height="29.04pt"/></Figure></Version></Versions><Resources><Resource id="r00001"><ExternalVersion URI="http://www.legislation.gov.uk/ukla/2017/1/images/ukla_20170001_en_001"/></Resource></Resources></Legislation>

@@ -1,0 +1,57 @@
+{
+  "meta" : {
+    "id" : "apgb/Geo3/39-40/14",
+    "longType" : "GreatBritainAct",
+    "shortType" : "apgb",
+    "year" : 1799,
+    "regnalYear" : "Geo3/39-40",
+    "number" : 14,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "39_and_40_Geo_3"
+    } ],
+    "date" : "1799-10-12",
+    "cite" : "1799 (39 & 40 Geo. 3) c. 14",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Meeting of Parliament Act 1799",
+    "extent" : [ "E", "W", "S" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : null,
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "Meeting of Parliament Act 1799",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W", "S" ]
+    },
+    "body" : [ {
+      "name" : "item",
+      "number" : "[1.]",
+      "title" : "His Majesty may issue his Royal Proclamation for the Meeting of Parliament in not less than 14 Days from the Date, notwithstanding any previous Adjournment to a longer Day.",
+      "ref" : "section-1.",
+      "extent" : [ "E", "W", "S" ]
+    }, {
+      "name" : "item",
+      "number" : "2",
+      "title" : " How orders made by Parliament shall be deemed to have been appointed.",
+      "ref" : "section-2",
+      "extent" : [ "E", "W", "S" ]
+    } ]
+  }
+}

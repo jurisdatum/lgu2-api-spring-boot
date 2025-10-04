@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="aip">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/aip/1800/38"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/aip/1800/38"/>
+               <FRBRdate date="1800-01-01" name="estimated"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/OldIrishParliament"/>
+               <FRBRcountry value="IE"/>
+               <FRBRnumber value="38"/>
+               <FRBRname value="1800 c. 38 [I]"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/aip/1800/38/1991-02-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aip/1800/38/1991-02-01"/>
+               <FRBRdate date="1991-02-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/aip/1800/38/1991-02-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aip/1800/38/1991-02-01/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#"/>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#preface" refersTo="#c887694"/>
+               <uk:commentary href="#preface" refersTo="#c887695"/>
+               <uk:commentary href="#section-I." refersTo="#c887696"/>
+               <uk:commentary href="#section-wrapper5" refersTo="#c887697"/>
+               <uk:commentary href="#section-wrapper6" refersTo="#c887698"/>
+               <uk:commentary href="#section-wrapper7" refersTo="#c887699"/>
+               <uk:commentary href="#section-wrapper7" refersTo="#c887700"/>
+               <uk:commentary href="#section-wrapper7" refersTo="#c887701"/>
+               <uk:commentary href="#section-wrapper11" refersTo="#c887702"/>
+               <uk:commentary href="#section-wrapper12" refersTo="#c887703"/>
+               <uk:commentary href="#section-wrapper13" refersTo="#c887705"/>
+               <uk:commentary href="#section-wrapper14" refersTo="#c887706"/>
+               <uk:commentary href="#section-wrapper14" refersTo="#c887707"/>
+               <uk:commentary href="#section-wrapper15" refersTo="#c887709"/>
+               <uk:commentary href="#section-wrapper18" refersTo="#c887710"/>
+               <uk:commentary href="#section-wrapper18" refersTo="#c887711"/>
+               <uk:commentary href="#section-wrapper19" refersTo="#c887712"/>
+               <uk:commentary href="#section-wrapper20" refersTo="#c887713"/>
+               <uk:commentary href="#section-wrapper22" refersTo="#c887714"/>
+               <uk:commentary href="#part-7" refersTo="#c887715"/>
+               <uk:commentary href="#part-8" refersTo="#c887716"/>
+               <uk:commentary href="#part-8" refersTo="#c887717"/>
+               <uk:commentary href="#section-wrapper24" refersTo="#c887718"/>
+               <uk:commentary href="#section-II" refersTo="#c887719"/>
+               <uk:commentary href="#section-III" refersTo="#c887720"/>
+               <uk:commentary href="#section-IV" refersTo="#c887721"/>
+               <uk:commentary href="#section-IV" refersTo="#c887725"/>
+               <uk:commentary href="#section-V" refersTo="#c887726"/>
+               <uk:commentary href="#section-VIVII." refersTo="#c887727"/>
+               <uk:commentary href="#section-VIII" refersTo="#c887728"/>
+               <uk:commentary href="#section-VIII" refersTo="#c887729"/>
+               <uk:commentary href="#section-VIII" refersTo="#c887731"/>
+               <uk:commentary href="#section-IX" refersTo="#c887732"/>
+               <uk:commentary href="#section-X" refersTo="#c887733"/>
+               <uk:commentary href="#section-X" refersTo="#c887734"/>
+            </otherAnalysis>
+         </analysis>
+         <references source="#">
+            <TLCLocation eId="extent-e+w+s+ni" href="" showAs="E+W+S+N.I."/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887696" marker="F1">
+               <p>
+                  <ref eId="c00002" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/1">S. 1</ref> repealed so far as it relates to parts of arts 4, 6 by <ref eId="c00003" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887697" marker="F2">
+               <p>Words repealed by <ref eId="c00004" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00005" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887698" marker="F3">
+               <p>Words repealed by <ref eId="c00006" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00007" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887699" marker="F4">
+               <p>Words repealed by <ref eId="c00008" href="http://www.legislation.gov.uk/id/ukpga/1963/48">Peerage Act 1963 (c. 48)</ref>, <ref eId="c00009" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1963/48/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887700" marker="F5">
+               <p>Words repealed by <ref eId="c00010" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00011" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887701" marker="F6">
+               <p>Words repealed by virtue of repeal by <ref eId="c00012" href="http://www.legislation.gov.uk/id/ukpga/1948/58">Criminal Justice Act 1948 (c. 58)</ref>, <ref eId="c00013" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/58/schedule/10/part/III">Sch. 10 Pt. III</ref> of s. 1 of this Act so far as it ratifies those words and by <ref eId="c00014" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00015" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887702" marker="F7">
+               <p>Words repealed by the Act 21 &amp; 22 Vict. c. 26</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887703" marker="F8">
+               <p>Words repealed by <ref eId="c00016" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00017" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref> and <ref eId="c00018" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00019" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887705" marker="F9">
+               <p>Words repealed by virtue of repeal by <ref eId="c00020" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887706" marker="F10">
+               <p>Words repealed by virtue of repeal by <ref eId="c00021" href="http://www.legislation.gov.uk/id/ukpga/1948/58">Criminal Justice Act 1948 (c. 58)</ref>, <ref eId="c00022" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/58/schedule/10/part/III">Sch. 10 Pt. III</ref> of s. 1 of this Act so far as it ratifies those words, by <ref eId="c00023" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00024" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref> and <ref eId="c00025" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00026" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887707" marker="F11">
+               <p>Words repealed by virtue of repeal by <ref eId="c00027" href="http://www.legislation.gov.uk/id/ukpga/1948/58">Criminal Justice Act 1948 (c. 58)</ref>, <ref eId="c00028" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1948/58/schedule/10/part/III">Sch. 10 Pt. III</ref> of s. 1 of this Act so far as it ratifies those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887709" marker="F12">
+               <p>Words repealed by <ref eId="c00029" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00030" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887710" marker="F13">
+               <p>Words repealed by virtue of repeal by <ref eId="c00031" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887711" marker="F14">
+               <p>Words repealed by virtue of repeal by <ref eId="c00032" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887712" marker="F15">
+               <p>Words repealed by virtue of repeal by <ref eId="c00033" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887713" marker="F16">
+               <p>Words repealed by virtue of repeal by <ref eId="c00034" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887714" marker="F17">
+               <p>Words repealed by virtue of repeal by <ref eId="c00035" href="http://www.legislation.gov.uk/id/ukpga/1879/24">Statute Law Revision (Ireland) Act 1879 (c. 24)</ref> of s. 1 of this Act so far as it relates to those words</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887715" marker="F18">
+               <p>
+                  <ref eId="c00036" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/article/7">Art.7</ref> repealed by <ref eId="c00037" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887718" marker="F19">
+               <p>Words repealed by <ref eId="c00038" href="http://www.legislation.gov.uk/id/ukpga/1962/30">Northern Ireland Act 1962 (c. 30)</ref>, <ref eId="c00039" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1962/30/schedule/4/part/I">Sch. 4 Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887719" marker="F20">
+               <p>Words repealed by <ref eId="c00052" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00053" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887720" marker="F21">
+               <p>
+                  <ref eId="c00054" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/3">S. 3</ref> repealed by <ref eId="c00055" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00056" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887721" marker="F22">
+               <p>Words repealed by <ref eId="c00057" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00058" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887725" marker="F23">
+               <p>Words repealed by <ref eId="c00059" href="http://www.legislation.gov.uk/id/ukpga/1967/58">Criminal Law Act 1967 (c. 58)</ref>, <ref eId="c00060" class="subref" href="http://www.legislation.gov.uk/id/ukpga/1967/58/section/13/3">s. 13(3)</ref>, <ref eId="c00061" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1967/58/schedule/4/part/II">Sch. 4 Pt. II</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887726" marker="F24">
+               <p>
+                  <ref eId="c00062" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/5">S. 5</ref> repealed by <ref eId="c00063" href="http://www.legislation.gov.uk/id/ukpga/1971/52">Statute Law (Repeals) Act 1971 (c. 52)</ref>, <ref eId="c00064" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1971/52/schedule/part/I">Sch. Pt. I</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887727" marker="F25">
+               <p>
+                  <ref eId="c00065" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/6">Ss. 6</ref>, <ref eId="c00066" class="subref" href="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/7">7</ref> repealed by <ref eId="c00067" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00068" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887729" marker="F26">
+               <p>Words repealed by <ref eId="c00076" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00077" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887731" marker="F27">
+               <p>Words repealed with savings by <ref eId="c00078" href="http://www.legislation.gov.uk/id/ukpga/1949/68">Representation of the People Act 1949 (c. 68)</ref>, <ref eId="c00079" class="subref" href="http://www.legislation.gov.uk/id/ukpga/1949/68/section/75">s. 75</ref>, <ref eId="c00080" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1949/68/schedule/9">Sch. 9</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="F" class="commentary F" eId="c887732" marker="F28">
+               <p>Words repealed by <ref eId="c00081" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5">Statute Law Revision Act 1953 (2 &amp; 3 Eliz. 2 c. 5)</ref>, <ref eId="c00082" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/2-3/5/schedule/2">Sch. 2</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887694" marker="C1">
+               <p>Short title given by <ref eId="c00001" href="http://www.legislation.gov.uk/id/apni/1951/1">Short Titles Act (Northern Ireland) 1951 (c. 1)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887695" marker="C2">
+               <p>References in this Act to Great Britain and Ireland, United Kingdom of Great Britain and Ireland or Ireland to be construed as exclusive of Republic of Ireland: S.R. &amp; O. 1923/405 (Rev. X, p. 298: 1923 p. 400), art. 2</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887716" marker="C3">
+               <p>Functions of Court of Admiralty in Ireland now exercisable by Queen's Bench Division of High Court of Justice in Northern Ireland: <ref eId="c00040" href="http://www.legislation.gov.uk/id/ukpga/1877/57">Supreme Court of Judicature Act (Ireland) 1877 (c. 57)</ref>, <ref eId="c00041" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1877/57/section/9">s. 9</ref>, <ref eId="c00042" href="http://www.legislation.gov.uk/id/ukpga/1897/66">Supreme Court of Judicature (Ireland) (No. 2) Act 1897 (c. 66)</ref>, <ref eId="c00043" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1897/66/section/6">s. 6</ref>, <ref eId="c00044" href="http://www.legislation.gov.uk/id/ukpga/1920/67">Government of Ireland Act 1920 (c. 67)</ref>, <ref eId="c00045" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1920/67/section/41">s. 41</ref>, S.R. &amp; O.) 1921/1802 (Rev. XVI, p. 954: 1921, p. 1332), arts. 2, 7 and S.R. &amp; O. 1921/1804 (Rev. XVI, p. 967: 1921, p. 422), art. 5</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887717" marker="C4">
+               <p>Functions of His Majesty's Delegates in Court of Chancery in Ireland now exercisable by Court of Appeal in Northern Ireland: <ref eId="c00046" href="http://www.legislation.gov.uk/id/ukpga/1867/114">Court of Admiralty (Ireland) Act 1867 (c. 114)</ref>, <ref eId="c00047" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1867/114/section/92">s. 92</ref>, <ref eId="c00048" href="http://www.legislation.gov.uk/id/ukpga/1877/57">Supreme Court of Judicature Act (Ireland) 1877 (c. 57)</ref>, <ref eId="c00049" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1877/57/section/23">s. 23</ref>, <ref eId="c00050" href="http://www.legislation.gov.uk/id/ukpga/1920/67">Government of Ireland Act 1920 (c. 67)</ref>, <ref eId="c00051" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1920/67/section/41">s. 41</ref>, S.R. &amp; O. 1921/1802 (Rev. XVI, p. 954: 1921, p. 1332), art. 3 and S.R. &amp; O. 1921/1804 (Rev. XVI, p. 967: 1921, p. 422), art. 5</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887728" marker="C5">
+               <p>Executive functions of chancellor now exercisable by Secretary of State: <ref eId="c00069" href="http://www.legislation.gov.uk/id/ukpga/1920/67">Government of Ireland Act 1920 (c. 67)</ref>, <ref eId="c00070" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1920/67/section/44/2">s. 44(2)</ref>, <ref eId="c00071" class="subref" href="http://www.legislation.gov.uk/id/ukpga/1920/67/section/I">I</ref>rish <ref eId="c00072" href="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2">Free State (Consequential Provisions) Act 1922 (13 Geo. 5 Sess. 2 c. 2)</ref>, <ref eId="c00073" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2/schedule/1/paragraph/1/1">Sch. 1 para. 1(1)</ref> and <ref eId="c00074" href="http://www.legislation.gov.uk/id/ukpga/1973/36">Northern Ireland Constitution Act 1973 (c. 36)</ref>, <ref eId="c00075" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/1973/36/schedule/5/paragraph/4">Sch. 5 para. 4</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887733" marker="C6">
+               <p>Great Seal of Northern Ireland now used for all matters in Northern Ireland for which Great Seal of Ireland was formerly used: <ref eId="c00083" href="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2">Irish Free State (Consequential Provisions) Act 1922 (13 Geo. 5 Sess. 2 c. 2)</ref>, <ref eId="c00084" class="subref operative" href="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2/schedule/1/paragraph/2/4">Sch. 1 para. 2(4)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="C" class="commentary C" eId="c887734" marker="C7">
+               <p>Functions of Privy Council of Ireland transferred to Privy Council of Northern Ireland: <ref eId="c00085" href="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2">Irish Free State (Consequential Provisions) Act 1922 (13 Geo. 5 Sess. 2 c. 2)</ref>, <rref eId="c00086" class="subref" from="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2/schedule/1/paragraph/2/1" upTo="http://www.legislation.gov.uk/id/ukpga/Geo5Sess2/13/2/schedule/1/paragraph/2/3" ukl:CitationRef="c00085">Sch. 1 para. 2(1)–(3)</rref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/aip/Geo3/40/38/1991-02-01</dc:identifier>
+            <dc:title>Act of Union (Ireland) 1800</dc:title>
+            <dc:description>An Act for the Union of Great Britain and Ireland.</dc:description>
+            <dc:date>1978-02-01</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>1991-02-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="IrelandAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1800"/>
+               <ukm:Number Value="38"/>
+               <ukm:AlternativeNumber Category="Regnal" Value="40_Geo_3"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="9"/>
+               <ukm:BodyParagraphs Value="9"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface eId="preface">
+         <block name="title">
+            <docTitle>Act of Union (Ireland) 1800</docTitle>
+         </block>
+         <block name="number">
+            <docNumber>1800 CHAPTER 38 40 Geo 3</docNumber>
+         </block>
+         <longTitle>
+            <p>An Act for the Union of Great Britain and Ireland.</p>
+         </longTitle>
+         <block name="dateOfEnactment" refersTo="#date-enacted"/>
+      </preface>
+      <body>
+         <section eId="section-wrapper1">
+            <heading>The parliaments of Great Britain and Ireland have resolved to concur in measures for uniting the two kingdoms:</heading>
+            <content>
+               <p>Whereas in pursuance of his Majesty’s most gracious recommendation to the two houses of parliament in Great Britain and Ireland respectively, to consider of such measures as might best tend to strengthen and consolidate the connexion between the two kingdoms, the two houses of the parliament of Great Britain, and the two houses of the parliament of Ireland have severally agreed and resolved, that in order to promote and secure the essential interests of Great Britain and Ireland, and to consolidate the strength, power, and resources of the British empire, it will be adviseable to concur in such measures as may best tend to unite the two kingdoms of Great Britain and Ireland, into one kingdom, in such manner, and on such terms and conditions, as may be established by the acts of the respective parliaments of Great Britain and Ireland.</p>
+            </content>
+         </section>
+         <section eId="section-I.">
+            <num>
+               <noteRef href="#c887696" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>[I.]</num>
+            <heading> said parliaments have agreed upon following articles:</heading>
+            <content>
+               <p>And whereas in furtherance of the said resolution, both houses of the said two parliaments respectively have likewise agreed upon certain articles for effectuating and establishing the said purposes in the tenor following:</p>
+            </content>
+         </section>
+         <part eId="part-1">
+            <num>Article First.</num>
+            <section eId="section-wrapper2">
+               <heading>Great Britain and Ireland to be united for ever from 1 Jan. 1801.</heading>
+               <content>
+                  <p>That it be first article of the union of the kingdoms of Great Britain and Ireland, that the said kingdoms of Great Britain and Ireland shall, upon the first day of January, which shall be in the year of our lord one thousand eight hundred and one, and for ever, be united into one kingdom, by the name of “the united kingdom of Great Britain and Ireland,” and that the royal stile and titles appertaining to the imperial crown of the said united kingdom and its dependencies, and also the ensigns, armourial flags and banners thereof, shall be such as his Majesty by his royal proclamation under the great seal of the united kingdom shall be pleased to appoint.</p>
+               </content>
+            </section>
+         </part>
+         <part eId="part-2">
+            <num>Article Second.</num>
+            <section eId="section-wrapper3">
+               <heading>Succession to the crown to continue as at present.</heading>
+               <content>
+                  <p>That it be the second article of union, that the succession to the imperial crown of the said united kingdom, and of the dominions thereunto belonging, shall continue limited and settled in the same manner as the succession to the imperial crown of the said kingdoms of Great Britain and Ireland now stands limited and settled, according to the existing laws, and to the terms of union between England and Scotland.</p>
+               </content>
+            </section>
+         </part>
+         <part eId="part-3">
+            <num>Article Third.</num>
+            <section eId="section-wrapper4">
+               <heading>One parliament.</heading>
+               <content>
+                  <p>That it be the third article of union, that the said united kingdom be represented in one and the same parliament, to be stiled “The parliament of the united kingdom of Great Britain and Ireland.”</p>
+               </content>
+            </section>
+         </part>
+         <section eId="section-wrapper5">
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887697" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <part eId="part-4">
+            <num>Article Fourth.</num>
+            <content>
+               <p/>
+            </content>
+         </part>
+         <section eId="section-wrapper6">
+            <heading> The representation act shall be considered as part of the union.</heading>
+            <content>
+               <p>That such act as shall be passed in the parliament of Ireland previous to the union, “<term refersTo="#term-to-regulate-the-mode-by-which-the-lords-spiritual-and-temporal-and-the-commons-to-serve-in-the-parliament-of-the-united-kingdom-on-the-part-of-ireland-shall-be-summoned-and-returned-to-the-said-parliament" eId="term-to-regulate-the-mode-by-which-the-lords-spiritual-and-temporal-and-the-commons-to-serve-in-the-parliament-of-the-united-kingdom-on-the-part-of-ireland-shall-be-summoned-and-returned-to-the-said-parliament">to regulate the mode by which the lords spiritual and temporal, and the commons to serve in the parliament of the united kingdom on the part of Ireland, shall be summoned and returned to the said parliament,</term>”shall be considered as forming part of the treaty of union, and shall be incorporated in the acts of the respective parliaments, by which the said union shall be ratified and established.</p>
+               <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887698" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-wrapper7">
+            <heading> Irish peers who are not elected to serve as peers, may serve as British commoners, during which time they cannot be elected to serve as peers.</heading>
+            <content>
+               <p>That any person holding any peerage of Ireland now subsisting, or hereafter to be created, shall not thereby be disqualified from being elected to serve, if he shall so think fit, or from serving, or continuing to serve, if he shall so think fit, for any county, city, or borough . . . <noteRef href="#c887699" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>, in the house of commons of the united kingdom . . . <noteRef href="#c887700" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>, but that so long as such peer of Ireland shall so continue to be a member of the house of commons, he shall not be entitled to the privilege of peerage . . . <noteRef href="#c887701" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-wrapper8">
+            <heading>Creation of Irish peers.</heading>
+            <content>
+               <p>That it shall be lawful for his Majesty, his heirs and successors, to create peers of Ireland, and to make promotions in the peerage thereof, after the union, provided that no new creation of any such peers shall take place after the union, until three of the peerages of Ireland, which shall have been existing at the time of the union, shall have become extinct, and upon such extinction of three peerages, that it shall be lawful for his Majesty, his heirs and successors, to create one peer of Ireland, and in like manner, so often as three peerages of Ireland, shall become extinct, it shall be lawful for his Majesty, his heirs and successors, to create one other peer of the said part of the united kingdom; and if it shall happen that the peers of Ireland, shall by extinction of peerages, or otherwise, be reduced to the number of one hundred, exclusive of all such peers of Ireland, as shall hold any peerage of Great Britain, subsisting at the time of the union, or of the united kingdom created since the union, by which such peers shall be entitled to an hereditary seat in the house of lords of the united kingdom, then and in that case it shall and may be lawful for his Majesty, his heirs and successors, to create one peer of Ireland, as often as any one of such one hundred peerages shall fail by extinction, or as often as any one peer of Ireland, shall become entitled by descent or creation to an hereditary seat in the house of lords of the united kingdom, it being the true intent and meaning of this article, that at all times after the union, it shall and may be lawful for his Majesty, his heirs and successors, to keep up the peerage of Ireland, to the number of one hundred, over and above the number of such of the said peers as shall be entitled by descent or creation to an hereditary seat in the house of lords of the united kingdom.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper9">
+            <heading> In what cases peerages may be deemed extinct.</heading>
+            <content>
+               <p>That if any peerage shall at any time be in abeyance, such peerage shall be deemed and taken as an existing peerage, and no peerage shall be deemed extinct, unless on default of claimants to the inheritance of such peerage, for the space of one year from the death of the person who shall have been last possessed thereof, and if no claim shall be made to the inheritance of such peerage, in such form and manner as may from time to time be prescribed by the house of lords of the united kingdom, before the expiration of the said period of a year, then and in that case such peerage shall be deemed extinct, provided that nothing herein shall exclude any person from afterwards putting in a claim to the peerage so deemed extinct, and if such claim shall be allowed as valid by the judgment of the house of lords of the united kingdom reported to his Majesty, such peerage shall be considered as revived, and in case any new creation of a peerage of Ireland, shall have taken place in the interval, in consequence of the supposed extinction of such peerage, then no new right of creation shall accrue to his Majesty, his heirs or successors, in consequence of the next extinction which shall take place of any peerage of Ireland.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper10">
+            <heading>How questions touching election of Irish commoners shall be decided.</heading>
+            <content>
+               <p>That all questions touching the election of members to sit on the part of Ireland in the house of commons of the united kingdom, shall be heard and decided in the same manner as questions touching such elections in Great Britain now are, or at any time hereafter shall by law be heard and decided, subject nevertheless to such particular regulations in respect of Ireland, as from local circumstances the parliament of the united kingdom may from time to time deem expedient.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper11">
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887702" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-wrapper12">
+            <heading> How the parliament of the united kingdom shall be constituted.</heading>
+            <content>
+               <p>That when his Majesty, his heirs or successors, shall declare his, her, or their pleasure for holding the first, or any subsequent parliament of the united kingdom, a proclamation shall issue under the great seal of the united kingdom, to cause the . . . <noteRef href="#c887703" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> commons, who are to serve in the parliament thereof on the part of Ireland, to be returned in such manner as by any act of this present session of the parliament of Ireland shall be provided, and that the lords spiritual and temporal, and commons of Great Britain shall, together with the . . . <noteRef href="#c887703" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> commons so returned as aforesaid on the part of Ireland, constitute the two houses of the parliament of the united kingdom.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper13">
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887705" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-wrapper14">
+            <heading> Privileges, rights, ranks, and precedency of lords temporal in the imperial parliament.</heading>
+            <content>
+               <p> . . . <noteRef href="#c887706" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>and that the persons holding any temporal peerages of Ireland, existing at the time of the union, shall, from and after the union, have rank and precedency next, and immediately after all the persons holding peerages of the like orders and degrees in Great Britain subsisting at the time of the union; and that all peerages of Ireland, created after the union, shall have rank and precedency with the peerages of the united kingdom so created, according to the dates of their creations; and that all peerages, both of Great Britain and Ireland, now subsisting, or hereafter to be created, shall in all other respects from the date of the union be considered as peerages of the united kingdom, and that the peers of Ireland shall, as peers of the united kingdom, . . . . . . <noteRef href="#c887707" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> enjoy all privileges of peers as fully as the peers of Great Britain; the right and privilege of sitting in the house of lords, and the privileges depending thereon, . . . . . . <noteRef href="#c887707" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> only excepted.</p>
+            </content>
+         </section>
+         <part eId="part-5">
+            <num>Article Fifth.</num>
+            <section eId="section-wrapper15">
+               <heading> Church of Scotland to continue as at present established.</heading>
+               <content>
+                  <p>That it be the fifth article of union, that . . . <noteRef href="#c887709" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> the doctrine, worship, discipline and government of the church of Scotland shall remain, and be preserved as the same are now established by law, and by the acts for the union of the two kingdoms of England and Scotland.</p>
+               </content>
+            </section>
+         </part>
+         <part eId="part-6">
+            <num>Article Sixth.</num>
+            <section eId="section-wrapper16">
+               <heading>Subjects of Great Britain and Ireland to be on same footing from 1 Jan. 1801.</heading>
+               <content>
+                  <p>That it be the sixth article of union, that his Majesty’s subjects of Great Britain and Ireland shall, from and after the first day of January, one thousand eight hundred and one, be entitled to the same privileges, and be on the same footing as to encouragements and bounties on the like articles, being the growth, produce, or manufacture of either country respectively, and generally in respect of trade and navigation in all ports and places in the united kingdom and its dependencies; and that in all treaties made by his Majesty, his heirs, and successors, with any foreign power, his Majesty’s subjects of Ireland shall have same the privileges, and be on the same footing as his Majesty’s subjects of Great Britain.</p>
+               </content>
+            </section>
+         </part>
+         <section eId="section-wrapper17">
+            <heading> No duty or bounty on exportation of produce of one country to the other.</heading>
+            <content>
+               <p>That from the first day of January, one thousand eight hundred and one, all prohibitions and bounties on the export of articles the growth, produce, or manufacture of either country to the other, shall cease and determine; and that the said articles shall thenceforth be exported from one country to the other, without duty or bounty on such export.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper18">
+            <heading> All articles the produce of either country shall be imported free from duty.</heading>
+            <content>
+               <p>That all articles the growth, produce, or manufacture of either country, (not herein-after enumerated as subject to specific duties) shall from thenceforth be imported into each country from the other free from duty, other than such countervailing duties . . . . . . <noteRef href="#c887710" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> as shall hereafter be imposed by the parliament of the united kingdom in the manner herein-after provided; . . . <noteRef href="#c887711" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-wrapper19">
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887712" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-wrapper20">
+            <heading> Produce of either country, subject to internal duty, shall on importation into each country be subject to countervailing duty.</heading>
+            <content>
+               <p>That any articles of the growth, produce, or manufacture of either country, which are or may be subject to internal duty, or to duty on the materials of which they are composed, may be made subject, on their importation into each country respectively from the other, to such countervailing duty as shall appear to be just and reasonable in respect of such internal duty or duties on the materials, . . . <noteRef href="#c887713" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> and that upon the the export of the said articles from each country to the other respectively, a drawback shall be given equal in amount to the countervailing duty payable on such articles on the import thereof into the same country from the other, and that in like manner in future, it shall be competent to the united parliament to impose any new or additional countervailing duties, or to take off or diminish such existing countervailing duties as may appear on like principles to be just and reasonable, in respect of any future or additional internal duty on any article of the growth, produce, or manufacture of either country, or of any new or additional duty on any materials of which such article may be composed, or of any abatement of duty on the same, and that when any such new or additional countervailing duty shall be so imposed on the import of any article into either country from the other, a drawback equal in amount to such countervailing duty shall be given in like manner on the export of every such article respectively from the same country to the other.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper21">
+            <heading>Same charges on produce of either country exported through the other.</heading>
+            <content>
+               <p>That all articles the growth, produce, or manufacture of either country, when exported through the other, shall in all cases be exported subject to the same charges, as if they had been exported directly from the country of which they were the growth, produce, or manufacture.</p>
+            </content>
+         </section>
+         <section eId="section-wrapper22">
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887714" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <part eId="part-7">
+            <num>
+               <noteRef href="#c887715" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>Article Seventh.</num>
+            <section eId="section-wrapper23">
+               <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887715" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </heading>
+               <content>
+                  <p/>
+               </content>
+            </section>
+         </part>
+         <part eId="part-8">
+            <num>Article Eighth.</num>
+            <section eId="section-wrapper24">
+               <heading>All civil and ecclesiastical laws and courts shall remain as now established, subject to future alterations; court of admiralty in Ireland, with appeal to chancery in Ireland; all contrary laws repealed.</heading>
+               <content>
+                  <p>That it be the eighth article of union, that all laws in force at the time of the union, and all the courts of civil and ecclesiastical jurisdiction within the respective kingdoms, shall remain as now by law established within the same, subject only to such alterations and regulations from time to time as circumstances may appear to the parliament of the united kingdom to require; . . . <noteRef href="#c887718" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> provided that from and after the union there shall remain in Ireland an instance court of admiralty for the determination of causes civil and maritime only; and that the appeal from sentences of the said court shall be to his Majesty’s delegates in his court of chancery in Ireland; and that all laws at present in force in either kingdom, which shall be contrary to any of the provisions which may be enacted by any act for carrying these articles into effect, be from and after the union repealed.</p>
+               </content>
+            </section>
+         </part>
+         <section eId="section-wrapper25">
+            <heading> Said articles were approved of by his Majesty; said articles are hereby declared to be the articles of the union, and in force for ever from 1 January, 1801.</heading>
+            <content>
+               <p>And whereas the said articles having by address of the respective houses of parliament in Great Britain and Ireland been humbly laid before his Majesty, his Majesty has been graciously pleased to approve the same, and to recommend it to his two houses of parliament in Great Britain and Ireland, to consider of such measures as may be necessary for giving effect to the said articles: In order therefore to give full effect and validity to the same, the said foregoing recited articles, each and every one of them, according to the true intent and tenor thereof, be ratified, confirmed and approved, and be, and they are hereby declared to be, the articles of the union of Great Britain and Ireland, and the same shall be in force and have effect for ever, from the first day of January, which shall be in the year of our Lord, one thousand eight hundred and one: provided that before that period an act shall have been passed by the parliament of Great Britain for carrying into effect, in the like manner, the said foregoing recited articles.</p>
+            </content>
+         </section>
+         <section eId="section-II">
+            <num>II</num>
+            <heading> Recital of the representation act passed this session:</heading>
+            <content>
+               <p>And whereas a bill, entitled, “The Parliamentary Representation Act (Ireland) 1800”, has passed the two houses of the parliament of this kingdom, the tenor whereof is as follows: “An Act to regulate the mode by which the lords spiritual and temporal, and the commons to serve in the parliament of the united kingdom on the part of Ireland, shall be summoned and returned to the said parliament:”</p>
+               <p>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887719" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-III">
+            <num>III</num>
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887720" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-IV">
+            <num>IV</num>
+            <heading> When vacancies happen in counties, cities, or boroughs new elections shall be held.</heading>
+            <content>
+               <p>And of the summoning of a new parliament, or if the seat of any of the . . . <noteRef href="#c887721" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> commoners shall become vacant by death or otherwise, then the . . . <noteRef href="#c887721" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> counties, cities, or boroughs, or any of them, as the case may be, shall proceed to a new election; . . . <noteRef href="#c887721" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> and no meeting shall at any time hereafter be summoned, called, convened or held for the purpose of electing any person or persons to serve or act, or be considered as representative or representatives of any other place, town, city, corporation or borough, . . . <noteRef href="#c887721" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> or as representative or representatives of the freemen, freeholders, householders or inhabitants thereof, either in the parliament of the united kingdom or elsewhere (unless it shall hereafter be otherwise provided by the parliament of the united kingdom) . . . <noteRef href="#c887725" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-V">
+            <num>V</num>
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887726" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-VIVII.">
+            <num>VI—VII.</num>
+            <heading>. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . <noteRef href="#c887727" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+            </heading>
+            <content>
+               <p/>
+            </content>
+         </section>
+         <section eId="section-VIII">
+            <num>VIII</num>
+            <heading> When a new parliament of united kingdom shall be summoned, lord chan. shall cause writs to be issued, &amp;c. and so on all vacancies in commons. </heading>
+            <content>
+               <p>And whenever his Majesty, his heirs and successors, shall by proclamation under the greatseal of the united kingdom, summon a new parliament of the united kingdom of Great Britain and Ireland, the chancellor, keeper, or commissioners of the great seal of Ireland, shall cause writs to be issued to the several counties, cities and boroughs in Ireland, . . . <noteRef href="#c887729" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> for the election of members to serve in the parliament of the united kingdom . . . <noteRef href="#c887729" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/> and whenever any vacancy of a seat in the house of commons of the parliament of the united kingdom for any of the said counties, cities or boroughs shall arise by death or otherwise, the chancellor, keeper, or commissioners of the great seal, upon such vacancy being certified to them respectively by the proper warrant, shall forthwith cause a writ to issue for the election of a person to fill up such vacancy, . . . . . . <noteRef href="#c887731" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-IX">
+            <num>IX</num>
+            <heading> Recited bill shall be part of this act.</heading>
+            <content>
+               <p>The said bill so herein recited, be taken as a part of this act, and be deemed to all intents and purposes incorporated within the same: . . . <noteRef href="#c887732" uk:name="commentary" ukl:Name="CommentaryRef" class="commentary"/>
+               </p>
+            </content>
+         </section>
+         <section eId="section-X">
+            <num>X</num>
+            <heading> Great seal of Ireland. </heading>
+            <content>
+               <p>And the great seal of Ireland may, if his Majesty shall so think fit, after the union be used in like manner as before the union except where it is otherwise provided by the foregoing articles, within Ireland, and his Majesty may, so long as he shall think fit, continue the privy council of Ireland, to be his privy council for Ireland.</p>
+            </content>
+         </section>
+      </body>
+   </act>
+</akomaNtoso>

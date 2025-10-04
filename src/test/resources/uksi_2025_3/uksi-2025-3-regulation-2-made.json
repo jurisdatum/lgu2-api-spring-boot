@@ -1,0 +1,126 @@
+{
+  "meta" : {
+    "id" : "uksi/2025/3",
+    "longType" : "UnitedKingdomStatutoryInstrument",
+    "shortType" : "uksi",
+    "year" : 2025,
+    "number" : 3,
+    "isbn" : "9780348267662",
+    "date" : "2025-01-03",
+    "cite" : "S.I. 2025/3",
+    "version" : "made",
+    "status" : "final",
+    "title" : "The Social Security (Miscellaneous Amendments) Regulations 2025",
+    "extent" : [ ],
+    "subjects" : [ "SOCIAL SECURITY" ],
+    "lang" : null,
+    "publisher" : "King's Printer of Acts of Parliament",
+    "modified" : "2025-01-06",
+    "versions" : [ "made" ],
+    "has" : {
+      "introduction" : true,
+      "signature" : true,
+      "note" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf",
+      "name" : null,
+      "date" : "2025-01-06",
+      "size" : 235678
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf",
+      "name" : "UK Explanatory Memorandum",
+      "date" : "2025-01-06",
+      "size" : 76463
+    } ],
+    "fragment" : "regulation/2",
+    "prev" : "regulation/1",
+    "next" : "regulation/3",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "regulation-2",
+      "href" : "uksi/2025/3/regulation/2/made",
+      "number" : "2",
+      "title" : "Amendment of the State Pension Credit Regulations 2002",
+      "label" : "Regulation 2"
+    },
+    "prevInfo" : {
+      "href" : "uksi/2025/3/regulation/1/made",
+      "label" : "Provision"
+    },
+    "nextInfo" : {
+      "href" : "uksi/2025/3/regulation/3/made",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "regulation-2",
+      "href" : "uksi/2025/3/regulation/2/made",
+      "number" : "2",
+      "title" : "Amendment of the State Pension Credit Regulations 2002",
+      "label" : "Regulation 2"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "regulation-2",
+      "href" : "uksi/2025/3/regulation/2/made",
+      "number" : "2",
+      "title" : "Amendment of the State Pension Credit Regulations 2002",
+      "label" : "Regulation 2"
+    }, {
+      "element" : "P2",
+      "id" : "regulation-2-1",
+      "href" : "uksi/2025/3/regulation/2/1/made",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "regulation-2-2",
+      "href" : "uksi/2025/3/regulation/2/2/made",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "regulation-2-2-a",
+      "href" : "uksi/2025/3/regulation/2/2/a/made",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "regulation-2-2-b",
+      "href" : "uksi/2025/3/regulation/2/2/b/made",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P4",
+      "id" : "regulation-2-2-b-i",
+      "href" : "uksi/2025/3/regulation/2/2/b/i/made",
+      "number" : "i",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P4",
+      "id" : "regulation-2-2-b-ii",
+      "href" : "uksi/2025/3/regulation/2/2/b/ii/made",
+      "number" : "ii",
+      "title" : null,
+      "label" : "P4"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act secondary uksi\"><div class=\"body\"><section class=\"hcontainer regulation\" id=\"regulation-2\" data-uk-target=\"true\"><h2><span class=\"heading\">Amendment of the State Pension Credit Regulations 2002</span><span class=\"num\">2.</span></h2><section class=\"paragraph\" id=\"regulation-2-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n<div class=\"p\">The State Pension Credit Regulations 2002<a class=\"fnRef\" id=\"ref-d1e97\" href=\"#d1e97\">7</a> are amended as follows.</div>\n</div></section><section class=\"paragraph\" id=\"regulation-2-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>In Schedule 2A (additional amount applicable for claimants responsible for a child or qualifying young person)—</p></div><div class=\"level para1\" id=\"regulation-2-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>in paragraph 2(1) (general) after the definition of “child” insert—</p>\n<div class=\"p\"><div class=\"mod\"><blockquote class=\"secondary context-main\" data-uk-context=\"body\" data-uk-docName=\"uksi\" data-ukl-TargetClass=\"secondary\" data-ukl-TargetSubClass=\"unknown\" data-ukl-Context=\"main\" data-ukl-Format=\"double\">\n\n<div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<div class=\"p\">““<span class=\"term\" data-refersTo=\"#term-foster-parent\">foster parent</span>” has the meaning given in regulation 2 of the Universal Credit Regulations 2013<a class=\"fnRef\" id=\"ref-d1e135\" href=\"#d1e135\">8</a>;”;</div>\n\n</div></div>\n\n</blockquote></div></div>\n\n</div></div><div class=\"level para1\" id=\"regulation-2-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"intro\"><p>in paragraph 4(3) (child or qualifying young person looked after by a local authority)—</p></div><div class=\"level para2\" id=\"regulation-2-2-b-i\"><h3><span class=\"num\">(i)</span></h3><div class=\"content\">\n<p>omit the “or” after paragraph (a);</p>\n</div></div><div class=\"level para2\" id=\"regulation-2-2-b-ii\"><h3><span class=\"num\">(ii)</span></h3><div class=\"content\">\n<p>after paragraph (b) insert—</p>\n<div class=\"p\"><div class=\"mod\"><blockquote class=\"secondary context-main\" data-uk-context=\"body\" data-uk-docName=\"uksi\" data-ukl-TargetClass=\"secondary\" data-ukl-TargetSubClass=\"unknown\" data-ukl-Context=\"main\" data-ukl-Format=\"double\">\n\n<p>“; or</p>\n<div class=\"level para1\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<div class=\"p\">during which the child or qualifying young person is placed for adoption under the Adoption and Children Act 2002<a class=\"fnRef\" id=\"ref-d1e187\" href=\"#d1e187\">9</a> or the Adoption and Children (Scotland) Act 2007<a class=\"fnRef\" id=\"ref-d1e195\" href=\"#d1e195\">10</a>.”.</div>\n</div></div>\n\n</blockquote></div></div>\n\n</div></div></div></section></section></div><footer class=\"footnotes\"><div class=\"authorialNote footnote\" id=\"f00007\" data-marker=\"7\"><a class=\"marker\" id=\"d1e97\" href=\"#ref-d1e97\">7</a>\n\n\n<p><cite><a href=\"http://www.legislation.gov.uk/id/uksi/2002/1792\">S.I. 2002/1792</a></cite>. Schedule 2A was inserted by <cite><a href=\"http://www.legislation.gov.uk/id/uksi/2018/676\">S.I. 2018/676</a></cite>.</p>\n\n\n</div><div class=\"authorialNote footnote\" id=\"f00008\" data-marker=\"8\"><a class=\"marker\" id=\"d1e135\" href=\"#ref-d1e135\">8</a>\n\n\n<p><cite><a href=\"http://www.legislation.gov.uk/id/uksi/2013/376\">S.I. 2013/376</a></cite>, amended by <cite><a href=\"http://www.legislation.gov.uk/id/uksi/2024/341\">S.I. 2024/341</a></cite>; there are other amending instruments but none is relevant.</p>\n\n\n</div><div class=\"authorialNote footnote\" id=\"f00009\" data-marker=\"9\"><a class=\"marker\" id=\"d1e187\" href=\"#ref-d1e187\">9</a>\n\n\n<p><cite><a href=\"http://www.legislation.gov.uk/id/ukpga/2002/38\">2002 c. 38</a></cite>.</p>\n\n\n</div><div class=\"authorialNote footnote\" id=\"f00010\" data-marker=\"10\"><a class=\"marker\" id=\"d1e195\" href=\"#ref-d1e195\">10</a>\n\n\n<p><cite><a href=\"http://www.legislation.gov.uk/id/asp/2007/4\">2007 asp 4</a></cite>.</p>\n\n\n</div></footer></article>"
+}

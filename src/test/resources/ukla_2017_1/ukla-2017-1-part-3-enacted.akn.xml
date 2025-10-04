@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="ukla">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ukla/2017/1"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ukla/2017/1"/>
+               <FRBRdate date="2017-04-27" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="1"/>
+               <FRBRname value="2017 c. i"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ukla/2017/1/enacted"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukla/2017/1/enacted"/>
+               <FRBRdate date="2017-04-27" name="enacted"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukla/2017/1/enacted/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2017-04-27" eId="date-enacted" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/ukla/2017/1/part/3/enacted</dc:identifier>
+            <dc:title>Faversham Oyster Fishery Company Act 2017</dc:title>
+            <dc:publisher>King's Printer of Acts of Parliament</dc:publisher>
+            <dc:modified>2021-07-30</dc:modified>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomLocalAct"/>
+                  <ukm:DocumentStatus Value="final"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2017"/>
+               <ukm:Number Value="1"/>
+               <ukm:EnactmentDate Date="2017-04-27"/>
+               <ukm:ISBN Value="9780105459897"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf" Date="2017-05-18" Size="440723"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="35"/>
+               <ukm:BodyParagraphs Value="23"/>
+               <ukm:ScheduleParagraphs Value="12"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="1"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body>
+         <part xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="part-3" ns0:target="true">
+            <num>PART 3</num>
+            <heading>MISSING SHAREHOLDERS AND CLAIMS</heading>
+            <section eId="section-12">
+               <num>12</num>
+               <heading>Interpretation of Part 3</heading>
+               <subsection eId="section-12-1">
+                  <num>(1)</num>
+                  <intro>
+                     <p>In this Part—</p>
+                  </intro>
+                  <hcontainer name="definition">
+                     <content>
+                        <p>a “claimant” means a person who has served a written notice on the Company and paid a deposit in accordance with section 13(5) during the notification period;</p>
+                     </content>
+                  </hcontainer>
+                  <hcontainer name="definition">
+                     <content>
+                        <p>a “missing shareholder” means a shareholder of the Company whose name is listed in the register of shareholders kept by the Company, and in respect of whom the conditions of subsection (2) have been met and includes a person entitled to the shares of that shareholder by transmission;</p>
+                     </content>
+                  </hcontainer>
+                  <hcontainer name="definition">
+                     <content>
+                        <p>“the notification period” means, in relation to a shareholder, the period beginning with the date of the first publication of the notice under section 13(1) and expiring at the end of the period of 18 months beginning with the day on which the further notice is first published under section 13(3);</p>
+                     </content>
+                  </hcontainer>
+                  <hcontainer name="definition">
+                     <intro>
+                        <p>a “shareholder notice” means a notice that—</p>
+                     </intro>
+                     <level class="para1">
+                        <num>(a)</num>
+                        <content>
+                           <p>is sent after the publication of a notice under section 13(1);</p>
+                        </content>
+                     </level>
+                     <level class="para1">
+                        <num>(b)</num>
+                        <content>
+                           <p>is sent by post to the address of the shareholder shown on the register of shareholders held by the Company;</p>
+                        </content>
+                     </level>
+                     <level class="para1">
+                        <num>(c)</num>
+                        <content>
+                           <p>explains the effect of this Part;</p>
+                        </content>
+                     </level>
+                     <level class="para1">
+                        <num>(d)</num>
+                        <content>
+                           <p>contains a notice for the recipient to complete and return which enables the recipient to claim in accordance with section 13(5) that the recipient is entitled to the interest of the shareholder in the shares in question; and</p>
+                        </content>
+                     </level>
+                     <level class="para1">
+                        <num>(e)</num>
+                        <content>
+                           <p>(in the case of a third notice) sets out the date on which the notification period expires.</p>
+                        </content>
+                     </level>
+                  </hcontainer>
+               </subsection>
+               <subsection eId="section-12-2">
+                  <num>(2)</num>
+                  <intro>
+                     <p>These are the conditions referred to in the definition of “missing shareholder” in subsection (1)—</p>
+                  </intro>
+                  <level class="para1" eId="section-12-2-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>the Company has sent the shareholder three shareholder notices in accordance with subsection (3);</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-12-2-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>the notification period has expired;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-12-2-c">
+                     <num>(c)</num>
+                     <intro>
+                        <p>in the case of each such notice—</p>
+                     </intro>
+                     <level class="para2" eId="section-12-2-c-i">
+                        <num>(i)</num>
+                        <content>
+                           <p>the notice has been returned to the Company marked undelivered (or some similar indication was given that the notice could not be delivered to the shareholder at the address to which the notice 
+had been sent), or</p>
+                        </content>
+                     </level>
+                     <level class="para2" eId="section-12-2-c-ii">
+                        <num>(ii)</num>
+                        <content>
+                           <p>the notice has not been returned;</p>
+                        </content>
+                     </level>
+                  </level>
+                  <level class="para1" eId="section-12-2-d">
+                     <num>(d)</num>
+                     <content>
+                        <p>before the first of those shareholder notices was sent, a period of 12 years had passed since the date on which a dividend or other sum became due for payment to the shareholder; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-12-2-e">
+                     <num>(e)</num>
+                     <content>
+                        <p>the shareholder has not claimed that dividend or other sum.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-12-3">
+                  <num>(3)</num>
+                  <content>
+                     <p>For the purposes of subsection (2)(a), the shareholder notices are sent in accordance with this subsection if the second and third of those notices are each sent no sooner than Day A and no later than Day B.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-12-4">
+                  <num>(4)</num>
+                  <intro>
+                     <p>In subsection (3)—</p>
+                  </intro>
+                  <level class="para1" eId="section-12-4-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>“Day A” means the day following the last day of the period of six months beginning with the day on which the previous notice was sent; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-12-4-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>“Day B” means the day following the last day of the period of 18 months beginning with the day on which the previous notice was sent.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-12-5">
+                  <num>(5)</num>
+                  <content>
+                     <p>For the purposes of this Part a person is entitled to a share by transmission if that person is the heir, successor or assign of the shareholder whose name is listed in the register of shareholders kept by the Company.</p>
+                  </content>
+               </subsection>
+            </section>
+            <section eId="section-13">
+               <num>13</num>
+               <heading>Notices and procedure for claims</heading>
+               <subsection eId="section-13-1">
+                  <num>(1)</num>
+                  <content>
+                     <p>Before sending a first shareholder notice to a shareholder, the Company must publish a notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-13-2">
+                  <num>(2)</num>
+                  <intro>
+                     <p>A shareholder notice may—</p>
+                  </intro>
+                  <level class="para1" eId="section-13-2-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>in the case of a body corporate, be sent to an officer of that body;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-2-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>in the case of a partnership, be sent to any partner;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-2-c">
+                     <num>(c)</num>
+                     <content>
+                        <p>in the case of an unincorporated association other than a partnership, be sent to any member of the governing body of that association.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-13-3">
+                  <num>(3)</num>
+                  <content>
+                     <p>As soon as reasonably practicable following the sending of a third shareholder notice to a shareholder, the Company must publish a further notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question and setting out the date on which the notification period will expire.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-13-4">
+                  <num>(4)</num>
+                  <intro>
+                     <p>A notice published under subsection (1) or (3)—</p>
+                  </intro>
+                  <level class="para1" eId="section-13-4-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>must be published in each of two successive weeks in a local newspaper circulating in the district of Swale and in the London Gazette; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-4-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>may mention more than one shareholder.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-13-5">
+                  <num>(5)</num>
+                  <content>
+                     <p>Any person may at any time during the notification period serve a written notice on the Company claiming that he or she is entitled to the interest of a shareholder in the shares in question, and any such notice shall be accompanied by a £50 deposit payable to the Company which shall be returned to the claimant in the event that the claimant succeeds in establishing the claim.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-13-6">
+                  <num>(6)</num>
+                  <intro>
+                     <p>A notice under subsection (5) may be served on the Company—</p>
+                  </intro>
+                  <level class="para1" eId="section-13-6-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>by delivering it to the Company at the address given on the shareholder notice; or</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-6-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>by sending it by registered post or the recorded delivery service to the Company at that address.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-13-7">
+                  <num>(7)</num>
+                  <intro>
+                     <p>If, within a period of 56 days commencing on the receipt of a notice under subsection (5), any claimant establishes to the satisfaction of the Company in accordance with the provisions of the 1930 Act or the 2006 Act that he or she is the shareholder in respect of the shares in question or that the interest of the shareholder in the shares in question has been transmitted to the claimant, the 
+Company shall, subject to subsection (9)—</p>
+                  </intro>
+                  <level class="para1" eId="section-13-7-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>enter the name of the claimant in the register of shareholders; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-7-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>pay the claimant so much of the arrears of dividends or other sums for the relevant period (which shall bear no interest) as are owing to the claimant in respect of the shares to which the claimant is entitled.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-13-8">
+                  <num>(8)</num>
+                  <intro>
+                     <p>If it is necessary for a claimant to make any application for the purpose of establishing a claim to any shares, the period for establishment of the claim shall be extended until the expiry of 30 days after the date on which—</p>
+                  </intro>
+                  <level class="para1" eId="section-13-8-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>proceedings on that application (including any proceedings on or in consequence of an appeal) have been determined and any time for appealing or further appealing has expired; or</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-8-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>that application or appeal is abandoned or withdrawn; or</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-13-8-c">
+                     <num>(c)</num>
+                     <content>
+                        <p>a notice is served by post by the Company on the applicant indicating that in the reasonable opinion of the Company the applicant has failed to take any steps required of him in relation to that application or appeal,</p>
+                     </content>
+                  </level>
+                  <wrapUp>
+                     <p>whichever happens first.</p>
+                  </wrapUp>
+               </subsection>
+               <subsection eId="section-13-9">
+                  <num>(9)</num>
+                  <content>
+                     <p>Before entering any claimant in the register of shareholders or paying the claimant any arrears of dividends or other sums, the Company may require the claimant to provide an indemnity in respect of any subsequent claims made against the Company in respect of that registration or that payment.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-13-10">
+                  <num>(10)</num>
+                  <content>
+                     <p>In subsection (7)(b), the “relevant period” means the period of 12 years expiring at the end of the day on which the Company is satisfied under subsection (7).</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-13-11">
+                  <num>(11)</num>
+                  <content>
+                     <p>In subsection (8), an “application” includes any application to the court under section 125 or Part 30 of the 2006 Act.</p>
+                  </content>
+               </subsection>
+            </section>
+            <section eId="section-14">
+               <num>14</num>
+               <heading>Sale of shares</heading>
+               <subsection eId="section-14-1">
+                  <num>(1)</num>
+                  <content>
+                     <p>The Company may sell any share of a missing shareholder in accordance with this section.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-2">
+                  <num>(2)</num>
+                  <content>
+                     <p>The Company may purchase any share of a missing shareholder to be sold under this section.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-3">
+                  <num>(3)</num>
+                  <content>
+                     <p>The sale price of any shares to be sold under this section shall be determined by the Company’s auditor or accountant on the basis set out in subsection (4).</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-4">
+                  <num>(4)</num>
+                  <content>
+                     <p>The share value shall be determined by using the following formula—</p>
+                     <tblock class="formula">
+                        <foreign>
+                           <math xmlns="http://www.w3.org/1998/Math/MathML" display="inline" overflow="scroll" altimg="http://www.legislation.gov.uk/ukla/2017/1/images/ukla_20170001_en_001">
+                              <mfrac linethickness="1" denomalign="center" numalign="center">
+                                 <mrow>
+                                    <mi mathvariant="normal">xy</mi>
+                                 </mrow>
+                                 <mrow>
+                                    <mi mathvariant="normal">z</mi>
+                                 </mrow>
+                              </mfrac>
+                              <mo>+</mo>
+                              <mi mathvariant="normal">A</mi>
+                           </math>
+                        </foreign>
+                        <blockContainer class="where">
+                           <p>where—</p>
+                           <tblock class="definition">
+                              <p>
+                                 <i>x</i> is the value, on the date of the sale, of the whole of the Company’s issued share capital of the same class as the shares to be sold, calculated on the basis of an open market sale between a willing buyer and willing seller dealing with each other at arm’s length;</p>
+                           </tblock>
+                           <tblock class="definition">
+                              <p>
+                                 <i>y</i> is the number of the shares to be sold;</p>
+                           </tblock>
+                           <tblock class="definition">
+                              <p>
+                                 <i>z</i> is the number, on that date, of issued shares in the same class; and</p>
+                           </tblock>
+                           <tblock class="definition">
+                              <p>
+                                 <i>A</i> is the total value of any dividends or other sums due for payment to the missing shareholder in respect of the shares to be sold.</p>
+                           </tblock>
+                        </blockContainer>
+                     </tblock>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-5">
+                  <num>(5)</num>
+                  <intro>
+                     <p>To give effect to any sale of shares under this section, the Company may—</p>
+                  </intro>
+                  <level class="para1" eId="section-14-5-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>authorise some person to transfer the shares in question;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-14-5-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>enter the name of the transferee in respect of the transferred shares in the register of shareholders even if no share certificate has been lodged for such shares; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-14-5-c">
+                     <num>(c)</num>
+                     <content>
+                        <p>issue a new certificate to the transferee.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-14-6">
+                  <num>(6)</num>
+                  <content>
+                     <p>An instrument of transfer executed by the person authorised under subsection (5)(a) shall be as effective as if it had been executed by the holder of, or the person entitled by transmission to, the shares.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-7">
+                  <num>(7)</num>
+                  <content>
+                     <p>The transferee shall not be bound to see to the application of the purchase monies, nor shall the transferee’s title to the shares be affected by any irregularity or invalidity in the proceedings in reference to the sale.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-8">
+                  <num>(8)</num>
+                  <intro>
+                     <p>If, during the further issue period, any additional shares have been issued in respect of—</p>
+                  </intro>
+                  <level class="para1" eId="section-14-8-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>shares held at the beginning of that period; or</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-14-8-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>additional shares previously issued during that period,</p>
+                     </content>
+                  </level>
+                  <wrapUp>
+                     <p>the Company may sell those additional shares.</p>
+                  </wrapUp>
+               </subsection>
+               <subsection eId="section-14-9">
+                  <num>(9)</num>
+                  <intro>
+                     <p>In subsection (8), “the further issue period” means the period that—</p>
+                  </intro>
+                  <level class="para1" eId="section-14-9-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>begins with the date referred to in section 12(2)(d); and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-14-9-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>ends with the expiry of the notification period.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-14-10">
+                  <num>(10)</num>
+                  <content>
+                     <p>The Company shall account to the missing shareholder for the net proceeds of a sale under this section by carrying all monies relating to the sale to a separate account.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-11">
+                  <num>(11)</num>
+                  <content>
+                     <p>The Company shall be deemed to be a debtor to, and not a trustee for, the missing shareholder in respect of such monies.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-12">
+                  <num>(12)</num>
+                  <content>
+                     <p>Monies carried to a separate account in accordance with subsection (10) may either be employed in the business of the Company or invested in such investments as the Board may think fit.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-13">
+                  <num>(13)</num>
+                  <content>
+                     <p>If a person establishes to the Company’s satisfaction that he is the missing shareholder in respect of any shares sold under this section the Company must pay that person the monies carried to the separate account in accordance with subsection (10).</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-14-14">
+                  <num>(14)</num>
+                  <content>
+                     <p>No interest shall be payable to the missing shareholder in respect of monies carried to a separate account in accordance with subsection (10) and the Company shall not be obliged to account for any money earned on those monies.</p>
+                  </content>
+               </subsection>
+            </section>
+            <section eId="section-15">
+               <num>15</num>
+               <heading>Notices in electronic form</heading>
+               <subsection eId="section-15-1">
+                  <num>(1)</num>
+                  <intro>
+                     <p>This section applies in relation to the serving of a notice under section 13(5) where the notice is transmitted to the Company—</p>
+                  </intro>
+                  <level class="para1" eId="section-15-1-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>by means of an electronic communications network; or</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-15-1-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>by other means but in a form that requires the use of apparatus by the recipient to render it intelligible.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-15-2">
+                  <num>(2)</num>
+                  <content>
+                     <p>The transmission has effect for the purposes of this Part as service of the notice on the Company, but only if the Company has indicated to the person making the transmission its willingness to receive the notice in the form and manner used.</p>
+                  </content>
+               </subsection>
+               <subsection eId="section-15-3">
+                  <num>(3)</num>
+                  <intro>
+                     <p>An indication to a person for the purposes of subsection (2)—</p>
+                  </intro>
+                  <level class="para1" eId="section-15-3-a">
+                     <num>(a)</num>
+                     <content>
+                        <p>must be given to the person in such manner as he may require;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-15-3-b">
+                     <num>(b)</num>
+                     <content>
+                        <p>must state the address to be used;</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-15-3-c">
+                     <num>(c)</num>
+                     <content>
+                        <p>must be accompanied by such other information as the person requires for the making of the transmission; and</p>
+                     </content>
+                  </level>
+                  <level class="para1" eId="section-15-3-d">
+                     <num>(d)</num>
+                     <content>
+                        <p>may be modified or withdrawn at any time by a notice given to the person in such manner as he may require.</p>
+                     </content>
+                  </level>
+               </subsection>
+               <subsection eId="section-15-4">
+                  <num>(4)</num>
+                  <content>
+                     <p>In this section “electronic communications network” has the same meaning as in the Communications Act 2003.</p>
+                  </content>
+               </subsection>
+            </section>
+            <section eId="section-16">
+               <num>16</num>
+               <heading>Saving for section 125 of 2006 Act</heading>
+               <content>
+                  <p>This Part is without prejudice to section 125 of the 2006 Act (power of court to rectify register).</p>
+               </content>
+            </section>
+         </part>
+      </body>
+   </act>
+</akomaNtoso>

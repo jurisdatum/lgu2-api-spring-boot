@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="nia">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/nia/2022/21"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/nia/2022/21"/>
+               <FRBRdate date="2022-04-27" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/NorthernIrelandAssembly"/>
+               <FRBRcountry value="GB-NIR"/>
+               <FRBRnumber value="21"/>
+               <FRBRname value="2022 c. 21 (N.I.)"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/nia/2022/21/enacted"/>
+               <FRBRuri value="http://www.legislation.gov.uk/nia/2022/21/enacted"/>
+               <FRBRdate date="2022-04-27" name="enacted"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2022-04-27" eId="date-enacted" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/nia/2022/21/enacted</dc:identifier>
+            <dc:title>School Age Act (Northern Ireland) 2022</dc:title>
+            <dc:description>Amend the meaning of “compulsory school age” in the Education Orders.</dc:description>
+            <dc:publisher>Government Printer for Northern Ireland</dc:publisher>
+            <dc:modified>2022-04-28</dc:modified>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="NorthernIrelandAct"/>
+                  <ukm:DocumentStatus Value="final"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2022"/>
+               <ukm:Number Value="21"/>
+               <ukm:EnactmentDate Date="2022-04-27"/>
+               <ukm:ISBN Value="9780105962670"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf" Date="2022-04-28" Size="352718"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="4"/>
+               <ukm:BodyParagraphs Value="4"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface eId="preface">
+         <block name="title">
+            <docTitle>School Age Act (Northern Ireland) 2022</docTitle>
+         </block>
+         <block name="number">
+            <docNumber>2022 CHAPTER 21</docNumber>
+         </block>
+         <longTitle>
+            <p>An Act to amend the meaning of “compulsory school age” in the Education Orders; and for connected purposes.</p>
+         </longTitle>
+         <block name="dateOfEnactment" refersTo="#date-enacted">
+            <docDate date="2022-04-27">[27th April 2022]</docDate>
+         </block>
+      </preface>
+      <preamble>
+         <formula name="enactingText">
+            <p>BE IT ENACTED by being passed by the Northern Ireland Assembly and assented to by Her Majesty as follows:</p>
+         </formula>
+      </preamble>
+      <body>
+         <section eId="section-1">
+            <num>1</num>
+            <heading>Meaning of “compulsory school age”</heading>
+            <subsection eId="section-1-1">
+               <num>(1)</num>
+               <content>
+                  <p>
+                     <mod>In Article 46 of the Education and Libraries (Northern Ireland) Order 1986 (compulsory school age), in paragraph (1), after “sixteen years”, in each place it appears, insert <quotedText>“or, in some deferred cases, seventeen years”</quotedText>.</mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-2">
+               <num>(2)</num>
+               <content>
+                  <p>
+                     <mod>After paragraph (1) of that Article insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <paragraph>
+                              <num>(1A)</num>
+                              <content>
+                                 <p>In this Article, “<term refersTo="#term-deferred-case">deferred case</term>” means a case in which a person who attains the age of four years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year does not begin to receive full-time education until the following year, having attained the age of five years.</p>
+                              </content>
+                           </paragraph>
+                           <paragraph>
+                              <num>(1B)</num>
+                              <intro>
+                                 <p>A reference in this Article to a person who attains a specified age on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year includes—</p>
+                              </intro>
+                              <level class="para1">
+                                 <num>(a)</num>
+                                 <content>
+                                    <p>a reference to a person who would have attained that age on a day in that period were it not for having been born prematurely, and</p>
+                                 </content>
+                              </level>
+                              <level class="para1">
+                                 <num>(b)</num>
+                                 <content>
+                                    <p>a reference to a person who was born before the beginning of that period but in whose case the expected week of childbirth was after the end of that period.</p>
+                                 </content>
+                              </level>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-3">
+               <num>(3)</num>
+               <content>
+                  <p>
+                     <mod>In paragraph (2) of that Article, in sub-paragraph (a), at the beginning insert <quotedText>“except in a deferred case,”</quotedText>.</mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-4">
+               <num>(4)</num>
+               <content>
+                  <p>
+                     <mod>After paragraph (2) of that Article insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <paragraph>
+                              <num>(2A)</num>
+                              <content>
+                                 <p>In a deferred case, where a person attains the age of four years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, the person shall be deemed not to have attained the lower limit of compulsory school age until 1st August in the year in which the person attained the age of five years.</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-5">
+               <num>(5)</num>
+               <intro>
+                  <p>In paragraph (3) of that Article—</p>
+               </intro>
+               <level class="para1" eId="section-1-5-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>in sub-paragraph (a), at the beginning insert <quotedText>“except in a deferred case,”</quotedText>, and</mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-5-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                        <mod>in each of sub-paragraphs (a) and (b), for “such other date as the Department may, by order subject to affirmative resolution, prescribe” substitute <quotedText>“a prescribed date”</quotedText>.</mod>
+                     </p>
+                  </content>
+               </level>
+            </subsection>
+            <subsection eId="section-1-6">
+               <num>(6)</num>
+               <content>
+                  <p>
+                     <mod>After paragraph (3) of that Article insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <paragraph>
+                              <num>(4)</num>
+                              <content>
+                                 <p>In a deferred case, where a person attains the age of sixteen years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, the person shall be deemed not to have attained the upper limit of compulsory school age until or, as the case may be, deemed to have attained that upper limit on 30th June in the following year or on a prescribed date.</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-7">
+               <num>(7)</num>
+               <content>
+                  <p>
+                     <mod>After paragraph (4) of that Article (inserted by subsection (6)), insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <paragraph>
+                              <num>(5)</num>
+                              <intro>
+                                 <p>In this Article—</p>
+                              </intro>
+                              <hcontainer name="definition">
+                                 <content>
+                                    <p>“<term refersTo="#term-full-time-education">full-time education</term>” means full-time education of the kind referred to in Article 45(1);</p>
+                                 </content>
+                              </hcontainer>
+                              <hcontainer name="definition">
+                                 <content>
+                                    <p>“<term refersTo="#term-prescribed-date">prescribed date</term>” means such date as the Department may, by order subject to affirmative resolution, prescribe.</p>
+                                 </content>
+                              </hcontainer>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+         </section>
+         <section eId="section-2">
+            <num>2</num>
+            <heading>Consequential amendments</heading>
+            <subsection eId="section-2-1">
+               <num>(1)</num>
+               <content>
+                  <p>
+                     <mod>In Article 46A of the Education and Libraries (Northern Ireland) Order 1986 (commencement of secondary education), in paragraph (1), in sub-paragraph (a), after “where” insert <quotedText>“, except in a deferred case,”</quotedText>.</mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-2">
+               <num>(2)</num>
+               <content>
+                  <p>
+                     <mod>In paragraph (1) of that Article, after sub-paragraph (a) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <level class="para1">
+                              <num>(aa)</num>
+                              <content>
+                                 <p>in a deferred case, where the child attains the age of eleven years on a date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, on 1st August in the following year, with the child having attained the age of twelve years;</p>
+                              </content>
+                           </level>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-3">
+               <num>(3)</num>
+               <content>
+                  <p>
+                     <mod>In paragraph (1) of that Article, in sub-paragraph (b), after “1st August in the following year” insert <quotedText>“, with the child having attained the age of twelve years”</quotedText>.</mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-4">
+               <num>(4)</num>
+               <content>
+                  <p>
+                     <mod>In paragraph (9) of that Article (interpretation), at the appropriate place insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="order" ukl:Context="main" ukl:Format="default">
+                           <hcontainer name="definition">
+                              <content>
+                                 <p>“<term refersTo="#term-deferred-case">deferred case</term>” has the meaning given in Article 46 and paragraph (1B) of that Article applies for the purposes of this Article as it applies for the purposes of that Article;</p>
+                              </content>
+                           </hcontainer>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-5">
+               <num>(5)</num>
+               <content>
+                  <p>
+                     <mod>In regulation 2 of the Pre-School Education in Schools (Admissions Criteria) Regulations (Northern Ireland) 1999 (interpretation), in paragraph (1), for the definition of “final pre-school year” substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nia" ukl:TargetClass="primary" ukl:TargetSubClass="regulation" ukl:Context="main" ukl:Format="default">
+                           <hcontainer name="definition">
+                              <intro>
+                                 <p>“<term refersTo="#term-final-pre-school-year">final pre-school year</term>”, in relation to a child, means—</p>
+                              </intro>
+                              <level class="para1">
+                                 <num>(a)</num>
+                                 <content>
+                                    <p>in the case of a child born in the period beginning on (and including) 2nd July in a year and ending on (and including) 31st March in the following year, the school year immediately prior to the school year in which the child is of compulsory school age;</p>
+                                 </content>
+                              </level>
+                              <level class="para1">
+                                 <num>(b)</num>
+                                 <content>
+                                    <p>subject to paragraph (c), in the case of a child born in the period beginning on (and including) 1st April in a year and ending on (and including) 1st July in the same year, the next school year beginning after the child attains the age of 3 years;</p>
+                                 </content>
+                              </level>
+                              <level class="para1">
+                                 <num>(c)</num>
+                                 <content>
+                                    <p>in the case of a child born in the period referred to in paragraph (b), but whose application for admission to pre-school education indicated the intention to defer that admission for one year or who has not previously had a funded pre-school education place (as to which, see paragraph (b)), the next school year beginning after the child attains the age of 4 years;</p>
+                                 </content>
+                              </level>
+                           </hcontainer>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-6">
+               <num>(6)</num>
+               <content>
+                  <p>
+                     <mod>In regulation 2 of those Regulations, after paragraph (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="nisr" ukl:TargetClass="secondary" ukl:TargetSubClass="regulation" ukl:Context="main" ukl:Format="default">
+                           <paragraph>
+                              <num>(1A)</num>
+                              <content>
+                                 <p>Paragraph (b) of the definition of “final pre-school year” in paragraph (1) is to be read with Article 46(1B) of the Education and Libraries (Northern Ireland) Order 1986.</p>
+                              </content>
+                           </paragraph>
+                           <paragraph>
+                              <num>(1B)</num>
+                              <content>
+                                 <p>In paragraph (c) of the definition of “final pre-school year” in paragraph (1), “<term refersTo="#term-funded-pre-school-education">funded pre-school education</term>” has the meaning given in Article 21 of the 1998 Order.</p>
+                              </content>
+                           </paragraph>
+                        </quotedStructure>
+                        <inline name="appendText">.</inline>
+                     </mod>
+                  </p>
+               </content>
+            </subsection>
+            <subsection eId="section-2-7">
+               <num>(7)</num>
+               <content>
+                  <p>The amendments made by subsections (5) and (6) do not affect the power to make regulations amending or revoking the provision made by those amendments.</p>
+               </content>
+            </subsection>
+         </section>
+         <section eId="section-3">
+            <num>3</num>
+            <heading>Review</heading>
+            <subsection eId="section-3-1">
+               <num>(1)</num>
+               <content>
+                  <p>The Department of Education must, before the fifth anniversary of the commencement of this Act, review and make a report on the effectiveness of the definition of “deferred case” contained in the amendment made by section 1(2).</p>
+               </content>
+            </subsection>
+            <subsection eId="section-3-2">
+               <num>(2)</num>
+               <content>
+                  <p>The Department must lay a copy of the report before the Assembly.</p>
+               </content>
+            </subsection>
+         </section>
+         <section eId="section-4">
+            <num>4</num>
+            <heading>Commencement and short title</heading>
+            <subsection eId="section-4-1">
+               <num>(1)</num>
+               <content>
+                  <p>This Act comes into operation on the day after Royal Assent.</p>
+               </content>
+            </subsection>
+            <subsection eId="section-4-2">
+               <num>(2)</num>
+               <content>
+                  <p>This Act may be cited as the School Age Act (Northern Ireland) 2022.</p>
+               </content>
+            </subsection>
+         </section>
+      </body>
+   </act>
+</akomaNtoso>

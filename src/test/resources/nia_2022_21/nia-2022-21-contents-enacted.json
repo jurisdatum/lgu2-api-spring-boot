@@ -1,0 +1,71 @@
+{
+  "meta" : {
+    "id" : "nia/2022/21",
+    "longType" : "NorthernIrelandAct",
+    "shortType" : "nia",
+    "year" : 2022,
+    "number" : 21,
+    "isbn" : "9780105962670",
+    "date" : "2022-04-27",
+    "cite" : "2022 c. 21 (N.I.)",
+    "version" : "enacted",
+    "status" : "final",
+    "title" : "School Age Act (Northern Ireland) 2022",
+    "extent" : [ "E", "W", "S", "NI" ],
+    "lang" : null,
+    "publisher" : "Government Printer for Northern Ireland",
+    "modified" : "2022-04-28",
+    "versions" : [ "enacted" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf",
+      "name" : null,
+      "date" : "2022-04-28",
+      "size" : 352718
+    } ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "School Age Act (Northern Ireland) 2022",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "E", "W", "S", "NI" ]
+    },
+    "body" : [ {
+      "name" : "item",
+      "number" : "1",
+      "title" : "Meaning of “compulsory school age”",
+      "ref" : "section-1",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "2",
+      "title" : "Consequential amendments",
+      "ref" : "section-2",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "3",
+      "title" : "Review",
+      "ref" : "section-3",
+      "extent" : [ "E", "W", "S", "NI" ]
+    }, {
+      "name" : "item",
+      "number" : "4",
+      "title" : "Commencement and short title",
+      "ref" : "section-4",
+      "extent" : [ "E", "W", "S", "NI" ]
+    } ]
+  }
+}

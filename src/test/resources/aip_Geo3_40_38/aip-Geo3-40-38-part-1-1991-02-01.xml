@@ -1,0 +1,39 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/aip/Geo3/40/38" IdURI="http://www.legislation.gov.uk/id/aip/Geo3/40/38" NumberOfProvisions="9" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" RestrictExtent="E+W+S+N.I."><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/aip/Geo3/40/38/part/1</dc:identifier><dc:title>Act of Union (Ireland) 1800</dc:title><dc:description>An Act for the Union of Great Britain and Ireland.</dc:description><dc:date>1978-02-01</dc:date><dc:type>text</dc:type><dc:format>text/xml</dc:format><dc:language>en</dc:language><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2011-05-26</dc:modified><dct:valid>1991-02-01</dct:valid>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/aip/Geo3/40/38/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/aip/Geo3/40/38" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/aip/Geo3/40/38/introduction" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/aip/Geo3/40/38/body" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/aip/Geo3/40/38/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1/1991-02-01" title="1991-02-01"/>
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/aip/Geo3/40/38" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/aip/Geo3/40/38/section/I." title="Provision; Section I."/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/aip/Geo3/40/38/section/I." title="Provision; Section I."/><atom:link rel="next" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/2" title="Part; Part 2"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/aip/Geo3/40/38/part/2" title="Part; Part 2"/>
+					<ukm:PrimaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="primary"/><ukm:DocumentMainType Value="IrelandAct"/><ukm:DocumentStatus Value="revised"/></ukm:DocumentClassification><ukm:Year Value="1800"/><ukm:Number Value="38"/><ukm:AlternativeNumber Category="Regnal" Value="40_Geo_3"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="9"/>
+									<ukm:BodyParagraphs Value="9"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Primary><Body DocumentURI="http://www.legislation.gov.uk/aip/Geo3/40/38/body" IdURI="http://www.legislation.gov.uk/id/aip/Geo3/40/38/body" NumberOfProvisions="9"><Part DocumentURI="http://www.legislation.gov.uk/aip/Geo3/40/38/part/1" IdURI="http://www.legislation.gov.uk/id/aip/Geo3/40/38/part/1" id="part-1"><Number>Article First.</Number><P1group DocumentURI="http://www.legislation.gov.uk/aip/Geo3/40/38/section/wrapper2" IdURI="http://www.legislation.gov.uk/id/aip/Geo3/40/38/section/wrapper2" id="section-wrapper2"><Title>Great Britain and Ireland to be united for ever from 1 Jan. 1801.</Title><P><Text>That it be first article of the union of the kingdoms of Great Britain and Ireland, that the said kingdoms of Great Britain and Ireland shall, upon the first day of January, which shall be in the year of our lord one thousand eight hundred and one, and for ever, be united into one kingdom, by the name of “the united kingdom of Great Britain and Ireland,” and that the royal stile and titles appertaining to the imperial crown of the said united kingdom and its dependencies, and also the ensigns, armourial flags and banners thereof, shall be such as his Majesty by his royal proclamation under the great seal of the united kingdom shall be pleased to appoint.</Text></P></P1group></Part></Body></Primary></Legislation>

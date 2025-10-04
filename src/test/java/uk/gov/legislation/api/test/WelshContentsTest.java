@@ -36,7 +36,7 @@ class WelshContentsTest {
     @Test
     void test() throws Exception {
 
-        String clml = TransformTest.read("/contents_wsi_2024_1002_cy.xml");
+        String clml = UnappliedEffectsHelper.read("/contents_wsi_2024_1002_cy.xml");
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
         when(mock.getTableOfContents("wsi", "2024", 1002, Optional.empty(), Optional.of("cy")))
             .thenReturn(response);

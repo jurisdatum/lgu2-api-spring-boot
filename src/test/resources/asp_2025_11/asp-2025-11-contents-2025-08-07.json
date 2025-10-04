@@ -1,0 +1,1087 @@
+{
+  "meta" : {
+    "id" : "asp/2025/11",
+    "longType" : "ScottishAct",
+    "shortType" : "asp",
+    "year" : 2025,
+    "number" : 11,
+    "isbn" : "9780105904403",
+    "date" : "2025-08-06",
+    "cite" : "2025 asp 11",
+    "version" : "2025-08-07",
+    "status" : "revised",
+    "title" : "Education (Scotland) Act 2025",
+    "extent" : [ "S" ],
+    "lang" : null,
+    "publisher" : "Statute Law Database",
+    "modified" : "2025-09-11",
+    "versions" : [ "enacted", "2025-08-07" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "2025-08-07",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf",
+      "name" : null,
+      "date" : "2025-08-06",
+      "size" : 1631326
+    } ],
+    "associated" : [ ],
+    "unappliedEffects" : [ ],
+    "upToDate" : true
+  },
+  "contents" : {
+    "title" : "Education (Scotland) Act 2025",
+    "introduction" : {
+      "name" : "introduction",
+      "number" : null,
+      "title" : "Introductory Text",
+      "ref" : "introduction",
+      "extent" : [ "S" ]
+    },
+    "body" : [ {
+      "name" : "part",
+      "number" : "Part 1",
+      "title" : "Qualifications Scotland",
+      "ref" : "part-1",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Establishment",
+        "ref" : "part-1-crossheading-establishment",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "1",
+          "title" : "Qualifications Scotland",
+          "ref" : "section-1",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Functions",
+        "ref" : "part-1-crossheading-functions",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "2",
+          "title" : "The function of awarding qualifications",
+          "ref" : "section-2",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "3",
+          "title" : "The quality assurance function",
+          "ref" : "section-3",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "4",
+          "title" : "The accreditation function",
+          "ref" : "section-4",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "5",
+          "title" : "The advisory function",
+          "ref" : "section-5",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "6",
+          "title" : "Working with, or recognition of, others",
+          "ref" : "section-6",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "7",
+          "title" : "Duties when exercising functions",
+          "ref" : "section-7",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "8",
+          "title" : "Consultation with Strategic Advisory Council",
+          "ref" : "section-8",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Strategic Advisory Council",
+        "ref" : "part-1-crossheading-strategic-advisory-council",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "9",
+          "title" : "Strategic Advisory Council",
+          "ref" : "section-9",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Expert Group on Qualifications Standards",
+        "ref" : "part-1-crossheading-expert-group-on-qualifications-standards",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "10",
+          "title" : "Expert Group on Qualifications Standards",
+          "ref" : "section-10",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Charters",
+        "ref" : "part-1-crossheading-charters",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "11",
+          "title" : "The learner charter",
+          "ref" : "section-11",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "12",
+          "title" : "The teacher and practitioner charter",
+          "ref" : "section-12",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "13",
+          "title" : "Reviewing and revising the charters",
+          "ref" : "section-13",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "14",
+          "title" : "Other charters",
+          "ref" : "section-14",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Guidance",
+        "ref" : "part-1-crossheading-guidance",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "15",
+          "title" : "Guidance about assistance for people with educational support needs",
+          "ref" : "section-15",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Accountability of Qualifications Scotland",
+        "ref" : "part-1-crossheading-accountability-of-qualifications-scotland",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "16",
+          "title" : "Corporate plan of Qualifications Scotland",
+          "ref" : "section-16",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "17",
+          "title" : "Annual report of Qualifications Scotland",
+          "ref" : "section-17",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "18",
+          "title" : "Annual quality assurance compliance report of Qualifications Scotland",
+          "ref" : "section-18",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "19",
+          "title" : "Reports of advice to Qualifications Scotland from certain committees",
+          "ref" : "section-19",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "20",
+          "title" : "Accounts and audit of Qualifications Scotland",
+          "ref" : "section-20",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "21",
+          "title" : "Scottish Ministers’ power to direct Qualifications Scotland",
+          "ref" : "section-21",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "22",
+          "title" : "Guidance by the Scottish Ministers to Qualifications Scotland",
+          "ref" : "section-22",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "23",
+          "title" : "Provision of information by Qualifications Scotland",
+          "ref" : "section-23",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Accountability of the Accreditation Committee",
+        "ref" : "part-1-crossheading-accountability-of-the-accreditation-committee",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "24",
+          "title" : "Corporate plan of the Accreditation Committee",
+          "ref" : "section-24",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "25",
+          "title" : "Annual report of the Accreditation Committee",
+          "ref" : "section-25",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "26",
+          "title" : "Scottish Ministers’ power to direct the Accreditation Committee",
+          "ref" : "section-26",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Funding and powers",
+        "ref" : "part-1-crossheading-funding-and-powers",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "27",
+          "title" : "Financial assistance",
+          "ref" : "section-27",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "28",
+          "title" : "Funding and use of resources",
+          "ref" : "section-28",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "29",
+          "title" : "General powers",
+          "ref" : "section-29",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Supporting provisions",
+        "ref" : "part-1-crossheading-supporting-provisions",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "30",
+          "title" : "Publication of documents",
+          "ref" : "section-30",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Reviews",
+        "ref" : "part-1-crossheading-reviews",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "31",
+          "title" : "Review of arrangements for assuring quality of qualifications",
+          "ref" : "section-31",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "32",
+          "title" : "Review of accreditation function",
+          "ref" : "section-32",
+          "extent" : [ "S" ]
+        } ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "Part 2",
+      "title" : "His Majesty’s Chief Inspector of Education in Scotland",
+      "ref" : "part-2",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Establishment",
+        "ref" : "part-2-crossheading-establishment",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "33",
+          "title" : "His Majesty’s Chief Inspector of Education in Scotland",
+          "ref" : "section-33",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "34",
+          "title" : "Deputy Chief Inspector of Education in Scotland",
+          "ref" : "section-34",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "35",
+          "title" : "His Majesty’s Inspectors of Education in Scotland",
+          "ref" : "section-35",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "36",
+          "title" : "Assistance with inspections",
+          "ref" : "section-36",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Functions",
+        "ref" : "part-2-crossheading-functions",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "37",
+          "title" : "Purpose of inspection",
+          "ref" : "section-37",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "38",
+          "title" : "The inspection function",
+          "ref" : "section-38",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "39",
+          "title" : "Meaning of “relevant educational establishment” and “excepted establishment”",
+          "ref" : "section-39",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "40",
+          "title" : "The voluntary arrangements function",
+          "ref" : "section-40",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "41",
+          "title" : "The advisory function",
+          "ref" : "section-41",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "42",
+          "title" : "Working with others",
+          "ref" : "section-42",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "43",
+          "title" : "Duties when exercising functions",
+          "ref" : "section-43",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Advisory Council",
+        "ref" : "part-2-crossheading-advisory-council",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "44",
+          "title" : "Advisory Council",
+          "ref" : "section-44",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Accountability",
+        "ref" : "part-2-crossheading-accountability",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "45",
+          "title" : "Inspection plan",
+          "ref" : "section-45",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "46",
+          "title" : "Reports on inspections",
+          "ref" : "section-46",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "47",
+          "title" : "Annual report",
+          "ref" : "section-47",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "48",
+          "title" : "Report on performance of the Scottish education system",
+          "ref" : "section-48",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "49",
+          "title" : "Other reports",
+          "ref" : "section-49",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "50",
+          "title" : "Protection from actions of defamation",
+          "ref" : "section-50",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Powers",
+        "ref" : "part-2-crossheading-powers",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "51",
+          "title" : "General powers",
+          "ref" : "section-51",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Cooperation with inspections",
+        "ref" : "part-2-crossheading-cooperation-with-inspections",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "52",
+          "title" : "Powers of entry and inspection",
+          "ref" : "section-52",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "53",
+          "title" : "Duty to provide assistance",
+          "ref" : "section-53",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "54",
+          "title" : "Offences",
+          "ref" : "section-54",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Enforcement following school-related inspections",
+        "ref" : "part-2-crossheading-enforcement-following-schoolrelated-inspections",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "55",
+          "title" : "Necessary improvements: referral to Scottish Ministers",
+          "ref" : "section-55",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "56",
+          "title" : "Preliminary notice of enforcement action",
+          "ref" : "section-56",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "57",
+          "title" : "Enforcement direction",
+          "ref" : "section-57",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "pblock",
+        "number" : null,
+        "title" : "Supporting provisions",
+        "ref" : "part-2-crossheading-supporting-provisions",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "58",
+          "title" : "Publication of documents",
+          "ref" : "section-58",
+          "extent" : [ "S" ]
+        } ]
+      } ]
+    }, {
+      "name" : "part",
+      "number" : "Part 3",
+      "title" : "General and miscellaneous",
+      "ref" : "part-3",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "59",
+        "title" : "Transfer of staff, property etc. to Qualifications Scotland",
+        "ref" : "section-59",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "60",
+        "title" : "Dissolution of the Scottish Qualifications Authority",
+        "ref" : "section-60",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "61",
+        "title" : "Transitional provisions",
+        "ref" : "section-61",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "62",
+        "title" : "Consequential modifications",
+        "ref" : "section-62",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "63",
+        "title" : "Interpretation",
+        "ref" : "section-63",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "64",
+        "title" : "Regulation-making powers",
+        "ref" : "section-64",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "65",
+        "title" : "Ancillary provision",
+        "ref" : "section-65",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "66",
+        "title" : "Commencement",
+        "ref" : "section-66",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "67",
+        "title" : "Short title",
+        "ref" : "section-67",
+        "extent" : [ "S" ]
+      } ]
+    } ],
+    "schedules" : [ {
+      "name" : "schedule",
+      "number" : "Schedule 1",
+      "title" : "Qualifications Scotland",
+      "ref" : "schedule-1",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "part",
+        "number" : "Part 1",
+        "title" : "Status",
+        "ref" : "schedule-1-part-1",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "1",
+          "title" : "Exclusion of Crown status",
+          "ref" : "schedule-1-paragraph-1",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 2",
+        "title" : "Membership",
+        "ref" : "schedule-1-part-2",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "2",
+          "title" : "Number and appointment of members",
+          "ref" : "schedule-1-paragraph-2",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "3",
+          "title" : "Appointment as a member: criteria",
+          "ref" : "schedule-1-paragraph-3",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "4",
+          "title" : "Period and conditions of membership",
+          "ref" : "schedule-1-paragraph-4",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "5",
+          "title" : "Early termination of membership",
+          "ref" : "schedule-1-paragraph-5",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "6",
+          "title" : "Members’ remuneration and allowances",
+          "ref" : "schedule-1-paragraph-6",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "7",
+          "title" : "Co-opted members",
+          "ref" : "schedule-1-paragraph-7",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 3",
+        "title" : "Staff",
+        "ref" : "schedule-1-part-3",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "8",
+          "title" : "Chief executive, chief examiner, chief accreditation officer and other staff",
+          "ref" : "schedule-1-paragraph-8",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "9",
+          "title" : "Staff pensions",
+          "ref" : "schedule-1-paragraph-9",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 4",
+        "title" : "Procedure",
+        "ref" : "schedule-1-part-4",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "chapter",
+          "number" : "Chapter 1",
+          "title" : "Committees",
+          "ref" : "schedule-1-part-4-chapter-1",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "10",
+            "title" : "Committees",
+            "ref" : "schedule-1-paragraph-10",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "11",
+            "title" : "The Learner Interest Committee",
+            "ref" : "schedule-1-paragraph-11",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "12",
+            "title" : "The Teacher and Practitioner Interest Committee",
+            "ref" : "schedule-1-paragraph-12",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "13",
+            "title" : "The Accreditation Committee",
+            "ref" : "schedule-1-paragraph-13",
+            "extent" : [ "S" ]
+          } ]
+        }, {
+          "name" : "chapter",
+          "number" : "Chapter 2",
+          "title" : "Administration of Qualifications Scotland and its committees",
+          "ref" : "schedule-1-part-4-chapter-2",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "14",
+            "title" : "Regulation of procedure",
+            "ref" : "schedule-1-paragraph-14",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "15",
+            "title" : "Authority to perform functions",
+            "ref" : "schedule-1-paragraph-15",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "16",
+            "title" : "Member consultation requirement",
+            "ref" : "schedule-1-paragraph-16",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "17",
+            "title" : "Validity of things done",
+            "ref" : "schedule-1-paragraph-17",
+            "extent" : [ "S" ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "Schedule 2",
+      "title" : "The Office of His Majesty’s Chief Inspector of Education in Scotland",
+      "ref" : "schedule-2",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "part",
+        "number" : "Part 1",
+        "title" : "Status",
+        "ref" : "schedule-2-part-1",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "1",
+          "title" : "Status",
+          "ref" : "schedule-2-paragraph-1",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "2",
+          "title" : "Independence",
+          "ref" : "schedule-2-paragraph-2",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 2",
+        "title" : "Appointment and terms",
+        "ref" : "schedule-2-part-2",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "3",
+          "title" : "Appointment",
+          "ref" : "schedule-2-paragraph-3",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "4",
+          "title" : "Period and conditions of office",
+          "ref" : "schedule-2-paragraph-4",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 3",
+        "title" : "Staff",
+        "ref" : "schedule-2-part-3",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "5",
+          "title" : "Staff",
+          "ref" : "schedule-2-paragraph-5",
+          "extent" : [ "S" ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 4",
+        "title" : "Procedure",
+        "ref" : "schedule-2-part-4",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "item",
+          "number" : "6",
+          "title" : "Authority to perform functions",
+          "ref" : "schedule-2-paragraph-6",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "7",
+          "title" : "(1) The Scottish Ministers may assign to an Inspector the...",
+          "ref" : "schedule-2-paragraph-7",
+          "extent" : [ "S" ]
+        }, {
+          "name" : "item",
+          "number" : "8",
+          "title" : "Validity of things done",
+          "ref" : "schedule-2-paragraph-8",
+          "extent" : [ "S" ]
+        } ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "Schedule 3",
+      "title" : "Transfer of staff, property etc. to Qualifications Scotland",
+      "ref" : "schedule-3",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "item",
+        "number" : "1",
+        "title" : "Transfer date",
+        "ref" : "schedule-3-paragraph-1",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "2",
+        "title" : "Transfer of staff",
+        "ref" : "schedule-3-paragraph-2",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "3",
+        "title" : "Transfer of property",
+        "ref" : "schedule-3-paragraph-3",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "4",
+        "title" : "Duty to secure vesting of foreign property",
+        "ref" : "schedule-3-paragraph-4",
+        "extent" : [ "S" ]
+      }, {
+        "name" : "item",
+        "number" : "5",
+        "title" : "Appointment of initial board members",
+        "ref" : "schedule-3-paragraph-5",
+        "extent" : [ "S" ]
+      } ]
+    }, {
+      "name" : "schedule",
+      "number" : "Schedule 4",
+      "title" : "Consequential modifications",
+      "ref" : "schedule-4",
+      "extent" : [ "S" ],
+      "children" : [ {
+        "name" : "part",
+        "number" : "Part 1",
+        "title" : "Qualifications Scotland",
+        "ref" : "schedule-4-part-1",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "chapter",
+          "number" : "Chapter 1",
+          "title" : "Application of legislation relating to public bodies to Qualifications Scotland",
+          "ref" : "schedule-4-part-1-chapter-1",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "1",
+            "title" : "Ethical Standards in Public Life etc. (Scotland) Act 2000",
+            "ref" : "schedule-4-paragraph-1",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "2",
+            "title" : "Scottish Public Services Ombudsman Act 2002",
+            "ref" : "schedule-4-paragraph-2",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "3",
+            "title" : "Freedom of Information (Scotland) Act 2002",
+            "ref" : "schedule-4-paragraph-3",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "4",
+            "title" : "Public Appointments and Public Bodies etc. (Scotland) Act 2003",
+            "ref" : "schedule-4-paragraph-4",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "5",
+            "title" : "Public Services Reform (Scotland) Act 2010",
+            "ref" : "schedule-4-paragraph-5",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "6",
+            "title" : "Public Records (Scotland) Act 2011",
+            "ref" : "schedule-4-paragraph-6",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "7",
+            "title" : "Procurement Reform (Scotland) Act 2014",
+            "ref" : "schedule-4-paragraph-7",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "8",
+            "title" : "Gender Representation on Public Boards (Scotland) Act 2018",
+            "ref" : "schedule-4-paragraph-8",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "9",
+            "title" : "Islands (Scotland) Act 2018",
+            "ref" : "schedule-4-paragraph-9",
+            "extent" : [ "S" ]
+          } ]
+        }, {
+          "name" : "chapter",
+          "number" : "Chapter 2",
+          "title" : "Other modifications relating to Qualifications Scotland",
+          "ref" : "schedule-4-part-1-chapter-2",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "10",
+            "title" : "Further and Higher Education (Scotland) Act 1992",
+            "ref" : "schedule-4-paragraph-10",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "11",
+            "title" : "Education (Scotland) Act 1996",
+            "ref" : "schedule-4-paragraph-11",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "12",
+            "title" : "Scottish Qualifications Authority Act 2002",
+            "ref" : "schedule-4-paragraph-12",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "13",
+            "title" : "Further and Higher Education (Scotland) Act 2005",
+            "ref" : "schedule-4-paragraph-13",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "14",
+            "title" : "Children and Young People (Scotland) Act 2014",
+            "ref" : "schedule-4-paragraph-14",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "15",
+            "title" : "Coronavirus (Recovery and Reform) (Scotland) Act 2022",
+            "ref" : "schedule-4-paragraph-15",
+            "extent" : [ "S" ]
+          } ]
+        } ]
+      }, {
+        "name" : "part",
+        "number" : "Part 2",
+        "title" : "The office of His Majesty’s Chief Inspector of Education in Scotland",
+        "ref" : "schedule-4-part-2",
+        "extent" : [ "S" ],
+        "children" : [ {
+          "name" : "chapter",
+          "number" : "Chapter 1",
+          "title" : "Application of legislation relating to office-holders to the Chief Inspector",
+          "ref" : "schedule-4-part-2-chapter-1",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "16",
+            "title" : "Freedom of Information (Scotland) Act 2002",
+            "ref" : "schedule-4-paragraph-16",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "17",
+            "title" : "Protection of Vulnerable Groups (Scotland) Act 2007",
+            "ref" : "schedule-4-paragraph-17",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "18",
+            "title" : "Public Services Reform (Scotland) Act 2010",
+            "ref" : "schedule-4-paragraph-18",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "19",
+            "title" : "Public Records (Scotland) Act 2011",
+            "ref" : "schedule-4-paragraph-19",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "20",
+            "title" : "Procurement Reform (Scotland) Act 2014",
+            "ref" : "schedule-4-paragraph-20",
+            "extent" : [ "S" ]
+          } ]
+        }, {
+          "name" : "chapter",
+          "number" : "Chapter 2",
+          "title" : "Other modifications relating to the Chief Inspector",
+          "ref" : "schedule-4-part-2-chapter-2",
+          "extent" : [ "S" ],
+          "children" : [ {
+            "name" : "item",
+            "number" : "21",
+            "title" : "Education (Scotland) Act 1980",
+            "ref" : "schedule-4-paragraph-21",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "22",
+            "title" : "Standards in Scotland’s Schools etc. Act 2000",
+            "ref" : "schedule-4-paragraph-22",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "23",
+            "title" : "Scottish Schools (Parental Involvement) Act 2006",
+            "ref" : "schedule-4-paragraph-23",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "24",
+            "title" : "Schools (Consultation) (Scotland) Act 2010",
+            "ref" : "schedule-4-paragraph-24",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "25",
+            "title" : "Public Services Reform (Scotland) Act 2010",
+            "ref" : "schedule-4-paragraph-25",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "26",
+            "title" : "Education (Scotland) Act 2016",
+            "ref" : "schedule-4-paragraph-26",
+            "extent" : [ "S" ]
+          }, {
+            "name" : "item",
+            "number" : "27",
+            "title" : "Schools General (Scotland) Regulations 1975",
+            "ref" : "schedule-4-paragraph-27",
+            "extent" : [ "S" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  }
+}

@@ -36,7 +36,7 @@ class WelshFragmentTest {
     @Test
     void test() throws Exception {
 
-        String clml = TransformTest.read("/fragment_wsi_2024_1002_regulation_2_cy.xml");
+        String clml = UnappliedEffectsHelper.read("/fragment_wsi_2024_1002_regulation_2_cy.xml");
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
         when(mock.getDocumentSection("wsi", "2024", 1002, "regulation-2", Optional.empty(), Optional.of("cy")))
             .thenReturn(response);

@@ -1,0 +1,328 @@
+{
+  "meta" : {
+    "id" : "asp/2025/11",
+    "longType" : "ScottishAct",
+    "shortType" : "asp",
+    "year" : 2025,
+    "number" : 11,
+    "isbn" : "9780105904403",
+    "date" : "2025-08-06",
+    "cite" : "2025 asp 11",
+    "version" : "2025-08-07",
+    "status" : "revised",
+    "title" : "Education (Scotland) Act 2025",
+    "extent" : [ "S" ],
+    "lang" : null,
+    "publisher" : "Statute Law Database",
+    "modified" : "2025-09-11",
+    "versions" : [ "enacted", "2025-08-07" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "2025-08-07",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf",
+      "name" : null,
+      "date" : "2025-08-06",
+      "size" : 1631326
+    } ],
+    "associated" : [ ],
+    "fragment" : "part/1/crossheading/reviews",
+    "prev" : "part/1/crossheading/supporting-provisions",
+    "next" : "part/2/crossheading/establishment",
+    "fragmentInfo" : {
+      "element" : "Pblock",
+      "id" : "part-1-crossheading-reviews",
+      "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
+      "number" : null,
+      "title" : "Reviews",
+      "label" : "Reviews"
+    },
+    "prevInfo" : {
+      "href" : "asp/2025/11/part/1/crossheading/supporting-provisions/2025-08-07",
+      "label" : "Crossheading"
+    },
+    "nextInfo" : {
+      "href" : "asp/2025/11/part/2/crossheading/establishment/2025-08-07",
+      "label" : "Crossheading"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "asp/2025/11/part/1/2025-08-07",
+      "number" : "Part 1",
+      "title" : "Qualifications Scotland",
+      "label" : "Part 1"
+    }, {
+      "element" : "Pblock",
+      "id" : "part-1-crossheading-reviews",
+      "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
+      "number" : null,
+      "title" : "Reviews",
+      "label" : "Reviews"
+    } ],
+    "descendants" : [ {
+      "element" : "Pblock",
+      "id" : "part-1-crossheading-reviews",
+      "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
+      "number" : null,
+      "title" : "Reviews",
+      "label" : "Reviews"
+    }, {
+      "element" : "P1",
+      "id" : "section-31",
+      "href" : "asp/2025/11/section/31/2025-08-07",
+      "number" : "31",
+      "title" : "Review of arrangements for assuring quality of qualifications",
+      "label" : "Section 31"
+    }, {
+      "element" : "P2",
+      "id" : "section-31-1",
+      "href" : "asp/2025/11/section/31/1/2025-08-07",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-31-2",
+      "href" : "asp/2025/11/section/31/2/2025-08-07",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-2-a",
+      "href" : "asp/2025/11/section/31/2/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "asp/2025/11/section/31/1/2025-08-07",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-2-b",
+      "href" : "asp/2025/11/section/31/2/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "asp/2025/11/section/31/1/2025-08-07",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-31-3",
+      "href" : "asp/2025/11/section/31/3/2025-08-07",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "asp/2025/11/section/31/1/2025-08-07",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-3-a",
+      "href" : "asp/2025/11/section/31/3/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-3-b",
+      "href" : "asp/2025/11/section/31/3/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-31-4",
+      "href" : "asp/2025/11/section/31/4/2025-08-07",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-4-a",
+      "href" : "asp/2025/11/section/31/4/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-4-b",
+      "href" : "asp/2025/11/section/31/4/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-31-4-c",
+      "href" : "asp/2025/11/section/31/4/c/2025-08-07",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P1",
+      "id" : "section-32",
+      "href" : "asp/2025/11/section/32/2025-08-07",
+      "number" : "32",
+      "title" : "Review of accreditation function",
+      "label" : "Section 32"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-1",
+      "href" : "asp/2025/11/section/32/1/2025-08-07",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-1-a",
+      "href" : "asp/2025/11/section/32/1/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-1-b",
+      "href" : "asp/2025/11/section/32/1/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-1-c",
+      "href" : "asp/2025/11/section/32/1/c/2025-08-07",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-2",
+      "href" : "asp/2025/11/section/32/2/2025-08-07",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-2-a",
+      "href" : "asp/2025/11/section/32/2/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-2-b",
+      "href" : "asp/2025/11/section/32/2/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-2-c",
+      "href" : "asp/2025/11/section/32/2/c/2025-08-07",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-3",
+      "href" : "asp/2025/11/section/32/3/2025-08-07",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-3-a",
+      "href" : "asp/2025/11/section/32/3/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-3-b",
+      "href" : "asp/2025/11/section/32/3/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P4",
+      "id" : "section-32-3-b-i",
+      "href" : "asp/2025/11/section/32/3/b/i/2025-08-07",
+      "number" : "i",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P4",
+      "id" : "section-32-3-b-ii",
+      "href" : "asp/2025/11/section/32/3/b/ii/2025-08-07",
+      "number" : "ii",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P4",
+      "id" : "section-32-3-b-iii",
+      "href" : "asp/2025/11/section/32/3/b/iii/2025-08-07",
+      "number" : "iii",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-4",
+      "href" : "asp/2025/11/section/32/4/2025-08-07",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-5",
+      "href" : "asp/2025/11/section/32/5/2025-08-07",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-5-a",
+      "href" : "asp/2025/11/section/32/5/a/2025-08-07",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-32-5-b",
+      "href" : "asp/2025/11/section/32/5/b/2025-08-07",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-32-6",
+      "href" : "asp/2025/11/section/32/6/2025-08-07",
+      "number" : "6",
+      "title" : null,
+      "label" : "P2"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary asp\"><div class=\"body\" id=\"body\" data-x-extent=\"S\" data-x-restrict-start-date=\"2025-08-07\"><section class=\"part prospective\" id=\"part-1\" data-x-extent=\"S\" data-x-status=\"Prospective\"><h2><span class=\"num\">Part 1</span><span class=\"heading\">Qualifications Scotland</span></h2><section class=\"hcontainer crossheading\" data-ukl-Name=\"Pblock\" id=\"part-1-crossheading-reviews\" data-uk-target=\"true\" data-x-extent=\"S\" data-x-status=\"Prospective\"><h2><span class=\"heading\">Reviews</span></h2><section class=\"section\" id=\"section-31\" data-x-extent=\"S\" data-x-status=\"Prospective\"><h2><span class=\"num\">31</span><span class=\"heading\">Review of arrangements for assuring quality of qualifications</span></h2><section class=\"subsection\" id=\"section-31-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n<p>The Scottish Ministers must appoint a person to undertake a review of the effectiveness of Qualifications Scotland’s arrangements, made in accordance with section 3(a), for satisfying itself as to the quality of qualifications devised under section 2(1)(a).</p>\n</div></section><section class=\"subsection\" id=\"section-31-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>The Scottish Ministers—</p></div><div class=\"level para1\" id=\"section-31-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>must make an appointment under <cite><a href=\"#section-31-1\">subsection (1)</a></cite> as soon as reasonably practicable and, in any event, no later than 3 months after this section comes into force,</p>\n</div></div><div class=\"level para1\" id=\"section-31-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>must not appoint a person under <cite><a href=\"#section-31-1\">subsection (1)</a></cite> who is a member of, or a member of staff of, Qualifications Scotland.</p>\n</div></div></section><section class=\"subsection\" id=\"section-31-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"intro\"><p>The person appointed under <cite><a href=\"#section-31-1\">subsection (1)</a></cite> must—</p></div><div class=\"level para1\" id=\"section-31-3-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>after undertaking the review, prepare a report of the review,</p>\n</div></div><div class=\"level para1\" id=\"section-31-3-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>submit the report to the Scottish Ministers.</p>\n</div></div></section><section class=\"subsection\" id=\"section-31-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"intro\"><p>The Scottish Ministers must—</p></div><div class=\"level para1\" id=\"section-31-4-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>give a copy of the report to Qualifications Scotland,</p>\n</div></div><div class=\"level para1\" id=\"section-31-4-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>lay a copy of the report before the Scottish Parliament, and</p>\n</div></div><div class=\"level para1\" id=\"section-31-4-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>publish the report.</p>\n</div></div></section><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\"><p><span class=\"marker\">I1</span>S. 31  not in force at Royal Assent, see <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/asp/2025/11/section/66/2\">s. 66(2)</a></cite></p></div></div></footer></section><section class=\"section\" id=\"section-32\" data-x-extent=\"S\" data-x-status=\"Prospective\"><h2><span class=\"num\">32</span><span class=\"heading\">Review of accreditation function</span></h2><section class=\"subsection\" id=\"section-32-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"intro\"><p>The Scottish Ministers must, as soon as reasonably practicable after the end of the review period—</p></div><div class=\"level para1\" id=\"section-32-1-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>undertake a review of the operation of the accreditation provisions,</p>\n</div></div><div class=\"level para1\" id=\"section-32-1-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>prepare a report on that review,</p>\n</div></div><div class=\"level para1\" id=\"section-32-1-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>publish the report and lay a copy of it before the Scottish Parliament.</p>\n</div></div></section><section class=\"subsection\" id=\"section-32-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>The report must, in particular, set out—</p></div><div class=\"level para1\" id=\"section-32-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>an assessment of the scope of the accreditation function,</p>\n</div></div><div class=\"level para1\" id=\"section-32-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>an assessment of whether the accreditation function should remain a function of Qualifications Scotland,</p>\n</div></div><div class=\"level para1\" id=\"section-32-2-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>what steps (if any) the Scottish Ministers intend to take as a result of the findings of the review, including whether they intend to bring forward legislation in relation to the accreditation function.</p>\n</div></div></section><section class=\"subsection\" id=\"section-32-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"intro\"><p>If the Scottish Ministers state in the report that they intend to bring forward legislation in relation to the accreditation function, they must—</p></div><div class=\"level para1\" id=\"section-32-3-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>within 1 year of publication of the report, bring forward such legislation, or</p>\n</div></div><div class=\"level para1\" id=\"section-32-3-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"intro\"><p>as soon as reasonably practicable following the expiry of that period, lay a statement before the Scottish Parliament setting out—</p></div><div class=\"level para2\" id=\"section-32-3-b-i\"><h3><span class=\"num\">(i)</span></h3><div class=\"content\">\n<p>whether they still intend to bring forward such legislation,</p>\n</div></div><div class=\"level para2\" id=\"section-32-3-b-ii\"><h3><span class=\"num\">(ii)</span></h3><div class=\"content\">\n<p>where they still intend to bring forward such legislation, their timescales for doing so,</p>\n</div></div><div class=\"level para2\" id=\"section-32-3-b-iii\"><h3><span class=\"num\">(iii)</span></h3><div class=\"content\">\n<p>where they no longer intend to bring forward such legislation, their reasons for that.</p>\n</div></div></div></section><section class=\"subsection\" id=\"section-32-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"content\">\n<p>The Scottish Ministers may delegate their functions under subsections (1)(a) and (b) to such person as they consider appropriate.</p>\n</div></section><section class=\"subsection\" id=\"section-32-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"intro\"><p>When undertaking the review under subsection (1)(a), the Scottish Ministers (or, if applicable, the person to whom the review is delegated under subsection (4)) must consult—</p></div><div class=\"level para1\" id=\"section-32-5-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>Qualifications Scotland, and</p>\n</div></div><div class=\"level para1\" id=\"section-32-5-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>such other persons as the Scottish Ministers (or, if applicable, the person to whom the review is delegated) consider appropriate.</p>\n</div></div></section><section class=\"subsection\" id=\"section-32-6\"><h2><span class=\"num\">(6)</span></h2><div class=\"intro\"><p>In this section—</p></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>“<span class=\"term\" data-refersTo=\"#term-accreditation-function\" id=\"term-accreditation-function\">accreditation function</span>” means the function conferred by section 4(1),</p>\n\n</div></div><div class=\"hcontainer definition no-num\"><div class=\"intro\"><p>“<span class=\"term\" data-refersTo=\"#term-accreditation-provisions\" id=\"term-accreditation-provisions\">accreditation provisions</span>” means—</p></div><div class=\"level para1\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>section 4,</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>section 24,</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>section 25,</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n<p>paragraph 13 of schedule 1, and</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(e)</span></h3><div class=\"content\">\n<p>paragraphs 10, 14 and 15 of schedule 1 insofar as they relate to the Accreditation Committee,</p>\n</div></div></div><div class=\"hcontainer definition no-num\"><div class=\"intro\"><p>“<span class=\"term\" data-refersTo=\"#term-bringing-forward-legislation\" id=\"term-bringing-forward-legislation\">bringing forward legislation</span>”, in relation to the accreditation provisions, means—</p></div><div class=\"level para1\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>laying before the Scottish Parliament for approval by resolution a draft Scottish statutory instrument under Part 2 of the Public Services Reform (Scotland) Act 2010 containing an order making provision in relation to the accreditation provisions, or</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>introducing a Bill to the Scottish Parliament which includes or consists of provision in relation to the accreditation provisions,</p>\n</div></div></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>“<span class=\"term\" data-refersTo=\"#term-review-period\" id=\"term-review-period\">review period</span>” means the period of 2 years beginning with the day on which the accreditation provisions come into force (or, if they come into force on different days, the day on which the last of them comes into force).</p>\n\n</div></div></section><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\"><p><span class=\"marker\">I2</span>S. 32  not in force at Royal Assent, see <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/asp/2025/11/section/66/2\">s. 66(2)</a></cite></p></div></div></footer></section></section></section></div></article>"
+}

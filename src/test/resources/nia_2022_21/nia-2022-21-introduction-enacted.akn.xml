@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="nia">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/nia/2022/21"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/nia/2022/21"/>
+               <FRBRdate date="2022-04-27" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/NorthernIrelandAssembly"/>
+               <FRBRcountry value="GB-NIR"/>
+               <FRBRnumber value="21"/>
+               <FRBRname value="2022 c. 21 (N.I.)"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/nia/2022/21/enacted"/>
+               <FRBRuri value="http://www.legislation.gov.uk/nia/2022/21/enacted"/>
+               <FRBRdate date="2022-04-27" name="enacted"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2022-04-27" eId="date-enacted" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/nia/2022/21/introduction/enacted</dc:identifier>
+            <dc:title>School Age Act (Northern Ireland) 2022</dc:title>
+            <dc:description>Amend the meaning of “compulsory school age” in the Education Orders.</dc:description>
+            <dc:publisher>Government Printer for Northern Ireland</dc:publisher>
+            <dc:modified>2022-04-28</dc:modified>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="NorthernIrelandAct"/>
+                  <ukm:DocumentStatus Value="final"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2022"/>
+               <ukm:Number Value="21"/>
+               <ukm:EnactmentDate Date="2022-04-27"/>
+               <ukm:ISBN Value="9780105962670"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf" Date="2022-04-28" Size="352718"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="4"/>
+               <ukm:BodyParagraphs Value="4"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <preface xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="preface" ns0:target="true">
+         <block name="title">
+            <docTitle>School Age Act (Northern Ireland) 2022</docTitle>
+         </block>
+         <block name="number">
+            <docNumber>2022 CHAPTER 21</docNumber>
+         </block>
+         <longTitle>
+            <p>An Act to amend the meaning of “compulsory school age” in the Education Orders; and for connected purposes.</p>
+         </longTitle>
+         <block name="dateOfEnactment" refersTo="#date-enacted">
+            <docDate date="2022-04-27">[27th April 2022]</docDate>
+         </block>
+      </preface>
+      <preamble>
+         <formula name="enactingText">
+            <p>BE IT ENACTED by being passed by the Northern Ireland Assembly and assented to by Her Majesty as follows:</p>
+         </formula>
+      </preamble>
+      <body/>
+   </act>
+</akomaNtoso>

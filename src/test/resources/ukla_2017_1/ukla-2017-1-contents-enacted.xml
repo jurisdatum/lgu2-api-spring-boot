@@ -1,0 +1,111 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1" NumberOfProvisions="35" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/ukla/2017/1/contents/enacted</dc:identifier><dc:title>Faversham Oyster Fishery Company Act 2017</dc:title><dc:publisher>King's Printer of Acts of Parliament</dc:publisher><dc:modified>2021-07-30</dc:modified>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukla/2017/1/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukla/2017/1/enacted" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukla/2017/1/introduction/enacted" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukla/2017/1/body/enacted" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukla/2017/1/schedules/enacted" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukla/2017/1/contents/enacted" title="Table of Contents"/>
+					
+					
+					
+					
+					<ukm:PrimaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="primary"/>
+<ukm:DocumentMainType Value="UnitedKingdomLocalAct"/>
+<ukm:DocumentStatus Value="final"/>
+</ukm:DocumentClassification><ukm:Year Value="2017"/><ukm:Number Value="1"/><ukm:EnactmentDate Date="2017-04-27"/><ukm:ISBN Value="9780105459897"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf" Date="2017-05-18" Size="440723"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="35"/>
+									<ukm:BodyParagraphs Value="23"/>
+									<ukm:ScheduleParagraphs Value="12"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="1"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Contents>
+<ContentsTitle>Faversham Oyster Fishery Company Act 2017</ContentsTitle>
+
+<ContentsPart ContentRef="part-1" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/1" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/1/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>PART 1</ContentsNumber><ContentsTitle>INTRODUCTORY</ContentsTitle><ContentsItem ContentRef="section-1" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/1" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/1/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>1</ContentsNumber><ContentsTitle>Citation</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-2" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/2" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/2/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>2</ContentsNumber><ContentsTitle>Interpretation</ContentsTitle></ContentsItem></ContentsPart>
+<ContentsPart ContentRef="part-2" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/2" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/2/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>PART 2</ContentsNumber><ContentsTitle>CONSTITUTION AND POWERS OF THE COMPANY</ContentsTitle><ContentsItem ContentRef="section-3" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/3" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/3/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>3</ContentsNumber><ContentsTitle>Company name and adoption of model articles</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-4" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/4" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/4/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>4</ContentsNumber><ContentsTitle>Alteration of objects and powers</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-5" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/5" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/5/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>5</ContentsNumber><ContentsTitle>Disapplication of Companies Clauses Acts</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-6" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/6" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/6/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>6</ContentsNumber><ContentsTitle>Liability of members</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-7" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/7" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/7/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>7</ContentsNumber><ContentsTitle>Power to raise additional capital</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-8" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/8" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/8/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>8</ContentsNumber><ContentsTitle>Power to borrow</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-9" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/9" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/9/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>9</ContentsNumber><ContentsTitle>Subscriptions for shares and loans</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-10" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/10" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/10/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>10</ContentsNumber><ContentsTitle>Powers relating to land</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-11" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/11" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/11/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>11</ContentsNumber><ContentsTitle>Repeal of outdated legislation</ContentsTitle></ContentsItem></ContentsPart>
+<ContentsPart ContentRef="part-3" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/3" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/3/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>PART 3</ContentsNumber><ContentsTitle>MISSING SHAREHOLDERS AND CLAIMS</ContentsTitle><ContentsItem ContentRef="section-12" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/12" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/12/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>12</ContentsNumber><ContentsTitle>Interpretation of Part 3</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-13" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/13" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/13/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>13</ContentsNumber><ContentsTitle>Notices and procedure for claims</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-14" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/14" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/14/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>14</ContentsNumber><ContentsTitle>Sale of shares</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-15" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/15" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/15/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>15</ContentsNumber><ContentsTitle>Notices in electronic form</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-16" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/16" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/16/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>16</ContentsNumber><ContentsTitle>Saving for section 125 of 2006 Act</ContentsTitle></ContentsItem></ContentsPart>
+<ContentsPart ContentRef="part-4" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/part/4" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/part/4/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>PART 4</ContentsNumber><ContentsTitle>FINAL PROVISIONS</ContentsTitle><ContentsItem ContentRef="section-17" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/17" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/17/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>17</ContentsNumber><ContentsTitle>Saving for rights over the fishery, etc</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-18" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/18" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/18/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>18</ContentsNumber><ContentsTitle>Saving for Port of Sheerness Limited and harbourmaster</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-19" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/19" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/19/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>19</ContentsNumber><ContentsTitle>Costs of this Act</ContentsTitle></ContentsItem><ContentsItem ContentRef="section-20" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/section/20" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/section/20/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>20</ContentsNumber><ContentsTitle>Commencement</ContentsTitle></ContentsItem></ContentsPart>
+
+<ContentsSchedules>
+<ContentsSchedule ContentRef="schedule" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>SCHEDULE</ContentsNumber><ContentsTitle>REPEALS</ContentsTitle><ContentsItem ContentRef="schedule-paragraph-1" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/1" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/1/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>1</ContentsNumber><ContentsTitle Generated="true">The following provisions of the 1930 Act are repealed. </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-2" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/2" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/2/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>2</ContentsNumber><ContentsTitle Generated="true">In section 2 (Act divided into Parts) the words “Part...</ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-3" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/3" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/3/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>3</ContentsNumber><ContentsTitle Generated="true">In section 3 (incorporation of general Acts)— </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-4" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/4" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/4/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>4</ContentsNumber><ContentsTitle Generated="true">Section 21 (new shares to be subject to same incidents...</ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-5" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/5" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/5/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>5</ContentsNumber><ContentsTitle Generated="true">Section 24 (for appointment of receiver). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-6" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/6" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/6/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>6</ContentsNumber><ContentsTitle Generated="true">Section 25 (debenture stock). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-7" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/7" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/7/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>7</ContentsNumber><ContentsTitle Generated="true">Section 26 (priority of mortgages over other debts). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-8" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/8" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/8/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>8</ContentsNumber><ContentsTitle Generated="true">Section 27 (application of moneys). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-9" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/9" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/9/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>9</ContentsNumber><ContentsTitle Generated="true">Section 28 (company may incur temporary loans). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-10" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/10" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/10/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>10</ContentsNumber><ContentsTitle Generated="true">Section 29 (as to disposal of shares or stock). </ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-11" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/11" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/11/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>11</ContentsNumber><ContentsTitle Generated="true">In section 33 (company not bound to regard trusts) the...</ContentsTitle></ContentsItem><ContentsItem ContentRef="schedule-paragraph-12" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/schedule/paragraph/12" DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/schedule/paragraph/12/enacted" RestrictExtent="E+W+S+N.I."><ContentsNumber>12</ContentsNumber><ContentsTitle Generated="true">Part IV (meetings, directors and administrative provisions). </ContentsTitle></ContentsItem></ContentsSchedule>
+</ContentsSchedules>
+</Contents><Primary><PrimaryPrelims DocumentURI="http://www.legislation.gov.uk/ukla/2017/1/introduction/enacted" IdURI="http://www.legislation.gov.uk/id/ukla/2017/1/introduction">
+<Title>Faversham Oyster Fishery Company Act 2017</Title>
+<Number>2017 Chapter i</Number>
+<LongTitle>An Act to provide for the alteration of the objects, powers and constitution of the Faversham Oyster Fishery Company; and for other purposes.</LongTitle>
+<DateOfEnactment>
+<DateText>[27th April 2017]</DateText>
+</DateOfEnactment>
+<PrimaryPreamble>
+<IntroductoryText>
+<P>
+<Text><SmallCaps>WHEREAS</SmallCaps>—</Text>
+<OrderedList Type="arabic" Decoration="parens">
+<ListItem>
+<Para>
+<Text>The Faversham Oyster Fishery Company (“the Company”) was incorporated pursuant to the Faversham Oyster Fishery Act 1930 (“the 1930 Act”) as the successor to the Company or Fraternity of the Free Fishermen and Dredgermen of Faversham, which, as described in that Act, had managed and carried on the Faversham Oyster Fishery from time out of mind:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The Company’s statutory business comprises the regulating, carrying on and management of the oyster fishery within the limits of the Manor and Hundred of Faversham in Kent and various incidental purposes:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The Company wishes to extend its activities to more general trading activities and to carry on activities beyond the oyster fishery and it would be of public advantage if the Company’s objects were changed so that it could carry out the business of a general commercial company and without certain of the restrictions and limitations imposed on the Company by the 1930 Act remaining applicable to it:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>For a number of years, the Company has, in accordance with the legislation by which it is governed, sent material on at least an annual basis to the shareholders listed on its register of shareholders at the addresses shown on the register. In a number of cases it is clear that either the shareholder must have died (due to the date on which the shareholder was first registered) or must have moved to a different address (because the material is returned):</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>It is expedient for the Company to be able to sell the shares of shareholders in cases where the shareholder is unlikely to be alive or where the whereabouts of the shareholder or the shareholder’s successor cannot be ascertained, in order to terminate uncertain legal relationships and to relieve the Company of the need to maintain assets to cover liabilities to those shareholders in respect 
+of unclaimed dividends:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>Certain statutory provisions regulating the Company’s affairs are outmoded having regard to present-day requirements and it is expedient to enable the Company’s powers to be modernised:</Text>
+</Para>
+</ListItem>
+<ListItem>
+<Para>
+<Text>The objects of this Act cannot be attained without the authority of Parliament:</Text>
+</Para>
+</ListItem>
+</OrderedList>
+</P>
+</IntroductoryText>
+<EnactingText>
+<Para>
+<Text>May it therefore please your Majesty that it may be enacted, and be it enacted, by the Queen’s most Excellent Majesty, by and with the advice and consent of the Lords Spiritual and Temporal, and Commons, in this present Parliament assembled, and by the authority of the same, as follows, that is to say:—</Text>
+</Para>
+</EnactingText>
+</PrimaryPreamble>
+</PrimaryPrelims></Primary></Legislation>

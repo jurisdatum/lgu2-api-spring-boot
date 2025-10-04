@@ -4,16 +4,16 @@ import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static uk.gov.legislation.api.test.TransformTest.read;
+import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
 
 @SpringBootTest(classes = Application.class)
 class EffectsFeedTest {

@@ -1,0 +1,65 @@
+{
+  "meta" : {
+    "id" : "aosp/1707/8",
+    "longType" : "ScottishOldAct",
+    "shortType" : "aosp",
+    "year" : 1707,
+    "number" : 8,
+    "date" : null,
+    "cite" : "1707 c. 8 [S]",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Election Act 1707(repealed)",
+    "extent" : [ "S" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : "2007-01-01",
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "fragment" : "paragraph/p3",
+    "prev" : "introduction",
+    "next" : null,
+    "fragmentInfo" : {
+      "element" : "P",
+      "id" : "paragraph-p3",
+      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "number" : null,
+      "title" : null,
+      "label" : "P"
+    },
+    "prevInfo" : {
+      "href" : "aosp/1707/8/introduction/2007-01-01",
+      "label" : "Introduction"
+    },
+    "nextInfo" : null,
+    "ancestors" : [ {
+      "element" : "P",
+      "id" : "paragraph-p3",
+      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "number" : null,
+      "title" : null,
+      "label" : "P"
+    } ],
+    "descendants" : [ {
+      "element" : "P",
+      "id" : "paragraph-p3",
+      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "number" : null,
+      "title" : null,
+      "label" : "P"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary aosp\"><div class=\"body\" id=\"body\" data-x-extent=\"S\" data-x-restrict-start-date=\"2007-01-01\"><p> . . . <a class=\"noteRef commentary commentary\" id=\"ref-c920137\" href=\"#c920137\" data-uk-name=\"commentary\" data-ukl-Name=\"CommentaryRef\">F1</a> It is always hereby expressly Provided and Declared that none shall be capable to . . . <a class=\"noteRef commentary commentary\" id=\"ref-c920138\" href=\"#c920138\" data-uk-name=\"commentary\" data-ukl-Name=\"CommentaryRef\">F2</a> be Elected for any of the said Estates but such as are Twenty one years of age compleat . . . <a class=\"noteRef commentary commentary\" id=\"ref-c920139\" href=\"#c920139\" data-uk-name=\"commentary\" data-ukl-Name=\"CommentaryRef\">F3</a></p></div></article>"
+}

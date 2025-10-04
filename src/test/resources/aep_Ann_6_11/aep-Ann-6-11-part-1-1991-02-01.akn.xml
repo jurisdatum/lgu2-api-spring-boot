@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="aep">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/aep/1706/11"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/aep/1706/11"/>
+               <FRBRdate date="1706-01-01" name="estimated"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/EnglishParliament"/>
+               <FRBRcountry value="GB-ENG"/>
+               <FRBRnumber value="11"/>
+               <FRBRname value="1706 c. 11"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/aep/1706/11/1991-02-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aep/1706/11/1991-02-01"/>
+               <FRBRdate date="1991-02-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/aep/1706/11/1991-02-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/aep/1706/11/1991-02-01/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#"/>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCLocation eId="extent-e+w" href="" showAs="E+W"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/aep/Ann/6/11/part/1/1991-02-01</dc:identifier>
+            <dc:title>Union with Scotland Act 1706</dc:title>
+            <dc:description>An Act for an Union of the Two Kingdoms of England and Scotland</dc:description>
+            <dc:date>1978-02-01</dc:date>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>1991-02-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="EnglandAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1706"/>
+               <ukm:Number Value="11"/>
+               <ukm:AlternativeNumber Category="Regnal" Value="6_Ann"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="6"/>
+               <ukm:BodyParagraphs Value="6"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body>
+         <part xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="part-1" ns0:target="true">
+            <num>ARTICLE I.</num>
+            <section eId="section-wrapper1">
+               <heading> The Kingdoms United;     Ensigns Armorial</heading>
+               <content>
+                  <p>That the two Kingdoms of England and Scotland shall upon the First day of May which shall be in the year One thousand seven hundred and seven and for ever after be united into one Kingdom by the name of Great Britain And that the Ensigns Armorial of the said United Kingdom be such as Her Majesty shall appoint and the Crosses of <abbr title="Saint">St.</abbr> George and St. Andrew be conjoyned in such manner as Her Majesty shall think fit and used in all Flags Banners Standards and Ensigns both at Sea and Land.</p>
+               </content>
+            </section>
+         </part>
+      </body>
+   </act>
+</akomaNtoso>

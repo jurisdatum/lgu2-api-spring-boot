@@ -1,0 +1,134 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3" NumberOfProvisions="7" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/uksi/2025/3/contents/made</dc:identifier><dc:title>The Social Security (Miscellaneous Amendments) Regulations 2025</dc:title><dc:publisher>King's Printer of Acts of Parliament</dc:publisher><dc:modified>2025-01-06</dc:modified><dc:subject scheme="SIheading">SOCIAL SECURITY</dc:subject>
+					<dc:description>These Regulations make amendments to the State Pension Credit Regulations 2002 (S.I. 2002/1792) (“the SPC Regulations”), the Housing Benefit Regulations 2006 (S.I. 2006/213) (“the Housing Benefit Regulations”), the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006 (S.I. 2006/214) (“the Pension Age Housing Benefit Regulations”), the Universal Credit Regulations 2013 (S.I. 2013/376) (“the Universal Credit Regulations”), the Universal Credit (Transitional Provisions) Regulations 2014 (S.I. 2014/1230) (“the Transitional Regulations”) and the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019 (S.I. 2019/167) (“Commencement Order No. 32”).</dc:description>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/uksi/2025/3/resources" title="More Resources"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum" href="http://www.legislation.gov.uk/uksi/2025/3/memorandum" title="Explanatory Memorandum"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum/toc" href="http://www.legislation.gov.uk/uksi/2025/3/memorandum/contents" title="Explanatory Memorandum Table of Contents"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/uksi/2025/3/made" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/uksi/2025/3/introduction/made" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/uksi/2025/3/signature/made" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/uksi/2025/3/note/made" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/uksi/2025/3/body/made" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made" title="Table of Contents"/>
+					
+					
+					
+					
+					<ukm:SecondaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="secondary"/>
+<ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/>
+<ukm:DocumentStatus Value="final"/>
+<ukm:DocumentMinorType Value="regulation"/>
+</ukm:DocumentClassification><ukm:Year Value="2025"/><ukm:Number Value="3"/><ukm:Made Date="2025-01-03"/><ukm:Laid Date="2025-01-06" Time="00:00:00" Class="UnitedKingdomParliament"/><ukm:ISBN Value="9780348267662"/></ukm:SecondaryMetadata>
+					
+
+                    
+									<ukm:Notes><ukm:Note IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/notes"/><ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf" Date="2025-01-06" Title="UK Explanatory Memorandum" Size="76463"/></ukm:Alternatives>       
+								</ukm:Notes> 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf" Date="2025-01-06" Size="235678" Print="true"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="7"/>
+									<ukm:BodyParagraphs Value="7"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Contents>
+<ContentsTitle>The Social Security (Miscellaneous Amendments) Regulations 2025</ContentsTitle>
+
+<ContentsItem ContentRef="regulation-1" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/1" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/1/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>1</ContentsNumber><ContentsTitle>Citation, commencement and extent</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-2" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>2</ContentsNumber><ContentsTitle>Amendment of the State Pension Credit Regulations 2002</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-3" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/3" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/3/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>3</ContentsNumber><ContentsTitle>Amendment of the Housing Benefit Regulations 2006</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-4" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/4" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/4/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>4</ContentsNumber><ContentsTitle>Amendment of the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-5" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/5" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/5/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>5</ContentsNumber><ContentsTitle>Amendment of the Universal Credit Regulations 2013</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-6" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/6" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/6/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>6</ContentsNumber><ContentsTitle>Amendment of the Universal Credit (Transitional Provisions) Regulations 2014</ContentsTitle></ContentsItem>
+<ContentsItem ContentRef="regulation-7" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/7" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/7/made" RestrictExtent="E+W+S+N.I."><ContentsNumber>7</ContentsNumber><ContentsTitle>Amendment of the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019</ContentsTitle></ContentsItem>
+
+
+
+</Contents><Secondary><SecondaryPrelims DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/introduction/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/introduction">
+<Correction>
+<Para>
+<Text>This Statutory Instrument has been printed to correct errors in <Citation URI="http://www.legislation.gov.uk/id/uksi/2017/213" id="c00001" Year="2017" Number="213" Class="UnitedKingdomStatutoryInstrument">S.I. 2017/213</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2018/676" id="c00002" Year="2018" Number="676" Class="UnitedKingdomStatutoryInstrument">S.I. 2018/676</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2019/1152" id="c00003" Year="2019" Number="1152" Class="UnitedKingdomStatutoryInstrument">S.I. 2019/1152</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2021/786" id="c00004" Year="2021" Number="786" Class="UnitedKingdomStatutoryInstrument">S.I. 2021/786</Citation>, <Citation URI="http://www.legislation.gov.uk/id/uksi/2022/177" id="c00005" Year="2022" Number="177" Class="UnitedKingdomStatutoryInstrument">S.I. 2022/177</Citation> and <Citation URI="http://www.legislation.gov.uk/id/uksi/2022/752" id="c00006" Year="2022" Number="752" Class="UnitedKingdomStatutoryInstrument">S.I. 2022/752</Citation> and is being issued free of charge to all known recipients of those Statutory Instruments.</Text>
+</Para>
+</Correction>
+<Number>2025 No. 3</Number>
+<SubjectInformation>
+<Subject>
+<Title>SOCIAL SECURITY</Title>
+</Subject>
+</SubjectInformation>
+<Title>The Social Security (Miscellaneous Amendments) Regulations 2025</Title>
+<MadeDate>
+<Text>Made</Text>
+<DateText>3rd January 2025</DateText>
+</MadeDate>
+<LaidDate>
+<Text>Laid before Parliament</Text>
+<DateText>6th January 2025</DateText>
+</LaidDate>
+<ComingIntoForce>
+<Text>Coming into force in accordance with regulation 1(2), (3) and (4)</Text>
+</ComingIntoForce>
+<SecondaryPreamble>
+<EnactingText>
+<Para>
+<Text>The Secretary of State makes these Regulations in exercise of the powers conferred by sections 123(1)(d), 130A(2), (3) and (5) and 175(1) and (3) of the Social Security Contributions and Benefits Act 1992<FootnoteRef Ref="f00001"/>, sections 2(3)(b) and 19(1) of the State Pension Credit Act 2002<FootnoteRef Ref="f00002"/> and sections 11(4), 32 and 42(1) to (3) of, and paragraphs 1(1), 4, 6 and 7 of Schedule 6 to, the Welfare Reform Act 2012<FootnoteRef Ref="f00003"/>.</Text>
+</Para>
+<Para>
+<Text>In accordance with section 173(1)(b) of the Social Security Administration Act 1992<FootnoteRef Ref="f00004"/>, the Social Security Advisory Committee has agreed that the proposals in respect of these Regulations should not be referred to it.</Text>
+</Para>
+<Para>
+<Text>In respect of regulations 3 and 4, in accordance with section 176(1) of the Social Security Administration Act 1992<FootnoteRef Ref="f00005"/>, the Secretary of State has consulted with organisations appearing to the Secretary of State to be representative of the authorities concerned.</Text>
+</Para>
+<Para>
+<Text>In respect of regulation 5, in accordance with section 29(7) of the Scotland Act 2016<FootnoteRef Ref="f00006"/>, the Secretary of State has consulted with the Scottish Ministers.</Text>
+</Para>
+</EnactingText>
+</SecondaryPreamble>
+</SecondaryPrelims></Secondary><Footnotes><Footnote id="f00001">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/1992/4" id="c00019" Year="1992" Number="4" Class="UnitedKingdomPublicGeneralAct">1992 c. 4</Citation>. Section 123(1) has been amended but the amendments are not relevant to these Regulations. Section 130A was inserted by section 30(2) of the Welfare Reform Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2007/5" id="c00020" Year="2007" Number="5" Class="UnitedKingdomPublicGeneralAct">2007 (c. 5)</Citation> and amended by section 69(2) of the Welfare Reform Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/2012/5" id="c00021" Year="2012" Number="5" Class="UnitedKingdomPublicGeneralAct">2012 (c. 5)</Citation>; there are other amendments but none is relevant. See section 137(1) for the meaning given to “prescribed”. Section 175(1) was amended by paragraph 29 of Schedule 3 to the Social Security Contributions (Transfer of Functions, etc.) Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/1999/2" id="c00022" Year="1999" Number="2" Class="UnitedKingdomPublicGeneralAct">1999 (c. 2)</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00002">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/2002/16" id="c00023" Year="2002" Number="16" Class="UnitedKingdomPublicGeneralAct">2002 c. 16</Citation>. Section 175(1) and (3) of the Social Security Contributions and Benefits Act <Citation URI="http://www.legislation.gov.uk/id/ukpga/1992/4" id="c00024" Year="1992" Number="4" Class="UnitedKingdomPublicGeneralAct">1992 (c. 4)</Citation> is applied by section 19(1). See section 17(1) for the meaning given to “prescribed”.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00003">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/2012/5" id="c00025" Year="2012" Number="5" Class="UnitedKingdomPublicGeneralAct">2012 c. 5</Citation>. See section 40 for the meaning given to “prescribed”.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00004">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/1992/5" id="c00026" Year="1992" Number="5" Class="UnitedKingdomPublicGeneralAct">1992 c. 5</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00005">
+<FootnoteText>
+<Para>
+<Text>Subsection (1) has been amended but the amendments are not relevant.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00006">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/2016/11" id="c00027" Year="2016" Number="11" Class="UnitedKingdomPublicGeneralAct">2016 c. 11</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote></Footnotes></Legislation>

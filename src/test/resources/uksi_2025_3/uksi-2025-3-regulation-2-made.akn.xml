@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="uksi">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/uksi/2025/3"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/uksi/2025/3"/>
+               <FRBRdate date="2025-01-03" name="made"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/government/uk"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRsubtype value="regulation"/>
+               <FRBRnumber value="3"/>
+               <FRBRname value="S.I. 2025/3"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/uksi/2025/3/made"/>
+               <FRBRuri value="http://www.legislation.gov.uk/uksi/2025/3/made"/>
+               <FRBRdate date="2025-01-03" name="made"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/uksi/2025/3/made/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/uksi/2025/3/made/data.akn"/>
+               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#made" date="2025-01-03" eId="date-made" source="#"/>
+            <eventRef refersTo="#laid" date="2025-01-06" eId="date-laid-1" source="#united-kingdom-parliament"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCOrganization eId="united-kingdom-parliament" href="" showAs="UnitedKingdomParliament"/>
+            <TLCEvent eId="made" href="" showAs="Made"/>
+            <TLCEvent eId="laid" href="" showAs="Laid"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made</dc:identifier>
+            <dc:title>The Social Security (Miscellaneous Amendments) Regulations 2025</dc:title>
+            <dc:publisher>King's Printer of Acts of Parliament</dc:publisher>
+            <dc:modified>2025-01-06</dc:modified>
+            <dc:subject scheme="SIheading">SOCIAL SECURITY</dc:subject>
+            <dc:description>These Regulations make amendments to the State Pension Credit Regulations 2002 (S.I. 2002/1792) (“the SPC Regulations”), the Housing Benefit Regulations 2006 (S.I. 2006/213) (“the Housing Benefit Regulations”), the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006 (S.I. 2006/214) (“the Pension Age Housing Benefit Regulations”), the Universal Credit Regulations 2013 (S.I. 2013/376) (“the Universal Credit Regulations”), the Universal Credit (Transitional Provisions) Regulations 2014 (S.I. 2014/1230) (“the Transitional Regulations”) and the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019 (S.I. 2019/167) (“Commencement Order No. 32”).</dc:description>
+            <ukm:SecondaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="secondary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/>
+                  <ukm:DocumentStatus Value="final"/>
+                  <ukm:DocumentMinorType Value="regulation"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2025"/>
+               <ukm:Number Value="3"/>
+               <ukm:Made Date="2025-01-03"/>
+               <ukm:Laid Date="2025-01-06" Time="00:00:00" Class="UnitedKingdomParliament"/>
+               <ukm:ISBN Value="9780348267662"/>
+            </ukm:SecondaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/notes"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf" Date="2025-01-06" Title="UK Explanatory Memorandum" Size="76463"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf" Date="2025-01-06" Size="235678" Print="true"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="7"/>
+               <ukm:BodyParagraphs Value="7"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body>
+         <hcontainer xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" name="regulation" eId="regulation-2" ns0:target="true">
+            <heading>Amendment of the State Pension Credit Regulations 2002</heading>
+            <num>2.</num>
+            <paragraph eId="regulation-2-1">
+               <num>(1)</num>
+               <content>
+                  <p>The State Pension Credit Regulations 2002<authorialNote class="footnote" eId="f00007" marker="7">
+                        <p>
+                           <ref eId="c00028" href="http://www.legislation.gov.uk/id/uksi/2002/1792">S.I. 2002/1792</ref>. Schedule 2A was inserted by <ref eId="c00029" href="http://www.legislation.gov.uk/id/uksi/2018/676">S.I. 2018/676</ref>.</p>
+                     </authorialNote> are amended as follows.</p>
+               </content>
+            </paragraph>
+            <paragraph eId="regulation-2-2">
+               <num>(2)</num>
+               <intro>
+                  <p>In Schedule 2A (additional amount applicable for claimants responsible for a child or qualifying young person)—</p>
+               </intro>
+               <level class="para1" eId="regulation-2-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                        <mod>in paragraph 2(1) (general) after the definition of “child” insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                              <hcontainer name="definition">
+                                 <content>
+                                    <p>“<term refersTo="#term-foster-parent">foster parent</term>” has the meaning given in regulation 2 of the Universal Credit Regulations 2013<authorialNote class="footnote" eId="f00008" marker="8">
+                                          <p>
+                                             <ref eId="c00030" href="http://www.legislation.gov.uk/id/uksi/2013/376">S.I. 2013/376</ref>, amended by <ref eId="c00031" href="http://www.legislation.gov.uk/id/uksi/2024/341">S.I. 2024/341</ref>; there are other amending instruments but none is relevant.</p>
+                                       </authorialNote>;</p>
+                                 </content>
+                              </hcontainer>
+                           </quotedStructure>
+                           <inline name="appendText">;</inline>
+                        </mod>
+                     </p>
+                  </content>
+               </level>
+               <level class="para1" eId="regulation-2-2-b">
+                  <num>(b)</num>
+                  <intro>
+                     <p>in paragraph 4(3) (child or qualifying young person looked after by a local authority)—</p>
+                  </intro>
+                  <level class="para2" eId="regulation-2-2-b-i">
+                     <num>(i)</num>
+                     <content>
+                        <p>omit the “or” after paragraph (a);</p>
+                     </content>
+                  </level>
+                  <level class="para2" eId="regulation-2-2-b-ii">
+                     <num>(ii)</num>
+                     <content>
+                        <p>
+                           <mod>after paragraph (b) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="uksi" ukl:TargetClass="secondary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="double">
+                                 <p>; or</p>
+                                 <level class="para1">
+                                    <num>(c)</num>
+                                    <content>
+                                       <p>during which the child or qualifying young person is placed for adoption under the Adoption and Children Act 2002<authorialNote class="footnote" eId="f00009" marker="9">
+                                             <p>
+                                                <ref eId="c00032" href="http://www.legislation.gov.uk/id/ukpga/2002/38">2002 c. 38</ref>.</p>
+                                          </authorialNote> or the Adoption and Children (Scotland) Act 2007<authorialNote class="footnote" eId="f00010" marker="10">
+                                             <p>
+                                                <ref eId="c00033" href="http://www.legislation.gov.uk/id/asp/2007/4">2007 asp 4</ref>.</p>
+                                          </authorialNote>.</p>
+                                    </content>
+                                 </level>
+                              </quotedStructure>
+                              <inline name="appendText">.</inline>
+                           </mod>
+                        </p>
+                     </content>
+                  </level>
+               </level>
+            </paragraph>
+         </hcontainer>
+      </body>
+   </act>
+</akomaNtoso>

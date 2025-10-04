@@ -179,6 +179,7 @@ class UriParsingTest {
         assertEquals("2024", comp.year());
         assertEquals(25, comp.number());
         assertTrue(comp.fragment().isEmpty());
+        assertTrue(comp.isContents());
         assertTrue(comp.version().isPresent());
         assertEquals("enacted", comp.version().get());
     }
@@ -192,6 +193,7 @@ class UriParsingTest {
         assertEquals("2024", comp.year());
         assertEquals(25, comp.number());
         assertTrue(comp.fragment().isEmpty());
+        assertTrue(comp.isContents());
         assertTrue(comp.version().isEmpty());
     }
 

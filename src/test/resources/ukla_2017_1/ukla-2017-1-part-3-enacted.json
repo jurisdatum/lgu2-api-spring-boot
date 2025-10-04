@@ -1,0 +1,587 @@
+{
+  "meta" : {
+    "id" : "ukla/2017/1",
+    "longType" : "UnitedKingdomLocalAct",
+    "shortType" : "ukla",
+    "year" : 2017,
+    "number" : 1,
+    "isbn" : "9780105459897",
+    "date" : "2017-04-27",
+    "cite" : "2017 c. i",
+    "version" : "enacted",
+    "status" : "final",
+    "title" : "Faversham Oyster Fishery Company Act 2017",
+    "extent" : [ ],
+    "lang" : null,
+    "publisher" : "King's Printer of Acts of Parliament",
+    "modified" : "2021-07-30",
+    "versions" : [ "enacted" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf",
+      "name" : null,
+      "date" : "2017-05-18",
+      "size" : 440723
+    } ],
+    "associated" : [ ],
+    "fragment" : "part/3",
+    "prev" : "part/2",
+    "next" : "part/4",
+    "fragmentInfo" : {
+      "element" : "Part",
+      "id" : "part-3",
+      "href" : "ukla/2017/1/part/3/enacted",
+      "number" : "PART 3",
+      "title" : "MISSING SHAREHOLDERS AND CLAIMS",
+      "label" : "PART 3"
+    },
+    "prevInfo" : {
+      "href" : "ukla/2017/1/part/2/enacted",
+      "label" : "Part"
+    },
+    "nextInfo" : {
+      "href" : "ukla/2017/1/part/4/enacted",
+      "label" : "Part"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-3",
+      "href" : "ukla/2017/1/part/3/enacted",
+      "number" : "PART 3",
+      "title" : "MISSING SHAREHOLDERS AND CLAIMS",
+      "label" : "PART 3"
+    } ],
+    "descendants" : [ {
+      "element" : "Part",
+      "id" : "part-3",
+      "href" : "ukla/2017/1/part/3/enacted",
+      "number" : "PART 3",
+      "title" : "MISSING SHAREHOLDERS AND CLAIMS",
+      "label" : "PART 3"
+    }, {
+      "element" : "P1",
+      "id" : "section-12",
+      "href" : "ukla/2017/1/section/12/enacted",
+      "number" : "12",
+      "title" : "Interpretation of Part 3",
+      "label" : "Section 12"
+    }, {
+      "element" : "P2",
+      "id" : "section-12-1",
+      "href" : "ukla/2017/1/section/12/1/enacted",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-12-2",
+      "href" : "ukla/2017/1/section/12/2/enacted",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-2-a",
+      "href" : "ukla/2017/1/section/12/2/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-2-b",
+      "href" : "ukla/2017/1/section/12/2/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-2-c",
+      "href" : "ukla/2017/1/section/12/2/c/enacted",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P4",
+      "id" : "section-12-2-c-i",
+      "href" : "ukla/2017/1/section/12/2/c/i/enacted",
+      "number" : "i",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P4",
+      "id" : "section-12-2-c-ii",
+      "href" : "ukla/2017/1/section/12/2/c/ii/enacted",
+      "number" : "ii",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-2-d",
+      "href" : "ukla/2017/1/section/12/2/d/enacted",
+      "number" : "d",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-2-e",
+      "href" : "ukla/2017/1/section/12/2/e/enacted",
+      "number" : "e",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-12-3",
+      "href" : "ukla/2017/1/section/12/3/enacted",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-12-4",
+      "href" : "ukla/2017/1/section/12/4/enacted",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-4-a",
+      "href" : "ukla/2017/1/section/12/4/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-12-4-b",
+      "href" : "ukla/2017/1/section/12/4/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-12-5",
+      "href" : "ukla/2017/1/section/12/5/enacted",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P1",
+      "id" : "section-13",
+      "href" : "ukla/2017/1/section/13/enacted",
+      "number" : "13",
+      "title" : "Notices and procedure for claims",
+      "label" : "Section 13"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-1",
+      "href" : "ukla/2017/1/section/13/1/enacted",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-2",
+      "href" : "ukla/2017/1/section/13/2/enacted",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-2-a",
+      "href" : "ukla/2017/1/section/13/2/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-2-b",
+      "href" : "ukla/2017/1/section/13/2/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-2-c",
+      "href" : "ukla/2017/1/section/13/2/c/enacted",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-3",
+      "href" : "ukla/2017/1/section/13/3/enacted",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-4",
+      "href" : "ukla/2017/1/section/13/4/enacted",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-4-a",
+      "href" : "ukla/2017/1/section/13/4/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-4-b",
+      "href" : "ukla/2017/1/section/13/4/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-5",
+      "href" : "ukla/2017/1/section/13/5/enacted",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-6",
+      "href" : "ukla/2017/1/section/13/6/enacted",
+      "number" : "6",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-6-a",
+      "href" : "ukla/2017/1/section/13/6/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-6-b",
+      "href" : "ukla/2017/1/section/13/6/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-7",
+      "href" : "ukla/2017/1/section/13/7/enacted",
+      "number" : "7",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-7-a",
+      "href" : "ukla/2017/1/section/13/7/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-7-b",
+      "href" : "ukla/2017/1/section/13/7/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-8",
+      "href" : "ukla/2017/1/section/13/8/enacted",
+      "number" : "8",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-8-a",
+      "href" : "ukla/2017/1/section/13/8/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-8-b",
+      "href" : "ukla/2017/1/section/13/8/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-13-8-c",
+      "href" : "ukla/2017/1/section/13/8/c/enacted",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-9",
+      "href" : "ukla/2017/1/section/13/9/enacted",
+      "number" : "9",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-10",
+      "href" : "ukla/2017/1/section/13/10/enacted",
+      "number" : "10",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-13-11",
+      "href" : "ukla/2017/1/section/13/11/enacted",
+      "number" : "11",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P1",
+      "id" : "section-14",
+      "href" : "ukla/2017/1/section/14/enacted",
+      "number" : "14",
+      "title" : "Sale of shares",
+      "label" : "Section 14"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-1",
+      "href" : "ukla/2017/1/section/14/1/enacted",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-2",
+      "href" : "ukla/2017/1/section/14/2/enacted",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-3",
+      "href" : "ukla/2017/1/section/14/3/enacted",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-4",
+      "href" : "ukla/2017/1/section/14/4/enacted",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-5",
+      "href" : "ukla/2017/1/section/14/5/enacted",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-5-a",
+      "href" : "ukla/2017/1/section/14/5/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-5-b",
+      "href" : "ukla/2017/1/section/14/5/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-5-c",
+      "href" : "ukla/2017/1/section/14/5/c/enacted",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-6",
+      "href" : "ukla/2017/1/section/14/6/enacted",
+      "number" : "6",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-7",
+      "href" : "ukla/2017/1/section/14/7/enacted",
+      "number" : "7",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-8",
+      "href" : "ukla/2017/1/section/14/8/enacted",
+      "number" : "8",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-8-a",
+      "href" : "ukla/2017/1/section/14/8/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-8-b",
+      "href" : "ukla/2017/1/section/14/8/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-9",
+      "href" : "ukla/2017/1/section/14/9/enacted",
+      "number" : "9",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-9-a",
+      "href" : "ukla/2017/1/section/14/9/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-14-9-b",
+      "href" : "ukla/2017/1/section/14/9/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-10",
+      "href" : "ukla/2017/1/section/14/10/enacted",
+      "number" : "10",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-11",
+      "href" : "ukla/2017/1/section/14/11/enacted",
+      "number" : "11",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-12",
+      "href" : "ukla/2017/1/section/14/12/enacted",
+      "number" : "12",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-13",
+      "href" : "ukla/2017/1/section/14/13/enacted",
+      "number" : "13",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-14-14",
+      "href" : "ukla/2017/1/section/14/14/enacted",
+      "number" : "14",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P1",
+      "id" : "section-15",
+      "href" : "ukla/2017/1/section/15/enacted",
+      "number" : "15",
+      "title" : "Notices in electronic form",
+      "label" : "Section 15"
+    }, {
+      "element" : "P2",
+      "id" : "section-15-1",
+      "href" : "ukla/2017/1/section/15/1/enacted",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-1-a",
+      "href" : "ukla/2017/1/section/15/1/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-1-b",
+      "href" : "ukla/2017/1/section/15/1/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-15-2",
+      "href" : "ukla/2017/1/section/15/2/enacted",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-15-3",
+      "href" : "ukla/2017/1/section/15/3/enacted",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-3-a",
+      "href" : "ukla/2017/1/section/15/3/a/enacted",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-3-b",
+      "href" : "ukla/2017/1/section/15/3/b/enacted",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-3-c",
+      "href" : "ukla/2017/1/section/15/3/c/enacted",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-15-3-d",
+      "href" : "ukla/2017/1/section/15/3/d/enacted",
+      "number" : "d",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-15-4",
+      "href" : "ukla/2017/1/section/15/4/enacted",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P1",
+      "id" : "section-16",
+      "href" : "ukla/2017/1/section/16/enacted",
+      "number" : "16",
+      "title" : "Saving for section 125 of 2006 Act",
+      "label" : "Section 16"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary ukla\"><div class=\"body\"><section class=\"part\" id=\"part-3\" data-uk-target=\"true\"><h2><span class=\"num\">PART 3</span><span class=\"heading\">MISSING SHAREHOLDERS AND CLAIMS</span></h2><section class=\"section\" id=\"section-12\"><h2><span class=\"num\">12</span><span class=\"heading\">Interpretation of Part 3</span></h2><section class=\"subsection\" id=\"section-12-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"intro\"><p>In this Part—</p></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>a “claimant” means a person who has served a written notice on the Company and paid a deposit in accordance with section 13(5) during the notification period;</p>\n\n</div></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>a “missing shareholder” means a shareholder of the Company whose name is listed in the register of shareholders kept by the Company, and in respect of whom the conditions of subsection (2) have been met and includes a person entitled to the shares of that shareholder by transmission;</p>\n\n</div></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>“the notification period” means, in relation to a shareholder, the period beginning with the date of the first publication of the notice under section 13(1) and expiring at the end of the period of 18 months beginning with the day on which the further notice is first published under section 13(3);</p>\n\n</div></div><div class=\"hcontainer definition no-num\"><div class=\"intro\"><p>a “shareholder notice” means a notice that—</p></div><div class=\"level para1\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>is sent after the publication of a notice under section 13(1);</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>is sent by post to the address of the shareholder shown on the register of shareholders held by the Company;</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>explains the effect of this Part;</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n<p>contains a notice for the recipient to complete and return which enables the recipient to claim in accordance with section 13(5) that the recipient is entitled to the interest of the shareholder in the shares in question; and</p>\n</div></div><div class=\"level para1\"><h3><span class=\"num\">(e)</span></h3><div class=\"content\">\n<p>(in the case of a third notice) sets out the date on which the notification period expires.</p>\n</div></div></div></section><section class=\"subsection\" id=\"section-12-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>These are the conditions referred to in the definition of “missing shareholder” in subsection (1)—</p></div><div class=\"level para1\" id=\"section-12-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>the Company has sent the shareholder three shareholder notices in accordance with subsection (3);</p>\n</div></div><div class=\"level para1\" id=\"section-12-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>the notification period has expired;</p>\n</div></div><div class=\"level para1\" id=\"section-12-2-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"intro\"><p>in the case of each such notice—</p></div><div class=\"level para2\" id=\"section-12-2-c-i\"><h3><span class=\"num\">(i)</span></h3><div class=\"content\">\n<p>the notice has been returned to the Company marked undelivered (or some similar indication was given that the notice could not be delivered to the shareholder at the address to which the notice \nhad been sent), or</p>\n</div></div><div class=\"level para2\" id=\"section-12-2-c-ii\"><h3><span class=\"num\">(ii)</span></h3><div class=\"content\">\n<p>the notice has not been returned;</p>\n</div></div></div><div class=\"level para1\" id=\"section-12-2-d\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n<p>before the first of those shareholder notices was sent, a period of 12 years had passed since the date on which a dividend or other sum became due for payment to the shareholder; and</p>\n</div></div><div class=\"level para1\" id=\"section-12-2-e\"><h3><span class=\"num\">(e)</span></h3><div class=\"content\">\n<p>the shareholder has not claimed that dividend or other sum.</p>\n</div></div></section><section class=\"subsection\" id=\"section-12-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"content\">\n<p>For the purposes of subsection (2)(a), the shareholder notices are sent in accordance with this subsection if the second and third of those notices are each sent no sooner than Day A and no later than Day B.</p>\n</div></section><section class=\"subsection\" id=\"section-12-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"intro\"><p>In subsection (3)—</p></div><div class=\"level para1\" id=\"section-12-4-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>“Day A” means the day following the last day of the period of six months beginning with the day on which the previous notice was sent; and</p>\n</div></div><div class=\"level para1\" id=\"section-12-4-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>“Day B” means the day following the last day of the period of 18 months beginning with the day on which the previous notice was sent.</p>\n</div></div></section><section class=\"subsection\" id=\"section-12-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"content\">\n<p>For the purposes of this Part a person is entitled to a share by transmission if that person is the heir, successor or assign of the shareholder whose name is listed in the register of shareholders kept by the Company.</p>\n</div></section></section><section class=\"section\" id=\"section-13\"><h2><span class=\"num\">13</span><span class=\"heading\">Notices and procedure for claims</span></h2><section class=\"subsection\" id=\"section-13-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n<p>Before sending a first shareholder notice to a shareholder, the Company must publish a notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question.</p>\n</div></section><section class=\"subsection\" id=\"section-13-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>A shareholder notice may—</p></div><div class=\"level para1\" id=\"section-13-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>in the case of a body corporate, be sent to an officer of that body;</p>\n</div></div><div class=\"level para1\" id=\"section-13-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>in the case of a partnership, be sent to any partner;</p>\n</div></div><div class=\"level para1\" id=\"section-13-2-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>in the case of an unincorporated association other than a partnership, be sent to any member of the governing body of that association.</p>\n</div></div></section><section class=\"subsection\" id=\"section-13-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"content\">\n<p>As soon as reasonably practicable following the sending of a third shareholder notice to a shareholder, the Company must publish a further notice containing an explanation of the effect of this Part, mentioning the name of the shareholder in question and setting out the date on which the notification period will expire.</p>\n</div></section><section class=\"subsection\" id=\"section-13-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"intro\"><p>A notice published under subsection (1) or (3)—</p></div><div class=\"level para1\" id=\"section-13-4-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>must be published in each of two successive weeks in a local newspaper circulating in the district of Swale and in the London Gazette; and</p>\n</div></div><div class=\"level para1\" id=\"section-13-4-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>may mention more than one shareholder.</p>\n</div></div></section><section class=\"subsection\" id=\"section-13-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"content\">\n<p>Any person may at any time during the notification period serve a written notice on the Company claiming that he or she is entitled to the interest of a shareholder in the shares in question, and any such notice shall be accompanied by a £50 deposit payable to the Company which shall be returned to the claimant in the event that the claimant succeeds in establishing the claim.</p>\n</div></section><section class=\"subsection\" id=\"section-13-6\"><h2><span class=\"num\">(6)</span></h2><div class=\"intro\"><p>A notice under subsection (5) may be served on the Company—</p></div><div class=\"level para1\" id=\"section-13-6-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>by delivering it to the Company at the address given on the shareholder notice; or</p>\n</div></div><div class=\"level para1\" id=\"section-13-6-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>by sending it by registered post or the recorded delivery service to the Company at that address.</p>\n</div></div></section><section class=\"subsection\" id=\"section-13-7\"><h2><span class=\"num\">(7)</span></h2><div class=\"intro\"><p>If, within a period of 56 days commencing on the receipt of a notice under subsection (5), any claimant establishes to the satisfaction of the Company in accordance with the provisions of the 1930 Act or the 2006 Act that he or she is the shareholder in respect of the shares in question or that the interest of the shareholder in the shares in question has been transmitted to the claimant, the \nCompany shall, subject to subsection (9)—</p></div><div class=\"level para1\" id=\"section-13-7-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>enter the name of the claimant in the register of shareholders; and</p>\n</div></div><div class=\"level para1\" id=\"section-13-7-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>pay the claimant so much of the arrears of dividends or other sums for the relevant period (which shall bear no interest) as are owing to the claimant in respect of the shares to which the claimant is entitled.</p>\n</div></div></section><section class=\"subsection\" id=\"section-13-8\"><h2><span class=\"num\">(8)</span></h2><div class=\"intro\"><p>If it is necessary for a claimant to make any application for the purpose of establishing a claim to any shares, the period for establishment of the claim shall be extended until the expiry of 30 days after the date on which—</p></div><div class=\"level para1\" id=\"section-13-8-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>proceedings on that application (including any proceedings on or in consequence of an appeal) have been determined and any time for appealing or further appealing has expired; or</p>\n</div></div><div class=\"level para1\" id=\"section-13-8-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>that application or appeal is abandoned or withdrawn; or</p>\n</div></div><div class=\"level para1\" id=\"section-13-8-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>a notice is served by post by the Company on the applicant indicating that in the reasonable opinion of the Company the applicant has failed to take any steps required of him in relation to that application or appeal,</p>\n</div></div><div class=\"wrapUp\"><p>whichever happens first.</p></div></section><section class=\"subsection\" id=\"section-13-9\"><h2><span class=\"num\">(9)</span></h2><div class=\"content\">\n<p>Before entering any claimant in the register of shareholders or paying the claimant any arrears of dividends or other sums, the Company may require the claimant to provide an indemnity in respect of any subsequent claims made against the Company in respect of that registration or that payment.</p>\n</div></section><section class=\"subsection\" id=\"section-13-10\"><h2><span class=\"num\">(10)</span></h2><div class=\"content\">\n<p>In subsection (7)(b), the “relevant period” means the period of 12 years expiring at the end of the day on which the Company is satisfied under subsection (7).</p>\n</div></section><section class=\"subsection\" id=\"section-13-11\"><h2><span class=\"num\">(11)</span></h2><div class=\"content\">\n<p>In subsection (8), an “application” includes any application to the court under section 125 or Part 30 of the 2006 Act.</p>\n</div></section></section><section class=\"section\" id=\"section-14\"><h2><span class=\"num\">14</span><span class=\"heading\">Sale of shares</span></h2><section class=\"subsection\" id=\"section-14-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n<p>The Company may sell any share of a missing shareholder in accordance with this section.</p>\n</div></section><section class=\"subsection\" id=\"section-14-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"content\">\n<p>The Company may purchase any share of a missing shareholder to be sold under this section.</p>\n</div></section><section class=\"subsection\" id=\"section-14-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"content\">\n<p>The sale price of any shares to be sold under this section shall be determined by the Company’s auditor or accountant on the basis set out in subsection (4).</p>\n</div></section><section class=\"subsection\" id=\"section-14-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"content\">\n<p>The share value shall be determined by using the following formula—</p>\n<div class=\"tblock formula\"><div class=\"foreign\"><math display=\"inline\" overflow=\"scroll\" altimg=\"http://www.legislation.gov.uk/ukla/2017/1/images/ukla_20170001_en_001\"><semantics><mrow><mfrac linethickness=\"1\" denomalign=\"center\" numalign=\"center\"><mrow><mi mathvariant=\"normal\">xy</mi></mrow><mrow><mi mathvariant=\"normal\">z</mi></mrow></mfrac><mo>+</mo><mi mathvariant=\"normal\">A</mi></mrow><annotation-xml encoding=\"MathML-Presentation\"><mtext><img src=\"http://www.legislation.gov.uk/ukla/2017/1/images/ukla_20170001_en_001\" alt=\"math\"></mtext></annotation-xml></semantics></math></div>\n<div class=\"blockContainer where\">\n\n<p>where—</p>\n\n<div class=\"tblock definition\">\n\n<p><i>x</i> is the value, on the date of the sale, of the whole of the Company’s issued share capital of the same class as the shares to be sold, calculated on the basis of an open market sale between a willing buyer and willing seller dealing with each other at arm’s length;</p>\n\n</div>\n<div class=\"tblock definition\">\n\n<p><i>y</i> is the number of the shares to be sold;</p>\n\n</div>\n<div class=\"tblock definition\">\n\n<p><i>z</i> is the number, on that date, of issued shares in the same class; and</p>\n\n</div>\n<div class=\"tblock definition\">\n\n<p><i>A</i> is the total value of any dividends or other sums due for payment to the missing shareholder in respect of the shares to be sold.</p>\n\n</div>\n\n\n</div>\n</div>\n</div></section><section class=\"subsection\" id=\"section-14-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"intro\"><p>To give effect to any sale of shares under this section, the Company may—</p></div><div class=\"level para1\" id=\"section-14-5-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>authorise some person to transfer the shares in question;</p>\n</div></div><div class=\"level para1\" id=\"section-14-5-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>enter the name of the transferee in respect of the transferred shares in the register of shareholders even if no share certificate has been lodged for such shares; and</p>\n</div></div><div class=\"level para1\" id=\"section-14-5-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>issue a new certificate to the transferee.</p>\n</div></div></section><section class=\"subsection\" id=\"section-14-6\"><h2><span class=\"num\">(6)</span></h2><div class=\"content\">\n<p>An instrument of transfer executed by the person authorised under subsection (5)(a) shall be as effective as if it had been executed by the holder of, or the person entitled by transmission to, the shares.</p>\n</div></section><section class=\"subsection\" id=\"section-14-7\"><h2><span class=\"num\">(7)</span></h2><div class=\"content\">\n<p>The transferee shall not be bound to see to the application of the purchase monies, nor shall the transferee’s title to the shares be affected by any irregularity or invalidity in the proceedings in reference to the sale.</p>\n</div></section><section class=\"subsection\" id=\"section-14-8\"><h2><span class=\"num\">(8)</span></h2><div class=\"intro\"><p>If, during the further issue period, any additional shares have been issued in respect of—</p></div><div class=\"level para1\" id=\"section-14-8-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>shares held at the beginning of that period; or</p>\n</div></div><div class=\"level para1\" id=\"section-14-8-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>additional shares previously issued during that period,</p>\n</div></div><div class=\"wrapUp\"><p>the Company may sell those additional shares.</p></div></section><section class=\"subsection\" id=\"section-14-9\"><h2><span class=\"num\">(9)</span></h2><div class=\"intro\"><p>In subsection (8), “the further issue period” means the period that—</p></div><div class=\"level para1\" id=\"section-14-9-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>begins with the date referred to in section 12(2)(d); and</p>\n</div></div><div class=\"level para1\" id=\"section-14-9-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>ends with the expiry of the notification period.</p>\n</div></div></section><section class=\"subsection\" id=\"section-14-10\"><h2><span class=\"num\">(10)</span></h2><div class=\"content\">\n<p>The Company shall account to the missing shareholder for the net proceeds of a sale under this section by carrying all monies relating to the sale to a separate account.</p>\n</div></section><section class=\"subsection\" id=\"section-14-11\"><h2><span class=\"num\">(11)</span></h2><div class=\"content\">\n<p>The Company shall be deemed to be a debtor to, and not a trustee for, the missing shareholder in respect of such monies.</p>\n</div></section><section class=\"subsection\" id=\"section-14-12\"><h2><span class=\"num\">(12)</span></h2><div class=\"content\">\n<p>Monies carried to a separate account in accordance with subsection (10) may either be employed in the business of the Company or invested in such investments as the Board may think fit.</p>\n</div></section><section class=\"subsection\" id=\"section-14-13\"><h2><span class=\"num\">(13)</span></h2><div class=\"content\">\n<p>If a person establishes to the Company’s satisfaction that he is the missing shareholder in respect of any shares sold under this section the Company must pay that person the monies carried to the separate account in accordance with subsection (10).</p>\n</div></section><section class=\"subsection\" id=\"section-14-14\"><h2><span class=\"num\">(14)</span></h2><div class=\"content\">\n<p>No interest shall be payable to the missing shareholder in respect of monies carried to a separate account in accordance with subsection (10) and the Company shall not be obliged to account for any money earned on those monies.</p>\n</div></section></section><section class=\"section\" id=\"section-15\"><h2><span class=\"num\">15</span><span class=\"heading\">Notices in electronic form</span></h2><section class=\"subsection\" id=\"section-15-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"intro\"><p>This section applies in relation to the serving of a notice under section 13(5) where the notice is transmitted to the Company—</p></div><div class=\"level para1\" id=\"section-15-1-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>by means of an electronic communications network; or</p>\n</div></div><div class=\"level para1\" id=\"section-15-1-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>by other means but in a form that requires the use of apparatus by the recipient to render it intelligible.</p>\n</div></div></section><section class=\"subsection\" id=\"section-15-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"content\">\n<p>The transmission has effect for the purposes of this Part as service of the notice on the Company, but only if the Company has indicated to the person making the transmission its willingness to receive the notice in the form and manner used.</p>\n</div></section><section class=\"subsection\" id=\"section-15-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"intro\"><p>An indication to a person for the purposes of subsection (2)—</p></div><div class=\"level para1\" id=\"section-15-3-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>must be given to the person in such manner as he may require;</p>\n</div></div><div class=\"level para1\" id=\"section-15-3-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>must state the address to be used;</p>\n</div></div><div class=\"level para1\" id=\"section-15-3-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>must be accompanied by such other information as the person requires for the making of the transmission; and</p>\n</div></div><div class=\"level para1\" id=\"section-15-3-d\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n<p>may be modified or withdrawn at any time by a notice given to the person in such manner as he may require.</p>\n</div></div></section><section class=\"subsection\" id=\"section-15-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"content\">\n<p>In this section “electronic communications network” has the same meaning as in the Communications Act 2003.</p>\n</div></section></section><section class=\"section\" id=\"section-16\"><h2><span class=\"num\">16</span><span class=\"heading\">Saving for section 125 of 2006 Act</span></h2><div class=\"content\">\n<p>This Part is without prejudice to section 125 of the 2006 Act (power of court to rectify register).</p>\n</div></section></section></div></article>"
+}

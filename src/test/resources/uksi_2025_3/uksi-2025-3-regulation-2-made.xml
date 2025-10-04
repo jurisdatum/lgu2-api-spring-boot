@@ -1,0 +1,131 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3" NumberOfProvisions="7" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made</dc:identifier><dc:title>The Social Security (Miscellaneous Amendments) Regulations 2025</dc:title><dc:publisher>King's Printer of Acts of Parliament</dc:publisher><dc:modified>2025-01-06</dc:modified><dc:subject scheme="SIheading">SOCIAL SECURITY</dc:subject>
+					<dc:description>These Regulations make amendments to the State Pension Credit Regulations 2002 (S.I. 2002/1792) (“the SPC Regulations”), the Housing Benefit Regulations 2006 (S.I. 2006/213) (“the Housing Benefit Regulations”), the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006 (S.I. 2006/214) (“the Pension Age Housing Benefit Regulations”), the Universal Credit Regulations 2013 (S.I. 2013/376) (“the Universal Credit Regulations”), the Universal Credit (Transitional Provisions) Regulations 2014 (S.I. 2014/1230) (“the Transitional Regulations”) and the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019 (S.I. 2019/167) (“Commencement Order No. 32”).</dc:description>
+					<atom:link rel="self" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/uksi/2025/3/resources" title="More Resources"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum" href="http://www.legislation.gov.uk/uksi/2025/3/memorandum" title="Explanatory Memorandum"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/memorandum/toc" href="http://www.legislation.gov.uk/uksi/2025/3/memorandum/contents" title="Explanatory Memorandum Table of Contents"/>
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/uksi/2025/3/made" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/uksi/2025/3/introduction/made" title="introduction"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/uksi/2025/3/signature/made" title="signature"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/note" href="http://www.legislation.gov.uk/uksi/2025/3/note/made" title="note"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/uksi/2025/3/body/made" title="body"/>
+					
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/uksi/2025/3/contents/made" title="Table of Contents"/>
+					
+					
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/uksi/2025/3/made" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/1/made" title="Provision; Regulation 1"/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/1/made" title="Provision; Regulation 1"/><atom:link rel="next" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/3/made" title="Provision; Regulation 3"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/uksi/2025/3/regulation/3/made" title="Provision; Regulation 3"/>
+					<ukm:SecondaryMetadata><ukm:DocumentClassification>
+<ukm:DocumentCategory Value="secondary"/>
+<ukm:DocumentMainType Value="UnitedKingdomStatutoryInstrument"/>
+<ukm:DocumentStatus Value="final"/>
+<ukm:DocumentMinorType Value="regulation"/>
+</ukm:DocumentClassification><ukm:Year Value="2025"/><ukm:Number Value="3"/><ukm:Made Date="2025-01-03"/><ukm:Laid Date="2025-01-06" Time="00:00:00" Class="UnitedKingdomParliament"/><ukm:ISBN Value="9780348267662"/></ukm:SecondaryMetadata>
+					
+
+                    
+									<ukm:Notes><ukm:Note IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/notes"/><ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksiem_20250003_en_001.pdf" Date="2025-01-06" Title="UK Explanatory Memorandum" Size="76463"/></ukm:Alternatives>       
+								</ukm:Notes> 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf" Date="2025-01-06" Size="235678" Print="true"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="7"/>
+									<ukm:BodyParagraphs Value="7"/>
+									<ukm:ScheduleParagraphs Value="0"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Secondary><Body DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/body/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/body" NumberOfProvisions="7"><P1group><Title>Amendment of the State Pension Credit Regulations 2002</Title><P1 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2" id="regulation-2">
+<Pnumber>2</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/1/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/1" id="regulation-2-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text>The State Pension Credit Regulations 2002<FootnoteRef Ref="f00007"/> are amended as follows.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/2/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/2" id="regulation-2-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>In Schedule 2A (additional amount applicable for claimants responsible for a child or qualifying young person)—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/2/a/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/2/a" id="regulation-2-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>in paragraph 2(1) (general) after the definition of “child” insert—</Text>
+<BlockAmendment Context="main" Format="double" TargetClass="secondary" TargetSubClass="unknown">
+<UnorderedList Class="Definition" Decoration="none">
+<ListItem>
+<Para>
+<Text>“<Term>foster parent</Term>” has the meaning given in regulation 2 of the Universal Credit Regulations 2013<FootnoteRef Ref="f00008"/>;</Text>
+</Para>
+</ListItem>
+</UnorderedList>
+</BlockAmendment>
+<AppendText>;</AppendText>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/2/b/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/2/b" id="regulation-2-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>in paragraph 4(3) (child or qualifying young person looked after by a local authority)—</Text>
+<P4 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/2/b/i/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/2/b/i" id="regulation-2-2-b-i">
+<Pnumber>i</Pnumber>
+<P4para>
+<Text>omit the “or” after paragraph (a);</Text>
+</P4para>
+</P4>
+<P4 DocumentURI="http://www.legislation.gov.uk/uksi/2025/3/regulation/2/2/b/ii/made" IdURI="http://www.legislation.gov.uk/id/uksi/2025/3/regulation/2/2/b/ii" id="regulation-2-2-b-ii">
+<Pnumber>ii</Pnumber>
+<P4para>
+<Text>after paragraph (b) insert—</Text>
+<BlockAmendment Context="main" Format="double" TargetClass="secondary" TargetSubClass="unknown">
+<P>
+<Text>; or</Text>
+<P3>
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>during which the child or qualifying young person is placed for adoption under the Adoption and Children Act 2002<FootnoteRef Ref="f00009"/> or the Adoption and Children (Scotland) Act 2007<FootnoteRef Ref="f00010"/>.</Text>
+</P3para>
+</P3>
+</P>
+</BlockAmendment>
+<AppendText>.</AppendText>
+</P4para>
+</P4>
+</P3para>
+</P3>
+</P2para>
+</P2>
+</P1para>
+</P1></P1group></Body></Secondary><Footnotes><Footnote id="f00007">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/uksi/2002/1792" id="c00028" Year="2002" Number="1792" Class="UnitedKingdomStatutoryInstrument">S.I. 2002/1792</Citation>. Schedule 2A was inserted by <Citation URI="http://www.legislation.gov.uk/id/uksi/2018/676" id="c00029" Year="2018" Number="676" Class="UnitedKingdomStatutoryInstrument">S.I. 2018/676</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00008">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/uksi/2013/376" id="c00030" Year="2013" Number="376" Class="UnitedKingdomStatutoryInstrument">S.I. 2013/376</Citation>, amended by <Citation URI="http://www.legislation.gov.uk/id/uksi/2024/341" id="c00031" Year="2024" Number="341" Class="UnitedKingdomStatutoryInstrument">S.I. 2024/341</Citation>; there are other amending instruments but none is relevant.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00009">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/ukpga/2002/38" id="c00032" Year="2002" Number="38" Class="UnitedKingdomPublicGeneralAct">2002 c. 38</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote><Footnote id="f00010">
+<FootnoteText>
+<Para>
+<Text><Citation URI="http://www.legislation.gov.uk/id/asp/2007/4" id="c00033" Year="2007" Number="4" Class="ScottishAct">2007 asp 4</Citation>.</Text>
+</Para>
+</FootnoteText>
+</Footnote></Footnotes></Legislation>

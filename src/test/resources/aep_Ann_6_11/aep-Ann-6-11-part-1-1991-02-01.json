@@ -1,0 +1,80 @@
+{
+  "meta" : {
+    "id" : "aep/Ann/6/11",
+    "longType" : "EnglandAct",
+    "shortType" : "aep",
+    "year" : 1706,
+    "regnalYear" : "Ann/6",
+    "number" : 11,
+    "altNumbers" : [ {
+      "category" : "Regnal",
+      "value" : "6_Ann"
+    } ],
+    "date" : null,
+    "cite" : "1706 (6 Ann.) c. 11",
+    "version" : "1991-02-01",
+    "status" : "revised",
+    "title" : "Union with Scotland Act 1706",
+    "extent" : [ "E", "W" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "1991-02-01" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml" ],
+    "pointInTime" : "1991-02-01",
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "fragment" : "part/1",
+    "prev" : "introduction",
+    "next" : "part/2",
+    "fragmentInfo" : {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "number" : "ARTICLE I.",
+      "title" : null,
+      "label" : "ARTICLE I."
+    },
+    "prevInfo" : {
+      "href" : "aep/Ann/6/11/introduction/1991-02-01",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "aep/Ann/6/11/part/2/1991-02-01",
+      "label" : "Part"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "number" : "ARTICLE I.",
+      "title" : null,
+      "label" : "ARTICLE I."
+    } ],
+    "descendants" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "number" : "ARTICLE I.",
+      "title" : null,
+      "label" : "ARTICLE I."
+    }, {
+      "element" : "P1group",
+      "id" : "section-wrapper1",
+      "href" : "aep/Ann/6/11/section/wrapper1/1991-02-01",
+      "number" : null,
+      "title" : "The Kingdoms United;     Ensigns Armorial",
+      "label" : "P1group"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary aep\"><div class=\"body\"><section class=\"part\" id=\"part-1\" data-uk-target=\"true\"><h2><span class=\"num\">ARTICLE I.</span></h2><section class=\"section\" id=\"section-wrapper1\"><h2><span class=\"heading\"> The Kingdoms United;     Ensigns Armorial</span></h2><div class=\"content\"><p>That the two Kingdoms of England and Scotland shall upon the First day of May which shall be in the year One thousand seven hundred and seven and for ever after be united into one Kingdom by the name of Great Britain And that the Ensigns Armorial of the said United Kingdom be such as Her Majesty shall appoint and the Crosses of <abbr title=\"Saint\">St.</abbr> George and St. Andrew be conjoyned in such manner as Her Majesty shall think fit and used in all Flags Banners Standards and Ensigns both at Sea and Land.</p></div></section></section></div></article>"
+}
