@@ -41,7 +41,8 @@ class TransformTest {
             "aosp/1707/8/2007-01-01", "aosp/1707/8/paragraph/p3/2007-01-01",
             "aep/Ann/6/11/1991-02-01", "aep/Ann/6/11/part/1/1991-02-01",
             "aip/Geo3/40/38/1991-02-01", "aip/Geo3/40/38/part/1/1991-02-01",
-            "apgb/Geo3/39-40/14", "apgb/Geo3/39-40/14/section/2"
+            "apgb/Geo3/39-40/14", "apgb/Geo3/39-40/14/section/2",
+            "asc/2025/1/2025-03-25", "asc/2025/1/part/1/chapter/2/2025-03-25"
         );
     }
 
