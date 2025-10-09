@@ -39,7 +39,8 @@ class TocTest {
             "aosp/1707/8/contents/2007-01-01",
             "aep/Ann/6/11/contents/1991-02-01",
             "aip/Geo3/40/38/contents/1991-02-01",
-            "apgb/Geo3/39-40/14/contents"
+            "apgb/Geo3/39-40/14/contents",
+            "asc/2025/1/contents/2025-03-25"
         );
     }
 

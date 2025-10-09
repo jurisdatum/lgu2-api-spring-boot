@@ -1,0 +1,2327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="asc">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/asc/2025/1"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/asc/2025/1"/>
+               <FRBRdate date="2025-03-24" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="1"/>
+               <FRBRname value="2025 c. 1"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/asc/2025/1/2025-03-25"/>
+               <FRBRuri value="http://www.legislation.gov.uk/asc/2025/1/2025-03-25"/>
+               <FRBRdate date="2025-03-25" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/asc/2025/1/2025-03-25/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/asc/2025/1/2025-03-25/data.akn"/>
+               <FRBRdate date="2025-10-07-04:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2025-03-24" eId="date-enacted" source="#"/>
+            <eventRef date="2025-03-25" eId="date-2025-03-25" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-14" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-15" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-16" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-17" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-18" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-19" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-local-authority-social-services-functions" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-20" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-21" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-minor-and-consequential-amendments" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-22" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#part-1" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#section-16" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-local-authority-social-services-functions" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#section-21" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#part-1-chapter-2-crossheading-minor-and-consequential-amendments" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+               <restriction href="#section-22" refersTo="#period-from-2025-03-25" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:status href="#section-14" refersTo="#status-prospective"/>
+               <uk:status href="#section-15" refersTo="#status-prospective"/>
+               <uk:status href="#part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations" refersTo="#status-prospective"/>
+               <uk:status href="#section-17" refersTo="#status-prospective"/>
+               <uk:status href="#part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise" refersTo="#status-prospective"/>
+               <uk:status href="#section-18" refersTo="#status-prospective"/>
+               <uk:status href="#section-19" refersTo="#status-prospective"/>
+               <uk:status href="#section-20" refersTo="#status-prospective"/>
+               <uk:match href="#section-14" value="false"/>
+               <uk:match href="#section-15" value="false"/>
+               <uk:match href="#part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations" value="false"/>
+               <uk:match href="#section-17" value="false"/>
+               <uk:match href="#part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise" value="false"/>
+               <uk:match href="#section-18" value="false"/>
+               <uk:match href="#section-19" value="false"/>
+               <uk:match href="#section-20" value="false"/>
+               <uk:commentary href="#section-14" refersTo="#key-3f92c77f69af9fc7fd0a7ef72f83e7a6"/>
+               <uk:commentary href="#section-15" refersTo="#key-bc6f08b35df9b717f5c25e0ed5b03dd1"/>
+               <uk:commentary href="#section-16" refersTo="#key-ddf29fba8ae21bb8d329ac82e832821a"/>
+               <uk:commentary href="#section-17" refersTo="#key-1fe67c73fe38fa276d983741249004eb"/>
+               <uk:commentary href="#section-18" refersTo="#key-323f0f2ffba7fa8a340105ad062c086d"/>
+               <uk:commentary href="#section-19" refersTo="#key-f0a0abbbcc9327808bb93a4ea781dbe6"/>
+               <uk:commentary href="#section-20" refersTo="#key-b5a55c13c4daffcf2bb7e3fc77a4eceb"/>
+               <uk:commentary href="#section-21" refersTo="#key-f51a318ebd2552aced4eec6dc012c755"/>
+               <uk:commentary href="#section-22" refersTo="#key-3cada17b7f652c02cf80d9fd03d0cce0"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2025-03-25">
+               <timeInterval start="#date-2025-03-25" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e+w" href="" showAs="E+W"/>
+            <TLCConcept eId="status-prospective" href="" showAs="Prospective"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-3f92c77f69af9fc7fd0a7ef72f83e7a6" marker="I1">
+               <p>S. 14  not in force at Royal Assent, see <ref eId="n56dece0d7ac22e95" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-bc6f08b35df9b717f5c25e0ed5b03dd1" marker="I2">
+               <p>S. 15  not in force at Royal Assent, see <ref eId="n3df9c6507ef4fe83" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-ddf29fba8ae21bb8d329ac82e832821a" marker="I3">
+               <p>S. 16  in force at 25.3.2025, see <ref eId="n224be4ac26b75ea2" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/1/a">s. 29(1)(a)</ref>(i)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-1fe67c73fe38fa276d983741249004eb" marker="I4">
+               <p>S. 17  not in force at Royal Assent, see <ref eId="ncb7cf8298fcdeef6" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-323f0f2ffba7fa8a340105ad062c086d" marker="I5">
+               <p>S. 18  not in force at Royal Assent, see <ref eId="n70d6ddaec8cd9f87" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-f0a0abbbcc9327808bb93a4ea781dbe6" marker="I6">
+               <p>S. 19  not in force at Royal Assent, see <ref eId="n46f1350fe3033444" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-b5a55c13c4daffcf2bb7e3fc77a4eceb" marker="I7">
+               <p>S. 20  not in force at Royal Assent, see <ref eId="n5b4ffb006019f1dc" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/2">s. 29(2)</ref>
+               </p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-f51a318ebd2552aced4eec6dc012c755" marker="I8">
+               <p>S. 21  in force at 25.3.2025, see <ref eId="n87ac3313d82d8eb2" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/1/a">s. 29(1)(a)</ref>(i)</p>
+            </note>
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-3cada17b7f652c02cf80d9fd03d0cce0" marker="I9">
+               <p>S. 22  in force at 25.3.2025 for specified purposes, see <ref eId="nd41f56b34a2be009" class="subref operative" href="http://www.legislation.gov.uk/id/asc/2025/1/section/29/1/a">s. 29(1)(a)</ref>(i)</p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/asc/2025/1/part/1/chapter/2/2025-03-25</dc:identifier>
+            <dc:title>Health and Social Care (Wales) Act 2025</dc:title>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2025-06-05</dc:modified>
+            <dc:contributor>Expert Participation</dc:contributor>
+            <dct:valid>2025-03-25</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="WelshParliamentAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2025"/>
+               <ukm:Number Value="1"/>
+               <ukm:EnactmentDate Date="2025-03-24"/>
+               <ukm:ISBN Value="9780348113884"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/asc/2025/1/notes"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/ascen_20250001_mi.pdf" Date="2025-04-09" Title="Explanatory Note" TitleWelsh="Nodiadau Esboniadol" Size="996844" Language="Mixed"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/ascen_20250001_we.pdf" Date="2025-04-09" Title="Nodiadau Esboniadol" TitleWelsh="Nodiadau Esboniadol" Size="572128" Language="Welsh"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/ascen_20250001_en.pdf" Date="2025-04-09" Title="Explanatory Note" Size="555756"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_mi.pdf" Date="2025-03-25" Size="1162223" Language="Mixed" Print="true"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_we.pdf" Date="2025-03-25" Size="2233225" Language="Welsh" Print="false"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_en.pdf" Date="2025-03-25" Size="2692449" Print="false"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="81"/>
+               <ukm:BodyParagraphs Value="66"/>
+               <ukm:ScheduleParagraphs Value="15"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <part eId="part-1">
+            <num>PART 1</num>
+            <heading>SOCIAL CARE</heading>
+            <chapter xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="part-1-chapter-2" ns0:target="true">
+               <num>CHAPTER 2</num>
+               <heading>MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS</heading>
+               <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers">
+                  <heading>Regulation of social care services: registration etc. of social care services providers</heading>
+                  <section eId="section-14">
+                     <num>14</num>
+                     <heading>Duty to submit and publish annual return</heading>
+                     <subsection eId="section-14-1">
+                        <num>(1)</num>
+                        <intro>
+                           <p>Subsections (2) and (3) amend the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-14-1-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>to change the requirement in section 10, for the Welsh Ministers to publish an annual return submitted by a service provider, to a requirement that the service provider must publish such a return and make copies of it available on request, and</p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-14-1-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>to make failure to publish an annual return an offence.</p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-14-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>In section 10 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-14-2-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (1), for the words from “submit” to the end substitute <quotedText startQuote="“">, following the end of each financial year during which the provider is registered—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>submit an annual return to the Welsh Ministers;</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>publish that return on its website.</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-14-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(1A)</num>
+                                          <content>
+                                             <p>A service provider must make available, on request, a copy of an annual return published on its website.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-14-2-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (4) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(4A)</num>
+                                          <content>
+                                             <p>An annual return must be published within the prescribed time limit.</p>
+                                          </content>
+                                       </subsection>
+                                       <subsection>
+                                          <num>(4B)</num>
+                                          <content>
+                                             <p>But if disclosure of information contained in the annual return is prohibited by any enactment or other rule of law, that information must be redacted from the annual return before it is published.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-14-2-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>omit subsection (5).</p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-14-3">
+                        <num>(3)</num>
+                        <intro>
+                           <p>In section 48 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-14-3-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>in the heading, after “submit” insert <quotedText>“or publish”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-14-3-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>for the words from “fail” to the end substitute <quotedText startQuote="“">—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>fail to submit an annual return to the Welsh Ministers within the time limit prescribed under section 10(4), or</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>fail to publish an annual return on its website within the time limit prescribed under section 10(4A).</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+                  <section eId="section-15">
+                     <num>15</num>
+                     <heading>Application for cancellation of service provider’s registration: information to be provided</heading>
+                     <subsection eId="section-15-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>Subsection (2) amends the 2016 Act to confer a power on the Welsh Ministers to prescribe the information that is to be provided with an application a service provider makes to cancel the provider’s registration under the Act.</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-15-2">
+                        <num>(2)</num>
+                        <content>
+                           <p>
+                              <mod>In section 14 of the 2016 Act, after subsection (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                    <subsection>
+                                       <num>(1A)</num>
+                                       <intro>
+                                          <p>An application under subsection (1) must—</p>
+                                       </intro>
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>contain such information as the Welsh Ministers may prescribe;</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>be in the prescribed form.</p>
+                                          </content>
+                                       </level>
+                                    </subsection>
+                                 </quotedStructure>
+                              </mod>
+                           </p>
+                        </content>
+                     </subsection>
+                  </section>
+                  <section eId="section-16">
+                     <num>16</num>
+                     <heading>Cancellation and variation of service provider’s registration without application: notice procedures</heading>
+                     <subsection eId="section-16-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>Subsections (2) and (3) amend the 2016 Act to apply the notice of proposal procedure (see section 18 of that Act), rather than the improvement notice procedure (see section 16 of that Act), to the variation or cancellation of a service provider’s registration by the Welsh Ministers in certain circumstances where no improvement is possible.</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-16-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>In section 13 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-16-2-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>omit subsection (2);</p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (4), after paragraph (b) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(ba)</num>
+                                          <content>
+                                             <p>the responsible individual designated in respect of that place, or any other person, has been convicted of, or has been given a caution in respect of, a relevant offence in connection with a regulated service provided by the service provider at, from or in relation to that place,</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-2-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (4) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(4A)</num>
+                                          <content>
+                                             <p>For the purposes of subsection (4)(ba) a relevant offence is an offence listed in section 15(2).</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-2-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (5), for the words from “subsection (3)” to the end substitute <quotedText startQuote="“">this section unless—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>in the case of variation under subsection (1), (3)(a) or (4)(a), the requirements of sections 18 and 19 are met;</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>in the case of variation under subsection (3)(b), (4)(b), (ba) or (c), the requirements of sections 16 and 17 are met.</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-2-e">
+                           <num>(e)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (5) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(6)</num>
+                                          <content>
+                                             <p>But nothing in subsection (5) affects the power of the Welsh Ministers to urgently vary a registration under section 23.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-16-3">
+                        <num>(3)</num>
+                        <intro>
+                           <p>In section 15 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-16-3-a">
+                           <num>(a)</num>
+                           <intro>
+                              <p>in subsection (1)—</p>
+                           </intro>
+                           <level class="para2" eId="section-16-3-a-i">
+                              <num>(i)</num>
+                              <content>
+                                 <p>
+                                    <mod>after paragraph (b) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                          <level class="para1">
+                                             <num>(ba)</num>
+                                             <content>
+                                                <p>the service provider has been convicted of, or has been given a caution in respect of, a relevant offence in connection with a regulated service that they provide;</p>
+                                             </content>
+                                          </level>
+                                       </quotedStructure>
+                                       <inline name="appendText">;</inline>
+                                    </mod>
+                                 </p>
+                              </content>
+                           </level>
+                           <level class="para2" eId="section-16-3-a-ii">
+                              <num>(ii)</num>
+                              <content>
+                                 <p>
+                                    <mod>in paragraph (d), for “the service provider or a responsible individual” substitute <quotedText>“a responsible individual other than the service provider (see section 21(2)(a))”</quotedText>;</mod>
+                                 </p>
+                              </content>
+                           </level>
+                        </level>
+                        <level class="para1" eId="section-16-3-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (2), for “subsection (1)(d)” substitute <quotedText>“subsection (1)(ba), (d)”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-3-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (3), for the words from “the requirements” to the end substitute <quotedText startQuote="“">—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>in the case of‍ cancellation on the grounds set out in subsection (1)(a), (b) or (ba), the requirements of sections 18 and 19 are met;</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>in the case of‍ cancellation on the grounds set out in subsection (1)(c), (d), (e) or (f), the requirements of sections 16 and 17 are met.</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-16-3-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (3) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(4)</num>
+                                          <content>
+                                             <p>But nothing in subsection (3) affects the power of the Welsh Ministers to urgently cancel a registration under section 23.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+               </hcontainer>
+               <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations">
+                  <heading>Regulation of social care services: information, inspections and investigations</heading>
+                  <section eId="section-17">
+                     <num>17</num>
+                     <heading>Information, inspection and investigations</heading>
+                     <subsection eId="section-17-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>This section amends Chapter 3 of the 2016 Act to make further provision in relation to the Welsh Ministers’ powers to carry out inspections and to require information to be provided, including in respect of investigating offences‍.</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-17-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>In section 32 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-17-2-a">
+                           <num>(a)</num>
+                           <intro>
+                              <p>in subsection (1)—</p>
+                           </intro>
+                           <level class="para2" eId="section-17-2-a-i">
+                              <num>(i)</num>
+                              <content>
+                                 <p>
+                                    <mod>for “The Welsh Ministers may require a relevant person to provide them with any” substitute <quotedText>“Subsections (1A) and (1B) apply where the Welsh Ministers consider that a relevant person may have”</quotedText>;</mod>
+                                 </p>
+                              </content>
+                           </level>
+                           <level class="para2" eId="section-17-2-a-ii">
+                              <num>(ii)</num>
+                              <content>
+                                 <p>
+                                    <mod>after “think” insert <quotedText>“it”</quotedText>;</mod>
+                                 </p>
+                              </content>
+                           </level>
+                        </level>
+                        <level class="para1" eId="section-17-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(1A)</num>
+                                          <intro>
+                                             <p>Where this subsection applies, the Welsh Ministers may give a notice to a relevant person requiring that person—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <intro>
+                                                <p>to produce any documents which—</p>
+                                             </intro>
+                                             <level class="para2">
+                                                <num>(i)</num>
+                                                <content>
+                                                   <p>are specified or described in the notice, or fall within a category of document which is specified or described in the notice, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para2">
+                                                <num>(ii)</num>
+                                                <content>
+                                                   <p>are in the person’s custody or under the person’s control, and</p>
+                                                </content>
+                                             </level>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <content>
+                                                <p>to produce the documents in a manner specified in the notice.</p>
+                                             </content>
+                                          </level>
+                                       </subsection>
+                                       <subsection>
+                                          <num>(1B)</num>
+                                          <intro>
+                                             <p>Where this subsection applies, the Welsh Ministers may give a notice to a relevant person requiring that person—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <intro>
+                                                <p>to answer any question—</p>
+                                             </intro>
+                                             <level class="para2">
+                                                <num>(i)</num>
+                                                <content>
+                                                   <p>which is asked in the notice, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para2">
+                                                <num>(ii)</num>
+                                                <content>
+                                                   <p>the answer to which is known to the person, and</p>
+                                                </content>
+                                             </level>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <content>
+                                                <p>to answer in a manner specified in the notice.</p>
+                                             </content>
+                                          </level>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-2-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (2), for the words from “disclosure” to the end substitute <quotedText startQuote="“">—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>disclosure of that information is prohibited by any enactment or other rule of law;</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <content>
+                                             <p>the person would be entitled to refuse to disclose the information in proceedings in the High Court on grounds of legal professional privilege.</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-2-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (4) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(5)</num>
+                                          <intro>
+                                             <p>Where the Welsh Ministers require a person to provide information as they suspect an offence is being or has been committed—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <content>
+                                                <p>they may only require the information to be provided if they have reasonable grounds for their suspicion;</p>
+                                             </content>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <content>
+                                                <p>they must inform the person, in writing, of the purpose for which they are requiring the information to be provided.</p>
+                                             </content>
+                                          </level>
+                                       </subsection>
+                                       <subsection>
+                                          <num>(6)</num>
+                                          <intro>
+                                             <p>In this section references to a “service provider” include a person who the Welsh Ministers reasonably suspect—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <content>
+                                                <p>is providing a regulated service at a place in respect of which that person is not registered under section 7, or</p>
+                                             </content>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <content>
+                                                <p>has provided a regulated service at a place in respect of which that person was not registered under section 7.</p>
+                                             </content>
+                                          </level>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-17-3">
+                        <num>(3)</num>
+                        <content>
+                           <p>
+                              <mod>After section 32 insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                    <section>
+                                       <num>32A</num>
+                                       <heading>Privilege against self-incrimination</heading>
+                                       <subsection>
+                                          <num>(1)</num>
+                                          <content>
+                                             <p>Information given by a person (“<term refersTo="#term-p">P</term>”) in response to a notice given under section 32(1B) may not be used in criminal proceedings against P.</p>
+                                          </content>
+                                       </subsection>
+                                       <subsection>
+                                          <num>(2)</num>
+                                          <intro>
+                                             <p>But subsection (1) does not apply—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <content>
+                                                <p>if the proceedings are for an offence under section 5 of the <ref eId="c00015" href="http://www.legislation.gov.uk/id/ukpga/1911/6">Perjury Act 1911 (c. 6)</ref> (false statements made otherwise than on oath);</p>
+                                             </content>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <intro>
+                                                <p>if, in the proceedings—</p>
+                                             </intro>
+                                             <level class="para2">
+                                                <num>(i)</num>
+                                                <content>
+                                                   <p>evidence relating to the information is adduced by or on behalf of P, or</p>
+                                                </content>
+                                             </level>
+                                             <level class="para2">
+                                                <num>(ii)</num>
+                                                <content>
+                                                   <p>a question relating to it is asked by or on behalf of P.</p>
+                                                </content>
+                                             </level>
+                                          </level>
+                                       </subsection>
+                                    </section>
+                                 </quotedStructure>
+                              </mod>
+                           </p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-17-4">
+                        <num>(4)</num>
+                        <intro>
+                           <p>In section 33—</p>
+                        </intro>
+                        <level class="para1" eId="section-17-4-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (1)(b), for “and” substitute <quotedText>“, management or”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-4-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(1A)</num>
+                                          <content>
+                                             <p>In this Part a reference to an “investigation is a reference to an investigation into whether a person is committing or has committed an offence under this Part.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-4-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (2), at the end, insert <quotedText>“or an investigation”</quotedText>.</mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-17-5">
+                        <num>(5)</num>
+                        <intro>
+                           <p>In section 34—</p>
+                        </intro>
+                        <level class="para1" eId="section-17-5-a">
+                           <num>(a)</num>
+                           <intro>
+                              <p>in subsection (1)—</p>
+                           </intro>
+                           <level class="para2" eId="section-17-5-a-i">
+                              <num>(i)</num>
+                              <content>
+                                 <p>
+                                    <mod>after “inspection” insert <quotedText>“or an investigation”</quotedText>;</mod>
+                                 </p>
+                              </content>
+                           </level>
+                           <level class="para2" eId="section-17-5-a-ii">
+                              <num>(ii)</num>
+                              <content>
+                                 <p>omit “and inspect”;</p>
+                              </content>
+                           </level>
+                        </level>
+                        <level class="para1" eId="section-17-5-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>in subsection (2), omit “and inspect”;</p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-5-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (3), after “inspection” insert <quotedText>“or an investigation”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-5-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (4), at the beginning insert <quotedText>“When carrying out an inspection or an investigation,”</quotedText>.</mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-17-6">
+                        <num>(6)</num>
+                        <intro>
+                           <p>In section 35—</p>
+                        </intro>
+                        <level class="para1" eId="section-17-6-a">
+                           <num>(a)</num>
+                           <intro>
+                              <p>in subsection (1)—</p>
+                           </intro>
+                           <level class="para2" eId="section-17-6-a-i">
+                              <num>(i)</num>
+                              <content>
+                                 <p>
+                                    <mod>after “inspection” insert <quotedText>“or an investigation”</quotedText>;</mod>
+                                 </p>
+                              </content>
+                           </level>
+                           <level class="para2" eId="section-17-6-a-ii">
+                              <num>(ii)</num>
+                              <content>
+                                 <p>omit “in private”.</p>
+                              </content>
+                           </level>
+                        </level>
+                        <level class="para1" eId="section-17-6-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (1) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(1A)</num>
+                                          <content>
+                                             <p>An inspector may require an interview under subsection (1) to be carried out in private.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-6-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (2), for the words “may” to the end substitute <quotedText startQuote="“">—</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(a)</num>
+                                          <content>
+                                             <p>may not interview a person falling within subsection (3) without the person’s consent, and</p>
+                                          </content>
+                                       </level>
+                                       <level class="para1">
+                                          <num>(b)</num>
+                                          <intro>
+                                             <p>may not interview a person (“<term refersTo="#term-p">P</term>”) for the purpose of inquiring whether P has committed an offence unless—</p>
+                                          </intro>
+                                          <level class="para2">
+                                             <num>(i)</num>
+                                             <content>
+                                                <p>P is informed of the purpose of the interview;</p>
+                                             </content>
+                                          </level>
+                                          <level class="para2">
+                                             <num>(ii)</num>
+                                             <content>
+                                                <p>P is given the opportunity to obtain legal representation.</p>
+                                             </content>
+                                          </level>
+                                       </level>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-6-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (4), after “may” insert <quotedText>“for the purposes of carrying out an inspection”</quotedText>.</mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                     <subsection eId="section-17-7">
+                        <num>(7)</num>
+                        <intro>
+                           <p>In section 36—</p>
+                        </intro>
+                        <level class="para1" eId="section-17-7-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (2), after “must” insert <quotedText>“, to the extent that the Welsh Ministers consider proportionate,”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-17-7-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (3) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(3A)</num>
+                                          <content>
+                                             <p>But a requirement in subsection (3) does not apply where the Welsh Ministers consider that fulfilling the requirement would be inappropriate having regard to the best interests of a person whose care and support is assessed in the report.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+               </hcontainer>
+               <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise">
+                  <heading>Social care workers: registration and fitness to practise</heading>
+                  <section eId="section-18">
+                     <num>18</num>
+                     <heading>Meaning of social care worker: childcare workers</heading>
+                     <subsection eId="section-18-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>Subsection (2) amends the 2016 Act to add, to the list of persons that the Welsh Ministers can except or include in the definition of “<term refersTo="#term-social-care-worker" eId="term-social-care-worker">social care worker</term>” for the purposes of the Act, people who provide supervision to children (but may or may not provide care and support as part of their role).</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-18-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>In section 79 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-18-2-a">
+                           <num>(a)</num>
+                           <intro>
+                              <p>in subsection (3)—</p>
+                           </intro>
+                           <level class="para2" eId="section-18-2-a-i">
+                              <num>(i)</num>
+                              <content>
+                                 <p>
+                                    <mod>in paragraphs (e) and (f), for “care and support to any person in Wales”, substitute <quotedText startQuote="“">—</quotedText>
+                                       <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                          <level class="para2">
+                                             <num>(i)</num>
+                                             <content>
+                                                <p>care and support;</p>
+                                             </content>
+                                          </level>
+                                          <level class="para2">
+                                             <num>(ii)</num>
+                                             <content>
+                                                <p>childcare,</p>
+                                             </content>
+                                          </level>
+                                          <p>to any person in Wales</p>
+                                       </quotedStructure>
+                                       <inline name="appendText">;</inline>
+                                    </mod>
+                                 </p>
+                              </content>
+                           </level>
+                           <level class="para2" eId="section-18-2-a-ii">
+                              <num>(ii)</num>
+                              <content>
+                                 <p>
+                                    <mod>after paragraph (l) insert—<quotedText startQuote="“">;</quotedText>
+                                       <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                          <level class="para1">
+                                             <num>(m)</num>
+                                             <content>
+                                                <p>a person employed to provide childcare by a person registered under Part 2 of the <ref eId="c00016" href="http://www.legislation.gov.uk/id/mwa/2010/1">Children and Families (Wales) Measure 2010 (nawm 1)</ref> as a provider of day care for children</p>
+                                             </content>
+                                          </level>
+                                       </quotedStructure>
+                                       <inline name="appendText">;</inline>
+                                    </mod>
+                                 </p>
+                              </content>
+                           </level>
+                        </level>
+                        <level class="para1" eId="section-18-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (3) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(3A)</num>
+                                          <content>
+                                             <p>In subsection (3), “childcare means care and supervision that is provided for children.</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+                  <section eId="section-19">
+                     <num>19</num>
+                     <heading>Fitness to practise cases: powers to extend interim orders</heading>
+                     <subsection eId="section-19-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>Subsection (2) amends the 2016 Act to give a panel hearing interim order proceedings the power to extend an interim orde‍r.</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-19-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>In section 147 of the 2016 Act—</p>
+                        </intro>
+                        <level class="para1" eId="section-19-2-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (1), after paragraph (e) insert—<quotedText startQuote="“">;</quotedText>
+                                    <quotedStructure endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para1">
+                                          <num>(f)</num>
+                                          <content>
+                                             <p>in the case of an interim order that has not been extended by the tribunal under section 148, extend the interim order.</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-19-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (2), insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(2A)</num>
+                                          <intro>
+                                             <p>A panel may make a decision specified in subsection (1)(f) only if—</p>
+                                          </intro>
+                                          <level class="para1">
+                                             <num>(a)</num>
+                                             <content>
+                                                <p>the panel is satisfied that the decision meets one or more of the conditions referred to in paragraphs (a) to (c) of subsection (2), and</p>
+                                             </content>
+                                          </level>
+                                          <level class="para1">
+                                             <num>(b)</num>
+                                             <content>
+                                                <p>the extension does not result in the interim order having effect for a period of more than 18 months.</p>
+                                             </content>
+                                          </level>
+                                       </subsection>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-19-2-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (3), after “extended” insert <quotedText>“by a panel under subsection (1)(f) or by the tribunal”</quotedText>;</mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-19-2-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>in subsection (4), after paragraph (a)(i) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <level class="para2">
+                                          <num>(ia)</num>
+                                          <content>
+                                             <p>an interim order as extended or further extended by a panel;</p>
+                                          </content>
+                                       </level>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-19-2-e">
+                           <num>(e)</num>
+                           <content>
+                              <p>
+                                 <mod>after subsection (4) insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <subsection>
+                                          <num>(5)</num>
+                                          <content>
+                                             <p>But subsection (4)(a)(i) and (b)(i) do not apply in relation to the reference to an interim order in subsection (1)(f).</p>
+                                          </content>
+                                       </subsection>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+               </hcontainer>
+               <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-1-chapter-2-crossheading-local-authority-social-services-functions">
+                  <heading>Local authority social services functions</heading>
+                  <section eId="section-20">
+                     <num>20</num>
+                     <heading>Direct payments in social care</heading>
+                     <subsection eId="section-20-1">
+                        <num>(1)</num>
+                        <content>
+                           <p>Subsection (2) amends the 2014 Act to supplement the ways in which a local authority can make payments directly to a person, towards the cost of meeting a person’s needs for care and support under sections 35 to 40, 42 and 45 of that Act, or in respect of after-care services under section 117 of the <ref eId="c00017" href="http://www.legislation.gov.uk/id/ukpga/1983/20">Mental Health Act 1983 (c. 20)</ref>, by providing that such payments can be made to a person nominated by the person to whom the payment could otherwise have been made.</p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-20-2">
+                        <num>(2)</num>
+                        <intro>
+                           <p>The 2014 Act is amended as follows—</p>
+                        </intro>
+                        <level class="para1" eId="section-20-2-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>
+                                 <mod>after the cross heading that precedes section 50 insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <section>
+                                          <num>49A</num>
+                                          <heading>Direct payments</heading>
+                                          <subsection>
+                                             <num>(1)</num>
+                                             <intro>
+                                                <p>Regulations may require or allow a local authority to make payments to a person towards the cost of meeting the needs of—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>an adult (“<term refersTo="#term-a">A</term>”), under section 35 or 36;</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>a child (“<term refersTo="#term-c">C</term>”), under section 37, 38 or 39;</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <content>
+                                                   <p>a carer (“<term refersTo="#term-r">R</term>”), under section 40, 42 or 45.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(2)</num>
+                                             <intro>
+                                                <p>But regulations under subsection (1) may not require or allow such payments to be made unless—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>where the payments are to be made to meet an adult’s needs under section 35 or 36, condition 1, 2 or 3 in section 50 is met;</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>where the payments are to be made to meet a child’s needs under section 37, 38 or 39, condition 1 or 2 in section 51 is met;</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <content>
+                                                   <p>where the payments are to be made to meet a carer’s needs under section 40, 42 or 45, condition 1 or 2 in section 52 is met.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(3)</num>
+                                             <content>
+                                                <p>A payment under this section is referred to in this Act as a “direct payment.</p>
+                                             </content>
+                                          </subsection>
+                                       </section>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-20-2-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>
+                                 <mod>for sections 50 to 52 substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <section>
+                                          <num>50</num>
+                                          <heading>Direct payments: conditions for payment to meet an adult’s needs</heading>
+                                          <subsection>
+                                             <num>(1)</num>
+                                             <content>
+                                                <p>The conditions referred to in section 49A(2)(a) in relation to making direct payments towards the cost of meeting the needs of an adult (“<term refersTo="#term-a">A</term>”) under section 35 or 36 are as follows.</p>
+                                             </content>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(2)</num>
+                                             <intro>
+                                                <p>Condition 1 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to A,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>the local authority believes that A has capacity to consent to the making of the payments,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting A’s needs, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>A is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>A has consented to the making of the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(3)</num>
+                                             <intro>
+                                                <p>Condition 2 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to a person other than A (“<term refersTo="#term-b">B</term>”),</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>the local authority believes that A does not have capacity to consent to the making of the payments,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <content>
+                                                   <p>B is a suitable person,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting A’s needs,</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>B is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(iii)</num>
+                                                   <content>
+                                                      <p>B will act in A’s best interests in managing the payments, and</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(e)</num>
+                                                <content>
+                                                   <p>the necessary consent has been obtained to make the payments to B.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(4)</num>
+                                             <intro>
+                                                <p>Condition 3 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to a person who is nominated by A (“<term refersTo="#term-n">N</term>”),</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>the local authority believes that A has capacity to consent to the making of the payments,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting A’s needs, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>N is capable of managing the payments (either by themselves or with the support that is available to them),</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>A has consented to the making of the payments, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(e)</num>
+                                                <content>
+                                                   <p>N has consented to receive the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(5)</num>
+                                             <intro>
+                                                <p>For the purposes of subsection (3)(c), B is a “suitable person”—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>if B is authorised under the Mental Capacity Act 2005 (whether in general or specific terms) to make decisions about A’s needs for care and support,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>where B is not authorised as mentioned in paragraph (a), if a person who is so authorised agrees with the local authority that B is suitable to receive payments towards the cost of meeting A’s needs for care and support, or</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <content>
+                                                   <p>where B is not authorised as mentioned in paragraph (a) and there is no person who is so authorised, if the local authority considers that B is suitable to receive payments of that kind.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(6)</num>
+                                             <intro>
+                                                <p>For the purposes of subsection (3)(e), the “<term refersTo="#term-necessary-consent">necessary consent</term>” means—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the consent of B, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <content>
+                                                   <p>where B is a suitable person by virtue of subsection (5)(b), the consent of a person authorised under the Mental Capacity Act 2005 (whether in general or specific terms) to make decisions about A’s needs for care and support.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                       </section>
+                                       <section>
+                                          <num>51</num>
+                                          <heading>Direct payments: conditions for payment to meet a child’s needs</heading>
+                                          <subsection>
+                                             <num>(1)</num>
+                                             <content>
+                                                <p>The conditions referred to in section 49A(2)(b) in relation to making direct payments towards the cost of meeting the needs of a child (“<term refersTo="#term-c">C</term>”) under section 37, 38 or 39 are as follows.</p>
+                                             </content>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(2)</num>
+                                             <intro>
+                                                <p>Condition 1 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <intro>
+                                                   <p>the payments are to be made to a person (“<term refersTo="#term-p">P</term>”) who is—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>C, or</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>a person with parental responsibility for C,</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <intro>
+                                                   <p>where P is—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>an adult or a child aged 16 or 17, the local authority believes that P has capacity to consent to the making of the payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>a child aged under 16, the local authority is satisfied that P has sufficient understanding to make an informed decision about consenting to receive the payments,</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting C’s needs,</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>C’s well-being will be safeguarded and promoted by the making of the payments, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(iii)</num>
+                                                   <content>
+                                                      <p>P is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>P has consented to the making of the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(3)</num>
+                                             <intro>
+                                                <p>Condition 2 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to a person who is nominated by P (“<term refersTo="#term-n">N</term>”),</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <intro>
+                                                   <p>where P is—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>an adult or a child aged 16 or 17, the local authority believes that P has capacity to consent to the making of the payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>a child aged under 16, the local authority is satisfied that P has sufficient understanding to make an informed decision about consenting to the making of the payments,</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting C’s needs,</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>the well-being of C will be safeguarded and promoted by the making of the payments,</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(iii)</num>
+                                                   <content>
+                                                      <p>N will act in C’s best interests in managing the payments, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(iv)</num>
+                                                   <content>
+                                                      <p>N is capable of managing the payments (either by themselves or with the support that is available to them),</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>P has consented to the making of the payments, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(e)</num>
+                                                <content>
+                                                   <p>N has consented to receive the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                       </section>
+                                       <section>
+                                          <num>52</num>
+                                          <heading>Direct payments: conditions for payment to meet a carer’s needs</heading>
+                                          <subsection>
+                                             <num>(1)</num>
+                                             <content>
+                                                <p>The conditions referred to in section 49A(2)(c) in relation to making direct payments towards the cost of meeting the needs of a carer (“<term refersTo="#term-r">R</term>”) under section 40, 42 or 45 are as follows.</p>
+                                             </content>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(2)</num>
+                                             <intro>
+                                                <p>Condition 1 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to R,</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <intro>
+                                                   <p>where R is—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>an adult or a child aged 16 or 17, the local authority believes that R has capacity to consent to the making of the payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>a child aged under 16, the local authority is satisfied that R has sufficient understanding to make an informed decision about consenting to receive the payments,</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting R’s needs, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>R is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>R has consented to the making of the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                          <subsection>
+                                             <num>(3)</num>
+                                             <intro>
+                                                <p>Condition 2 is that—</p>
+                                             </intro>
+                                             <level class="para1">
+                                                <num>(a)</num>
+                                                <content>
+                                                   <p>the payments are to be made to a person who is nominated by R (“<term refersTo="#term-n">N</term>”),</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(b)</num>
+                                                <intro>
+                                                   <p>where R is—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>an adult or a child aged 16 or 17, the local authority believes that R has capacity to consent to the making of the payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>a child aged under 16, the local authority is satisfied that R has sufficient understanding to make an informed decision about consenting to the making of the payments,</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(c)</num>
+                                                <intro>
+                                                   <p>the local authority is satisfied that—</p>
+                                                </intro>
+                                                <level class="para2">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>making the payments is an appropriate way of meeting R’s needs,</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(ii)</num>
+                                                   <content>
+                                                      <p>where R is a child aged under 16, N will act in R’s best interests in managing the payments, and</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para2">
+                                                   <num>(iii)</num>
+                                                   <content>
+                                                      <p>N is capable of managing the payments (either by themselves or with the support that is available to them),</p>
+                                                   </content>
+                                                </level>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(d)</num>
+                                                <content>
+                                                   <p>R has consented to the making of the payments, and</p>
+                                                </content>
+                                             </level>
+                                             <level class="para1">
+                                                <num>(e)</num>
+                                                <content>
+                                                   <p>N has consented to receive the payments.</p>
+                                                </content>
+                                             </level>
+                                          </subsection>
+                                       </section>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-20-2-c">
+                           <num>(c)</num>
+                           <content>
+                              <p>
+                                 <mod>after section 53 insert—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                       <section>
+                                          <num>53A</num>
+                                          <heading>Direct payments: after-care under the Mental Health Act 1983</heading>
+                                          <content>
+                                             <p>The ways in which a local authority may discharge its duty under section 117 of the Mental Health Act 1983 include by making direct payments, and for that purpose Schedule A1 has effect.</p>
+                                          </content>
+                                       </section>
+                                    </quotedStructure>
+                                    <inline name="appendText">;</inline>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-20-2-d">
+                           <num>(d)</num>
+                           <content>
+                              <p>
+                                 <mod>for Schedule A1 substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="schedule" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="schedule" ukl:Format="default">
+                                       <hcontainer name="schedule">
+                                          <num>SCHEDULE A1<authorialNote class="referenceNote">
+                                                <p>(as introduced by section 53A)</p>
+                                             </authorialNote>
+                                          </num>
+                                          <heading>DIRECT PAYMENTS: AFTER-CARE UNDER THE MENTAL HEALTH ACT 1983</heading>
+                                          <hcontainer name="crossheading" class="schGroup7">
+                                             <heading>General</heading>
+                                             <paragraph class="schProv1">
+                                                <num>1</num>
+                                                <content>
+                                                   <p>Regulations may require or allow a local authority to make payments in respect of a person to whom section 117 of the Mental Health Act 1983 (after-care) applies that are equivalent to the cost of providing or arranging for the provision of after-care services for the person under that section.</p>
+                                                </content>
+                                             </paragraph>
+                                             <paragraph class="schProv1">
+                                                <num>2</num>
+                                                <intro>
+                                                   <p>But regulations under paragraph 1 may not require or allow such payments to be made unless—</p>
+                                                </intro>
+                                                <level class="para1">
+                                                   <num>(a)</num>
+                                                   <content>
+                                                      <p>where the payment is made in respect of an adult, condition 1, 2 or 3 in paragraph 4 is met;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(b)</num>
+                                                   <content>
+                                                      <p>where the payment is made in respect of a child, condition 1 or 2 in paragraph 5 is met.</p>
+                                                   </content>
+                                                </level>
+                                             </paragraph>
+                                             <paragraph class="schProv1">
+                                                <num>3</num>
+                                                <content>
+                                                   <p>A payment under this Schedule is referred to in this Act as a “direct payment”.</p>
+                                                </content>
+                                             </paragraph>
+                                          </hcontainer>
+                                          <hcontainer name="crossheading" class="schGroup7">
+                                             <heading>Direct payments: after-care services for an adult</heading>
+                                             <paragraph class="schProv1">
+                                                <num>4</num>
+                                                <subparagraph>
+                                                   <num>(1)</num>
+                                                   <content>
+                                                      <p>The conditions referred to in paragraph 2(a) in relation to making direct payments in respect of an adult (“<term refersTo="#term-a">A</term>”) to whom section 117 of the Mental Health Act 1983 (after-care) applies that are equivalent to the cost of providing or arranging the provision of after-care services for A under that section are as follows.</p>
+                                                   </content>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(2)</num>
+                                                   <intro>
+                                                      <p>Condition 1 is that—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>the payments are to be made to A,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <content>
+                                                         <p>the local authority believes that A has capacity to consent to the making of the payments,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <intro>
+                                                         <p>the local authority is satisfied that—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>making the payments is an appropriate way of discharging its duty towards A under section 117 of the Mental Health Act 1983, and</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>A is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(d)</num>
+                                                      <content>
+                                                         <p>A has consented to the making of the payments.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(3)</num>
+                                                   <intro>
+                                                      <p>Condition 2 is that—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>the payments are to be made to a person other than A (“<term refersTo="#term-b">B</term>”),</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <content>
+                                                         <p>the local authority believes that A does not have capacity to consent to the making of the payments,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <content>
+                                                         <p>B is a suitable person,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(d)</num>
+                                                      <intro>
+                                                         <p>the local authority is satisfied that—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>making the payments is an appropriate way of discharging its duty towards A under section 117 of the Mental Health Act 1983,</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>B is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(iii)</num>
+                                                         <content>
+                                                            <p>B will act in A’s best interests in managing the payments, and</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(e)</num>
+                                                      <content>
+                                                         <p>the necessary consent has been obtained to make the payment to B.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(4)</num>
+                                                   <intro>
+                                                      <p>Condition 3 is that—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>the payments are to be made to a person who is nominated by A (“<term refersTo="#term-n">N</term>”),</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <content>
+                                                         <p>the local authority believes that A has capacity to consent to the making of the payments,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <intro>
+                                                         <p>the local authority is satisfied that—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>making the payments is an appropriate way of discharging its duty towards A under section 117 of the Mental Health Act 1983, and</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>N is capable of managing the payments (either by themselves or with the support that is available to them),</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(d)</num>
+                                                      <content>
+                                                         <p>A has consented to the making of the payments, and</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(e)</num>
+                                                      <content>
+                                                         <p>N has consented to receive the payments.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(5)</num>
+                                                   <intro>
+                                                      <p>For the purposes of sub-paragraph (3)(c), B is a “suitable person”—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>if B is authorised under the Mental Capacity Act 2005 (whether in general or specific terms) to make decisions about the provision to A of after-care services under section 117 of the Mental Health Act 1983,</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <content>
+                                                         <p>where B is not authorised as mentioned in paragraph (a), if a person who is so authorised agrees with the local authority that B is suitable to receive the payments, or</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <content>
+                                                         <p>where B is not authorised as mentioned in paragraph (a) and there is no person who is so authorised, if the local authority considers that B is suitable to receive payments of that kind.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(6)</num>
+                                                   <intro>
+                                                      <p>For the purposes of sub-paragraph (3)(e), the “<term refersTo="#term-necessary-consent">necessary consent</term>” means—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>the consent of B, and</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <content>
+                                                         <p>where B is a suitable person by virtue of sub-paragraph (5)(b), the consent of a person authorised under the Mental Capacity Act 2005 (whether in general or specific terms) to make decisions about the provision to A of after-care services under section 117 of the Mental Health Act 1983.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                             </paragraph>
+                                          </hcontainer>
+                                          <hcontainer name="crossheading" class="schGroup7">
+                                             <heading>Direct payments: after-care services for a child</heading>
+                                             <paragraph class="schProv1">
+                                                <num>5</num>
+                                                <subparagraph>
+                                                   <num>(1)</num>
+                                                   <content>
+                                                      <p>The conditions referred to in paragraph 2(b) in relation to making direct payments in respect of a child (“<term refersTo="#term-c">C</term>”) to whom section 117 of the Mental Health Act 1983 (after-care) applies that are equivalent to the cost of providing or arranging the provision of after-care services for C under that section are as follows.</p>
+                                                   </content>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(2)</num>
+                                                   <intro>
+                                                      <p>Condition 1 is that—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <intro>
+                                                         <p>the payments are to be made to a person (“<term refersTo="#term-p">P</term>”) who is—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>C, or</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>a person with parental responsibility for C,</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <intro>
+                                                         <p>where P is—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>an adult or a child aged 16 or 17, the local authority believes that P has capacity to consent to the making of the payments;</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>a child aged under 16, the local authority is satisfied that P has sufficient understanding to make an informed decision about consenting to receive the payments,</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <intro>
+                                                         <p>the local authority is satisfied that—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>making the payments is an appropriate way of discharging its duty towards C under section 117 of the Mental Health Act 1983,</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>C’s well-being will be safeguarded and promoted by the making of the payments, and</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(iii)</num>
+                                                         <content>
+                                                            <p>P is capable of managing the payments (either by themselves or with the support that is available to them), and</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(d)</num>
+                                                      <content>
+                                                         <p>P has consented to the making of the payments.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                                <subparagraph>
+                                                   <num>(3)</num>
+                                                   <intro>
+                                                      <p>Condition 2 is that—</p>
+                                                   </intro>
+                                                   <level class="para1">
+                                                      <num>(a)</num>
+                                                      <content>
+                                                         <p>the payments are to be made to a person who is nominated by P (“<term refersTo="#term-n">N</term>”),</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(b)</num>
+                                                      <intro>
+                                                         <p>where P is—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>an adult or a child aged 16 or 17, the local authority believes that P has capacity to consent to the making of payments;</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>a child aged under 16, the local authority is satisfied that P has sufficient understanding to make an informed decision about consenting to the making of payments,</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(c)</num>
+                                                      <intro>
+                                                         <p>the local authority is satisfied that—</p>
+                                                      </intro>
+                                                      <level class="para2">
+                                                         <num>(i)</num>
+                                                         <content>
+                                                            <p>making the payments is an appropriate way of discharging its duty towards C under section 117 of the Mental Health Act 1983,</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(ii)</num>
+                                                         <content>
+                                                            <p>the well-being of C will be safeguarded and promoted by the making of the payments,</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(iii)</num>
+                                                         <content>
+                                                            <p>N will act in C’s best interests in managing the payments, and</p>
+                                                         </content>
+                                                      </level>
+                                                      <level class="para2">
+                                                         <num>(iv)</num>
+                                                         <content>
+                                                            <p>N is capable of managing the payments (either by themselves or with the support that is available to them),</p>
+                                                         </content>
+                                                      </level>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(d)</num>
+                                                      <content>
+                                                         <p>P has consented to the making of the payments, and</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para1">
+                                                      <num>(e)</num>
+                                                      <content>
+                                                         <p>N has consented to receive the payments.</p>
+                                                      </content>
+                                                   </level>
+                                                </subparagraph>
+                                             </paragraph>
+                                          </hcontainer>
+                                          <hcontainer name="crossheading" class="schGroup7">
+                                             <heading>Further provision for direct payments: after-care</heading>
+                                             <paragraph class="schProv1">
+                                                <num>6</num>
+                                                <intro>
+                                                   <p>Regulations under this Schedule may also make provision (in particular) about the following—</p>
+                                                </intro>
+                                                <level class="para1">
+                                                   <num>(a)</num>
+                                                   <content>
+                                                      <p>matters to which a local authority may or must have regard when making a decision of a specified type about direct payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(b)</num>
+                                                   <content>
+                                                      <p>conditions that a local authority may or must attach, and conditions that it must not attach, in relation to direct payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(c)</num>
+                                                   <content>
+                                                      <p>steps that a local authority may or must take before, or after, making a decision of a specified type about direct payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(d)</num>
+                                                   <content>
+                                                      <p>support that a local authority must provide or arrange for persons to whom it makes direct payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(e)</num>
+                                                   <content>
+                                                      <p>cases or circumstances in which a local authority may act as an agent on behalf of a person to whom direct payments are made;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(f)</num>
+                                                   <content>
+                                                      <p>conditions subject to which, and the extent to which, a local authority’s duty under section 117 of the Mental Health Act 1983 (after-care) is discharged by the making of direct payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(g)</num>
+                                                   <content>
+                                                      <p>cases or circumstances in which a local authority must not, or is allowed not to, make payments to a person or in relation to a person;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(h)</num>
+                                                   <content>
+                                                      <p>cases or circumstances in which a person who no longer lacks, or who the local authority believes no longer lacks, capacity to consent to the making of direct payments must or may nonetheless be treated for the purposes of paragraphs 4 and 5 as lacking capacity to do so;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(i)</num>
+                                                   <content>
+                                                      <p>cases or circumstances in which a local authority making direct payments may or must review the making of those payments;</p>
+                                                   </content>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(j)</num>
+                                                   <intro>
+                                                      <p>cases or circumstances in which a local authority making direct payments may or must—</p>
+                                                   </intro>
+                                                   <level class="para2">
+                                                      <num>(i)</num>
+                                                      <content>
+                                                         <p>terminate the making of those payments;</p>
+                                                      </content>
+                                                   </level>
+                                                   <level class="para2">
+                                                      <num>(ii)</num>
+                                                      <content>
+                                                         <p>require the repayment of the whole or part of a direct payment;</p>
+                                                      </content>
+                                                   </level>
+                                                </level>
+                                                <level class="para1">
+                                                   <num>(k)</num>
+                                                   <content>
+                                                      <p>the recovery of any amount due to a local authority in connection with the making of direct payments.</p>
+                                                   </content>
+                                                </level>
+                                             </paragraph>
+                                             <paragraph class="schProv1">
+                                                <num>7</num>
+                                                <content>
+                                                   <p>Regulations under this Schedule must specify that direct payments to meet the cost of providing or arranging for the provision of after-care services under section 117 of the Mental Health Act 1983 (after-care) must be made at a rate that the local authority estimates to be equivalent to the reasonable cost of securing the provision of those services to meet those needs.</p>
+                                                </content>
+                                             </paragraph>
+                                             <paragraph class="schProv1">
+                                                <num>8</num>
+                                                <content>
+                                                   <p>A person to whom a local authority makes a direct payment may, subject to regulations made under this Schedule, use the payment to purchase after-care services from any person (including, among others, the authority that made the payment).</p>
+                                                </content>
+                                             </paragraph>
+                                          </hcontainer>
+                                       </hcontainer>
+                                    </quotedStructure>
+                                 </mod>
+                              </p>
+                           </content>
+                        </level>
+                     </subsection>
+                  </section>
+                  <section eId="section-21">
+                     <num>21</num>
+                     <heading>Accommodation of children</heading>
+                     <subsection eId="section-21-1">
+                        <num>(1)</num>
+                        <intro>
+                           <p>Subsections (2) and (3) amend the 2014 Act to restrict—</p>
+                        </intro>
+                        <level class="para1" eId="section-21-1-a">
+                           <num>(a)</num>
+                           <content>
+                              <p>the ability of a person named in a child arrangements order to prevent someone with parental responsibility for a child without parents, or who is lost or abandoned, from objecting to the child being looked after in local authority accommodation or removing them from such accommodation;</p>
+                           </content>
+                        </level>
+                        <level class="para1" eId="section-21-1-b">
+                           <num>(b)</num>
+                           <content>
+                              <p>the requirement for a local authority to place a child who it is looking after with a person named in a child arrangements order,</p>
+                           </content>
+                        </level>
+                        <wrapUp>
+                           <p>to a person named in the child arrangements order as someone with whom the child is to live, but not any other person so named.</p>
+                        </wrapUp>
+                     </subsection>
+                     <subsection eId="section-21-2">
+                        <num>(2)</num>
+                        <content>
+                           <p>
+                              <mod>In section 76(6) of the 2014 Act, for paragraph (a) substitute—<quotedStructure startQuote="“" endQuote="”" uk:context="body" uk:docName="asc" ukl:TargetClass="primary" ukl:TargetSubClass="unknown" ukl:Context="main" ukl:Format="default">
+                                    <level class="para1">
+                                       <num>(a)</num>
+                                       <content>
+                                          <p>named in a child arrangements order (that is in force) as a person with whom the child is to live,</p>
+                                       </content>
+                                    </level>
+                                 </quotedStructure>
+                                 <inline name="appendText">.</inline>
+                              </mod>
+                           </p>
+                        </content>
+                     </subsection>
+                     <subsection eId="section-21-3">
+                        <num>(3)</num>
+                        <content>
+                           <p>
+                              <mod>In section 81(3) of the 2014 Act, in paragraph (c), for the words from “a person” to the end substitute <quotedText>“named in the child arrangements order as a person with whom the child was to live”</quotedText>.</mod>
+                           </p>
+                        </content>
+                     </subsection>
+                  </section>
+               </hcontainer>
+               <hcontainer name="crossheading" ukl:Name="Pblock" eId="part-1-chapter-2-crossheading-minor-and-consequential-amendments">
+                  <heading>Minor and consequential amendments</heading>
+                  <section eId="section-22">
+                     <num>22</num>
+                     <heading>Social care: minor and consequential amendments</heading>
+                     <content>
+                        <p>Schedule 1 makes minor and consequential amendments relating to the provisions in this Part.</p>
+                     </content>
+                  </section>
+               </hcontainer>
+            </chapter>
+         </part>
+      </body>
+   </act>
+</akomaNtoso>
