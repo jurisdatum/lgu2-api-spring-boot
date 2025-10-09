@@ -18,7 +18,7 @@ public class Error {
     }
 
     private static final XmlMapper MAPPER = (XmlMapper) new XmlMapper()
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true);
 
     @JacksonXmlProperty(localName = "status-code")
     public int statusCode;
