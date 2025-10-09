@@ -36,4 +36,33 @@ class ErrorParsingTest {
         assertThrows(JsonProcessingException.class, () -> Error.parse(xml));
     }
 
+    @Test
+    @DisplayName("Error.parse rejects MarkLogic errors missing status code")
+    void parseRejectsMissingStatusXml() {
+        String xml = """
+            <error xmlns="">
+                <message>Missing status code</message>
+            </error>
+            """;
+
+        assertThrows(IllegalArgumentException.class, () -> Error.parse(xml));
+    }
+
+    @Test
+    @DisplayName("Error.parse succeeds on MarkLogic redirect errors")
+    void parseValidRedirectErrorXml() {
+        String xml = """
+            <error xmlns="">
+                <status-code>307</status-code>
+                <message>Redirecting you to The East Yorkshire Solar Farm (Correction) Order 2025 as made</message>
+                <header>
+                    <name>Location</name>
+                    <value>http://www.legislation.gov.uk/uksi/2025/1059/made</value>
+                </header>
+            </error>
+            """;
+
+        assertDoesNotThrow(() -> Error.parse(xml));
+    }
+
 }
