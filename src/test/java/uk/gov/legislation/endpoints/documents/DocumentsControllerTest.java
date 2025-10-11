@@ -26,7 +26,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(DocumentsController.class)
- class DocumentsControllerTest {
+class DocumentsControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -83,9 +83,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
             mockMvc.perform(get("/documents/{type}", type)
                     .param("page", String.valueOf(page))
-                    .accept("application/atom+xml;charset=UTF-8"))
+                    .accept(MediaType.APPLICATION_ATOM_XML))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType("application/atom+xml;charset=UTF-8"));
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
+                .andExpect(content().string(atom));
 
         verify(search).getAtom(argThat(params -> type.equals(params.type) && params.page == page));
     }
@@ -121,6 +122,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
             .andExpect(content().string(atom));
+
+        verify(search).getAtom(argThat(params -> type.equals(params.type) && params.year == 2020 && params.page == 1));
     }
 
     @Test
@@ -137,6 +140,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON));
         }
+
+        verify(search).get(argThat(params -> params.sort == uk.gov.legislation.data.marklogic.search.Parameters.Sort.PUBLISHED && params.page == 1));
     }
 
     @Test
@@ -150,6 +155,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
             .andExpect(content().string(atom));
+
+        verify(search).getAtom(argThat(params -> params.sort == uk.gov.legislation.data.marklogic.search.Parameters.Sort.PUBLISHED && params.page == 1));
     }
 
     @ParameterizedTest
@@ -157,12 +164,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @DisplayName("Should return 400 Bad Request for invalid document types")
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
-        when(search.get(any())).thenReturn(mockResults);
 
-        try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
-            mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null)).thenReturn(mockPage);
-
-        mockMvc.perform(get("/documents/{type}/2020",invalidType)
+        mockMvc.perform(get("/documents/{type}/2020", invalidType)
                 .param("page", "1")
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isBadRequest())
@@ -170,8 +173,42 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(jsonPath("$.message")
                 .value("The document type '" + invalidType + "' is not recognized."));
 
-        }
         verifyNoInteractions(search);
+    }
 
+    @Test
+    @DisplayName("Should include Last-Modified header in JSON response")
+    void shouldIncludeLastModifiedHeaderInJsonResponse() throws Exception {
+        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
+        when(search.get(any())).thenReturn(mockResults);
+
+        try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
+            mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null)).thenReturn(mockPage);
+
+            mockMvc.perform(get("/documents/ukpga")
+                    .param("page", "1")
+                    .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(header().exists("Last-Modified"))
+                .andExpect(header().string("Last-Modified", "Wed, 01 Jan 2025 00:00:00 GMT"));
+        }
+
+        verify(search).get(argThat(params -> type.equals(params.type) && params.page == 1));
+    }
+
+    @Test
+    @DisplayName("Should include Last-Modified header in Atom response")
+    void shouldIncludeLastModifiedHeaderInAtomResponse() throws Exception {
+        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
+        when(search.getAtom(any())).thenReturn(atom);
+
+        mockMvc.perform(get("/documents/ukpga")
+                .param("page", "1")
+                .accept(MediaType.APPLICATION_ATOM_XML))
+            .andExpect(status().isOk())
+            .andExpect(header().exists("Last-Modified"))
+            .andExpect(header().string("Last-Modified", "Wed, 01 Jan 2025 00:00:00 GMT"));
+
+        verify(search).getAtom(argThat(params -> type.equals(params.type) && params.page == 1));
     }
 }
