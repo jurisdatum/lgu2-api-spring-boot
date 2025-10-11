@@ -295,25 +295,24 @@ class FragmentControllerTest {
     @Test
     @DisplayName("Should include redirect headers when MarkLogic returns redirect")
     void shouldIncludeRedirectHeaders_whenMarkLogicReturnsRedirect() throws Exception {
-        Legislation.Redirect redirect = new Legislation.Redirect("ukpga", "2020", 1, Optional.of("current"));
+        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
         Legislation.Response responseWithRedirect = new Legislation.Response(expectedXml, Optional.of(redirect));
 
-        when(marklogic.getDocumentSection(type, year, number, section, version, language))
+        when(marklogic.getDocumentSection(type, year, number, section, Optional.empty(), language))
             .thenReturn(responseWithRedirect);
 
         mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
                 .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
                 .accept("application/xml"))
             .andExpect(status().isOk())
             .andExpect(content().string(expectedXml))
-            .andExpect(header().string("X-Document-Type", "ukpga"))
-            .andExpect(header().string("X-Document-Year", "2020"))
-            .andExpect(header().string("X-Document-Number", "1"))
-            .andExpect(header().string("X-Document-Version", "current"))
+            .andExpect(header().string("X-Document-Type", type))
+            .andExpect(header().string("X-Document-Year", year))
+            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+            .andExpect(header().string("X-Document-Version", "enacted"))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocumentSection(type, year, number, section, version, language);
+        verify(marklogic).getDocumentSection(type, year, number, section, Optional.empty(), language);
         verifyNoInteractions(transforms);
     }
 
