@@ -32,6 +32,8 @@ class FragmentControllerTest {
     @MockitoBean
     private Transforms transforms;
 
+    private static final String DOCX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+
     private final String expectedXml = "<fragment><section>1</section></fragment>";
     private final Optional<String> version = Optional.of("enacted");
     private final Optional<String> language = Optional.of("en");
@@ -57,7 +59,7 @@ class FragmentControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().contentType("application/xml;charset=UTF-8"))
             .andExpect(content().string(expectedXml));
-        verify(marklogic).getDocumentSection(type, year, number, section,version, language);
+        verify(marklogic).getDocumentSection(type, year, number, section, version, language);
         verifyNoMoreInteractions(marklogic);
         verifyNoInteractions(transforms);
     }
@@ -140,12 +142,11 @@ class FragmentControllerTest {
         when(transforms.clml2docx(expectedXml)).thenReturn(docx);
 
         mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType
-                .valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document")))
+            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -166,11 +167,11 @@ class FragmentControllerTest {
         when(transforms.clml2docx(expectedXml)).thenReturn(docx);
 
         mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .accept(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document")))
+            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -292,6 +293,31 @@ class FragmentControllerTest {
     }
 
     @Test
+    @DisplayName("Should include redirect headers when MarkLogic returns redirect")
+    void shouldIncludeRedirectHeaders_whenMarkLogicReturnsRedirect() throws Exception {
+        Legislation.Redirect redirect = new Legislation.Redirect("ukpga", "2020", 1, Optional.of("current"));
+        Legislation.Response responseWithRedirect = new Legislation.Response(expectedXml, Optional.of(redirect));
+
+        when(marklogic.getDocumentSection(type, year, number, section, version, language))
+            .thenReturn(responseWithRedirect);
+
+        mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
+                .header("Accept-Language", "en")
+                .queryParam("version", "enacted")
+                .accept("application/xml"))
+            .andExpect(status().isOk())
+            .andExpect(content().string(expectedXml))
+            .andExpect(header().string("X-Document-Type", "ukpga"))
+            .andExpect(header().string("X-Document-Year", "2020"))
+            .andExpect(header().string("X-Document-Number", "1"))
+            .andExpect(header().string("X-Document-Version", "current"))
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+
+        verify(marklogic).getDocumentSection(type, year, number, section, version, language);
+        verifyNoInteractions(transforms);
+    }
+
+    @Test
     @DisplayName("Default Accept language header 'en'")
     void shouldUseDefaultLocale_whenNoAcceptLanguageHeaderProvided() throws Exception {
 
@@ -306,7 +332,7 @@ class FragmentControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith("application/xml"))
             .andExpect(content().string(expectedXml))
-            .andExpect(header().string("Content-Language", "en"));
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSection(type, year, number, section, version, language);
         verifyNoInteractions(transforms);
@@ -330,7 +356,7 @@ class FragmentControllerTest {
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith("application/xml"))
             .andExpect(content().string(expectedXml))
-            .andExpect(header().string("Content-Language", acceptLanguageHeader));
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
         verify(marklogic).getDocumentSection(type, year, number, section, version, language);
         verifyNoInteractions(transforms);
