@@ -15,10 +15,10 @@ import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.Transforms;
 
 import java.util.Optional;
+
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 
 @WebMvcTest(DocumentController.class)
@@ -32,6 +32,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
     @MockitoBean
     private Transforms transforms;
+
+    private static final String DOCX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
     private final Optional<String> version = Optional.of("enacted");
     private final Optional<String> language = Optional.of("en");
@@ -134,11 +136,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(transforms.clml2docx(clmlXml)).thenReturn(docx);
 
         mockMvc.perform(get("/document/ukla/2020/1")
-                .accept(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document")))
+            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -157,11 +159,11 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(transforms.clml2docx(clmlXml)).thenReturn(docx);
 
         mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .accept(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf("application/vnd.openxmlformats-officedocument.wordprocessingml.document")))
+            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -237,7 +239,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     }
 
     @Test
-    void shouldReturnAknWhenAcceptsAknWwithMonarch() throws Exception {
+    void shouldReturnAknWhenAcceptsAknWithMonarch() throws Exception {
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
         when(marklogic.getDocument(type, regnalYear, number, version, language))
@@ -276,6 +278,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         verifyNoInteractions(transforms);
     }
 
+    @Test
+    @DisplayName("Should include redirect headers when MarkLogic returns redirect")
+    void shouldIncludeRedirectHeaders_whenMarkLogicReturnsRedirect() throws Exception {
+        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
+        Legislation.Response responseWithRedirect = new Legislation.Response(clmlXml, Optional.of(redirect));
+
+        when(marklogic.getDocument(type, year, number, Optional.empty(), language))
+            .thenReturn(responseWithRedirect);
+
+        mockMvc.perform(get("/document/ukla/2020/1")
+                .header("Accept-Language", "en")
+                .accept("application/xml"))
+            .andExpect(status().isOk())
+            .andExpect(content().string(clmlXml))
+            .andExpect(header().string("X-Document-Type", type))
+            .andExpect(header().string("X-Document-Year", year))
+            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+            .andExpect(header().string("X-Document-Version", "enacted"))
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+
+        verify(marklogic).getDocument(type, year, number, Optional.empty(), language);
+        verifyNoInteractions(transforms);
+    }
+
     @ParameterizedTest
     @ValueSource(strings = {"en", "cy"})
     @DisplayName("Accept language header")
@@ -292,9 +318,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith("application/xml"))
             .andExpect(content().string(clmlXml))
-            .andExpect(header().string("Content-Language", acceptLanguageHeader));
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
-        verify(marklogic).getDocument(type, year, number, version,language);
+        verify(marklogic).getDocument(type, year, number, version, language);
         verifyNoInteractions(transforms);
     }
+
+    @Test
+    @DisplayName("Should default to English when Accept-Language header is missing")
+    void shouldDefaultToEnglish_whenAcceptLanguageHeaderIsMissing() throws Exception {
+        Optional<String> defaultLanguage = Optional.of("en");
+
+        when(marklogic.getDocument(type, year, number, version, defaultLanguage))
+            .thenReturn(response);
+
+        mockMvc.perform(get("/document/ukla/2020/1")
+                .accept("application/xml")
+                .queryParam("version", "enacted"))
+            .andExpect(status().isOk())
+            .andExpect(content().contentTypeCompatibleWith("application/xml"))
+            .andExpect(content().string(clmlXml))
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+
+        verify(marklogic).getDocument(type, year, number, version, defaultLanguage);
+        verifyNoInteractions(transforms);
+    }
+
 }
