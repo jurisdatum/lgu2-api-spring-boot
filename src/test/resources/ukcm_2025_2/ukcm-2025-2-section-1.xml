@@ -1,0 +1,234 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2" NumberOfProvisions="2" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0" RestrictExtent="E" RestrictStartDate="2025-04-03">
+    <ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+        <dc:identifier>http://www.legislation.gov.uk/ukcm/2025/2/section/1</dc:identifier>
+        <dc:title>Church Funds Investment Measure 2025</dc:title>
+        <dc:publisher>Statute Law Database</dc:publisher>
+        <dc:modified>2025-06-19</dc:modified>
+        <dc:contributor>Expert Participation</dc:contributor>
+        <dct:valid>2025-04-03</dct:valid>
+        <atom:link rel="self" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.xml" type="application/xml"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukcm/2025/2/resources" title="More Resources"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukcm/2025/2" title="whole act"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukcm/2025/2/introduction" title="introduction"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukcm/2025/2/body" title="body"/>
+        <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.rdf" title="RDF/XML"/>
+        <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.akn" title="AKN"/>
+        <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.xht" title="HTML snippet"/>
+        <atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.htm" title="Website (XHTML) Default View"/>
+        <atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.csv" title="CSV"/>
+        <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.pdf" title="PDF"/>
+        <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/data.html" title="HTML5 snippet"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukcm/2025/2/contents" title="Table of Contents"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/enacted" title="enacted"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2025-04-03" title="2025-04-03"/>
+        <atom:link rel="up" href="http://www.legislation.gov.uk/ukcm/2025/2" title="Entire legislation"/>
+        <atom:link rel="prev" href="http://www.legislation.gov.uk/ukcm/2025/2/introduction" title="Introduction; Introduction"/>
+        <atom:link rel="prevInForce" href="http://www.legislation.gov.uk/ukcm/2025/2/introduction" title="Introduction; Introduction"/>
+        <atom:link rel="next" href="http://www.legislation.gov.uk/ukcm/2025/2/section/2" title="Provision; Section 2"/>
+        <atom:link rel="nextInForce" href="http://www.legislation.gov.uk/ukcm/2025/2/section/2" title="Provision; Section 2"/>
+        <ukm:PrimaryMetadata>
+            <ukm:DocumentClassification>
+                <ukm:DocumentCategory Value="primary"/>
+                <ukm:DocumentMainType Value="UnitedKingdomChurchMeasure"/>
+                <ukm:DocumentStatus Value="revised"/>
+            </ukm:DocumentClassification>
+            <ukm:Year Value="2025"/>
+            <ukm:Number Value="2"/>
+            <ukm:EnactmentDate Date="2025-04-03"/>
+            <ukm:ISBN Value="9780105508335"/>
+        </ukm:PrimaryMetadata>
+        <ukm:Alternatives>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/ukcm/2025/2/pdfs/ukcm_20250002_en.pdf" Date="2025-04-03" Size="320616" Print="true"/>
+        </ukm:Alternatives>
+        <ukm:Statistics>
+            <ukm:TotalParagraphs Value="2"/>
+            <ukm:BodyParagraphs Value="2"/>
+            <ukm:ScheduleParagraphs Value="0"/>
+            <ukm:AttachmentParagraphs Value="0"/>
+            <ukm:TotalImages Value="0"/>
+        </ukm:Statistics>
+    </ukm:Metadata>
+    <Primary>
+        <Body DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/body" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/body" NumberOfProvisions="2" RestrictExtent="E" RestrictStartDate="2025-04-03">
+            <P1group RestrictExtent="E" RestrictStartDate="2025-04-03">
+                <Title>Scheme to transfer assets of certain Church funds</Title>
+                <P1 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1" id="section-1">
+                    <Pnumber>
+                        <CommentaryRef Ref="key-f44a488d6f0b351f5c89dd2101f49599"/>
+                        1
+                    </Pnumber>
+                    <P1para>
+                        <P2 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/1" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/1" id="section-1-1">
+                            <Pnumber>1</Pnumber>
+                            <P2para>
+                                <Text>The trustee of a CBF Church of England Fund may make a scheme for the transfer of the assets of that fund to a charity authorised investment fund established for that purpose.</Text>
+                            </P2para>
+                        </P2>
+                        <P2 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2" id="section-1-2">
+                            <Pnumber>2</Pnumber>
+                            <P2para>
+                                <Text>
+                                    A “CBF Church of England Fund” is a fund to which the
+                                    <ExternalLink Title="Church Funds Investment Measure 1958" URI="https://www.legislation.gov.uk/ukcm/Eliz2/6-7/1">Church Funds Investment Measure 1958</ExternalLink>
+                                    applies known by one of the following names—
+                                </Text>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/a" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/a" id="section-1-2-a">
+                                    <Pnumber>a</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England Investment Fund;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/b" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/b" id="section-1-2-b">
+                                    <Pnumber>b</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England Short Duration Bond Fund;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/c" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/c" id="section-1-2-c">
+                                    <Pnumber>c</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England Deposit Fund;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/d" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/d" id="section-1-2-d">
+                                    <Pnumber>d</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England Property Fund;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/e" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/e" id="section-1-2-e">
+                                    <Pnumber>e</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England UK Equity Fund;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/2/f" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/2/f" id="section-1-2-f">
+                                    <Pnumber>f</Pnumber>
+                                    <P3para>
+                                        <Text>the CBF Church of England Global Equity Fund.</Text>
+                                    </P3para>
+                                </P3>
+                            </P2para>
+                        </P2>
+                        <P2 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/3" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/3" id="section-1-3">
+                            <Pnumber>3</Pnumber>
+                            <P2para>
+                                <Text>
+                                    A scheme under
+                                    <InternalLink Ref="section-1" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1" DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1">this section</InternalLink>
+                                    may include supplementary, incidental, consequential, transitional or saving provision and may in particular make provision for—
+                                </Text>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/3/a" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/3/a" id="section-1-3-a">
+                                    <Pnumber>a</Pnumber>
+                                    <P3para>
+                                        <Text>the dissolution of the fund the assets of which are being transferred;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/3/b" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/3/b" id="section-1-3-b">
+                                    <Pnumber>b</Pnumber>
+                                    <P3para>
+                                        <Text>the retention of assets of the fund to meet its liabilities;</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/3/c" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/3/c" id="section-1-3-c">
+                                    <Pnumber>c</Pnumber>
+                                    <P3para>
+                                        <Text>the payment of fees and expenses.</Text>
+                                    </P3para>
+                                </P3>
+                            </P2para>
+                        </P2>
+                        <P2 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/4" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/4" id="section-1-4">
+                            <Pnumber>4</Pnumber>
+                            <P2para>
+                                <Text>
+                                    “
+                                    <Term id="term-charity-authorised-investment-fund">Charity authorised investment fund</Term>
+                                    ” means a fund which is—
+                                </Text>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/4/a" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/4/a" id="section-1-4-a">
+                                    <Pnumber>a</Pnumber>
+                                    <P3para>
+                                        <Text>an authorised fund, and</Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/4/b" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/4/b" id="section-1-4-b">
+                                    <Pnumber>b</Pnumber>
+                                    <P3para>
+                                        <Text>
+                                            established under a common investment scheme under
+                                            <ExternalLink Title="Charities Act 2011, section 96" URI="https://www.legislation.gov.uk/ukpga/2011/25/section/96">section 96</ExternalLink>
+                                            of the
+                                            <Citation URI="https://www.legislation.gov.uk/ukpga/2011/25" id="c00001" Class="UnitedKingdomPublicGeneralAct" Year="2011" Number="25">Charities Act 2011</Citation>
+                                            .
+                                        </Text>
+                                    </P3para>
+                                </P3>
+                            </P2para>
+                        </P2>
+                        <P2 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/5" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/5" id="section-1-5">
+                            <Pnumber>5</Pnumber>
+                            <P2para>
+                                <Text>
+                                    In
+                                    <InternalLink Ref="section-1-4" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/4" DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/4">subsection (4)</InternalLink>
+                                    <InternalLink Ref="section-1-4-a" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/4/a" DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/4/a">(a)</InternalLink>
+                                    , “
+                                    <Term id="term-authorised-fund">authorised fund</Term>
+                                    ” means a fund the property of which is—
+                                </Text>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/5/a" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/5/a" id="section-1-5-a">
+                                    <Pnumber>a</Pnumber>
+                                    <P3para>
+                                        <Text>
+                                            held under a unit trust scheme authorised by an order under
+                                            <ExternalLink Title="Financial Services and Markets Act 2000, section 243" URI="https://www.legislation.gov.uk/ukpga/2000/8/section/243">section 243</ExternalLink>
+                                            of the
+                                            <Citation URI="https://www.legislation.gov.uk/ukpga/2000/8" id="c00002" Class="UnitedKingdomPublicGeneralAct" Year="2000" Number="8">Financial Services and Markets Act 2000</Citation>
+                                            ,
+                                        </Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/5/b" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/5/b" id="section-1-5-b">
+                                    <Pnumber>b</Pnumber>
+                                    <P3para>
+                                        <Text>
+                                            held under a contractual scheme authorised by an order under
+                                            <ExternalLink Title="Financial Services and Markets Act 2000, section 261D" URI="https://www.legislation.gov.uk/ukpga/2000/8/section/261D">section 261D</ExternalLink>
+                                            <ExternalLink Title="Financial Services and Markets Act 2000, section 261D" URI="https://www.legislation.gov.uk/ukpga/2000/8/section/261D">(1)</ExternalLink>
+                                            of
+                                            <Citation URI="https://www.legislation.gov.uk/ukpga/2000/8" id="c00003" Class="UnitedKingdomPublicGeneralAct" Year="2000" Number="8">that Act</Citation>
+                                            , or
+                                        </Text>
+                                    </P3para>
+                                </P3>
+                                <P3 DocumentURI="http://www.legislation.gov.uk/ukcm/2025/2/section/1/5/c" IdURI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/1/5/c" id="section-1-5-c">
+                                    <Pnumber>c</Pnumber>
+                                    <P3para>
+                                        <Text>
+                                            subject to a collective investment scheme constituted by an open-ended investment company in respect of which an authorisation order is in force under regulations made under
+                                            <ExternalLink Title="Financial Services and Markets Act 2000, section 262" URI="https://www.legislation.gov.uk/ukpga/2000/8/section/262">section 262</ExternalLink>
+                                            of
+                                            <Citation URI="https://www.legislation.gov.uk/ukpga/2000/8" id="c00004" Class="UnitedKingdomPublicGeneralAct" Year="2000" Number="8">that Act</Citation>
+                                            .
+                                        </Text>
+                                    </P3para>
+                                </P3>
+                            </P2para>
+                        </P2>
+                    </P1para>
+                </P1>
+            </P1group>
+        </Body>
+    </Primary>
+    <Commentaries>
+        <Commentary Type="I" id="key-f44a488d6f0b351f5c89dd2101f49599">
+            <Para>
+                <Text>
+                    S. 1 in force at Royal Assent, see
+                    <CitationSubRef id="ne3eae25ab9f4a96" SectionRef="section-2-2" URI="http://www.legislation.gov.uk/id/ukcm/2025/2/section/2/2" Operative="true">s. 2(2)</CitationSubRef>
+                </Text>
+            </Para>
+        </Commentary>
+    </Commentaries>
+</Legislation>

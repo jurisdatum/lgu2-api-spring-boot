@@ -1,0 +1,94 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/anaw/2020/3/welsh" IdURI="http://www.legislation.gov.uk/id/anaw/2020/3" NumberOfProvisions="6" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" xml:lang="cy" RestrictExtent="E+W" RestrictStartDate="2022-03-21">
+    <ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+        <dc:identifier>http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh</dc:identifier>
+        <dc:title>Deddf Plant (Diddymu Amddiffyniad Cosb Resymol) (Cymru) 2020</dc:title>
+        <dc:language>cy</dc:language>
+        <dc:publisher>Statute Law Database</dc:publisher>
+        <dc:modified>2023-05-17</dc:modified>
+        <dc:contributor>Expert Participation</dc:contributor>
+        <dct:valid>2022-03-21</dct:valid>
+        <atom:link rel="self" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.xml" type="application/xml"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/anaw/2020/3/resources/welsh" title="More Resources"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/id/anaw/2020/3/section/2/notes/welsh" title="Explanatory Notes"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/anaw/2020/3/notes/contents/welsh" title="Explanatory Notes Table of Contents"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/anaw/2020/3/welsh" title="whole act"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/anaw/2020/3/introduction/welsh" title="introduction"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/anaw/2020/3/body/welsh" title="body"/>
+        <atom:link rel="alternate" hreflang="en" href="http://www.legislation.gov.uk/anaw/2020/3/section/2"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/anaw/2020/3/contents" title="Table of Contents"/>
+        <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.rdf" title="RDF/XML"/>
+        <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.akn" title="AKN"/>
+        <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.xht" title="HTML snippet"/>
+        <atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.htm" title="Website (XHTML) Default View"/>
+        <atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.csv" title="CSV"/>
+        <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.pdf" title="PDF"/>
+        <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh/data.html" title="HTML5 snippet"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="cy" href="http://www.legislation.gov.uk/anaw/2020/3/contents/welsh" title="Table of Contents"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/enacted/welsh" title="enacted" hreflang="cy"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/enacted" title="enacted" hreflang="en"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/2020-03-21/welsh" title="2020-03-21" hreflang="cy"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/anaw/2020/3/section/2/2020-03-21" title="2020-03-21" hreflang="en"/>
+        <atom:link rel="up" href="http://www.legislation.gov.uk/anaw/2020/3/welsh" title="Entire legislation"/>
+        <atom:link rel="prev" href="http://www.legislation.gov.uk/anaw/2020/3/section/1/welsh" title="Provision; Section 1"/>
+        <atom:link rel="prevInForce" href="http://www.legislation.gov.uk/anaw/2020/3/section/1/welsh" title="Provision; Section 1"/>
+        <atom:link rel="next" href="http://www.legislation.gov.uk/anaw/2020/3/section/3/welsh" title="Provision; Section 3"/>
+        <atom:link rel="nextInForce" href="http://www.legislation.gov.uk/anaw/2020/3/section/3/welsh" title="Provision; Section 3"/>
+        <ukm:PrimaryMetadata>
+            <ukm:DocumentClassification>
+                <ukm:DocumentCategory Value="primary"/>
+                <ukm:DocumentMainType Value="WelshNationalAssemblyAct"/>
+                <ukm:DocumentStatus Value="revised"/>
+            </ukm:DocumentClassification>
+            <ukm:Year Value="2020"/>
+            <ukm:Number Value="3"/>
+            <ukm:EnactmentDate Date="2020-03-20"/>
+            <ukm:ISBN Value="9780348113402"/>
+        </ukm:PrimaryMetadata>
+        <ukm:Notes>
+            <ukm:Note IdURI="http://www.legislation.gov.uk/id/anaw/2020/3/section/2/notes" DocumentURI="http://www.legislation.gov.uk/anaw/2020/3/section/2/notes/welsh"/>
+            <ukm:Alternatives>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_we.pdf" Date="2020-03-26" Title="Explanatory Note" Size="1601531" Language="Welsh"/>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_en.pdf" Date="2020-03-26" Title="Explanatory Note" Size="1747374"/>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_mi.pdf" Date="2020-03-26" Title="Explanatory Note" Size="2499242" Language="Mixed"/>
+            </ukm:Alternatives>
+        </ukm:Notes>
+        <ukm:Alternatives>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_we.pdf" Date="2020-03-26" Title="Welsh Language" Size="1689996" Language="Welsh"/>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_en.pdf" Date="2020-03-26" Title="English Language" Size="1814334"/>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_mi.pdf" Date="2020-03-26" Size="2220839" Language="Mixed"/>
+        </ukm:Alternatives>
+        <ukm:Statistics>
+            <ukm:TotalParagraphs Value="6"/>
+            <ukm:BodyParagraphs Value="6"/>
+            <ukm:ScheduleParagraphs Value="0"/>
+            <ukm:AttachmentParagraphs Value="0"/>
+            <ukm:TotalImages Value="0"/>
+        </ukm:Statistics>
+    </ukm:Metadata>
+    <Primary>
+        <Body DocumentURI="http://www.legislation.gov.uk/anaw/2020/3/body/welsh" IdURI="http://www.legislation.gov.uk/id/anaw/2020/3/body" NumberOfProvisions="6" NumberFormat="default" RestrictExtent="E+W" RestrictStartDate="2022-03-21">
+            <P1group RestrictExtent="E+W" RestrictStartDate="2020-03-21">
+                <Title>Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym</Title>
+                <P1 DocumentURI="http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh" IdURI="http://www.legislation.gov.uk/id/anaw/2020/3/section/2" id="section-2">
+                    <Pnumber>
+                        <CommentaryRef Ref="key-ed126cd7d346a4e7b45d0339e836140b"/>
+                        2
+                    </Pnumber>
+                    <P1para>
+                        <Text>Rhaid i Weinidogion Cymru gymryd camau cyn i adran 1 ddod i rym er mwyn hybu ymwybyddiaeth y cyhoedd o’r newidiadau i’r gyfraith sydd i’w gwneud gan yr adran honno.</Text>
+                    </P1para>
+                </P1>
+            </P1group>
+        </Body>
+    </Primary>
+    <Commentaries>
+        <Commentary Type="I" id="key-ed126cd7d346a4e7b45d0339e836140b">
+            <Para>
+                <Text>
+                    A. 2 mewn grym ar 21.3.2020, gweler
+                    <CitationSubRef id="n3d551e2b15a7122c" SectionRef="section-5-1" URI="http://www.legislation.gov.uk/id/anaw/2020/3/section/5/1" Operative="true">a. 5(1)</CitationSubRef>
+                </Text>
+            </Para>
+        </Commentary>
+    </Commentaries>
+</Legislation>

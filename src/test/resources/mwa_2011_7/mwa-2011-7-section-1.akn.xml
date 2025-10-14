@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="mwa">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/mwa/2011/7"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/mwa/2011/7"/>
+               <FRBRdate date="2011-01-01" name="estimated"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/NationalAssemblyForWales"/>
+               <FRBRcountry value="GB-WLS"/>
+               <FRBRnumber value="7"/>
+               <FRBRname value="2011 nawm 7"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/mwa/2011/7/2022-09-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/mwa/2011/7/2022-09-01"/>
+               <FRBRdate date="2022-09-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/mwa/2011/7/2022-09-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/mwa/2011/7/2022-09-01/data.akn"/>
+               <FRBRdate date="2025-10-10+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef date="2012-11-16" eId="date-2012-11-16" source="#"/>
+            <eventRef date="2022-09-01" eId="date-2022-09-01" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2022-09-01" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2022-09-01" type="jurisdiction"/>
+               <restriction href="#part-1" refersTo="#period-from-2022-09-01" type="jurisdiction"/>
+               <restriction href="#section-1" refersTo="#period-from-2012-11-16" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#section-1" refersTo="#key-f2d6aa2d488b3b45c298cb3b66e2612f"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2012-11-16">
+               <timeInterval start="#date-2012-11-16" refersTo="#"/>
+            </temporalGroup>
+            <temporalGroup eId="period-from-2022-09-01">
+               <timeInterval start="#date-2022-09-01" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCLocation eId="extent-e+w" href="" showAs="E+W"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-f2d6aa2d488b3b45c298cb3b66e2612f" marker="I1">
+               <p>
+                  <ref eId="cpv2rlbm1-00007" class="subref" href="http://www.legislation.gov.uk/id/mwa/2011/7/section/1">S. 1</ref>
+                    in force at 16.11.2012 by
+                    <ref eId="cpv2rlbm1-00008" href="http://www.legislation.gov.uk/id/wsi/2012/2656">S.I. 2012/2656</ref>
+                    ,
+                    <ref eId="cpv2rlbm1-00009" class="subref operative" href="http://www.legislation.gov.uk/id/wsi/2012/2656/article/2">art. 2</ref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/mwa/2011/7/section/1</dc:identifier>
+            <dc:title>Education (Wales) Measure 2011</dc:title>
+            <dc:description>A Measure of the National Assembly for Wales to make provision for collaboration between local authorities, governing bodies of maintained schools and further education institutions; to make provision for the federation of maintained schools, the training of governors and clerks to governing bodies of maintained schools and the provision of such clerks; to make provision prohibiting new foundation schools; and for connected purposes.</dc:description>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2025-03-10</dc:modified>
+            <dc:contributor>Expert Participation</dc:contributor>
+            <dct:valid>2022-09-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="WelshAssemblyMeasure"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2011"/>
+               <ukm:Number Value="7"/>
+               <ukm:ISBN Value="9780348105001"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/notes" DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/notes"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_we.pdf" Date="2011-05-12" Title="Explanatory Note" Size="135060" Language="Welsh"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_mi.pdf" Date="2011-05-12" Title="Explanatory Note" Size="213719" Language="Mixed"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_en.pdf" Date="2011-05-12" Title="Explanatory Note" Size="121000"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:OrdersInCouncil>
+               <ukm:OrderInCouncil URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaoic_20110007_en.pdf" Date="2011-05-12" Title="Order in Council" Size="63843"/>
+            </ukm:OrdersInCouncil>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_mi.pdf" Date="2011-05-11" Size="151652" Language="Mixed"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_en.pdf" Date="2011-05-11" Size="149269"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_we.pdf" Date="2011-05-11" Size="151060" Language="Welsh"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="34"/>
+               <ukm:BodyParagraphs Value="34"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <part eId="part-1">
+            <num>
+               <b>PART 1</b>
+            </num>
+            <heading>COLLABORATION BY EDUCATION BODIES</heading>
+            <section xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="section-1" ns0:target="true">
+               <num> 1 </num>
+               <heading>Education bodies</heading>
+               <intro>
+                  <p>
+                                For the purposes of this Part, an “
+                                <term refersTo="#term-education-body" eId="term-education-body">education body</term>
+                                ” means—
+                            </p>
+               </intro>
+               <level class="para1" eId="section-1-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>a local authority in Wales;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>the governing body of a maintained school in Wales;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>a further education corporation (as defined by section 17(1) of the Further and Higher Education Act 1992) in Wales;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-d">
+                  <num>(d)</num>
+                  <intro>
+                     <p>the governing body of a designated institution (as defined by section 28(4) of that Act) in Wales, which—</p>
+                  </intro>
+                  <level class="para2" eId="section-1-d-i">
+                     <num>(i)</num>
+                     <content>
+                        <p>is a body incorporated by virtue of section 143(5) of the Learning and Skills Act 2000, and</p>
+                     </content>
+                  </level>
+                  <level class="para2" eId="section-1-d-ii">
+                     <num>(ii)</num>
+                     <content>
+                        <p>is exclusively or mainly providing full-time education for persons who are above compulsory school age but who have not attained the age of 19.</p>
+                     </content>
+                  </level>
+               </level>
+            </section>
+         </part>
+      </body>
+   </act>
+</akomaNtoso>
