@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="ukcm">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ukcm/2025/2"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ukcm/2025/2"/>
+               <FRBRdate date="2025-04-03" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/GeneralSynod"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="2"/>
+               <FRBRname value="2025 No. 2"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ukcm/2025/2/2025-04-03"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukcm/2025/2/2025-04-03"/>
+               <FRBRdate date="2025-04-03" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ukcm/2025/2/2025-04-03/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukcm/2025/2/2025-04-03/data.akn"/>
+               <FRBRdate date="2025-10-14+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2025-04-03" eId="date-enacted" source="#"/>
+            <eventRef date="2025-04-03" eId="date-2025-04-03" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-e" type="jurisdiction"/>
+               <restriction href="#section-1" refersTo="#extent-e" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2025-04-03" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2025-04-03" type="jurisdiction"/>
+               <restriction href="#section-1" refersTo="#period-from-2025-04-03" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#section-1" refersTo="#key-f44a488d6f0b351f5c89dd2101f49599"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2025-04-03">
+               <timeInterval start="#date-2025-04-03" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e" href="" showAs="E"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-f44a488d6f0b351f5c89dd2101f49599" marker="I1">
+               <p>
+                    S. 1 in force at Royal Assent, see
+                    <ref eId="ne3eae25ab9f4a96" class="subref operative" href="http://www.legislation.gov.uk/id/ukcm/2025/2/section/2/2">s. 2(2)</ref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/ukcm/2025/2/section/1</dc:identifier>
+            <dc:title>Church Funds Investment Measure 2025</dc:title>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2025-06-19</dc:modified>
+            <dc:contributor>Expert Participation</dc:contributor>
+            <dct:valid>2025-04-03</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="UnitedKingdomChurchMeasure"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2025"/>
+               <ukm:Number Value="2"/>
+               <ukm:EnactmentDate Date="2025-04-03"/>
+               <ukm:ISBN Value="9780105508335"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/ukcm/2025/2/pdfs/ukcm_20250002_en.pdf" Date="2025-04-03" Size="320616" Print="true"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="2"/>
+               <ukm:BodyParagraphs Value="2"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <section xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="section-1" ns0:target="true">
+            <num>
+                        1
+                    </num>
+            <heading>Scheme to transfer assets of certain Church funds</heading>
+            <subsection eId="section-1-1">
+               <num>(1)</num>
+               <content>
+                  <p>The trustee of a CBF Church of England Fund may make a scheme for the transfer of the assets of that fund to a charity authorised investment fund established for that purpose.</p>
+               </content>
+            </subsection>
+            <subsection eId="section-1-2">
+               <num>(2)</num>
+               <intro>
+                  <p>
+                                    A “CBF Church of England Fund” is a fund to which the
+                                    <a href="https://www.legislation.gov.uk/ukcm/Eliz2/6-7/1">Church Funds Investment Measure 1958</a>
+                                    applies known by one of the following names—
+                                </p>
+               </intro>
+               <level class="para1" eId="section-1-2-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>the CBF Church of England Investment Fund;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-2-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>the CBF Church of England Short Duration Bond Fund;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-2-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>the CBF Church of England Deposit Fund;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-2-d">
+                  <num>(d)</num>
+                  <content>
+                     <p>the CBF Church of England Property Fund;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-2-e">
+                  <num>(e)</num>
+                  <content>
+                     <p>the CBF Church of England UK Equity Fund;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-2-f">
+                  <num>(f)</num>
+                  <content>
+                     <p>the CBF Church of England Global Equity Fund.</p>
+                  </content>
+               </level>
+            </subsection>
+            <subsection eId="section-1-3">
+               <num>(3)</num>
+               <intro>
+                  <p>
+                                    A scheme under
+                                    <ref href="#section-1">this section</ref>
+                                    may include supplementary, incidental, consequential, transitional or saving provision and may in particular make provision for—
+                                </p>
+               </intro>
+               <level class="para1" eId="section-1-3-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>the dissolution of the fund the assets of which are being transferred;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-3-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>the retention of assets of the fund to meet its liabilities;</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-3-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>the payment of fees and expenses.</p>
+                  </content>
+               </level>
+            </subsection>
+            <subsection eId="section-1-4">
+               <num>(4)</num>
+               <intro>
+                  <p>
+                                    “
+                                    <term refersTo="#term-charity-authorised-investment-fund" eId="term-charity-authorised-investment-fund">Charity authorised investment fund</term>
+                                    ” means a fund which is—
+                                </p>
+               </intro>
+               <level class="para1" eId="section-1-4-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>an authorised fund, and</p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-4-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                                            established under a common investment scheme under
+                                            <a href="https://www.legislation.gov.uk/ukpga/2011/25/section/96">section 96</a>
+                                            of the
+                                            <ref eId="c00001" href="https://www.legislation.gov.uk/ukpga/2011/25">Charities Act 2011</ref>
+                                            .
+                                        </p>
+                  </content>
+               </level>
+            </subsection>
+            <subsection eId="section-1-5">
+               <num>(5)</num>
+               <intro>
+                  <p>
+                                    In
+                                    <ref href="#section-1-4">subsection (4)</ref>
+                     <ref href="#section-1-4-a">(a)</ref>
+                                    , “
+                                    <term refersTo="#term-authorised-fund" eId="term-authorised-fund">authorised fund</term>
+                                    ” means a fund the property of which is—
+                                </p>
+               </intro>
+               <level class="para1" eId="section-1-5-a">
+                  <num>(a)</num>
+                  <content>
+                     <p>
+                                            held under a unit trust scheme authorised by an order under
+                                            <a href="https://www.legislation.gov.uk/ukpga/2000/8/section/243">section 243</a>
+                                            of the
+                                            <ref eId="c00002" href="https://www.legislation.gov.uk/ukpga/2000/8">Financial Services and Markets Act 2000</ref>
+                                            ,
+                                        </p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-5-b">
+                  <num>(b)</num>
+                  <content>
+                     <p>
+                                            held under a contractual scheme authorised by an order under
+                                            <a href="https://www.legislation.gov.uk/ukpga/2000/8/section/261D">section 261D</a>
+                        <a href="https://www.legislation.gov.uk/ukpga/2000/8/section/261D">(1)</a>
+                                            of
+                                            <ref eId="c00003" href="https://www.legislation.gov.uk/ukpga/2000/8">that Act</ref>
+                                            , or
+                                        </p>
+                  </content>
+               </level>
+               <level class="para1" eId="section-1-5-c">
+                  <num>(c)</num>
+                  <content>
+                     <p>
+                                            subject to a collective investment scheme constituted by an open-ended investment company in respect of which an authorisation order is in force under regulations made under
+                                            <a href="https://www.legislation.gov.uk/ukpga/2000/8/section/262">section 262</a>
+                                            of
+                                            <ref eId="c00004" href="https://www.legislation.gov.uk/ukpga/2000/8">that Act</ref>
+                                            .
+                                        </p>
+                  </content>
+               </level>
+            </subsection>
+         </section>
+      </body>
+   </act>
+</akomaNtoso>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="eudr">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/eudr/2020/2089"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/eudr/2020/2089"/>
+               <FRBRdate date="2020-12-11" name="adopted"/>
+               <FRBRauthor href=""/>
+               <FRBRcountry value="EU"/>
+               <FRBRnumber value="2089"/>
+               <FRBRname value="Directive (EU) 2020/2089"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11"/>
+               <FRBRuri value="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11"/>
+               <FRBRdate date="2020-12-11" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11/data.akn"/>
+               <FRBRdate date="2025-10-14+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#adopted" date="2020-12-11" eId="date-adopted" source="#"/>
+            <eventRef date="2020-12-11" eId="date-2020-12-11" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction href="#article-1" refersTo="#extent-e+w+s+ni" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2020-12-11" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2020-12-11" type="jurisdiction"/>
+               <restriction href="#article-1" refersTo="#period-from-2020-12-11" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source=""/>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2020-12-11">
+               <timeInterval start="#date-2020-12-11" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="adopted" href="" showAs="AdoptedDate"/>
+            <TLCLocation eId="extent-e+w+s+ni" href="" showAs="E+W+S+N.I."/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11</dc:identifier>
+            <dc:title>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</dc:title>
+            <dct:alternative>Commission Directive (EU) 2020/2089</dct:alternative>
+            <dc:description>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</dc:description>
+            <dc:modified>2020-12-17</dc:modified>
+            <dc:publisher>King's Printer of Acts of Parliament</dc:publisher>
+            <dc:source>https://webarchive.nationalarchives.gov.uk/eu-exit/https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L2089</dc:source>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dct:valid>2020-12-11</dct:valid>
+            <ukm:EUMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="euretained"/>
+                  <ukm:DocumentMainType Value="EuropeanUnionDirective"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2020"/>
+               <ukm:Number Value="2089"/>
+               <ukm:EURLexIdentifiers xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:atom="http://www.w3.org/2005/Atom">
+                  <ukm:Cellar Value="e643d248-3eb1-11eb-b27b-01aa75ed71a1"/>
+                  <ukm:ELI Value="dir:2020:2089:oj"/>
+                  <ukm:CELEX Value="32020L2089"/>
+                  <ukm:OfficialJournal Value="JOL_2020_423_R_0011"/>
+               </ukm:EURLexIdentifiers>
+               <ukm:EnactmentDate Date="2020-12-11"/>
+               <ukm:EURLexModified Date="2020-12-17T07:25:10Z"/>
+               <ukm:EURLexExtracted Date="2020-12-17T08:36:16Z"/>
+               <ukm:XMLGenerated Date="2020-12-17T08:36:18Z"/>
+               <ukm:XMLImported Date="2020-12-17T08:37:25Z"/>
+               <ukm:Treaty Title="Treaty on the Functioning of the European Union (consolidated version 2012)" Code="TFEU_2012"/>
+               <ukm:CreatedBy Label="Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs" URI="http://publications.europa.eu/resource/authority/corporate-body/GROW"/>
+               <ukm:CreatedBy Label="European Commission" URI="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
+               <ukm:Subject Scheme="EuroVoc" Label="allergy" URI="http://eurovoc.europa.eu/5431"/>
+               <ukm:Subject Scheme="EuroVoc" Label="product safety" URI="http://eurovoc.europa.eu/4036"/>
+               <ukm:Subject Scheme="EuroVoc" Label="safety standard" URI="http://eurovoc.europa.eu/5234"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Other sectors for approximation of laws" URI="http://publications.europa.eu/resource/authority/fd_555/133099"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Internal market: approximation of laws" URI="http://publications.europa.eu/resource/authority/fd_555/1330"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Industrial policy and internal market" URI="http://publications.europa.eu/resource/authority/fd_555/13"/>
+               <ukm:Subject Scheme="EuroVoc" Label="organic chemical" URI="http://eurovoc.europa.eu/3817"/>
+               <ukm:Subject Scheme="EuroVoc" Label="labelling" URI="http://eurovoc.europa.eu/893"/>
+               <ukm:Subject Scheme="SubjectMatter" Label="Consumer protection" URI="http://publications.europa.eu/resource/authority/subject-matter/PROT"/>
+               <ukm:Subject Scheme="SubjectMatter" Label="Technical barriers" URI="http://publications.europa.eu/resource/authority/subject-matter/ETEC"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Protection of health and safety" URI="http://publications.europa.eu/resource/authority/fd_555/152030"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Consumers" URI="http://publications.europa.eu/resource/authority/fd_555/1520"/>
+               <ukm:Subject Scheme="DirectoryCode" Label="Environment, consumers and health protection" URI="http://publications.europa.eu/resource/authority/fd_555/15"/>
+               <ukm:Subject Scheme="EuroVoc" Label="technical standard" URI="http://eurovoc.europa.eu/5235"/>
+               <ukm:Subject Scheme="EuroVoc" Label="European standard" URI="http://eurovoc.europa.eu/3646"/>
+               <ukm:Subject Scheme="SubjectMatter" Label="Approximation of laws" URI="http://publications.europa.eu/resource/authority/subject-matter/RAPL"/>
+               <ukm:Subject Scheme="EuroVoc" Label="toy industry" URI="http://eurovoc.europa.eu/1391"/>
+            </ukm:EUMetadata>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/eudr/2020/2089/pdfs/eudr_20202089_adopted_en.pdf" Date="2020-12-11" Size="532550"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="6"/>
+               <ukm:BodyParagraphs Value="4"/>
+               <ukm:ScheduleParagraphs Value="2"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <article xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="article-1" ns0:target="true">
+            <num>Article 1</num>
+            <content>
+               <p>Annex II to Directive 2009/48/EC is amended in accordance with the Annex to this Directive.</p>
+            </content>
+         </article>
+      </body>
+   </act>
+</akomaNtoso>
