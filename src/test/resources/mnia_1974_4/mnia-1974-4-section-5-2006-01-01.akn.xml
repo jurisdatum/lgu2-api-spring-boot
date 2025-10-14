@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="mnia">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/mnia/1974/4"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/mnia/1974/4"/>
+               <FRBRdate date="1974-05-21" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/NorthernIrelandAssembly"/>
+               <FRBRcountry value="GB-NIR"/>
+               <FRBRnumber value="4"/>
+               <FRBRname value="1974 c. 4 (N.I.)"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/mnia/1974/4/2006-01-01"/>
+               <FRBRuri value="http://www.legislation.gov.uk/mnia/1974/4/2006-01-01"/>
+               <FRBRdate date="2006-01-01" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/mnia/1974/4/2006-01-01/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/mnia/1974/4/2006-01-01/data.akn"/>
+               <FRBRdate date="2025-10-10+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="1974-05-21" eId="date-enacted" source="#"/>
+            <eventRef date="2006-01-01" eId="date-2006-01-01" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-ni" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2006-01-01" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2006-01-01" type="jurisdiction"/>
+               <restriction href="#crossheading-miscellaneous" refersTo="#period-from-2006-01-01" type="jurisdiction"/>
+               <restriction href="#section-5" refersTo="#period-from-2006-01-01" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source=""/>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2006-01-01">
+               <timeInterval start="#date-2006-01-01" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-ni" href="" showAs="N.I."/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/mnia/1974/4/section/5/2006-01-01</dc:identifier>
+            <dc:title>National Insurance Measure (Northern Ireland) 1974</dc:title>
+            <dc:description>A Measure to amend the provisions of the National Insurance Acts (Northern Ireland) 1966 to 1973, the National Insurance (Industrial Injuries) Acts (Northern Ireland) 1966 to 1973 and the Workmen's Compensation (Supplementation) Acts (Northern Ireland) 1966 to 1973 as to the rate or amount of benefit and contributions; to make supplementary provisions, and minor amendments of certain enactments, relating to social security; and for purposes connected with those matters.</dc:description>
+            <dc:type>text</dc:type>
+            <dc:format>text/xml</dc:format>
+            <dc:language>en</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2011-05-26</dc:modified>
+            <dct:valid>2006-01-01</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="NorthernIrelandAssemblyMeasure"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="1974"/>
+               <ukm:Number Value="4"/>
+               <ukm:EnactmentDate Date="1974-05-21"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="7"/>
+               <ukm:BodyParagraphs Value="2"/>
+               <ukm:ScheduleParagraphs Value="5"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <hcontainer name="crossheading" ukl:Name="Pblock" eId="crossheading-miscellaneous">
+            <heading>Miscellaneous</heading>
+            <section xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="section-5" ns0:target="true">
+               <num>5</num>
+               <heading>Supplementary provisions and minor amendments.</heading>
+               <content>
+                  <blockList class="unordered none" ukl:Name="UnorderedList" ukl:Decoration="none">
+                     <item>
+                        <p>
+                           <i>Subs. (1) rep. by 1992 c. 9</i>
+                        </p>
+                     </item>
+                     <item>
+                        <p>
+                           <i>Subs. (2) rep. with saving by 1975 c. 18</i>
+                        </p>
+                     </item>
+                     <item>
+                        <p>
+                           <i>Subs. (3), (4) rep. by 1992 c. 9</i>
+                        </p>
+                     </item>
+                     <item>
+                        <p>
+                           <i>Subs. (5), with Schedule 4, effects amendments</i>
+                        </p>
+                     </item>
+                  </blockList>
+               </content>
+            </section>
+         </hcontainer>
+      </body>
+   </act>
+</akomaNtoso>
