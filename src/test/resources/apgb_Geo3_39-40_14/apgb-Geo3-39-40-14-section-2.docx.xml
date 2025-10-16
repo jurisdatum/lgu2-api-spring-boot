@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">2</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> How orders made by Parliament shall be deemed to have been appointed.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And all and singular the order or orders which shall have been made by either House of Parliament, and appointed for the day to which such House of Parliament shall have been adjourned or to any day or days subsequent thereto, other than and except any order or orders that shall have been specially appointed for particular days by either House of Parliament and declared to be so fixed notwithstanding any meeting of Parliament under this Act, and also except any order or orders made under the provisions of any Act of Parliament, shall be deemed and taken to have been appointed for the day on which the Parliament shall meet in pursuance of such proclamation.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

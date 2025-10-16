@@ -23,7 +23,22 @@ class DocxTest {
 
     static Stream<String> provide() {
         return Stream.of(
-            "ukpga/2023/29/2024-11-01"
+            "ukpga/2023/29/2024-11-01",
+            "ukla/2017/1/enacted", "ukla/2017/1/part/3/enacted",
+            "uksi/2025/3/made", "uksi/2025/3/regulation/2/made",
+            "ukpga/Geo6/6-7/48/1991-02-01", "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+            "asp/2025/11/2025-08-07", "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
+            "nia/2022/21/enacted", "nia/2022/21/introduction/enacted",
+            "aosp/1707/8/2007-01-01", "aep/Ann/6/11/1991-02-01",
+            "aep/Ann/6/11/part/1/1991-02-01", "aip/Geo3/40/38/1991-02-01",
+            "aip/Geo3/40/38/part/1/1991-02-01", "apgb/Geo3/39-40/14",
+            "apgb/Geo3/39-40/14/section/2","eudr/2020/2089/article/1/2020-12-11",
+            "asc/2025/1/2025-03-25", "asc/2025/1/part/1/chapter/2/2025-03-25",
+            "mwa/2011/7/section/1", "mwa/2011/7/section/1/2012-11-16",
+            "mnia/1974/4/section/5/2006-01-01","ukcm/2025/2/section/1",
+            "ssi/2025/281/regulation/1/made", "anaw/2020/3/section/2/welsh"
+
+
         );
     }
 
