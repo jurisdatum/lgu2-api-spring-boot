@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body>
+      <w:p>
+         <w:pPr>
+            <w:jc w:val="center"/>
+         </w:pPr>
+         <w:r>
+            <w:drawing>
+               <wp:inline xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+                          distT="0"
+                          distB="0"
+                          distL="0"
+                          distR="0">
+                  <wp:extent cx="1761744" cy="1520952"/>
+                  <wp:effectExtent l="0" t="0" r="0" b="0"/>
+                  <wp:docPr id="10000" name="crest.png" descr="crest"/>
+                  <wp:cNvGraphicFramePr/>
+                  <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                     <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                        <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                           <pic:nvPicPr>
+                              <pic:cNvPr id="20000" name="crest.png" descr="crest.png"/>
+                              <pic:cNvPicPr>
+                                 <a:picLocks noChangeAspect="1"/>
+                              </pic:cNvPicPr>
+                           </pic:nvPicPr>
+                           <pic:blipFill>
+                              <a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                                      r:embed="image0">
+                                 <a:extLst/>
+                              </a:blip>
+                              <a:srcRect l="0" t="0" r="0" b="0"/>
+                              <a:stretch>
+                                 <a:fillRect/>
+                              </a:stretch>
+                           </pic:blipFill>
+                           <pic:spPr>
+                              <a:xfrm>
+                                 <a:off x="0" y="0"/>
+                                 <a:ext cx="1761744" cy="1520952"/>
+                              </a:xfrm>
+                              <a:prstGeom prst="rect">
+                                 <a:avLst/>
+                              </a:prstGeom>
+                              <a:ln w="12700" cap="flat">
+                                 <a:noFill/>
+                                 <a:miter lim="400000"/>
+                              </a:ln>
+                              <a:effectLst/>
+                           </pic:spPr>
+                        </pic:pic>
+                     </a:graphicData>
+                  </a:graphic>
+               </wp:inline>
+            </w:drawing>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Act of Union (Ireland) 1800</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentNumber"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">1800 c.38</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="LongTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">An Act for the Union of Great Britain and Ireland.</w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-1" w:customMarkFollows="true"/>
+            <w:t>C1</w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-2" w:customMarkFollows="true"/>
+            <w:t>C2</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+      </w:p>
+      <!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">The parliaments of Great Britain and Ireland have resolved to concur in measures for uniting the two kingdoms:</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Whereas in pursuance of his Majesty’s most gracious recommendation to the two houses of parliament in Great Britain and Ireland respectively, to consider of such measures as might best tend to strengthen and consolidate the connexion between the two kingdoms, the two houses of the parliament of Great Britain, and the two houses of the parliament of Ireland have severally agreed and resolved, that in order to promote and secure the essential interests of Great Britain and Ireland, and to consolidate the strength, power, and resources of the British empire, it will be adviseable to concur in such measures as may best tend to unite the two kingdoms of Great Britain and Ireland, into one kingdom, in such manner, and on such terms and conditions, as may be established by the acts of the respective parliaments of Great Britain and Ireland.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-3" w:customMarkFollows="true"/>
+            <w:t>F1</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">I</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> said parliaments have agreed upon following articles:</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And whereas in furtherance of the said resolution, both houses of the said two parliaments respectively have likewise agreed upon certain articles for effectuating and establishing the said purposes in the tenor following:</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article First.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Great Britain and Ireland to be united for ever from 1 Jan. 1801.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be first article of the union of the kingdoms of Great Britain and Ireland, that the said kingdoms of Great Britain and Ireland shall, upon the first day of January, which shall be in the year of our lord one thousand eight hundred and one, and for ever, be united into one kingdom, by the name of “the united kingdom of Great Britain and Ireland,” and that the royal stile and titles appertaining to the imperial crown of the said united kingdom and its dependencies, and also the ensigns, armourial flags and banners thereof, shall be such as his Majesty by his royal proclamation under the great seal of the united kingdom shall be pleased to appoint.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article Second.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Succession to the crown to continue as at present.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be the second article of union, that the succession to the imperial crown of the said united kingdom, and of the dominions thereunto belonging, shall continue limited and settled in the same manner as the succession to the imperial crown of the said kingdoms of Great Britain and Ireland now stands limited and settled, according to the existing laws, and to the terms of union between England and Scotland.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article Third.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">One parliament.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be the third article of union, that the said united kingdom be represented in one and the same parliament, to be stiled “The parliament of the united kingdom of Great Britain and Ireland.”</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-4" w:customMarkFollows="true"/>
+            <w:t>F2</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article Fourth.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> The representation act shall be considered as part of the union.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That such act as shall be passed in the parliament of Ireland previous to the union, “</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">to regulate the mode by which the lords spiritual and temporal, and the commons to serve in the parliament of the united kingdom on the part of Ireland, shall be summoned and returned to the said parliament,</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">”shall be considered as forming part of the treaty of union, and shall be incorporated in the acts of the respective parliaments, by which the said union shall be ratified and established.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-5" w:customMarkFollows="true"/>
+            <w:t>F3</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> Irish peers who are not elected to serve as peers, may serve as British commoners, during which time they cannot be elected to serve as peers.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That any person holding any peerage of Ireland now subsisting, or hereafter to be created, shall not thereby be disqualified from being elected to serve, if he shall so think fit, or from serving, or continuing to serve, if he shall so think fit, for any county, city, or borough . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-6" w:customMarkFollows="true"/>
+            <w:t>F4</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">, in the house of commons of the united kingdom . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-7" w:customMarkFollows="true"/>
+            <w:t>F5</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">, but that so long as such peer of Ireland shall so continue to be a member of the house of commons, he shall not be entitled to the privilege of peerage . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-8" w:customMarkFollows="true"/>
+            <w:t>F6</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Creation of Irish peers.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it shall be lawful for his Majesty, his heirs and successors, to create peers of Ireland, and to make promotions in the peerage thereof, after the union, provided that no new creation of any such peers shall take place after the union, until three of the peerages of Ireland, which shall have been existing at the time of the union, shall have become extinct, and upon such extinction of three peerages, that it shall be lawful for his Majesty, his heirs and successors, to create one peer of Ireland, and in like manner, so often as three peerages of Ireland, shall become extinct, it shall be lawful for his Majesty, his heirs and successors, to create one other peer of the said part of the united kingdom; and if it shall happen that the peers of Ireland, shall by extinction of peerages, or otherwise, be reduced to the number of one hundred, exclusive of all such peers of Ireland, as shall hold any peerage of Great Britain, subsisting at the time of the union, or of the united kingdom created since the union, by which such peers shall be entitled to an hereditary seat in the house of lords of the united kingdom, then and in that case it shall and may be lawful for his Majesty, his heirs and successors, to create one peer of Ireland, as often as any one of such one hundred peerages shall fail by extinction, or as often as any one peer of Ireland, shall become entitled by descent or creation to an hereditary seat in the house of lords of the united kingdom, it being the true intent and meaning of this article, that at all times after the union, it shall and may be lawful for his Majesty, his heirs and successors, to keep up the peerage of Ireland, to the number of one hundred, over and above the number of such of the said peers as shall be entitled by descent or creation to an hereditary seat in the house of lords of the united kingdom.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> In what cases peerages may be deemed extinct.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That if any peerage shall at any time be in abeyance, such peerage shall be deemed and taken as an existing peerage, and no peerage shall be deemed extinct, unless on default of claimants to the inheritance of such peerage, for the space of one year from the death of the person who shall have been last possessed thereof, and if no claim shall be made to the inheritance of such peerage, in such form and manner as may from time to time be prescribed by the house of lords of the united kingdom, before the expiration of the said period of a year, then and in that case such peerage shall be deemed extinct, provided that nothing herein shall exclude any person from afterwards putting in a claim to the peerage so deemed extinct, and if such claim shall be allowed as valid by the judgment of the house of lords of the united kingdom reported to his Majesty, such peerage shall be considered as revived, and in case any new creation of a peerage of Ireland, shall have taken place in the interval, in consequence of the supposed extinction of such peerage, then no new right of creation shall accrue to his Majesty, his heirs or successors, in consequence of the next extinction which shall take place of any peerage of Ireland.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">How questions touching election of Irish commoners shall be decided.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That all questions touching the election of members to sit on the part of Ireland in the house of commons of the united kingdom, shall be heard and decided in the same manner as questions touching such elections in Great Britain now are, or at any time hereafter shall by law be heard and decided, subject nevertheless to such particular regulations in respect of Ireland, as from local circumstances the parliament of the united kingdom may from time to time deem expedient.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-9" w:customMarkFollows="true"/>
+            <w:t>F7</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> How the parliament of the united kingdom shall be constituted.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That when his Majesty, his heirs or successors, shall declare his, her, or their pleasure for holding the first, or any subsequent parliament of the united kingdom, a proclamation shall issue under the great seal of the united kingdom, to cause the . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-10" w:customMarkFollows="true"/>
+            <w:t>F8</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> commons, who are to serve in the parliament thereof on the part of Ireland, to be returned in such manner as by any act of this present session of the parliament of Ireland shall be provided, and that the lords spiritual and temporal, and commons of Great Britain shall, together with the . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F8</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> commons so returned as aforesaid on the part of Ireland, constitute the two houses of the parliament of the united kingdom.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-11" w:customMarkFollows="true"/>
+            <w:t>F9</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> Privileges, rights, ranks, and precedency of lords temporal in the imperial parliament.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-12" w:customMarkFollows="true"/>
+            <w:t>F10</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">and that the persons holding any temporal peerages of Ireland, existing at the time of the union, shall, from and after the union, have rank and precedency next, and immediately after all the persons holding peerages of the like orders and degrees in Great Britain subsisting at the time of the union; and that all peerages of Ireland, created after the union, shall have rank and precedency with the peerages of the united kingdom so created, according to the dates of their creations; and that all peerages, both of Great Britain and Ireland, now subsisting, or hereafter to be created, shall in all other respects from the date of the union be considered as peerages of the united kingdom, and that the peers of Ireland shall, as peers of the united kingdom, . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-13" w:customMarkFollows="true"/>
+            <w:t>F11</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> enjoy all privileges of peers as fully as the peers of Great Britain; the right and privilege of sitting in the house of lords, and the privileges depending thereon, . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F11</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> only excepted.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article Fifth.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> Church of Scotland to continue as at present established.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be the fifth article of union, that . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-14" w:customMarkFollows="true"/>
+            <w:t>F12</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> the doctrine, worship, discipline and government of the church of Scotland shall remain, and be preserved as the same are now established by law, and by the acts for the union of the two kingdoms of England and Scotland.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article Sixth.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Subjects of Great Britain and Ireland to be on same footing from 1 Jan. 1801.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be the sixth article of union, that his Majesty’s subjects of Great Britain and Ireland shall, from and after the first day of January, one thousand eight hundred and one, be entitled to the same privileges, and be on the same footing as to encouragements and bounties on the like articles, being the growth, produce, or manufacture of either country respectively, and generally in respect of trade and navigation in all ports and places in the united kingdom and its dependencies; and that in all treaties made by his Majesty, his heirs, and successors, with any foreign power, his Majesty’s subjects of Ireland shall have same the privileges, and be on the same footing as his Majesty’s subjects of Great Britain.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> No duty or bounty on exportation of produce of one country to the other.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That from the first day of January, one thousand eight hundred and one, all prohibitions and bounties on the export of articles the growth, produce, or manufacture of either country to the other, shall cease and determine; and that the said articles shall thenceforth be exported from one country to the other, without duty or bounty on such export.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> All articles the produce of either country shall be imported free from duty.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That all articles the growth, produce, or manufacture of either country, (not herein-after enumerated as subject to specific duties) shall from thenceforth be imported into each country from the other free from duty, other than such countervailing duties . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-15" w:customMarkFollows="true"/>
+            <w:t>F13</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> as shall hereafter be imposed by the parliament of the united kingdom in the manner herein-after provided; . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-16" w:customMarkFollows="true"/>
+            <w:t>F14</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-17" w:customMarkFollows="true"/>
+            <w:t>F15</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> Produce of either country, subject to internal duty, shall on importation into each country be subject to countervailing duty.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That any articles of the growth, produce, or manufacture of either country, which are or may be subject to internal duty, or to duty on the materials of which they are composed, may be made subject, on their importation into each country respectively from the other, to such countervailing duty as shall appear to be just and reasonable in respect of such internal duty or duties on the materials, . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-18" w:customMarkFollows="true"/>
+            <w:t>F16</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> and that upon the the export of the said articles from each country to the other respectively, a drawback shall be given equal in amount to the countervailing duty payable on such articles on the import thereof into the same country from the other, and that in like manner in future, it shall be competent to the united parliament to impose any new or additional countervailing duties, or to take off or diminish such existing countervailing duties as may appear on like principles to be just and reasonable, in respect of any future or additional internal duty on any article of the growth, produce, or manufacture of either country, or of any new or additional duty on any materials of which such article may be composed, or of any abatement of duty on the same, and that when any such new or additional countervailing duty shall be so imposed on the import of any article into either country from the other, a drawback equal in amount to such countervailing duty shall be given in like manner on the export of every such article respectively from the same country to the other.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Same charges on produce of either country exported through the other.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That all articles the growth, produce, or manufacture of either country, when exported through the other, shall in all cases be exported subject to the same charges, as if they had been exported directly from the country of which they were the growth, produce, or manufacture.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-19" w:customMarkFollows="true"/>
+            <w:t>F17</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-20" w:customMarkFollows="true"/>
+            <w:t>F18</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Article Seventh.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F18</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-21" w:customMarkFollows="true"/>
+            <w:t>C3</w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-22" w:customMarkFollows="true"/>
+            <w:t>C4</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Article Eighth.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">All civil and ecclesiastical laws and courts shall remain as now established, subject to future alterations; court of admiralty in Ireland, with appeal to chancery in Ireland; all contrary laws repealed.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be the eighth article of union, that all laws in force at the time of the union, and all the courts of civil and ecclesiastical jurisdiction within the respective kingdoms, shall remain as now by law established within the same, subject only to such alterations and regulations from time to time as circumstances may appear to the parliament of the united kingdom to require; . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-23" w:customMarkFollows="true"/>
+            <w:t>F19</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> provided that from and after the union there shall remain in Ireland an instance court of admiralty for the determination of causes civil and maritime only; and that the appeal from sentences of the said court shall be to his Majesty’s delegates in his court of chancery in Ireland; and that all laws at present in force in either kingdom, which shall be contrary to any of the provisions which may be enacted by any act for carrying these articles into effect, be from and after the union repealed.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> Said articles were approved of by his Majesty; said articles are hereby declared to be the articles of the union, and in force for ever from 1 January, 1801.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And whereas the said articles having by address of the respective houses of parliament in Great Britain and Ireland been humbly laid before his Majesty, his Majesty has been graciously pleased to approve the same, and to recommend it to his two houses of parliament in Great Britain and Ireland, to consider of such measures as may be necessary for giving effect to the said articles: In order therefore to give full effect and validity to the same, the said foregoing recited articles, each and every one of them, according to the true intent and tenor thereof, be ratified, confirmed and approved, and be, and they are hereby declared to be, the articles of the union of Great Britain and Ireland, and the same shall be in force and have effect for ever, from the first day of January, which shall be in the year of our Lord, one thousand eight hundred and one: provided that before that period an act shall have been passed by the parliament of Great Britain for carrying into effect, in the like manner, the said foregoing recited articles.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">II</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> Recital of the representation act passed this session:</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And whereas a bill, entitled, “The Parliamentary Representation Act (Ireland) 1800”, has passed the two houses of the parliament of this kingdom, the tenor whereof is as follows: “An Act to regulate the mode by which the lords spiritual and temporal, and the commons to serve in the parliament of the united kingdom on the part of Ireland, shall be summoned and returned to the said parliament:”</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-24" w:customMarkFollows="true"/>
+            <w:t>F20</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">III</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-25" w:customMarkFollows="true"/>
+            <w:t>F21</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">IV</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> When vacancies happen in counties, cities, or boroughs new elections shall be held.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And of the summoning of a new parliament, or if the seat of any of the . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-26" w:customMarkFollows="true"/>
+            <w:t>F22</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> commoners shall become vacant by death or otherwise, then the . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F22</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> counties, cities, or boroughs, or any of them, as the case may be, shall proceed to a new election; . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F22</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> and no meeting shall at any time hereafter be summoned, called, convened or held for the purpose of electing any person or persons to serve or act, or be considered as representative or representatives of any other place, town, city, corporation or borough, . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F22</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> or as representative or representatives of the freemen, freeholders, householders or inhabitants thereof, either in the parliament of the united kingdom or elsewhere (unless it shall hereafter be otherwise provided by the parliament of the united kingdom) . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-27" w:customMarkFollows="true"/>
+            <w:t>F23</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">V</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-28" w:customMarkFollows="true"/>
+            <w:t>F24</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">VI</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-29" w:customMarkFollows="true"/>
+            <w:t>F25</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">VIII</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> When a new parliament of united kingdom shall be summoned, lord chan. shall cause writs to be issued, &amp;c. and so on all vacancies in commons. </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-30" w:customMarkFollows="true"/>
+            <w:t>C5</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And whenever his Majesty, his heirs and successors, shall by proclamation under the greatseal of the united kingdom, summon a new parliament of the united kingdom of Great Britain and Ireland, the chancellor, keeper, or commissioners of the great seal of Ireland, shall cause writs to be issued to the several counties, cities and boroughs in Ireland, . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-31" w:customMarkFollows="true"/>
+            <w:t>F26</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> for the election of members to serve in the parliament of the united kingdom . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:t>F26</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> and whenever any vacancy of a seat in the house of commons of the parliament of the united kingdom for any of the said counties, cities or boroughs shall arise by death or otherwise, the chancellor, keeper, or commissioners of the great seal, upon such vacancy being certified to them respectively by the proper warrant, shall forthwith cause a writ to issue for the election of a person to fill up such vacancy, . . . . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-32" w:customMarkFollows="true"/>
+            <w:t>F27</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">IX</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> Recited bill shall be part of this act.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">The said bill so herein recited, be taken as a part of this act, and be deemed to all intents and purposes incorporated within the same: . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-33" w:customMarkFollows="true"/>
+            <w:t>F28</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-35" w:customMarkFollows="true"/>
+            <w:t>C7</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">X</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> Great seal of Ireland. </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-34" w:customMarkFollows="true"/>
+            <w:t>C6</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">And the great seal of Ireland may, if his Majesty shall so think fit, after the union be used in like manner as before the union except where it is otherwise provided by the foregoing articles, within Ireland, and his Majesty may, so long as he shall think fit, continue the privy council of Ireland, to be his privy council for Ireland.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>
