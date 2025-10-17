@@ -32,7 +32,8 @@
       "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
       "number" : null,
       "title" : null,
-      "label" : "P"
+      "label" : "P",
+      "end" : "2007-01-01"
     },
     "prevInfo" : {
       "href" : "aosp/1707/8/introduction/2007-01-01",
@@ -45,7 +46,8 @@
       "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
       "number" : null,
       "title" : null,
-      "label" : "P"
+      "label" : "P",
+      "end" : "2007-01-01"
     } ],
     "descendants" : [ {
       "element" : "P",
@@ -53,7 +55,8 @@
       "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
       "number" : null,
       "title" : null,
-      "label" : "P"
+      "label" : "P",
+      "end" : "2007-01-01"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

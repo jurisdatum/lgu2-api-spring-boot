@@ -56,14 +56,16 @@
       "href" : "ukpga/2000/8/part/VI",
       "number" : "Part VI",
       "title" : "Official Listing",
-      "label" : "Part VI"
+      "label" : "Part VI",
+      "start" : "2024-01-30"
     }, {
       "element" : "Pblock",
       "id" : "part-VI-crossheading-penalties",
       "href" : "ukpga/2000/8/part/VI/crossheading/penalties",
       "number" : null,
       "title" : "Penalties",
-      "label" : "Penalties"
+      "label" : "Penalties",
+      "start" : "2024-01-30"
     }, {
       "element" : "P1",
       "id" : "section-91",

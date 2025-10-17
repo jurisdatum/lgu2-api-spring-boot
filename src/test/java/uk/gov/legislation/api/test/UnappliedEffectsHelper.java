@@ -2,9 +2,12 @@ package uk.gov.legislation.api.test;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.Objects;
 
 public class UnappliedEffectsHelper {
+
     static String read(String resource) throws IOException {
         String content;
         try (var input = TransformTest.class.getResourceAsStream(resource)) {
@@ -24,4 +27,15 @@ public class UnappliedEffectsHelper {
         String resource = makeResourceName(id, ext);
         return read(resource);
     }
+
+    static void write(String resource, String content) throws IOException {
+        Path path = Path.of("src/test/resources", resource.substring(1));
+        Files.writeString(path, content);
+    }
+
+    static void write(String id, String ext, String content) throws IOException {
+        String resource = makeResourceName(id, ext);
+        write(resource, content);
+    }
+
 }

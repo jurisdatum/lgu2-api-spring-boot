@@ -55,14 +55,16 @@
     "href" : "ukpga/2000/8/schedule/6",
     "number" : "SCHEDULE 6",
     "title" : null,
-    "label" : "SCHEDULE 6"
+    "label" : "SCHEDULE 6",
+    "start" : "2020-12-31"
   }, {
     "element" : "Part",
     "id" : "schedule-6-part-1D",
     "href" : "ukpga/2000/8/schedule/6/part/1D",
     "number" : "PART 1D",
     "title" : "Part 4A permission: conditions for which the PRA is responsible in relation to insurers etc.",
-    "label" : "PART 1D"
+    "label" : "PART 1D",
+    "start" : "2020-12-31"
   }, {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",

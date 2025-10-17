@@ -1,6 +1,9 @@
 package uk.gov.legislation.api.responses;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+
+import java.time.LocalDate;
 
 public class Level {
 
@@ -21,5 +24,14 @@ public class Level {
 
     @Schema(example = "Section 91")
     public String label;
+
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+    public boolean prospective;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public LocalDate start;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public LocalDate end;
 
 }

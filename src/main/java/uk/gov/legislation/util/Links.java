@@ -113,7 +113,6 @@ public class Links {
         return builder.toString();
     }
 
-    // FixMe should return Optional<String>
     public static String extractFragmentIdentifierFromLink(String link) {
         Components components = parse(link);
         if (components == null)

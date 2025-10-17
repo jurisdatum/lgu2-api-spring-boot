@@ -8,14 +8,14 @@
     "isbn" : "9780105904403",
     "date" : "2025-08-06",
     "cite" : "2025 asp 11",
-    "version" : "2025-08-07",
+    "version" : "prospective",
     "status" : "revised",
     "title" : "Education (Scotland) Act 2025",
     "extent" : [ "S" ],
     "lang" : null,
     "publisher" : "Statute Law Database",
     "modified" : "2025-09-11",
-    "versions" : [ "enacted", "2025-08-07" ],
+    "versions" : [ "enacted", "prospective" ],
     "has" : {
       "introduction" : true,
       "schedules" : true
@@ -40,7 +40,8 @@
       "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
       "number" : null,
       "title" : "Reviews",
-      "label" : "Reviews"
+      "label" : "Reviews",
+      "prospective" : true
     },
     "prevInfo" : {
       "href" : "asp/2025/11/part/1/crossheading/supporting-provisions/2025-08-07",
@@ -56,14 +57,16 @@
       "href" : "asp/2025/11/part/1/2025-08-07",
       "number" : "Part 1",
       "title" : "Qualifications Scotland",
-      "label" : "Part 1"
+      "label" : "Part 1",
+      "prospective" : true
     }, {
       "element" : "Pblock",
       "id" : "part-1-crossheading-reviews",
       "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
       "number" : null,
       "title" : "Reviews",
-      "label" : "Reviews"
+      "label" : "Reviews",
+      "prospective" : true
     } ],
     "descendants" : [ {
       "element" : "Pblock",
@@ -71,14 +74,16 @@
       "href" : "asp/2025/11/part/1/crossheading/reviews/2025-08-07",
       "number" : null,
       "title" : "Reviews",
-      "label" : "Reviews"
+      "label" : "Reviews",
+      "prospective" : true
     }, {
       "element" : "P1",
       "id" : "section-31",
       "href" : "asp/2025/11/section/31/2025-08-07",
       "number" : "31",
       "title" : "Review of arrangements for assuring quality of qualifications",
-      "label" : "Section 31"
+      "label" : "Section 31",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-31-1",
@@ -183,7 +188,8 @@
       "href" : "asp/2025/11/section/32/2025-08-07",
       "number" : "32",
       "title" : "Review of accreditation function",
-      "label" : "Section 32"
+      "label" : "Section 32",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-32-1",

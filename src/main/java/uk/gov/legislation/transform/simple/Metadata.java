@@ -86,23 +86,25 @@ public class Metadata {
         }
     }
 
+    private static final String PROSPECTIVE = "prospective";
+
     /**
-     * Determines the appropriate version identifier for this legislation document or fragment.
+     * Determines the most appropriate version label for the current payload.
      *
-     * <p>The version logic follows these rules:
+     * <p>Rules applied in order:
      * <ol>
-     * <li>If no dct:valid date exists, this is an original (unrevised) version.
-     *     Returns the type-specific original version name (enacted, made, created, or adopted).</li>
-     * <li>If dct:valid date exists, this is a revised document that should have dated versions.
-     *     If no dated versions are found (defensive fallback), returns the dct:valid date.</li>
-     * <li>For document fragments: if dct:valid date is after the last actual revision date
-     *     (due to other document parts being amended more recently), returns the fragment's
-     *     last actual revision date instead of the overall document valid date.</li>
-     * <li>Otherwise, returns the dct:valid date as the current version.</li>
+     * <li>No {@code dct:valid} → return the type-specific first-version label
+     *     (e.g. enacted, made, created, adopted).</li>
+     * <li>Scan {@link #versions()} from newest to oldest and pick the first ISO date available.
+     *     If none exist, fall back to either {@link #PROSPECTIVE} (when the current fragment is
+     *     marked {@code Status="Prospective"}) or the raw {@code dct:valid} string.</li>
+     * <li>If the fragment-level {@code dct:valid} is newer than the latest dated label
+     *     (typical for fragments lagging behind a whole-document revision), return that latest
+     *     dated label instead of the fragment {@code dct:valid}.</li>
+     * <li>Otherwise return the {@code dct:valid} value.</li>
      * </ol>
-     *
-     * @return the version identifier string (either a type-specific name or an ISO date)
      */
+
     public String version() {
         if (valid == null)
             return FirstVersion.getFirstVersion(longType);
@@ -112,7 +114,11 @@ public class Metadata {
             .map(Optional::get)
             .findFirst();
         if (last.isEmpty())
-            return valid.toString();
+            return descendants.stream()  // first entry mirrors the current level; see descendants() doc
+                .findFirst()
+                .filter(d -> "Prospective".equals(d.status)).isPresent()
+                ? PROSPECTIVE
+                : valid.toString();
         if (valid.isAfter(last.get()))
             return last.get().toString();
         return valid.toString();
@@ -145,14 +151,43 @@ public class Metadata {
 
     private static final String REPEALED = " repealed";
 
+    /**
+     * Produces a normalised, ordered set of version labels for this document or fragment.
+     *
+     * <p>Behavioural notes:
+     * <ul>
+     * <li>Start from the titles supplied via {@code atom:link[@rel='…hasVersion']}.</li>
+     * <li>Strip the noisy {@code current} marker and, when present, substitute the appropriate
+     *     fallback:
+     *     <ul>
+     *     <li>If {@link #status} is {@code final} and no other labels remain, assume a
+     *         prospective snapshot exists and inject {@link #PROSPECTIVE}.</li>
+     *     <li>Otherwise re-add the authoritative {@code dct:valid} date for this snapshot
+     *         (unless {@link #version()} already resolved to {@link #PROSPECTIVE}).</li>
+     *     </ul>
+     * </li>
+     * <li>Always ensure the type-specific first-version label is present for {@code final}
+     *     documents.</li>
+     * <li>Normalise any trailing {@code "… repealed"} markers back to their base date.</li>
+     * <li>If {@link #version()} resolved to {@link #PROSPECTIVE}, add it once so the scalar and
+     *     set stay in sync.</li>
+     * </ul>
+     *
+     * @return version labels sorted by {@link Versions#COMPARATOR}
+     */
     public SortedSet<String> versions() {
         if (_versions2 != null)
             return _versions2;
         _versions2 = new TreeSet<>(Versions.COMPARATOR);
         _versions2.addAll(_versions);
         if (_versions2.remove("current")) {
-            if (this.valid != null)
-                _versions2.add(this.valid.toString());  // TODO check
+            if ("final".equals(status)) {
+                if (_versions2.isEmpty())
+                    _versions2.add(PROSPECTIVE);
+            } else {
+                if (!PROSPECTIVE.equals(version()) && this.valid != null) // should never be null if !"final".equals(status)
+                    _versions2.add( this.valid.toString());
+            }
         }
         if ("final".equals(status)) {
             String first = FirstVersion.getFirstVersion(longType);
@@ -166,6 +201,8 @@ public class Metadata {
                 _versions2.add(base);
             }
         }
+        if (PROSPECTIVE.equals(version()))
+            _versions2.add(PROSPECTIVE);
         return _versions2;
     }
 
@@ -294,6 +331,8 @@ public class Metadata {
 
     @JacksonXmlProperty(localName = "descendants")
     private List<Descendant> descendants = Collections.emptyList();
+
+    /* simplify/metadata.xsl places the current fragment as the first descendant; version() relies on that. */
 
     public List<uk.gov.legislation.api.responses.Level> descendants() {
         return descendants.stream().map(Level::convert).toList();

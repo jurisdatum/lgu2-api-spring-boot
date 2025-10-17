@@ -70,7 +70,8 @@
       "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
-      "label" : "CHAPTER 2"
+      "label" : "CHAPTER 2",
+      "start" : "2025-03-25"
     },
     "prevInfo" : {
       "href" : "asc/2025/1/part/1/chapter/1/2025-03-25",
@@ -86,14 +87,16 @@
       "href" : "asc/2025/1/part/1/2025-03-25",
       "number" : "PART 1",
       "title" : "SOCIAL CARE",
-      "label" : "PART 1"
+      "label" : "PART 1",
+      "start" : "2025-03-25"
     }, {
       "element" : "Chapter",
       "id" : "part-1-chapter-2",
       "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
-      "label" : "CHAPTER 2"
+      "label" : "CHAPTER 2",
+      "start" : "2025-03-25"
     } ],
     "descendants" : [ {
       "element" : "Chapter",
@@ -101,21 +104,24 @@
       "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
-      "label" : "CHAPTER 2"
+      "label" : "CHAPTER 2",
+      "start" : "2025-03-25"
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
       "href" : "asc/2025/1/part/1/chapter/2/crossheading/regulation-of-social-care-services-registration-etc-of-social-care-services-providers/2025-03-25",
       "number" : null,
       "title" : "Regulation of social care services: registration etc. of social care services providers",
-      "label" : "Regulation of social care services: registration etc. of social care services providers"
+      "label" : "Regulation of social care services: registration etc. of social care services providers",
+      "start" : "2025-03-25"
     }, {
       "element" : "P1",
       "id" : "section-14",
       "href" : "asc/2025/1/section/14/2025-03-25",
       "number" : "14",
       "title" : "Duty to submit and publish annual return",
-      "label" : "Section 14"
+      "label" : "Section 14",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-14-1",
@@ -199,7 +205,8 @@
       "href" : "asc/2025/1/section/15/2025-03-25",
       "number" : "15",
       "title" : "Application for cancellation of service provider’s registration: information to be provided",
-      "label" : "Section 15"
+      "label" : "Section 15",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-15-1",
@@ -325,14 +332,16 @@
       "href" : "asc/2025/1/part/1/chapter/2/crossheading/regulation-of-social-care-services-information-inspections-and-investigations/2025-03-25",
       "number" : null,
       "title" : "Regulation of social care services: information, inspections and investigations",
-      "label" : "Regulation of social care services: information, inspections and investigations"
+      "label" : "Regulation of social care services: information, inspections and investigations",
+      "prospective" : true
     }, {
       "element" : "P1",
       "id" : "section-17",
       "href" : "asc/2025/1/section/17/2025-03-25",
       "number" : "17",
       "title" : "Information, inspection and investigations",
-      "label" : "Section 17"
+      "label" : "Section 17",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-17-1",
@@ -549,14 +558,16 @@
       "href" : "asc/2025/1/part/1/chapter/2/crossheading/social-care-workers-registration-and-fitness-to-practise/2025-03-25",
       "number" : null,
       "title" : "Social care workers: registration and fitness to practise",
-      "label" : "Social care workers: registration and fitness to practise"
+      "label" : "Social care workers: registration and fitness to practise",
+      "prospective" : true
     }, {
       "element" : "P1",
       "id" : "section-18",
       "href" : "asc/2025/1/section/18/2025-03-25",
       "number" : "18",
       "title" : "Meaning of social care worker: childcare workers",
-      "label" : "Section 18"
+      "label" : "Section 18",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-18-1",
@@ -605,7 +616,8 @@
       "href" : "asc/2025/1/section/19/2025-03-25",
       "number" : "19",
       "title" : "Fitness to practise cases: powers to extend interim orders",
-      "label" : "Section 19"
+      "label" : "Section 19",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-19-1",
@@ -661,14 +673,16 @@
       "href" : "asc/2025/1/part/1/chapter/2/crossheading/local-authority-social-services-functions/2025-03-25",
       "number" : null,
       "title" : "Local authority social services functions",
-      "label" : "Local authority social services functions"
+      "label" : "Local authority social services functions",
+      "start" : "2025-03-25"
     }, {
       "element" : "P1",
       "id" : "section-20",
       "href" : "asc/2025/1/section/20/2025-03-25",
       "number" : "20",
       "title" : "Direct payments in social care",
-      "label" : "Section 20"
+      "label" : "Section 20",
+      "prospective" : true
     }, {
       "element" : "P2",
       "id" : "section-20-1",
@@ -759,7 +773,8 @@
       "href" : "asc/2025/1/part/1/chapter/2/crossheading/minor-and-consequential-amendments/2025-03-25",
       "number" : null,
       "title" : "Minor and consequential amendments",
-      "label" : "Minor and consequential amendments"
+      "label" : "Minor and consequential amendments",
+      "start" : "2025-03-25"
     }, {
       "element" : "P1",
       "id" : "section-22",
