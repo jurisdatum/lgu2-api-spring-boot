@@ -66,8 +66,14 @@ public class TableOfContents {
         @Schema
         public String title;
 
-        @Schema(example = "section-1")
+        @Schema(example = "crossheading-final-provisions", deprecated = true, description = "use href")
         public String ref;
+
+        @Schema(example = "crossheading-final-provisions")
+        public String id;
+
+        @Schema(example = "crossheading/final-provisions")
+        public String href;
 
         @JsonProperty
         public Set<Extent> extent;

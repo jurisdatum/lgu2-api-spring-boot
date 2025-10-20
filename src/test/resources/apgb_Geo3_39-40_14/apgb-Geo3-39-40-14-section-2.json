@@ -34,20 +34,20 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "apgb/Geo3/39-40/14/section/2",
+      "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
       "label" : "Section 2"
     },
     "prevInfo" : {
-      "href" : "apgb/Geo3/39-40/14/section/1.",
+      "href" : "section/1.",
       "label" : "Provision"
     },
     "nextInfo" : null,
     "ancestors" : [ {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "apgb/Geo3/39-40/14/section/2",
+      "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
       "label" : "Section 2"
@@ -55,7 +55,7 @@
     "descendants" : [ {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "apgb/Geo3/39-40/14/section/2",
+      "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
       "label" : "Section 2"

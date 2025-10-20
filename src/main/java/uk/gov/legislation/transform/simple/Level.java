@@ -41,7 +41,7 @@ public class Level {
         uk.gov.legislation.api.responses.Level other = new uk.gov.legislation.api.responses.Level();
         other.element = this.name;
         other.id = this.id;
-        other.href = Links.shorten(uri);
+        other.href = Links.extractFragmentIdentifierFromLink(uri);
         other.number = this.number;
         other.title = this.title;
         other.label = Labels.make(this);

@@ -120,7 +120,7 @@ public class ExpectedWelshResponseDataCy {
                           "fragmentInfo": {
                               "element": "P1",
                               "id": "regulation-2",
-                              "href": "wsi/2024/1002/regulation/2/made/welsh",
+                              "href": "regulation/2",
                               "number": "2",
                               "title": "Diwygio Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024",
                               "label": "Regulation 2"
@@ -129,7 +129,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P1",
                                   "id": "regulation-2",
-                                  "href": "wsi/2024/1002/regulation/2/made/welsh",
+                                  "href": "regulation/2",
                                   "number": "2",
                                   "title": "Diwygio Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024",
                                   "label": "Regulation 2"
@@ -139,7 +139,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P1",
                                   "id": "regulation-2",
-                                  "href": "wsi/2024/1002/regulation/2/made/welsh",
+                                  "href": "regulation/2",
                                   "number": "2",
                                   "title": "Diwygio Rheoliadau Addysg (Cydlynu Trefniadau Derbyn Ysgolion a Diwygiadau Amrywiol) (Cymru) 2024",
                                   "label": "Regulation 2"
@@ -147,7 +147,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P2",
                                   "id": "regulation-2-1",
-                                  "href": "wsi/2024/1002/regulation/2/1/made/welsh",
+                                  "href": "regulation/2/1",
                                   "number": "1",
                                   "title": null,
                                   "label": "P2"
@@ -155,7 +155,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P2",
                                   "id": "regulation-2-2",
-                                  "href": "wsi/2024/1002/regulation/2/2/made/welsh",
+                                  "href": "regulation/2/2",
                                   "number": "2",
                                   "title": null,
                                   "label": "P2"
@@ -163,7 +163,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P3",
                                   "id": "regulation-2-2-a",
-                                  "href": "wsi/2024/1002/regulation/2/2/a/made/welsh",
+                                  "href": "regulation/2/2/a",
                                   "number": "a",
                                   "title": null,
                                   "label": "P3"
@@ -171,7 +171,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P3",
                                   "id": "regulation-2-2-b",
-                                  "href": "wsi/2024/1002/regulation/2/2/b/made/welsh",
+                                  "href": "regulation/2/2/b",
                                   "number": "b",
                                   "title": null,
                                   "label": "P3"
@@ -179,7 +179,7 @@ public class ExpectedWelshResponseDataCy {
                               {
                                   "element": "P2",
                                   "id": "regulation-2-3",
-                                  "href": "wsi/2024/1002/regulation/2/3/made/welsh",
+                                  "href": "regulation/2/3",
                                   "number": "3",
                                   "title": null,
                                   "label": "P2"

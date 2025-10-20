@@ -67,24 +67,24 @@
     "fragmentInfo" : {
       "element" : "Chapter",
       "id" : "part-1-chapter-2",
-      "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
+      "href" : "part/1/chapter/2",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
       "label" : "CHAPTER 2",
       "start" : "2025-03-25"
     },
     "prevInfo" : {
-      "href" : "asc/2025/1/part/1/chapter/1/2025-03-25",
+      "href" : "part/1/chapter/1",
       "label" : "Chapter"
     },
     "nextInfo" : {
-      "href" : "asc/2025/1/part/2/2025-03-25",
+      "href" : "part/2",
       "label" : "Part"
     },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "asc/2025/1/part/1/2025-03-25",
+      "href" : "part/1",
       "number" : "PART 1",
       "title" : "SOCIAL CARE",
       "label" : "PART 1",
@@ -92,7 +92,7 @@
     }, {
       "element" : "Chapter",
       "id" : "part-1-chapter-2",
-      "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
+      "href" : "part/1/chapter/2",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
       "label" : "CHAPTER 2",
@@ -101,7 +101,7 @@
     "descendants" : [ {
       "element" : "Chapter",
       "id" : "part-1-chapter-2",
-      "href" : "asc/2025/1/part/1/chapter/2/2025-03-25",
+      "href" : "part/1/chapter/2",
       "number" : "CHAPTER 2",
       "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
       "label" : "CHAPTER 2",
@@ -109,7 +109,7 @@
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
-      "href" : "asc/2025/1/part/1/chapter/2/crossheading/regulation-of-social-care-services-registration-etc-of-social-care-services-providers/2025-03-25",
+      "href" : "part/1/chapter/2/crossheading/regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
       "number" : null,
       "title" : "Regulation of social care services: registration etc. of social care services providers",
       "label" : "Regulation of social care services: registration etc. of social care services providers",
@@ -117,7 +117,7 @@
     }, {
       "element" : "P1",
       "id" : "section-14",
-      "href" : "asc/2025/1/section/14/2025-03-25",
+      "href" : "section/14",
       "number" : "14",
       "title" : "Duty to submit and publish annual return",
       "label" : "Section 14",
@@ -125,84 +125,84 @@
     }, {
       "element" : "P2",
       "id" : "section-14-1",
-      "href" : "asc/2025/1/section/14/1/2025-03-25",
+      "href" : "section/14/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-14-1-a",
-      "href" : "asc/2025/1/section/14/1/a/2025-03-25",
+      "href" : "section/14/1/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-14-1-b",
-      "href" : "asc/2025/1/section/14/1/b/2025-03-25",
+      "href" : "section/14/1/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-14-2",
-      "href" : "asc/2025/1/section/14/2/2025-03-25",
+      "href" : "section/14/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-14-2-a",
-      "href" : "asc/2025/1/section/14/2/a/2025-03-25",
+      "href" : "section/14/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-14-2-b",
-      "href" : "asc/2025/1/section/14/2/b/2025-03-25",
+      "href" : "section/14/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-14-2-c",
-      "href" : "asc/2025/1/section/14/2/c/2025-03-25",
+      "href" : "section/14/2/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-14-2-d",
-      "href" : "asc/2025/1/section/14/2/d/2025-03-25",
+      "href" : "section/14/2/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-14-3",
-      "href" : "asc/2025/1/section/14/3/2025-03-25",
+      "href" : "section/14/3",
       "number" : "3",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-14-3-a",
-      "href" : "asc/2025/1/section/14/3/a/2025-03-25",
+      "href" : "section/14/3/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-14-3-b",
-      "href" : "asc/2025/1/section/14/3/b/2025-03-25",
+      "href" : "section/14/3/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P1",
       "id" : "section-15",
-      "href" : "asc/2025/1/section/15/2025-03-25",
+      "href" : "section/15",
       "number" : "15",
       "title" : "Application for cancellation of service provider’s registration: information to be provided",
       "label" : "Section 15",
@@ -210,126 +210,126 @@
     }, {
       "element" : "P2",
       "id" : "section-15-1",
-      "href" : "asc/2025/1/section/15/1/2025-03-25",
+      "href" : "section/15/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-15-2",
-      "href" : "asc/2025/1/section/15/2/2025-03-25",
+      "href" : "section/15/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P1",
       "id" : "section-16",
-      "href" : "asc/2025/1/section/16/2025-03-25",
+      "href" : "section/16",
       "number" : "16",
       "title" : "Cancellation and variation of service provider’s registration without application: notice procedures",
       "label" : "Section 16"
     }, {
       "element" : "P2",
       "id" : "section-16-1",
-      "href" : "asc/2025/1/section/16/1/2025-03-25",
+      "href" : "section/16/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-16-2",
-      "href" : "asc/2025/1/section/16/2/2025-03-25",
+      "href" : "section/16/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-16-2-a",
-      "href" : "asc/2025/1/section/16/2/a/2025-03-25",
+      "href" : "section/16/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-2-b",
-      "href" : "asc/2025/1/section/16/2/b/2025-03-25",
+      "href" : "section/16/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-2-c",
-      "href" : "asc/2025/1/section/16/2/c/2025-03-25",
+      "href" : "section/16/2/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-2-d",
-      "href" : "asc/2025/1/section/16/2/d/2025-03-25",
+      "href" : "section/16/2/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-2-e",
-      "href" : "asc/2025/1/section/16/2/e/2025-03-25",
+      "href" : "section/16/2/e",
       "number" : "e",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-16-3",
-      "href" : "asc/2025/1/section/16/3/2025-03-25",
+      "href" : "section/16/3",
       "number" : "3",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-16-3-a",
-      "href" : "asc/2025/1/section/16/3/a/2025-03-25",
+      "href" : "section/16/3/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-16-3-a-i",
-      "href" : "asc/2025/1/section/16/3/a/i/2025-03-25",
+      "href" : "section/16/3/a/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-16-3-a-ii",
-      "href" : "asc/2025/1/section/16/3/a/ii/2025-03-25",
+      "href" : "section/16/3/a/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-16-3-b",
-      "href" : "asc/2025/1/section/16/3/b/2025-03-25",
+      "href" : "section/16/3/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-3-c",
-      "href" : "asc/2025/1/section/16/3/c/2025-03-25",
+      "href" : "section/16/3/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-16-3-d",
-      "href" : "asc/2025/1/section/16/3/d/2025-03-25",
+      "href" : "section/16/3/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations",
-      "href" : "asc/2025/1/part/1/chapter/2/crossheading/regulation-of-social-care-services-information-inspections-and-investigations/2025-03-25",
+      "href" : "part/1/chapter/2/crossheading/regulation-of-social-care-services-information-inspections-and-investigations",
       "number" : null,
       "title" : "Regulation of social care services: information, inspections and investigations",
       "label" : "Regulation of social care services: information, inspections and investigations",
@@ -337,7 +337,7 @@
     }, {
       "element" : "P1",
       "id" : "section-17",
-      "href" : "asc/2025/1/section/17/2025-03-25",
+      "href" : "section/17",
       "number" : "17",
       "title" : "Information, inspection and investigations",
       "label" : "Section 17",
@@ -345,217 +345,217 @@
     }, {
       "element" : "P2",
       "id" : "section-17-1",
-      "href" : "asc/2025/1/section/17/1/2025-03-25",
+      "href" : "section/17/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-17-2",
-      "href" : "asc/2025/1/section/17/2/2025-03-25",
+      "href" : "section/17/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-17-2-a",
-      "href" : "asc/2025/1/section/17/2/a/2025-03-25",
+      "href" : "section/17/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-17-2-a-i",
-      "href" : "asc/2025/1/section/17/2/a/i/2025-03-25",
+      "href" : "section/17/2/a/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-17-2-a-ii",
-      "href" : "asc/2025/1/section/17/2/a/ii/2025-03-25",
+      "href" : "section/17/2/a/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-17-2-b",
-      "href" : "asc/2025/1/section/17/2/b/2025-03-25",
+      "href" : "section/17/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-2-c",
-      "href" : "asc/2025/1/section/17/2/c/2025-03-25",
+      "href" : "section/17/2/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-2-d",
-      "href" : "asc/2025/1/section/17/2/d/2025-03-25",
+      "href" : "section/17/2/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-17-3",
-      "href" : "asc/2025/1/section/17/3/2025-03-25",
+      "href" : "section/17/3",
       "number" : "3",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-17-4",
-      "href" : "asc/2025/1/section/17/4/2025-03-25",
+      "href" : "section/17/4",
       "number" : "4",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-17-4-a",
-      "href" : "asc/2025/1/section/17/4/a/2025-03-25",
+      "href" : "section/17/4/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-4-b",
-      "href" : "asc/2025/1/section/17/4/b/2025-03-25",
+      "href" : "section/17/4/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-4-c",
-      "href" : "asc/2025/1/section/17/4/c/2025-03-25",
+      "href" : "section/17/4/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-17-5",
-      "href" : "asc/2025/1/section/17/5/2025-03-25",
+      "href" : "section/17/5",
       "number" : "5",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-17-5-a",
-      "href" : "asc/2025/1/section/17/5/a/2025-03-25",
+      "href" : "section/17/5/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-17-5-a-i",
-      "href" : "asc/2025/1/section/17/5/a/i/2025-03-25",
+      "href" : "section/17/5/a/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-17-5-a-ii",
-      "href" : "asc/2025/1/section/17/5/a/ii/2025-03-25",
+      "href" : "section/17/5/a/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-17-5-b",
-      "href" : "asc/2025/1/section/17/5/b/2025-03-25",
+      "href" : "section/17/5/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-5-c",
-      "href" : "asc/2025/1/section/17/5/c/2025-03-25",
+      "href" : "section/17/5/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-5-d",
-      "href" : "asc/2025/1/section/17/5/d/2025-03-25",
+      "href" : "section/17/5/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-17-6",
-      "href" : "asc/2025/1/section/17/6/2025-03-25",
+      "href" : "section/17/6",
       "number" : "6",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-17-6-a",
-      "href" : "asc/2025/1/section/17/6/a/2025-03-25",
+      "href" : "section/17/6/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-17-6-a-i",
-      "href" : "asc/2025/1/section/17/6/a/i/2025-03-25",
+      "href" : "section/17/6/a/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-17-6-a-ii",
-      "href" : "asc/2025/1/section/17/6/a/ii/2025-03-25",
+      "href" : "section/17/6/a/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-17-6-b",
-      "href" : "asc/2025/1/section/17/6/b/2025-03-25",
+      "href" : "section/17/6/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-6-c",
-      "href" : "asc/2025/1/section/17/6/c/2025-03-25",
+      "href" : "section/17/6/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-6-d",
-      "href" : "asc/2025/1/section/17/6/d/2025-03-25",
+      "href" : "section/17/6/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-17-7",
-      "href" : "asc/2025/1/section/17/7/2025-03-25",
+      "href" : "section/17/7",
       "number" : "7",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-17-7-a",
-      "href" : "asc/2025/1/section/17/7/a/2025-03-25",
+      "href" : "section/17/7/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-17-7-b",
-      "href" : "asc/2025/1/section/17/7/b/2025-03-25",
+      "href" : "section/17/7/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise",
-      "href" : "asc/2025/1/part/1/chapter/2/crossheading/social-care-workers-registration-and-fitness-to-practise/2025-03-25",
+      "href" : "part/1/chapter/2/crossheading/social-care-workers-registration-and-fitness-to-practise",
       "number" : null,
       "title" : "Social care workers: registration and fitness to practise",
       "label" : "Social care workers: registration and fitness to practise",
@@ -563,7 +563,7 @@
     }, {
       "element" : "P1",
       "id" : "section-18",
-      "href" : "asc/2025/1/section/18/2025-03-25",
+      "href" : "section/18",
       "number" : "18",
       "title" : "Meaning of social care worker: childcare workers",
       "label" : "Section 18",
@@ -571,49 +571,49 @@
     }, {
       "element" : "P2",
       "id" : "section-18-1",
-      "href" : "asc/2025/1/section/18/1/2025-03-25",
+      "href" : "section/18/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-18-2",
-      "href" : "asc/2025/1/section/18/2/2025-03-25",
+      "href" : "section/18/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-18-2-a",
-      "href" : "asc/2025/1/section/18/2/a/2025-03-25",
+      "href" : "section/18/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-18-2-a-i",
-      "href" : "asc/2025/1/section/18/2/a/i/2025-03-25",
+      "href" : "section/18/2/a/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-18-2-a-ii",
-      "href" : "asc/2025/1/section/18/2/a/ii/2025-03-25",
+      "href" : "section/18/2/a/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-18-2-b",
-      "href" : "asc/2025/1/section/18/2/b/2025-03-25",
+      "href" : "section/18/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P1",
       "id" : "section-19",
-      "href" : "asc/2025/1/section/19/2025-03-25",
+      "href" : "section/19",
       "number" : "19",
       "title" : "Fitness to practise cases: powers to extend interim orders",
       "label" : "Section 19",
@@ -621,56 +621,56 @@
     }, {
       "element" : "P2",
       "id" : "section-19-1",
-      "href" : "asc/2025/1/section/19/1/2025-03-25",
+      "href" : "section/19/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-19-2",
-      "href" : "asc/2025/1/section/19/2/2025-03-25",
+      "href" : "section/19/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-19-2-a",
-      "href" : "asc/2025/1/section/19/2/a/2025-03-25",
+      "href" : "section/19/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-19-2-b",
-      "href" : "asc/2025/1/section/19/2/b/2025-03-25",
+      "href" : "section/19/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-19-2-c",
-      "href" : "asc/2025/1/section/19/2/c/2025-03-25",
+      "href" : "section/19/2/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-19-2-d",
-      "href" : "asc/2025/1/section/19/2/d/2025-03-25",
+      "href" : "section/19/2/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-19-2-e",
-      "href" : "asc/2025/1/section/19/2/e/2025-03-25",
+      "href" : "section/19/2/e",
       "number" : "e",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-local-authority-social-services-functions",
-      "href" : "asc/2025/1/part/1/chapter/2/crossheading/local-authority-social-services-functions/2025-03-25",
+      "href" : "part/1/chapter/2/crossheading/local-authority-social-services-functions",
       "number" : null,
       "title" : "Local authority social services functions",
       "label" : "Local authority social services functions",
@@ -678,7 +678,7 @@
     }, {
       "element" : "P1",
       "id" : "section-20",
-      "href" : "asc/2025/1/section/20/2025-03-25",
+      "href" : "section/20",
       "number" : "20",
       "title" : "Direct payments in social care",
       "label" : "Section 20",
@@ -686,91 +686,91 @@
     }, {
       "element" : "P2",
       "id" : "section-20-1",
-      "href" : "asc/2025/1/section/20/1/2025-03-25",
+      "href" : "section/20/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-20-2",
-      "href" : "asc/2025/1/section/20/2/2025-03-25",
+      "href" : "section/20/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-20-2-a",
-      "href" : "asc/2025/1/section/20/2/a/2025-03-25",
+      "href" : "section/20/2/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-20-2-b",
-      "href" : "asc/2025/1/section/20/2/b/2025-03-25",
+      "href" : "section/20/2/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-20-2-c",
-      "href" : "asc/2025/1/section/20/2/c/2025-03-25",
+      "href" : "section/20/2/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-20-2-d",
-      "href" : "asc/2025/1/section/20/2/d/2025-03-25",
+      "href" : "section/20/2/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P1",
       "id" : "section-21",
-      "href" : "asc/2025/1/section/21/2025-03-25",
+      "href" : "section/21",
       "number" : "21",
       "title" : "Accommodation of children",
       "label" : "Section 21"
     }, {
       "element" : "P2",
       "id" : "section-21-1",
-      "href" : "asc/2025/1/section/21/1/2025-03-25",
+      "href" : "section/21/1",
       "number" : "1",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-21-1-a",
-      "href" : "asc/2025/1/section/21/1/a/2025-03-25",
+      "href" : "section/21/1/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-21-1-b",
-      "href" : "asc/2025/1/section/21/1/b/2025-03-25",
+      "href" : "section/21/1/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-21-2",
-      "href" : "asc/2025/1/section/21/2/2025-03-25",
+      "href" : "section/21/2",
       "number" : "2",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-21-3",
-      "href" : "asc/2025/1/section/21/3/2025-03-25",
+      "href" : "section/21/3",
       "number" : "3",
       "title" : null,
       "label" : "P2"
     }, {
       "element" : "Pblock",
       "id" : "part-1-chapter-2-crossheading-minor-and-consequential-amendments",
-      "href" : "asc/2025/1/part/1/chapter/2/crossheading/minor-and-consequential-amendments/2025-03-25",
+      "href" : "part/1/chapter/2/crossheading/minor-and-consequential-amendments",
       "number" : null,
       "title" : "Minor and consequential amendments",
       "label" : "Minor and consequential amendments",
@@ -778,7 +778,7 @@
     }, {
       "element" : "P1",
       "id" : "section-22",
-      "href" : "asc/2025/1/section/22/2025-03-25",
+      "href" : "section/22",
       "number" : "22",
       "title" : "Social care: minor and consequential amendments",
       "label" : "Section 22"

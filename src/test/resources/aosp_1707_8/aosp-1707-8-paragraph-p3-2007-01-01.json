@@ -29,21 +29,21 @@
     "fragmentInfo" : {
       "element" : "P",
       "id" : "paragraph-p3",
-      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "href" : "paragraph/p3",
       "number" : null,
       "title" : null,
       "label" : "P",
       "end" : "2007-01-01"
     },
     "prevInfo" : {
-      "href" : "aosp/1707/8/introduction/2007-01-01",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : null,
     "ancestors" : [ {
       "element" : "P",
       "id" : "paragraph-p3",
-      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "href" : "paragraph/p3",
       "number" : null,
       "title" : null,
       "label" : "P",
@@ -52,7 +52,7 @@
     "descendants" : [ {
       "element" : "P",
       "id" : "paragraph-p3",
-      "href" : "aosp/1707/8/paragraph/p3/2007-01-01",
+      "href" : "paragraph/p3",
       "number" : null,
       "title" : null,
       "label" : "P",

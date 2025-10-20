@@ -36,21 +36,21 @@
     "fragmentInfo" : {
       "element" : "PrimaryPrelims",
       "id" : null,
-      "href" : "nia/2022/21/introduction/enacted",
+      "href" : "introduction",
       "number" : "2022 Chapter 21",
       "title" : "School Age Act (Northern Ireland) 2022",
       "label" : "PrimaryPrelims"
     },
     "prevInfo" : null,
     "nextInfo" : {
-      "href" : "nia/2022/21/section/1/enacted",
+      "href" : "section/1",
       "label" : "Provision"
     },
     "ancestors" : [ ],
     "descendants" : [ {
       "element" : "PrimaryPrelims",
       "id" : null,
-      "href" : "nia/2022/21/introduction/enacted",
+      "href" : "introduction",
       "number" : "2022 Chapter 21",
       "title" : "School Age Act (Northern Ireland) 2022",
       "label" : "PrimaryPrelims"

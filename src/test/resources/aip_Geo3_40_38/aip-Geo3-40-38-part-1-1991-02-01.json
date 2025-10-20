@@ -34,23 +34,23 @@
     "fragmentInfo" : {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aip/Geo3/40/38/part/1",
+      "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
       "label" : "Article First."
     },
     "prevInfo" : {
-      "href" : "aip/Geo3/40/38/section/I.",
+      "href" : "section/I.",
       "label" : "Provision"
     },
     "nextInfo" : {
-      "href" : "aip/Geo3/40/38/part/2",
+      "href" : "part/2",
       "label" : "Part"
     },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aip/Geo3/40/38/part/1",
+      "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
       "label" : "Article First."
@@ -58,14 +58,14 @@
     "descendants" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aip/Geo3/40/38/part/1",
+      "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
       "label" : "Article First."
     }, {
       "element" : "P1group",
       "id" : "section-wrapper2",
-      "href" : "aip/Geo3/40/38/section/wrapper2",
+      "href" : "section/wrapper2",
       "number" : null,
       "title" : "Great Britain and Ireland to be united for ever from 1 Jan. 1801.",
       "label" : "P1group"

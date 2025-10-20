@@ -29,7 +29,8 @@
             <xsl:variable name="name" select="lower-case($name)" />
             <xsl:sequence select="$name" />
         </xsl:attribute>
-        <xsl:call-template name="ref" />
+        <xsl:copy-of select="@ContentRef" />
+        <xsl:copy-of select="@DocumentURI" />
         <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </item>
@@ -37,7 +38,8 @@
 
 <xsl:template match="ContentsAppendix">
     <appendix name="appendix">
-        <xsl:call-template name="ref" />
+        <xsl:copy-of select="@ContentRef" />
+        <xsl:copy-of select="@DocumentURI" />
         <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </appendix>
@@ -52,7 +54,8 @@
 
 <xsl:template match="ContentsSchedule">
     <schedule name="schedule">
-        <xsl:call-template name="ref" />
+        <xsl:copy-of select="@ContentRef" />
+        <xsl:copy-of select="@DocumentURI" />
         <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </schedule>
@@ -73,16 +76,11 @@
 <xsl:template match="ContentsAttachment">
     <xsl:element name="{ if (exists(../following-sibling::ContentsSchedules)) then 'attachment1' else 'attachment' }">
         <xsl:attribute name="name">attachment</xsl:attribute>
-        <xsl:call-template name="ref" />
+        <xsl:copy-of select="@ContentRef" />
+        <xsl:copy-of select="@DocumentURI" />
         <xsl:call-template name="toc-extent" />
         <xsl:apply-templates />
     </xsl:element>
-</xsl:template>
-
-<xsl:template name="ref">
-    <xsl:attribute name="ref">
-        <xsl:sequence select="@ContentRef" />
-    </xsl:attribute>
 </xsl:template>
 
 <xsl:template name="toc-extent">

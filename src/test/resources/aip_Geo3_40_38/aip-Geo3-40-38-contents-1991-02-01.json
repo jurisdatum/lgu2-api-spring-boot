@@ -38,31 +38,41 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
       "name" : "item",
       "number" : "",
       "title" : "The parliaments of Great Britain and Ireland have resolved to concur in measures for uniting the two kingdoms:",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "[I.]",
       "title" : " said parliaments have agreed upon following articles:",
       "ref" : "section-I.",
+      "id" : "section-I.",
+      "href" : "section/I.",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "part",
       "number" : "Article First.",
       "title" : null,
       "ref" : "part-1",
+      "id" : "part-1",
+      "href" : "part/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "Great Britain and Ireland to be united for ever from 1 Jan. 1801.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -70,12 +80,16 @@
       "number" : "Article Second.",
       "title" : null,
       "ref" : "part-2",
+      "id" : "part-2",
+      "href" : "part/2",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "Succession to the crown to continue as at present.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -83,104 +97,138 @@
       "number" : "Article Third.",
       "title" : null,
       "ref" : "part-3",
+      "id" : "part-3",
+      "href" : "part/3",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "One parliament.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "part",
       "number" : "Article Fourth.",
       "title" : null,
       "ref" : "part-4",
+      "id" : "part-4",
+      "href" : "part/4",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " The representation act shall be considered as part of the union.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . ....",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " Irish peers who are not elected to serve as peers, may serve as British commoners, during which time they cannot be elected to serve as peers.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : "Creation of Irish peers.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " In what cases peerages may be deemed extinct.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : "How questions touching election of Irish commoners shall be decided.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " How the parliament of the united kingdom shall be constituted.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " Privileges, rights, ranks, and precedency of lords temporal in the imperial parliament.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "part",
       "number" : "Article Fifth.",
       "title" : null,
       "ref" : "part-5",
+      "id" : "part-5",
+      "href" : "part/5",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : " Church of Scotland to continue as at present established.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -188,61 +236,81 @@
       "number" : "Article Sixth.",
       "title" : null,
       "ref" : "part-6",
+      "id" : "part-6",
+      "href" : "part/6",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "Subjects of Great Britain and Ireland to be on same footing from 1 Jan. 1801.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " No duty or bounty on exportation of produce of one country to the other.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " All articles the produce of either country shall be imported free from duty.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " Produce of either country, subject to internal duty, shall on importation into each country be subject to countervailing duty.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : "Same charges on produce of either country exported through the other.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "part",
       "number" : "Article Seventh.",
       "title" : null,
       "ref" : "part-7",
+      "id" : "part-7",
+      "href" : "part/7",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -250,67 +318,89 @@
       "number" : "Article Eighth.",
       "title" : null,
       "ref" : "part-8",
+      "id" : "part-8",
+      "href" : "part/8",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : "All civil and ecclesiastical laws and courts shall remain as now established, subject to future alterations; court of admiralty in Ireland, with appeal to chancery in Ireland; all contrary laws repealed.",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
       "name" : "item",
       "number" : "",
       "title" : " Said articles were approved of by his Majesty; said articles are hereby declared to be the articles of the union, and in force for ever from 1 January, 1801.",
-      "ref" : "",
+      "ref" : null,
+      "id" : null,
+      "href" : null,
       "extent" : [ ]
     }, {
       "name" : "item",
       "number" : "II",
       "title" : " Recital of the representation act passed this session:",
       "ref" : "section-II",
+      "id" : "section-II",
+      "href" : "section/II",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "III",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
       "ref" : "section-III",
+      "id" : "section-III",
+      "href" : "section/III",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "IV",
       "title" : " When vacancies happen in counties, cities, or boroughs new elections shall be held.",
       "ref" : "section-IV",
+      "id" : "section-IV",
+      "href" : "section/IV",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "V",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
       "ref" : "section-V",
+      "id" : "section-V",
+      "href" : "section/V",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "VI—VII",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
       "ref" : "section-VIVII.",
+      "id" : "section-VIVII.",
+      "href" : "section/VIVII.",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "VIII",
       "title" : " When a new parliament of united kingdom shall be summoned, lord chan. shall cause writs to be issued, &c. and so on all vacancies in commons. ",
       "ref" : "section-VIII",
+      "id" : "section-VIII",
+      "href" : "section/VIII",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "IX",
       "title" : " Recited bill shall be part of this act.",
       "ref" : "section-IX",
+      "id" : "section-IX",
+      "href" : "section/IX",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "X",
       "title" : " Great seal of Ireland. ",
       "ref" : "section-X",
+      "id" : "section-X",
+      "href" : "section/X",
       "extent" : [ "E", "W", "S", "NI" ]
     } ]
   }

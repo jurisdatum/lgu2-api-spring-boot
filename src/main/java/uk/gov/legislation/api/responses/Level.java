@@ -10,10 +10,10 @@ public class Level {
     @Schema(example = "P1")
     public String element;
 
-    @Schema(example = "section-91")
+    @Schema(example = "crossheading-final-provisions")
     public String id;
 
-    @Schema(example = "ukpga/2000/8/section/91")
+    @Schema(example = "crossheading/final-provisions")
     public String href;
 
     @Schema(example = "91")

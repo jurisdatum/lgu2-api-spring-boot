@@ -38,6 +38,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S" ]
     },
     "body" : [ {
@@ -45,12 +47,16 @@
       "number" : "[1.]",
       "title" : "His Majesty may issue his Royal Proclamation for the Meeting of Parliament in not less than 14 Days from the Date, notwithstanding any previous Adjournment to a longer Day.",
       "ref" : "section-1.",
+      "id" : "section-1.",
+      "href" : "section/1.",
       "extent" : [ "E", "W", "S" ]
     }, {
       "name" : "item",
       "number" : "2",
       "title" : " How orders made by Parliament shall be deemed to have been appointed.",
       "ref" : "section-2",
+      "id" : "section-2",
+      "href" : "section/2",
       "extent" : [ "E", "W", "S" ]
     } ]
   }
