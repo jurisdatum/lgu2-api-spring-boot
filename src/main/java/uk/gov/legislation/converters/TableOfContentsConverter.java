@@ -3,6 +3,7 @@ package uk.gov.legislation.converters;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.util.Extent;
+import uk.gov.legislation.util.Links;
 
 import java.util.EnumSet;
 import java.util.List;
@@ -58,6 +59,8 @@ public class TableOfContentsConverter {
         converted.number = item.number;
         converted.title = item.title;
         converted.ref = item.ref;
+        converted.id = item.ref;
+        converted.href = Links.extractFragmentIdentifierFromLink(item.uri);
         converted.extent = ExtentConverter.convert(item.extent);
         converted.children = convertItems(item.children);
         return converted;

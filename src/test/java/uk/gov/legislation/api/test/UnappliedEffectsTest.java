@@ -60,7 +60,7 @@ class UnappliedEffectsTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    private String indent(String xml) throws TransformerException {
+    static String indent(String xml) throws TransformerException {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");

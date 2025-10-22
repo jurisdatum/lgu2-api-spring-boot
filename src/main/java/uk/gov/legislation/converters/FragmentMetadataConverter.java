@@ -32,7 +32,7 @@ public class FragmentMetadataConverter {
         converted.next = simple.next();
         if (simple.prevUri != null) {
             converted.prevInfo = new LabelledLink();
-            converted.prevInfo.href = Links.shorten(simple.prevUri.toString());
+            converted.prevInfo.href = Links.extractFragmentIdentifierFromLink(simple.prevUri);
             if (simple.prevTitle != null) {
                 // Split Atom link/@title on ';' and use the first component; see LabelledLink.
                 String[] titleParts = simple.prevTitle.split(";", 2);
@@ -42,7 +42,7 @@ public class FragmentMetadataConverter {
         }
         if (simple.nextUri != null) {
             converted.nextInfo = new LabelledLink();
-            converted.nextInfo.href = Links.shorten(simple.nextUri.toString());
+            converted.nextInfo.href = Links.extractFragmentIdentifierFromLink(simple.nextUri);
             if (simple.nextTitle != null) {
                 // Same as prev; see LabelledLink.
                 String[] titleParts = simple.nextTitle.split(";", 2);

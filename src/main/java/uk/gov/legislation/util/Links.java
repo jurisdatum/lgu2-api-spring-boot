@@ -1,5 +1,6 @@
 package uk.gov.legislation.util;
 
+import java.net.URI;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.regex.Matcher;
@@ -113,12 +114,17 @@ public class Links {
         return builder.toString();
     }
 
-    // FixMe should return Optional<String>
     public static String extractFragmentIdentifierFromLink(String link) {
         Components components = parse(link);
         if (components == null)
             return null;
         return components.fragment().orElse(null);
+    }
+
+    public static String extractFragmentIdentifierFromLink(URI link) {
+        if (link == null)
+            return null;
+        return extractFragmentIdentifierFromLink(link.toASCIIString());
     }
 
 }

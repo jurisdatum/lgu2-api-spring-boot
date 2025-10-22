@@ -40,6 +40,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
@@ -47,24 +49,32 @@
       "number" : "1",
       "title" : "Meaning of “compulsory school age”",
       "ref" : "section-1",
+      "id" : "section-1",
+      "href" : "section/1",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "2",
       "title" : "Consequential amendments",
       "ref" : "section-2",
+      "id" : "section-2",
+      "href" : "section/2",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "3",
       "title" : "Review",
       "ref" : "section-3",
+      "id" : "section-3",
+      "href" : "section/3",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "4",
       "title" : "Commencement and short title",
       "ref" : "section-4",
+      "id" : "section-4",
+      "href" : "section/4",
       "extent" : [ "E", "W", "S", "NI" ]
     } ]
   }

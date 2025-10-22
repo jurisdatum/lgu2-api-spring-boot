@@ -14,7 +14,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
  */
 public class LabelledLink {
 
-    @Schema(example = "ukpga/2000/8/section/91", description = "Target fragment path (short form)")
+    @Schema(example = "section/91", description = "Target fragment path relative to the document root")
     public String href;
 
     @Schema(
