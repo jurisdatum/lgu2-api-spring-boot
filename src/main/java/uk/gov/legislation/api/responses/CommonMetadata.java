@@ -39,7 +39,7 @@ public abstract class CommonMetadata {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String isbn;
 
-    @Schema(example = "2024-01-25")
+    @Schema(example = "2024-01-25", nullable = true)
     public LocalDate date;
 
     @Schema(example = "2024 c. 1")
