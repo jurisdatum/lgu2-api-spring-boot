@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,18 +9,18 @@ import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.transform.Transforms;
+import uk.gov.legislation.api.test.LoggingTestWatcher;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.UpToDate;
 
 import java.time.LocalDate;
 import java.util.stream.Stream;
 
-import static uk.gov.legislation.api.test.TransformHelper.MAPPER;
+import static uk.gov.legislation.transform.TransformHelper.MAPPER;
 
 @SpringBootTest(classes = Application.class)
 @ExtendWith(LoggingTestWatcher.class)
-class TransformTest {
+public class TransformTest {
 
     private final Transforms transforms;
 
@@ -50,7 +50,7 @@ class TransformTest {
         return akn.replaceFirst("<FRBRdate date=\".+?\" name=\"transform\"/>", "<FRBRdate date=\"1001-01-01-00:00\" name=\"transform\"/>");
     }
 
-    static boolean isFragment(String id) {
+    public static boolean isFragment(String id) {
 //        String uri = "http://www.legislation.gov.uk/" + id;
         Links.Components comps = Links.parse(id);
         return comps.fragment().isPresent();
@@ -88,7 +88,7 @@ class TransformTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    static final LocalDate CUTOFF = LocalDate.of(2025, 3, 30);
+    public static final LocalDate CUTOFF = LocalDate.of(2025, 3, 30);
 
     @ParameterizedTest
     @MethodSource("provide")

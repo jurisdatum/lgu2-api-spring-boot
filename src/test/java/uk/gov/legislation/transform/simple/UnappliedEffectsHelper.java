@@ -1,4 +1,6 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.simple;
+
+import uk.gov.legislation.transform.TransformTest;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -8,7 +10,7 @@ import java.util.Objects;
 
 public class UnappliedEffectsHelper {
 
-    static String read(String resource) throws IOException {
+    public static String read(String resource) throws IOException {
         String content;
         try (var input = TransformTest.class.getResourceAsStream(resource)) {
             Objects.requireNonNull(input);
