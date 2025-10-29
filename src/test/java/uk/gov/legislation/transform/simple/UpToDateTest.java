@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.simple;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,14 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
-import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.Simplify;
 
 import java.io.IOException;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
 
 @SpringBootTest(classes = Application.class)
 class UpToDateTest {

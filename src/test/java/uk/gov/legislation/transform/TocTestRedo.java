@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
@@ -11,9 +11,9 @@ import uk.gov.legislation.util.UpToDate;
 
 import java.time.ZonedDateTime;
 
-import static uk.gov.legislation.api.test.TocTest.provide;
-import static uk.gov.legislation.api.test.TransformHelper.*;
-import static uk.gov.legislation.api.test.TransformTest.CUTOFF;
+import static uk.gov.legislation.transform.TransformHelper.*;
+import static uk.gov.legislation.transform.TransformTest.CUTOFF;
+import static uk.gov.legislation.transform.TransformTest.provide;
 
 public class TocTestRedo {
 

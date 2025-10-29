@@ -1,7 +1,6 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.util;
 
 import org.junit.jupiter.api.Test;
-import uk.gov.legislation.util.Links;
 
 import static org.junit.jupiter.api.Assertions.*;
 

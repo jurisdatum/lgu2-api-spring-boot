@@ -1,17 +1,15 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.simple;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
-import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.Simplify;
 
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.write;
-import static uk.gov.legislation.api.test.UnappliedEffectsTest.mapper;
-import static uk.gov.legislation.api.test.UpToDateTest.provide;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.write;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.mapper;
+import static uk.gov.legislation.transform.simple.UpToDateTest.provide;
 
 public class UpToDateTestRedo {
 

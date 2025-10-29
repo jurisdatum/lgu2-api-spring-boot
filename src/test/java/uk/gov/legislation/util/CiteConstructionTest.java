@@ -1,8 +1,7 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.util;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import uk.gov.legislation.util.Cites;
 
 import java.util.Collection;
 import java.util.Collections;

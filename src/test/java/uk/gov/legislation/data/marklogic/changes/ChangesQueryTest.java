@@ -1,8 +1,7 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.data.marklogic.changes;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import uk.gov.legislation.data.marklogic.changes.Parameters;
 
 class ChangesQueryTest {
 

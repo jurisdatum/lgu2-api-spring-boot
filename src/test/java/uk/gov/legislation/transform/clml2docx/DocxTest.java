@@ -1,10 +1,10 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.clml2docx;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
-import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.transform.TransformHelper;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -19,15 +19,15 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 
-class DocxTest {
+public class DocxTest {
 
-    static Stream<String> provide() {
+    public static Stream<String> provide() {
         return Stream.of(
             "ukpga/2023/29/2024-11-01"
         );
     }
 
-    static class Delegate implements uk.gov.legislation.transform.clml2docx.Delegate {
+    public static class Delegate implements uk.gov.legislation.transform.clml2docx.Delegate {
 
         // Minimal 1x1 placeholders so width/height metadata stays consistent during tests.
         private static final byte[] DUMMY_GIF = createDummyImage("gif");
@@ -68,7 +68,7 @@ class DocxTest {
 
     public DocxTest() throws IOException { }
 
-    static final String DOCX_XML_EXT = "docx.xml";
+    public static final String DOCX_XML_EXT = "docx.xml";
 
     @ParameterizedTest
     @MethodSource("provide")
@@ -80,7 +80,7 @@ class DocxTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    static String extractDocumentXml(byte[] docxBytes) throws IOException {
+    public static String extractDocumentXml(byte[] docxBytes) throws IOException {
         try (ZipInputStream zis = new ZipInputStream(new ByteArrayInputStream(docxBytes))) {
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {

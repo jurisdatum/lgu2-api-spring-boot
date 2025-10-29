@@ -1,7 +1,8 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.transform.clml2docx.DocxTest;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

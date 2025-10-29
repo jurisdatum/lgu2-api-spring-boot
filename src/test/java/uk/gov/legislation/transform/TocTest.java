@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -10,12 +10,13 @@ import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 import uk.gov.legislation.util.UpToDate;
 
 import java.util.stream.Stream;
 
-import static uk.gov.legislation.api.test.TransformHelper.read;
-import static uk.gov.legislation.api.test.TransformTest.CUTOFF;
+import static uk.gov.legislation.transform.TransformHelper.read;
+import static uk.gov.legislation.transform.TransformTest.CUTOFF;
 
 @SpringBootTest(classes = Application.class)
 class TocTest {

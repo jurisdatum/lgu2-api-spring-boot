@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.data.marklogic.search;
 
 
 import org.junit.jupiter.api.Test;
@@ -7,7 +7,6 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
-import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.endpoints.ParameterValidator;
 import uk.gov.legislation.exceptions.UnknownTypeException;
 
