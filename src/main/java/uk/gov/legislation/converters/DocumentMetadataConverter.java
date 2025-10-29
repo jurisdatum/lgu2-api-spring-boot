@@ -27,7 +27,7 @@ public class DocumentMetadataConverter {
         return converted;
     }
 
-    protected static void convert(Metadata simple, CommonMetadata converted) {
+    public static void convert(Metadata simple, CommonMetadata converted) {
         converted.id = simple.id;
         converted.longType = simple.longType;
         converted.shortType = Types.longToShort(simple.longType);

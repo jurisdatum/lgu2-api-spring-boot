@@ -1,7 +1,6 @@
 package uk.gov.legislation.api.test;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +18,7 @@ import java.util.stream.Stream;
 import static uk.gov.legislation.api.test.TransformHelper.MAPPER;
 
 @SpringBootTest(classes = Application.class)
-@ExtendWith(LoggingTestWatcher.class)
+//@ExtendWith(LoggingTestWatcher.class)
 class TransformTest {
 
     private final Transforms transforms;
