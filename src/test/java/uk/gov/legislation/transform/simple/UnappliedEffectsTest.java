@@ -28,6 +28,8 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+
 @SpringBootTest(classes = Application.class)
 public class UnappliedEffectsTest {
 
@@ -50,10 +52,10 @@ public class UnappliedEffectsTest {
     @ParameterizedTest
     @MethodSource("provide")
     void simplify(String id) throws Exception {
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Simplify.Parameters parameters = new Simplify.Parameters(TransformTest.isFragment(id), false);
         String actual = indent(simplifier.transform(clml, parameters));
-        String expected = UnappliedEffectsHelper.read(id, "-simplified.xml");
+        String expected = read(id, "-simplified.xml");
         Assertions.assertEquals(expected, actual);
     }
 
@@ -73,28 +75,28 @@ public class UnappliedEffectsTest {
     @ParameterizedTest
     @MethodSource("provide")
     void raw(String id) throws Exception {
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         String actual = mapper.writeValueAsString(meta.rawEffects);
-        String expected = UnappliedEffectsHelper.read(id, "-effects-raw.json");
+        String expected = read(id, "-effects-raw.json");
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @MethodSource("provide")
     void sorted(String id) throws Exception {
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<uk.gov.legislation.transform.simple.effects.Effect> effects = meta.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
         String actual = mapper.writeValueAsString(effects);
-        String expected = UnappliedEffectsHelper.read(id, "-effects-sorted.json");
+        String expected = read(id, "-effects-sorted.json");
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @MethodSource("provide")
     void filtered(String id) throws Exception {
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta;
         List<uk.gov.legislation.transform.simple.effects.Effect> effects;
         if (TransformTest.isFragment(id)) {
@@ -107,18 +109,18 @@ public class UnappliedEffectsTest {
             effects = meta.rawEffects;
         }
         String actual = mapper.writeValueAsString(effects);
-        String expected = UnappliedEffectsHelper.read(id,"-effects-filtered.json");
+        String expected = read(id,"-effects-filtered.json");
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @MethodSource("provide")
     void converted(String id) throws Exception {
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = TransformTest.isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<Effect> effects = EffectsFeedConverter.convertEffects(meta.rawEffects);
         String actual = mapper.writeValueAsString(effects);
-        String expected = UnappliedEffectsHelper.read(id, "-effects-converted.json");
+        String expected = read(id, "-effects-converted.json");
         Assertions.assertEquals(expected, actual);
     }
 

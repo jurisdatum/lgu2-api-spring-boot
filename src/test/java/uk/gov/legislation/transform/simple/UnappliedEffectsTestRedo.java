@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import static uk.gov.legislation.transform.TransformTest.isFragment;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
 import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.write;
 import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.indent;
 import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.mapper;
@@ -33,46 +34,46 @@ public class UnappliedEffectsTestRedo {
 
     static void simplify(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Simplify.Parameters parameters = new Simplify.Parameters(isFragment(id), false);
         String actual = indent(simplifier.transform(clml, parameters));
         String ext = "-simplified.xml";
-        String expected = UnappliedEffectsHelper.read(id, ext);
+        String expected = read(id, ext);
         if (actual.equals(expected))
             return;
         System.out.println("redoing " + id);
-        UnappliedEffectsHelper.write(id, ext, actual);
+        write(id, ext, actual);
     }
 
     static void raw(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         String actual = mapper.writeValueAsString(meta.rawEffects);
-        String expected = UnappliedEffectsHelper.read(id, "-effects-raw.json");
+        String expected = read(id, "-effects-raw.json");
         if (actual.equals(expected))
             return;
         System.out.println("redoing " + id);
-        UnappliedEffectsHelper.write(id, "-effects-raw.json", actual);
+        write(id, "-effects-raw.json", actual);
     }
 
     static void sorted(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<Effect> effects = meta.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-sorted.json";
-        String expected = UnappliedEffectsHelper.read(id, ext);
+        String expected = read(id, ext);
         if (actual.equals(expected))
             return;
         System.out.println("redoing " + id);
-        UnappliedEffectsHelper.write(id, ext, actual);
+        write(id, ext, actual);
     }
 
     static void filtered(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta;
         List<uk.gov.legislation.transform.simple.effects.Effect> effects;
         if (isFragment(id)) {
@@ -86,25 +87,25 @@ public class UnappliedEffectsTestRedo {
         }
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-filtered.json";
-        String expected = UnappliedEffectsHelper.read(id, ext);
+        String expected = read(id, ext);
         if (actual.equals(expected))
             return;
         System.out.println("redoing " + id);
-        UnappliedEffectsHelper.write(id, ext, actual);
+        write(id, ext, actual);
     }
 
     static void converted(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
-        String clml = UnappliedEffectsHelper.read(id, ".xml");
+        String clml = read(id, ".xml");
         Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
         List<uk.gov.legislation.api.responses.Effect> effects = EffectsFeedConverter.convertEffects(meta.rawEffects);
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-converted.json";
-        String expected = UnappliedEffectsHelper.read(id, ext);
+        String expected = read(id, ext);
         if (actual.equals(expected))
             return;
         System.out.println("redoing " + id);
-        UnappliedEffectsHelper.write(id, ext, actual);
+        write(id, ext, actual);
     }
 
 }
