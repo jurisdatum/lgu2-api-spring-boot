@@ -36,34 +36,37 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "article-1",
-      "href" : "eudr/2020/2089/article/1/2020-12-11",
+      "href" : "article/1",
       "number" : "Article 1",
       "title" : null,
-      "label" : "Article 1"
+      "label" : "Article 1",
+      "start" : "2020-12-11"
     },
     "prevInfo" : {
-      "href" : "eudr/2020/2089/introduction/2020-12-11",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : {
-      "href" : "eudr/2020/2089/article/2/2020-12-11",
+      "href" : "article/2",
       "label" : "Provision"
     },
     "ancestors" : [ {
       "element" : "P1",
       "id" : "article-1",
-      "href" : "eudr/2020/2089/article/1/2020-12-11",
+      "href" : "article/1",
       "number" : "Article 1",
       "title" : null,
-      "label" : "Article 1"
+      "label" : "Article 1",
+      "start" : "2020-12-11"
     } ],
     "descendants" : [ {
       "element" : "P1",
       "id" : "article-1",
-      "href" : "eudr/2020/2089/article/1/2020-12-11",
+      "href" : "article/1",
       "number" : "Article 1",
       "title" : null,
-      "label" : "Article 1"
+      "label" : "Article 1",
+      "start" : "2020-12-11"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

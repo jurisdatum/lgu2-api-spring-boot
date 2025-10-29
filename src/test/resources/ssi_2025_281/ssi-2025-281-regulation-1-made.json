@@ -57,23 +57,23 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "regulation-1",
-      "href" : "ssi/2025/281/regulation/1/made",
+      "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
       "label" : "Regulation 1"
     },
     "prevInfo" : {
-      "href" : "ssi/2025/281/introduction/made",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : {
-      "href" : "ssi/2025/281/regulation/2/made",
+      "href" : "regulation/2",
       "label" : "Provision"
     },
     "ancestors" : [ {
       "element" : "P1",
       "id" : "regulation-1",
-      "href" : "ssi/2025/281/regulation/1/made",
+      "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
       "label" : "Regulation 1"
@@ -81,7 +81,7 @@
     "descendants" : [ {
       "element" : "P1",
       "id" : "regulation-1",
-      "href" : "ssi/2025/281/regulation/1/made",
+      "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
       "label" : "Regulation 1"

@@ -72,30 +72,31 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-1",
-      "href" : "mwa/2011/7/section/1",
+      "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
       "label" : "Section 1"
     },
     "prevInfo" : {
-      "href" : "mwa/2011/7/introduction",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : {
-      "href" : "mwa/2011/7/section/2",
+      "href" : "section/2",
       "label" : "Provision"
     },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "mwa/2011/7/part/1",
+      "href" : "part/1",
       "number" : "PART 1",
       "title" : "COLLABORATION BY EDUCATION BODIES",
-      "label" : "PART 1"
+      "label" : "PART 1",
+      "start" : "2022-09-01"
     }, {
       "element" : "P1",
       "id" : "section-1",
-      "href" : "mwa/2011/7/section/1",
+      "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
       "label" : "Section 1"
@@ -103,49 +104,49 @@
     "descendants" : [ {
       "element" : "P1",
       "id" : "section-1",
-      "href" : "mwa/2011/7/section/1",
+      "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
       "label" : "Section 1"
     }, {
       "element" : "P3",
       "id" : "section-1-a",
-      "href" : "mwa/2011/7/section/1/a",
+      "href" : "section/1/a",
       "number" : "a",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-1-b",
-      "href" : "mwa/2011/7/section/1/b",
+      "href" : "section/1/b",
       "number" : "b",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-1-c",
-      "href" : "mwa/2011/7/section/1/c",
+      "href" : "section/1/c",
       "number" : "c",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-1-d",
-      "href" : "mwa/2011/7/section/1/d",
+      "href" : "section/1/d",
       "number" : "d",
       "title" : null,
       "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-1-d-i",
-      "href" : "mwa/2011/7/section/1/d/i",
+      "href" : "section/1/d/i",
       "number" : "i",
       "title" : null,
       "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-1-d-ii",
-      "href" : "mwa/2011/7/section/1/d/ii",
+      "href" : "section/1/d/ii",
       "number" : "ii",
       "title" : null,
       "label" : "P4"

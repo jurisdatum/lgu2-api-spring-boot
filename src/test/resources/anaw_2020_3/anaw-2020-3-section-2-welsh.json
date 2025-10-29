@@ -66,23 +66,23 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "anaw/2020/3/section/2/welsh",
+      "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
       "label" : "Section 2"
     },
     "prevInfo" : {
-      "href" : "anaw/2020/3/section/1/welsh",
+      "href" : "section/1",
       "label" : "Provision"
     },
     "nextInfo" : {
-      "href" : "anaw/2020/3/section/3/welsh",
+      "href" : "section/3",
       "label" : "Provision"
     },
     "ancestors" : [ {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "anaw/2020/3/section/2/welsh",
+      "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
       "label" : "Section 2"
@@ -90,7 +90,7 @@
     "descendants" : [ {
       "element" : "P1",
       "id" : "section-2",
-      "href" : "anaw/2020/3/section/2/welsh",
+      "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
       "label" : "Section 2"

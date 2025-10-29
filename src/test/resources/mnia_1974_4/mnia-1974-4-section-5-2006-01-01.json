@@ -30,30 +30,31 @@
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-5",
-      "href" : "mnia/1974/4/section/5/2006-01-01",
+      "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
       "label" : "Section 5"
     },
     "prevInfo" : {
-      "href" : "mnia/1974/4/paragraph/p1/2006-01-01",
+      "href" : "paragraph/p1",
       "label" : "Provision"
     },
     "nextInfo" : {
-      "href" : "mnia/1974/4/section/6/2006-01-01",
+      "href" : "section/6",
       "label" : "Provision"
     },
     "ancestors" : [ {
       "element" : "Pblock",
       "id" : "crossheading-miscellaneous",
-      "href" : "mnia/1974/4/crossheading/miscellaneous/2006-01-01",
+      "href" : "crossheading/miscellaneous",
       "number" : null,
       "title" : "Miscellaneous",
-      "label" : "Miscellaneous"
+      "label" : "Miscellaneous",
+      "start" : "2006-01-01"
     }, {
       "element" : "P1",
       "id" : "section-5",
-      "href" : "mnia/1974/4/section/5/2006-01-01",
+      "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
       "label" : "Section 5"
@@ -61,7 +62,7 @@
     "descendants" : [ {
       "element" : "P1",
       "id" : "section-5",
-      "href" : "mnia/1974/4/section/5/2006-01-01",
+      "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
       "label" : "Section 5"
