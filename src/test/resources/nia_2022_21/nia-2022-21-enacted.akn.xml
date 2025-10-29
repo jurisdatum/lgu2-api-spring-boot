@@ -23,7 +23,7 @@
             <FRBRManifestation>
                <FRBRthis value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
                <FRBRuri value="http://www.legislation.gov.uk/nia/2022/21/enacted/data.akn"/>
-               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRdate date="2025-10-28-04:00" name="transform"/>
                <FRBRauthor href="http://www.legislation.gov.uk"/>
                <FRBRformat value="application/akn+xml"/>
             </FRBRManifestation>
@@ -87,8 +87,8 @@
       </preamble>
       <body>
          <section eId="section-1">
-            <num>1</num>
             <heading>Meaning of “compulsory school age”</heading>
+            <num>1</num>
             <subsection eId="section-1-1">
                <num>(1)</num>
                <content>
@@ -225,8 +225,8 @@
             </subsection>
          </section>
          <section eId="section-2">
-            <num>2</num>
             <heading>Consequential amendments</heading>
+            <num>2</num>
             <subsection eId="section-2-1">
                <num>(1)</num>
                <content>
@@ -341,8 +341,8 @@
             </subsection>
          </section>
          <section eId="section-3">
-            <num>3</num>
             <heading>Review</heading>
+            <num>3</num>
             <subsection eId="section-3-1">
                <num>(1)</num>
                <content>
@@ -357,8 +357,8 @@
             </subsection>
          </section>
          <section eId="section-4">
-            <num>4</num>
             <heading>Commencement and short title</heading>
+            <num>4</num>
             <subsection eId="section-4-1">
                <num>(1)</num>
                <content>
