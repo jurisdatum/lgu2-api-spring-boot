@@ -325,6 +325,8 @@
         <xsl:attribute name="name" select="local-name(.)" />
         <xsl:copy-of select="@id" />
         <xsl:copy-of select="@DocumentURI" />
+        <xsl:copy-of select="@Status | self::P1/parent::P1group/@Status" />
+        <xsl:copy-of select="@RestrictStartDate | @RestrictEndDate" />
         <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
         <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
     </xsl:element>

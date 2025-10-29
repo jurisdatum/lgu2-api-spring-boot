@@ -41,6 +41,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
@@ -48,18 +50,24 @@
       "number" : "PART 1",
       "title" : "INTRODUCTORY",
       "ref" : "part-1",
+      "id" : "part-1",
+      "href" : "part/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "Citation",
         "ref" : "section-1",
+        "id" : "section-1",
+        "href" : "section/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "Interpretation",
         "ref" : "section-2",
+        "id" : "section-2",
+        "href" : "section/2",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -67,60 +75,80 @@
       "number" : "PART 2",
       "title" : "CONSTITUTION AND POWERS OF THE COMPANY",
       "ref" : "part-2",
+      "id" : "part-2",
+      "href" : "part/2",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "3",
         "title" : "Company name and adoption of model articles",
         "ref" : "section-3",
+        "id" : "section-3",
+        "href" : "section/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "Alteration of objects and powers",
         "ref" : "section-4",
+        "id" : "section-4",
+        "href" : "section/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Disapplication of Companies Clauses Acts",
         "ref" : "section-5",
+        "id" : "section-5",
+        "href" : "section/5",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "Liability of members",
         "ref" : "section-6",
+        "id" : "section-6",
+        "href" : "section/6",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "Power to raise additional capital",
         "ref" : "section-7",
+        "id" : "section-7",
+        "href" : "section/7",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "Power to borrow",
         "ref" : "section-8",
+        "id" : "section-8",
+        "href" : "section/8",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "Subscriptions for shares and loans",
         "ref" : "section-9",
+        "id" : "section-9",
+        "href" : "section/9",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "10",
         "title" : "Powers relating to land",
         "ref" : "section-10",
+        "id" : "section-10",
+        "href" : "section/10",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "11",
         "title" : "Repeal of outdated legislation",
         "ref" : "section-11",
+        "id" : "section-11",
+        "href" : "section/11",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -128,36 +156,48 @@
       "number" : "PART 3",
       "title" : "MISSING SHAREHOLDERS AND CLAIMS",
       "ref" : "part-3",
+      "id" : "part-3",
+      "href" : "part/3",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "12",
         "title" : "Interpretation of Part 3",
         "ref" : "section-12",
+        "id" : "section-12",
+        "href" : "section/12",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "13",
         "title" : "Notices and procedure for claims",
         "ref" : "section-13",
+        "id" : "section-13",
+        "href" : "section/13",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "14",
         "title" : "Sale of shares",
         "ref" : "section-14",
+        "id" : "section-14",
+        "href" : "section/14",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "15",
         "title" : "Notices in electronic form",
         "ref" : "section-15",
+        "id" : "section-15",
+        "href" : "section/15",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "16",
         "title" : "Saving for section 125 of 2006 Act",
         "ref" : "section-16",
+        "id" : "section-16",
+        "href" : "section/16",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -165,30 +205,40 @@
       "number" : "PART 4",
       "title" : "FINAL PROVISIONS",
       "ref" : "part-4",
+      "id" : "part-4",
+      "href" : "part/4",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "17",
         "title" : "Saving for rights over the fishery, etc",
         "ref" : "section-17",
+        "id" : "section-17",
+        "href" : "section/17",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "18",
         "title" : "Saving for Port of Sheerness Limited and harbourmaster",
         "ref" : "section-18",
+        "id" : "section-18",
+        "href" : "section/18",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "19",
         "title" : "Costs of this Act",
         "ref" : "section-19",
+        "id" : "section-19",
+        "href" : "section/19",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "20",
         "title" : "Commencement",
         "ref" : "section-20",
+        "id" : "section-20",
+        "href" : "section/20",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     } ],
@@ -197,78 +247,104 @@
       "number" : "SCHEDULE",
       "title" : "REPEALS",
       "ref" : "schedule",
+      "id" : "schedule",
+      "href" : "schedule",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "The following provisions of the 1930 Act are repealed. ",
         "ref" : "schedule-paragraph-1",
+        "id" : "schedule-paragraph-1",
+        "href" : "schedule/paragraph/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "In section 2 (Act divided into Parts) the words “Part...",
         "ref" : "schedule-paragraph-2",
+        "id" : "schedule-paragraph-2",
+        "href" : "schedule/paragraph/2",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "In section 3 (incorporation of general Acts)— ",
         "ref" : "schedule-paragraph-3",
+        "id" : "schedule-paragraph-3",
+        "href" : "schedule/paragraph/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "Section 21 (new shares to be subject to same incidents...",
         "ref" : "schedule-paragraph-4",
+        "id" : "schedule-paragraph-4",
+        "href" : "schedule/paragraph/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Section 24 (for appointment of receiver). ",
         "ref" : "schedule-paragraph-5",
+        "id" : "schedule-paragraph-5",
+        "href" : "schedule/paragraph/5",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "Section 25 (debenture stock). ",
         "ref" : "schedule-paragraph-6",
+        "id" : "schedule-paragraph-6",
+        "href" : "schedule/paragraph/6",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "Section 26 (priority of mortgages over other debts). ",
         "ref" : "schedule-paragraph-7",
+        "id" : "schedule-paragraph-7",
+        "href" : "schedule/paragraph/7",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "Section 27 (application of moneys). ",
         "ref" : "schedule-paragraph-8",
+        "id" : "schedule-paragraph-8",
+        "href" : "schedule/paragraph/8",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "Section 28 (company may incur temporary loans). ",
         "ref" : "schedule-paragraph-9",
+        "id" : "schedule-paragraph-9",
+        "href" : "schedule/paragraph/9",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "10",
         "title" : "Section 29 (as to disposal of shares or stock). ",
         "ref" : "schedule-paragraph-10",
+        "id" : "schedule-paragraph-10",
+        "href" : "schedule/paragraph/10",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "11",
         "title" : "In section 33 (company not bound to regard trusts) the...",
         "ref" : "schedule-paragraph-11",
+        "id" : "schedule-paragraph-11",
+        "href" : "schedule/paragraph/11",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "12",
         "title" : "Part IV (meetings, directors and administrative provisions). ",
         "ref" : "schedule-paragraph-12",
+        "id" : "schedule-paragraph-12",
+        "href" : "schedule/paragraph/12",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     } ]

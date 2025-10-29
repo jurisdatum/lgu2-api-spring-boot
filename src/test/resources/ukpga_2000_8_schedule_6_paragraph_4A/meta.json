@@ -36,37 +36,39 @@
   "fragmentInfo" : {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
     "label" : "Schedule 6 paragraph 4A"
   },
   "prevInfo" : {
-    "href" : "ukpga/2000/8/schedule/6/paragraph/3E",
+    "href" : "schedule/6/paragraph/3E",
     "label" : "Paragraph"
   },
   "nextInfo" : {
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4B",
+    "href" : "schedule/6/paragraph/4B",
     "label" : "Paragraph"
   },
   "ancestors" : [ {
     "element" : "Schedule",
     "id" : "schedule-6",
-    "href" : "ukpga/2000/8/schedule/6",
+    "href" : "schedule/6",
     "number" : "SCHEDULE 6",
     "title" : null,
-    "label" : "SCHEDULE 6"
+    "label" : "SCHEDULE 6",
+    "start" : "2020-12-31"
   }, {
     "element" : "Part",
     "id" : "schedule-6-part-1D",
-    "href" : "ukpga/2000/8/schedule/6/part/1D",
+    "href" : "schedule/6/part/1D",
     "number" : "PART 1D",
     "title" : "Part 4A permission: conditions for which the PRA is responsible in relation to insurers etc.",
-    "label" : "PART 1D"
+    "label" : "PART 1D",
+    "start" : "2020-12-31"
   }, {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
     "label" : "Schedule 6 paragraph 4A"
@@ -74,98 +76,98 @@
   "descendants" : [ {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A",
+    "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
     "label" : "Schedule 6 paragraph 4A"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-1",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/1",
+    "href" : "schedule/6/paragraph/4A/1",
     "number" : "1",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-2",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/2",
+    "href" : "schedule/6/paragraph/4A/2",
     "number" : "2",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-3",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/3",
+    "href" : "schedule/6/paragraph/4A/3",
     "number" : "3",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-4",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4",
+    "href" : "schedule/6/paragraph/4A/4",
     "number" : "4",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-4-a",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4/a",
+    "href" : "schedule/6/paragraph/4A/4/a",
     "number" : "a",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-4-b",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/4/b",
+    "href" : "schedule/6/paragraph/4A/4/b",
     "number" : "b",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-5",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/5",
+    "href" : "schedule/6/paragraph/4A/5",
     "number" : "5",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-6",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6",
+    "href" : "schedule/6/paragraph/4A/6",
     "number" : "6",
     "title" : null,
     "label" : "P2"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-a",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/a",
+    "href" : "schedule/6/paragraph/4A/6/a",
     "number" : "a",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-b",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/b",
+    "href" : "schedule/6/paragraph/4A/6/b",
     "number" : "b",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-c",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/c",
+    "href" : "schedule/6/paragraph/4A/6/c",
     "number" : "c",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-d",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/6/d",
+    "href" : "schedule/6/paragraph/4A/6/d",
     "number" : "d",
     "title" : null,
     "label" : "P3"
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-7",
-    "href" : "ukpga/2000/8/schedule/6/paragraph/4A/7",
+    "href" : "schedule/6/paragraph/4A/7",
     "number" : "7",
     "title" : null,
     "label" : "P2"

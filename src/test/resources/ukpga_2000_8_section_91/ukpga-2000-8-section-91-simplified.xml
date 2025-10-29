@@ -44,13 +44,15 @@
       <ancestors>
          <ancestor name="Part"
                    id="part-VI"
-                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI">
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI"
+                   RestrictStartDate="2024-01-30">
             <number>Part VI</number>
             <title>Official Listing</title>
          </ancestor>
          <ancestor name="Pblock"
                    id="part-VI-crossheading-penalties"
-                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI/crossheading/penalties">
+                   DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/part/VI/crossheading/penalties"
+                   RestrictStartDate="2024-01-30">
             <title>Penalties</title>
          </ancestor>
          <ancestor name="P1"

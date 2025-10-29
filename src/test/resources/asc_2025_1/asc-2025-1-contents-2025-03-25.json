@@ -71,6 +71,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W" ]
     },
     "body" : [ {
@@ -78,24 +80,32 @@
       "number" : "PART 1",
       "title" : "SOCIAL CARE",
       "ref" : "part-1",
+      "id" : "part-1",
+      "href" : "part/1",
       "extent" : [ "E", "W" ],
       "children" : [ {
         "name" : "chapter",
         "number" : "CHAPTER 1",
         "title" : "PROVISION OF SOCIAL CARE SERVICES TO CHILDREN: RESTRICTIONS ON PROFIT",
         "ref" : "part-1-chapter-1",
+        "id" : "part-1-chapter-1",
+        "href" : "part/1/chapter/1",
         "extent" : [ "E", "W" ],
         "children" : [ {
           "name" : "pblock",
           "number" : null,
           "title" : "Overview of Chapter",
           "ref" : "part-1-chapter-1-crossheading-overview-of-chapter",
+          "id" : "part-1-chapter-1-crossheading-overview-of-chapter",
+          "href" : "part/1/chapter/1/crossheading/overview-of-chapter",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "1",
             "title" : "Overview of Chapter 1",
             "ref" : "section-1",
+            "id" : "section-1",
+            "href" : "section/1",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -103,54 +113,72 @@
           "number" : null,
           "title" : "Regulation of social care services provided to children",
           "ref" : "part-1-chapter-1-crossheading-regulation-of-social-care-services-provided-to-children",
+          "id" : "part-1-chapter-1-crossheading-regulation-of-social-care-services-provided-to-children",
+          "href" : "part/1/chapter/1/crossheading/regulation-of-social-care-services-provided-to-children",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "2",
             "title" : "Restricted children’s services",
             "ref" : "section-2",
+            "id" : "section-2",
+            "href" : "section/2",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "3",
             "title" : "Applications for registration in respect of restricted children’s services",
             "ref" : "section-3",
+            "id" : "section-3",
+            "href" : "section/3",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "4",
             "title" : "Registration in respect of a restricted children’s service: transitional arrangements",
             "ref" : "section-4",
+            "id" : "section-4",
+            "href" : "section/4",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "5",
             "title" : "Grant or refusal of registration in respect of a restricted children’s service",
             "ref" : "section-5",
+            "id" : "section-5",
+            "href" : "section/5",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "6",
             "title" : "Fit and proper person: relevant considerations",
             "ref" : "section-6",
+            "id" : "section-6",
+            "href" : "section/6",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "7",
             "title" : "Providers of restricted children’s services: information contained in annual return",
             "ref" : "section-7",
+            "id" : "section-7",
+            "href" : "section/7",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "8",
             "title" : "Variation or cancellation of registration as a provider of a restricted children’s service",
             "ref" : "section-8",
+            "id" : "section-8",
+            "href" : "section/8",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "9",
             "title" : "Restricted children’s services: information contained in the register of service providers",
             "ref" : "section-9",
+            "id" : "section-9",
+            "href" : "section/9",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -158,30 +186,40 @@
           "number" : null,
           "title" : "Local authority functions in respect of accommodation for looked after children",
           "ref" : "part-1-chapter-1-crossheading-local-authority-functions-in-respect-of-accommodation-for-looked-after-children",
+          "id" : "part-1-chapter-1-crossheading-local-authority-functions-in-respect-of-accommodation-for-looked-after-children",
+          "href" : "part/1/chapter/1/crossheading/local-authority-functions-in-respect-of-accommodation-for-looked-after-children",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "10",
             "title" : "Local authority duty to secure sufficient accommodation",
             "ref" : "section-10",
+            "id" : "section-10",
+            "href" : "section/10",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "11",
             "title" : "Duty to prepare and publish an annual sufficiency plan",
             "ref" : "section-11",
+            "id" : "section-11",
+            "href" : "section/11",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "12",
             "title" : "Duty to secure accommodation: reporting",
             "ref" : "section-12",
+            "id" : "section-12",
+            "href" : "section/12",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "13",
             "title" : "Ways in which looked after children are to be accommodated",
             "ref" : "section-13",
+            "id" : "section-13",
+            "href" : "section/13",
             "extent" : [ "E", "W" ]
           } ]
         } ]
@@ -190,30 +228,40 @@
         "number" : "CHAPTER 2",
         "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES, SOCIAL CARE WORKERS AND LOCAL AUTHORITY SOCIAL CARE FUNCTIONS",
         "ref" : "part-1-chapter-2",
+        "id" : "part-1-chapter-2",
+        "href" : "part/1/chapter/2",
         "extent" : [ "E", "W" ],
         "children" : [ {
           "name" : "pblock",
           "number" : null,
           "title" : "Regulation of social care services: registration etc. of social care services providers",
           "ref" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
+          "id" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
+          "href" : "part/1/chapter/2/crossheading/regulation-of-social-care-services-registration-etc-of-social-care-services-providers",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "14",
             "title" : "Duty to submit and publish annual return",
             "ref" : "section-14",
+            "id" : "section-14",
+            "href" : "section/14",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "15",
             "title" : "Application for cancellation of service provider’s registration: information to be provided",
             "ref" : "section-15",
+            "id" : "section-15",
+            "href" : "section/15",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "16",
             "title" : "Cancellation and variation of service provider’s registration without application: notice procedures",
             "ref" : "section-16",
+            "id" : "section-16",
+            "href" : "section/16",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -221,12 +269,16 @@
           "number" : null,
           "title" : "Regulation of social care services: information, inspections and investigations",
           "ref" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations",
+          "id" : "part-1-chapter-2-crossheading-regulation-of-social-care-services-information-inspections-and-investigations",
+          "href" : "part/1/chapter/2/crossheading/regulation-of-social-care-services-information-inspections-and-investigations",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "17",
             "title" : "Information, inspection and investigations",
             "ref" : "section-17",
+            "id" : "section-17",
+            "href" : "section/17",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -234,18 +286,24 @@
           "number" : null,
           "title" : "Social care workers: registration and fitness to practise",
           "ref" : "part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise",
+          "id" : "part-1-chapter-2-crossheading-social-care-workers-registration-and-fitness-to-practise",
+          "href" : "part/1/chapter/2/crossheading/social-care-workers-registration-and-fitness-to-practise",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "18",
             "title" : "Meaning of social care worker: childcare workers",
             "ref" : "section-18",
+            "id" : "section-18",
+            "href" : "section/18",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "19",
             "title" : "Fitness to practise cases: powers to extend interim orders",
             "ref" : "section-19",
+            "id" : "section-19",
+            "href" : "section/19",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -253,18 +311,24 @@
           "number" : null,
           "title" : "Local authority social services functions",
           "ref" : "part-1-chapter-2-crossheading-local-authority-social-services-functions",
+          "id" : "part-1-chapter-2-crossheading-local-authority-social-services-functions",
+          "href" : "part/1/chapter/2/crossheading/local-authority-social-services-functions",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "20",
             "title" : "Direct payments in social care",
             "ref" : "section-20",
+            "id" : "section-20",
+            "href" : "section/20",
             "extent" : [ "E", "W" ]
           }, {
             "name" : "item",
             "number" : "21",
             "title" : "Accommodation of children",
             "ref" : "section-21",
+            "id" : "section-21",
+            "href" : "section/21",
             "extent" : [ "E", "W" ]
           } ]
         }, {
@@ -272,12 +336,16 @@
           "number" : null,
           "title" : "Minor and consequential amendments",
           "ref" : "part-1-chapter-2-crossheading-minor-and-consequential-amendments",
+          "id" : "part-1-chapter-2-crossheading-minor-and-consequential-amendments",
+          "href" : "part/1/chapter/2/crossheading/minor-and-consequential-amendments",
           "extent" : [ "E", "W" ],
           "children" : [ {
             "name" : "item",
             "number" : "22",
             "title" : "Social care: minor and consequential amendments",
             "ref" : "section-22",
+            "id" : "section-22",
+            "href" : "section/22",
             "extent" : [ "E", "W" ]
           } ]
         } ]
@@ -287,30 +355,40 @@
       "number" : "PART 2",
       "title" : "HEALTH CARE",
       "ref" : "part-2",
+      "id" : "part-2",
+      "href" : "part/2",
       "extent" : [ "E", "W" ],
       "children" : [ {
         "name" : "item",
         "number" : "23",
         "title" : "Overview of Part 2",
         "ref" : "section-23",
+        "id" : "section-23",
+        "href" : "section/23",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "24",
         "title" : "Direct payments for health care",
         "ref" : "section-24",
+        "id" : "section-24",
+        "href" : "section/24",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "25",
         "title" : "Direct payments for health care: minor and consequential amendments",
         "ref" : "section-25",
+        "id" : "section-25",
+        "href" : "section/25",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "26",
         "title" : "Provision of health services by local authorities",
         "ref" : "section-26",
+        "id" : "section-26",
+        "href" : "section/26",
         "extent" : [ "E", "W" ]
       } ]
     }, {
@@ -318,30 +396,40 @@
       "number" : "PART 3",
       "title" : "GENERAL",
       "ref" : "part-3",
+      "id" : "part-3",
+      "href" : "part/3",
       "extent" : [ "E", "W" ],
       "children" : [ {
         "name" : "item",
         "number" : "27",
         "title" : "General interpretation",
         "ref" : "section-27",
+        "id" : "section-27",
+        "href" : "section/27",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "28",
         "title" : "Consequential and transitional provision etc.",
         "ref" : "section-28",
+        "id" : "section-28",
+        "href" : "section/28",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "29",
         "title" : "Coming into force",
         "ref" : "section-29",
+        "id" : "section-29",
+        "href" : "section/29",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "30",
         "title" : "Short title",
         "ref" : "section-30",
+        "id" : "section-30",
+        "href" : "section/30",
         "extent" : [ "E", "W" ]
       } ]
     } ],
@@ -350,24 +438,32 @@
       "number" : "SCHEDULE 1",
       "title" : "SOCIAL CARE: MINOR AND CONSEQUENTIAL AMENDMENTS",
       "ref" : "schedule-1",
+      "id" : "schedule-1",
+      "href" : "schedule/1",
       "extent" : [ "E", "W" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "PROVISION OF SOCIAL CARE SERVICES TO CHILDREN: MINOR AND CONSEQUENTIAL AMENDMENTS",
         "ref" : "schedule-1-part-1",
+        "id" : "schedule-1-part-1",
+        "href" : "schedule/1/part/1",
         "extent" : [ "E", "W" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "Social Services and Well-being (Wales) Act 2014 (anaw 4)",
           "ref" : "schedule-1-paragraph-1",
+          "id" : "schedule-1-paragraph-1",
+          "href" : "schedule/1/paragraph/1",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "2",
           "title" : "Regulation and Inspection of Social Care (Wales) Act 2016 (anaw 2)",
           "ref" : "schedule-1-paragraph-2",
+          "id" : "schedule-1-paragraph-2",
+          "href" : "schedule/1/paragraph/2",
           "extent" : [ "E", "W" ]
         } ]
       }, {
@@ -375,42 +471,56 @@
         "number" : "PART 2",
         "title" : "MISCELLANEOUS AMENDMENTS IN RELATION TO SOCIAL CARE SERVICES ETC.: MINOR AND CONSEQUENTIAL AMENDMENTS",
         "ref" : "schedule-1-part-2",
+        "id" : "schedule-1-part-2",
+        "href" : "schedule/1/part/2",
         "extent" : [ "E", "W" ],
         "children" : [ {
           "name" : "item",
           "number" : "3",
           "title" : "Mental Health Act 1983 (c. 20)",
           "ref" : "schedule-1-paragraph-3",
+          "id" : "schedule-1-paragraph-3",
+          "href" : "schedule/1/paragraph/3",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "Safeguarding Vulnerable Groups Act 2006 (c. 47)",
           "ref" : "schedule-1-paragraph-4",
+          "id" : "schedule-1-paragraph-4",
+          "href" : "schedule/1/paragraph/4",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "Social Services and Well-being (Wales) Act 2014 (anaw 4)",
           "ref" : "schedule-1-paragraph-5",
+          "id" : "schedule-1-paragraph-5",
+          "href" : "schedule/1/paragraph/5",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "Criminal Justice and Courts Act 2015 (c. 2)",
           "ref" : "schedule-1-paragraph-6",
+          "id" : "schedule-1-paragraph-6",
+          "href" : "schedule/1/paragraph/6",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "Regulation and Inspection of Social Care (Wales) Act 2016 (anaw 2)",
           "ref" : "schedule-1-paragraph-7",
+          "id" : "schedule-1-paragraph-7",
+          "href" : "schedule/1/paragraph/7",
           "extent" : [ "E", "W" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "Social Services and Well-being (Wales) Act 2014 (Consequential Amendments) Regulations 2016 (S.I. 2016/413 (W. 131))",
           "ref" : "schedule-1-paragraph-8",
+          "id" : "schedule-1-paragraph-8",
+          "href" : "schedule/1/paragraph/8",
           "extent" : [ "E", "W" ]
         } ]
       } ]
@@ -419,42 +529,56 @@
       "number" : "SCHEDULE 2",
       "title" : "DIRECT PAYMENTS FOR HEALTH CARE: MINOR AND CONSEQUENTIAL AMENDMENTS",
       "ref" : "schedule-2",
+      "id" : "schedule-2",
+      "href" : "schedule/2",
       "extent" : [ "E", "W" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "Mental Health Act 1983 (c. 20)",
         "ref" : "schedule-2-paragraph-1",
+        "id" : "schedule-2-paragraph-1",
+        "href" : "schedule/2/paragraph/1",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "Disabled Persons (Services, Consultation and Representation) Act 1986 (c. 33)",
         "ref" : "schedule-2-paragraph-2",
+        "id" : "schedule-2-paragraph-2",
+        "href" : "schedule/2/paragraph/2",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "National Health Service (Wales) Act 2006 (c. 42)",
         "ref" : "schedule-2-paragraph-3",
+        "id" : "schedule-2-paragraph-3",
+        "href" : "schedule/2/paragraph/3",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "Safeguarding Vulnerable Groups Act 2006 (c. 47)",
         "ref" : "schedule-2-paragraph-4",
+        "id" : "schedule-2-paragraph-4",
+        "href" : "schedule/2/paragraph/4",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Criminal Justice and Courts Act 2015 (c. 2)",
         "ref" : "schedule-2-paragraph-5",
+        "id" : "schedule-2-paragraph-5",
+        "href" : "schedule/2/paragraph/5",
         "extent" : [ "E", "W" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "Public Services Ombudsman (Wales) Act 2019 (anaw 3)",
         "ref" : "schedule-2-paragraph-6",
+        "id" : "schedule-2-paragraph-6",
+        "href" : "schedule/2/paragraph/6",
         "extent" : [ "E", "W" ]
       } ]
     } ]

@@ -45,6 +45,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
@@ -52,18 +54,24 @@
       "number" : "Parts I, II",
       "title" : null,
       "ref" : "part-1",
+      "id" : "part-1",
+      "href" : "part/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1—25",
         "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
         "ref" : "section-125",
+        "id" : "section-125",
+        "href" : "section/125",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "26–33",
         "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ",
         "ref" : "section-2633",
+        "id" : "section-2633",
+        "href" : "section/2633",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -71,12 +79,16 @@
       "number" : "Part III",
       "title" : " Meeting of Parliament when Prorogued",
       "ref" : "part-III",
+      "id" : "part-III",
+      "href" : "part/III",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "34",
         "title" : " Time for summoning parliament during prorogation.",
         "ref" : "section-34",
+        "id" : "section-34",
+        "href" : "section/34",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -84,12 +96,16 @@
       "number" : "Part IV",
       "title" : " General",
       "ref" : "part-IV",
+      "id" : "part-IV",
+      "href" : "part/IV",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "35",
         "title" : " Short title.",
         "ref" : "section-35",
+        "id" : "section-35",
+        "href" : "section/35",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     } ],
@@ -98,12 +114,16 @@
       "number" : "FIRST AND SECOND SCHEDULES",
       "title" : null,
       "ref" : "schedule-1",
+      "id" : "schedule-1",
+      "href" : "schedule/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -111,12 +131,16 @@
       "number" : "SCHEDULE THREE",
       "title" : null,
       "ref" : "schedule-THREE",
+      "id" : "schedule-THREE",
+      "href" : "schedule/THREE",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -124,12 +148,16 @@
       "number" : "SCHEDULE FOUR",
       "title" : null,
       "ref" : "schedule-FOUR",
+      "id" : "schedule-FOUR",
+      "href" : "schedule/FOUR",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -137,12 +165,16 @@
       "number" : "SCHEDULE FIVE",
       "title" : null,
       "ref" : "schedule-FIVE",
+      "id" : "schedule-FIVE",
+      "href" : "schedule/FIVE",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -150,12 +182,16 @@
       "number" : "SCHEDULE SIX",
       "title" : null,
       "ref" : "schedule-SIX",
+      "id" : "schedule-SIX",
+      "href" : "schedule/SIX",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     }, {
@@ -163,12 +199,16 @@
       "number" : "SCHEDULE SEVEN",
       "title" : null,
       "ref" : "schedule-SEVEN",
+      "id" : "schedule-SEVEN",
+      "href" : "schedule/SEVEN",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "",
         "title" : ". . . . . . . . . ....",
-        "ref" : "",
+        "ref" : null,
+        "id" : null,
+        "href" : null,
         "extent" : [ ]
       } ]
     } ]

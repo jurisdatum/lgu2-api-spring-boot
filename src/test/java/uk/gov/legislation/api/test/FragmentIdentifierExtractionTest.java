@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.util.Links;
 
+import java.net.URI;
+
 class FragmentIdentifierExtractionTest {
 
     @Test
@@ -22,5 +24,22 @@ class FragmentIdentifierExtractionTest {
 		Assertions.assertEquals("section/1", fragment);
 
 	}
+
+    @Test
+    void crossheadingIdentifiersRemainIntact() {
+        // crossheading fragments with multi-word titles must preserve dashes
+        // (e.g., "final-provisions" not "final/provisions").
+        String link = "http://www.legislation.gov.uk/ukpga/2023/29/part/1/chapter/2/crossheading/final-provisions";
+        Assertions.assertEquals(
+            "part/1/chapter/2/crossheading/final-provisions",
+            Links.extractFragmentIdentifierFromLink(link)
+        );
+
+        URI uri = URI.create(link);
+        Assertions.assertEquals(
+            "part/1/chapter/2/crossheading/final-provisions",
+            Links.extractFragmentIdentifierFromLink(uri)
+        );
+    }
 
 }

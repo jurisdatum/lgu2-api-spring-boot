@@ -34,23 +34,23 @@
     "fragmentInfo" : {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
       "label" : "ARTICLE I."
     },
     "prevInfo" : {
-      "href" : "aep/Ann/6/11/introduction/1991-02-01",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : {
-      "href" : "aep/Ann/6/11/part/2/1991-02-01",
+      "href" : "part/2",
       "label" : "Part"
     },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
       "label" : "ARTICLE I."
@@ -58,14 +58,14 @@
     "descendants" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "aep/Ann/6/11/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
       "label" : "ARTICLE I."
     }, {
       "element" : "P1group",
       "id" : "section-wrapper1",
-      "href" : "aep/Ann/6/11/section/wrapper1/1991-02-01",
+      "href" : "section/wrapper1",
       "number" : null,
       "title" : "The Kingdoms United;     Ensigns Armorial",
       "label" : "P1group"

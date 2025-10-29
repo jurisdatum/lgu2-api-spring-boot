@@ -49,6 +49,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
@@ -56,42 +58,56 @@
       "number" : "1",
       "title" : "Citation, commencement and extent",
       "ref" : "regulation-1",
+      "id" : "regulation-1",
+      "href" : "regulation/1",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "2",
       "title" : "Amendment of the State Pension Credit Regulations 2002",
       "ref" : "regulation-2",
+      "id" : "regulation-2",
+      "href" : "regulation/2",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "3",
       "title" : "Amendment of the Housing Benefit Regulations 2006",
       "ref" : "regulation-3",
+      "id" : "regulation-3",
+      "href" : "regulation/3",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "4",
       "title" : "Amendment of the Housing Benefit (Persons who have attained the qualifying age for state pension credit) Regulations 2006",
       "ref" : "regulation-4",
+      "id" : "regulation-4",
+      "href" : "regulation/4",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "5",
       "title" : "Amendment of the Universal Credit Regulations 2013",
       "ref" : "regulation-5",
+      "id" : "regulation-5",
+      "href" : "regulation/5",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "6",
       "title" : "Amendment of the Universal Credit (Transitional Provisions) Regulations 2014",
       "ref" : "regulation-6",
+      "id" : "regulation-6",
+      "href" : "regulation/6",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "item",
       "number" : "7",
       "title" : "Amendment of the Welfare Reform Act 2012 (Commencement No. 32 and Savings and Transitional Provisions) Order 2019",
       "ref" : "regulation-7",
+      "id" : "regulation-7",
+      "href" : "regulation/7",
       "extent" : [ "E", "W", "S", "NI" ]
     } ],
     "signature" : {
@@ -99,6 +115,8 @@
       "number" : null,
       "title" : "Signature",
       "ref" : "signature",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "explanatoryNote" : {
@@ -106,6 +124,8 @@
       "number" : null,
       "title" : "Explanatory Note",
       "ref" : "note",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     }
   }

@@ -2405,6 +2405,8 @@
       "number" : null,
       "title" : "Introductory Text",
       "ref" : "introduction",
+      "id" : null,
+      "href" : null,
       "extent" : [ "E", "W", "S", "NI" ]
     },
     "body" : [ {
@@ -2412,54 +2414,72 @@
       "number" : "PART 1",
       "title" : "Regulatory framework",
       "ref" : "part-1",
+      "id" : "part-1",
+      "href" : "part/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "chapter",
         "number" : "CHAPTER 1",
         "title" : "Revocation of assimilated law",
         "ref" : "part-1-chapter-1",
+        "id" : "part-1-chapter-1",
+        "href" : "part/1/chapter/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "Revocation of assimilated law relating to financial services and markets",
           "ref" : "section-1",
+          "id" : "section-1",
+          "href" : "section/1",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "2",
           "title" : "Transitional amendments",
           "ref" : "section-2",
+          "id" : "section-2",
+          "href" : "section/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "Power to make further transitional amendments",
           "ref" : "section-3",
+          "id" : "section-3",
+          "href" : "section/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "Power to restate and modify saved legislation",
           "ref" : "section-4",
+          "id" : "section-4",
+          "href" : "section/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "Power to replace references to EU directives",
           "ref" : "section-5",
+          "id" : "section-5",
+          "href" : "section/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "Restatement in rules: exemption from consultation requirements etc",
           "ref" : "section-6",
+          "id" : "section-6",
+          "href" : "section/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "Interpretation of Chapter",
           "ref" : "section-7",
+          "id" : "section-7",
+          "href" : "section/7",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -2467,18 +2487,24 @@
         "number" : "CHAPTER 2",
         "title" : "New regulatory powers",
         "ref" : "part-1-chapter-2",
+        "id" : "part-1-chapter-2",
+        "href" : "part/1/chapter/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "pblock",
           "number" : null,
           "title" : "Designated activities regime",
           "ref" : "part-1-chapter-2-crossheading-designated-activities-regime",
+          "id" : "part-1-chapter-2-crossheading-designated-activities-regime",
+          "href" : "part/1/chapter/2/crossheading/designated-activities-regime",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "8",
             "title" : "Designated activities",
             "ref" : "section-8",
+            "id" : "section-8",
+            "href" : "section/8",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2486,30 +2512,40 @@
           "number" : null,
           "title" : "Financial market infrastructure: general rules and requirements",
           "ref" : "part-1-chapter-2-crossheading-financial-market-infrastructure-general-rules-and-requirements",
+          "id" : "part-1-chapter-2-crossheading-financial-market-infrastructure-general-rules-and-requirements",
+          "href" : "part/1/chapter/2/crossheading/financial-market-infrastructure-general-rules-and-requirements",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "9",
             "title" : "Rules relating to central counterparties and central securities depositories",
             "ref" : "section-9",
+            "id" : "section-9",
+            "href" : "section/9",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "10",
             "title" : "Central counterparties and central securities depositories: other requirements",
             "ref" : "section-10",
+            "id" : "section-10",
+            "href" : "section/10",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "11",
             "title" : "Rules relating to investment exchanges and data reporting service providers",
             "ref" : "section-11",
+            "id" : "section-11",
+            "href" : "section/11",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "12",
             "title" : "Treasury directions to Bank of England: restrictions",
             "ref" : "section-12",
+            "id" : "section-12",
+            "href" : "section/12",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2517,36 +2553,48 @@
           "number" : null,
           "title" : "Financial market infrastructure: piloting powers",
           "ref" : "part-1-chapter-2-crossheading-financial-market-infrastructure-piloting-powers",
+          "id" : "part-1-chapter-2-crossheading-financial-market-infrastructure-piloting-powers",
+          "href" : "part/1/chapter/2/crossheading/financial-market-infrastructure-piloting-powers",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "13",
             "title" : "Testing of FMI technologies or practices",
             "ref" : "section-13",
+            "id" : "section-13",
+            "href" : "section/13",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "14",
             "title" : "Reports on FMI sandboxes",
             "ref" : "section-14",
+            "id" : "section-14",
+            "href" : "section/14",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "15",
             "title" : "Permanent implementation of arrangements tested under an FMI sandbox",
             "ref" : "section-15",
+            "id" : "section-15",
+            "href" : "section/15",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "16",
             "title" : "Regulations",
             "ref" : "section-16",
+            "id" : "section-16",
+            "href" : "section/16",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "17",
             "title" : "Interpretation",
             "ref" : "section-17",
+            "id" : "section-17",
+            "href" : "section/17",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2554,18 +2602,24 @@
           "number" : null,
           "title" : "Powers in relation to critical third parties",
           "ref" : "part-1-chapter-2-crossheading-powers-in-relation-to-critical-third-parties",
+          "id" : "part-1-chapter-2-crossheading-powers-in-relation-to-critical-third-parties",
+          "href" : "part/1/chapter/2/crossheading/powers-in-relation-to-critical-third-parties",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "18",
             "title" : "Critical third parties: designation and powers",
             "ref" : "section-18",
+            "id" : "section-18",
+            "href" : "section/18",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "19",
             "title" : "Critical third parties: related amendments",
             "ref" : "section-19",
+            "id" : "section-19",
+            "href" : "section/19",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2573,12 +2627,16 @@
           "number" : null,
           "title" : "Financial promotion",
           "ref" : "part-1-chapter-2-crossheading-financial-promotion",
+          "id" : "part-1-chapter-2-crossheading-financial-promotion",
+          "href" : "part/1/chapter/2/crossheading/financial-promotion",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "20",
             "title" : "Financial promotion",
             "ref" : "section-20",
+            "id" : "section-20",
+            "href" : "section/20",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2586,12 +2644,16 @@
           "number" : null,
           "title" : "Sustainability disclosure requirements",
           "ref" : "part-1-chapter-2-crossheading-sustainability-disclosure-requirements",
+          "id" : "part-1-chapter-2-crossheading-sustainability-disclosure-requirements",
+          "href" : "part/1/chapter/2/crossheading/sustainability-disclosure-requirements",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "21",
             "title" : "Sustainability disclosure requirements",
             "ref" : "section-21",
+            "id" : "section-21",
+            "href" : "section/21",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2599,18 +2661,24 @@
           "number" : null,
           "title" : "Digital settlement assets",
           "ref" : "part-1-chapter-2-crossheading-digital-settlement-assets",
+          "id" : "part-1-chapter-2-crossheading-digital-settlement-assets",
+          "href" : "part/1/chapter/2/crossheading/digital-settlement-assets",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "22",
             "title" : "Digital settlement assets",
             "ref" : "section-22",
+            "id" : "section-22",
+            "href" : "section/22",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "23",
             "title" : "Digital settlement assets: power to make regulations",
             "ref" : "section-23",
+            "id" : "section-23",
+            "href" : "section/23",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2618,12 +2686,16 @@
           "number" : null,
           "title" : "Mutual recognition",
           "ref" : "part-1-chapter-2-crossheading-mutual-recognition",
+          "id" : "part-1-chapter-2-crossheading-mutual-recognition",
+          "href" : "part/1/chapter/2/crossheading/mutual-recognition",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "24",
             "title" : "Implementation of mutual recognition agreements",
             "ref" : "section-24",
+            "id" : "section-24",
+            "href" : "section/24",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         } ]
@@ -2632,36 +2704,48 @@
         "number" : "CHAPTER 3",
         "title" : "Accountability of regulators",
         "ref" : "part-1-chapter-3",
+        "id" : "part-1-chapter-3",
+        "href" : "part/1/chapter/3",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "pblock",
           "number" : null,
           "title" : "FCA and PRA objectives and regulatory principles",
           "ref" : "part-1-chapter-3-crossheading-fca-and-pra-objectives-and-regulatory-principles",
+          "id" : "part-1-chapter-3-crossheading-fca-and-pra-objectives-and-regulatory-principles",
+          "href" : "part/1/chapter/3/crossheading/fca-and-pra-objectives-and-regulatory-principles",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "25",
             "title" : "Competitiveness and growth objective",
             "ref" : "section-25",
+            "id" : "section-25",
+            "href" : "section/25",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "26",
             "title" : "Competitiveness and growth objective: reporting requirements",
             "ref" : "section-26",
+            "id" : "section-26",
+            "href" : "section/26",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "27",
             "title" : "Regulatory principles",
             "ref" : "section-27",
+            "id" : "section-27",
+            "href" : "section/27",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "28",
             "title" : "Sections 25 and 27: consequential amendments",
             "ref" : "section-28",
+            "id" : "section-28",
+            "href" : "section/28",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2669,42 +2753,56 @@
           "number" : null,
           "title" : "FCA and PRA powers to make rules etc",
           "ref" : "part-1-chapter-3-crossheading-fca-and-pra-powers-to-make-rules-etc",
+          "id" : "part-1-chapter-3-crossheading-fca-and-pra-powers-to-make-rules-etc",
+          "href" : "part/1/chapter/3/crossheading/fca-and-pra-powers-to-make-rules-etc",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "29",
             "title" : "Review of rules",
             "ref" : "section-29",
+            "id" : "section-29",
+            "href" : "section/29",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "30",
             "title" : "Treasury power in relation to rules",
             "ref" : "section-30",
+            "id" : "section-30",
+            "href" : "section/30",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "31",
             "title" : "Matters to consider when making rules",
             "ref" : "section-31",
+            "id" : "section-31",
+            "href" : "section/31",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "32",
             "title" : "Effect of rules etc on deference decisions",
             "ref" : "section-32",
+            "id" : "section-32",
+            "href" : "section/32",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "33",
             "title" : "Effect of rules etc on international trade obligations",
             "ref" : "section-33",
+            "id" : "section-33",
+            "href" : "section/33",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "34",
             "title" : "Power to disapply or modify rules",
             "ref" : "section-34",
+            "id" : "section-34",
+            "href" : "section/34",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2712,30 +2810,40 @@
           "number" : null,
           "title" : "FCA and PRA engagement",
           "ref" : "part-1-chapter-3-crossheading-fca-and-pra-engagement",
+          "id" : "part-1-chapter-3-crossheading-fca-and-pra-engagement",
+          "href" : "part/1/chapter/3/crossheading/fca-and-pra-engagement",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "35",
             "title" : "Responses to recommendations of the Treasury",
             "ref" : "section-35",
+            "id" : "section-35",
+            "href" : "section/35",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "36",
             "title" : "Public consultation requirements",
             "ref" : "section-36",
+            "id" : "section-36",
+            "href" : "section/36",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "37",
             "title" : "Engagement with statutory panels",
             "ref" : "section-37",
+            "id" : "section-37",
+            "href" : "section/37",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "38",
             "title" : "Engagement with Parliamentary Committees",
             "ref" : "section-38",
+            "id" : "section-38",
+            "href" : "section/38",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2743,18 +2851,24 @@
           "number" : "39",
           "title" : "Reporting requirements",
           "ref" : "section-39",
+          "id" : "section-39",
+          "href" : "section/39",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "pblock",
           "number" : null,
           "title" : "Co-operation of FCA and others",
           "ref" : "part-1-chapter-3-crossheading-cooperation-of-fca-and-others",
+          "id" : "part-1-chapter-3-crossheading-cooperation-of-fca-and-others",
+          "href" : "part/1/chapter/3/crossheading/cooperation-of-fca-and-others",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "40",
             "title" : "Duty to co-operate and consult in exercising functions",
             "ref" : "section-40",
+            "id" : "section-40",
+            "href" : "section/40",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2762,48 +2876,64 @@
           "number" : null,
           "title" : "Panels and policy statements",
           "ref" : "part-1-chapter-3-crossheading-panels-and-policy-statements",
+          "id" : "part-1-chapter-3-crossheading-panels-and-policy-statements",
+          "href" : "part/1/chapter/3/crossheading/panels-and-policy-statements",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "41",
             "title" : "Listing Authority Advisory Panel",
             "ref" : "section-41",
+            "id" : "section-41",
+            "href" : "section/41",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "42",
             "title" : "Insurance Practitioner Panel",
             "ref" : "section-42",
+            "id" : "section-42",
+            "href" : "section/42",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "43",
             "title" : "Cost Benefit Analysis Panels",
             "ref" : "section-43",
+            "id" : "section-43",
+            "href" : "section/43",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "44",
             "title" : "Statement of policy on cost benefit analyses",
             "ref" : "section-44",
+            "id" : "section-44",
+            "href" : "section/44",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "45",
             "title" : "Statement of policy on panel appointments",
             "ref" : "section-45",
+            "id" : "section-45",
+            "href" : "section/45",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "46",
             "title" : "Composition of panels",
             "ref" : "section-46",
+            "id" : "section-46",
+            "href" : "section/46",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "47",
             "title" : "Panel reports",
             "ref" : "section-47",
+            "id" : "section-47",
+            "href" : "section/47",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2811,24 +2941,32 @@
           "number" : null,
           "title" : "Bank of England regulatory powers",
           "ref" : "part-1-chapter-3-crossheading-bank-of-england-regulatory-powers",
+          "id" : "part-1-chapter-3-crossheading-bank-of-england-regulatory-powers",
+          "href" : "part/1/chapter/3/crossheading/bank-of-england-regulatory-powers",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "48",
             "title" : "Exercise of FMI regulatory powers",
             "ref" : "section-48",
+            "id" : "section-48",
+            "href" : "section/48",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "49",
             "title" : "Bank of England: rule-making powers",
             "ref" : "section-49",
+            "id" : "section-49",
+            "href" : "section/49",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "50",
             "title" : "Application of FSMA 2000 to FMI functions",
             "ref" : "section-50",
+            "id" : "section-50",
+            "href" : "section/50",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2836,18 +2974,24 @@
           "number" : null,
           "title" : "Payment Systems Regulator",
           "ref" : "part-1-chapter-3-crossheading-payment-systems-regulator",
+          "id" : "part-1-chapter-3-crossheading-payment-systems-regulator",
+          "href" : "part/1/chapter/3/crossheading/payment-systems-regulator",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "51",
             "title" : "Payment Systems Regulator",
             "ref" : "section-51",
+            "id" : "section-51",
+            "href" : "section/51",
             "extent" : [ "E", "W", "S", "NI" ]
           }, {
             "name" : "item",
             "number" : "52",
             "title" : "Chair of the Payment Systems Regulator as member of FCA Board",
             "ref" : "section-52",
+            "id" : "section-52",
+            "href" : "section/52",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         }, {
@@ -2855,12 +2999,16 @@
           "number" : null,
           "title" : "Consultation on rules",
           "ref" : "part-1-chapter-3-crossheading-consultation-on-rules",
+          "id" : "part-1-chapter-3-crossheading-consultation-on-rules",
+          "href" : "part/1/chapter/3/crossheading/consultation-on-rules",
           "extent" : [ "E", "W", "S", "NI" ],
           "children" : [ {
             "name" : "item",
             "number" : "53",
             "title" : "Consultation on rules",
             "ref" : "section-53",
+            "id" : "section-53",
+            "href" : "section/53",
             "extent" : [ "E", "W", "S", "NI" ]
           } ]
         } ]
@@ -2870,18 +3018,24 @@
       "number" : "PART 2",
       "title" : "Access to cash",
       "ref" : "part-2",
+      "id" : "part-2",
+      "href" : "part/2",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "54",
         "title" : "Cash access services",
         "ref" : "section-54",
+        "id" : "section-54",
+        "href" : "section/54",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "55",
         "title" : "Wholesale cash distribution",
         "ref" : "section-55",
+        "id" : "section-55",
+        "href" : "section/55",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -2889,12 +3043,16 @@
       "number" : "PART 3",
       "title" : "Performance of functions relating to financial market infrastructure",
       "ref" : "part-3",
+      "id" : "part-3",
+      "href" : "part/3",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "56",
         "title" : "Recognised bodies: senior managers and certification",
         "ref" : "section-56",
+        "id" : "section-56",
+        "href" : "section/56",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -2902,12 +3060,16 @@
       "number" : "PART 4",
       "title" : "Central counterparties in financial difficulties",
       "ref" : "part-4",
+      "id" : "part-4",
+      "href" : "part/4",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "57",
         "title" : "Central counterparties in financial difficulties",
         "ref" : "section-57",
+        "id" : "section-57",
+        "href" : "section/57",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -2915,12 +3077,16 @@
       "number" : "PART 5",
       "title" : "Insurers in financial difficulties",
       "ref" : "part-5",
+      "id" : "part-5",
+      "href" : "part/5",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "58",
         "title" : "Insurers in financial difficulties",
         "ref" : "section-58",
+        "id" : "section-58",
+        "href" : "section/58",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -2928,78 +3094,104 @@
       "number" : "PART 6",
       "title" : "Miscellaneous",
       "ref" : "part-6",
+      "id" : "part-6",
+      "href" : "part/6",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "pblock",
         "number" : null,
         "title" : "Amendments to FSMA 2000",
         "ref" : "part-6-crossheading-amendments-to-fsma-2000",
+        "id" : "part-6-crossheading-amendments-to-fsma-2000",
+        "href" : "part/6/crossheading/amendments-to-fsma-2000",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "59",
           "title" : "Application of provisions to regulatory functions under this Act",
           "ref" : "section-59",
+          "id" : "section-59",
+          "href" : "section/59",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "60",
           "title" : "Formerly authorised persons",
           "ref" : "section-60",
+          "id" : "section-60",
+          "href" : "section/60",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "61",
           "title" : "Control over authorised persons",
           "ref" : "section-61",
+          "id" : "section-61",
+          "href" : "section/61",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "62",
           "title" : "Financial services compensation scheme",
           "ref" : "section-62",
+          "id" : "section-62",
+          "href" : "section/62",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "63",
           "title" : "The Ombudsman scheme",
           "ref" : "section-63",
+          "id" : "section-63",
+          "href" : "section/63",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "64",
           "title" : "Unauthorised co-ownership AIFs",
           "ref" : "section-64",
+          "id" : "section-64",
+          "href" : "section/64",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "65",
           "title" : "Power to amend enactments in consequence of rules",
           "ref" : "section-65",
+          "id" : "section-65",
+          "href" : "section/65",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "66",
           "title" : "Ambulatory references",
           "ref" : "section-66",
+          "id" : "section-66",
+          "href" : "section/66",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "67",
           "title" : "Power to amend or repeal certain provisions of FSMA 2000",
           "ref" : "section-67",
+          "id" : "section-67",
+          "href" : "section/67",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "68",
           "title" : "Power under FSMA 2000 to make transitional provisions",
           "ref" : "section-68",
+          "id" : "section-68",
+          "href" : "section/68",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "69",
           "title" : "Cryptoassets",
           "ref" : "section-69",
+          "id" : "section-69",
+          "href" : "section/69",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3007,18 +3199,24 @@
         "number" : null,
         "title" : "Bank of England levy",
         "ref" : "part-6-crossheading-bank-of-england-levy",
+        "id" : "part-6-crossheading-bank-of-england-levy",
+        "href" : "part/6/crossheading/bank-of-england-levy",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "70",
           "title" : "Bank of England levy",
           "ref" : "section-70",
+          "id" : "section-70",
+          "href" : "section/70",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "71",
           "title" : "Bank of England levy: consequential amendments",
           "ref" : "section-71",
+          "id" : "section-71",
+          "href" : "section/71",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3026,54 +3224,72 @@
         "number" : null,
         "title" : "Other miscellaneous provisions",
         "ref" : "part-6-crossheading-other-miscellaneous-provisions",
+        "id" : "part-6-crossheading-other-miscellaneous-provisions",
+        "href" : "part/6/crossheading/other-miscellaneous-provisions",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "72",
           "title" : "Liability of payment service providers for fraudulent transactions",
           "ref" : "section-72",
+          "id" : "section-72",
+          "href" : "section/72",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "73",
           "title" : "Credit unions",
           "ref" : "section-73",
+          "id" : "section-73",
+          "href" : "section/73",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "74",
           "title" : "Reinsurance for acts of terrorism",
           "ref" : "section-74",
+          "id" : "section-74",
+          "href" : "section/74",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "75",
           "title" : "Banking Act 2009: miscellaneous amendments",
           "ref" : "section-75",
+          "id" : "section-75",
+          "href" : "section/75",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "76",
           "title" : "Arrangements for the investigation of complaints",
           "ref" : "section-76",
+          "id" : "section-76",
+          "href" : "section/76",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "77",
           "title" : "Politically exposed persons: money laundering and terrorist financing",
           "ref" : "section-77",
+          "id" : "section-77",
+          "href" : "section/77",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "78",
           "title" : "Politically exposed persons: review of guidance",
           "ref" : "section-78",
+          "id" : "section-78",
+          "href" : "section/78",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "79",
           "title" : "Forest risk commodities: review",
           "ref" : "section-79",
+          "id" : "section-79",
+          "href" : "section/79",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -3082,54 +3298,72 @@
       "number" : "PART 7",
       "title" : "General",
       "ref" : "part-7",
+      "id" : "part-7",
+      "href" : "part/7",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "80",
         "title" : "Interpretation",
         "ref" : "section-80",
+        "id" : "section-80",
+        "href" : "section/80",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "81",
         "title" : "Pre-commencement consultation",
         "ref" : "section-81",
+        "id" : "section-81",
+        "href" : "section/81",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "82",
         "title" : "Financial provision",
         "ref" : "section-82",
+        "id" : "section-82",
+        "href" : "section/82",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "83",
         "title" : "Power to make consequential provision",
         "ref" : "section-83",
+        "id" : "section-83",
+        "href" : "section/83",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "84",
         "title" : "Regulations",
         "ref" : "section-84",
+        "id" : "section-84",
+        "href" : "section/84",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "85",
         "title" : "Extent",
         "ref" : "section-85",
+        "id" : "section-85",
+        "href" : "section/85",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "86",
         "title" : "Commencement",
         "ref" : "section-86",
+        "id" : "section-86",
+        "href" : "section/86",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "87",
         "title" : "Short title",
         "ref" : "section-87",
+        "id" : "section-87",
+        "href" : "section/87",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     } ],
@@ -3138,36 +3372,48 @@
       "number" : "SCHEDULE 1",
       "title" : "Revocation of assimilated law relating to financial services",
       "ref" : "schedule-1",
+      "id" : "schedule-1",
+      "href" : "schedule/1",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "Assimilated direct principal legislation",
         "ref" : "schedule-1-part-1",
+        "id" : "schedule-1-part-1",
+        "href" : "schedule/1/part/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "part",
         "number" : "PART 2",
         "title" : "Subordinate legislation",
         "ref" : "schedule-1-part-2",
+        "id" : "schedule-1-part-2",
+        "href" : "schedule/1/part/2",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "part",
         "number" : "PART 3",
         "title" : "EU tertiary legislation etc",
         "ref" : "schedule-1-part-3",
+        "id" : "schedule-1-part-3",
+        "href" : "schedule/1/part/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "part",
         "number" : "PART 4",
         "title" : "Primary legislation",
         "ref" : "schedule-1-part-4",
+        "id" : "schedule-1-part-4",
+        "href" : "schedule/1/part/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "part",
         "number" : "PART 5",
         "title" : "Other EU-derived legislation",
         "ref" : "schedule-1-part-5",
+        "id" : "schedule-1-part-5",
+        "href" : "schedule/1/part/5",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -3175,174 +3421,232 @@
       "number" : "SCHEDULE 2",
       "title" : "Transitional amendments",
       "ref" : "schedule-2",
+      "id" : "schedule-2",
+      "href" : "schedule/2",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "Amendments to the Markets in Financial Instruments Regulation",
         "ref" : "schedule-2-part-1",
+        "id" : "schedule-2-part-1",
+        "href" : "schedule/2/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "Introductory",
           "ref" : "schedule-2-paragraph-1",
+          "id" : "schedule-2-paragraph-1",
+          "href" : "schedule/2/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "2",
           "title" : "Transparency requirements for equities",
           "ref" : "schedule-2-paragraph-2",
+          "id" : "schedule-2-paragraph-2",
+          "href" : "schedule/2/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "For Article 4 substitute— Article 4 Waivers for equity instruments...",
           "ref" : "schedule-2-paragraph-3",
+          "id" : "schedule-2-paragraph-3",
+          "href" : "schedule/2/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "After Article 4 insert— Article 4a Suspension of waivers The FCA may direct that a waiver provided for by...",
           "ref" : "schedule-2-paragraph-4",
+          "id" : "schedule-2-paragraph-4",
+          "href" : "schedule/2/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "Omit Article 5 (volume cap mechanism). ",
           "ref" : "schedule-2-paragraph-5",
+          "id" : "schedule-2-paragraph-5",
+          "href" : "schedule/2/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "(1) Article 14 (obligation for systematic internalisers to make public...",
           "ref" : "schedule-2-paragraph-6",
+          "id" : "schedule-2-paragraph-6",
+          "href" : "schedule/2/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "Transparency requirements for fixed income instruments and derivatives etc",
           "ref" : "schedule-2-paragraph-7",
+          "id" : "schedule-2-paragraph-7",
+          "href" : "schedule/2/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "Systematic internalisers and other investment firms",
           "ref" : "schedule-2-paragraph-8",
+          "id" : "schedule-2-paragraph-8",
+          "href" : "schedule/2/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "In Article 17a (tick sizes), in the second paragraph, omit...",
           "ref" : "schedule-2-paragraph-9",
+          "id" : "schedule-2-paragraph-9",
+          "href" : "schedule/2/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "10",
           "title" : "For Article 18 substitute— Article 18 Systematic internalisers: pre-trade transparency...",
           "ref" : "schedule-2-paragraph-10",
+          "id" : "schedule-2-paragraph-10",
+          "href" : "schedule/2/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "For Article 21 substitute— Article 21 Investment firms (including systematic...",
           "ref" : "schedule-2-paragraph-11",
+          "id" : "schedule-2-paragraph-11",
+          "href" : "schedule/2/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "Systematic internalisers and other investment firms",
           "ref" : "schedule-2-paragraph-12",
+          "id" : "schedule-2-paragraph-12",
+          "href" : "schedule/2/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "13",
           "title" : "Share trading obligation",
           "ref" : "schedule-2-paragraph-13",
+          "id" : "schedule-2-paragraph-13",
+          "href" : "schedule/2/paragraph/13",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "14",
           "title" : "In Article 1(2E), omit “Article 23,”. ",
           "ref" : "schedule-2-paragraph-14",
+          "id" : "schedule-2-paragraph-14",
+          "href" : "schedule/2/paragraph/14",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "15",
           "title" : "Derivatives trading obligation",
           "ref" : "schedule-2-paragraph-15",
+          "id" : "schedule-2-paragraph-15",
+          "href" : "schedule/2/paragraph/15",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "16",
           "title" : "(1) Article 28 (obligation to trade on regulated markets, MTFs...",
           "ref" : "schedule-2-paragraph-16",
+          "id" : "schedule-2-paragraph-16",
+          "href" : "schedule/2/paragraph/16",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "17",
           "title" : "After Article 28 insert— Article 28a Suspension or modification of...",
           "ref" : "schedule-2-paragraph-17",
+          "id" : "schedule-2-paragraph-17",
+          "href" : "schedule/2/paragraph/17",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "18",
           "title" : "For Article 31 substitute— Article 31 Risk reduction services The FCA may by rules provide for one or more...",
           "ref" : "schedule-2-paragraph-18",
+          "id" : "schedule-2-paragraph-18",
+          "href" : "schedule/2/paragraph/18",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "19",
           "title" : "Consequential amendments relating to this Part",
           "ref" : "schedule-2-paragraph-19",
+          "id" : "schedule-2-paragraph-19",
+          "href" : "schedule/2/paragraph/19",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "20",
           "title" : "In Article 12(1) after “accordance with” insert “, or with...",
           "ref" : "schedule-2-paragraph-20",
+          "id" : "schedule-2-paragraph-20",
+          "href" : "schedule/2/paragraph/20",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "21",
           "title" : "In Article 13(1) after “accordance with” insert “, or with...",
           "ref" : "schedule-2-paragraph-21",
+          "id" : "schedule-2-paragraph-21",
+          "href" : "schedule/2/paragraph/21",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "22",
           "title" : "Omit Article 19. ",
           "ref" : "schedule-2-paragraph-22",
+          "id" : "schedule-2-paragraph-22",
+          "href" : "schedule/2/paragraph/22",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "23",
           "title" : "In Article 26(3), omit “and Article 21(5)(a)”. ",
           "ref" : "schedule-2-paragraph-23",
+          "id" : "schedule-2-paragraph-23",
+          "href" : "schedule/2/paragraph/23",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "24",
           "title" : "In Article 47(1A)(a), after “Regulation” insert “or in rules made...",
           "ref" : "schedule-2-paragraph-24",
+          "id" : "schedule-2-paragraph-24",
+          "href" : "schedule/2/paragraph/24",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "25",
           "title" : "In Article 50B (FCA directions), omit “Article 5, Article 9...",
           "ref" : "schedule-2-paragraph-25",
+          "id" : "schedule-2-paragraph-25",
+          "href" : "schedule/2/paragraph/25",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "26",
           "title" : "(1) Article 50C (other FCA directions) is amended as follows....",
           "ref" : "schedule-2-paragraph-26",
+          "id" : "schedule-2-paragraph-26",
+          "href" : "schedule/2/paragraph/26",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "27",
           "title" : "(1) Article 50D (FCA rules) is amended as follows. ",
           "ref" : "schedule-2-paragraph-27",
+          "id" : "schedule-2-paragraph-27",
+          "href" : "schedule/2/paragraph/27",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3350,24 +3654,32 @@
         "number" : "PART 2",
         "title" : "Amendments to the European Market Infrastructure Regulation",
         "ref" : "schedule-2-part-2",
+        "id" : "schedule-2-part-2",
+        "href" : "schedule/2/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "28",
           "title" : "Regulation (EU) No 648/2012 on OTC derivatives, central counterparties and...",
           "ref" : "schedule-2-paragraph-28",
+          "id" : "schedule-2-paragraph-28",
+          "href" : "schedule/2/paragraph/28",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "29",
           "title" : "After Article 6a insert— Article 6b Risk reduction services The Bank of England may by rules provide for the...",
           "ref" : "schedule-2-paragraph-29",
+          "id" : "schedule-2-paragraph-29",
+          "href" : "schedule/2/paragraph/29",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "30",
           "title" : "After Article 84b insert— Article 84c Bank of England rules...",
           "ref" : "schedule-2-paragraph-30",
+          "id" : "schedule-2-paragraph-30",
+          "href" : "schedule/2/paragraph/30",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3375,84 +3687,112 @@
         "number" : "PART 3",
         "title" : "Amendments to the EU Securitisation Regulation",
         "ref" : "schedule-2-part-3",
+        "id" : "schedule-2-part-3",
+        "href" : "schedule/2/part/3",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "31",
           "title" : "Introductory",
           "ref" : "schedule-2-paragraph-31",
+          "id" : "schedule-2-paragraph-31",
+          "href" : "schedule/2/paragraph/31",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "32",
           "title" : "STS equivalent non-UK securitisations",
           "ref" : "schedule-2-paragraph-32",
+          "id" : "schedule-2-paragraph-32",
+          "href" : "schedule/2/paragraph/32",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "33",
           "title" : "After Article 28 (third party verifying STS compliance) insert— CHAPTER...",
           "ref" : "schedule-2-paragraph-33",
+          "id" : "schedule-2-paragraph-33",
+          "href" : "schedule/2/paragraph/33",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "34",
           "title" : "Minor and consequential amendments",
           "ref" : "schedule-2-paragraph-34",
+          "id" : "schedule-2-paragraph-34",
+          "href" : "schedule/2/paragraph/34",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "35",
           "title" : "In Article 4 (requirements for securitisation special purpose entities)— ",
           "ref" : "schedule-2-paragraph-35",
+          "id" : "schedule-2-paragraph-35",
+          "href" : "schedule/2/paragraph/35",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "36",
           "title" : "(1) Article 5 (due-diligence requirements for institutional investors) is amended...",
           "ref" : "schedule-2-paragraph-36",
+          "id" : "schedule-2-paragraph-36",
+          "href" : "schedule/2/paragraph/36",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "37",
           "title" : "(1) Article 46 (Treasury review) is amended as follows. ",
           "ref" : "schedule-2-paragraph-37",
+          "id" : "schedule-2-paragraph-37",
+          "href" : "schedule/2/paragraph/37",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "38",
           "title" : "In Regulation (EU) No 575/2013 of the European Parliament and...",
           "ref" : "schedule-2-paragraph-38",
+          "id" : "schedule-2-paragraph-38",
+          "href" : "schedule/2/paragraph/38",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "39",
           "title" : "In Commission Delegated Regulation (EU) 2015/35 of 10 October 2014...",
           "ref" : "schedule-2-paragraph-39",
+          "id" : "schedule-2-paragraph-39",
+          "href" : "schedule/2/paragraph/39",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "40",
           "title" : "In Article 11(1) of Regulation (EU) 2017/1131 of the European...",
           "ref" : "schedule-2-paragraph-40",
+          "id" : "schedule-2-paragraph-40",
+          "href" : "schedule/2/paragraph/40",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "41",
           "title" : "The Securitisation Regulations 2018 (S.I. 2018/1288) are amended in accordance...",
           "ref" : "schedule-2-paragraph-41",
+          "id" : "schedule-2-paragraph-41",
+          "href" : "schedule/2/paragraph/41",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "42",
           "title" : "In regulation 2 (interpretation), in the definition of “SRUP”, in...",
           "ref" : "schedule-2-paragraph-42",
+          "id" : "schedule-2-paragraph-42",
+          "href" : "schedule/2/paragraph/42",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "43",
           "title" : "In regulation 4 (designation of competent authorities), in paragraph (1)(b),...",
           "ref" : "schedule-2-paragraph-43",
+          "id" : "schedule-2-paragraph-43",
+          "href" : "schedule/2/paragraph/43",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3460,48 +3800,64 @@
         "number" : "PART 4",
         "title" : "Amendments to the Financial Services and Markets Act 2000 (Markets in Financial Instruments) Regulations 2017",
         "ref" : "schedule-2-part-4",
+        "id" : "schedule-2-part-4",
+        "href" : "schedule/2/part/4",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "44",
           "title" : "Introductory",
           "ref" : "schedule-2-paragraph-44",
+          "id" : "schedule-2-paragraph-44",
+          "href" : "schedule/2/paragraph/44",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "45",
           "title" : "Position limits for commodity derivatives",
           "ref" : "schedule-2-paragraph-45",
+          "id" : "schedule-2-paragraph-45",
+          "href" : "schedule/2/paragraph/45",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "46",
           "title" : "(1) Regulation 16 (FCA duty to establish position limits) is...",
           "ref" : "schedule-2-paragraph-46",
+          "id" : "schedule-2-paragraph-46",
+          "href" : "schedule/2/paragraph/46",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "47",
           "title" : "(1) Regulation 27 (FCA power to require information) is amended...",
           "ref" : "schedule-2-paragraph-47",
+          "id" : "schedule-2-paragraph-47",
+          "href" : "schedule/2/paragraph/47",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "48",
           "title" : "(1) Regulation 28 (FCA power to intervene) is amended as...",
           "ref" : "schedule-2-paragraph-48",
+          "id" : "schedule-2-paragraph-48",
+          "href" : "schedule/2/paragraph/48",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "49",
           "title" : "In regulation 29 (interpretation of Part 3), in paragraph (2)—...",
           "ref" : "schedule-2-paragraph-49",
+          "id" : "schedule-2-paragraph-49",
+          "href" : "schedule/2/paragraph/49",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "50",
           "title" : "Consequential revocations relating to this Part",
           "ref" : "schedule-2-paragraph-50",
+          "id" : "schedule-2-paragraph-50",
+          "href" : "schedule/2/paragraph/50",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3509,12 +3865,16 @@
         "number" : "PART 5",
         "title" : "Amendments to the Central Counterparties (Amendment, etc., and Transitional Provision) (EU Exit) Regulations 2018",
         "ref" : "schedule-2-part-5",
+        "id" : "schedule-2-part-5",
+        "href" : "schedule/2/part/5",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "51",
           "title" : "(1) Regulation 19B of the Central Counterparties (Amendment, etc., and...",
           "ref" : "schedule-2-paragraph-51",
+          "id" : "schedule-2-paragraph-51",
+          "href" : "schedule/2/paragraph/51",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -3522,132 +3882,176 @@
         "number" : "PART 6",
         "title" : "Amendments relating to critical third parties",
         "ref" : "schedule-2-part-6",
+        "id" : "schedule-2-part-6",
+        "href" : "schedule/2/part/6",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "52",
           "title" : "The Electronic Money Regulations 2011 (S.I. 2011/99) are amended in...",
           "ref" : "schedule-2-paragraph-52",
+          "id" : "schedule-2-paragraph-52",
+          "href" : "schedule/2/paragraph/52",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "53",
           "title" : "In regulation 48 (monitoring and enforcement), after paragraph (1)(a) insert—...",
           "ref" : "schedule-2-paragraph-53",
+          "id" : "schedule-2-paragraph-53",
+          "href" : "schedule/2/paragraph/53",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "54",
           "title" : "In regulation 49 (reporting requirements), after paragraph (1) insert— ",
           "ref" : "schedule-2-paragraph-54",
+          "id" : "schedule-2-paragraph-54",
+          "href" : "schedule/2/paragraph/54",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "55",
           "title" : "In regulation 50 (public censure), after “Regulations” insert “or, in...",
           "ref" : "schedule-2-paragraph-55",
+          "id" : "schedule-2-paragraph-55",
+          "href" : "schedule/2/paragraph/55",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "56",
           "title" : "In regulation 51 (financial penalties)— (a) omit “or” at the...",
           "ref" : "schedule-2-paragraph-56",
+          "id" : "schedule-2-paragraph-56",
+          "href" : "schedule/2/paragraph/56",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "57",
           "title" : "In regulation 52 (suspending authorisation etc), in paragraph (1) after...",
           "ref" : "schedule-2-paragraph-57",
+          "id" : "schedule-2-paragraph-57",
+          "href" : "schedule/2/paragraph/57",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "58",
           "title" : "In regulation 54 (injunctions)— (a) omit “or” at the end...",
           "ref" : "schedule-2-paragraph-58",
+          "id" : "schedule-2-paragraph-58",
+          "href" : "schedule/2/paragraph/58",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "59",
           "title" : "In regulation 55 (power to require restitution), in paragraph (1)...",
           "ref" : "schedule-2-paragraph-59",
+          "id" : "schedule-2-paragraph-59",
+          "href" : "schedule/2/paragraph/59",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "60",
           "title" : "In regulation 57 (restitution orders), in paragraph (1) after “requirement,”...",
           "ref" : "schedule-2-paragraph-60",
+          "id" : "schedule-2-paragraph-60",
+          "href" : "schedule/2/paragraph/60",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "61",
           "title" : "In regulation 58 (complaints), in paragraph (1)— ",
           "ref" : "schedule-2-paragraph-61",
+          "id" : "schedule-2-paragraph-61",
+          "href" : "schedule/2/paragraph/61",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "62",
           "title" : "In Schedule 3 (application and modification of legislation)— ",
           "ref" : "schedule-2-paragraph-62",
+          "id" : "schedule-2-paragraph-62",
+          "href" : "schedule/2/paragraph/62",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "63",
           "title" : "The Payment Services Regulations 2017 (S.I. 2017/752) are amended in...",
           "ref" : "schedule-2-paragraph-63",
+          "id" : "schedule-2-paragraph-63",
+          "href" : "schedule/2/paragraph/63",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "64",
           "title" : "In regulation 108 (monitoring and enforcement), after paragraph (1)(a) insert—...",
           "ref" : "schedule-2-paragraph-64",
+          "id" : "schedule-2-paragraph-64",
+          "href" : "schedule/2/paragraph/64",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "65",
           "title" : "In regulation 109 (reporting requirements), after paragraph (1) insert— ",
           "ref" : "schedule-2-paragraph-65",
+          "id" : "schedule-2-paragraph-65",
+          "href" : "schedule/2/paragraph/65",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "66",
           "title" : "In regulation 110 (public censure), after “Regulations” insert “or, in...",
           "ref" : "schedule-2-paragraph-66",
+          "id" : "schedule-2-paragraph-66",
+          "href" : "schedule/2/paragraph/66",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "67",
           "title" : "In regulation 111 (financial penalties)— (a) omit “or” at the...",
           "ref" : "schedule-2-paragraph-67",
+          "id" : "schedule-2-paragraph-67",
+          "href" : "schedule/2/paragraph/67",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "68",
           "title" : "In regulation 113 (injunctions)— (a) omit “or” at the end...",
           "ref" : "schedule-2-paragraph-68",
+          "id" : "schedule-2-paragraph-68",
+          "href" : "schedule/2/paragraph/68",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "69",
           "title" : "In regulation 114 (power to require restitution), in paragraph (1)...",
           "ref" : "schedule-2-paragraph-69",
+          "id" : "schedule-2-paragraph-69",
+          "href" : "schedule/2/paragraph/69",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "70",
           "title" : "In regulation 116 (restitution orders), in paragraph (1) after “requirement,”...",
           "ref" : "schedule-2-paragraph-70",
+          "id" : "schedule-2-paragraph-70",
+          "href" : "schedule/2/paragraph/70",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "71",
           "title" : "In regulation 117 (complaints), in paragraph (1)— ",
           "ref" : "schedule-2-paragraph-71",
+          "id" : "schedule-2-paragraph-71",
+          "href" : "schedule/2/paragraph/71",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "72",
           "title" : "In Schedule 6 (application and modification of legislation)— ",
           "ref" : "schedule-2-paragraph-72",
+          "id" : "schedule-2-paragraph-72",
+          "href" : "schedule/2/paragraph/72",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -3656,66 +4060,88 @@
       "number" : "SCHEDULE 3",
       "title" : "New Schedule 6B to FSMA 2000",
       "ref" : "schedule-3",
+      "id" : "schedule-3",
+      "href" : "schedule/3",
       "extent" : [ "E", "W", "S", "NI" ]
     }, {
       "name" : "schedule",
       "number" : "SCHEDULE 4",
       "title" : "FMI Sandboxes",
       "ref" : "schedule-4",
+      "id" : "schedule-4",
+      "href" : "schedule/4",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "Participation",
         "ref" : "schedule-4-paragraph-1",
+        "id" : "schedule-4-paragraph-1",
+        "href" : "schedule/4/paragraph/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "Technology",
         "ref" : "schedule-4-paragraph-2",
+        "id" : "schedule-4-paragraph-2",
+        "href" : "schedule/4/paragraph/2",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "Practices",
         "ref" : "schedule-4-paragraph-3",
+        "id" : "schedule-4-paragraph-3",
+        "href" : "schedule/4/paragraph/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "Financial instruments",
         "ref" : "schedule-4-paragraph-4",
+        "id" : "schedule-4-paragraph-4",
+        "href" : "schedule/4/paragraph/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Settlement of payments",
         "ref" : "schedule-4-paragraph-5",
+        "id" : "schedule-4-paragraph-5",
+        "href" : "schedule/4/paragraph/5",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "Requirements",
         "ref" : "schedule-4-paragraph-6",
+        "id" : "schedule-4-paragraph-6",
+        "href" : "schedule/4/paragraph/6",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "Cooperation",
         "ref" : "schedule-4-paragraph-7",
+        "id" : "schedule-4-paragraph-7",
+        "href" : "schedule/4/paragraph/7",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "Transparency and reporting",
         "ref" : "schedule-4-paragraph-8",
+        "id" : "schedule-4-paragraph-8",
+        "href" : "schedule/4/paragraph/8",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "Enforcement",
         "ref" : "schedule-4-paragraph-9",
+        "id" : "schedule-4-paragraph-9",
+        "href" : "schedule/4/paragraph/9",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -3723,78 +4149,104 @@
       "number" : "SCHEDULE 5",
       "title" : "Financial promotion: related amendments",
       "ref" : "schedule-5",
+      "id" : "schedule-5",
+      "href" : "schedule/5",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "FSMA 2000 is amended as follows. ",
         "ref" : "schedule-5-paragraph-1",
+        "id" : "schedule-5-paragraph-1",
+        "href" : "schedule/5/paragraph/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "In section 1H (further interpretative provisions for sections 1B to...",
         "ref" : "schedule-5-paragraph-2",
+        "id" : "schedule-5-paragraph-2",
+        "href" : "schedule/5/paragraph/2",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "In section 25 (contravention of section 21), in subsection (2)(a)...",
         "ref" : "schedule-5-paragraph-3",
+        "id" : "schedule-5-paragraph-3",
+        "href" : "schedule/5/paragraph/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "In section 55A (application for permission), after subsection (5) insert—...",
         "ref" : "schedule-5-paragraph-4",
+        "id" : "schedule-5-paragraph-4",
+        "href" : "schedule/5/paragraph/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "(1) Section 55O (imposition of requirements on acquisition of control)...",
         "ref" : "schedule-5-paragraph-5",
+        "id" : "schedule-5-paragraph-5",
+        "href" : "schedule/5/paragraph/5",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "In section 55R (persons connected with an applicant), in subsection...",
         "ref" : "schedule-5-paragraph-6",
+        "id" : "schedule-5-paragraph-6",
+        "href" : "schedule/5/paragraph/6",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "In section 55U (applications under Part 4A), after subsection (3)...",
         "ref" : "schedule-5-paragraph-7",
+        "id" : "schedule-5-paragraph-7",
+        "href" : "schedule/5/paragraph/7",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "In section 55V (determination of applications), in subsection (5)— ",
         "ref" : "schedule-5-paragraph-8",
+        "id" : "schedule-5-paragraph-8",
+        "href" : "schedule/5/paragraph/8",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "(1) Section 55X (determination of applications: warning notices and decision...",
         "ref" : "schedule-5-paragraph-9",
+        "id" : "schedule-5-paragraph-9",
+        "href" : "schedule/5/paragraph/9",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "10",
         "title" : "(1) Section 55Y (exercise of own-initiative power: procedure) is amended...",
         "ref" : "schedule-5-paragraph-10",
+        "id" : "schedule-5-paragraph-10",
+        "href" : "schedule/5/paragraph/10",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "11",
         "title" : "(1) Section 55Z (cancellation of Part 4A permission: procedure) is...",
         "ref" : "schedule-5-paragraph-11",
+        "id" : "schedule-5-paragraph-11",
+        "href" : "schedule/5/paragraph/11",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "12",
         "title" : "In section 55Z3 (right to refer matters to the Tribunal),...",
         "ref" : "schedule-5-paragraph-12",
+        "id" : "schedule-5-paragraph-12",
+        "href" : "schedule/5/paragraph/12",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -3802,246 +4254,328 @@
       "number" : "SCHEDULE 6",
       "title" : "Digital settlement assets",
       "ref" : "schedule-6",
+      "id" : "schedule-6",
+      "href" : "schedule/6",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "Amendments to the Banking Act 2009",
         "ref" : "schedule-6-part-1",
+        "id" : "schedule-6-part-1",
+        "href" : "schedule/6/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "The Banking Act 2009 is amended as follows. ",
           "ref" : "schedule-6-paragraph-1",
+          "id" : "schedule-6-paragraph-1",
+          "href" : "schedule/6/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "2",
           "title" : "In the heading to Part 5 (payment systems), after “systems”...",
           "ref" : "schedule-6-paragraph-2",
+          "id" : "schedule-6-paragraph-2",
+          "href" : "schedule/6/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "In section 181 (overview), after “services” insert “, including”. ",
           "ref" : "schedule-6-paragraph-3",
+          "id" : "schedule-6-paragraph-3",
+          "href" : "schedule/6/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "(1) Section 182 (interpretation of payment system) is amended as...",
           "ref" : "schedule-6-paragraph-4",
+          "id" : "schedule-6-paragraph-4",
+          "href" : "schedule/6/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "(1) Section 183 (interpretation of other expressions) is amended as...",
           "ref" : "schedule-6-paragraph-5",
+          "id" : "schedule-6-paragraph-5",
+          "href" : "schedule/6/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "In the cross-heading before section 184 (recognition order), after “systems”...",
           "ref" : "schedule-6-paragraph-6",
+          "id" : "schedule-6-paragraph-6",
+          "href" : "schedule/6/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "In the heading to section 184 , after “order” insert...",
           "ref" : "schedule-6-paragraph-7",
+          "id" : "schedule-6-paragraph-7",
+          "href" : "schedule/6/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "In section 184, in subsection (4), after “constituting” insert “or...",
           "ref" : "schedule-6-paragraph-8",
+          "id" : "schedule-6-paragraph-8",
+          "href" : "schedule/6/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "After section 184 insert— Recognition order: DSA service provider (1) The Treasury may by order (“recognition order”) specify a...",
           "ref" : "schedule-6-paragraph-9",
+          "id" : "schedule-6-paragraph-9",
+          "href" : "schedule/6/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "10",
           "title" : "In the heading to section 185 (recognition criteria) after “criteria”...",
           "ref" : "schedule-6-paragraph-10",
+          "id" : "schedule-6-paragraph-10",
+          "href" : "schedule/6/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "After section 185 insert— Recognition criteria: DSA service provider (1) The Treasury may make a recognition order in respect...",
           "ref" : "schedule-6-paragraph-11",
+          "id" : "schedule-6-paragraph-11",
+          "href" : "schedule/6/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "(1) Section 186 (procedure) is amended as follows. ",
           "ref" : "schedule-6-paragraph-12",
+          "id" : "schedule-6-paragraph-12",
+          "href" : "schedule/6/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "13",
           "title" : "(1) Section 186A (amendment of recognition order) is amended as...",
           "ref" : "schedule-6-paragraph-13",
+          "id" : "schedule-6-paragraph-13",
+          "href" : "schedule/6/paragraph/13",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "14",
           "title" : "(1) Section 187 (de-recognition) is amended as follows. ",
           "ref" : "schedule-6-paragraph-14",
+          "id" : "schedule-6-paragraph-14",
+          "href" : "schedule/6/paragraph/14",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "15",
           "title" : "(1) Section 188 (principles) is amended as follows. ",
           "ref" : "schedule-6-paragraph-15",
+          "id" : "schedule-6-paragraph-15",
+          "href" : "schedule/6/paragraph/15",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "16",
           "title" : "In section 189 (codes of practice)— (a) the words after...",
           "ref" : "schedule-6-paragraph-16",
+          "id" : "schedule-6-paragraph-16",
+          "href" : "schedule/6/paragraph/16",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "17",
           "title" : "In section 190 (system rules), in subsection (1)(a)— ",
           "ref" : "schedule-6-paragraph-17",
+          "id" : "schedule-6-paragraph-17",
+          "href" : "schedule/6/paragraph/17",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "18",
           "title" : "After section 190 insert— Service provider rules (1) The Bank of England may require a recognised DSA...",
           "ref" : "schedule-6-paragraph-18",
+          "id" : "schedule-6-paragraph-18",
+          "href" : "schedule/6/paragraph/18",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "19",
           "title" : "(1) Section 191 (directions) is amended as follows. ",
           "ref" : "schedule-6-paragraph-19",
+          "id" : "schedule-6-paragraph-19",
+          "href" : "schedule/6/paragraph/19",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "20",
           "title" : "After section 192 (role of FCA and PRA), insert— Power...",
           "ref" : "schedule-6-paragraph-20",
+          "id" : "schedule-6-paragraph-20",
+          "href" : "schedule/6/paragraph/20",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "21",
           "title" : "(1) Section 193 (inspection) is amended as follows. ",
           "ref" : "schedule-6-paragraph-21",
+          "id" : "schedule-6-paragraph-21",
+          "href" : "schedule/6/paragraph/21",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "22",
           "title" : "(1) Section 194 (inspection: warrant) is amended as follows. ",
           "ref" : "schedule-6-paragraph-22",
+          "id" : "schedule-6-paragraph-22",
+          "href" : "schedule/6/paragraph/22",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "23",
           "title" : "(1) Section 195 (independent report) is amended as follows. ",
           "ref" : "schedule-6-paragraph-23",
+          "id" : "schedule-6-paragraph-23",
+          "href" : "schedule/6/paragraph/23",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "24",
           "title" : "In section 196 (compliance failure)— (a) after first “system” insert...",
           "ref" : "schedule-6-paragraph-24",
+          "id" : "schedule-6-paragraph-24",
+          "href" : "schedule/6/paragraph/24",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "25",
           "title" : "In section 197 (publication), in subsection (1)— ",
           "ref" : "schedule-6-paragraph-25",
+          "id" : "schedule-6-paragraph-25",
+          "href" : "schedule/6/paragraph/25",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "26",
           "title" : "In section 198 (penalty), in subsection (1)— ",
           "ref" : "schedule-6-paragraph-26",
+          "id" : "schedule-6-paragraph-26",
+          "href" : "schedule/6/paragraph/26",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "27",
           "title" : "(1) Section 199 (closure) is amended as follows. ",
           "ref" : "schedule-6-paragraph-27",
+          "id" : "schedule-6-paragraph-27",
+          "href" : "schedule/6/paragraph/27",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "28",
           "title" : "(1) Section 200 (management disqualification) is amended as follows. ",
           "ref" : "schedule-6-paragraph-28",
+          "id" : "schedule-6-paragraph-28",
+          "href" : "schedule/6/paragraph/28",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "29",
           "title" : "(1) Section 201 (warning) is amended as follows. ",
           "ref" : "schedule-6-paragraph-29",
+          "id" : "schedule-6-paragraph-29",
+          "href" : "schedule/6/paragraph/29",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "30",
           "title" : "In section 202 (appeal), in subsection (2)— ",
           "ref" : "schedule-6-paragraph-30",
+          "id" : "schedule-6-paragraph-30",
+          "href" : "schedule/6/paragraph/30",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "31",
           "title" : "(1) Section 202A (injunctions) is amended as follows. ",
           "ref" : "schedule-6-paragraph-31",
+          "id" : "schedule-6-paragraph-31",
+          "href" : "schedule/6/paragraph/31",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "32",
           "title" : "In section 203 (fees), in subsection (1)— ",
           "ref" : "schedule-6-paragraph-32",
+          "id" : "schedule-6-paragraph-32",
+          "href" : "schedule/6/paragraph/32",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "33",
           "title" : "After section 203B (annual report) insert— Policy statement (1) The Bank of England must prepare a statement of...",
           "ref" : "schedule-6-paragraph-33",
+          "id" : "schedule-6-paragraph-33",
+          "href" : "schedule/6/paragraph/33",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "34",
           "title" : "(1) Section 204 (information) is amended as follows. ",
           "ref" : "schedule-6-paragraph-34",
+          "id" : "schedule-6-paragraph-34",
+          "href" : "schedule/6/paragraph/34",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "35",
           "title" : "(1) Section 205 (pretending to be recognised) is amended as...",
           "ref" : "schedule-6-paragraph-35",
+          "id" : "schedule-6-paragraph-35",
+          "href" : "schedule/6/paragraph/35",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "36",
           "title" : "(1) Section 206 (saving for informal oversight) is amended as...",
           "ref" : "schedule-6-paragraph-36",
+          "id" : "schedule-6-paragraph-36",
+          "href" : "schedule/6/paragraph/36",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "37",
           "title" : "(1) Section 206A (services forming part of recognised payment systems)...",
           "ref" : "schedule-6-paragraph-37",
+          "id" : "schedule-6-paragraph-37",
+          "href" : "schedule/6/paragraph/37",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "38",
           "title" : "After section 206A insert— Service providers connected with a recognised...",
           "ref" : "schedule-6-paragraph-38",
+          "id" : "schedule-6-paragraph-38",
+          "href" : "schedule/6/paragraph/38",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "39",
           "title" : "In section 259 (statutory instruments), in the Table in subsection...",
           "ref" : "schedule-6-paragraph-39",
+          "id" : "schedule-6-paragraph-39",
+          "href" : "schedule/6/paragraph/39",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4049,60 +4583,80 @@
         "number" : "PART 2",
         "title" : "Amendments to the Financial Services (Banking Reform) Act 2013",
         "ref" : "schedule-6-part-2",
+        "id" : "schedule-6-part-2",
+        "href" : "schedule/6/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "40",
           "title" : "The Financial Services (Banking Reform) Act 2013 is amended as...",
           "ref" : "schedule-6-paragraph-40",
+          "id" : "schedule-6-paragraph-40",
+          "href" : "schedule/6/paragraph/40",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "41",
           "title" : "(1) Section 41 (meaning of payment system) is amended as...",
           "ref" : "schedule-6-paragraph-41",
+          "id" : "schedule-6-paragraph-41",
+          "href" : "schedule/6/paragraph/41",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "42",
           "title" : "(1) Section 42 (participants in payment systems) is amended as...",
           "ref" : "schedule-6-paragraph-42",
+          "id" : "schedule-6-paragraph-42",
+          "href" : "schedule/6/paragraph/42",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "43",
           "title" : "In section 98 (duty of regulators to ensure co-ordinated exercise...",
           "ref" : "schedule-6-paragraph-43",
+          "id" : "schedule-6-paragraph-43",
+          "href" : "schedule/6/paragraph/43",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "44",
           "title" : "In section 110 (interpretation of Part), at the appropriate place...",
           "ref" : "schedule-6-paragraph-44",
+          "id" : "schedule-6-paragraph-44",
+          "href" : "schedule/6/paragraph/44",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "45",
           "title" : "In section 112 (interpretation: infrastructure companies), after subsection (2)(a) insert—...",
           "ref" : "schedule-6-paragraph-45",
+          "id" : "schedule-6-paragraph-45",
+          "href" : "schedule/6/paragraph/45",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "46",
           "title" : "In section 113 (interpretation: other expressions), in subsection (1) at...",
           "ref" : "schedule-6-paragraph-46",
+          "id" : "schedule-6-paragraph-46",
+          "href" : "schedule/6/paragraph/46",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "47",
           "title" : "(1) Section 115 (objective of FMI administration) is amended as...",
           "ref" : "schedule-6-paragraph-47",
+          "id" : "schedule-6-paragraph-47",
+          "href" : "schedule/6/paragraph/47",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "48",
           "title" : "In section 143 (Parliamentary control of orders and regulations), after...",
           "ref" : "schedule-6-paragraph-48",
+          "id" : "schedule-6-paragraph-48",
+          "href" : "schedule/6/paragraph/48",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -4111,84 +4665,112 @@
       "number" : "SCHEDULE 7",
       "title" : "Accountability of the Payment Systems Regulator",
       "ref" : "schedule-7",
+      "id" : "schedule-7",
+      "href" : "schedule/7",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "The Financial Services (Banking Reform) Act 2013 is amended as...",
         "ref" : "schedule-7-paragraph-1",
+        "id" : "schedule-7-paragraph-1",
+        "href" : "schedule/7/paragraph/1",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "In section 39 (overview)— (a) after subsection (11) insert— ",
         "ref" : "schedule-7-paragraph-2",
+        "id" : "schedule-7-paragraph-2",
+        "href" : "schedule/7/paragraph/2",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "In section 53 (regulatory principles), in paragraph (c) at the...",
         "ref" : "schedule-7-paragraph-3",
+        "id" : "schedule-7-paragraph-3",
+        "href" : "schedule/7/paragraph/3",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "After section 102 (power of PRA to require Regulator to...",
         "ref" : "schedule-7-paragraph-4",
+        "id" : "schedule-7-paragraph-4",
+        "href" : "schedule/7/paragraph/4",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Before section 103 (regulator’s general duty to consult) insert (under...",
         "ref" : "schedule-7-paragraph-5",
+        "id" : "schedule-7-paragraph-5",
+        "href" : "schedule/7/paragraph/5",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "In section 104 (consultation in relation to generally applicable requirements)—...",
         "ref" : "schedule-7-paragraph-6",
+        "id" : "schedule-7-paragraph-6",
+        "href" : "schedule/7/paragraph/6",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "After section 104 insert— Requirements in connection with public consultations...",
         "ref" : "schedule-7-paragraph-7",
+        "id" : "schedule-7-paragraph-7",
+        "href" : "schedule/7/paragraph/7",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "After section 107 insert— International trade obligations (1) This section applies where it appears to the Payment...",
         "ref" : "schedule-7-paragraph-8",
+        "id" : "schedule-7-paragraph-8",
+        "href" : "schedule/7/paragraph/8",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "In section 110(1) (interpretation), at the appropriate place insert— “generally...",
         "ref" : "schedule-7-paragraph-9",
+        "id" : "schedule-7-paragraph-9",
+        "href" : "schedule/7/paragraph/9",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "10",
         "title" : "In section 143 (orders and regulations: Parliamentary control), in subsection...",
         "ref" : "schedule-7-paragraph-10",
+        "id" : "schedule-7-paragraph-10",
+        "href" : "schedule/7/paragraph/10",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "11",
         "title" : "In Schedule 4 (the Payment Systems Regulator), after paragraph 7(2)(b)...",
         "ref" : "schedule-7-paragraph-11",
+        "id" : "schedule-7-paragraph-11",
+        "href" : "schedule/7/paragraph/11",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "12",
         "title" : "In Schedule 4, after paragraph 7 insert— Other reports (1) The Treasury may (subject to this paragraph) at any...",
         "ref" : "schedule-7-paragraph-12",
+        "id" : "schedule-7-paragraph-12",
+        "href" : "schedule/7/paragraph/12",
         "extent" : [ "E", "W", "S", "NI" ]
       }, {
         "name" : "item",
         "number" : "13",
         "title" : "In Schedule 4, after paragraph 14 insert— Engagement with Parliamentary...",
         "ref" : "schedule-7-paragraph-13",
+        "id" : "schedule-7-paragraph-13",
+        "href" : "schedule/7/paragraph/13",
         "extent" : [ "E", "W", "S", "NI" ]
       } ]
     }, {
@@ -4196,18 +4778,24 @@
       "number" : "SCHEDULE 8",
       "title" : "Cash access services",
       "ref" : "schedule-8",
+      "id" : "schedule-8",
+      "href" : "schedule/8",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "New Part 8B of FSMA 2000",
         "ref" : "schedule-8-part-1",
+        "id" : "schedule-8-part-1",
+        "href" : "schedule/8/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "After Part 8A of FSMA 2000 (short selling) insert— PART...",
           "ref" : "schedule-8-paragraph-1",
+          "id" : "schedule-8-paragraph-1",
+          "href" : "schedule/8/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4215,54 +4803,72 @@
         "number" : "PART 2",
         "title" : "Consequential amendments to FSMA 2000",
         "ref" : "schedule-8-part-2",
+        "id" : "schedule-8-part-2",
+        "href" : "schedule/8/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "FSMA 2000 is amended as follows. ",
           "ref" : "schedule-8-paragraph-2",
+          "id" : "schedule-8-paragraph-2",
+          "href" : "schedule/8/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "In section 3D (duty of FCA and PRA to ensure...",
           "ref" : "schedule-8-paragraph-3",
+          "id" : "schedule-8-paragraph-3",
+          "href" : "schedule/8/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "In section 55H (variation by FCA at request of authorised...",
           "ref" : "schedule-8-paragraph-4",
+          "id" : "schedule-8-paragraph-4",
+          "href" : "schedule/8/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "In section 55L (imposition of requirements by FCA), in subsection...",
           "ref" : "schedule-8-paragraph-5",
+          "id" : "schedule-8-paragraph-5",
+          "href" : "schedule/8/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "In section 55T (persons whose interests are protected), after “operational...",
           "ref" : "schedule-8-paragraph-6",
+          "id" : "schedule-8-paragraph-6",
+          "href" : "schedule/8/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "In section 232A (ombudsman scheme operator’s duty to provide information...",
           "ref" : "schedule-8-paragraph-7",
+          "id" : "schedule-8-paragraph-7",
+          "href" : "schedule/8/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "In section 395 (the FCA’s and PRA’s procedures), in subsection...",
           "ref" : "schedule-8-paragraph-8",
+          "id" : "schedule-8-paragraph-8",
+          "href" : "schedule/8/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "In section 429 (Parliamentary control of statutory instruments), in subsection...",
           "ref" : "schedule-8-paragraph-9",
+          "id" : "schedule-8-paragraph-9",
+          "href" : "schedule/8/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -4271,18 +4877,24 @@
       "number" : "SCHEDULE 9",
       "title" : "Wholesale cash distribution",
       "ref" : "schedule-9",
+      "id" : "schedule-9",
+      "href" : "schedule/9",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "New Part 5A of the Banking Act 2009",
         "ref" : "schedule-9-part-1",
+        "id" : "schedule-9-part-1",
+        "href" : "schedule/9/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "After Part 5 of the Banking Act 2009 (payment systems)...",
           "ref" : "schedule-9-paragraph-1",
+          "id" : "schedule-9-paragraph-1",
+          "href" : "schedule/9/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4290,54 +4902,72 @@
         "number" : "PART 2",
         "title" : "Amendments to Part 6 of the Financial Services (Banking Reform) Act 2013",
         "ref" : "schedule-9-part-2",
+        "id" : "schedule-9-part-2",
+        "href" : "schedule/9/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "Part 6 of the Financial Services (Banking Reform) Act 2013...",
           "ref" : "schedule-9-paragraph-2",
+          "id" : "schedule-9-paragraph-2",
+          "href" : "schedule/9/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "In section 111 (financial market infrastructure administration), in the heading,...",
           "ref" : "schedule-9-paragraph-3",
+          "id" : "schedule-9-paragraph-3",
+          "href" : "schedule/9/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "(1) Section 112 (interpretation: infrastructure companies) is amended as follows....",
           "ref" : "schedule-9-paragraph-4",
+          "id" : "schedule-9-paragraph-4",
+          "href" : "schedule/9/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "In section 113 (interpretation: other expressions), in subsection (1)— ",
           "ref" : "schedule-9-paragraph-5",
+          "id" : "schedule-9-paragraph-5",
+          "href" : "schedule/9/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "In section 115 (objective of FMI administration), after subsection (1A)...",
           "ref" : "schedule-9-paragraph-6",
+          "id" : "schedule-9-paragraph-6",
+          "href" : "schedule/9/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "In section 119 (continuity of supply), in subsection (6), in...",
           "ref" : "schedule-9-paragraph-7",
+          "id" : "schedule-9-paragraph-7",
+          "href" : "schedule/9/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "In section 120 (power to direct FMI administrator), in subsection...",
           "ref" : "schedule-9-paragraph-8",
+          "id" : "schedule-9-paragraph-8",
+          "href" : "schedule/9/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "In section 127 (interpretation of Part), in subsection (1), at...",
           "ref" : "schedule-9-paragraph-9",
+          "id" : "schedule-9-paragraph-9",
+          "href" : "schedule/9/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4345,48 +4975,64 @@
         "number" : "PART 3",
         "title" : "Consequential amendments",
         "ref" : "schedule-9-part-3",
+        "id" : "schedule-9-part-3",
+        "href" : "schedule/9/part/3",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "10",
           "title" : "Banking Act 2009",
           "ref" : "schedule-9-paragraph-10",
+          "id" : "schedule-9-paragraph-10",
+          "href" : "schedule/9/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "In section 259 (statutory instruments), in subsection (3), in the...",
           "ref" : "schedule-9-paragraph-11",
+          "id" : "schedule-9-paragraph-11",
+          "href" : "schedule/9/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "In section 261 (index of defined terms)— ",
           "ref" : "schedule-9-paragraph-12",
+          "id" : "schedule-9-paragraph-12",
+          "href" : "schedule/9/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "13",
           "title" : "Financial Services Act 2012",
           "ref" : "schedule-9-paragraph-13",
+          "id" : "schedule-9-paragraph-13",
+          "href" : "schedule/9/paragraph/13",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "14",
           "title" : "(1) Section 85 (relevant functions in relation to complaints scheme)...",
           "ref" : "schedule-9-paragraph-14",
+          "id" : "schedule-9-paragraph-14",
+          "href" : "schedule/9/paragraph/14",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "15",
           "title" : "(1) Section 110 (payment to Treasury of penalties received by...",
           "ref" : "schedule-9-paragraph-15",
+          "id" : "schedule-9-paragraph-15",
+          "href" : "schedule/9/paragraph/15",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "16",
           "title" : "Financial Services (Banking Reform) Act 2013",
           "ref" : "schedule-9-paragraph-16",
+          "id" : "schedule-9-paragraph-16",
+          "href" : "schedule/9/paragraph/16",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -4395,18 +5041,24 @@
       "number" : "SCHEDULE 10",
       "title" : "Performance of functions relating to financial market infrastructure",
       "ref" : "schedule-10",
+      "id" : "schedule-10",
+      "href" : "schedule/10",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "New Chapter 2A of Part 18 of FSMA 2000",
         "ref" : "schedule-10-part-1",
+        "id" : "schedule-10-part-1",
+        "href" : "schedule/10/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "In Part 18 of FSMA 2000 (recognised investment exchanges, clearing...",
           "ref" : "schedule-10-paragraph-1",
+          "id" : "schedule-10-paragraph-1",
+          "href" : "schedule/10/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4414,126 +5066,168 @@
         "number" : "PART 2",
         "title" : "Related amendments",
         "ref" : "schedule-10-part-2",
+        "id" : "schedule-10-part-2",
+        "href" : "schedule/10/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "Amendments to FSMA 2000",
           "ref" : "schedule-10-paragraph-2",
+          "id" : "schedule-10-paragraph-2",
+          "href" : "schedule/10/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "(1) Section 56 (prohibition orders) is amended as follows— ",
           "ref" : "schedule-10-paragraph-3",
+          "id" : "schedule-10-paragraph-3",
+          "href" : "schedule/10/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "4",
           "title" : "(1) Section 57 (prohibition orders: procedure and right to refer...",
           "ref" : "schedule-10-paragraph-4",
+          "id" : "schedule-10-paragraph-4",
+          "href" : "schedule/10/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "In section 59AB(1) (specifying functions as controlled functions: transitional provision),...",
           "ref" : "schedule-10-paragraph-5",
+          "id" : "schedule-10-paragraph-5",
+          "href" : "schedule/10/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "In section 133(7A) (proceedings before Tribunal: general provision), after paragraph...",
           "ref" : "schedule-10-paragraph-6",
+          "id" : "schedule-10-paragraph-6",
+          "href" : "schedule/10/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "In section 138A (modification or waiver of rules), in subsection...",
           "ref" : "schedule-10-paragraph-7",
+          "id" : "schedule-10-paragraph-7",
+          "href" : "schedule/10/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "(1) Section 168 (appointment of persons to carry out investigations...",
           "ref" : "schedule-10-paragraph-8",
+          "id" : "schedule-10-paragraph-8",
+          "href" : "schedule/10/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "In the heading of Chapter 3B of Part 18, at...",
           "ref" : "schedule-10-paragraph-9",
+          "id" : "schedule-10-paragraph-9",
+          "href" : "schedule/10/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "10",
           "title" : "Section 312FA is omitted. ",
           "ref" : "schedule-10-paragraph-10",
+          "id" : "schedule-10-paragraph-10",
+          "href" : "schedule/10/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "In section 313 (interpretation of Part 18), in subsection (1)—...",
           "ref" : "schedule-10-paragraph-11",
+          "id" : "schedule-10-paragraph-11",
+          "href" : "schedule/10/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "(1) Section 347 (the record of authorised persons etc) is...",
           "ref" : "schedule-10-paragraph-12",
+          "id" : "schedule-10-paragraph-12",
+          "href" : "schedule/10/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "13",
           "title" : "In section 391 (publication of notices), in subsection (1ZB), after...",
           "ref" : "schedule-10-paragraph-13",
+          "id" : "schedule-10-paragraph-13",
+          "href" : "schedule/10/paragraph/13",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "14",
           "title" : "(1) Section 392 (application of sections 393 and 394) is...",
           "ref" : "schedule-10-paragraph-14",
+          "id" : "schedule-10-paragraph-14",
+          "href" : "schedule/10/paragraph/14",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "15",
           "title" : "In section 395 (the FCA’s and PRA’s procedures), in subsection...",
           "ref" : "schedule-10-paragraph-15",
+          "id" : "schedule-10-paragraph-15",
+          "href" : "schedule/10/paragraph/15",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "16",
           "title" : "(1) Section 417(1) (interpretation) is amended as follows. ",
           "ref" : "schedule-10-paragraph-16",
+          "id" : "schedule-10-paragraph-16",
+          "href" : "schedule/10/paragraph/16",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "17",
           "title" : "In section 429 (Parliamentary control of statutory instruments) ",
           "ref" : "schedule-10-paragraph-17",
+          "id" : "schedule-10-paragraph-17",
+          "href" : "schedule/10/paragraph/17",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "18",
           "title" : "(1) Schedule 1ZA (the Financial Conduct Authority) is amended as...",
           "ref" : "schedule-10-paragraph-18",
+          "id" : "schedule-10-paragraph-18",
+          "href" : "schedule/10/paragraph/18",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "19",
           "title" : "In Schedule 2A (Gibraltar-based persons carrying on activities in the...",
           "ref" : "schedule-10-paragraph-19",
+          "id" : "schedule-10-paragraph-19",
+          "href" : "schedule/10/paragraph/19",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "20",
           "title" : "(1) Schedule 17A (further provision in relation to exercise of...",
           "ref" : "schedule-10-paragraph-20",
+          "id" : "schedule-10-paragraph-20",
+          "href" : "schedule/10/paragraph/20",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "21",
           "title" : "Financial Services Act 2012",
           "ref" : "schedule-10-paragraph-21",
+          "id" : "schedule-10-paragraph-21",
+          "href" : "schedule/10/paragraph/21",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -4542,18 +5236,24 @@
       "number" : "SCHEDULE 11",
       "title" : "Central counterparties",
       "ref" : "schedule-11",
+      "id" : "schedule-11",
+      "href" : "schedule/11",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "Introductory",
         "ref" : "schedule-11-part-1",
+        "id" : "schedule-11-part-1",
+        "href" : "schedule/11/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "Overview",
           "ref" : "schedule-11-paragraph-1",
+          "id" : "schedule-11-paragraph-1",
+          "href" : "schedule/11/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4561,18 +5261,24 @@
         "number" : "PART 2",
         "title" : "Pre-resolution powers of the Bank of England",
         "ref" : "schedule-11-part-2",
+        "id" : "schedule-11-part-2",
+        "href" : "schedule/11/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "Removal of impediments to the exercise of stabilisation powers etc",
           "ref" : "schedule-11-paragraph-2",
+          "id" : "schedule-11-paragraph-2",
+          "href" : "schedule/11/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "3",
           "title" : "Safeguards relating to directions under paragraph 2",
           "ref" : "schedule-11-paragraph-3",
+          "id" : "schedule-11-paragraph-3",
+          "href" : "schedule/11/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4580,12 +5286,16 @@
         "number" : "PART 3",
         "title" : "Resolution plans",
         "ref" : "schedule-11-part-3",
+        "id" : "schedule-11-part-3",
+        "href" : "schedule/11/part/3",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "4",
           "title" : "Resolution plans",
           "ref" : "schedule-11-paragraph-4",
+          "id" : "schedule-11-paragraph-4",
+          "href" : "schedule/11/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4593,66 +5303,88 @@
         "number" : "PART 4",
         "title" : "Removal of directors and senior managers",
         "ref" : "schedule-11-part-4",
+        "id" : "schedule-11-part-4",
+        "href" : "schedule/11/part/4",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "5",
           "title" : "Removal of directors and senior managers",
           "ref" : "schedule-11-paragraph-5",
+          "id" : "schedule-11-paragraph-5",
+          "href" : "schedule/11/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "Temporary manager",
           "ref" : "schedule-11-paragraph-6",
+          "id" : "schedule-11-paragraph-6",
+          "href" : "schedule/11/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "Paragraphs 5 and 6: conditions",
           "ref" : "schedule-11-paragraph-7",
+          "id" : "schedule-11-paragraph-7",
+          "href" : "schedule/11/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "8",
           "title" : "Temporary manager: further provisions in relation to the appointment",
           "ref" : "schedule-11-paragraph-8",
+          "id" : "schedule-11-paragraph-8",
+          "href" : "schedule/11/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "Temporary manager: instrument of appointment",
           "ref" : "schedule-11-paragraph-9",
+          "id" : "schedule-11-paragraph-9",
+          "href" : "schedule/11/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "10",
           "title" : "Right to refer matters to the Tribunal",
           "ref" : "schedule-11-paragraph-10",
+          "id" : "schedule-11-paragraph-10",
+          "href" : "schedule/11/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "Removal of directors and senior managers and appointment of temporary manager: procedure",
           "ref" : "schedule-11-paragraph-11",
+          "id" : "schedule-11-paragraph-11",
+          "href" : "schedule/11/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "Removal of directors and senior managers and appointment of temporary manager: notice requirements",
           "ref" : "schedule-11-paragraph-12",
+          "id" : "schedule-11-paragraph-12",
+          "href" : "schedule/11/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "13",
           "title" : "Temporary restriction on remuneration",
           "ref" : "schedule-11-paragraph-13",
+          "id" : "schedule-11-paragraph-13",
+          "href" : "schedule/11/paragraph/13",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "14",
           "title" : "Restriction on remuneration: review and revocation",
           "ref" : "schedule-11-paragraph-14",
+          "id" : "schedule-11-paragraph-14",
+          "href" : "schedule/11/paragraph/14",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -4660,630 +5392,840 @@
         "number" : "PART 5",
         "title" : "Special resolution action",
         "ref" : "schedule-11-part-5",
+        "id" : "schedule-11-part-5",
+        "href" : "schedule/11/part/5",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "15",
           "title" : "Special resolution objectives",
           "ref" : "schedule-11-paragraph-15",
+          "id" : "schedule-11-paragraph-15",
+          "href" : "schedule/11/paragraph/15",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "16",
           "title" : "Code of Practice",
           "ref" : "schedule-11-paragraph-16",
+          "id" : "schedule-11-paragraph-16",
+          "href" : "schedule/11/paragraph/16",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "17",
           "title" : "General conditions",
           "ref" : "schedule-11-paragraph-17",
+          "id" : "schedule-11-paragraph-17",
+          "href" : "schedule/11/paragraph/17",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "18",
           "title" : "Effect on other group members",
           "ref" : "schedule-11-paragraph-18",
+          "id" : "schedule-11-paragraph-18",
+          "href" : "schedule/11/paragraph/18",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "19",
           "title" : "Specific conditions: financial assistance cases",
           "ref" : "schedule-11-paragraph-19",
+          "id" : "schedule-11-paragraph-19",
+          "href" : "schedule/11/paragraph/19",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "20",
           "title" : "Resolution liaison panel",
           "ref" : "schedule-11-paragraph-20",
+          "id" : "schedule-11-paragraph-20",
+          "href" : "schedule/11/paragraph/20",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "21",
           "title" : "Restrictions on use of certain resolution powers",
           "ref" : "schedule-11-paragraph-21",
+          "id" : "schedule-11-paragraph-21",
+          "href" : "schedule/11/paragraph/21",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "22",
           "title" : "Pre-resolution valuation",
           "ref" : "schedule-11-paragraph-22",
+          "id" : "schedule-11-paragraph-22",
+          "href" : "schedule/11/paragraph/22",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "23",
           "title" : "Replacement of Bank’s provisional valuation",
           "ref" : "schedule-11-paragraph-23",
+          "id" : "schedule-11-paragraph-23",
+          "href" : "schedule/11/paragraph/23",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "24",
           "title" : "Independent valuer: valuation under paragraph 22 or 23",
           "ref" : "schedule-11-paragraph-24",
+          "id" : "schedule-11-paragraph-24",
+          "href" : "schedule/11/paragraph/24",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "25",
           "title" : "Independent valuer: supplemental",
           "ref" : "schedule-11-paragraph-25",
+          "id" : "schedule-11-paragraph-25",
+          "href" : "schedule/11/paragraph/25",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "26",
           "title" : "Consequences of a replacement valuation",
           "ref" : "schedule-11-paragraph-26",
+          "id" : "schedule-11-paragraph-26",
+          "href" : "schedule/11/paragraph/26",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "27",
           "title" : "Private sector purchaser",
           "ref" : "schedule-11-paragraph-27",
+          "id" : "schedule-11-paragraph-27",
+          "href" : "schedule/11/paragraph/27",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "28",
           "title" : "Private sector purchaser: marketing",
           "ref" : "schedule-11-paragraph-28",
+          "id" : "schedule-11-paragraph-28",
+          "href" : "schedule/11/paragraph/28",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "29",
           "title" : "Bridge central counterparty",
           "ref" : "schedule-11-paragraph-29",
+          "id" : "schedule-11-paragraph-29",
+          "href" : "schedule/11/paragraph/29",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "30",
           "title" : "Transfer of ownership",
           "ref" : "schedule-11-paragraph-30",
+          "id" : "schedule-11-paragraph-30",
+          "href" : "schedule/11/paragraph/30",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "31",
           "title" : "Tear-up power",
           "ref" : "schedule-11-paragraph-31",
+          "id" : "schedule-11-paragraph-31",
+          "href" : "schedule/11/paragraph/31",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "32",
           "title" : "Cash call power",
           "ref" : "schedule-11-paragraph-32",
+          "id" : "schedule-11-paragraph-32",
+          "href" : "schedule/11/paragraph/32",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "33",
           "title" : "Power to reduce variation margin payments",
           "ref" : "schedule-11-paragraph-33",
+          "id" : "schedule-11-paragraph-33",
+          "href" : "schedule/11/paragraph/33",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "34",
           "title" : "Write-down power",
           "ref" : "schedule-11-paragraph-34",
+          "id" : "schedule-11-paragraph-34",
+          "href" : "schedule/11/paragraph/34",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "35",
           "title" : "Powers in relation to securities",
           "ref" : "schedule-11-paragraph-35",
+          "id" : "schedule-11-paragraph-35",
+          "href" : "schedule/11/paragraph/35",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "36",
           "title" : "Report on provisions in write-down instrument",
           "ref" : "schedule-11-paragraph-36",
+          "id" : "schedule-11-paragraph-36",
+          "href" : "schedule/11/paragraph/36",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "37",
           "title" : "Priority between creditors",
           "ref" : "schedule-11-paragraph-37",
+          "id" : "schedule-11-paragraph-37",
+          "href" : "schedule/11/paragraph/37",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "38",
           "title" : "Power to take control",
           "ref" : "schedule-11-paragraph-38",
+          "id" : "schedule-11-paragraph-38",
+          "href" : "schedule/11/paragraph/38",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "39",
           "title" : "Shadow directors etc",
           "ref" : "schedule-11-paragraph-39",
+          "id" : "schedule-11-paragraph-39",
+          "href" : "schedule/11/paragraph/39",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "40",
           "title" : "Interpretation: “securities”",
           "ref" : "schedule-11-paragraph-40",
+          "id" : "schedule-11-paragraph-40",
+          "href" : "schedule/11/paragraph/40",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "41",
           "title" : "Share transfer instrument",
           "ref" : "schedule-11-paragraph-41",
+          "id" : "schedule-11-paragraph-41",
+          "href" : "schedule/11/paragraph/41",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "42",
           "title" : "Effect",
           "ref" : "schedule-11-paragraph-42",
+          "id" : "schedule-11-paragraph-42",
+          "href" : "schedule/11/paragraph/42",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "43",
           "title" : "Continuity",
           "ref" : "schedule-11-paragraph-43",
+          "id" : "schedule-11-paragraph-43",
+          "href" : "schedule/11/paragraph/43",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "44",
           "title" : "Conversion and delisting",
           "ref" : "schedule-11-paragraph-44",
+          "id" : "schedule-11-paragraph-44",
+          "href" : "schedule/11/paragraph/44",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "45",
           "title" : "Directors and senior managers",
           "ref" : "schedule-11-paragraph-45",
+          "id" : "schedule-11-paragraph-45",
+          "href" : "schedule/11/paragraph/45",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "46",
           "title" : "Ancillary instruments: production, registration, etc",
           "ref" : "schedule-11-paragraph-46",
+          "id" : "schedule-11-paragraph-46",
+          "href" : "schedule/11/paragraph/46",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "47",
           "title" : "Incidental provision",
           "ref" : "schedule-11-paragraph-47",
+          "id" : "schedule-11-paragraph-47",
+          "href" : "schedule/11/paragraph/47",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "48",
           "title" : "Procedure: instruments",
           "ref" : "schedule-11-paragraph-48",
+          "id" : "schedule-11-paragraph-48",
+          "href" : "schedule/11/paragraph/48",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "49",
           "title" : "Supplemental instruments",
           "ref" : "schedule-11-paragraph-49",
+          "id" : "schedule-11-paragraph-49",
+          "href" : "schedule/11/paragraph/49",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "50",
           "title" : "Onward transfer",
           "ref" : "schedule-11-paragraph-50",
+          "id" : "schedule-11-paragraph-50",
+          "href" : "schedule/11/paragraph/50",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "51",
           "title" : "Reverse share transfer",
           "ref" : "schedule-11-paragraph-51",
+          "id" : "schedule-11-paragraph-51",
+          "href" : "schedule/11/paragraph/51",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "52",
           "title" : "Bridge central counterparties: share transfers",
           "ref" : "schedule-11-paragraph-52",
+          "id" : "schedule-11-paragraph-52",
+          "href" : "schedule/11/paragraph/52",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "53",
           "title" : "Bridge central counterparties: reverse share transfer",
           "ref" : "schedule-11-paragraph-53",
+          "id" : "schedule-11-paragraph-53",
+          "href" : "schedule/11/paragraph/53",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "54",
           "title" : "Property transfer instrument",
           "ref" : "schedule-11-paragraph-54",
+          "id" : "schedule-11-paragraph-54",
+          "href" : "schedule/11/paragraph/54",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "55",
           "title" : "Effect",
           "ref" : "schedule-11-paragraph-55",
+          "id" : "schedule-11-paragraph-55",
+          "href" : "schedule/11/paragraph/55",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "56",
           "title" : "Transferable property",
           "ref" : "schedule-11-paragraph-56",
+          "id" : "schedule-11-paragraph-56",
+          "href" : "schedule/11/paragraph/56",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "57",
           "title" : "Continuity",
           "ref" : "schedule-11-paragraph-57",
+          "id" : "schedule-11-paragraph-57",
+          "href" : "schedule/11/paragraph/57",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "58",
           "title" : "Directors and senior managers",
           "ref" : "schedule-11-paragraph-58",
+          "id" : "schedule-11-paragraph-58",
+          "href" : "schedule/11/paragraph/58",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "59",
           "title" : "Recognised central counterparty rules",
           "ref" : "schedule-11-paragraph-59",
+          "id" : "schedule-11-paragraph-59",
+          "href" : "schedule/11/paragraph/59",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "60",
           "title" : "Recognised central counterparty membership",
           "ref" : "schedule-11-paragraph-60",
+          "id" : "schedule-11-paragraph-60",
+          "href" : "schedule/11/paragraph/60",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "61",
           "title" : "Licences",
           "ref" : "schedule-11-paragraph-61",
+          "id" : "schedule-11-paragraph-61",
+          "href" : "schedule/11/paragraph/61",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "62",
           "title" : "Foreign property",
           "ref" : "schedule-11-paragraph-62",
+          "id" : "schedule-11-paragraph-62",
+          "href" : "schedule/11/paragraph/62",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "63",
           "title" : "Incidental provision",
           "ref" : "schedule-11-paragraph-63",
+          "id" : "schedule-11-paragraph-63",
+          "href" : "schedule/11/paragraph/63",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "64",
           "title" : "Procedure",
           "ref" : "schedule-11-paragraph-64",
+          "id" : "schedule-11-paragraph-64",
+          "href" : "schedule/11/paragraph/64",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "65",
           "title" : "Property transfer instrument: delisting",
           "ref" : "schedule-11-paragraph-65",
+          "id" : "schedule-11-paragraph-65",
+          "href" : "schedule/11/paragraph/65",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "66",
           "title" : "Transfer of property subsequent to resolution instrument",
           "ref" : "schedule-11-paragraph-66",
+          "id" : "schedule-11-paragraph-66",
+          "href" : "schedule/11/paragraph/66",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "67",
           "title" : "Supplemental instruments",
           "ref" : "schedule-11-paragraph-67",
+          "id" : "schedule-11-paragraph-67",
+          "href" : "schedule/11/paragraph/67",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "68",
           "title" : "Private sector purchaser: reverse property transfer",
           "ref" : "schedule-11-paragraph-68",
+          "id" : "schedule-11-paragraph-68",
+          "href" : "schedule/11/paragraph/68",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "69",
           "title" : "Onward transfer",
           "ref" : "schedule-11-paragraph-69",
+          "id" : "schedule-11-paragraph-69",
+          "href" : "schedule/11/paragraph/69",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "70",
           "title" : "Bridge central counterparties: reverse property transfer",
           "ref" : "schedule-11-paragraph-70",
+          "id" : "schedule-11-paragraph-70",
+          "href" : "schedule/11/paragraph/70",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "71",
           "title" : "Transfer of ownership and private sector purchaser: property transfer",
           "ref" : "schedule-11-paragraph-71",
+          "id" : "schedule-11-paragraph-71",
+          "href" : "schedule/11/paragraph/71",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "72",
           "title" : "Transfer of ownership: reverse property transfer",
           "ref" : "schedule-11-paragraph-72",
+          "id" : "schedule-11-paragraph-72",
+          "href" : "schedule/11/paragraph/72",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "73",
           "title" : "Bridge central counterparty: supplemental property transfer powers",
           "ref" : "schedule-11-paragraph-73",
+          "id" : "schedule-11-paragraph-73",
+          "href" : "schedule/11/paragraph/73",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "74",
           "title" : "Bridge central counterparty: supplemental reverse property transfer powers",
           "ref" : "schedule-11-paragraph-74",
+          "id" : "schedule-11-paragraph-74",
+          "href" : "schedule/11/paragraph/74",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "75",
           "title" : "Restriction of partial transfers",
           "ref" : "schedule-11-paragraph-75",
+          "id" : "schedule-11-paragraph-75",
+          "href" : "schedule/11/paragraph/75",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "76",
           "title" : "Power to protect certain interests",
           "ref" : "schedule-11-paragraph-76",
+          "id" : "schedule-11-paragraph-76",
+          "href" : "schedule/11/paragraph/76",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "77",
           "title" : "Creation of liabilities",
           "ref" : "schedule-11-paragraph-77",
+          "id" : "schedule-11-paragraph-77",
+          "href" : "schedule/11/paragraph/77",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "78",
           "title" : "Regulations for safeguarding certain financial arrangements: write-down instruments",
           "ref" : "schedule-11-paragraph-78",
+          "id" : "schedule-11-paragraph-78",
+          "href" : "schedule/11/paragraph/78",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "79",
           "title" : "Resolution instruments: effect and supplementary matters",
           "ref" : "schedule-11-paragraph-79",
+          "id" : "schedule-11-paragraph-79",
+          "href" : "schedule/11/paragraph/79",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "80",
           "title" : "Write-down instruments: supplementary",
           "ref" : "schedule-11-paragraph-80",
+          "id" : "schedule-11-paragraph-80",
+          "href" : "schedule/11/paragraph/80",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "81",
           "title" : "Resolution instruments: procedure",
           "ref" : "schedule-11-paragraph-81",
+          "id" : "schedule-11-paragraph-81",
+          "href" : "schedule/11/paragraph/81",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "82",
           "title" : "Supplemental resolution instruments",
           "ref" : "schedule-11-paragraph-82",
+          "id" : "schedule-11-paragraph-82",
+          "href" : "schedule/11/paragraph/82",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "83",
           "title" : "Directors and senior managers",
           "ref" : "schedule-11-paragraph-83",
+          "id" : "schedule-11-paragraph-83",
+          "href" : "schedule/11/paragraph/83",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "84",
           "title" : "Termination rights etc",
           "ref" : "schedule-11-paragraph-84",
+          "id" : "schedule-11-paragraph-84",
+          "href" : "schedule/11/paragraph/84",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "85",
           "title" : "Deferment",
           "ref" : "schedule-11-paragraph-85",
+          "id" : "schedule-11-paragraph-85",
+          "href" : "schedule/11/paragraph/85",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "86",
           "title" : "Recovery of expenses",
           "ref" : "schedule-11-paragraph-86",
+          "id" : "schedule-11-paragraph-86",
+          "href" : "schedule/11/paragraph/86",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "87",
           "title" : "Compensation scheme",
           "ref" : "schedule-11-paragraph-87",
+          "id" : "schedule-11-paragraph-87",
+          "href" : "schedule/11/paragraph/87",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "88",
           "title" : "Instruments: notification of members and creditors",
           "ref" : "schedule-11-paragraph-88",
+          "id" : "schedule-11-paragraph-88",
+          "href" : "schedule/11/paragraph/88",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "89",
           "title" : "General continuity obligation: property transfers",
           "ref" : "schedule-11-paragraph-89",
+          "id" : "schedule-11-paragraph-89",
+          "href" : "schedule/11/paragraph/89",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "90",
           "title" : "Special continuity obligations: property transfers",
           "ref" : "schedule-11-paragraph-90",
+          "id" : "schedule-11-paragraph-90",
+          "href" : "schedule/11/paragraph/90",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "91",
           "title" : "Continuity obligations: onward property transfers",
           "ref" : "schedule-11-paragraph-91",
+          "id" : "schedule-11-paragraph-91",
+          "href" : "schedule/11/paragraph/91",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "92",
           "title" : "General continuity obligation: share transfers",
           "ref" : "schedule-11-paragraph-92",
+          "id" : "schedule-11-paragraph-92",
+          "href" : "schedule/11/paragraph/92",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "93",
           "title" : "Special continuity obligations: share transfers",
           "ref" : "schedule-11-paragraph-93",
+          "id" : "schedule-11-paragraph-93",
+          "href" : "schedule/11/paragraph/93",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "94",
           "title" : "Continuity obligations: onward share transfers",
           "ref" : "schedule-11-paragraph-94",
+          "id" : "schedule-11-paragraph-94",
+          "href" : "schedule/11/paragraph/94",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "95",
           "title" : "Continuity obligations: consideration and terms",
           "ref" : "schedule-11-paragraph-95",
+          "id" : "schedule-11-paragraph-95",
+          "href" : "schedule/11/paragraph/95",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "96",
           "title" : "Continuity obligations: termination",
           "ref" : "schedule-11-paragraph-96",
+          "id" : "schedule-11-paragraph-96",
+          "href" : "schedule/11/paragraph/96",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "97",
           "title" : "Suspension of obligations",
           "ref" : "schedule-11-paragraph-97",
+          "id" : "schedule-11-paragraph-97",
+          "href" : "schedule/11/paragraph/97",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "98",
           "title" : "Restriction of security interests",
           "ref" : "schedule-11-paragraph-98",
+          "id" : "schedule-11-paragraph-98",
+          "href" : "schedule/11/paragraph/98",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "99",
           "title" : "Suspension of termination rights",
           "ref" : "schedule-11-paragraph-99",
+          "id" : "schedule-11-paragraph-99",
+          "href" : "schedule/11/paragraph/99",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "100",
           "title" : "Suspension: general provision",
           "ref" : "schedule-11-paragraph-100",
+          "id" : "schedule-11-paragraph-100",
+          "href" : "schedule/11/paragraph/100",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "101",
           "title" : "Stay on terminating membership",
           "ref" : "schedule-11-paragraph-101",
+          "id" : "schedule-11-paragraph-101",
+          "href" : "schedule/11/paragraph/101",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "102",
           "title" : "Restriction on remuneration",
           "ref" : "schedule-11-paragraph-102",
+          "id" : "schedule-11-paragraph-102",
+          "href" : "schedule/11/paragraph/102",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "103",
           "title" : "Pensions",
           "ref" : "schedule-11-paragraph-103",
+          "id" : "schedule-11-paragraph-103",
+          "href" : "schedule/11/paragraph/103",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "104",
           "title" : "Disputes",
           "ref" : "schedule-11-paragraph-104",
+          "id" : "schedule-11-paragraph-104",
+          "href" : "schedule/11/paragraph/104",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "105",
           "title" : "Tax",
           "ref" : "schedule-11-paragraph-105",
+          "id" : "schedule-11-paragraph-105",
+          "href" : "schedule/11/paragraph/105",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "106",
           "title" : "Stay or sist of legal proceedings",
           "ref" : "schedule-11-paragraph-106",
+          "id" : "schedule-11-paragraph-106",
+          "href" : "schedule/11/paragraph/106",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "107",
           "title" : "Insolvency proceedings",
           "ref" : "schedule-11-paragraph-107",
+          "id" : "schedule-11-paragraph-107",
+          "href" : "schedule/11/paragraph/107",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "108",
           "title" : "Recognition of transferee company",
           "ref" : "schedule-11-paragraph-108",
+          "id" : "schedule-11-paragraph-108",
+          "href" : "schedule/11/paragraph/108",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "109",
           "title" : "International obligation notice: general",
           "ref" : "schedule-11-paragraph-109",
+          "id" : "schedule-11-paragraph-109",
+          "href" : "schedule/11/paragraph/109",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "110",
           "title" : "International obligation notice: bridge central counterparty",
           "ref" : "schedule-11-paragraph-110",
+          "id" : "schedule-11-paragraph-110",
+          "href" : "schedule/11/paragraph/110",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "111",
           "title" : "Public funds: general",
           "ref" : "schedule-11-paragraph-111",
+          "id" : "schedule-11-paragraph-111",
+          "href" : "schedule/11/paragraph/111",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "112",
           "title" : "Public funds: bridge central counterparty",
           "ref" : "schedule-11-paragraph-112",
+          "id" : "schedule-11-paragraph-112",
+          "href" : "schedule/11/paragraph/112",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "113",
           "title" : "Private sector purchaser: report",
           "ref" : "schedule-11-paragraph-113",
+          "id" : "schedule-11-paragraph-113",
+          "href" : "schedule/11/paragraph/113",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "114",
           "title" : "Bridge central counterparty: report",
           "ref" : "schedule-11-paragraph-114",
+          "id" : "schedule-11-paragraph-114",
+          "href" : "schedule/11/paragraph/114",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "115",
           "title" : "Resolution instruments: report",
           "ref" : "schedule-11-paragraph-115",
+          "id" : "schedule-11-paragraph-115",
+          "href" : "schedule/11/paragraph/115",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "116",
           "title" : "Transfer of ownership: report",
           "ref" : "schedule-11-paragraph-116",
+          "id" : "schedule-11-paragraph-116",
+          "href" : "schedule/11/paragraph/116",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "117",
           "title" : "Sale to commercial purchaser, transfer to bridge central counterparty and transfer of ownership: conditions for group companies",
           "ref" : "schedule-11-paragraph-117",
+          "id" : "schedule-11-paragraph-117",
+          "href" : "schedule/11/paragraph/117",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "118",
           "title" : "Paragraph 117: supplemental",
           "ref" : "schedule-11-paragraph-118",
+          "id" : "schedule-11-paragraph-118",
+          "href" : "schedule/11/paragraph/118",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5291,162 +6233,216 @@
         "number" : "PART 6",
         "title" : "Information, investigation and enforcement",
         "ref" : "schedule-11-part-6",
+        "id" : "schedule-11-part-6",
+        "href" : "schedule/11/part/6",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "119",
           "title" : "Information",
           "ref" : "schedule-11-paragraph-119",
+          "id" : "schedule-11-paragraph-119",
+          "href" : "schedule/11/paragraph/119",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "120",
           "title" : "Reports by skilled persons",
           "ref" : "schedule-11-paragraph-120",
+          "id" : "schedule-11-paragraph-120",
+          "href" : "schedule/11/paragraph/120",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "121",
           "title" : "Appointment of persons to carry out general investigations",
           "ref" : "schedule-11-paragraph-121",
+          "id" : "schedule-11-paragraph-121",
+          "href" : "schedule/11/paragraph/121",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "122",
           "title" : "Appointment of person to carry out investigations in particular cases",
           "ref" : "schedule-11-paragraph-122",
+          "id" : "schedule-11-paragraph-122",
+          "href" : "schedule/11/paragraph/122",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "123",
           "title" : "Investigations etc in support of foreign resolution authorities",
           "ref" : "schedule-11-paragraph-123",
+          "id" : "schedule-11-paragraph-123",
+          "href" : "schedule/11/paragraph/123",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "124",
           "title" : "Investigations: general",
           "ref" : "schedule-11-paragraph-124",
+          "id" : "schedule-11-paragraph-124",
+          "href" : "schedule/11/paragraph/124",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "125",
           "title" : "Powers of persons appointed under paragraph 121",
           "ref" : "schedule-11-paragraph-125",
+          "id" : "schedule-11-paragraph-125",
+          "href" : "schedule/11/paragraph/125",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "126",
           "title" : "Powers of persons appointed as a result of paragraph 122",
           "ref" : "schedule-11-paragraph-126",
+          "id" : "schedule-11-paragraph-126",
+          "href" : "schedule/11/paragraph/126",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "127",
           "title" : "Admissibility of statements made to investigators",
           "ref" : "schedule-11-paragraph-127",
+          "id" : "schedule-11-paragraph-127",
+          "href" : "schedule/11/paragraph/127",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "128",
           "title" : "Information and documents: supplemental provision",
           "ref" : "schedule-11-paragraph-128",
+          "id" : "schedule-11-paragraph-128",
+          "href" : "schedule/11/paragraph/128",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "129",
           "title" : "Protected items",
           "ref" : "schedule-11-paragraph-129",
+          "id" : "schedule-11-paragraph-129",
+          "href" : "schedule/11/paragraph/129",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "130",
           "title" : "Entry of premises under warrant",
           "ref" : "schedule-11-paragraph-130",
+          "id" : "schedule-11-paragraph-130",
+          "href" : "schedule/11/paragraph/130",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "131",
           "title" : "Retention of documents obtained under paragraph 130",
           "ref" : "schedule-11-paragraph-131",
+          "id" : "schedule-11-paragraph-131",
+          "href" : "schedule/11/paragraph/131",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "132",
           "title" : "Offences etc",
           "ref" : "schedule-11-paragraph-132",
+          "id" : "schedule-11-paragraph-132",
+          "href" : "schedule/11/paragraph/132",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "133",
           "title" : "Prosecution of offences under paragraph 132",
           "ref" : "schedule-11-paragraph-133",
+          "id" : "schedule-11-paragraph-133",
+          "href" : "schedule/11/paragraph/133",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "134",
           "title" : "Offences under paragraph 132 by bodies corporate etc",
           "ref" : "schedule-11-paragraph-134",
+          "id" : "schedule-11-paragraph-134",
+          "href" : "schedule/11/paragraph/134",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "135",
           "title" : "Injunctions to prevent failure to comply with relevant requirement",
           "ref" : "schedule-11-paragraph-135",
+          "id" : "schedule-11-paragraph-135",
+          "href" : "schedule/11/paragraph/135",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "136",
           "title" : "Regulatory sanctions",
           "ref" : "schedule-11-paragraph-136",
+          "id" : "schedule-11-paragraph-136",
+          "href" : "schedule/11/paragraph/136",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "137",
           "title" : "Determination of sanctions",
           "ref" : "schedule-11-paragraph-137",
+          "id" : "schedule-11-paragraph-137",
+          "href" : "schedule/11/paragraph/137",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "138",
           "title" : "Procedure: warning notice",
           "ref" : "schedule-11-paragraph-138",
+          "id" : "schedule-11-paragraph-138",
+          "href" : "schedule/11/paragraph/138",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "139",
           "title" : "Procedure: decision notice",
           "ref" : "schedule-11-paragraph-139",
+          "id" : "schedule-11-paragraph-139",
+          "href" : "schedule/11/paragraph/139",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "140",
           "title" : "Procedure: general",
           "ref" : "schedule-11-paragraph-140",
+          "id" : "schedule-11-paragraph-140",
+          "href" : "schedule/11/paragraph/140",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "141",
           "title" : "Appeals",
           "ref" : "schedule-11-paragraph-141",
+          "id" : "schedule-11-paragraph-141",
+          "href" : "schedule/11/paragraph/141",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "142",
           "title" : "Injunctions: failure to comply with certain paragraph 136 sanctions",
           "ref" : "schedule-11-paragraph-142",
+          "id" : "schedule-11-paragraph-142",
+          "href" : "schedule/11/paragraph/142",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "143",
           "title" : "Publication",
           "ref" : "schedule-11-paragraph-143",
+          "id" : "schedule-11-paragraph-143",
+          "href" : "schedule/11/paragraph/143",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "144",
           "title" : "Co-operation",
           "ref" : "schedule-11-paragraph-144",
+          "id" : "schedule-11-paragraph-144",
+          "href" : "schedule/11/paragraph/144",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5454,24 +6450,32 @@
         "number" : "PART 7",
         "title" : "Third-country resolution actions",
         "ref" : "schedule-11-part-7",
+        "id" : "schedule-11-part-7",
+        "href" : "schedule/11/part/7",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "145",
           "title" : "Third-country resolution actions",
           "ref" : "schedule-11-paragraph-145",
+          "id" : "schedule-11-paragraph-145",
+          "href" : "schedule/11/paragraph/145",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "146",
           "title" : "Effects of recognition on third-country resolution action",
           "ref" : "schedule-11-paragraph-146",
+          "id" : "schedule-11-paragraph-146",
+          "href" : "schedule/11/paragraph/146",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "147",
           "title" : "Third-country instruments: supplementary provision",
           "ref" : "schedule-11-paragraph-147",
+          "id" : "schedule-11-paragraph-147",
+          "href" : "schedule/11/paragraph/147",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5479,60 +6483,80 @@
         "number" : "PART 8",
         "title" : "General",
         "ref" : "schedule-11-part-8",
+        "id" : "schedule-11-part-8",
+        "href" : "schedule/11/part/8",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "148",
           "title" : "Information",
           "ref" : "schedule-11-paragraph-148",
+          "id" : "schedule-11-paragraph-148",
+          "href" : "schedule/11/paragraph/148",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "149",
           "title" : "Restrictions on disclosure of confidential information",
           "ref" : "schedule-11-paragraph-149",
+          "id" : "schedule-11-paragraph-149",
+          "href" : "schedule/11/paragraph/149",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "150",
           "title" : "Remedies on judicial review",
           "ref" : "schedule-11-paragraph-150",
+          "id" : "schedule-11-paragraph-150",
+          "href" : "schedule/11/paragraph/150",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "151",
           "title" : "Giving of notices, documents etc under this Schedule",
           "ref" : "schedule-11-paragraph-151",
+          "id" : "schedule-11-paragraph-151",
+          "href" : "schedule/11/paragraph/151",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "152",
           "title" : "“Financial assistance”",
           "ref" : "schedule-11-paragraph-152",
+          "id" : "schedule-11-paragraph-152",
+          "href" : "schedule/11/paragraph/152",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "153",
           "title" : "Modifications to the law",
           "ref" : "schedule-11-paragraph-153",
+          "id" : "schedule-11-paragraph-153",
+          "href" : "schedule/11/paragraph/153",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "154",
           "title" : "Interpretation",
           "ref" : "schedule-11-paragraph-154",
+          "id" : "schedule-11-paragraph-154",
+          "href" : "schedule/11/paragraph/154",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "155",
           "title" : "Recognised central counterparty",
           "ref" : "schedule-11-paragraph-155",
+          "id" : "schedule-11-paragraph-155",
+          "href" : "schedule/11/paragraph/155",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "156",
           "title" : "Interpretation: “CCP group company”, etc",
           "ref" : "schedule-11-paragraph-156",
+          "id" : "schedule-11-paragraph-156",
+          "href" : "schedule/11/paragraph/156",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5540,18 +6564,24 @@
         "number" : "PART 9",
         "title" : "Treasury support for CCPs",
         "ref" : "schedule-11-part-9",
+        "id" : "schedule-11-part-9",
+        "href" : "schedule/11/part/9",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "157",
           "title" : "Consolidated Fund",
           "ref" : "schedule-11-paragraph-157",
+          "id" : "schedule-11-paragraph-157",
+          "href" : "schedule/11/paragraph/157",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "158",
           "title" : "National Loans Fund",
           "ref" : "schedule-11-paragraph-158",
+          "id" : "schedule-11-paragraph-158",
+          "href" : "schedule/11/paragraph/158",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5559,48 +6589,64 @@
         "number" : "PART 10",
         "title" : "Consequential etc provision",
         "ref" : "schedule-11-part-10",
+        "id" : "schedule-11-part-10",
+        "href" : "schedule/11/part/10",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "159",
           "title" : "Bank of England Act 1998",
           "ref" : "schedule-11-paragraph-159",
+          "id" : "schedule-11-paragraph-159",
+          "href" : "schedule/11/paragraph/159",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "160",
           "title" : "Financial Services and Markets Act 2000",
           "ref" : "schedule-11-paragraph-160",
+          "id" : "schedule-11-paragraph-160",
+          "href" : "schedule/11/paragraph/160",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "161",
           "title" : "Companies Act 2006",
           "ref" : "schedule-11-paragraph-161",
+          "id" : "schedule-11-paragraph-161",
+          "href" : "schedule/11/paragraph/161",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "162",
           "title" : "Banking Act 2009",
           "ref" : "schedule-11-paragraph-162",
+          "id" : "schedule-11-paragraph-162",
+          "href" : "schedule/11/paragraph/162",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "163",
           "title" : "Financial Services Act 2012",
           "ref" : "schedule-11-paragraph-163",
+          "id" : "schedule-11-paragraph-163",
+          "href" : "schedule/11/paragraph/163",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "164",
           "title" : "Financial Services (Banking Reform) Act 2013",
           "ref" : "schedule-11-paragraph-164",
+          "id" : "schedule-11-paragraph-164",
+          "href" : "schedule/11/paragraph/164",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "165",
           "title" : "Modified application of corporate law to CCPs in resolution",
           "ref" : "schedule-11-paragraph-165",
+          "id" : "schedule-11-paragraph-165",
+          "href" : "schedule/11/paragraph/165",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -5609,18 +6655,24 @@
       "number" : "SCHEDULE 12",
       "title" : "Write-down orders",
       "ref" : "schedule-12",
+      "id" : "schedule-12",
+      "href" : "schedule/12",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "Write-down orders: main provisions",
         "ref" : "schedule-12-part-1",
+        "id" : "schedule-12-part-1",
+        "href" : "schedule/12/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "(1) Part 24 of FSMA 2000 (insolvency) is amended as...",
           "ref" : "schedule-12-paragraph-1",
+          "id" : "schedule-12-paragraph-1",
+          "href" : "schedule/12/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5628,12 +6680,16 @@
         "number" : "PART 2",
         "title" : "The manager of a write-down order",
         "ref" : "schedule-12-part-2",
+        "id" : "schedule-12-part-2",
+        "href" : "schedule/12/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "After Schedule 19 to FSMA 2000 (competition information), insert— SCHEDULE...",
           "ref" : "schedule-12-paragraph-2",
+          "id" : "schedule-12-paragraph-2",
+          "href" : "schedule/12/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5641,12 +6697,16 @@
         "number" : "PART 3",
         "title" : "Further provision about write-down orders",
         "ref" : "schedule-12-part-3",
+        "id" : "schedule-12-part-3",
+        "href" : "schedule/12/part/3",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "3",
           "title" : "After Schedule 19A to FSMA 2000 (the manager of a...",
           "ref" : "schedule-12-paragraph-3",
+          "id" : "schedule-12-paragraph-3",
+          "href" : "schedule/12/paragraph/3",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5654,30 +6714,40 @@
         "number" : "PART 4",
         "title" : "Write-down orders: financial services compensation scheme",
         "ref" : "schedule-12-part-4",
+        "id" : "schedule-12-part-4",
+        "href" : "schedule/12/part/4",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "4",
           "title" : "Part 15 of FSMA 2000 (the Financial Services Compensation Scheme)...",
           "ref" : "schedule-12-paragraph-4",
+          "id" : "schedule-12-paragraph-4",
+          "href" : "schedule/12/paragraph/4",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "5",
           "title" : "After section 217 (insurers in financial difficulties) insert— Insurers subject...",
           "ref" : "schedule-12-paragraph-5",
+          "id" : "schedule-12-paragraph-5",
+          "href" : "schedule/12/paragraph/5",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "6",
           "title" : "In section 219 (scheme manager’s power to require information), in...",
           "ref" : "schedule-12-paragraph-6",
+          "id" : "schedule-12-paragraph-6",
+          "href" : "schedule/12/paragraph/6",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "7",
           "title" : "After section 220 (scheme manager’s power to inspect information held...",
           "ref" : "schedule-12-paragraph-7",
+          "id" : "schedule-12-paragraph-7",
+          "href" : "schedule/12/paragraph/7",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5685,36 +6755,48 @@
         "number" : "PART 5",
         "title" : "Consequential amendments",
         "ref" : "schedule-12-part-5",
+        "id" : "schedule-12-part-5",
+        "href" : "schedule/12/part/5",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "8",
           "title" : "FSMA 2000",
           "ref" : "schedule-12-paragraph-8",
+          "id" : "schedule-12-paragraph-8",
+          "href" : "schedule/12/paragraph/8",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "9",
           "title" : "(1) Section 348 (restrictions on disclosure of confidential information by...",
           "ref" : "schedule-12-paragraph-9",
+          "id" : "schedule-12-paragraph-9",
+          "href" : "schedule/12/paragraph/9",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "10",
           "title" : "In section 429 (Parliamentary control of statutory instruments), in subsection...",
           "ref" : "schedule-12-paragraph-10",
+          "id" : "schedule-12-paragraph-10",
+          "href" : "schedule/12/paragraph/10",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "11",
           "title" : "In Schedule 1ZB (the PRA), in paragraph 33(2) (exemption from...",
           "ref" : "schedule-12-paragraph-11",
+          "id" : "schedule-12-paragraph-11",
+          "href" : "schedule/12/paragraph/11",
           "extent" : [ "E", "W", "S", "NI" ]
         }, {
           "name" : "item",
           "number" : "12",
           "title" : "Financial Services and Markets Act 2000 (Disclosure of Confidential Information) Regulations 2001",
           "ref" : "schedule-12-paragraph-12",
+          "id" : "schedule-12-paragraph-12",
+          "href" : "schedule/12/paragraph/12",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -5723,18 +6805,24 @@
       "number" : "SCHEDULE 13",
       "title" : "Insurers in financial difficulties: enforcement of contracts",
       "ref" : "schedule-13",
+      "id" : "schedule-13",
+      "href" : "schedule/13",
       "extent" : [ "E", "W", "S", "NI" ],
       "children" : [ {
         "name" : "part",
         "number" : "PART 1",
         "title" : "New Schedule 19C to FSMA 2000",
         "ref" : "schedule-13-part-1",
+        "id" : "schedule-13-part-1",
+        "href" : "schedule/13/part/1",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "1",
           "title" : "(1) Part 24 of FSMA 2000 (insolvency) is amended as...",
           "ref" : "schedule-13-paragraph-1",
+          "id" : "schedule-13-paragraph-1",
+          "href" : "schedule/13/paragraph/1",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       }, {
@@ -5742,12 +6830,16 @@
         "number" : "PART 2",
         "title" : "Consequential amendments",
         "ref" : "schedule-13-part-2",
+        "id" : "schedule-13-part-2",
+        "href" : "schedule/13/part/2",
         "extent" : [ "E", "W", "S", "NI" ],
         "children" : [ {
           "name" : "item",
           "number" : "2",
           "title" : "In section 429 of FSMA 2000 (Parliamentary control of statutory...",
           "ref" : "schedule-13-paragraph-2",
+          "id" : "schedule-13-paragraph-2",
+          "href" : "schedule/13/paragraph/2",
           "extent" : [ "E", "W", "S", "NI" ]
         } ]
       } ]
@@ -5756,102 +6848,136 @@
       "number" : "SCHEDULE 14",
       "title" : "Credit unions",
       "ref" : "schedule-14",
+      "id" : "schedule-14",
+      "href" : "schedule/14",
       "extent" : [ "E", "W", "S" ],
       "children" : [ {
         "name" : "item",
         "number" : "1",
         "title" : "Introductory",
         "ref" : "schedule-14-paragraph-1",
+        "id" : "schedule-14-paragraph-1",
+        "href" : "schedule/14/paragraph/1",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "2",
         "title" : "Specified financial activities",
         "ref" : "schedule-14-paragraph-2",
+        "id" : "schedule-14-paragraph-2",
+        "href" : "schedule/14/paragraph/2",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "3",
         "title" : "After section 1 insert— Specified financial activities (1) The financial activities specified for the purposes of the...",
         "ref" : "schedule-14-paragraph-3",
+        "id" : "schedule-14-paragraph-3",
+        "href" : "schedule/14/paragraph/3",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "4",
         "title" : "In section 2 (supplementary and transitional provisions as to registration),...",
         "ref" : "schedule-14-paragraph-4",
+        "id" : "schedule-14-paragraph-4",
+        "href" : "schedule/14/paragraph/4",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "5",
         "title" : "Shares",
         "ref" : "schedule-14-paragraph-5",
+        "id" : "schedule-14-paragraph-5",
+        "href" : "schedule/14/paragraph/5",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "6",
         "title" : "Ancillary services",
         "ref" : "schedule-14-paragraph-6",
+        "id" : "schedule-14-paragraph-6",
+        "href" : "schedule/14/paragraph/6",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "7",
         "title" : "Loans",
         "ref" : "schedule-14-paragraph-7",
+        "id" : "schedule-14-paragraph-7",
+        "href" : "schedule/14/paragraph/7",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "8",
         "title" : "Conditional sale and hire purchase agreements",
         "ref" : "schedule-14-paragraph-8",
+        "id" : "schedule-14-paragraph-8",
+        "href" : "schedule/14/paragraph/8",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "9",
         "title" : "Insurance distribution activities",
         "ref" : "schedule-14-paragraph-9",
+        "id" : "schedule-14-paragraph-9",
+        "href" : "schedule/14/paragraph/9",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "10",
         "title" : "Minor and consequential amendments",
         "ref" : "schedule-14-paragraph-10",
+        "id" : "schedule-14-paragraph-10",
+        "href" : "schedule/14/paragraph/10",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "11",
         "title" : "In section 23A (power to make provision corresponding to provision...",
         "ref" : "schedule-14-paragraph-11",
+        "id" : "schedule-14-paragraph-11",
+        "href" : "schedule/14/paragraph/11",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "12",
         "title" : "In section 29 (orders and regulations), in subsection (2) for...",
         "ref" : "schedule-14-paragraph-12",
+        "id" : "schedule-14-paragraph-12",
+        "href" : "schedule/14/paragraph/12",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "13",
         "title" : "(1) Section 31 (interpretation, etc.) is amended as follows. ",
         "ref" : "schedule-14-paragraph-13",
+        "id" : "schedule-14-paragraph-13",
+        "href" : "schedule/14/paragraph/13",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "14",
         "title" : "In Schedule 1 (matters to be provided for in rules...",
         "ref" : "schedule-14-paragraph-14",
+        "id" : "schedule-14-paragraph-14",
+        "href" : "schedule/14/paragraph/14",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "15",
         "title" : "Transitional provision",
         "ref" : "schedule-14-paragraph-15",
+        "id" : "schedule-14-paragraph-15",
+        "href" : "schedule/14/paragraph/15",
         "extent" : [ "E", "W", "S" ]
       }, {
         "name" : "item",
         "number" : "16",
         "title" : "The amendment made by paragraph 13(4)(b) does not apply in...",
         "ref" : "schedule-14-paragraph-16",
+        "id" : "schedule-14-paragraph-16",
+        "href" : "schedule/14/paragraph/16",
         "extent" : [ "E", "W", "S" ]
       } ]
     } ]

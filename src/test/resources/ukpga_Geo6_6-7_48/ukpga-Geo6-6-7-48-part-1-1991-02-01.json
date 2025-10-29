@@ -41,23 +41,23 @@
     "fragmentInfo" : {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
       "label" : "Parts I, II"
     },
     "prevInfo" : {
-      "href" : "ukpga/Geo6/6-7/48/introduction/1991-02-01",
+      "href" : "introduction",
       "label" : "Introduction"
     },
     "nextInfo" : {
-      "href" : "ukpga/Geo6/6-7/48/part/III/1991-02-01",
+      "href" : "part/III",
       "label" : "Part"
     },
     "ancestors" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
       "label" : "Parts I, II"
@@ -65,21 +65,21 @@
     "descendants" : [ {
       "element" : "Part",
       "id" : "part-1",
-      "href" : "ukpga/Geo6/6-7/48/part/1/1991-02-01",
+      "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
       "label" : "Parts I, II"
     }, {
       "element" : "P1",
       "id" : "section-125",
-      "href" : "ukpga/Geo6/6-7/48/section/125/1991-02-01",
+      "href" : "section/125",
       "number" : "1",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
       "label" : "Section 125"
     }, {
       "element" : "P1",
       "id" : "section-2633",
-      "href" : "ukpga/Geo6/6-7/48/section/2633/1991-02-01",
+      "href" : "section/2633",
       "number" : "26–33",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
       "label" : "Section 2633"

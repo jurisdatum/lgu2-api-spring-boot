@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
+import java.net.URI;
 import java.util.List;
 
 @JacksonXmlRootElement()
@@ -52,7 +53,11 @@ public class Contents {
 
         public String title;
 
+        @JacksonXmlProperty(localName = "ContentRef", isAttribute = true)
         public String ref;
+
+        @JacksonXmlProperty(localName = "DocumentURI", isAttribute = true)
+        public URI uri;
 
         @JacksonXmlProperty(isAttribute = true)
         public String extent;
