@@ -4,7 +4,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.api.parameters.ApiParams;
 import uk.gov.legislation.data.virtuoso.defra.Response;
 
 import java.util.concurrent.CompletionStage;
@@ -19,7 +18,7 @@ public interface DefraLexApi {
         @RequestParam(required = false) Boolean isCommencementOrder,
         @RequestParam(required = false) Boolean isRevocationOrder,
         @RequestParam(required = false) String type,
-        @RequestParam(required = false) @ApiParams.Year Integer year,
+        @RequestParam(required = false) Integer year,
         @RequestParam(required = false) String chapter,
         @RequestParam(required = false) String extent,
         @RequestParam(required = false) String source,
