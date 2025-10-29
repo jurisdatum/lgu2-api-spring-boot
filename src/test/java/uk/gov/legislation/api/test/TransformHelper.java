@@ -23,6 +23,8 @@ public class TransformHelper {
             file += "-contents";
         if (comps.version().isPresent())
             file += "-" + comps.version().get();
+        if (comps.language().isPresent())
+            file += "-" + comps.language().get();
         file += "." + ext;
         return  "/" +  dir + file;
     }
