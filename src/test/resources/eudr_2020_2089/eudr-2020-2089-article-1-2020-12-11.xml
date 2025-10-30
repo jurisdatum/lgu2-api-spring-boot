@@ -1,0 +1,1165 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11" IdURI="http://www.legislation.gov.uk/id/eudr/2020/2089" NumberOfProvisions="4" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="2.0" RestrictStartDate="2020-12-11" RestrictExtent="E+W+S+N.I.">
+    <ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+        <dc:identifier>http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11</dc:identifier>
+        <dc:title>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</dc:title>
+        <dct:alternative>Commission Directive (EU) 2020/2089</dct:alternative>
+        <dc:description>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</dc:description>
+        <dc:modified>2020-12-17</dc:modified>
+        <dc:publisher>King's Printer of Acts of Parliament</dc:publisher>
+        <dc:source>https://webarchive.nationalarchives.gov.uk/eu-exit/https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32020L2089</dc:source>
+        <dc:type>text</dc:type>
+        <dc:format>text/xml</dc:format>
+        <dc:language>en</dc:language>
+        <dct:valid>2020-12-11</dct:valid>
+        <atom:link rel="self" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.xml" type="application/xml"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/eudr/2020/2089/resources" title="More Resources"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11" title="whole act"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/eudr/2020/2089/introduction/2020-12-11" title="introduction"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/signature" href="http://www.legislation.gov.uk/eudr/2020/2089/signature/2020-12-11" title="signature"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/eudr/2020/2089/body/2020-12-11" title="body"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/annexes" href="http://www.legislation.gov.uk/eudr/2020/2089/annexes/2020-12-11" title="annexes"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/date/euexitday" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-01-31" title="2020-01-31"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/date/euexitTransitionEnd" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-31" title="2020-12-31"/>
+        <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.rdf" title="RDF/XML"/>
+        <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.akn" title="AKN"/>
+        <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.xht" title="HTML snippet"/>
+        <atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.htm" title="Website (XHTML) Default View"/>
+        <atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.csv" title="CSV"/>
+        <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.pdf" title="PDF"/>
+        <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11/data.html" title="HTML5 snippet"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/eudr/2020/2089/contents/2020-12-11" title="Table of Contents"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1/adopted" title="adopted"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/eudr/2020/2089/article/1" title="current"/>
+        <atom:link rel="up" href="http://www.legislation.gov.uk/eudr/2020/2089/2020-12-11" title="Entire legislation"/>
+        <atom:link rel="prev" href="http://www.legislation.gov.uk/eudr/2020/2089/introduction/2020-12-11" title="Introduction; Introduction"/>
+        <atom:link rel="prevInForce" href="http://www.legislation.gov.uk/eudr/2020/2089/introduction/2020-12-11" title="Introduction; Introduction"/>
+        <atom:link rel="next" href="http://www.legislation.gov.uk/eudr/2020/2089/article/2/2020-12-11" title="Provision; Article 2"/>
+        <atom:link rel="nextInForce" href="http://www.legislation.gov.uk/eudr/2020/2089/article/2/2020-12-11" title="Provision; Article 2"/>
+        <ukm:EUMetadata>
+            <ukm:DocumentClassification>
+                <ukm:DocumentCategory Value="euretained"/>
+                <ukm:DocumentMainType Value="EuropeanUnionDirective"/>
+                <ukm:DocumentStatus Value="revised"/>
+            </ukm:DocumentClassification>
+            <ukm:Year Value="2020"/>
+            <ukm:Number Value="2089"/>
+            <ukm:EURLexIdentifiers>
+                <ukm:Cellar Value="e643d248-3eb1-11eb-b27b-01aa75ed71a1"/>
+                <ukm:ELI Value="dir:2020:2089:oj"/>
+                <ukm:CELEX Value="32020L2089"/>
+                <ukm:OfficialJournal Value="JOL_2020_423_R_0011"/>
+            </ukm:EURLexIdentifiers>
+            <ukm:EnactmentDate Date="2020-12-11"/>
+            <ukm:EURLexModified Date="2020-12-17T07:25:10Z"/>
+            <ukm:EURLexExtracted Date="2020-12-17T08:36:16Z"/>
+            <ukm:XMLGenerated Date="2020-12-17T08:36:18Z"/>
+            <ukm:XMLImported Date="2020-12-17T08:37:25Z"/>
+            <ukm:Treaty Title="Treaty on the Functioning of the European Union (consolidated version 2012)" Code="TFEU_2012"/>
+            <ukm:CreatedBy Label="Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs" URI="http://publications.europa.eu/resource/authority/corporate-body/GROW"/>
+            <ukm:CreatedBy Label="European Commission" URI="http://publications.europa.eu/resource/authority/corporate-body/COM"/>
+            <ukm:Subject Scheme="EuroVoc" Label="allergy" URI="http://eurovoc.europa.eu/5431"/>
+            <ukm:Subject Scheme="EuroVoc" Label="product safety" URI="http://eurovoc.europa.eu/4036"/>
+            <ukm:Subject Scheme="EuroVoc" Label="safety standard" URI="http://eurovoc.europa.eu/5234"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Other sectors for approximation of laws" URI="http://publications.europa.eu/resource/authority/fd_555/133099"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Internal market: approximation of laws" URI="http://publications.europa.eu/resource/authority/fd_555/1330"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Industrial policy and internal market" URI="http://publications.europa.eu/resource/authority/fd_555/13"/>
+            <ukm:Subject Scheme="EuroVoc" Label="organic chemical" URI="http://eurovoc.europa.eu/3817"/>
+            <ukm:Subject Scheme="EuroVoc" Label="labelling" URI="http://eurovoc.europa.eu/893"/>
+            <ukm:Subject Scheme="SubjectMatter" Label="Consumer protection" URI="http://publications.europa.eu/resource/authority/subject-matter/PROT"/>
+            <ukm:Subject Scheme="SubjectMatter" Label="Technical barriers" URI="http://publications.europa.eu/resource/authority/subject-matter/ETEC"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Protection of health and safety" URI="http://publications.europa.eu/resource/authority/fd_555/152030"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Consumers" URI="http://publications.europa.eu/resource/authority/fd_555/1520"/>
+            <ukm:Subject Scheme="DirectoryCode" Label="Environment, consumers and health protection" URI="http://publications.europa.eu/resource/authority/fd_555/15"/>
+            <ukm:Subject Scheme="EuroVoc" Label="technical standard" URI="http://eurovoc.europa.eu/5235"/>
+            <ukm:Subject Scheme="EuroVoc" Label="European standard" URI="http://eurovoc.europa.eu/3646"/>
+            <ukm:Subject Scheme="SubjectMatter" Label="Approximation of laws" URI="http://publications.europa.eu/resource/authority/subject-matter/RAPL"/>
+            <ukm:Subject Scheme="EuroVoc" Label="toy industry" URI="http://eurovoc.europa.eu/1391"/>
+            <ukm:EURLexMetadata>
+                <WORK xmlns="">
+                    <URI>
+                        <VALUE>http://publications.europa.eu/resource/cellar/e643d248-3eb1-11eb-b27b-01aa75ed71a1</VALUE>
+                        <IDENTIFIER>e643d248-3eb1-11eb-b27b-01aa75ed71a1</IDENTIFIER>
+                        <TYPE>cellar</TYPE>
+                    </URI>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/eli/dir/2020/2089/oj</VALUE>
+                            <IDENTIFIER>dir:2020:2089:oj</IDENTIFIER>
+                            <TYPE>eli</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/celex/32020L2089</VALUE>
+                            <IDENTIFIER>32020L2089</IDENTIFIER>
+                            <TYPE>celex</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/oj/JOL_2020_423_R_0011</VALUE>
+                            <IDENTIFIER>JOL_2020_423_R_0011</IDENTIFIER>
+                            <TYPE>oj</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE type="date">
+                        <VALUE>2021-01-04</VALUE>
+                        <YEAR>2021</YEAR>
+                        <MONTH>01</MONTH>
+                        <DAY>04</DAY>
+                        <ANNOTATION>
+                            <TYPE_OF_DATE>{EV|http://publications.europa.eu/resource/authority/fd_335/EV}</TYPE_OF_DATE>
+                            <COMMENT_ON_DATE>{DATPUB|http://publications.europa.eu/resource/authority/fd_335/DATPUB} +20 {V|http://publications.europa.eu/resource/authority/fd_335/V} {ART|http://publications.europa.eu/resource/authority/fd_335/ART} 3</COMMENT_ON_DATE>
+                        </ANNOTATION>
+                    </RESOURCE_LEGAL_DATE_ENTRY-INTO-FORCE>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/5431</VALUE>
+                                <IDENTIFIER>5431</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>5431</IDENTIFIER>
+                            <PREFLABEL>allergy</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/1754</VALUE>
+                                <IDENTIFIER>1754</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>1754</IDENTIFIER>
+                            <PREFLABEL>illness</PREFLABEL>
+                            <ALTLABEL>disease</ALTLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100149</VALUE>
+                                <IDENTIFIER>100149</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>28</IDENTIFIER>
+                            <PREFLABEL>28 SOCIAL QUESTIONS</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100215</VALUE>
+                                <IDENTIFIER>100215</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>2841</IDENTIFIER>
+                            <PREFLABEL>2841 health</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/subject-matter/ETEC</VALUE>
+                            <IDENTIFIER>ETEC</IDENTIFIER>
+                            <TYPE>subject-matter</TYPE>
+                        </URI>
+                        <OP-CODE>ETEC</OP-CODE>
+                        <IDENTIFIER>ETEC</IDENTIFIER>
+                        <PREFLABEL>Technical barriers</PREFLABEL>
+                    </IS_ABOUT>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/subject-matter/PROT</VALUE>
+                            <IDENTIFIER>PROT</IDENTIFIER>
+                            <TYPE>subject-matter</TYPE>
+                        </URI>
+                        <OP-CODE>PROT</OP-CODE>
+                        <IDENTIFIER>PROT</IDENTIFIER>
+                        <PREFLABEL>Consumer protection</PREFLABEL>
+                    </IS_ABOUT>
+                    <IDENTIFIER type="data">
+                        <VALUE>http://data.europa.eu/eli/dir/2020/2089/oj</VALUE>
+                    </IDENTIFIER>
+                    <WORK_ID_DOCUMENT type="data">
+                        <VALUE>oj:JOL_2020_423_R_0011</VALUE>
+                    </WORK_ID_DOCUMENT>
+                    <WORK_CREATED_BY_AGENT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/corporate-body/GROW</VALUE>
+                            <IDENTIFIER>GROW</IDENTIFIER>
+                            <TYPE>corporate-body</TYPE>
+                        </URI>
+                        <OP-CODE>GROW</OP-CODE>
+                        <IDENTIFIER>GROW</IDENTIFIER>
+                        <PREFLABEL>Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs</PREFLABEL>
+                        <ALTLABEL>GROW</ALTLABEL>
+                        <ALTLABEL>DG Internal Market, Industry, Entrepreneurship and SMEs</ALTLABEL>
+                    </WORK_CREATED_BY_AGENT>
+                    <DATE type="date">
+                        <VALUE>2022-07-05</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>05</DAY>
+                    </DATE>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/1391</VALUE>
+                            <IDENTIFIER>1391</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>1391</IDENTIFIER>
+                        <PREFLABEL>toy industry</PREFLABEL>
+                        <ALTLABEL>toy</ALTLABEL>
+                    </IS_ABOUT>
+                    <DATE type="date">
+                        <VALUE>2022-07-04</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>04</DAY>
+                    </DATE>
+                    <WORK_ID_DOCUMENT type="data">
+                        <VALUE>celex:32020L2089</VALUE>
+                    </WORK_ID_DOCUMENT>
+                    <DATE_DOCUMENT type="date">
+                        <VALUE>2020-12-11</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>11</DAY>
+                    </DATE_DOCUMENT>
+                    <DATE type="date">
+                        <VALUE>9999-12-31</VALUE>
+                        <YEAR>9999</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>31</DAY>
+                    </DATE>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/subject-matter/RAPL</VALUE>
+                            <IDENTIFIER>RAPL</IDENTIFIER>
+                            <TYPE>subject-matter</TYPE>
+                        </URI>
+                        <OP-CODE>RAPL</OP-CODE>
+                        <IDENTIFIER>RAPL</IDENTIFIER>
+                        <PREFLABEL>Approximation of laws</PREFLABEL>
+                    </IS_ABOUT>
+                    <RESOURCE_LEGAL_ID_CELEX type="data">
+                        <VALUE>32020L2089</VALUE>
+                    </RESOURCE_LEGAL_ID_CELEX>
+                    <WORK_CREATED_BY_AGENT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/corporate-body/COM</VALUE>
+                            <IDENTIFIER>COM</IDENTIFIER>
+                            <TYPE>corporate-body</TYPE>
+                        </URI>
+                        <OP-CODE>COM</OP-CODE>
+                        <IDENTIFIER>COM</IDENTIFIER>
+                        <PREFLABEL>European Commission</PREFLABEL>
+                        <ALTLABEL>EC</ALTLABEL>
+                        <ALTLABEL>Commission of the European Communities</ALTLABEL>
+                        <ALTLABEL>European Commission</ALTLABEL>
+                        <ALTLABEL>Commission</ALTLABEL>
+                    </WORK_CREATED_BY_AGENT>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/5235</VALUE>
+                            <IDENTIFIER>5235</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>5235</IDENTIFIER>
+                        <PREFLABEL>technical standard</PREFLABEL>
+                    </IS_ABOUT>
+                    <DATE_CREATION_LEGACY type="date">
+                        <VALUE>2020-12-15</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>15</DAY>
+                    </DATE_CREATION_LEGACY>
+                    <DATE_TRANSPOSITION type="date">
+                        <VALUE>2022-07-05</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>05</DAY>
+                    </DATE_TRANSPOSITION>
+                    <DATE_TRANSPOSITION type="date">
+                        <VALUE>2022-07-04</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>04</DAY>
+                    </DATE_TRANSPOSITION>
+                    <RESOURCE_LEGAL_AMENDS_RESOURCE_LEGAL type="link">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/cellar/ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</VALUE>
+                            <IDENTIFIER>ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</IDENTIFIER>
+                            <TYPE>cellar</TYPE>
+                        </URI>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/eli/dir/2009/48/oj</VALUE>
+                                <IDENTIFIER>dir:2009:48:oj</IDENTIFIER>
+                                <TYPE>eli</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/oj/JOL_2009_170_R_0001_01</VALUE>
+                                <IDENTIFIER>JOL_2009_170_R_0001_01</IDENTIFIER>
+                                <TYPE>oj</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/celex/32009L0048</VALUE>
+                                <IDENTIFIER>32009L0048</IDENTIFIER>
+                                <TYPE>celex</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <ANNOTATION>
+                            <START_OF_VALIDITY>2021-01-04</START_OF_VALIDITY>
+                            <REFERENCE_TO_MODIFIED_LOCATION>{AN|http://publications.europa.eu/resource/authority/fd_370/AN} II {PRT|http://publications.europa.eu/resource/authority/fd_370/PRT} III {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 11 {ALN|http://publications.europa.eu/resource/authority/fd_370/ALN} 3 {TAB|http://publications.europa.eu/resource/authority/fd_370/TAB} {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 10</REFERENCE_TO_MODIFIED_LOCATION>
+                            <ROLE2>{A|http://publications.europa.eu/resource/authority/fd_375/A}</ROLE2>
+                            <TYPE_OF_LINK_TARGET>MS</TYPE_OF_LINK_TARGET>
+                        </ANNOTATION>
+                        <ANNOTATION>
+                            <START_OF_VALIDITY>2021-01-04</START_OF_VALIDITY>
+                            <REFERENCE_TO_MODIFIED_LOCATION>{AN|http://publications.europa.eu/resource/authority/fd_370/AN} II {PRT|http://publications.europa.eu/resource/authority/fd_370/PRT} III {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 11 {ALN|http://publications.europa.eu/resource/authority/fd_370/ALN} 1 {TAB|http://publications.europa.eu/resource/authority/fd_370/TAB} {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 56</REFERENCE_TO_MODIFIED_LOCATION>
+                            <ROLE2>{J|http://publications.europa.eu/resource/authority/fd_375/J}</ROLE2>
+                            <TYPE_OF_LINK_TARGET>MS</TYPE_OF_LINK_TARGET>
+                        </ANNOTATION>
+                        <ANNOTATION>
+                            <START_OF_VALIDITY>2021-01-04</START_OF_VALIDITY>
+                            <REFERENCE_TO_MODIFIED_LOCATION>{AN|http://publications.europa.eu/resource/authority/fd_370/AN} II {PRT|http://publications.europa.eu/resource/authority/fd_370/PRT} III {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 11 {ALN|http://publications.europa.eu/resource/authority/fd_370/ALN} 1 {TAB|http://publications.europa.eu/resource/authority/fd_370/TAB} {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 57</REFERENCE_TO_MODIFIED_LOCATION>
+                            <ROLE2>{J|http://publications.europa.eu/resource/authority/fd_375/J}</ROLE2>
+                            <TYPE_OF_LINK_TARGET>MS</TYPE_OF_LINK_TARGET>
+                        </ANNOTATION>
+                        <ANNOTATION>
+                            <START_OF_VALIDITY>2021-01-04</START_OF_VALIDITY>
+                            <REFERENCE_TO_MODIFIED_LOCATION>{AN|http://publications.europa.eu/resource/authority/fd_370/AN} II {PRT|http://publications.europa.eu/resource/authority/fd_370/PRT} III {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 11 {ALN|http://publications.europa.eu/resource/authority/fd_370/ALN} 1 {TAB|http://publications.europa.eu/resource/authority/fd_370/TAB} {PO|http://publications.europa.eu/resource/authority/fd_370/PO} 58</REFERENCE_TO_MODIFIED_LOCATION>
+                            <ROLE2>{J|http://publications.europa.eu/resource/authority/fd_375/J}</ROLE2>
+                            <TYPE_OF_LINK_TARGET>MS</TYPE_OF_LINK_TARGET>
+                        </ANNOTATION>
+                    </RESOURCE_LEGAL_AMENDS_RESOURCE_LEGAL>
+                    <ID_CELEX type="data">
+                        <VALUE>32020L2089</VALUE>
+                    </ID_CELEX>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/4036</VALUE>
+                                <IDENTIFIER>4036</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>4036</IDENTIFIER>
+                            <PREFLABEL>product safety</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/138</VALUE>
+                                <IDENTIFIER>138</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>138</IDENTIFIER>
+                            <PREFLABEL>consumer</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100147</VALUE>
+                                <IDENTIFIER>100147</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>20</IDENTIFIER>
+                            <PREFLABEL>20 TRADE</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100195</VALUE>
+                                <IDENTIFIER>100195</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>2026</IDENTIFIER>
+                            <PREFLABEL>2026 consumption</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/5234</VALUE>
+                                <IDENTIFIER>5234</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>5234</IDENTIFIER>
+                            <PREFLABEL>safety standard</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3641</VALUE>
+                                <IDENTIFIER>3641</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3641</IDENTIFIER>
+                            <PREFLABEL>technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100158</VALUE>
+                                <IDENTIFIER>100158</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>64</IDENTIFIER>
+                            <PREFLABEL>64 PRODUCTION, TECHNOLOGY AND RESEARCH</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100261</VALUE>
+                                <IDENTIFIER>100261</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>6411</IDENTIFIER>
+                            <PREFLABEL>6411 technology and technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <RESOURCE_LEGAL_BASED_ON_RESOURCE_LEGAL type="link">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/cellar/ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</VALUE>
+                            <IDENTIFIER>ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</IDENTIFIER>
+                            <TYPE>cellar</TYPE>
+                        </URI>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/eli/dir/2009/48/oj</VALUE>
+                                <IDENTIFIER>dir:2009:48:oj</IDENTIFIER>
+                                <TYPE>eli</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/oj/JOL_2009_170_R_0001_01</VALUE>
+                                <IDENTIFIER>JOL_2009_170_R_0001_01</IDENTIFIER>
+                                <TYPE>oj</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/celex/32009L0048</VALUE>
+                                <IDENTIFIER>32009L0048</IDENTIFIER>
+                                <TYPE>celex</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <ANNOTATION>
+                            <SUBPARAGRAPH>1</SUBPARAGRAPH>
+                            <PARAGRAPH>1</PARAGRAPH>
+                            <ARTICLE>46</ARTICLE>
+                            <COMMENT_ON_LEGAL_BASIS>A46P1L1PTB)</COMMENT_ON_LEGAL_BASIS>
+                        </ANNOTATION>
+                    </RESOURCE_LEGAL_BASED_ON_RESOURCE_LEGAL>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/3646</VALUE>
+                            <IDENTIFIER>3646</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>3646</IDENTIFIER>
+                        <PREFLABEL>European standard</PREFLABEL>
+                        <ALTLABEL>Euronorm</ALTLABEL>
+                        <ALTLABEL>Community standard</ALTLABEL>
+                    </IS_ABOUT>
+                    <RESOURCE_LEGAL_DATE_END-OF-VALIDITY type="date">
+                        <VALUE>9999-12-31</VALUE>
+                        <YEAR>9999</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>31</DAY>
+                    </RESOURCE_LEGAL_DATE_END-OF-VALIDITY>
+                    <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE type="concept_level">
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_3 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/133099</VALUE>
+                                <IDENTIFIER>133099</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>133099</OP-CODE>
+                            <IDENTIFIER>133099</IDENTIFIER>
+                            <PREFLABEL>Other sectors for approximation of laws</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_3>
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_2 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/1330</VALUE>
+                                <IDENTIFIER>1330</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>1330</OP-CODE>
+                            <IDENTIFIER>1330</IDENTIFIER>
+                            <PREFLABEL>Internal market: approximation of laws</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_2>
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_1 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/13</VALUE>
+                                <IDENTIFIER>13</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>13</OP-CODE>
+                            <IDENTIFIER>13</IDENTIFIER>
+                            <PREFLABEL>Industrial policy and internal market</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_1>
+                    </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3817</VALUE>
+                                <IDENTIFIER>3817</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3817</IDENTIFIER>
+                            <PREFLABEL>organic chemical</PREFLABEL>
+                            <ALTLABEL>organic compound</ALTLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3810</VALUE>
+                                <IDENTIFIER>3810</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3810</IDENTIFIER>
+                            <PREFLABEL>chemical compound</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100160</VALUE>
+                                <IDENTIFIER>100160</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>68</IDENTIFIER>
+                            <PREFLABEL>68 INDUSTRY</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100269</VALUE>
+                                <IDENTIFIER>100269</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>6811</IDENTIFIER>
+                            <PREFLABEL>6811 chemistry</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <RESOURCE_LEGAL_BASED_ON_CONCEPT_TREATY type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/treaty/TFEU_2012</VALUE>
+                            <IDENTIFIER>TFEU_2012</IDENTIFIER>
+                            <TYPE>treaty</TYPE>
+                        </URI>
+                        <OP-CODE>TFEU_2012</OP-CODE>
+                        <IDENTIFIER>TFEU_2012</IDENTIFIER>
+                        <PREFLABEL>Treaty on the Functioning of the European Union (consolidated version 2012)</PREFLABEL>
+                        <ALTLABEL>TFEU (2012)</ALTLABEL>
+                        <ALTLABEL>Consolidated version of the Treaty on the Functioning of the European Union (2012)</ALTLABEL>
+                    </RESOURCE_LEGAL_BASED_ON_CONCEPT_TREATY>
+                    <RESOURCE_LEGAL_PUBLISHED_IN_OFFICIAL-JOURNAL type="link">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/cellar/f7ad3f5c-3eae-11eb-b27b-01aa75ed71a1</VALUE>
+                            <IDENTIFIER>f7ad3f5c-3eae-11eb-b27b-01aa75ed71a1</IDENTIFIER>
+                            <TYPE>cellar</TYPE>
+                        </URI>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/oj/JOL_2020_423_R</VALUE>
+                                <IDENTIFIER>JOL_2020_423_R</IDENTIFIER>
+                                <TYPE>oj</TYPE>
+                            </URI>
+                        </SAMEAS>
+                    </RESOURCE_LEGAL_PUBLISHED_IN_OFFICIAL-JOURNAL>
+                    <RESOURCE_LEGAL_INTERNAL_NUMBER_PREFIX type="data">
+                        <VALUE>C</VALUE>
+                    </RESOURCE_LEGAL_INTERNAL_NUMBER_PREFIX>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/fd_555/133099</VALUE>
+                            <IDENTIFIER>133099</IDENTIFIER>
+                            <TYPE>fd_555</TYPE>
+                        </URI>
+                        <OP-CODE>133099</OP-CODE>
+                        <IDENTIFIER>133099</IDENTIFIER>
+                        <PREFLABEL>Other sectors for approximation of laws</PREFLABEL>
+                    </IS_ABOUT>
+                    <LASTMODIFICATIONDATE type="date">
+                        <VALUE>2020-12-17T08:25:10.833+01:00</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>17</DAY>
+                    </LASTMODIFICATIONDATE>
+                    <RESOURCE_LEGAL_ELI type="data">
+                        <VALUE>http://data.europa.eu/eli/dir/2020/2089/oj</VALUE>
+                    </RESOURCE_LEGAL_ELI>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/893</VALUE>
+                            <IDENTIFIER>893</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>893</IDENTIFIER>
+                        <PREFLABEL>labelling</PREFLABEL>
+                    </IS_ABOUT>
+                    <RESOURCE_LEGAL_IN-FORCE type="data">
+                        <VALUE>false</VALUE>
+                    </RESOURCE_LEGAL_IN-FORCE>
+                    <WORK_ID_DOCUMENT type="data">
+                        <VALUE>eli:dir/2020/2089/oj</VALUE>
+                    </WORK_ID_DOCUMENT>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/3817</VALUE>
+                            <IDENTIFIER>3817</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>3817</IDENTIFIER>
+                        <PREFLABEL>organic chemical</PREFLABEL>
+                        <ALTLABEL>organic compound</ALTLABEL>
+                    </IS_ABOUT>
+                    <CREATED_BY type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/corporate-body/GROW</VALUE>
+                            <IDENTIFIER>GROW</IDENTIFIER>
+                            <TYPE>corporate-body</TYPE>
+                        </URI>
+                        <OP-CODE>GROW</OP-CODE>
+                        <IDENTIFIER>GROW</IDENTIFIER>
+                        <PREFLABEL>Directorate-General for Internal Market, Industry, Entrepreneurship and SMEs</PREFLABEL>
+                        <ALTLABEL>GROW</ALTLABEL>
+                        <ALTLABEL>DG Internal Market, Industry, Entrepreneurship and SMEs</ALTLABEL>
+                    </CREATED_BY>
+                    <YEAR type="data">
+                        <VALUE>2020</VALUE>
+                    </YEAR>
+                    <IDENTIFIER type="data">
+                        <VALUE>eli:dir/2020/2089/oj</VALUE>
+                    </IDENTIFIER>
+                    <DIRECTIVE_DATE_TRANSPOSITION type="date">
+                        <VALUE>2022-07-04</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>04</DAY>
+                        <ANNOTATION>
+                            <COMMENT_ON_DATE>{ADOPTION|http://publications.europa.eu/resource/authority/fd_361/ADOPTION} {V|http://publications.europa.eu/resource/authority/fd_361/V} {ART|http://publications.europa.eu/resource/authority/fd_361/ART} 2.1</COMMENT_ON_DATE>
+                        </ANNOTATION>
+                    </DIRECTIVE_DATE_TRANSPOSITION>
+                    <RESOURCE_LEGAL_NUMBER_NATURAL_CELEX type="data">
+                        <VALUE>2089</VALUE>
+                    </RESOURCE_LEGAL_NUMBER_NATURAL_CELEX>
+                    <WORK_HAS_RESOURCE-TYPE type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/resource-type/DIR</VALUE>
+                            <IDENTIFIER>DIR</IDENTIFIER>
+                            <TYPE>resource-type</TYPE>
+                        </URI>
+                        <OP-CODE>DIR</OP-CODE>
+                        <IDENTIFIER>DIR</IDENTIFIER>
+                        <PREFLABEL>Directive</PREFLABEL>
+                        <ALTLABEL>Directives</ALTLABEL>
+                    </WORK_HAS_RESOURCE-TYPE>
+                    <RESOURCE_LEGAL_YEAR type="data">
+                        <VALUE>2020</VALUE>
+                    </RESOURCE_LEGAL_YEAR>
+                    <RESOURCE_LEGAL_TYPE type="data">
+                        <VALUE>L</VALUE>
+                    </RESOURCE_LEGAL_TYPE>
+                    <RESOURCE_LEGAL_INFORMATION_MISCELLANEOUS type="data">
+                        <VALUE>{P/EEE|http://publications.europa.eu/resource/authority/fd_400/P%2FEEE}</VALUE>
+                    </RESOURCE_LEGAL_INFORMATION_MISCELLANEOUS>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/893</VALUE>
+                                <IDENTIFIER>893</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>893</IDENTIFIER>
+                            <PREFLABEL>labelling</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/87</VALUE>
+                                <IDENTIFIER>87</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>87</IDENTIFIER>
+                            <PREFLABEL>preparation for market</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100147</VALUE>
+                                <IDENTIFIER>100147</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>20</IDENTIFIER>
+                            <PREFLABEL>20 TRADE</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100196</VALUE>
+                                <IDENTIFIER>100196</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>2031</IDENTIFIER>
+                            <PREFLABEL>2031 marketing</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/fd_555/152030</VALUE>
+                            <IDENTIFIER>152030</IDENTIFIER>
+                            <TYPE>fd_555</TYPE>
+                        </URI>
+                        <OP-CODE>152030</OP-CODE>
+                        <IDENTIFIER>152030</IDENTIFIER>
+                        <PREFLABEL>Protection of health and safety</PREFLABEL>
+                    </IS_ABOUT>
+                    <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER type="concept_level">
+                        <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/subject-matter/PROT</VALUE>
+                                <IDENTIFIER>PROT</IDENTIFIER>
+                                <TYPE>subject-matter</TYPE>
+                            </URI>
+                            <OP-CODE>PROT</OP-CODE>
+                            <IDENTIFIER>PROT</IDENTIFIER>
+                            <PREFLABEL>Consumer protection</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1>
+                    </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER>
+                    <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER type="concept_level">
+                        <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/subject-matter/ETEC</VALUE>
+                                <IDENTIFIER>ETEC</IDENTIFIER>
+                                <TYPE>subject-matter</TYPE>
+                            </URI>
+                            <OP-CODE>ETEC</OP-CODE>
+                            <IDENTIFIER>ETEC</IDENTIFIER>
+                            <PREFLABEL>Technical barriers</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1>
+                    </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER>
+                    <RESOURCE_LEGAL_REPERTOIRE type="data">
+                        <VALUE>LIE</VALUE>
+                    </RESOURCE_LEGAL_REPERTOIRE>
+                    <DIRECTIVE_DATE_TRANSPOSITION type="date">
+                        <VALUE>2022-07-05</VALUE>
+                        <YEAR>2022</YEAR>
+                        <MONTH>07</MONTH>
+                        <DAY>05</DAY>
+                        <ANNOTATION>
+                            <COMMENT_ON_DATE>{APPLICATION|http://publications.europa.eu/resource/authority/fd_361/APPLICATION} {V|http://publications.europa.eu/resource/authority/fd_361/V} {ART|http://publications.europa.eu/resource/authority/fd_361/ART} 2.1</COMMENT_ON_DATE>
+                        </ANNOTATION>
+                    </DIRECTIVE_DATE_TRANSPOSITION>
+                    <RESOURCE_LEGAL_COMMENT_INTERNAL type="data">
+                        <VALUE>MAN2</VALUE>
+                    </RESOURCE_LEGAL_COMMENT_INTERNAL>
+                    <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE type="concept_level">
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_3 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/152030</VALUE>
+                                <IDENTIFIER>152030</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>152030</OP-CODE>
+                            <IDENTIFIER>152030</IDENTIFIER>
+                            <PREFLABEL>Protection of health and safety</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_3>
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_2 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/1520</VALUE>
+                                <IDENTIFIER>1520</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>1520</OP-CODE>
+                            <IDENTIFIER>1520</IDENTIFIER>
+                            <PREFLABEL>Consumers</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_2>
+                        <RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_1 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/fd_555/15</VALUE>
+                                <IDENTIFIER>15</IDENTIFIER>
+                                <TYPE>fd_555</TYPE>
+                            </URI>
+                            <OP-CODE>15</OP-CODE>
+                            <IDENTIFIER>15</IDENTIFIER>
+                            <PREFLABEL>Environment, consumers and health protection</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE_1>
+                    </RESOURCE_LEGAL_IS_ABOUT_CONCEPT_DIRECTORY-CODE>
+                    <CREATED_BY type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/corporate-body/COM</VALUE>
+                            <IDENTIFIER>COM</IDENTIFIER>
+                            <TYPE>corporate-body</TYPE>
+                        </URI>
+                        <OP-CODE>COM</OP-CODE>
+                        <IDENTIFIER>COM</IDENTIFIER>
+                        <PREFLABEL>European Commission</PREFLABEL>
+                        <ALTLABEL>EC</ALTLABEL>
+                        <ALTLABEL>Commission of the European Communities</ALTLABEL>
+                        <ALTLABEL>European Commission</ALTLABEL>
+                        <ALTLABEL>Commission</ALTLABEL>
+                    </CREATED_BY>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/5235</VALUE>
+                                <IDENTIFIER>5235</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>5235</IDENTIFIER>
+                            <PREFLABEL>technical standard</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3641</VALUE>
+                                <IDENTIFIER>3641</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3641</IDENTIFIER>
+                            <PREFLABEL>technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100158</VALUE>
+                                <IDENTIFIER>100158</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>64</IDENTIFIER>
+                            <PREFLABEL>64 PRODUCTION, TECHNOLOGY AND RESEARCH</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100261</VALUE>
+                                <IDENTIFIER>100261</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>6411</IDENTIFIER>
+                            <PREFLABEL>6411 technology and technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3646</VALUE>
+                                <IDENTIFIER>3646</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3646</IDENTIFIER>
+                            <PREFLABEL>European standard</PREFLABEL>
+                            <ALTLABEL>Euronorm</ALTLABEL>
+                            <ALTLABEL>Community standard</ALTLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3641</VALUE>
+                                <IDENTIFIER>3641</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3641</IDENTIFIER>
+                            <PREFLABEL>technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100158</VALUE>
+                                <IDENTIFIER>100158</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>64</IDENTIFIER>
+                            <PREFLABEL>64 PRODUCTION, TECHNOLOGY AND RESEARCH</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100261</VALUE>
+                                <IDENTIFIER>100261</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>6411</IDENTIFIER>
+                            <PREFLABEL>6411 technology and technical regulations</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <RESOURCE_LEGAL_NUMBER_NATURAL type="data">
+                        <VALUE>2089</VALUE>
+                    </RESOURCE_LEGAL_NUMBER_NATURAL>
+                    <DATE type="date">
+                        <VALUE>2021-01-04</VALUE>
+                        <YEAR>2021</YEAR>
+                        <MONTH>01</MONTH>
+                        <DAY>04</DAY>
+                    </DATE>
+                    <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER type="concept_level">
+                        <RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1 type="concept">
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/authority/subject-matter/RAPL</VALUE>
+                                <IDENTIFIER>RAPL</IDENTIFIER>
+                                <TYPE>subject-matter</TYPE>
+                            </URI>
+                            <OP-CODE>RAPL</OP-CODE>
+                            <IDENTIFIER>RAPL</IDENTIFIER>
+                            <PREFLABEL>Approximation of laws</PREFLABEL>
+                        </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER_1>
+                    </RESOURCE_LEGAL_IS_ABOUT_SUBJECT-MATTER>
+                    <CREATIONDATE type="date">
+                        <VALUE>2020-12-15T09:43:10.475+01:00</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>15</DAY>
+                    </CREATIONDATE>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/4036</VALUE>
+                            <IDENTIFIER>4036</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>4036</IDENTIFIER>
+                        <PREFLABEL>product safety</PREFLABEL>
+                    </IS_ABOUT>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/5234</VALUE>
+                            <IDENTIFIER>5234</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>5234</IDENTIFIER>
+                        <PREFLABEL>safety standard</PREFLABEL>
+                    </IS_ABOUT>
+                    <RESOURCE_LEGAL_INTERNAL_NUMBER_YEAR type="data">
+                        <VALUE>2020</VALUE>
+                    </RESOURCE_LEGAL_INTERNAL_NUMBER_YEAR>
+                    <BASED_ON type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/treaty/TFEU_2012</VALUE>
+                            <IDENTIFIER>TFEU_2012</IDENTIFIER>
+                            <TYPE>treaty</TYPE>
+                        </URI>
+                        <OP-CODE>TFEU_2012</OP-CODE>
+                        <IDENTIFIER>TFEU_2012</IDENTIFIER>
+                        <PREFLABEL>Treaty on the Functioning of the European Union (consolidated version 2012)</PREFLABEL>
+                        <ALTLABEL>TFEU (2012)</ALTLABEL>
+                        <ALTLABEL>Consolidated version of the Treaty on the Functioning of the European Union (2012)</ALTLABEL>
+                    </BASED_ON>
+                    <RESOURCE_LEGAL_PRODUCED_BY_DOSSIER type="link">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/cellar/dd8a5462-5ec5-11ea-b735-01aa75ed71a1</VALUE>
+                            <IDENTIFIER>dd8a5462-5ec5-11ea-b735-01aa75ed71a1</IDENTIFIER>
+                            <TYPE>cellar</TYPE>
+                        </URI>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/internal_proc/BBF4BA9EB343C01D0C20CDE2DC0C495C09863592485D128437069B5B2CE169E9</VALUE>
+                                <IDENTIFIER>BBF4BA9EB343C01D0C20CDE2DC0C495C09863592485D128437069B5B2CE169E9</IDENTIFIER>
+                                <TYPE>internal_proc</TYPE>
+                            </URI>
+                        </SAMEAS>
+                    </RESOURCE_LEGAL_PRODUCED_BY_DOSSIER>
+                    <WORK_IS_ABOUT_CONCEPT_EUROVOC type="concept_facet">
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/1391</VALUE>
+                                <IDENTIFIER>1391</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>1391</IDENTIFIER>
+                            <PREFLABEL>toy industry</PREFLABEL>
+                            <ALTLABEL>toy</ALTLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_CONCEPT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_TT type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/3895</VALUE>
+                                <IDENTIFIER>3895</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>3895</IDENTIFIER>
+                            <PREFLABEL>miscellaneous industries</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_TT>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100160</VALUE>
+                                <IDENTIFIER>100160</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>68</IDENTIFIER>
+                            <PREFLABEL>68 INDUSTRY</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_DOM>
+                        <WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH type="concept">
+                            <URI>
+                                <VALUE>http://eurovoc.europa.eu/100276</VALUE>
+                                <IDENTIFIER>100276</IDENTIFIER>
+                                <TYPE>EUROVOC</TYPE>
+                            </URI>
+                            <IDENTIFIER>6846</IDENTIFIER>
+                            <PREFLABEL>6846 miscellaneous industries</PREFLABEL>
+                        </WORK_IS_ABOUT_CONCEPT_EUROVOC_MTH>
+                    </WORK_IS_ABOUT_CONCEPT_EUROVOC>
+                    <IDENTIFIER type="data">
+                        <VALUE>32020L2089</VALUE>
+                    </IDENTIFIER>
+                    <ID_SECTOR type="data">
+                        <VALUE>3</VALUE>
+                    </ID_SECTOR>
+                    <DATE type="date">
+                        <VALUE>2020-12-15</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>15</DAY>
+                    </DATE>
+                    <DATE type="date">
+                        <VALUE>2020-12-11</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>11</DAY>
+                    </DATE>
+                    <VERSION type="data">
+                        <VALUE>1.43</VALUE>
+                    </VERSION>
+                    <BASED_ON type="link">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/cellar/ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</VALUE>
+                            <IDENTIFIER>ab7917e6-0d8a-42e4-b4df-0bbd7d927cc1</IDENTIFIER>
+                            <TYPE>cellar</TYPE>
+                        </URI>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/eli/dir/2009/48/oj</VALUE>
+                                <IDENTIFIER>dir:2009:48:oj</IDENTIFIER>
+                                <TYPE>eli</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/oj/JOL_2009_170_R_0001_01</VALUE>
+                                <IDENTIFIER>JOL_2009_170_R_0001_01</IDENTIFIER>
+                                <TYPE>oj</TYPE>
+                            </URI>
+                        </SAMEAS>
+                        <SAMEAS>
+                            <URI>
+                                <VALUE>http://publications.europa.eu/resource/celex/32009L0048</VALUE>
+                                <IDENTIFIER>32009L0048</IDENTIFIER>
+                                <TYPE>celex</TYPE>
+                            </URI>
+                        </SAMEAS>
+                    </BASED_ON>
+                    <IDENTIFIER type="data">
+                        <VALUE>celex:32020L2089</VALUE>
+                    </IDENTIFIER>
+                    <RESOURCE_LEGAL_INTERNAL_NUMBER_SEQUENTIAL_NUMBER type="data">
+                        <VALUE>8707</VALUE>
+                    </RESOURCE_LEGAL_INTERNAL_NUMBER_SEQUENTIAL_NUMBER>
+                    <WORK_DATE_DOCUMENT type="date">
+                        <VALUE>2020-12-11</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>11</DAY>
+                        <ANNOTATION>
+                            <COMMENT_ON_DATE>{DATADOPT|http://publications.europa.eu/resource/authority/fd_365/DATADOPT}</COMMENT_ON_DATE>
+                        </ANNOTATION>
+                    </WORK_DATE_DOCUMENT>
+                    <SERVICE_RESPONSIBLE type="data">
+                        <VALUE>GROW</VALUE>
+                    </SERVICE_RESPONSIBLE>
+                    <ELI type="data">
+                        <VALUE>http://data.europa.eu/eli/dir/2020/2089/oj</VALUE>
+                    </ELI>
+                    <IS_ABOUT type="concept">
+                        <URI>
+                            <VALUE>http://eurovoc.europa.eu/5431</VALUE>
+                            <IDENTIFIER>5431</IDENTIFIER>
+                            <TYPE>EUROVOC</TYPE>
+                        </URI>
+                        <IDENTIFIER>5431</IDENTIFIER>
+                        <PREFLABEL>allergy</PREFLABEL>
+                    </IS_ABOUT>
+                    <IDENTIFIER type="data">
+                        <VALUE>oj:JOL_2020_423_R_0011</VALUE>
+                    </IDENTIFIER>
+                    <TYPE>cdm:legislation_secondary</TYPE>
+                    <TYPE>cdm:work</TYPE>
+                    <TYPE>L</TYPE>
+                    <TYPE>cdm:directive</TYPE>
+                    <TYPE>cdm:resource_legal</TYPE>
+                </WORK>
+                <EXPRESSION xmlns="">
+                    <URI>
+                        <VALUE>http://publications.europa.eu/resource/cellar/e643d248-3eb1-11eb-b27b-01aa75ed71a1.0006</VALUE>
+                        <IDENTIFIER>e643d248-3eb1-11eb-b27b-01aa75ed71a1.0006</IDENTIFIER>
+                        <TYPE>cellar</TYPE>
+                    </URI>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/oj/JOL_2020_423_R_0011.ENG</VALUE>
+                            <IDENTIFIER>JOL_2020_423_R_0011.ENG</IDENTIFIER>
+                            <TYPE>oj</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/celex/32020L2089.ENG</VALUE>
+                            <IDENTIFIER>32020L2089.ENG</IDENTIFIER>
+                            <TYPE>celex</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <SAMEAS>
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/uriserv/OJ.L_.2020.423.01.0058.01.ENG</VALUE>
+                            <IDENTIFIER>OJ.L_.2020.423.01.0058.01.ENG</IDENTIFIER>
+                            <TYPE>uriserv</TYPE>
+                        </URI>
+                    </SAMEAS>
+                    <LASTMODIFICATIONDATE type="date">
+                        <VALUE>2020-12-15T11:09:10.085+01:00</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>15</DAY>
+                    </LASTMODIFICATIONDATE>
+                    <EXPRESSION_SUBTITLE type="data">
+                        <VALUE>C/2020/8707</VALUE>
+                    </EXPRESSION_SUBTITLE>
+                    <EXPRESSION_USES_LANGUAGE type="concept">
+                        <URI>
+                            <VALUE>http://publications.europa.eu/resource/authority/language/ENG</VALUE>
+                            <IDENTIFIER>ENG</IDENTIFIER>
+                            <TYPE>language</TYPE>
+                        </URI>
+                        <OP-CODE>ENG</OP-CODE>
+                        <IDENTIFIER>ENG</IDENTIFIER>
+                        <PREFLABEL>English</PREFLABEL>
+                        <ALTLABEL>English</ALTLABEL>
+                    </EXPRESSION_USES_LANGUAGE>
+                    <TITLE type="data">
+                        <VALUE>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</VALUE>
+                        <LANG>en</LANG>
+                    </TITLE>
+                    <LANG type="data">
+                        <VALUE>eng</VALUE>
+                    </LANG>
+                    <EXPRESSION_TITLE type="data">
+                        <VALUE>Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)</VALUE>
+                        <LANG>en</LANG>
+                    </EXPRESSION_TITLE>
+                    <LANG type="data">
+                        <VALUE>en</VALUE>
+                    </LANG>
+                    <TITLE type="data">
+                        <VALUE>C/2020/8707</VALUE>
+                    </TITLE>
+                    <CREATIONDATE type="date">
+                        <VALUE>2020-12-15T09:43:10.476+01:00</VALUE>
+                        <YEAR>2020</YEAR>
+                        <MONTH>12</MONTH>
+                        <DAY>15</DAY>
+                    </CREATIONDATE>
+                </EXPRESSION>
+            </ukm:EURLexMetadata>
+        </ukm:EUMetadata>
+        <ukm:Alternatives>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/eudr/2020/2089/pdfs/eudr_20202089_adopted_en.pdf" Date="2020-12-11" Size="532550"/>
+        </ukm:Alternatives>
+        <ukm:Statistics>
+            <ukm:TotalParagraphs Value="6"/>
+            <ukm:BodyParagraphs Value="4"/>
+            <ukm:ScheduleParagraphs Value="2"/>
+            <ukm:AttachmentParagraphs Value="0"/>
+            <ukm:TotalImages Value="0"/>
+        </ukm:Statistics>
+    </ukm:Metadata>
+    <EURetained>
+        <EUBody DocumentURI="http://www.legislation.gov.uk/eudr/2020/2089/body/2020-12-11" IdURI="http://www.legislation.gov.uk/id/eudr/2020/2089/body" NumberOfProvisions="4" RestrictStartDate="2020-12-11" RestrictExtent="E+W+S+N.I.">
+            <P1 DocumentURI="http://www.legislation.gov.uk/eudr/2020/2089/article/1/2020-12-11" IdURI="http://www.legislation.gov.uk/id/eudr/2020/2089/article/1" id="article-1" RestrictStartDate="2020-12-11" RestrictExtent="E+W+S+N.I.">
+                <Pnumber>Article 1</Pnumber>
+                <P1para>
+                    <Text>Annex II to Directive 2009/48/EC is amended in accordance with the Annex to this Directive.</Text>
+                </P1para>
+            </P1>
+        </EUBody>
+    </EURetained>
+</Legislation>

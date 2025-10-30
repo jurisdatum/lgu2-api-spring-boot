@@ -1,0 +1,105 @@
+{
+  "meta" : {
+    "id" : "anaw/2020/3",
+    "longType" : "WelshNationalAssemblyAct",
+    "shortType" : "anaw",
+    "year" : 2020,
+    "number" : 3,
+    "isbn" : "9780348113402",
+    "date" : "2020-03-20",
+    "cite" : "2020 anaw 3",
+    "version" : "2020-03-21",
+    "status" : "revised",
+    "title" : "Deddf Plant (Diddymu Amddiffyniad Cosb Resymol) (Cymru) 2020",
+    "extent" : [ "E", "W" ],
+    "lang" : "cy",
+    "publisher" : "Statute Law Database",
+    "modified" : "2023-05-17",
+    "versions" : [ "enacted", "2020-03-21" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_we.pdf",
+      "name" : "Welsh Language",
+      "date" : "2020-03-26",
+      "size" : 1689996
+    }, {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_en.pdf",
+      "name" : "English Language",
+      "date" : "2020-03-26",
+      "size" : 1814334
+    }, {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_mi.pdf",
+      "name" : null,
+      "date" : "2020-03-26",
+      "size" : 2220839
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_we.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2020-03-26",
+      "size" : 1601531
+    }, {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_en.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2020-03-26",
+      "size" : 1747374
+    }, {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_mi.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2020-03-26",
+      "size" : 2499242
+    } ],
+    "fragment" : "section/2",
+    "prev" : "section/1",
+    "next" : "section/3",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "section/2",
+      "number" : "2",
+      "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
+      "label" : "Section 2"
+    },
+    "prevInfo" : {
+      "href" : "section/1",
+      "label" : "Provision"
+    },
+    "nextInfo" : {
+      "href" : "section/3",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "section/2",
+      "number" : "2",
+      "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
+      "label" : "Section 2"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-2",
+      "href" : "section/2",
+      "number" : "2",
+      "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
+      "label" : "Section 2"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary anaw\"><div class=\"body\" id=\"body\" data-x-extent=\"E+W\" data-x-restrict-start-date=\"2022-03-21\">\n            <section class=\"section\" id=\"section-2\" data-uk-target=\"true\" data-x-extent=\"E+W\" data-x-restrict-start-date=\"2020-03-21\"><h2><span class=\"num\">\n                        \n                        2\n                    </span><span class=\"heading\">Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym</span></h2><div class=\"content\">\n                        <p>Rhaid i Weinidogion Cymru gymryd camau cyn i adran 1 ddod i rym er mwyn hybu ymwybyddiaeth y cyhoedd o’r newidiadau i’r gyfraith sydd i’w gwneud gan yr adran honno.</p>\n                    </div><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\">\n            \n                <p><span class=\"marker\">I1</span>\n                    A. 2 mewn grym ar 21.3.2020, gweler\n                    <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/anaw/2020/3/section/5/1\">a. 5(1)</a></cite>\n                </p>\n            \n        </div></div></footer></section>\n        </div></article>"
+}

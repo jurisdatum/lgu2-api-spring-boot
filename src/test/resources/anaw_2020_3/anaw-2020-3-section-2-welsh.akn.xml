@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="anaw">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/anaw/2020/3"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/anaw/2020/3"/>
+               <FRBRdate date="2020-03-20" name="enacted"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/NationalAssemblyForWales"/>
+               <FRBRcountry value="GB-WLS"/>
+               <FRBRnumber value="3"/>
+               <FRBRname value="2020 anaw 3"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/anaw/2020/3/2022-03-21"/>
+               <FRBRuri value="http://www.legislation.gov.uk/anaw/2020/3/2022-03-21"/>
+               <FRBRdate date="2022-03-21" name="validFrom"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="cym"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/anaw/2020/3/2022-03-21/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/anaw/2020/3/2022-03-21/data.akn"/>
+               <FRBRdate date="2025-10-14+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#enactment" date="2020-03-20" eId="date-enacted" source="#"/>
+            <eventRef date="2020-03-21" eId="date-2020-03-21" source="#"/>
+            <eventRef date="2022-03-21" eId="date-2022-03-21" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <restrictions source="#">
+               <restriction refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction href="#section-2" refersTo="#extent-e+w" type="jurisdiction"/>
+               <restriction refersTo="#period-from-2022-03-21" type="jurisdiction"/>
+               <restriction href="#body" refersTo="#period-from-2022-03-21" type="jurisdiction"/>
+               <restriction href="#section-2" refersTo="#period-from-2020-03-21" type="jurisdiction"/>
+            </restrictions>
+            <otherAnalysis source="">
+               <uk:commentary href="#section-2" refersTo="#key-ed126cd7d346a4e7b45d0339e836140b"/>
+            </otherAnalysis>
+         </analysis>
+         <temporalData source="#">
+            <temporalGroup eId="period-from-2020-03-21">
+               <timeInterval start="#date-2020-03-21" refersTo="#"/>
+            </temporalGroup>
+            <temporalGroup eId="period-from-2022-03-21">
+               <timeInterval start="#date-2022-03-21" refersTo="#"/>
+            </temporalGroup>
+         </temporalData>
+         <references source="#">
+            <TLCEvent eId="enactment" href="" showAs="EnactmentDate"/>
+            <TLCLocation eId="extent-e+w" href="" showAs="E+W"/>
+         </references>
+         <notes source="#">
+            <note ukl:Name="Commentary" ukl:Type="I" class="commentary I" eId="key-ed126cd7d346a4e7b45d0339e836140b" marker="I1">
+               <p>
+                    A. 2 mewn grym ar 21.3.2020, gweler
+                    <ref eId="n3d551e2b15a7122c" class="subref operative" href="http://www.legislation.gov.uk/id/anaw/2020/3/section/5/1">a. 5(1)</ref>
+               </p>
+            </note>
+         </notes>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/anaw/2020/3/section/2/welsh</dc:identifier>
+            <dc:title>Deddf Plant (Diddymu Amddiffyniad Cosb Resymol) (Cymru) 2020</dc:title>
+            <dc:language>cy</dc:language>
+            <dc:publisher>Statute Law Database</dc:publisher>
+            <dc:modified>2023-05-17</dc:modified>
+            <dc:contributor>Expert Participation</dc:contributor>
+            <dct:valid>2022-03-21</dct:valid>
+            <ukm:PrimaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="primary"/>
+                  <ukm:DocumentMainType Value="WelshNationalAssemblyAct"/>
+                  <ukm:DocumentStatus Value="revised"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2020"/>
+               <ukm:Number Value="3"/>
+               <ukm:EnactmentDate Date="2020-03-20"/>
+               <ukm:ISBN Value="9780348113402"/>
+            </ukm:PrimaryMetadata>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/anaw/2020/3/section/2/notes" DocumentURI="http://www.legislation.gov.uk/anaw/2020/3/section/2/notes/welsh"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_we.pdf" Date="2020-03-26" Title="Explanatory Note" Size="1601531" Language="Welsh"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_en.pdf" Date="2020-03-26" Title="Explanatory Note" Size="1747374"/>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anawen_20200003_mi.pdf" Date="2020-03-26" Title="Explanatory Note" Size="2499242" Language="Mixed"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_we.pdf" Date="2020-03-26" Title="Welsh Language" Size="1689996" Language="Welsh"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_en.pdf" Date="2020-03-26" Title="English Language" Size="1814334"/>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/anaw/2020/3/pdfs/anaw_20200003_mi.pdf" Date="2020-03-26" Size="2220839" Language="Mixed"/>
+            </ukm:Alternatives>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="6"/>
+               <ukm:BodyParagraphs Value="6"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body eId="body">
+         <section xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" eId="section-2" ns0:target="true">
+            <num>
+                        2
+                    </num>
+            <heading>Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym</heading>
+            <content>
+               <p>Rhaid i Weinidogion Cymru gymryd camau cyn i adran 1 ddod i rym er mwyn hybu ymwybyddiaeth y cyhoedd o’r newidiadau i’r gyfraith sydd i’w gwneud gan yr adran honno.</p>
+            </content>
+         </section>
+      </body>
+   </act>
+</akomaNtoso>

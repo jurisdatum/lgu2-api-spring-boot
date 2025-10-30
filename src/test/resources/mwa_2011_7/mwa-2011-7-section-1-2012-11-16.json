@@ -1,0 +1,162 @@
+{
+  "meta" : {
+    "id" : "mwa/2011/7",
+    "longType" : "WelshAssemblyMeasure",
+    "shortType" : "mwa",
+    "year" : 2011,
+    "number" : 7,
+    "isbn" : "9780348105001",
+    "date" : null,
+    "cite" : "2011 nawm 7",
+    "version" : "2012-11-16",
+    "status" : "revised",
+    "title" : "Education (Wales) Measure 2011",
+    "extent" : [ "E", "W" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2025-03-10",
+    "versions" : [ "enacted", "2012-11-16" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "2012-11-16",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_mi.pdf",
+      "name" : null,
+      "date" : "2011-05-11",
+      "size" : 151652
+    }, {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_en.pdf",
+      "name" : null,
+      "date" : "2011-05-11",
+      "size" : 149269
+    }, {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_we.pdf",
+      "name" : null,
+      "date" : "2011-05-11",
+      "size" : 151060
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_we.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2011-05-12",
+      "size" : 135060
+    }, {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_mi.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2011-05-12",
+      "size" : 213719
+    }, {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_en.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2011-05-12",
+      "size" : 121000
+    }, {
+      "type" : "OrderInCouncil",
+      "uri" : "http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaoic_20110007_en.pdf",
+      "name" : "Order in Council",
+      "date" : "2011-05-12",
+      "size" : 63843
+    } ],
+    "fragment" : "section/1",
+    "prev" : "introduction",
+    "next" : "section/2",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Education bodies",
+      "label" : "Section 1"
+    },
+    "prevInfo" : {
+      "href" : "introduction",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "section/2",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "part/1",
+      "number" : "PART 1",
+      "title" : "COLLABORATION BY EDUCATION BODIES",
+      "label" : "PART 1",
+      "start" : "2012-11-16",
+      "end" : "2013-10-01"
+    }, {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Education bodies",
+      "label" : "Section 1"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Education bodies",
+      "label" : "Section 1"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-a",
+      "href" : "section/1/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-b",
+      "href" : "section/1/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-c",
+      "href" : "section/1/c",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-d",
+      "href" : "section/1/d",
+      "number" : "d",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P4",
+      "id" : "section-1-d-i",
+      "href" : "section/1/d/i",
+      "number" : "i",
+      "title" : null,
+      "label" : "P4"
+    }, {
+      "element" : "P4",
+      "id" : "section-1-d-ii",
+      "href" : "section/1/d/ii",
+      "number" : "ii",
+      "title" : null,
+      "label" : "P4"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary mwa\"><div class=\"body\" id=\"body\" data-x-restrict-start-date=\"2012-11-16\" data-x-restrict-end-date=\"2013-08-22\">\n            <section class=\"part\" id=\"part-1\" data-x-extent=\"E+W\" data-x-restrict-start-date=\"2012-11-16\" data-x-restrict-end-date=\"2013-10-01\"><h2><span class=\"num\">\n                    <b>PART 1</b>\n                </span><span class=\"heading\">COLLABORATION BY EDUCATION BODIES</span></h2><section class=\"section\" id=\"section-1\" data-uk-target=\"true\" data-x-restrict-start-date=\"2012-11-16\"><h2><span class=\"num\">\n                             1 </span><span class=\"heading\">Education bodies</span></h2><div class=\"intro\"><p>\n                                For the purposes of this Part, an “\n                                <span class=\"term\" data-refersTo=\"#term-education-body\" id=\"term-education-body\">education body</span>\n                                ” means—\n                            </p></div><div class=\"level para1\" id=\"section-1-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n                                    <p>a local authority in Wales;</p>\n                                </div></div><div class=\"level para1\" id=\"section-1-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n                                    <p>the governing body of a maintained school in Wales;</p>\n                                </div></div><div class=\"level para1\" id=\"section-1-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n                                    <p>a further education corporation (as defined by section 17(1) of the Further and Higher Education Act 1992) in Wales;</p>\n                                </div></div><div class=\"level para1\" id=\"section-1-d\"><h3><span class=\"num\">(d)</span></h3><div class=\"intro\"><p>the governing body of a designated institution (as defined by section 28(4) of that Act) in Wales, which—</p></div><div class=\"level para2\" id=\"section-1-d-i\"><h3><span class=\"num\">(i)</span></h3><div class=\"content\">\n                                            <p>is a body incorporated by virtue of section 143(5) of the Learning and Skills Act 2000, and</p>\n                                        </div></div><div class=\"level para2\" id=\"section-1-d-ii\"><h3><span class=\"num\">(ii)</span></h3><div class=\"content\">\n                                            <p>is exclusively or mainly providing full-time education for persons who are above compulsory school age but who have not attained the age of 19.</p>\n                                        </div></div></div><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\">\n            \n                <p><span class=\"marker\">I1</span>\n                    <cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/mwa/2011/7/section/1\">S. 1</a></cite>\n                    in force at 16.11.2012 by\n                    <cite><a href=\"http://www.legislation.gov.uk/id/wsi/2012/2656\">S.I. 2012/2656</a></cite>\n                    ,\n                    <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/wsi/2012/2656/article/2\">art. 2</a></cite>\n                </p>\n            \n        </div></div></footer></section></section>\n        </div></article>"
+}

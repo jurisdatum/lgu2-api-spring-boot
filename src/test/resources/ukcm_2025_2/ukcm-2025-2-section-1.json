@@ -1,0 +1,229 @@
+{
+  "meta" : {
+    "id" : "ukcm/2025/2",
+    "longType" : "UnitedKingdomChurchMeasure",
+    "shortType" : "ukcm",
+    "year" : 2025,
+    "number" : 2,
+    "isbn" : "9780105508335",
+    "date" : "2025-04-03",
+    "cite" : "2025 No. 2",
+    "version" : "2025-04-03",
+    "status" : "revised",
+    "title" : "Church Funds Investment Measure 2025",
+    "extent" : [ "E" ],
+    "lang" : null,
+    "publisher" : "Statute Law Database",
+    "modified" : "2025-06-19",
+    "versions" : [ "enacted", "2025-04-03" ],
+    "has" : {
+      "introduction" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukcm/2025/2/pdfs/ukcm_20250002_en.pdf",
+      "name" : null,
+      "date" : "2025-04-03",
+      "size" : 320616
+    } ],
+    "associated" : [ ],
+    "fragment" : "section/1",
+    "prev" : "introduction",
+    "next" : "section/2",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Scheme to transfer assets of certain Church funds",
+      "label" : "Section 1"
+    },
+    "prevInfo" : {
+      "href" : "introduction",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "section/2",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Scheme to transfer assets of certain Church funds",
+      "label" : "Section 1"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-1",
+      "href" : "section/1",
+      "number" : "1",
+      "title" : "Scheme to transfer assets of certain Church funds",
+      "label" : "Section 1"
+    }, {
+      "element" : "P2",
+      "id" : "section-1-1",
+      "href" : "section/1/1",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P2",
+      "id" : "section-1-2",
+      "href" : "section/1/2",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-a",
+      "href" : "section/1/2/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-b",
+      "href" : "section/1/2/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-c",
+      "href" : "section/1/2/c",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-d",
+      "href" : "section/1/2/d",
+      "number" : "d",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-e",
+      "href" : "section/1/2/e",
+      "number" : "e",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-2-f",
+      "href" : "section/1/2/f",
+      "number" : "f",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-1-3",
+      "href" : "section/1/3",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/1",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-3-a",
+      "href" : "section/1/3/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-3-b",
+      "href" : "section/1/3/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-3-c",
+      "href" : "section/1/3/c",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-1-4",
+      "href" : "section/1/4",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-4-a",
+      "href" : "section/1/4/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-4-b",
+      "href" : "section/1/4/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-1-5",
+      "href" : "section/1/5",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/1/4",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/1/4/a",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-5-a",
+      "href" : "section/1/5/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-5-b",
+      "href" : "section/1/5/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-1-5-c",
+      "href" : "section/1/5/c",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary ukcm\"><div class=\"body\" id=\"body\" data-x-extent=\"E\" data-x-restrict-start-date=\"2025-04-03\">\n            <section class=\"section\" id=\"section-1\" data-uk-target=\"true\" data-x-extent=\"E\" data-x-restrict-start-date=\"2025-04-03\"><h2><span class=\"num\">\n                        \n                        1\n                    </span><span class=\"heading\">Scheme to transfer assets of certain Church funds</span></h2><section class=\"subsection\" id=\"section-1-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n                                <p>The trustee of a CBF Church of England Fund may make a scheme for the transfer of the assets of that fund to a charity authorised investment fund established for that purpose.</p>\n                            </div></section><section class=\"subsection\" id=\"section-1-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>\n                                    A “CBF Church of England Fund” is a fund to which the\n                                    <a href=\"https://www.legislation.gov.uk/ukcm/Eliz2/6-7/1\">Church Funds Investment Measure 1958</a>\n                                    applies known by one of the following names—\n                                </p></div><div class=\"level para1\" id=\"section-1-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England Investment Fund;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England Short Duration Bond Fund;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-2-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England Deposit Fund;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-2-d\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England Property Fund;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-2-e\"><h3><span class=\"num\">(e)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England UK Equity Fund;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-2-f\"><h3><span class=\"num\">(f)</span></h3><div class=\"content\">\n                                        <p>the CBF Church of England Global Equity Fund.</p>\n                                    </div></div></section><section class=\"subsection\" id=\"section-1-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"intro\"><p>\n                                    A scheme under\n                                    <cite><a href=\"#section-1\">this section</a></cite>\n                                    may include supplementary, incidental, consequential, transitional or saving provision and may in particular make provision for—\n                                </p></div><div class=\"level para1\" id=\"section-1-3-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n                                        <p>the dissolution of the fund the assets of which are being transferred;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-3-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n                                        <p>the retention of assets of the fund to meet its liabilities;</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-3-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n                                        <p>the payment of fees and expenses.</p>\n                                    </div></div></section><section class=\"subsection\" id=\"section-1-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"intro\"><p>\n                                    “\n                                    <span class=\"term\" data-refersTo=\"#term-charity-authorised-investment-fund\" id=\"term-charity-authorised-investment-fund\">Charity authorised investment fund</span>\n                                    ” means a fund which is—\n                                </p></div><div class=\"level para1\" id=\"section-1-4-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n                                        <p>an authorised fund, and</p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-4-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n                                        <p>\n                                            established under a common investment scheme under\n                                            <a href=\"https://www.legislation.gov.uk/ukpga/2011/25/section/96\">section 96</a>\n                                            of the\n                                            <cite><a href=\"https://www.legislation.gov.uk/ukpga/2011/25\">Charities Act 2011</a></cite>\n                                            .\n                                        </p>\n                                    </div></div></section><section class=\"subsection\" id=\"section-1-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"intro\"><p>\n                                    In\n                                    <cite><a href=\"#section-1-4\">subsection (4)</a></cite>\n                                    <cite><a href=\"#section-1-4-a\">(a)</a></cite>\n                                    , “\n                                    <span class=\"term\" data-refersTo=\"#term-authorised-fund\" id=\"term-authorised-fund\">authorised fund</span>\n                                    ” means a fund the property of which is—\n                                </p></div><div class=\"level para1\" id=\"section-1-5-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n                                        <p>\n                                            held under a unit trust scheme authorised by an order under\n                                            <a href=\"https://www.legislation.gov.uk/ukpga/2000/8/section/243\">section 243</a>\n                                            of the\n                                            <cite><a href=\"https://www.legislation.gov.uk/ukpga/2000/8\">Financial Services and Markets Act 2000</a></cite>\n                                            ,\n                                        </p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-5-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n                                        <p>\n                                            held under a contractual scheme authorised by an order under\n                                            <a href=\"https://www.legislation.gov.uk/ukpga/2000/8/section/261D\">section 261D</a>\n                                            <a href=\"https://www.legislation.gov.uk/ukpga/2000/8/section/261D\">(1)</a>\n                                            of\n                                            <cite><a href=\"https://www.legislation.gov.uk/ukpga/2000/8\">that Act</a></cite>\n                                            , or\n                                        </p>\n                                    </div></div><div class=\"level para1\" id=\"section-1-5-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n                                        <p>\n                                            subject to a collective investment scheme constituted by an open-ended investment company in respect of which an authorisation order is in force under regulations made under\n                                            <a href=\"https://www.legislation.gov.uk/ukpga/2000/8/section/262\">section 262</a>\n                                            of\n                                            <cite><a href=\"https://www.legislation.gov.uk/ukpga/2000/8\">that Act</a></cite>\n                                            .\n                                        </p>\n                                    </div></div></section><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\">\n            \n                <p><span class=\"marker\">I1</span>\n                    S. 1 in force at Royal Assent, see\n                    <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/ukcm/2025/2/section/2/2\">s. 2(2)</a></cite>\n                </p>\n            \n        </div></div></footer></section>\n        </div></article>"
+}
