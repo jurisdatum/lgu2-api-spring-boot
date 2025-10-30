@@ -1,6 +1,5 @@
 package uk.gov.legislation.endpoints.ld.interpretation;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -14,23 +13,7 @@ import uk.gov.legislation.data.virtuoso.queries.InterpretationQuery;
 import java.util.Locale;
 
 @RestController
-@Tag(name = "Linked Data")
-@RequestMapping(
-    path = "/ld/interpretation",
-    produces = {
-        "application/xml",
-        "application/json",
-        "application/rdf+xml",
-        "application/rdf+json",
-        "application/ld+json",
-        "application/sparql-results+json",
-        "application/sparql-results+xml",
-        "text/csv",
-        "text/plain",
-        "text/turtle"
-    }
-)
-public class InterpretationController {
+public class InterpretationController implements InterpretationApi {
 
     private final InterpretationQuery query;
 
@@ -41,7 +24,7 @@ public class InterpretationController {
         this.negotiation = negotiation;
     }
 
-    @GetMapping("/{type}/{year:\\d{4}}/{number}")
+    @Override
     public ResponseEntity<?> getCalendarYearAndNumber(NativeWebRequest request,
             @PathVariable String type,
             @PathVariable int year,

@@ -1,6 +1,5 @@
 package uk.gov.legislation.endpoints.ld.items;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -12,23 +11,7 @@ import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.ItemsQuery;
 
 @RestController
-@Tag(name = "Linked Data")
-@RequestMapping(
-    path = "/ld/items",
-    produces = {
-        "application/xml",
-        "application/json",
-        "application/rdf+xml",
-        "application/rdf+json",
-        "application/ld+json",
-        "application/sparql-results+json",
-        "application/sparql-results+xml",
-        "text/csv",
-        "text/plain",
-        "text/turtle"
-    }
-)
-public class ItemsController {
+public class ItemsController implements ItemsApi {
 
     private final ItemsQuery query;
 
@@ -38,8 +21,7 @@ public class ItemsController {
         this.query = query;
         this.negotiation = negotiation;
     }
-
-    @GetMapping(path = {"/{type}", "/{type}/{year}"})
+    @Override
     public ResponseEntity<?> typeAndYear(NativeWebRequest request,
             @PathVariable String type,
             @PathVariable(required = false) Integer year,
