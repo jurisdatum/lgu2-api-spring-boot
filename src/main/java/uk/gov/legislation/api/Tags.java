@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.parameters;
+package uk.gov.legislation.api;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 
@@ -7,9 +7,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-public class ApiTags {
+// Reusable Swagger tags for controllers.
+public class Tags {
 
-    private ApiTags() {}
+    private Tags() {}
 
     @Target(ElementType.TYPE)
     @Retention(RetentionPolicy.RUNTIME)
