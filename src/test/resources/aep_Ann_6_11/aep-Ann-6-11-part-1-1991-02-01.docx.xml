@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">ARTICLE I.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> The Kingdoms United;     Ensigns Armorial</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That the two Kingdoms of England and Scotland shall upon the First day of May which shall be in the year One thousand seven hundred and seven and for ever after be united into one Kingdom by the name of Great Britain And that the Ensigns Armorial of the said United Kingdom be such as Her Majesty shall appoint and the Crosses of </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">St.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> George and St. Andrew be conjoyned in such manner as Her Majesty shall think fit and used in all Flags Banners Standards and Ensigns both at Sea and Land.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

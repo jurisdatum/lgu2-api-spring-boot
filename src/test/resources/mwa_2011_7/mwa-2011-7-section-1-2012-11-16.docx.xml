@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+            </w:rPr>
+            <w:t xml:space="preserve">PART 1</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">COLLABORATION BY EDUCATION BODIES</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-1" w:customMarkFollows="true"/>
+            <w:t>I1</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> 1 </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Education bodies</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve"> For the purposes of this Part, an “ </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">education body</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> ” means— </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">a local authority in Wales;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the governing body of a maintained school in Wales;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">c</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">a further education corporation (as defined by section 17(1) of the Further and Higher Education Act 1992) in Wales;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">d</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the governing body of a designated institution (as defined by section 28(4) of that Act) in Wales, which—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P4Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">i</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">is a body incorporated by virtue of section 143(5) of the Learning and Skills Act 2000, and</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P4Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">ii</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">is exclusively or mainly providing full-time education for persons who are above compulsory school age but who have not attained the age of 19.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>
