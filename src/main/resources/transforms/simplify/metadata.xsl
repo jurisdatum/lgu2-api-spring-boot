@@ -7,8 +7,17 @@
                xpath-default-namespace="http://www.legislation.gov.uk/namespaces/legislation"
                exclude-result-prefixes="xs ukm dc dct atom">
 
+<xsl:mode on-no-match="shallow-copy" />
+
+<xsl:template match="*" priority="-1">
+    <xsl:copy copy-namespaces="no">
+        <xsl:apply-templates select="@*, node()" />
+    </xsl:copy>
+</xsl:template>
+
 <xsl:template match="ukm:Metadata">
     <meta>
+        <xsl:namespace name="ukm" select="'http://www.legislation.gov.uk/namespaces/metadata'"/>
         <xsl:apply-templates select="dc:identifier[1]" />
         <xsl:call-template name="id" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentMainType" />
@@ -35,6 +44,8 @@
             <xsl:call-template name="fragment-info" />
         </xsl:if>
         <xsl:apply-templates select="ukm:*/ukm:UnappliedEffects" />
+        <xsl:apply-templates select="ukm:ConfersPower" />
+        <xsl:apply-templates select="ukm:BlanketAmendment" />
         <xsl:apply-templates select="ukm:Notes" />
         <xsl:apply-templates select="ukm:PolicyEqualityStatements" />
         <xsl:apply-templates select="ukm:Alternatives" />

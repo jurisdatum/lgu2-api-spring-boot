@@ -1,5 +1,5 @@
 <leg>
-   <meta>
+   <meta xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
       <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">http://www.legislation.gov.uk/ukpga/2000/8/section/91</dc:identifier>
       <id>ukpga/2000/8</id>
       <longType>UnitedKingdomPublicGeneralAct</longType>
@@ -215,12 +215,7 @@
             <number>b</number>
          </descendant>
       </descendants>
-      <ukm:UnappliedEffects xmlns="http://www.legislation.gov.uk/namespaces/legislation"
-                            xmlns:atom="http://www.w3.org/2005/Atom"
-                            xmlns:dc="http://purl.org/dc/elements/1.1/"
-                            xmlns:dct="http://purl.org/dc/terms/"
-                            xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
-                            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ukm:UnappliedEffects>
          <ukm:UnappliedEffect AffectedNumber="8"
                               URI="http://www.legislation.gov.uk/id/effect/key-875cc899be978a92b596eb35963a5fdf"
                               AffectingProvisionsText="reg. 8(9)"
@@ -245,23 +240,20 @@
                               AffectedProvisionsText="s. 86(9A)">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-86-9A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/86/9A"
                      text="s. 86(9A)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-8-9"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/8/9"
                      text="reg. 8(9)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2"
                      text="reg. 1(2)"/>
@@ -294,23 +286,20 @@
                               Type="inserted">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-87A-11"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/87A/11"
                      text="s. 87A(11)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-10-5"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/10/5"
                      text="reg. 10(5)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2"
                      text="reg. 1(2)"/>
@@ -343,23 +332,20 @@
                               EffectId="key-e94fd82d7ebd04b9c7170c141f20c314">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-91-1A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A"
                      text="s. 91(1A)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-30-2-b"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/b"
                      text="reg. 30(2)(b)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2"
                      text="reg. 1(2)"/>
@@ -392,23 +378,20 @@
                               AffectedNumber="8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-91-1A-e"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/1A/e"
                      text="s. 91(1A)(e)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-30-2-a"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/30/2/a"
                      text="reg. 30(2)(a)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2"
                      text="reg. 1(2)"/>
@@ -441,23 +424,20 @@
                               EffectId="key-f22c04ada6692c04c5853c1b3ce00f60">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-124-10-c-i"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/124/10/c/i"
                      text="s. 124(10)(c)(i)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-5-11-b"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/11/b"
                      text="reg. 5(11)(b)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3"
                      text="reg. 1(3)"/>
@@ -490,23 +470,20 @@
                               Row="69">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-129-7-a"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/a"
                      text="s. 129(7)(a)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-5-12-a-i"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/i"
                      text="reg. 5(12)(a)(i)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3"
                      text="reg. 1(3)"/>
@@ -539,23 +516,20 @@
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-129-7-c"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/129/7/c"
                      text="s. 129(7)(c)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Market Abuse (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-5-12-a-ii"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/5/12/a/ii"
                      text="reg. 5(12)(a)(ii)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/310/regulation/1/3"
                      text="reg. 1(3)"/>
@@ -588,28 +562,24 @@
                               AffectedEffectsExtent="S+A+M+E+A+S+A+F+F+E+C+T+E+D">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-11A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/11A"
                      text="Sch. 11A "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-11A-paragraph-5-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/11A/paragraph/5/3"
                      text="para. 5(3)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Official Listing of Securities, Prospectus and Transparency (Amendment etc.) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-38-5-b"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/38/5/b"
                      text="reg. 38(5)(b)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/707/regulation/1/2"
                      text="reg. 1(2)"/>
@@ -642,15 +612,13 @@
                               AffectedProvisionsText="Sch. 17A para. 12">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-17A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/17A"
                      text="Sch. 17A "
                      missing="true"
                      error="Section missing in legislation"/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-17A-paragraph-12"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/17A/paragraph/12"
                      text="para. 12"
@@ -659,15 +627,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Investment Exchanges, Clearing Houses and Central Securities Depositories (Amendment) (EU Exit) Regulations 2019</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-13-1"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/662/regulation/13/1"
                      text="reg. 13(1)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2019/662/regulation/1/3"
                      text="reg. 1(3)"/>
@@ -695,38 +661,32 @@
                               Modified="2024-11-05T10:37:54Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A"
                      text="Sch. 2A "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2A-paragraph-19-2-b"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A/paragraph/19/2/b"
                      text="para. 19(2)(b)"/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2A-paragraph-19-2-iia"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A/paragraph/19/2/iia"
                      text="(iia)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services and Markets Act 2023</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10"
                      text="Sch. 10 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-10-paragraph-19-a"
                      uri="http://www.legislation.gov.uk/id/ukpga/2023/29/schedule/10/paragraph/19/a"
                      text="para. 19(a)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-86-1-e"
                      uri="http://www.legislation.gov.uk/id/ukpga/2023/29/section/86/1/e"
                      text="s. 86(1)(e)"/>
@@ -758,8 +718,7 @@
                               RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="part-20C"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/part/20C"
                      text="Pt. 20C"
@@ -768,15 +727,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Bank of England and Financial Services Act 2016</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-30-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2016/14/section/30/3"
                      text="s. 30(3)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-41-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2016/14/section/41/3"
                      text="s. 41(3)"/>
@@ -804,16 +761,14 @@
                               AffectingURI="http://www.legislation.gov.uk/id/ukpga/2021/22">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A"
                      text="Sch. 2A"
                      missing="true"
                      error="Section missing in legislation"/>
-               <node xmlns="" type="text" text=" "/>
-               <node xmlns=""
-                     type="section"
+               <node type="text" text=" "/>
+               <node type="section"
                      ref="schedule-2B"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B"
                      text="2B"
@@ -822,15 +777,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-23-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10"
                      text="s. 23(10)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -858,23 +811,20 @@
                               Row="55">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-31-1-aa"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/31/1/aa"
                      text="s. 31(1)(aa)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-22-2"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/2"
                      text="s. 22(2)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -902,8 +852,7 @@
                               RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-32A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A"
                      text="s. 32A"
@@ -912,15 +861,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-22-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/3"
                      text="s. 22(3)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -948,26 +895,23 @@
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-36A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/36A"
                      text="s. 36A"
                      missing="true"
                      error="Section missing in legislation"/>
-               <node xmlns="" type="text" text=" and cross-heading"/>
+               <node type="text" text=" and cross-heading"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-22-4"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/22/4"
                      text="s. 22(4)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -995,8 +939,7 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-32A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/32A"
                      text="s. 32A"
@@ -1005,15 +948,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-23-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10"
                      text="s. 23(10)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1041,8 +982,7 @@
                               Modified="2023-08-29T11:14:38Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2A"
                      text="Sch. 2A"
@@ -1051,15 +991,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-23-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10"
                      text="s. 23(10)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1087,8 +1025,7 @@
                               AffectingProvisionsText="s. 23(10)">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2B"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B"
                      text="Sch. 2B"
@@ -1097,15 +1034,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-23-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/23/10"
                      text="s. 23(10)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1133,8 +1068,7 @@
                               Row="415">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-2B"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/2B"
                      text="Sch. 2B"
@@ -1143,15 +1077,13 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-7"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/7"
                      text="Sch. 7"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1179,31 +1111,27 @@
                               AffectedNumber="8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-71J"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/71J"
                      text="s. 71J"
                      missing="true"
                      error="Section missing in legislation"/>
-               <node xmlns="" type="text" text=" and cross-heading"/>
+               <node type="text" text=" and cross-heading"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-4"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/4"
                      text="para. 4"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1231,28 +1159,24 @@
                               AffectingProvisionsText="Sch. 8 para. 8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-214-5A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/214/5A"
                      text="s. 214(5A)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/8"
                      text="para. 8"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1280,8 +1204,7 @@
                               AffectedURI="http://www.legislation.gov.uk/id/ukpga/2000/8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-367A"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/367A"
                      text="s. 367A"
@@ -1290,20 +1213,17 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/10"
                      text="para. 10"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1331,8 +1251,7 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="range"
+               <node type="range"
                      start="section-395-13-bc"
                      end="section-395-13-be"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc"
@@ -1350,20 +1269,17 @@
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-12-2-b"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/b"
                      text="para. 12(2)(b)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1391,28 +1307,24 @@
                               AffectingNumber="22">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-395-13-h-i"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/h/i"
                      text="s. 395(13)(h)(i)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-12-2-c"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/2/c"
                      text="para. 12(2)(c)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1440,28 +1352,24 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-395-14"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/14"
                      text="s. 395(14)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-12-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/12/3"
                      text="para. 12(3)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1489,34 +1397,29 @@
                               EffectId="key-351bc17b224a6085482c0de133c1bb4a">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-1ZA"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/1ZA"
                      text="Sch. 1ZA "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-1ZA-paragraph-32-c"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/1ZA/paragraph/32/c"
                      text="para. 32(c)"/>
-               <node xmlns="" type="text" text=" and word"/>
+               <node type="text" text=" and word"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8"
                      text="Sch. 8 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-8-paragraph-18"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/schedule/8/paragraph/18"
                      text="para. 18"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-49-5"
                      uri="http://www.legislation.gov.uk/id/ukpga/2021/22/section/49/5"
                      text="s. 49(5)"/>
@@ -1546,19 +1449,17 @@
                               AffectedClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns="" type="text" text="Act"/>
+               <node type="text" text="Act"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Water Act 2014</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-79-4"
                      uri="http://www.legislation.gov.uk/id/ukpga/2014/21/section/79/4"
                      text="s. 79(4)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-94-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3"
                      text="s. 94(3)"/>
@@ -1591,19 +1492,17 @@
                               RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns="" type="text" text="Act"/>
+               <node type="text" text="Act"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Water Act 2014</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-81-10"
                      uri="http://www.legislation.gov.uk/id/ukpga/2014/21/section/81/10"
                      text="s. 81(10)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-94-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2014/21/section/94/3"
                      text="s. 94(3)"/>
@@ -1636,45 +1535,38 @@
                               AppliedModified="2024-11-01T18:11:28.371657Z">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-398-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/398/8"
                      text="s. 398(8)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Securitisation Regulations 2024</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-34-7"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/34/7"
                      text="reg. 34(7)"/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-34-8-f"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/34/8/f"
                      text="reg. 34(8)(f)"/>
             </ukm:AffectingProvisions>
             <ukm:Savings>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-52-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/52/3"
                      text="reg. 52(3)"/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-3"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/schedule/3"
                      text="Sch. 3"/>
             </ukm:Savings>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-2-1-e"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/2/1/e"
                      text="reg. 2(1)(e)"/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-2-2"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/102/regulation/2/2"
                      text="(2)"/>
@@ -1707,28 +1599,24 @@
                               AffectedNumber="8">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-6"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/6"
                      text="Sch. 6 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-6-paragraph-4A-8"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/schedule/6/paragraph/4A/8"
                      text="para. 4A(8)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>The Insurance and Reinsurance Undertakings (Prudential Requirements) (Amendment and Miscellaneous Provisions) Regulations 2024</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-10-b"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/10/b"
                      text="reg. 10(b)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="regulation-1-2-b"
                      uri="http://www.legislation.gov.uk/id/uksi/2024/1083/regulation/1/2/b"
                      text="reg. 1(2)(b)"/>
@@ -1756,28 +1644,24 @@
                               AffectingClass="UnitedKingdomPublicGeneralAct">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-234I-9"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/234I/9"
                      text="s. 234I(9)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Digital Markets, Competition and Consumers Act 2024</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-29"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29"
                      text="Sch. 29 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-29-paragraph-3-2"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29/paragraph/3/2"
                      text="para. 3(2)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-339-1"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/section/339/1"
                      text="s. 339(1)"/>
@@ -1792,18 +1676,15 @@
                             CommencingNumber="1226"
                             Comments="to the extent that it relates to the provisions specified in paragraph 2(5)(b)(ii).">
                   <ukm:CommencingProvisions>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-1-2"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/1/2"
                            text="reg. 1(2)"/>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-2-1"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/1"
                            text="2(1)"/>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-2-21"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/21"
                            text="(21)"/>
@@ -1830,28 +1711,24 @@
                               RequiresApplied="true">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-234J-6"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/234J/6"
                      text="s. 234J(6)"/>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Digital Markets, Competition and Consumers Act 2024</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-29"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29"
                      text="Sch. 29 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-29-paragraph-3-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/schedule/29/paragraph/3/3"
                      text="para. 3(3)"/>
             </ukm:AffectingProvisions>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-339-1"
                      uri="http://www.legislation.gov.uk/id/ukpga/2024/13/section/339/1"
                      text="s. 339(1)"/>
@@ -1866,18 +1743,15 @@
                             CommencingNumber="1226"
                             Comments="to the extent that it relates to the provisions specified in paragraph 2(5)(b)(ii).">
                   <ukm:CommencingProvisions>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-1-2"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/1/2"
                            text="reg. 1(2)"/>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-2-1"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/1"
                            text="2(1)"/>
-                     <node xmlns=""
-                           type="section"
+                     <node type="section"
                            ref="regulation-2-21"
                            uri="http://www.legislation.gov.uk/id/uksi/2024/1226/regulation/2/21"
                            text="(21)"/>
@@ -1907,8 +1781,7 @@
                               URI="http://www.legislation.gov.uk/id/effect/key-c00514942197fe9622352b7129a7cb29">
             <ukm:AffectedTitle>Financial Services and Markets Act 2000</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-427A-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/427A/3"
                      text="s. 427A(3)"
@@ -1918,20 +1791,17 @@
             <ukm:AffectingTitle>Enterprise Act 2002 (repealed)</ukm:AffectingTitle>
             <ukm:AffectingTitle>Enterprise Act 2002</ukm:AffectingTitle>
             <ukm:AffectingProvisions>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-17"
                      uri="http://www.legislation.gov.uk/id/ukpga/2002/40/schedule/17"
                      text="Sch. 17 "/>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="schedule-17-paragraph-59"
                      uri="http://www.legislation.gov.uk/id/ukpga/2002/40/schedule/17/paragraph/59"
                      text="para. 59"/>
             </ukm:AffectingProvisions>
             <ukm:Savings>
-               <node xmlns=""
-                     type="range"
+               <node type="range"
                      start="section-249-1"
                      end="section-249-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1"
@@ -1946,8 +1816,7 @@
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
-               <node xmlns=""
-                     type="section"
+               <node type="section"
                      ref="section-279"
                      uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/279"
                      text="s. 279"/>
@@ -1957,21 +1826,11 @@
             </ukm:InForceDates>
          </ukm:UnappliedEffect>
       </ukm:UnappliedEffects>
-      <ukm:Notes xmlns="http://www.legislation.gov.uk/namespaces/legislation"
-                 xmlns:atom="http://www.w3.org/2005/Atom"
-                 xmlns:dc="http://purl.org/dc/elements/1.1/"
-                 xmlns:dct="http://purl.org/dc/terms/"
-                 xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
-                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ukm:Notes>
          <ukm:Note IdURI="http://www.legislation.gov.uk/id/ukpga/2000/8/section/91/notes"
                    DocumentURI="http://www.legislation.gov.uk/ukpga/2000/8/section/91/notes"/>
       </ukm:Notes>
-      <ukm:Alternatives xmlns="http://www.legislation.gov.uk/namespaces/legislation"
-                        xmlns:atom="http://www.w3.org/2005/Atom"
-                        xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        xmlns:dct="http://purl.org/dc/terms/"
-                        xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata"
-                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <ukm:Alternatives>
          <ukm:Alternative Date="2008-03-02"
                           URI="http://www.legislation.gov.uk/ukpga/2000/8/pdfs/ukpga_20000008_en.pdf"
                           Title="Print Version"/>

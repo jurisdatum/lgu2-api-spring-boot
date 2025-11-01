@@ -1,0 +1,72 @@
+<leg>
+   <meta xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+      <dc:identifier xmlns:dc="http://purl.org/dc/elements/1.1/">http://www.legislation.gov.uk/asp/2025/11</dc:identifier>
+      <id>asp/2025/11</id>
+      <longType>ScottishAct</longType>
+      <year>2025</year>
+      <number>11</number>
+      <isbn>9780105904403</isbn>
+      <date>2025-08-06</date>
+      <status>revised</status>
+      <valid>2025-08-07</valid>
+      <title>Education (Scotland) Act 2025</title>
+      <extent>S</extent>
+      <publisher>Statute Law Database</publisher>
+      <modified>2025-09-11</modified>
+      <hasVersions>
+         <hasVersion>enacted</hasVersion>
+         <hasVersion>2025-08-07</hasVersion>
+      </hasVersions>
+      <schedules>http://www.legislation.gov.uk/asp/2025/11/schedules</schedules>
+      <hasParts>
+         <introduction>http://www.legislation.gov.uk/asp/2025/11/introduction</introduction>
+         <schedules>http://www.legislation.gov.uk/asp/2025/11/schedules</schedules>
+      </hasParts>
+      <formats>
+         <format name="pdf"
+                 uri="http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf"/>
+      </formats>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/7"
+                        title="Section 7: Duties when exercising functions"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/9"
+                        title="Section 9: Strategic Advisory Council"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/37"
+                        title="Section 37: Purpose of inspection"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/38"
+                        title="Section 38: The inspection function"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/39"
+                        title="Section 39: Meaning of “relevant educational establishment” and “excepted establishment”"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/45"
+                        title="Section 45: Inspection plan"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/48"
+                        title="Section 48: Report on performance of the Scottish education system"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/64"
+                        title="Section 64: Regulation-making powers"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/65"
+                        title="Section 65: Ancillary provision"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/section/66"
+                        title="Section 66: Commencement"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/schedule/1/paragraph/2"
+                        title="Schedule 1 paragraph 2: Number and appointment of members"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/schedule/1/paragraph/14"
+                        title="Schedule 1 paragraph 14: Regulation of procedure"/>
+      <ukm:ConfersPower IdURI="http://www.legislation.gov.uk/id/asp/2025/11/schedule/3/paragraph/5"
+                        title="Schedule 3 paragraph 5: Appointment of initial board members"/>
+      <ukm:Notes>
+         <ukm:Note IdURI="http://www.legislation.gov.uk/id/asp/2025/11/notes"
+                   DocumentURI="http://www.legislation.gov.uk/asp/2025/11/notes"/>
+         <ukm:Alternatives>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/asp/2025/11/pdfs/aspen_20250011_en.pdf"
+                             Date="2025-10-13"
+                             Title="Explanatory Note"
+                             Size="953472"/>
+         </ukm:Alternatives>
+      </ukm:Notes>
+      <ukm:Alternatives>
+         <ukm:Alternative URI="http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf"
+                          Date="2025-08-06"
+                          Size="1631326"
+                          Print="true"/>
+      </ukm:Alternatives>
+   </meta>
+</leg>
