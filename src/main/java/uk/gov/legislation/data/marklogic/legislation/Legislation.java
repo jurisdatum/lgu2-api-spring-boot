@@ -11,6 +11,8 @@ import uk.gov.legislation.exceptions.NoDocumentException;
 import uk.gov.legislation.util.Links;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PushbackInputStream;
 import java.util.Optional;
 
 @Repository
@@ -26,37 +28,50 @@ public class Legislation {
 
     public Response getDocument(String type, String year, int number, Optional<String> version, Optional<String> language) {
         Parameters params = new Parameters(type, year, number)
-                .version(version)
-                .lang(language);
+            .version(version)
+            .lang(language);
         return getAndFollowRedirect(params);
     }
 
-    /** Get table of contents
+    public StreamResponse getDocumentStream(String type, String year, int number, Optional<String> version, Optional<String> language) throws IOException {
+        Parameters params = new Parameters(type, year, number)
+            .version(version)
+            .lang(language);
+        return getAndFollowRedirect2(params);
+    }
+
+    /**
+     * Get table of contents
      */
 
     private static final Optional<String> CONTENTS_VIEW = Optional.of("contents");
 
     public Response getTableOfContents(String type, String year, int number, Optional<String> version, Optional<String> language) {
         Parameters params = new Parameters(type, year, number)
-                .version(version)
-                .view(CONTENTS_VIEW)
-                .lang(language);
+            .version(version)
+            .view(CONTENTS_VIEW)
+            .lang(language);
         return getAndFollowRedirect(params);
     }
 
-    /** Get document section
+    /**
+     * Get document section
      */
     public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
         Parameters params = new Parameters(type, year, number)
-                .version(version)
-                .section(Optional.of(section))
-                .lang(language);
+            .version(version)
+            .section(Optional.of(section))
+            .lang(language);
         return getAndFollowRedirect(params);
     }
 
     /* records for return values */
 
-    public record Response(String clml, Optional<Redirect> redirect) { }
+    public record Response(String clml, Optional<Redirect> redirect) {
+    }
+
+    public record StreamResponse(InputStream clml, Optional<Redirect> redirect) {
+    }
 
     public record Redirect(String type, String year, long number, Optional<String> version) {
 
@@ -120,6 +135,66 @@ public class Legislation {
             .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
             .lang(comp.language());
         return getAndFollowRedirect(newParams, true);
+    }
+
+    private StreamResponse getAndFollowRedirect2(Parameters params) {
+        return getAndFollowRedirect2(params, false);
+    }
+
+    private StreamResponse getAndFollowRedirect2(Parameters params, boolean afterRedirect) {
+        PushbackInputStream stream = tryOpenStream(params);
+        return handleStream(stream, params, afterRedirect);
+    }
+
+    private PushbackInputStream tryOpenStream(Parameters params) {
+        try {
+            return db.getStream(ENDPOINT, params.buildQuery());
+        } catch (IOException e) {
+            throw new DocumentFetchException("Failed to fetch document due to I/O exception", e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            throw new DocumentFetchException("Failed to fetch document due to interruption", e);
+        }
+    }
+
+    private StreamResponse handleStream(PushbackInputStream stream, Parameters params, boolean afterRedirect) {
+        boolean keepOpen = false;
+        try {
+            Optional<Error> maybeError = Error.parse(stream);
+            if (maybeError.isEmpty()) {
+                keepOpen = true;
+                return new StreamResponse(stream, Redirect.make(afterRedirect, params));
+            }
+            Parameters redirect = getNewParametersFromError(maybeError.get())
+                .view(params.view());
+            return getAndFollowRedirect2(redirect, true);
+        } catch (IOException e) {
+            throw new DocumentFetchException("Failed to fetch document due to I/O exception", e);
+        } finally {
+            if (!keepOpen) {
+                try {
+                    stream.close();
+                } catch (IOException ignored) {
+                    // nothing else we can do
+                }
+            }
+        }
+    }
+
+    private Parameters getNewParametersFromError(Error error) {
+        if (error.statusCode >= 400)
+            throw new NoDocumentException(error);
+        if (!error.header.name.equals("Location"))
+            throw new MarkLogicRequestException("Error parsing MarkLogic error response");
+        String location = error.header.value;
+        logger.debug("MarkLogic redirecting to {}", location);
+        Links.Components comp = Links.parse(location);
+        if (comp == null)
+            throw new IllegalStateException("Invalid redirect location: " + location);
+        return new Parameters(comp.type(), comp.year(), comp.number())
+            .version(comp.version())
+            .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
+            .lang(comp.language());
     }
 
 }

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.responses.Document;
@@ -37,7 +38,7 @@ public interface DocumentApi {
             )
         }
     )
-    ResponseEntity<String> getDocumentClml(
+    ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Year int year,
             @PathVariable @Number int number,
@@ -56,7 +57,7 @@ public interface DocumentApi {
             )
         }
     )
-    ResponseEntity<String> getDocumentClml(
+    ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
