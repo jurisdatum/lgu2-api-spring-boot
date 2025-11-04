@@ -46,57 +46,57 @@ public interface ContentsApi {
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
-        @PathVariable @Type String type,
-        @PathVariable @Year int year,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable int year,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
     ResponseEntity<String> getDocumentContentsAkn(
-        @PathVariable @Type String type,
-        @PathVariable @Monarch String monarch,
-        @PathVariable @Years String years,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable String monarch,
+        @PathVariable String years,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
     /* JSON */
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
-        @PathVariable @Type String type,
-        @PathVariable @Year int year,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable int year,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/json")
     ResponseEntity<TableOfContents> getDocumentContentsJson(
-        @PathVariable @Type String type,
-        @PathVariable @Monarch String monarch,
-        @PathVariable @Years String years,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable String monarch,
+        @PathVariable String years,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
     /* Word (.docx) */
 
     @GetMapping(value = "/contents/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<byte[]> docx(
-        @PathVariable @Type String type,
-        @PathVariable @Year int year,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable int year,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
     @GetMapping(value = "/contents/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<byte[]> docx(
-        @PathVariable @Type String type,
-        @PathVariable @Monarch String monarch,
-        @PathVariable @Years String years,
-        @PathVariable @Number int number,
-        @RequestParam @Version Optional<String> version,
+        @PathVariable String type,
+        @PathVariable String monarch,
+        @PathVariable String years,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
         Locale locale) throws Exception;
 
 }
