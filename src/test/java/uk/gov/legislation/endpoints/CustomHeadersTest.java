@@ -10,9 +10,10 @@ import uk.gov.legislation.data.marklogic.legislation.Legislation.Redirect;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class  CustomHeadersTest {
+class CustomHeadersTest {
 
     @ParameterizedTest(name = "{index} => lang={0}, redirect={1}, expectedVersion={2}")
     @MethodSource("provideHeadersTestCases")
@@ -38,6 +39,12 @@ class  CustomHeadersTest {
                 new ExpectedHeaders("ukla", "2025", "12")
             ),
             Arguments.of(
+                "en",
+                new Redirect("ukpga", "2024", 7, Optional.empty()),
+                null,
+                new ExpectedHeaders("ukpga", "2024", "7")
+            ),
+            Arguments.of(
                 "fr",
                 null,
                 null,
@@ -58,7 +65,7 @@ class  CustomHeadersTest {
         );
     }
 
-    //  helper class for expected headers
-        record ExpectedHeaders(String type, String year, String number) {
+    // Helper class for expected headers
+    record ExpectedHeaders(String type, String year, String number) {
     }
 }
