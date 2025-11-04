@@ -10,6 +10,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.Transforms;
@@ -22,6 +23,7 @@ import java.util.Optional;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
@@ -243,10 +245,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             return null;
         }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept("application/akn+xml")
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
             .andExpect(content().string(aknXml))
@@ -274,10 +280,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             return null;
         }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept("application/akn+xml")
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
             .andExpect(content().string(aknXml))
