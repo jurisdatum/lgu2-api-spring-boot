@@ -15,6 +15,8 @@ import uk.gov.legislation.transform.simple.Simplify;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 
 @Service
 public class Transforms {
@@ -35,9 +37,12 @@ public class Transforms {
     }
 
     public String clml2akn(String clml) throws SaxonApiException {
-        // maybe it's more effecient to transform directly to a Serializer
         XdmNode aknNode = clml2akn.transform(clml);
         return Clml2Akn.serialize(aknNode);
+    }
+
+    public void clml2akn(InputStream clml, OutputStream akn) throws SaxonApiException, IOException {
+        clml2akn.transform(clml, akn);
     }
 
     public String clml2html(String clml, boolean standalone) throws SaxonApiException {

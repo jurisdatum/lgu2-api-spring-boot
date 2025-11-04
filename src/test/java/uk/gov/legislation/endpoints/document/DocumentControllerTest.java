@@ -15,6 +15,8 @@ import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.Transforms;
 
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
@@ -228,21 +230,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        when(marklogic.getDocument(type, year, number, version, language))
-            .thenReturn(response);
-        when(transforms.clml2akn(clmlXml)).thenReturn(aknXml);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, year, number, version, language))
+            .thenReturn(streamResponse);
+        doAnswer(invocation -> {
+            invocation.getArgument(0, InputStream.class);
+            OutputStream aknStream = invocation.getArgument(1);
+            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+            aknStream.flush();
+            return null;
+        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
 
         mockMvc.perform(get("/document/ukla/2020/1")
                 .accept("application/akn+xml")
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentType("application/akn+xml;charset=UTF-8"))
+            .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
             .andExpect(content().string(aknXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, year, number, version, language);
-        verify(transforms).clml2akn(clmlXml);
+        verify(marklogic).getDocumentStream(type, year, number, version, language);
+        verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -250,21 +261,30 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     void shouldReturnAknWhenAcceptsAknWithMonarch() throws Exception {
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        when(marklogic.getDocument(type, regnalYear, number, version, language))
-            .thenReturn(response);
-        when(transforms.clml2akn(clmlXml)).thenReturn(aknXml);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
+            .thenReturn(streamResponse);
+        doAnswer(invocation -> {
+            invocation.getArgument(0, InputStream.class);
+            OutputStream aknStream = invocation.getArgument(1);
+            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+            aknStream.flush();
+            return null;
+        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
 
         mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept("application/akn+xml")
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
             .andExpect(status().isOk())
-            .andExpect(content().contentType("application/akn+xml;charset=UTF-8"))
+            .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
             .andExpect(content().string(aknXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, regnalYear, number, version, language);
-        verify(transforms).clml2akn(clmlXml);
+        verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
+        verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 

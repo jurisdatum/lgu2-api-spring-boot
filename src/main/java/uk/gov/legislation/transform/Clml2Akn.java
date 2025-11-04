@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.StringReader;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
@@ -53,6 +51,16 @@ public class Clml2Akn {
         XdmDestination destination = new XdmDestination();
         transform(source, destination);
         return destination.getXdmNode();
+    }
+
+    public void transform(InputStream clml, OutputStream akn) throws SaxonApiException, IOException {
+        Source source = new StreamSource(clml);
+        Serializer serializer = executable.getProcessor().newSerializer(akn);
+        serializer.setOutputProperties(Properties);
+        transform(source, serializer);
+        // Saxon's Serializer buffers output; flushing ensures the caller sees the
+        // transformed bytes immediately without having to know about Saxon's internals.
+        akn.flush();
     }
 
     public XdmNode transform(String clml) throws SaxonApiException {

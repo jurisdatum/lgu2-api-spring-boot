@@ -69,7 +69,7 @@ public interface DocumentApi {
      * Retrieves document content in AKN format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
-    ResponseEntity<String> getDocumentAkn(
+    ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
@@ -77,7 +77,7 @@ public interface DocumentApi {
             Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
-    ResponseEntity<String> getDocumentAkn(
+    ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

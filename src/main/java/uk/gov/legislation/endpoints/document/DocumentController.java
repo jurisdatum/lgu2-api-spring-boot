@@ -1,5 +1,6 @@
 package uk.gov.legislation.endpoints.document;
 
+import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -8,6 +9,7 @@ import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBo
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
+import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Transforms;
 
 import java.io.InputStream;
@@ -66,16 +68,48 @@ public class DocumentController implements DocumentApi {
     /* Akoma Ntoso */
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
         validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2akn);
+        String language = locale.getLanguage();
+        Legislation.StreamResponse doc =
+            marklogic.getDocumentStream(type, Integer.toString(year), number, version, Optional.of(language));
+        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+        StreamingResponseBody body = output -> {
+            try (InputStream in = doc.clml()) {
+                try {
+                    transforms.clml2akn(in, output);
+                } catch (SaxonApiException e) {
+                    throw new TransformationException("AkN transform failed", e);
+                }
+            }
+        };
+        return ResponseEntity.ok()
+            .headers(headers)
+            .contentType(MediaType.parseMediaType("application/akn+xml"))
+            .body(body);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2akn);
+        String language = locale.getLanguage();
+        Legislation.StreamResponse doc =
+            marklogic.getDocumentStream(type, regnalYear, number, version, Optional.of(language));
+        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+        StreamingResponseBody body = output -> {
+            try (InputStream in = doc.clml()) {
+                try {
+                    transforms.clml2akn(in, output);
+                } catch (SaxonApiException e) {
+                    throw new TransformationException("AkN transform failed", e);
+                }
+            }
+        };
+        return ResponseEntity.ok()
+            .headers(headers)
+            .contentType(MediaType.parseMediaType("application/akn+xml"))
+            .body(body);
     }
 
     /* HTML */
