@@ -4,16 +4,17 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
+import org.mockito.MockedStatic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.data.marklogic.changes.Changes;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
+import uk.gov.legislation.transform.simple.effects.Page;
 
 import static org.hamcrest.Matchers.containsString;
 import static org.mockito.ArgumentMatchers.argThat;
@@ -97,21 +98,23 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         // Mock the EffectsFeedConverter.convert() to return a mock PageOfEffects object
         PageOfEffects mockPageOfEffects = mock(PageOfEffects.class);
-        mockStatic(EffectsFeedConverter.class);
-        when(EffectsFeedConverter.convert(mockPage)).thenReturn(mockPageOfEffects);
 
-        mockMvc.perform(get("/effects")
-                .accept(MediaType.APPLICATION_JSON_VALUE)
-                .param("targetType", targetType)
-                .param("targetYear", String.valueOf(targetYear))
-                .param("targetTitle", "Apple")
-                .param("sourceType", "ukla")
-                .param("sourceYear", "2012")
-                .param("sourceNumber", "3")
-                .param("sourceTitle", "Banana")
-                .param("page", "2"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE));
+        try (MockedStatic<EffectsFeedConverter> effectsFeedConverter = mockStatic(EffectsFeedConverter.class)) {
+            effectsFeedConverter.when(() -> EffectsFeedConverter.convert(mockPage)).thenReturn(mockPageOfEffects);
+
+            mockMvc.perform(get("/effects")
+                    .accept(MediaType.APPLICATION_JSON_VALUE)
+                    .param("targetType", targetType)
+                    .param("targetYear", String.valueOf(targetYear))
+                    .param("targetTitle", "Apple")
+                    .param("sourceType", "ukla")
+                    .param("sourceYear", "2012")
+                    .param("sourceNumber", "3")
+                    .param("sourceTitle", "Banana")
+                    .param("page", "2"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE));
+        }
     }
 
     @ParameterizedTest
