@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.responses.PageOfEffects;
+import uk.gov.legislation.data.marklogic.changes.Parameters;
 
 import java.io.IOException;
 
@@ -19,11 +20,16 @@ public interface EffectsApi {
         @RequestParam(required = false) @Type String targetType,
         @RequestParam(required = false) @Year Integer targetYear,
         @RequestParam(required = false) @Number Integer targetNumber,
+        @RequestParam(required = false) @Year Integer targetStartYear,
+        @RequestParam(required = false) @Year Integer targetEndYear,
         @RequestParam(required = false) @Title String targetTitle,
         @RequestParam(required = false) @Type String sourceType,
         @RequestParam(required = false) @Year Integer sourceYear,
         @RequestParam(required = false) @Number Integer sourceNumber,
+        @RequestParam(required = false) @Year Integer sourceStartYear,
+        @RequestParam(required = false) @Year Integer sourceEndYear,
         @RequestParam(required = false) @Title String sourceTitle,
+        @RequestParam(name = "applied", defaultValue = "all") Parameters.AppliedStatus appliedStatus,
         @RequestParam(required = false, defaultValue = "1") @Page int page
     ) throws IOException, InterruptedException;
 
@@ -32,11 +38,16 @@ public interface EffectsApi {
         @RequestParam(required = false) String targetType,
         @RequestParam(required = false) Integer targetYear,
         @RequestParam(required = false) Integer targetNumber,
+        @RequestParam(required = false) Integer targetStartYear,
+        @RequestParam(required = false) Integer targetEndYear,
         @RequestParam(required = false) String targetTitle,
         @RequestParam(required = false) String sourceType,
         @RequestParam(required = false) Integer sourceYear,
         @RequestParam(required = false) Integer sourceNumber,
+        @RequestParam(required = false) Integer sourceStartYear,
+        @RequestParam(required = false) Integer sourceEndYear,
         @RequestParam(required = false) String sourceTitle,
+        @RequestParam(name = "applied", defaultValue = "all") Parameters.AppliedStatus appliedStatus,
         @RequestParam(required = false, defaultValue = "1") int page
     ) throws IOException, InterruptedException, SaxonApiException;
 
