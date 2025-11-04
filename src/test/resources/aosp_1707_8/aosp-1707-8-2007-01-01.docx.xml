@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body>
+      <w:p>
+         <w:pPr>
+            <w:jc w:val="center"/>
+         </w:pPr>
+         <w:r>
+            <w:drawing>
+               <wp:inline xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+                          distT="0"
+                          distB="0"
+                          distL="0"
+                          distR="0">
+                  <wp:extent cx="1710177" cy="1521033"/>
+                  <wp:effectExtent l="0" t="0" r="0" b="0"/>
+                  <wp:docPr id="10000" name="crest.png" descr="crest"/>
+                  <wp:cNvGraphicFramePr/>
+                  <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                     <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                        <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                           <pic:nvPicPr>
+                              <pic:cNvPr id="20000" name="crest.png" descr="crest.png"/>
+                              <pic:cNvPicPr>
+                                 <a:picLocks noChangeAspect="1"/>
+                              </pic:cNvPicPr>
+                           </pic:nvPicPr>
+                           <pic:blipFill>
+                              <a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                                      r:embed="image0">
+                                 <a:extLst/>
+                              </a:blip>
+                              <a:srcRect l="0" t="0" r="0" b="0"/>
+                              <a:stretch>
+                                 <a:fillRect/>
+                              </a:stretch>
+                           </pic:blipFill>
+                           <pic:spPr>
+                              <a:xfrm>
+                                 <a:off x="0" y="0"/>
+                                 <a:ext cx="1710177" cy="1521033"/>
+                              </a:xfrm>
+                              <a:prstGeom prst="rect">
+                                 <a:avLst/>
+                              </a:prstGeom>
+                              <a:ln w="12700" cap="flat">
+                                 <a:noFill/>
+                                 <a:miter lim="400000"/>
+                              </a:ln>
+                              <a:effectLst/>
+                           </pic:spPr>
+                        </pic:pic>
+                     </a:graphicData>
+                  </a:graphic>
+               </wp:inline>
+            </w:drawing>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Election Act 1707(repealed)</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentNumber"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">1707 c.8</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="LongTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="EnactingText"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-1" w:customMarkFollows="true"/>
+            <w:t>F1</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .</w:t>
+         </w:r>
+      </w:p>
+      <!--body-->
+      <w:p>
+         <w:r>
+            <w:t xml:space="preserve"> . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-2" w:customMarkFollows="true"/>
+            <w:t>F2</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> It is always hereby expressly Provided and Declared that none shall be capable to . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-3" w:customMarkFollows="true"/>
+            <w:t>F3</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> be Elected for any of the said Estates but such as are Twenty one years of age compleat . . . </w:t>
+         </w:r>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="1"/>
+               <w:position w:val="6"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-4" w:customMarkFollows="true"/>
+            <w:t>F4</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>
