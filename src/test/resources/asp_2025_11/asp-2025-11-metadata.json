@@ -36,8 +36,8 @@
     "date" : "2025-10-13",
     "size" : 953472
   } ],
-  "unappliedEffects" : null,
-  "upToDate" : null,
+  "unappliedEffects" : [ ],
+  "upToDate" : true,
   "confersPower" : [ {
     "id" : "section-7",
     "href" : "section/7",

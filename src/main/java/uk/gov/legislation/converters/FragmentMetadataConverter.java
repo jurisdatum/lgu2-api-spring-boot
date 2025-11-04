@@ -26,7 +26,7 @@ public class FragmentMetadataConverter {
      */
     public static FragmentMetadata convert(Metadata simple) {
         FragmentMetadata converted = new FragmentMetadata();
-        DocumentMetadataConverter.convert(simple, converted);
+        DocumentMetadataConverter.convertCommon(simple, converted);
         converted.fragment = simple.fragment();
         converted.prev = simple.prev();
         converted.next = simple.next();
