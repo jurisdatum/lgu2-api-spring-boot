@@ -1,5 +1,6 @@
 package uk.gov.legislation.api.responses.meta;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.net.URI;
@@ -45,6 +46,9 @@ public class AssociatedDocument {
 
     @JsonProperty
     public Integer size;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String stage;
 
     public AssociatedDocument(Type type, URI uri) {
         this.type = type;
