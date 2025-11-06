@@ -1,8 +1,10 @@
 package uk.gov.legislation.transform;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import net.sf.saxon.s9api.Destination;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XsltTransformer;
 import org.springframework.stereotype.Service;
 import uk.gov.legislation.api.responses.*;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
@@ -13,10 +15,8 @@ import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 @Service
 public class Transforms {
@@ -41,7 +41,7 @@ public class Transforms {
         return Clml2Akn.serialize(aknNode);
     }
 
-    public void clml2akn(InputStream clml, OutputStream akn) throws SaxonApiException, IOException {
+    public void clml2akn(InputStream clml, OutputStream akn) throws SaxonApiException {
         clml2akn.transform(clml, akn);
     }
 
@@ -50,10 +50,26 @@ public class Transforms {
         return akn2html.transform(akn, standalone);
     }
 
+    public void clml2html(InputStream clml, boolean standalone, OutputStream html) throws SaxonApiException {
+        Destination next = akn2html.asDestination(standalone, html);
+        clml2akn.transform(clml, next);
+    }
+
     public Document clml2document(String clml) throws SaxonApiException, JsonProcessingException {
         XdmNode doc = Helper.parse(clml);
         XdmNode akn = clml2akn.transform(doc);
         String html = akn2html.transform(akn, false);
+        Metadata simple = simplifier.extractDocumentMetadata(doc);
+        DocumentMetadata converted = DocumentMetadataConverter.convert(simple);
+        return new Document(converted, html);
+    }
+
+    public Document clml2document(InputStream clml) throws SaxonApiException, JsonProcessingException {
+        XdmNode doc = Helper.parse(clml);
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        XsltTransformer next = akn2html.asDestination(false, baos);
+        clml2akn.transform(doc, next);
+        String html = baos.toString(StandardCharsets.UTF_8);
         Metadata simple = simplifier.extractDocumentMetadata(doc);
         DocumentMetadata converted = DocumentMetadataConverter.convert(simple);
         return new Document(converted, html);

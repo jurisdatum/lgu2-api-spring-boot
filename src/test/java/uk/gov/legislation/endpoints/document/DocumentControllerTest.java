@@ -1,5 +1,6 @@
 package uk.gov.legislation.endpoints.document;
 
+import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -22,8 +23,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 
@@ -95,11 +96,17 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @Test
     void shouldReturnJsonWhenAcceptsJson() throws Exception {
 
-        when(marklogic.getDocument(type, year, number, version, language))
-            .thenReturn(response);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, year, number, version, language))
+            .thenReturn(streamResponse);
 
         Document document = new Document(null, "rendered document");
-        when(transforms.clml2document(clmlXml)).thenReturn(document);
+        when(transforms.clml2document(any(InputStream.class))).then(invocation -> {
+            invocation.getArgument(0, InputStream.class);
+            return document;
+        });
 
         mockMvc.perform(get("/document/ukla/2020/1")
                 .accept(MediaType.APPLICATION_JSON)
@@ -110,19 +117,25 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(jsonPath("$.html").value("rendered document"))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, year, number, version, language);
-        verify(transforms).clml2document(clmlXml);
+        verify(marklogic).getDocumentStream(type, year, number, version, language);
+        verify(transforms).clml2document(any(InputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
     @Test
     void shouldReturnJsonWhenAcceptsJsonWithMonarch() throws Exception {
 
-        when(marklogic.getDocument(type, regnalYear, number, version, language))
-            .thenReturn(response);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
+            .thenReturn(streamResponse);
 
         Document document = new Document(null, "rendered document");
-        when(transforms.clml2document(clmlXml)).thenReturn(document);
+        when(transforms.clml2document(any(InputStream.class))).then(invocation -> {
+            invocation.getArgument(0, InputStream.class);
+            return document;
+        });
 
         mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept(MediaType.APPLICATION_JSON)
@@ -133,8 +146,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(jsonPath("$.html").value("rendered document"))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, regnalYear, number, version, language);
-        verify(transforms).clml2document(clmlXml);
+        verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
+        verify(transforms).clml2document(any(InputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -187,21 +200,36 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @Test
     void shouldReturnHtmlWhenAcceptsHtml() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
-        when(marklogic.getDocument(type, year, number, version, language))
-            .thenReturn(response);
-        when(transforms.clml2html(clmlXml, true)).thenReturn(renderedHtml);
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, year, number, version, language))
+            .thenReturn(streamResponse);
+        doAnswer(invocation -> {
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+            OutputStream htmlStream = invocation.getArgument(2);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
+            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+            htmlStream.flush();
+            return null;
+        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept(MediaType.TEXT_HTML)
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
             .andExpect(content().string(renderedHtml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, year, number, version, language);
-        verify(transforms).clml2html(clmlXml, true);
+        verify(marklogic).getDocumentStream(type, year, number, version, language);
+        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -209,21 +237,35 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     void shouldReturnHtmlWhenAcceptsHtmlWithMonarch() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
 
-        when(marklogic.getDocument(type, regnalYear, number, version, language))
-            .thenReturn(response);
-        when(transforms.clml2html(clmlXml, true)).thenReturn(renderedHtml);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
+            .thenReturn(streamResponse);
+        doAnswer(invocation -> {
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+            OutputStream htmlStream = invocation.getArgument(2);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
+            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+            htmlStream.flush();
+            return null;
+        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
 
-        mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept(MediaType.TEXT_HTML)
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
             .andExpect(content().string(renderedHtml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, regnalYear, number, version, language);
-        verify(transforms).clml2html(clmlXml, true);
+        verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
+        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -238,8 +280,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, year, number, version, language))
             .thenReturn(streamResponse);
         doAnswer(invocation -> {
-            invocation.getArgument(0, InputStream.class);
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
             OutputStream aknStream = invocation.getArgument(1);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
             aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
             aknStream.flush();
             return null;
@@ -273,8 +316,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
             .thenReturn(streamResponse);
         doAnswer(invocation -> {
-            invocation.getArgument(0, InputStream.class);
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
             OutputStream aknStream = invocation.getArgument(1);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
             aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
             aknStream.flush();
             return null;
@@ -340,6 +384,68 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         verify(marklogic).getDocumentStream(type, year, number, Optional.empty(), language);
         verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("Should include redirect headers for HTML streaming")
+    void shouldIncludeRedirectHeaders_whenHtmlStreaming() throws Exception {
+        String renderedHtml = "<html><body>Some content</body></html>";
+        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.of(redirect));
+        when(marklogic.getDocumentStream(type, year, number, Optional.empty(), language))
+            .thenReturn(streamResponse);
+        doAnswer(invocation -> {
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+            OutputStream htmlStream = invocation.getArgument(2);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
+            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+            htmlStream.flush();
+            return null;
+        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
+                .accept(MediaType.TEXT_HTML)
+                .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
+            .andExpect(status().isOk())
+            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+            .andExpect(content().string(renderedHtml))
+            .andExpect(header().string("X-Document-Type", type))
+            .andExpect(header().string("X-Document-Year", year))
+            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+            .andExpect(header().string("X-Document-Version", "enacted"))
+            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+
+        verify(marklogic).getDocumentStream(type, year, number, Optional.empty(), language);
+        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        verifyNoMoreInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("AkN transform failure returns 500 with error JSON")
+    void shouldReturn500WhenAknTransformFails() throws Exception {
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, year, number, version, language))
+            .thenReturn(streamResponse);
+        doThrow(new SaxonApiException("boom")).when(transforms)
+            .clml2akn(any(InputStream.class), any(OutputStream.class));
+
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
+                .accept("application/akn+xml")
+                .param("version", "enacted")
+                .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
+            .andExpect(status().isInternalServerError());
     }
 
     @ParameterizedTest

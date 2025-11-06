@@ -89,7 +89,7 @@ public interface DocumentApi {
      * Retrieves document content in HTML format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "text/html")
-    ResponseEntity<String> getDocumentHtml(
+    ResponseEntity<StreamingResponseBody> getDocumentHtml(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
@@ -97,7 +97,7 @@ public interface DocumentApi {
             Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
-    ResponseEntity<String> getDocumentHtml(
+    ResponseEntity<StreamingResponseBody> getDocumentHtml(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

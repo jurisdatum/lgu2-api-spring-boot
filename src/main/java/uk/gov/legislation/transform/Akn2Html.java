@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
+import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.Properties;
@@ -58,5 +59,13 @@ public class Akn2Html {
         return html.toString();
     }
 
-}
+    public XsltTransformer asDestination(boolean standalone, OutputStream html) {
+        XsltTransformer transform = executable.load();
+        transform.setParameter(new QName("standalone"), new XdmAtomicValue(standalone));
+        Serializer serializer = executable.getProcessor().newSerializer(html);
+        serializer.setOutputProperties(standalone ? Indent : DontIndent);
+        transform.setDestination(serializer);
+        return transform;
+    }
 
+}
