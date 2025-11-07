@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Number;
+
 @Tag(name = "PDFs")
 public interface PdfApi {
 
@@ -28,9 +31,9 @@ public interface PdfApi {
             @ApiResponse(responseCode = "400", description = "Bad request due to invalid input")
     })
     ResponseEntity<Void> getPdf(
-            @PathVariable String type,
-            @PathVariable int year,
-            @PathVariable int number,
+            @PathVariable @Type String type,
+            @PathVariable @Year int year,
+            @PathVariable @Number int number,
             @RequestParam(required = false) String version);
 
 
@@ -42,10 +45,10 @@ public interface PdfApi {
             @ApiResponse(responseCode = "400", description = "Bad request due to invalid input")
     })
     ResponseEntity<Void> getPdfWithRegnalYear(
-            @PathVariable String type,
-            @PathVariable String monarch,
-            @PathVariable String years,
-            @PathVariable int number,
+            @PathVariable @Type String type,
+            @PathVariable @Monarch String monarch,
+            @PathVariable @Years String years,
+            @PathVariable @Number int number,
             @RequestParam(required = false) String version);
 
 

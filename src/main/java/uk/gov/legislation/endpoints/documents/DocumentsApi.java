@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Region;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Year;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.exceptions.ErrorResponse;
 
@@ -35,7 +38,7 @@ public interface DocumentsApi {
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
     ResponseEntity<PageOfDocuments> getDocs(
-            @PathVariable String type,
+            @PathVariable @Type String type,
             @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
@@ -60,8 +63,8 @@ public interface DocumentsApi {
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
     ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(
-            @PathVariable String type,
-            @PathVariable int year,
+            @PathVariable @Type String type,
+            @PathVariable @Year int year,
             @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
@@ -78,7 +81,7 @@ public interface DocumentsApi {
             MediaType.APPLICATION_JSON_VALUE }
     )
     ResponseEntity<?> getNew(NativeWebRequest request,
-        @PathVariable String region,
+        @PathVariable @Region String region,
         @RequestParam(defaultValue = "1") int page) throws Exception;
 
 }

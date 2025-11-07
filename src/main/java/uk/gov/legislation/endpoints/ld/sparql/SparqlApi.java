@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import uk.gov.legislation.api.parameters.SparqlQuery;
 
 @Tag(name = "Linked Data")
 public interface SparqlApi {
@@ -26,21 +27,7 @@ public interface SparqlApi {
             }
     )
     ResponseEntity<String> sparql(
-            @RequestParam
-            @Parameter(
-                    description = "SPARQL query",
-                    example = """
-                            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-                            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                            PREFIX leg: <http://www.legislation.gov.uk/def/legislation/>
-
-                            SELECT * WHERE {
-                               ?s ?p ?o
-                            }
-                            LIMIT 10
-                            """
-            )
-            String query,
+            @RequestParam @SparqlQuery String query,
             @RequestHeader(value = "Accept")
             @Parameter(hidden = true)String accept
     ) throws Exception;

@@ -6,6 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Year;
 
 @Tag(name = "Linked Data")
 @RequestMapping("/ld/item")
@@ -24,7 +27,7 @@ public interface ItemApi {
         "text/turtle"
     })
      ResponseEntity <?> get(NativeWebRequest request,
-        @PathVariable String type,
-        @PathVariable int year,
-        @PathVariable int number) throws Exception;
+        @PathVariable @Type String type,
+        @PathVariable @Year int year,
+        @PathVariable @Number int number) throws Exception;
 }

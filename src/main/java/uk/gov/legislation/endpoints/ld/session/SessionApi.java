@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Legislature;
+import uk.gov.legislation.api.parameters.Reign;
+import uk.gov.legislation.api.parameters.Session;
 
 @Tag(name = "Linked Data")
 
@@ -32,20 +35,16 @@ public interface SessionApi {
     @Operation(summary = "information about a parliamentary session")
     ResponseEntity<?> getSessionByLegislatureReign(
         NativeWebRequest request,
-        @Parameter(description = "Legislature", example = "UnitedKingdomParliament")
-        @PathVariable String legislature,
-        @Parameter(description = "Reign", example = "Eliz2")
-        @PathVariable String reign,
-        @Parameter(description = "Session", example = "10-11")
-        @PathVariable String session
+        @PathVariable @Legislature String legislature,
+        @PathVariable @Reign String reign,
+        @PathVariable @Session String session
     ) throws Exception;
 
     @GetMapping("/EnglishParliament/{session}")
     @Operation(summary = "information about a session of the English parliament")
     ResponseEntity<?> getEnglishParliamentSession(
         NativeWebRequest request,
-        @Parameter(description = "Session", example = "tempincert")
-        @PathVariable String session
+        @PathVariable @Session String session
     ) throws Exception;
 
 }
