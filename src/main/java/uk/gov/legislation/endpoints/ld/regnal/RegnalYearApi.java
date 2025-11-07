@@ -1,11 +1,12 @@
 package uk.gov.legislation.endpoints.ld.regnal;
 
-import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.RegnalYear;
+import uk.gov.legislation.api.parameters.Reign;
 
 @Tag(name = "Linked Data", description = "endpoint for fetching information about a specific regnal year within a " +
     "reign")
@@ -26,10 +27,8 @@ public interface RegnalYearApi {
     })
     ResponseEntity <?> getRegnalYearInfo(
         NativeWebRequest request,
-        @Parameter(description = "Regnal", example = "Eliz1")
-        @PathVariable String reign,
-        @Parameter(description = "RegnalYear", example = "1")
-        @PathVariable Integer regnalYear
+        @PathVariable @Reign String reign,
+        @PathVariable @RegnalYear Integer regnalYear
     ) throws Exception;
 
 }

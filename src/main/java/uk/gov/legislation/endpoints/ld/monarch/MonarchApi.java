@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Monarch;
 
 @Tag(name = "Linked Data", description = "APIs for fetching information about a specific monarch")
 public interface MonarchApi {
@@ -29,7 +30,7 @@ public interface MonarchApi {
     ResponseEntity<?> getMonarchInfo(
         NativeWebRequest request,
         @Parameter(description = "Monarch", example = "Eliz1")
-        @PathVariable String monarch
+        @PathVariable @Monarch String monarch
     ) throws Exception;
 }
 
