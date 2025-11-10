@@ -36,13 +36,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return streamDocument(type, Integer.toString(year), number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return streamDocument(type, regnalYear, number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
     }
 
     /* Akoma Ntoso */
@@ -61,13 +61,13 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return streamDocument(type, Integer.toString(year), number, version, locale, aknTransform(), APPLICATION_AKN_XML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, aknTransform(), APPLICATION_AKN_XML);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return streamDocument(type, regnalYear, number, version, locale, aknTransform(), APPLICATION_AKN_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, aknTransform(), APPLICATION_AKN_XML);
     }
 
     /* HTML */
@@ -84,44 +84,26 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return streamDocument(type, Integer.toString(year), number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return streamDocument(type, regnalYear, number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
     }
 
     /* JSON */
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        String language = locale.getLanguage();
-        Legislation.StreamResponse doc =
-            marklogic.getDocumentStream(type, Integer.toString(year), number, version, Optional.of(language));
-        Document json;
-        try (InputStream clml = doc.clml()) {
-            json = transforms.clml2document(clml);
-        }
-        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_JSON).body(json);
+        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2document);
     }
 
     @Override
     public ResponseEntity<Document> getDocumentJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
         String regnalYear = String.join("/", monarch, years);
-        String language = locale.getLanguage();
-        Legislation.StreamResponse doc =
-            marklogic.getDocumentStream(type, regnalYear, number, version, Optional.of(language));
-        Document json;
-        try (InputStream clml = doc.clml()) {
-            json = transforms.clml2document(clml);
-        }
-        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_JSON).body(json);
+        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2document);
     }
 
     /* Word (.docx) */
@@ -140,26 +122,31 @@ public class DocumentController implements DocumentApi {
 
     @Override
     public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return streamDocument(type, Integer.toString(year), number, version, locale, wordTransform(), MS_WORD);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, wordTransform(), MS_WORD);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return streamDocument(type, regnalYear, number, version, locale, wordTransform(), MS_WORD);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, wordTransform(), MS_WORD);
     }
 
-    /* helper */
+    /* helpers */
 
     @FunctionalInterface
-    public interface Transform<T> { T apply(String t) throws Exception; }
+    public interface Transform<T> { T apply(InputStream t) throws Exception; }
 
     private <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version, Locale locale, Transform<T> transform) throws Exception {
+        validateType(type);
         String language = locale.getLanguage();
-        Legislation.Response leg = marklogic.getDocument(type, year, number, version, Optional.of(language));
-        T body = transform.apply(leg.clml());
-        HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).body(body);
+        Legislation.StreamResponse doc =
+            marklogic.getDocumentStream(type, year, number, version, Optional.of(language));
+        T body;
+        try (InputStream clml = doc.clml()) {
+            body = transform.apply(clml);
+        }
+        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+        return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_JSON).body(body);
     }
 
     @FunctionalInterface
@@ -167,7 +154,7 @@ public class DocumentController implements DocumentApi {
         void accept(InputStream t, OutputStream u) throws IOException;
     }
 
-    private ResponseEntity<StreamingResponseBody> streamDocument(String type, String year, int number, Optional<String> version, Locale locale, StreamingTransform transform, MediaType mt) throws Exception {
+    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number, Optional<String> version, Locale locale, StreamingTransform transform, MediaType mt) throws Exception {
         validateType(type);
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
