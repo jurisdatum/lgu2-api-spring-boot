@@ -48,6 +48,10 @@ public class AssociatedDocument {
     @JsonProperty
     public Integer size;
 
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String label;
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(
         description = "Indicates the stage of the development of the legislation to which the Impact Assessment relates, which may be before its development (Consultation), during its development (Development), after the drafting of the document (Final), after its amendment in Parliament (Enactment) or after its enactment (Post-Implementation)",
