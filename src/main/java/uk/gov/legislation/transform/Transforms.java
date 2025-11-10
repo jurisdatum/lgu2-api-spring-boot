@@ -94,4 +94,8 @@ public class Transforms {
         return clml2docx.transform(input);
     }
 
+    public void clml2docx(InputStream clml, OutputStream docx) throws IOException, SaxonApiException {
+        clml2docx.transform(clml, docx);
+    }
+
 }

@@ -126,17 +126,27 @@ public class DocumentController implements DocumentApi {
 
     /* Word (.docx) */
 
+    private StreamingTransform wordTransform() {
+        return (clml, docx) -> {
+            try {
+                transforms.clml2docx(clml, docx);
+            } catch (SaxonApiException e) {
+                throw new TransformationException("Word transform failed", e);
+            }
+        };
+    }
+
+    private static final MediaType MS_WORD = MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+
     @Override
-    public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2docx);
+    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+        return streamDocument(type, Integer.toString(year), number, version, locale, wordTransform(), MS_WORD);
     }
 
     @Override
-    public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
+    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2docx);
+        return streamDocument(type, regnalYear, number, version, locale, wordTransform(), MS_WORD);
     }
 
     /* helper */

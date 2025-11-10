@@ -129,7 +129,7 @@ public interface DocumentApi {
     /* Word (.docx) */
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
@@ -137,7 +137,7 @@ public interface DocumentApi {
             Locale locale) throws Exception;
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,

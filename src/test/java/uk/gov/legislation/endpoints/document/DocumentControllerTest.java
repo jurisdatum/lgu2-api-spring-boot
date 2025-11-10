@@ -154,46 +154,74 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @Test
     void shouldReturnDocxWhenAcceptsDocx() throws Exception {
 
-        when(marklogic.getDocument(type, year, number, version, language))
-            .thenReturn(response);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, year, number, version, language))
+            .thenReturn(streamResponse);
 
         byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        when(transforms.clml2docx(clmlXml)).thenReturn(docx);
+        doAnswer(invocation -> {
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
+            docxOut.write(docx);
+            docxOut.flush();
+            return null;
+        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, year, number, version, language);
-        verify(transforms).clml2docx(clmlXml);
+        verify(marklogic).getDocumentStream(type, year, number, version, language);
+        verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
     @Test
     void shouldReturnDocxWhenAcceptsDocxWithMonarch() throws Exception {
 
-        when(marklogic.getDocument(type, regnalYear, number, version, language))
-            .thenReturn(response);
+        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
+            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+            Optional.empty());
+        when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
+            .thenReturn(streamResponse);
 
         byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        when(transforms.clml2docx(clmlXml)).thenReturn(docx);
+        doAnswer(invocation -> {
+            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+            clmlIn.transferTo(OutputStream.nullOutputStream());
+            docxOut.write(docx);
+            docxOut.flush();
+            return null;
+        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept(MediaType.valueOf(DOCX_MIME_TYPE))
                 .param("version", "enacted")
                 .header("Accept-Language", "en"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
             .andExpect(content().bytes(docx))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocument(type, regnalYear, number, version, language);
-        verify(transforms).clml2docx(clmlXml);
+        verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
+        verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 

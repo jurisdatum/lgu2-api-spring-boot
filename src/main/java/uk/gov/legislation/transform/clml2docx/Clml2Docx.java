@@ -2,6 +2,7 @@ package uk.gov.legislation.transform.clml2docx;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -42,14 +43,7 @@ public class Clml2Docx {
 		this.xslt = new XSLT(delegate);
 	}
 
-	/**
-	 * Convert a CLML file to docx
-	 * @param clml CLML to convert
-	 * @param debug Enable debugging information in the output
-	 * @return docx file
-	 * @throws IOException
-	 */
-	public byte[] transform(XdmNode clml, boolean debug) throws IOException {
+	public Package transformToBundle(XdmNode clml, boolean debug) throws IOException {
 		logger.log(Level.INFO, "Performing file conversion");
 		Package bundle = new Package();
 		Map<String, Resource> cache = new HashMap<>();
@@ -62,9 +56,31 @@ public class Clml2Docx {
 		bundle.relationships = xslt.relationships(clml, cache, debug);
 		bundle.footnoteRelationships = xslt.footnoteRelationships(clml, cache, debug);
 		bundle.resources = fetchAllResources(clml, cache);
+		return bundle;
+	}
+
+	public void transform(XdmNode clml, OutputStream docx, boolean debug) throws IOException {
+		Package bundle = transformToBundle(clml, debug);
+		bundle.save(docx);
+	}
+
+	/**
+	 * Convert a CLML file to docx
+	 * @param clml CLML to convert
+	 * @param debug Enable debugging information in the output
+	 * @return docx file
+	 * @throws IOException
+	 */
+	public byte[] transform(XdmNode clml, boolean debug) throws IOException {
+		Package bundle = transformToBundle(clml, debug);
 		return bundle.save();		
-	}	
-	
+	}
+
+	public void transform(InputStream clml, OutputStream docx, boolean debug) throws IOException, SaxonApiException {
+		XdmNode doc = parse(clml);
+		transform(doc, docx, debug);
+	}
+
 	/**
 	 * Convert a CLML file to docx
 	 * @param clml CLML to convert
@@ -77,7 +93,11 @@ public class Clml2Docx {
 		XdmNode doc = parse(clml);
 		return transform(doc, debug);
 	}
-	
+
+	public void transform(InputStream clml, OutputStream docx) throws IOException, SaxonApiException {
+		transform(clml, docx, false);
+	}
+
 	/**
 	 * Convert a CLML file to docx
 	 * @param clml CLML to convert
