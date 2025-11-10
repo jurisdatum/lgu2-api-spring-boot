@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.endpoints.document.DocumentController.Transform;
 import uk.gov.legislation.transform.Transforms;
 
 import java.util.Locale;
@@ -85,6 +84,11 @@ public class ContentsController implements ContentsApi {
     }
 
     /* helper */
+
+    @FunctionalInterface
+    private interface Transform<T> {
+        T apply(String clml) throws Exception;
+    }
 
     private <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version,
             Locale locale, Transform<T> transform) throws Exception {
