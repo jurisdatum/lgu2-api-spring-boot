@@ -50,15 +50,28 @@ public class AssociatedDocumentConverter {
     private static List<AssociatedDocument> convertIA(List<ImpactAssessment> alts, AssociatedDocument.Type type) {
         if (alts == null)
             return List.of();
-        return alts.stream().map(alt -> convert1(alt, type)).toList();
-    }
-    private static AssociatedDocument convert1(ImpactAssessment alt, AssociatedDocument.Type type) {
-        AssociatedDocument doc = new AssociatedDocument(type, alt.uri);
-        doc.name = alt.title;
-        doc.date = alt.date;
-        doc.size = alt.size;
-        doc.stage = alt.stage;
-        return doc;
+
+        return alts.stream()
+            .map(ia -> {
+                AssociatedDocument doc = new AssociatedDocument(type, ia.uri);
+                doc.date = ia.date;
+                doc.size = ia.size;
+                doc.stage = ia.stage;
+                doc.name = ia.title;
+                doc.label = buildLabelFromStageAndType(doc.stage, type);
+                return doc;
+            })
+            .toList();
     }
 
+    private static String buildLabelFromStageAndType(String stage, AssociatedDocument.Type type) {
+        if (stage == null || stage.isBlank()) {
+            return type.toString();
+        }
+        String normalizedStage = stage.trim().replace("-", " ");
+        var normalizedType = type.toString()
+            .replace("_", " ")
+            .replaceAll("(?<=[a-z])(?=[A-Z])", " ");
+        return String.format("%s %s", normalizedStage, normalizedType).trim();
+    }
 }
