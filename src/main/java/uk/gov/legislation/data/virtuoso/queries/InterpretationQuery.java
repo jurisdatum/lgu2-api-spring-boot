@@ -2,21 +2,28 @@ package uk.gov.legislation.data.virtuoso.queries;
 
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.api.responses.ld.Interpretation;
 import uk.gov.legislation.converters.ld.InterpretationConverter;
 import uk.gov.legislation.converters.ld.ItemConverter;
+import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
+import uk.gov.legislation.data.virtuoso.jsonld.Interpretation8LD;
 import uk.gov.legislation.data.virtuoso.jsonld.InterpretationLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.StreamSupport;
 
 @Repository
 public class InterpretationQuery {
+
+    private static final Logger log = LoggerFactory.getLogger(InterpretationQuery.class);
 
     private final Virtuoso virtuoso;
 
@@ -55,27 +62,58 @@ public class InterpretationQuery {
     public Optional<Interpretation> get(String type, String middle, String number, String version, boolean welsh) throws IOException, InterruptedException {
         String json = get(type, middle, number, version, welsh, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
-        if (graph == null)
+
+        if (graph == null || graph.isEmpty())
             return Optional.empty();
-        if (graph.size() < 2)
-            return Optional.empty();
-        ObjectNode item0;
-        ObjectNode interpretation0;
-        ObjectNode o0 = (ObjectNode) graph.get(0);
-        TextNode id0 = (TextNode) o0.get("@id");
-        String id = id0.asText();
-        if (id.contains("/id/")) {
-            item0 = o0;
-            interpretation0 = (ObjectNode) graph.get(1);
-        } else {
-            interpretation0 = o0;
-            item0 = (ObjectNode) graph.get(1);
+
+        if (graph.size() == 1) {
+            // NESTED FORMAT (Virtuoso 8.3.x)
+            // Interpretation is the only object, Item is embedded in interpretationOf
+            log.debug("Detected nested JSON-LD format (Virtuoso 8.3.x) - Item embedded in interpretationOf");
+            ObjectNode interpretationNode = (ObjectNode) graph.get(0);
+            Interpretation8LD interpretation8LD = Interpretation8LD.convert(interpretationNode);
+            Interpretation interpretation = InterpretationConverter.convert(interpretation8LD);
+            return Optional.of(interpretation);
+
         }
-        InterpretationLD interpretation1 = InterpretationLD.convert(interpretation0);
-        ItemLD item1 = ItemLD.convert(item0);
-        Interpretation interpretation2 = InterpretationConverter.convert(interpretation1);
-        interpretation2.item = ItemConverter.convert(item1);
-        return Optional.of(interpretation2);
+
+        List<ObjectNode> candidates = StreamSupport.stream(graph.spliterator(), false)
+            .filter(ObjectNode.class::isInstance)
+            .map(ObjectNode.class::cast)
+            .filter(node -> node.hasNonNull("@id"))
+            .filter(node -> !node.get("@id").asText().startsWith("_:"))
+            .toList();
+        List<ObjectNode> interpretationNodes = candidates.stream()
+            .filter(node -> node.has("@type"))
+            .filter(node -> StreamSupport.stream(node.withArray("@type").spliterator(), false)
+                .anyMatch(tpe -> Resources.Leg.Interpretation.equals(tpe.asText())))
+            .toList();
+        List<ObjectNode> itemNodes = candidates.stream()
+            .filter(node -> node.has("@type"))
+            .filter(node -> StreamSupport.stream(node.withArray("@type").spliterator(), false)
+                .anyMatch(tpe -> Resources.Leg.Item.equals(tpe.asText())))
+            .toList();
+
+        if (interpretationNodes.size() != 1 || itemNodes.size() != 1) {
+            log.error("Unexpected JSON-LD structure: interpretations={}, items={}",
+                interpretationNodes.size(),
+                itemNodes.size());
+            throw new IllegalStateException("Unexpected Interpretation JSON-LD format");
+        }
+
+        // FLAT FORMAT (Virtuoso 7.x)
+        // Item and Interpretation are separate array elements
+        log.debug("Detected flat JSON-LD format (Virtuoso 7.x) - Item and Interpretation as separate objects");
+
+        ObjectNode itemNode = itemNodes.getFirst();
+        ObjectNode interpretationNode = interpretationNodes.getFirst();
+        InterpretationLD interpretationLD = InterpretationLD.convert(interpretationNode);
+        ItemLD itemLD = ItemLD.convert(itemNode);
+
+        // Convert and combine
+        Interpretation interpretation = InterpretationConverter.convert(interpretationLD);
+        interpretation.item = ItemConverter.convert(itemLD);
+        return Optional.of(interpretation);
     }
 
 }
