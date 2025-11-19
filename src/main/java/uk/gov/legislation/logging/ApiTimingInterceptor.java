@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.logging;
+package uk.gov.legislation.logging;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.logging;
+package uk.gov.legislation.logging;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

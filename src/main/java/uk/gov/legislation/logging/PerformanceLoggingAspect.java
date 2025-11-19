@@ -1,4 +1,4 @@
-package uk.gov.legislation.data.logging;
+package uk.gov.legislation.logging;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.aspectj.lang.ProceedingJoinPoint;
