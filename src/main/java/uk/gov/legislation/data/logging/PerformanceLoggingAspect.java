@@ -12,8 +12,13 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class PerformanceLoggingAspect {
+
     private final Logger log = LoggerFactory.getLogger(PerformanceLoggingAspect.class);
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper;
+
+    public PerformanceLoggingAspect(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
 
     // Define pointcuts for different classes
     @Pointcut("execution(* uk.gov.legislation.transform.Transforms.*(..))")
