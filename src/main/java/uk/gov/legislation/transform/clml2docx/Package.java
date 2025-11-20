@@ -43,15 +43,9 @@ public class Package {
 	};
 	
 	private ZipOutputStream zip;
-		
-	/**
-	 * Generates a docx file by generating the individual files within the archive, and returns it
-	 * @return docx file
-	 * @throws IOException
-	 */
-	byte[] save() throws IOException {
-		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		zip = new ZipOutputStream(baos);
+
+	void save(OutputStream docx) throws IOException {
+		zip = new ZipOutputStream(docx);
 		saveComponents();
 		saveCoreProperties();
 		saveDocument();
@@ -61,7 +55,19 @@ public class Package {
 		saveRelationships();
 		saveFootnoteRelationships();
 		saveResources();
-		zip.close();
+		zip.finish();
+		// don't close();
+	}
+
+	/**
+	 * Generates a docx file by generating the individual files within the archive, and returns it
+	 * @return docx file
+	 * @throws IOException
+	 */
+	byte[] save() throws IOException {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();
+		save(baos);
+		baos.close();
 		return baos.toByteArray();
 	}
 	
