@@ -5,7 +5,8 @@ public record LogDetails(
     long durationMillis,
     String message,
     String startTime,
-    String endTime
+    String endTime,
+    String apiEndpoint
 ) {
     public static String createCustomLogMessage(String methodName, String endpoint, long duration) {
         return switch (methodName) {

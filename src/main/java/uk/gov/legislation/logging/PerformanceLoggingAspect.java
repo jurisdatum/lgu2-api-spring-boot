@@ -1,6 +1,7 @@
 package uk.gov.legislation.logging;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.servlet.http.HttpServletRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -8,6 +9,8 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.time.Instant;
 import java.time.ZoneId;
@@ -19,6 +22,7 @@ import static uk.gov.legislation.logging.LogDetails.createCustomLogMessage;
 @Component
 public class PerformanceLoggingAspect {
 
+
     private final Logger log = LoggerFactory.getLogger(PerformanceLoggingAspect.class);
     private final ObjectMapper objectMapper;
     private static final DateTimeFormatter ISO_FORMATTER = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
@@ -26,6 +30,7 @@ public class PerformanceLoggingAspect {
     public PerformanceLoggingAspect(ObjectMapper objectMapper) {
         this.objectMapper = objectMapper;
     }
+
 
     @Pointcut("execution(* uk.gov.legislation.transform.Transforms.*(..))")
     public void transforms() {}
@@ -47,6 +52,14 @@ public class PerformanceLoggingAspect {
         var args        = joinPoint.getArgs();
         var endpoint    = (args.length > 0) ? String.valueOf(args[0]) : "N/A";
 
+        ServletRequestAttributes attrs =
+            (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
+        HttpServletRequest request = (attrs != null) ? attrs.getRequest() : null;
+
+        assert request != null;
+        String httpMethod   = request.getMethod();
+        String requestUri   = request.getRequestURI();
+        String apiEndpoint = httpMethod + " " + requestUri;
         var startTimeISO = formatTimestamp(start);
         var endTimeISO   = formatTimestamp(end);
 
@@ -57,7 +70,7 @@ public class PerformanceLoggingAspect {
             end - start,
             message,
             startTimeISO,
-            endTimeISO
+            endTimeISO,apiEndpoint
         );
 
         if (log.isDebugEnabled()) {
