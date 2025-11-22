@@ -2,10 +2,10 @@ package uk.gov.legislation.endpoints;
 
 import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
+import uk.gov.legislation.util.Extent;
 import uk.gov.legislation.util.Types;
 
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class ParameterValidator {
 
@@ -54,4 +54,25 @@ public class ParameterValidator {
         throw new UnsupportedLanguageException(language);
     }
 
+    /**
+     * Validate a list of Extent enums and return a formatted string.
+     * If isExclusive is true, prefix with '='.
+     */
+    public static String validateExtent(List<Extent> inputList, boolean isExclusive) {
+        if (inputList == null || inputList.isEmpty()) return null;
+
+        LinkedHashSet<String> codes = new LinkedHashSet<>();
+        for (Extent e : inputList) {
+            if (e == null) {
+                throw new IllegalArgumentException("Extent cannot be null");
+            }
+            codes.add(e.name());
+        }
+
+        String joined = String.join("+", codes);
+        return isExclusive ? "=" + joined : joined;
+    }
 }
+
+
+

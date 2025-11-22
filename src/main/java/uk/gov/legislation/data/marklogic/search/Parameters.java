@@ -31,6 +31,8 @@ public class Parameters extends AbstractParameters {
 
     public Sort sort;
 
+    public String extent;
+
     public Integer page;
 
     public Integer resultsCount; // page size
@@ -130,6 +132,10 @@ public class Parameters extends AbstractParameters {
 
         public Builder sort(Sort sort) {
             params.sort = sort;
+            return this;
+        }
+        public Builder extent(String extent) {
+            params.extent = extent;
             return this;
         }
 

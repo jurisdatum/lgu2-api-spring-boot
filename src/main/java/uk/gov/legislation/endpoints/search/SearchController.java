@@ -72,6 +72,7 @@ public class SearchController implements SearchApi {
             .published(params.getPublished())
             .text(params.getQ())
             .sort(params.getSort())
+            .extent(params.getExtentParam())
             .page(params.getPage())
             .pageSize(params.getPageSize());
         try {
