@@ -10,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import uk.gov.legislation.api.parameters.Country;
 import uk.gov.legislation.api.responses.TypeWrapper;
 import uk.gov.legislation.api.responses.TypesForCountry;
 import uk.gov.legislation.exceptions.ErrorResponse;
@@ -38,6 +39,6 @@ public interface TypesApi {
                     content = @Content(mediaType = MediaType.APPLICATION_JSON_VALUE,
                             schema = @Schema(implementation = ErrorResponse.class)))
     })
-    ResponseEntity<TypesForCountry> getTypesForCountry(@PathVariable String country);
+    ResponseEntity<TypesForCountry> getTypesForCountry(@PathVariable @Country String country);
 
 }

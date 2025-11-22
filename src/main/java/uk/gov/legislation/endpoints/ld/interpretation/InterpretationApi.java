@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Version;
+import uk.gov.legislation.api.parameters.Year;
 
 import java.util.Locale;
 @Tag(name = "Linked Data")
@@ -27,9 +31,9 @@ public interface InterpretationApi {
             "text/turtle"
     })
      ResponseEntity <?> getCalendarYearAndNumber(NativeWebRequest request,
-        @PathVariable String type,
-        @PathVariable int year,
-        @PathVariable int number,
-        @RequestParam(required = false) String version,
+        @PathVariable @Type String type,
+        @PathVariable @Year int year,
+        @PathVariable @Number int number,
+        @RequestParam(required = false) @Version String version,
         Locale locale) throws Exception;
 }
