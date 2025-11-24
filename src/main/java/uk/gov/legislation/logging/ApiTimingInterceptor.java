@@ -7,27 +7,31 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
+import java.time.Duration;
+import java.time.Instant;
+
 @Component
 public class ApiTimingInterceptor implements HandlerInterceptor {
 
-    private static final Logger logger = LoggerFactory.getLogger(ApiTimingInterceptor.class);
+    private static final Logger log = LoggerFactory.getLogger(ApiTimingInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        long startTime = System.currentTimeMillis();
-        request.setAttribute("startTime", startTime);
+        request.setAttribute("startTime", Instant.now());
         return true;
     }
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-        long startTime = (Long) request.getAttribute("startTime");
-        long totalTime = System.currentTimeMillis() - startTime;
+        var startTime = (Instant) request.getAttribute("startTime");
+        var totalTime = Duration.between(startTime, Instant.now()).toMillis();
 
-        String method = request.getMethod();
-        String uri = request.getRequestURI();
-        int status = response.getStatus();
+        var method = request.getMethod();
+        var uri = request.getRequestURI();
+        var status = response.getStatus();
 
-        logger.debug("API {} {} completed with status {} in {} ms", method, uri, status, totalTime);
-    }
+        if (log.isDebugEnabled()) {
+            log.debug("API {} {} completed with status {} in {} ms", method, uri, status, totalTime);
+        }    }
 }
+
