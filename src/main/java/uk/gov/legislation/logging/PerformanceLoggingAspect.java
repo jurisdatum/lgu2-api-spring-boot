@@ -55,11 +55,10 @@ public class PerformanceLoggingAspect {
         ServletRequestAttributes attrs =
             (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = (attrs != null) ? attrs.getRequest() : null;
-
-        assert request != null;
-        String httpMethod   = request.getMethod();
-        String requestUri   = request.getRequestURI();
-        String apiEndpoint = httpMethod + " " + requestUri;
+        String apiEndpoint = "N/A";
+        if (request != null) {
+            apiEndpoint = request.getMethod() + " " + request.getRequestURI();
+        }
         var startTimeISO = formatTimestamp(start);
         var endTimeISO   = formatTimestamp(end);
 
