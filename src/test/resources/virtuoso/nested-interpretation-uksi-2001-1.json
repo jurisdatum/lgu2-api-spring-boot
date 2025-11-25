@@ -1,0 +1,104 @@
+{
+    "@context": {
+        "interpretationOf": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/interpretationOf",
+            "@type": "@id"
+        },
+        "title": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/title"
+        },
+        "interpretation": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/interpretation",
+            "@type": "@id"
+        },
+        "number": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/number"
+        },
+        "fullCitation": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/fullCitation"
+        },
+        "languageOfTextIsoCode": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/languageOfTextIsoCode"
+        },
+        "externalReference": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/externalReference",
+            "@type": "@id"
+        },
+        "commentaryCitation": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/commentaryCitation"
+        },
+        "originalLanguageOfTextIsoCode": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/originalLanguageOfTextIsoCode"
+        },
+        "orderTitle": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/orderTitle"
+        },
+        "calendarYear": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/calendarYear",
+            "@type": "@id"
+        },
+        "languageOfText": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/languageOfText",
+            "@type": "@id"
+        },
+        "citation": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/citation"
+        },
+        "originalLanguageOfText": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/originalLanguageOfText",
+            "@type": "@id"
+        },
+        "year": {
+            "@id": "http://www.legislation.gov.uk/def/legislation/year"
+        }
+    },
+    "@graph": [
+        {
+            "@id": "http://www.legislation.gov.uk/uksi/2001/1",
+            "@type": [
+                "http://www.legislation.gov.uk/def/legislation/CurrentInterpretation",
+                "http://www.legislation.gov.uk/def/legislation/Interpretation"
+            ],
+            "interpretationOf": {
+                "@id": "http://www.legislation.gov.uk/id/uksi/2001/1",
+                "@type": [
+                    "http://www.legislation.gov.uk/def/legislation/Item",
+                    "http://www.legislation.gov.uk/def/legislation/Legislation",
+                    "http://www.legislation.gov.uk/def/legislation/UnitedKingdomStatutoryInstrument"
+                ],
+                "calendarYear": "http://www.legislation.gov.uk/id/year/2001",
+                "number": 1,
+                "year": 2001,
+                "citation": {
+                    "@value": "S.I. 2001/1",
+                    "@language": "en"
+                },
+                "commentaryCitation": {
+                    "@value": "The Road Traffic (Permitted Parking Area and Special Parking Area) (County of Kent) (District of Dover) Order 2001, S.I. 2001/1",
+                    "@language": "en"
+                },
+                "externalReference": "_:vb130980",
+                "fullCitation": {
+                    "@value": "The Road Traffic (Permitted Parking Area and Special Parking Area) (County of Kent) (District of Dover) Order 2001, S.I. 2001/1",
+                    "@language": "en"
+                },
+                "interpretation": [
+                    "http://www.legislation.gov.uk/uksi/2001/1/made",
+                    "http://www.legislation.gov.uk/uksi/2001/1"
+                ],
+                "originalLanguageOfText": "http://id.loc.gov/vocabulary/iso639-2/eng",
+                "originalLanguageOfTextIsoCode": "eng",
+                "title": {
+                    "@value": "The Road Traffic (Permitted Parking Area and Special Parking Area) (County of Kent) (District of Dover) Order 2001",
+                    "@language": "en"
+                }
+            },
+            "languageOfText": "http://id.loc.gov/vocabulary/iso639-2/eng",
+            "languageOfTextIsoCode": "eng",
+            "orderTitle": {
+                "@value": "The Road Traffic (Permitted Parking Area and Special Parking Area) (County of Kent) (District of Dover) Order 2001",
+                "@language": "en"
+            }
+        }
+    ]
+}
