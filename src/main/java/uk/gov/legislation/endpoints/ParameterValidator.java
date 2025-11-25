@@ -58,20 +58,19 @@ public class ParameterValidator {
      * Validate a list of Extent enums and return a formatted string.
      * If isExclusive is true, prefix with '='.
      */
-    public static String validateExtent(List<Extent> inputList, boolean isExclusive) {
-        if (inputList == null || inputList.isEmpty()) return null;
+    public static String validateExtent(List<Extent> list, boolean isExclusive) {
+        if (list == null || list.isEmpty()) return null;
 
-        LinkedHashSet<String> codes = new LinkedHashSet<>();
-        for (Extent e : inputList) {
-            if (e == null) {
-                throw new IllegalArgumentException("Extent cannot be null");
-            }
-            codes.add(e.name());
+        LinkedHashSet<String> set = new LinkedHashSet<>();
+        for (Extent e : list) {
+            if (e == null) throw new IllegalArgumentException("Extent cannot be null");
+            set.add(e.code());
         }
 
-        String joined = String.join("+", codes);
+        String joined = String.join("+", set);
         return isExclusive ? "=" + joined : joined;
     }
+
 }
 
 

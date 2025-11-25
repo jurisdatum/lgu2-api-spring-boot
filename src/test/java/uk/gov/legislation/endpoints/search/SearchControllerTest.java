@@ -55,8 +55,8 @@ class SearchControllerTest {
 
         mockMvc.perform(get("/search")
                 .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
-                .param("type", type)
-                .param("year", year))
+                .param("types", "ukpga")
+                .param("year", "2021"))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
             .andExpect(content().string(containsString("<feed")));
@@ -114,7 +114,7 @@ class SearchControllerTest {
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
 
         mockMvc.perform(get("/search")
-                .param("type", invalidType)
+                .param("types", invalidType)
                 .param("year", year)
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isBadRequest())
