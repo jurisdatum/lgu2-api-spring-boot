@@ -1,16 +1,12 @@
 package uk.gov.legislation.endpoints.search;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
 import java.time.LocalDate;
 import java.util.List;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateExtent;
 
 /**
  * Search parameters for legislation search endpoints.
@@ -33,8 +29,6 @@ public class SearchParameters {
     private String q;
     private Parameters.Sort sort;
     private List<Extent> extent;
-    @JsonIgnore
-    private String extentParam;
     private boolean exclusive;
     private Integer page;
     private Integer pageSize;
@@ -139,29 +133,14 @@ public class SearchParameters {
         this.sort = sort;
     }
 
-    public List<Extent> getExtent() {
-        return extent;
-    }
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public List<Extent> getExtent() { return extent; }
 
-    public void setExtent(List<Extent> extent) {
-        this.extent = extent;
-        this.extentParam = validateExtent(extent, this.exclusive);
-    }
+    public void setExtent(List<Extent> extent) { this.extent = extent; }
 
-    public boolean isExclusive() {
-        return exclusive;
-    }
+    public boolean isExclusive() { return exclusive; }
 
-    public void setExclusive(boolean exclusive) {
-        this.exclusive = exclusive;
-        if (this.extent != null) {
-            this.extentParam = validateExtent(this.extent, exclusive);
-        }
-    }
-
-    public String getExtentParam() {
-        return extentParam;
-    }
+    public void setExclusive(boolean exclusive) { this.exclusive = exclusive; }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")

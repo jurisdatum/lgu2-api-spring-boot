@@ -28,7 +28,8 @@ public class SearchController implements SearchApi {
         throws IOException, InterruptedException {
 
         validateSearchParameters(param);
-        String atom = db.getAtom(convert(param));
+        String extent = validateExtent(param.getExtent(), param.isExclusive());
+        String atom = db.getAtom(convert(param, extent));
         return ResponseEntity.ok(atom);
     }
 
@@ -37,6 +38,8 @@ public class SearchController implements SearchApi {
         validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
         validateTitle(param.getTitle());
         validateLanguage(param.getLanguage());
+        validateExtent(param.getExtent(),param.isExclusive());
+
     }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
@@ -53,14 +56,14 @@ public class SearchController implements SearchApi {
         throws IOException, InterruptedException {
 
         validateSearchParameters(param);
-
-        return Optional.of(db.get(convert(param)))
+        String extent = validateExtent(param.getExtent(), param.isExclusive());
+        return Optional.of(db.get(convert(param,extent)))
             .map(results -> DocumentsFeedConverter.convert(results, param))
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    private static Parameters convert(SearchParameters params) {
+    private static Parameters convert(SearchParameters params, String extent) {
         var builder = Parameters.builder()
             .type(params.getTypes())
             .year(params.getYear())
@@ -72,7 +75,7 @@ public class SearchController implements SearchApi {
             .published(params.getPublished())
             .text(params.getQ())
             .sort(params.getSort())
-            .extent(params.getExtentParam())
+            .extent(extent)
             .page(params.getPage())
             .pageSize(params.getPageSize());
         try {
