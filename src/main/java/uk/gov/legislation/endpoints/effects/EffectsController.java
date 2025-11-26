@@ -39,7 +39,7 @@ public class EffectsController implements EffectsApi {
         Integer sourceStartYear,
         Integer sourceEndYear,
         String sourceTitle,
-        Parameters.AppliedStatus appliedStatus,
+        Parameters.AppliedStatus applied,
         int page
     ) throws IOException, InterruptedException {
         validateType(targetType);
@@ -59,7 +59,7 @@ public class EffectsController implements EffectsApi {
             .affectingStartYear(sourceStartYear)
             .affectingEndYear(sourceEndYear)
             .affectingTitle(sourceTitle)
-            .applied(appliedStatus)
+            .applied(applied)
             .page(page)
             .build();
         return db.fetch(params);
@@ -79,7 +79,7 @@ public class EffectsController implements EffectsApi {
         Integer sourceStartYear,
         Integer sourceEndYear,
         String sourceTitle,
-        Parameters.AppliedStatus appliedStatus,
+        Parameters.AppliedStatus applied,
         int page
     ) throws IOException, InterruptedException, SaxonApiException {
         validateType(targetType);
@@ -92,7 +92,7 @@ public class EffectsController implements EffectsApi {
             sourceType, sourceYear,
             sourceNumber,sourceStartYear,
             sourceEndYear, sourceTitle,
-            appliedStatus, page);
+            applied, page);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);
     }

@@ -29,7 +29,7 @@ public interface EffectsApi {
         @RequestParam(required = false) @Year Integer sourceStartYear,
         @RequestParam(required = false) @Year Integer sourceEndYear,
         @RequestParam(required = false) @Title String sourceTitle,
-        @RequestParam(name = "applied", defaultValue = "all") Parameters.AppliedStatus appliedStatus,
+        @RequestParam(required = false) Parameters.AppliedStatus applied,
         @RequestParam(required = false, defaultValue = "1") @Page int page
     ) throws IOException, InterruptedException;
 
@@ -47,7 +47,7 @@ public interface EffectsApi {
         @RequestParam(required = false) Integer sourceStartYear,
         @RequestParam(required = false) Integer sourceEndYear,
         @RequestParam(required = false) String sourceTitle,
-        @RequestParam(name = "applied", defaultValue = "all") Parameters.AppliedStatus appliedStatus,
+        @RequestParam(required = false) Parameters.AppliedStatus applied,
         @RequestParam(required = false, defaultValue = "1") int page
     ) throws IOException, InterruptedException, SaxonApiException;
 
