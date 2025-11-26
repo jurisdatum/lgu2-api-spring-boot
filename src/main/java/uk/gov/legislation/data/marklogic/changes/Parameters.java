@@ -101,7 +101,7 @@ public class Parameters extends AbstractParameters {
         }
     }
     public enum AppliedStatus {
-        all, applied, unapplied
+        applied, unapplied
     }
 }
 
