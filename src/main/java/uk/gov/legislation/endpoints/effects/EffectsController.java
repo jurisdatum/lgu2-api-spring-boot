@@ -44,7 +44,8 @@ public class EffectsController implements EffectsApi {
     ) throws IOException, InterruptedException {
         validateType(targetType);
         validateYears(targetYear, targetStartYear, targetEndYear);
-
+        validateType(sourceType);
+        validateYears(sourceYear, sourceStartYear, sourceEndYear);
         Parameters params = Parameters.builder()
             .affectedType(targetType)
             .affectedYear(targetYear)
@@ -83,6 +84,8 @@ public class EffectsController implements EffectsApi {
     ) throws IOException, InterruptedException, SaxonApiException {
         validateType(targetType);
         validateYears(targetYear, targetStartYear, targetEndYear);
+        validateType(sourceType);
+        validateYears(sourceYear, sourceStartYear, sourceEndYear);
         String atom = atom(targetType, targetYear,
             targetNumber,targetStartYear,
             targetEndYear, targetTitle,
