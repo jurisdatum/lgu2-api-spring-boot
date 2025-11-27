@@ -1,11 +1,10 @@
 package uk.gov.legislation.endpoints.search;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
-
+import uk.gov.legislation.util.Extent;
 import java.time.LocalDate;
 import java.util.List;
 
@@ -29,16 +28,17 @@ public class SearchParameters {
     private LocalDate published;
     private String q;
     private Parameters.Sort sort;
+    private List<Extent> extent;
+    private boolean exclusive;
     private Integer page;
     private Integer pageSize;
 
-    @JsonProperty("type")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<String> getTypes() {
         return types;
     }
 
-    public void setType(List<String> types) {
+    public void setTypes(List<String> types) {
         this.types = types;
     }
 
@@ -132,6 +132,15 @@ public class SearchParameters {
     public void setSort(Parameters.Sort sort) {
         this.sort = sort;
     }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public List<Extent> getExtent() { return extent; }
+
+    public void setExtent(List<Extent> extent) { this.extent = extent; }
+
+    public boolean isExclusive() { return exclusive; }
+
+    public void setExclusive(boolean exclusive) { this.exclusive = exclusive; }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")
