@@ -1,5 +1,7 @@
 package uk.gov.legislation.exceptions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -10,6 +12,9 @@ import java.io.IOException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
+
     @ExceptionHandler(UnsupportedLanguageException.class)
     public ResponseEntity<ErrorResponse> handleUnsupportedLanguageException(UnsupportedLanguageException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
@@ -43,6 +48,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(TransformationException.class)
     public ResponseEntity<ErrorResponse> handleAknTransformationException(TransformationException ex) {
+        logger.error("TransformationException: {}", ex.getMessage(), ex);
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.INTERNAL_SERVER_ERROR,
                 "Transformation Error",
@@ -126,6 +132,9 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<ErrorResponse> handleResponseStatusException(ResponseStatusException e) {
+        if (e.getStatusCode().is5xxServerError()) {
+            logger.error("ResponseStatusException with 5xx status: {} - {}", e.getStatusCode(), e.getReason(), e);
+        }
         ErrorResponse error = new ErrorResponse(
             e.getStatusCode(),
             e.getBody().getTitle(),
