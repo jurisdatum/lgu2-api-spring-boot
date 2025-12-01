@@ -1,10 +1,12 @@
 package uk.gov.legislation.endpoints.search;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -33,12 +35,13 @@ public class SearchParameters {
     private Integer page;
     private Integer pageSize;
 
+    @JsonProperty("type")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<String> getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setType(List<String> types) {
         this.types = types;
     }
 
