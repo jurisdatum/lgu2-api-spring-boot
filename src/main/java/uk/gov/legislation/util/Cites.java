@@ -77,7 +77,7 @@ public class Cites {
             case MWA -> year + " nawm " + number;
             case MNIA -> year + " c. " + number + NI_DESIGNATION;
             case APNI -> year + " c. " + number + NI_DESIGNATION;
-            case UKCM -> year + " No. " + number;
+            case UKCM, UKIA -> year + " No. " + number;
             case UKMO -> "Ministerial Order " + year + "/" + number;
             case UKMD -> "No. " + year + "/" + number;
             case UKCI -> "Church Instrument  " + year + "/" + number;

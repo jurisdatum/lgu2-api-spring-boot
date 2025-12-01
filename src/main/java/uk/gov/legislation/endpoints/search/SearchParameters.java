@@ -5,6 +5,8 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
+import uk.gov.legislation.util.Stage;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -30,6 +32,8 @@ public class SearchParameters {
     private Parameters.Sort sort;
     private List<Extent> extent;
     private boolean exclusive;
+    private Stage stage;
+    private String department;
     private Integer page;
     private Integer pageSize;
 
@@ -142,6 +146,23 @@ public class SearchParameters {
 
     public void setExclusive(boolean exclusive) { this.exclusive = exclusive; }
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Stage getStage() {
+        return stage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")
     public Integer getPage() {

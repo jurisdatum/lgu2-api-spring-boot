@@ -33,6 +33,10 @@ public class Parameters extends AbstractParameters {
 
     public String extent;
 
+    public String stage;
+
+    public String department;
+
     public Integer page;
 
     public Integer resultsCount; // page size
@@ -136,6 +140,16 @@ public class Parameters extends AbstractParameters {
         }
         public Builder extent(String extent) {
             params.extent = extent;
+            return this;
+        }
+
+        public Builder stage(String stage) {
+            params.stage = stage;
+            return this;
+        }
+
+        public Builder department(String department) {
+            params.department = department;
             return this;
         }
 

@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
+import static uk.gov.legislation.util.Stage.safeStage;
 
 @RestController
 public class SearchController implements SearchApi {
@@ -29,7 +30,7 @@ public class SearchController implements SearchApi {
 
         validateSearchParameters(param);
         String extent = validateExtent(param.getExtent(), param.isExclusive());
-        String atom = db.getAtom(convert(param, extent));
+        String atom = db.getAtom(convert(param,extent));
         return ResponseEntity.ok(atom);
     }
 
@@ -76,6 +77,8 @@ public class SearchController implements SearchApi {
             .text(params.getQ())
             .sort(params.getSort())
             .extent(extent)
+            .department(params.getDepartment())
+            .stage(safeStage(params.getStage()))
             .page(params.getPage())
             .pageSize(params.getPageSize());
         try {
