@@ -8,7 +8,9 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Search parameters for legislation search endpoints.
@@ -30,8 +32,8 @@ public class SearchParameters {
     private LocalDate published;
     private String q;
     private Parameters.Sort sort;
-    private List<Extent> extent;
-    private boolean exclusive;
+    private EnumSet<Extent> extent;
+    private Boolean exclusiveExtent;
     private Integer page;
     private Integer pageSize;
 
@@ -137,13 +139,16 @@ public class SearchParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public List<Extent> getExtent() { return extent; }
+    public Set<Extent> getExtent() { return extent; }
 
-    public void setExtent(List<Extent> extent) { this.extent = extent; }
+    public void setExtent(Set<Extent> extent) {
+        this.extent = EnumSet.copyOf(extent);
+    }
 
-    public boolean isExclusive() { return exclusive; }
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean isExclusiveExtent() { return exclusiveExtent; }
 
-    public void setExclusive(boolean exclusive) { this.exclusive = exclusive; }
+    public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")

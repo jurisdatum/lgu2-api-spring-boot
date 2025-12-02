@@ -28,8 +28,7 @@ public class SearchController implements SearchApi {
         throws IOException, InterruptedException {
 
         validateSearchParameters(param);
-        String extent = validateExtent(param.getExtent(), param.isExclusive());
-        String atom = db.getAtom(convert(param, extent));
+        String atom = db.getAtom(convert(param));
         return ResponseEntity.ok(atom);
     }
 
@@ -38,8 +37,6 @@ public class SearchController implements SearchApi {
         validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
         validateTitle(param.getTitle());
         validateLanguage(param.getLanguage());
-        validateExtent(param.getExtent(),param.isExclusive());
-
     }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
@@ -56,14 +53,13 @@ public class SearchController implements SearchApi {
         throws IOException, InterruptedException {
 
         validateSearchParameters(param);
-        String extent = validateExtent(param.getExtent(), param.isExclusive());
-        return Optional.of(db.get(convert(param,extent)))
+        return Optional.of(db.get(convert(param)))
             .map(results -> DocumentsFeedConverter.convert(results, param))
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
-    private static Parameters convert(SearchParameters params, String extent) {
+    private static Parameters convert(SearchParameters params) {
         var builder = Parameters.builder()
             .type(params.getTypes())
             .year(params.getYear())
@@ -75,7 +71,7 @@ public class SearchController implements SearchApi {
             .published(params.getPublished())
             .text(params.getQ())
             .sort(params.getSort())
-            .extent(extent)
+            .extent(params.getExtent(), params.isExclusiveExtent())
             .page(params.getPage())
             .pageSize(params.getPageSize());
         try {
