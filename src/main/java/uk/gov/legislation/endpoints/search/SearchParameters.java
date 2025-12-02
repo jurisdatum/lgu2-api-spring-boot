@@ -142,7 +142,7 @@ public class SearchParameters {
     public Set<Extent> getExtent() { return extent; }
 
     public void setExtent(Set<Extent> extent) {
-        this.extent = EnumSet.copyOf(extent);
+        this.extent = extent == null ? null : EnumSet.copyOf(extent);
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
