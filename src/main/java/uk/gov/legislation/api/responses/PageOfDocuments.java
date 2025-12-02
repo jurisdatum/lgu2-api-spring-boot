@@ -58,6 +58,12 @@ public class PageOfDocuments {
         @Schema
         public List<ByInitial> bySubjectInitial;
 
+        @Schema
+        public List<ByStage> byStage;
+
+        @Schema
+        public List<ByDepartment> byDepartment;
+
     }
 
     public static class ByType {
@@ -84,6 +90,26 @@ public class PageOfDocuments {
 
         @Schema
         public String initial;
+
+        @Schema
+        public int count;
+
+    }
+
+    public static class ByStage {
+
+        @Schema
+        public String stage;
+
+        @Schema
+        public int count;
+
+    }
+
+    public static class ByDepartment {
+
+        @Schema
+        public String department;
 
         @Schema
         public int count;

@@ -49,6 +49,8 @@ public class DocumentsFeedConverter {
         counts.byType = Facets.convertTypeFacets(facets.facetTypes);
         counts.byYear = Facets.convertYearFacets(facets.facetYears);
         counts.bySubjectInitial = Facets.convertSubjectFacets(facets.subjects);
+        counts.byStage = Facets.convertStageFacets(facets.facetStages);
+        counts.byDepartment = Facets.convertDepartmentFacets(facets.facetDepartments);
         return counts;
     }
 

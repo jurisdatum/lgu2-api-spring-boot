@@ -10,7 +10,6 @@ public enum Stage {
     OPTIONS("Options"),
     POST_IMPLEMENTATION("Post Implementation");
 
-
     private final String value;
 
     Stage(String value) {
@@ -24,4 +23,5 @@ public enum Stage {
     public static String safeStage(Stage stage) {
         return stage == null ? null : stage.value();
     }
+
 }

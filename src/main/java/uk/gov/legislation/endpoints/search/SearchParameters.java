@@ -170,6 +170,7 @@ public class SearchParameters {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")
     public Integer getPage() {
