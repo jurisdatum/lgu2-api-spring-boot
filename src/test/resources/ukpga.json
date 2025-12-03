@@ -674,7 +674,9 @@
         "year" : 1801,
         "count" : 4
       } ],
-      "bySubjectInitial" : [ ]
+      "bySubjectInitial" : [ ],
+      "byStage" : [ ],
+      "byDepartment" : [ ]
     },
     "subjects" : [ ]
   },
