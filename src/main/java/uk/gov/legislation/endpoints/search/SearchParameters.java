@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
+import uk.gov.legislation.util.Stage;
 
 import java.time.LocalDate;
 import java.util.EnumSet;
@@ -34,6 +35,8 @@ public class SearchParameters {
     private Parameters.Sort sort;
     private EnumSet<Extent> extent;
     private Boolean exclusiveExtent;
+    private String department;
+    private Stage stage;
     private Integer page;
     private Integer pageSize;
 
