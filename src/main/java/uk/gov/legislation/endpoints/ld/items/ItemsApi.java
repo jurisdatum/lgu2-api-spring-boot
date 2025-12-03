@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.NativeWebRequest;
-import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Year;
 
 @Tag(name = "Linked Data")
 @RequestMapping("/ld/items")
@@ -28,7 +28,7 @@ public interface ItemsApi {
     })
      ResponseEntity <?> typeAndYear(NativeWebRequest request,
         @PathVariable @Type String type,
-        @PathVariable(required = false) @Number Integer year,
+        @PathVariable(required = false) @Year Integer year,
         @RequestParam(defaultValue = "1") int page,
         @RequestParam(defaultValue = "10") int pageSize) throws Exception;
 }
