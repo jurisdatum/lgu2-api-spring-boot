@@ -1,14 +1,16 @@
 package uk.gov.legislation.endpoints.search;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
-import uk.gov.legislation.util.Stage;
 
 import java.time.LocalDate;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Search parameters for legislation search endpoints.
@@ -30,19 +32,18 @@ public class SearchParameters {
     private LocalDate published;
     private String q;
     private Parameters.Sort sort;
-    private List<Extent> extent;
-    private boolean exclusive;
-    private Stage stage;
-    private String department;
+    private EnumSet<Extent> extent;
+    private Boolean exclusiveExtent;
     private Integer page;
     private Integer pageSize;
 
+    @JsonProperty("type")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<String> getTypes() {
         return types;
     }
 
-    public void setTypes(List<String> types) {
+    public void setType(List<String> types) {
         this.types = types;
     }
 
@@ -138,13 +139,16 @@ public class SearchParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public List<Extent> getExtent() { return extent; }
+    public Set<Extent> getExtent() { return extent; }
 
-    public void setExtent(List<Extent> extent) { this.extent = extent; }
+    public void setExtent(Set<Extent> extent) {
+        this.extent = extent == null ? null : EnumSet.copyOf(extent);
+    }
 
-    public boolean isExclusive() { return exclusive; }
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean isExclusiveExtent() { return exclusiveExtent; }
 
-    public void setExclusive(boolean exclusive) { this.exclusive = exclusive; }
+    public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String getDepartment() {
