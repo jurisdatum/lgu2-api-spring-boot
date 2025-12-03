@@ -240,6 +240,14 @@ public static class Entry {
     @JacksonXmlProperty(localName = "link")
     public List<Link> links;
 
+    /* for impact assessments */
+
+    @JacksonXmlProperty(localName = "DocumentStage", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public Value stage;
+
+    @JacksonXmlProperty(localName = "Department", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public Value department;
+
 }
 
 public static class Value {

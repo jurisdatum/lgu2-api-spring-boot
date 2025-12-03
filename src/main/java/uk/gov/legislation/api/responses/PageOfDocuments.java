@@ -165,6 +165,17 @@ public class PageOfDocuments {
         @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
         public SortedSet<String> formats;
 
+        /* for impact assessments */
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String assessmentOf;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String stage;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String department;
+
     }
 
 }

@@ -6,10 +6,9 @@ import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.SearchParameters;
 import uk.gov.legislation.util.*;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class DocumentsFeedConverter {
@@ -72,6 +71,8 @@ public class DocumentsFeedConverter {
             .toList();
     }
 
+    private static final Pattern IA = Pattern.compile("https?://www\\.legislation\\.gov\\.uk/([a-z0-9/-]+)/impacts/\\d{4}/\\d+");
+
     private static PageOfDocuments.Document convertDocument(SearchResults.Entry entry) {
         PageOfDocuments.Document doc = new PageOfDocuments.Document();
         if (entry.id.startsWith("http://www.legislation.gov.uk/id/"))
@@ -99,6 +100,10 @@ public class DocumentsFeedConverter {
         doc.updated = entry.updated;
         doc.version = getVersion(entry.links);
         doc.formats = getFormats(entry.links);
+        if ("UnitedKingdomImpactAssessment".equals(doc.longType))
+            doc.assessmentOf = getAssessmentOf(entry.links);
+        doc.stage = entry.stage == null ? null : entry.stage.value;
+        doc.department = entry.department == null ? null : entry.department.value;
         return doc;
     }
 
@@ -148,6 +153,19 @@ public class DocumentsFeedConverter {
             .filter(t -> "application/xml".equals(t) || "application/pdf".equals(t))
             .map(t -> t.substring(12))
             .collect(Collectors.toCollection(TreeSet::new));
+    }
+
+    private static String getAssessmentOf(List<SearchResults.Link> links) {
+        return links.stream()
+            .filter(link -> link.type == null)
+            .filter(link -> "alternate".equals(link.rel))
+            .map(link -> link.href)
+            .filter(Objects::nonNull)
+            .map(IA::matcher)
+            .filter(Matcher::matches)
+            .map(m -> m.group(1))
+            .findFirst()
+            .orElse(null);
     }
 
 }
