@@ -5,9 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
+import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
+import java.util.EnumSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Search parameters for legislation search endpoints.
@@ -29,6 +32,8 @@ public class SearchParameters {
     private LocalDate published;
     private String q;
     private Parameters.Sort sort;
+    private EnumSet<Extent> extent;
+    private Boolean exclusiveExtent;
     private Integer page;
     private Integer pageSize;
 
@@ -132,6 +137,18 @@ public class SearchParameters {
     public void setSort(Parameters.Sort sort) {
         this.sort = sort;
     }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Set<Extent> getExtent() { return extent; }
+
+    public void setExtent(Set<Extent> extent) {
+        this.extent = extent == null ? null : EnumSet.copyOf(extent);
+    }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean isExclusiveExtent() { return exclusiveExtent; }
+
+    public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")

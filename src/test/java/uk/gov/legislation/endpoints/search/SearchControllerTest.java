@@ -55,8 +55,8 @@ class SearchControllerTest {
 
         mockMvc.perform(get("/search")
                 .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
-                .param("type", type)
-                .param("year", year))
+                .param("type", "ukpga")
+                .param("year", "2021"))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
             .andExpect(content().string(containsString("<feed")));

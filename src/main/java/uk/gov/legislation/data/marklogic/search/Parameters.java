@@ -1,9 +1,12 @@
 package uk.gov.legislation.data.marklogic.search;
 
 import uk.gov.legislation.data.marklogic.AbstractParameters;
+import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class Parameters extends AbstractParameters {
 
@@ -30,6 +33,8 @@ public class Parameters extends AbstractParameters {
     public String text;
 
     public Sort sort;
+
+    public String extent;
 
     public Integer page;
 
@@ -130,6 +135,18 @@ public class Parameters extends AbstractParameters {
 
         public Builder sort(Sort sort) {
             params.sort = sort;
+            return this;
+        }
+
+        public Builder extent(Set<Extent> extent, Boolean exclusive) {
+            if (extent == null || extent.isEmpty()) {
+                params.extent = null;
+                return this;
+            }
+            params.extent = extent.stream().map(e -> e == Extent.NI ? "N.I." : e.name())
+                .collect(Collectors.joining("+"));
+            if (exclusive != null && exclusive)
+                params.extent = "=" + params.extent;
             return this;
         }
 
