@@ -36,6 +36,8 @@ public class Parameters extends AbstractParameters {
 
     public String extent;
 
+    public  LocalDate version;
+
     public Integer page;
 
     public Integer resultsCount; // page size
@@ -148,6 +150,11 @@ public class Parameters extends AbstractParameters {
             if (exclusive != null && exclusive)
                 params.extent = "=" + params.extent;
             return this;
+        }
+
+        public Builder version(LocalDate version) {
+            params.version = version;
+              return this;
         }
 
         public Builder page(Integer page) {
