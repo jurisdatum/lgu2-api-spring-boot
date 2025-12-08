@@ -1,5 +1,6 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -12,12 +13,14 @@ import java.util.List;
 
 import static uk.gov.legislation.data.virtuoso.jsonld.Helper.oneOrMany;
 
-public class ItemLD {
+public class Item {
 
-    @JsonProperty("@id")
+    @JsonProperty("uri")
+    @JsonAlias("@id")
     public URI id;
 
-    @JsonProperty("@type")
+    @JsonProperty("type")
+    @JsonAlias("@type")
     public List<String> type;
 
     @JsonProperty
@@ -71,30 +74,31 @@ public class ItemLD {
     public List<URI> contains;
 
     @JsonProperty
-    public List<String> interpretation;
+    public List<URI> interpretation;
 
     @JsonProperty
-    public List<String> originalLanguageOfText;
+    public List<URI> originalLanguageOfText;
 
     @JsonSetter("originalLanguageOfText")
     public void setOriginalLanguageOfText(JsonNode node) {
-        this.originalLanguageOfText = oneOrMany(node, String.class);
+        this.originalLanguageOfText = oneOrMany(node, URI.class);
     }
 
     @JsonProperty
-    public List<ValueAndType> originalLanguageOfTextIsoCode;
+    public List<String> originalLanguageOfTextIsoCode;
 
     @JsonSetter("originalLanguageOfTextIsoCode")
     public void setOriginalLanguageOfTextIsoCode(JsonNode node) {
         if (node instanceof TextNode) {
-            this.originalLanguageOfTextIsoCode = Collections.singletonList(ValueAndType.convert(node));
+            this.originalLanguageOfTextIsoCode = Collections.singletonList(ValueAndType.convert(node).value);
         } else {
-            this.originalLanguageOfTextIsoCode = oneOrMany(node, ValueAndType.class);
+            this.originalLanguageOfTextIsoCode = oneOrMany(node, ValueAndType.class)
+                .stream().map(vt -> vt.value).toList();
         }
     }
 
-    public static ItemLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, ItemLD.class);
+    public static Item convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, Item.class);
     }
 
 }

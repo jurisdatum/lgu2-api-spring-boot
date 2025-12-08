@@ -1,15 +1,18 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
 public class ValueAndLanguage {
 
-    @JsonProperty("@value")
+    @JsonProperty("value")
+    @JsonAlias("@value")
     public String value;
 
-    @JsonProperty("@language")
+    @JsonProperty("language")
+    @JsonAlias("@language")
     public String language;
 
     public static String get(List<ValueAndLanguage> list, String language) {

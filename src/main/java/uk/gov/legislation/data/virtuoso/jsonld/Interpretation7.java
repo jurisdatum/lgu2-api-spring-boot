@@ -8,19 +8,19 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.net.URI;
 import java.util.List;
 
-public class InterpretationLD {
+public class Interpretation7 {
 
     @JsonProperty("@id")
     public URI id;
 
     @JsonProperty("@type")
-    public List<String> type;
+    public List<URI> type;
 
     @JsonProperty
     public String interpretationOf;
 
     @JsonProperty
-    public String languageOfText;
+    public URI languageOfText;
 
     @JsonProperty
     public ValueAndType languageOfTextIsoCode;
@@ -60,8 +60,8 @@ public class InterpretationLD {
     @JsonProperty
     public List<URI> contains;
 
-    public static InterpretationLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, InterpretationLD.class);
+    public static Interpretation7 convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, Interpretation7.class);
     }
 
 }

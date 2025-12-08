@@ -3,12 +3,10 @@ package uk.gov.legislation.data.virtuoso.queries;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
-import uk.gov.legislation.api.responses.ld.Item;
 import uk.gov.legislation.api.responses.ld.PageOfItems;
-import uk.gov.legislation.converters.ld.ItemConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Item;
 
 import java.io.IOException;
 import java.util.Comparator;
@@ -79,8 +77,7 @@ public class ItemsQuery {
             return Optional.empty();
         List<Item> items = StreamSupport.stream(graph.spliterator(), false)
             .map(ObjectNode.class::cast)
-            .map(ItemLD::convert)
-            .map(ItemConverter::convert)
+            .map(Item::convert)
             .sorted(Comparator
                 .comparingInt(o -> ((Item) o).year)
                 .reversed()
