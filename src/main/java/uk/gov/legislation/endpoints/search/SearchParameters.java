@@ -3,7 +3,7 @@ package uk.gov.legislation.endpoints.search;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.parameters.Sort;
+import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
 
@@ -34,6 +34,7 @@ public class SearchParameters {
     private Parameters.Sort sort;
     private EnumSet<Extent> extent;
     private Boolean exclusiveExtent;
+    private LocalDate pointInTime;
     private Integer page;
     private Integer pageSize;
 
@@ -149,6 +150,14 @@ public class SearchParameters {
     public Boolean isExclusiveExtent() { return exclusiveExtent; }
 
     public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
+
+    public LocalDate getPointInTime() {
+        return pointInTime;
+    }
+
+    public void setPointInTime(LocalDate pointInTime) {
+        this.pointInTime = pointInTime;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")
