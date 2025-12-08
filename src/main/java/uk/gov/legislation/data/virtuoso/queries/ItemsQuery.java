@@ -9,7 +9,6 @@ import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.Item;
 
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.StreamSupport;
@@ -21,7 +20,9 @@ public class ItemsQuery {
 
     public ItemsQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
-    public static String makeSparqlQuery(String type, int pageSize, int offset) {
+    public static String makeSparqlQuery(String type, ItemSort sort, int pageSize, int offset) {
+        if (sort == null)
+            sort = ItemSort.YEAR_DESC;
         return """
             PREFIX : <http://www.legislation.gov.uk/def/legislation/>
             CONSTRUCT { ?s ?p ?o . }
@@ -32,17 +33,21 @@ public class ItemsQuery {
                   ?s a [:acronym '%s'] ;
                     :year ?year ;
                     :number ?number .
+                  OPTIONAL { ?s :citation ?citation }
+                  OPTIONAL { ?s :title ?title }
                 }
-                ORDER BY DESC(?year) ASC(?number)
+                ORDER BY %s
                 LIMIT %d
                 OFFSET %d
               }
               ?s ?p ?o .
             }
-            """.formatted(type, pageSize, offset);
+            """.formatted(type, sort.sparql(), pageSize, offset);
     }
 
-    public static String makeSparqlQuery(String type, int year, int pageSize, int offset) {
+    public static String makeSparqlQuery(String type, int year, ItemSort sort, int pageSize, int offset) {
+        if (sort == null)
+            sort = ItemSort.NUMBER_ASC;
         return """
             PREFIX : <http://www.legislation.gov.uk/def/legislation/>
             CONSTRUCT { ?s ?p ?o . }
@@ -53,36 +58,34 @@ public class ItemsQuery {
                   ?s a [:acronym '%s'] ;
                     :year %d ;
                     :number ?number .
+                  OPTIONAL { ?s :citation ?citation }
+                  OPTIONAL { ?s :title ?title }
                 }
-                ORDER BY ASC(?number)
+                ORDER BY %s
                 LIMIT %d
                 OFFSET %d
               }
               ?s ?p ?o .
             }
-            """.formatted(type, year, pageSize, offset);
+            """.formatted(type, year, sort.sparql(), pageSize, offset);
     }
 
-    public String get(String type, Integer year, int pageSize, int offset, String format) throws IOException, InterruptedException {
+    public String get(String type, Integer year, ItemSort sort, int pageSize, int offset, String format) throws IOException, InterruptedException {
         String query = (year == null)
-            ? makeSparqlQuery(type, pageSize, offset)
-            : makeSparqlQuery(type, year, pageSize, offset);
+            ? makeSparqlQuery(type, sort, pageSize, offset)
+            : makeSparqlQuery(type, year, sort, pageSize, offset);
         return virtuoso.query(query, format);
     }
 
-    public Optional<PageOfItems> get(String type, Integer year, int pageSize, int offset) throws IOException, InterruptedException {
-        String json = get(type, year, pageSize, offset, "application/ld+json");
+    public Optional<PageOfItems> get(String type, Integer year, ItemSort sort, int pageSize, int offset) throws IOException, InterruptedException {
+        String json = get(type, year, sort, pageSize, offset, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         if (graph == null)
             return Optional.empty();
         List<Item> items = StreamSupport.stream(graph.spliterator(), false)
             .map(ObjectNode.class::cast)
             .map(Item::convert)
-            .sorted(Comparator
-                .comparingInt(o -> ((Item) o).year)
-                .reversed()
-                .thenComparingInt(o -> ((Item) o).number)
-            )
+            .sorted(ItemSort.comparator(sort))
             .toList();
         PageOfItems page = new PageOfItems();
         page.meta = new PageOfItems.Meta();

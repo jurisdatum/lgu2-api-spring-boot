@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.data.virtuoso.queries.ItemSort;
 
 @Tag(name = "Linked Data")
 @RequestMapping("/ld/items")
@@ -27,6 +28,7 @@ public interface ItemsApi {
      ResponseEntity <?> typeAndYear(NativeWebRequest request,
         @PathVariable String type,
         @PathVariable(required = false) Integer year,
+        @RequestParam(required = false) ItemSort sort,
         @RequestParam(defaultValue = "1") int page,
         @RequestParam(defaultValue = "10") int pageSize) throws Exception;
 }
