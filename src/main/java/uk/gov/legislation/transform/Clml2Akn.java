@@ -7,6 +7,7 @@ import javax.xml.transform.Source;
 import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
@@ -53,6 +54,22 @@ public class Clml2Akn {
         XdmDestination destination = new XdmDestination();
         transform(source, destination);
         return destination.getXdmNode();
+    }
+
+    public void transform(InputStream clml, OutputStream akn) throws SaxonApiException {
+        Source source = new StreamSource(clml);
+        Serializer serializer = executable.getProcessor().newSerializer(akn);
+        serializer.setOutputProperties(Properties);
+        transform(source, serializer);
+    }
+
+    public void transform(InputStream clml, Destination akn) throws SaxonApiException {
+        Source source = new StreamSource(clml);
+        transform(source, akn);
+    }
+
+    public void transform(XdmNode clml, Destination akn) throws SaxonApiException {
+        transform(clml.asSource(), akn);
     }
 
     public XdmNode transform(String clml) throws SaxonApiException {
