@@ -1,22 +1,22 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 import java.util.List;
 
-import static uk.gov.legislation.data.virtuoso.jsonld.Helper.oneOrMany;
-
 public class ReignLD {
 
-    @JsonProperty("@id")
-    public URI id;
+    @JsonProperty("uri")
+    @JsonAlias("@id")
+    public URI uri;
 
-    @JsonProperty("@type")
-    public String type;
+    @JsonProperty("type")
+    @JsonAlias("@type")
+    public URI type;
 
     @JsonProperty
     public String label;
@@ -36,13 +36,8 @@ public class ReignLD {
     @JsonProperty
     public URI endDate;
 
-    @JsonProperty
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     public List<URI> monarch;
-
-    @JsonSetter("monarch")
-    public void setMonarchs(JsonNode node) {
-        this.monarch = oneOrMany(node, URI.class);
-    }
 
     @JsonProperty
     public List<URI> overlapsCalendarYear;

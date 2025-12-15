@@ -1,8 +1,7 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
@@ -23,12 +22,8 @@ public class Interpretation7 {
     public URI languageOfText;
 
     @JsonProperty
-    public ValueAndType languageOfTextIsoCode;
-
-    @JsonSetter("languageOfTextIsoCode")
-    public void setLanguageOfTextIsoCode(JsonNode node) {
-        languageOfTextIsoCode = ValueAndType.convert(node);
-    }
+    @JsonDeserialize(using = ValueAndType.DefensiveStringDeserializer.class)
+    public String languageOfTextIsoCode;
 
     @JsonProperty
     public ValueAndLanguage longTitle;

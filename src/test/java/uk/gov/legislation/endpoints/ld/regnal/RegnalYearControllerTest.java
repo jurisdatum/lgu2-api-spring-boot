@@ -101,7 +101,7 @@ class RegnalYearControllerTest {
     void shouldReturnMappedDataForJson() throws Exception {
         // Create test data for the mapped path
         RegnalYearLD regnalYearLD = new RegnalYearLD();
-        regnalYearLD.id = URI.create("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1");
+        regnalYearLD.uri = URI.create("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1");
         regnalYearLD.label = "1st year of reign of Queen Elizabeth I";
         regnalYearLD.yearOfReign = 1;
         regnalYearLD.reign = URI.create("http://www.legislation.gov.uk/id/reign/Eliz1");
@@ -121,9 +121,9 @@ class RegnalYearControllerTest {
             .andExpect(jsonPath("$.uri").value("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1"))
             .andExpect(jsonPath("$.label").value("1st year of reign of Queen Elizabeth I"))
             .andExpect(jsonPath("$.yearOfReign").value(1))
-            .andExpect(jsonPath("$.reign").value("Eliz1"))
-            .andExpect(jsonPath("$.startDate").value("1558-11-17"))
-            .andExpect(jsonPath("$.endDate").value("1559-11-16"));
+            .andExpect(jsonPath("$.reign").value("http://www.legislation.gov.uk/id/reign/Eliz1"))
+            .andExpect(jsonPath("$.startDate").value("http://www.legislation.gov.uk/def/date/1558-11-17"))
+            .andExpect(jsonPath("$.endDate").value("http://www.legislation.gov.uk/def/date/1559-11-16"));
 
         verify(query).fetchMappedData(reignCaptor.capture(), yearCaptor.capture());
         assertEquals(reign, reignCaptor.getValue(), "Reign parameter should match");

@@ -7,7 +7,6 @@ import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.converters.ld.RegnalYearConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.RegnalYearQuery;
 
@@ -32,7 +31,6 @@ public class RegnalYearController implements RegnalYearApi {
                 .body(result);
         }
         return query.fetchMappedData(reign, regnalYear)
-            .map(RegnalYearConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
