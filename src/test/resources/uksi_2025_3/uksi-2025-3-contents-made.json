@@ -39,6 +39,15 @@
       "date" : "2025-01-06",
       "size" : 76463
     } ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/uksi/2025/3/pdfs/uksi_20250003_en.pdf",
+      "label" : "Original: King's Printer Version",
+      "date" : "2025-01-06",
+      "size" : 235678,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/uksi/2025/3/images/uksi_20250003_en.jpg"
+    } ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

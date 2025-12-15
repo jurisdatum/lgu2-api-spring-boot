@@ -23,6 +23,7 @@
     "pointInTime" : "2007-01-01",
     "alternatives" : [ ],
     "associated" : [ ],
+    "altFormats" : [ ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

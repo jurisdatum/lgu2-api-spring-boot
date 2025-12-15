@@ -111,7 +111,7 @@ public abstract class CommonMetadata {
     }
 
     @JsonProperty
-    @Schema(description = "alternative formats")
+    @Schema(deprecated = true)
     public List<AssociatedDocument> alternatives;
 
     @JsonProperty

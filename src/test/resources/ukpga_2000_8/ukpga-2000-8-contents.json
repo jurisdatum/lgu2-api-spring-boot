@@ -31,6 +31,15 @@
       "size" : null
     } ],
     "associated" : [ ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/ukpga/2000/8/pdfs/ukpga_20000008_en.pdf",
+      "label" : "Print Version",
+      "date" : "2008-03-02",
+      "size" : null,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/ukpga/2000/8/images/ukpga_20000008_en.jpg"
+    } ],
     "unappliedEffects" : [ {
       "applied" : false,
       "required" : true,

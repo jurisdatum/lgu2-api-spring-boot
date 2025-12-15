@@ -43,6 +43,15 @@
       "date" : "2024-04-11",
       "size" : 113253
     } ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/ukpga/2023/29/pdfs/ukpga_20230029_en.pdf",
+      "label" : "Original: King's Printer Version",
+      "date" : "2023-07-10",
+      "size" : 1839003,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/ukpga/2023/29/images/ukpga_20230029_en.jpg"
+    } ],
     "unappliedEffects" : [ {
       "applied" : false,
       "required" : true,
