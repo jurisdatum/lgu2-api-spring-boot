@@ -1,8 +1,4 @@
-package uk.gov.legislation.converters.ld;
-
-import uk.gov.legislation.data.virtuoso.jsonld.Interpretation7;
-import uk.gov.legislation.data.virtuoso.jsonld.Interpretation8;
-import uk.gov.legislation.data.virtuoso.jsonld.Item;
+package uk.gov.legislation.data.virtuoso.jsonld;
 
 public class Interpretation7to8 {
 

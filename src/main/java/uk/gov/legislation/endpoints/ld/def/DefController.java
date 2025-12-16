@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.classinfo;
+package uk.gov.legislation.endpoints.ld.def;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.queries.ClassQuery;
+import uk.gov.legislation.data.virtuoso.queries.DefQuery;
 
 @RestController
-public class ClassInfoController implements ClassInfoApi {
+public class DefController implements DefApi {
 
-    private final ClassQuery query;
+    private final DefQuery query;
 
     private final ContentNegotiationManager negotiation;
 
-    public ClassInfoController(ClassQuery query, ContentNegotiationManager negotiation) {
+    public DefController(DefQuery query, ContentNegotiationManager negotiation) {
         this.query = query;
         this.negotiation = negotiation;
     }

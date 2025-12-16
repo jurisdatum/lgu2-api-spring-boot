@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.LegislatureLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Legislature;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public class LegislatureQuery {
         return virtuoso.query(query, format);
     }
 
-    public Optional<LegislatureLD> get(String name) throws IOException, InterruptedException {
+    public Optional<Legislature> get(String name) throws IOException, InterruptedException {
         String json = get(name, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         if (graph == null)
@@ -36,7 +36,7 @@ public class LegislatureQuery {
             return Optional.empty();
         return Optional.of(graph.get(0))
             .map(ObjectNode.class::cast)
-            .map(LegislatureLD::convert);
+            .map(Legislature::convert);
     }
 
 }

@@ -4,11 +4,8 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
 import org.springframework.stereotype.Repository;
-import uk.gov.legislation.converters.ld.Interpretation7to8;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.Interpretation8;
-import uk.gov.legislation.data.virtuoso.jsonld.Interpretation7;
+import uk.gov.legislation.data.virtuoso.jsonld.*;
 import uk.gov.legislation.data.virtuoso.jsonld.Item;
 
 import java.io.IOException;

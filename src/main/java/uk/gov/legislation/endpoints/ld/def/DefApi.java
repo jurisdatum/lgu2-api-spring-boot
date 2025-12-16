@@ -1,4 +1,4 @@
-package uk.gov.legislation.endpoints.ld.classinfo;
+package uk.gov.legislation.endpoints.ld.def;
 
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.context.request.NativeWebRequest;
 
 @Tag(name = "Linked Data", description = "APIs for fetching class information")
-public interface ClassInfoApi {
+public interface DefApi {
 
     @GetMapping(
-        value = "/ld/class/{name}",
+        value = { "/ld/def/{name}", "/ld/class/{name}" },
         produces = {
             "application/xml",
             "application/json",
@@ -27,7 +27,6 @@ public interface ClassInfoApi {
     )
     ResponseEntity<?> getClassInfo(NativeWebRequest request,
         @PathVariable
-        @Parameter(description = "Name of class", example = "Item")
+        @Parameter(description = "Name of resource", example = "Item")
         String name) throws Exception;
-
 }

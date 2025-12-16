@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import java.net.URI;
 import java.util.List;
 
-public class RegnalYearLD {
+public class Reign {
 
     @JsonProperty("uri")
     @JsonAlias("@id")
@@ -25,25 +25,31 @@ public class RegnalYearLD {
     public URI endCalendarYear;
 
     @JsonProperty
+    public URI endRegnalYear;
+
+    @JsonProperty
     public URI startCalendarYear;
 
     @JsonProperty
-    public Integer yearOfReign;
+    public URI startRegnalYear;
 
     @JsonProperty
     public URI endDate;
 
     @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
+    public List<URI> monarch;
+
+    @JsonProperty
     public List<URI> overlapsCalendarYear;
 
     @JsonProperty
-    public URI reign;
+    public List<URI> overlapsRegnalYear;
 
     @JsonProperty
     public URI startDate;
 
-    public static RegnalYearLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, RegnalYearLD.class);
+    public static Reign convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, Reign.class);
     }
 
 }

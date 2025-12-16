@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 
-public class LegislatureLD {
+public class Legislature {
 
     @JsonProperty("uri")
     @JsonAlias("@id")
@@ -16,8 +16,8 @@ public class LegislatureLD {
     @JsonAlias("@type")
     public URI type;
 
-    public static LegislatureLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, LegislatureLD.class);
+    public static Legislature convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, Legislature.class);
     }
 
 }

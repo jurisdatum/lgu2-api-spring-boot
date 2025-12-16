@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.jsonld.ClassLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Def;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 
 import java.io.IOException;
@@ -14,11 +14,11 @@ import java.util.Optional;
 import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
 
 @Repository
-public class ClassQuery {
+public class DefQuery {
 
     private final Virtuoso virtuoso;
 
-    public ClassQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public DefQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
     String makeSparqlQuery(String name) {
         String uri = Resources.Leg.Prefix + name;
@@ -30,12 +30,12 @@ public class ClassQuery {
         return virtuoso.query(query, format);
     }
 
-    public Optional<ClassLD> get(String name) throws IOException, InterruptedException {
+    public Optional<Def> get(String name) throws IOException, InterruptedException {
         String json = get(name, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         return Optional.ofNullable(graph)
             .map(grph -> (ObjectNode) grph.get(0))
-            .map(ClassLD::convert);
+            .map(Def::convert);
     }
 
 }

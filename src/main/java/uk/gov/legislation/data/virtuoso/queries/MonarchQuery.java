@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.MonarchLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Monarch;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -28,13 +28,13 @@ public class MonarchQuery {
         return virtuoso.query(query, format);
     }
 
-    public Optional<MonarchLD> fetchMappedData(String monarchName) throws IOException, InterruptedException {
+    public Optional<Monarch> fetchMappedData(String monarchName) throws IOException, InterruptedException {
         String jsonData = fetchRawData(monarchName, "application/ld+json");
 
         return Optional.ofNullable(Graph.extract(jsonData))
             .filter(graph -> !graph.isEmpty())
             .map(graph -> (ObjectNode) graph.get(0))
-            .map(MonarchLD::convert);
+            .map(Monarch::convert);
     }
 
 }

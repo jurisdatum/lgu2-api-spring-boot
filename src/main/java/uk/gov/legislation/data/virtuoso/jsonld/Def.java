@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 @JsonIgnoreProperties(ignoreUnknown = false)
-public class ClassLD {
+public class Def {
 
     @JsonProperty("uri")
     @JsonAlias("@id")
@@ -32,8 +32,8 @@ public class ClassLD {
         return other;
     }
 
-    public static ClassLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, ClassLD.class);
+    public static Def convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, Def.class);
     }
 
 }

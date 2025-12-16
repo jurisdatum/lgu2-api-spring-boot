@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.SessionLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Session;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -31,7 +31,7 @@ public class SessionQuery {
         return virtuoso.query(constructQuery(session), format);
     }
 
-    public Optional<SessionLD> fetchMappedData(String session)
+    public Optional<Session> fetchMappedData(String session)
         throws IOException, InterruptedException {
         String jsonData = fetchRawData(session, "application/ld+json");
         return toMappedData(jsonData);
@@ -50,17 +50,17 @@ public class SessionQuery {
         return virtuoso.query(constructQuery(legislature, reign, session), format);
     }
 
-    public Optional<SessionLD> fetchMappedData(String legislature, String reign, String session)
+    public Optional<Session> fetchMappedData(String legislature, String reign, String session)
         throws IOException, InterruptedException {
         String jsonData = fetchRawData(legislature, reign, session,"application/ld+json");
         return toMappedData(jsonData);
     }
 
-    private Optional<SessionLD> toMappedData(String jsonData) throws JsonProcessingException {
+    private Optional<Session> toMappedData(String jsonData) throws JsonProcessingException {
         return Optional.ofNullable(Graph.extract(jsonData))
             .filter(graph -> !graph.isEmpty())
             .map(graph -> (ObjectNode) graph.get(0))
-            .map(SessionLD::convert);
+            .map(Session::convert);
     }
 
 }
