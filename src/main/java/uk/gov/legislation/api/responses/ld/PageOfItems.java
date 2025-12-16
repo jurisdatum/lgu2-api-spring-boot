@@ -1,6 +1,7 @@
 package uk.gov.legislation.api.responses.ld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import uk.gov.legislation.data.virtuoso.jsonld.Item;
 
 import java.util.List;
 

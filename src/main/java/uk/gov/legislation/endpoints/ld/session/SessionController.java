@@ -7,7 +7,6 @@ import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.converters.ld.SessionConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.SessionQuery;
 
@@ -35,7 +34,6 @@ public class SessionController implements SessionApi {
         }
 
         return query.fetchMappedData(legislature, reign, session)
-            .map(SessionConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
 
@@ -53,7 +51,6 @@ public class SessionController implements SessionApi {
         }
 
         return query.fetchMappedData(session)
-            .map(SessionConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.RegnalYearLD;
+import uk.gov.legislation.data.virtuoso.jsonld.RegnalYear;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -30,7 +30,7 @@ public class RegnalYearQuery {
         return virtuoso.query(constructQueryForRegnal(reign, regnalYear), format);
     }
 
-    public Optional<RegnalYearLD> fetchMappedData(String reign, Integer regnalYear)
+    public Optional<RegnalYear> fetchMappedData(String reign, Integer regnalYear)
         throws IOException, InterruptedException {
         ArrayNode graphNodes = Graph.extract(fetchRawData(reign, regnalYear, "application/ld+json"));
 
@@ -39,7 +39,7 @@ public class RegnalYearQuery {
             .map(nodes -> nodes.get(0))
 //            .filter(JsonNode::isObject)
             .map(ObjectNode.class::cast)
-            .map(RegnalYearLD::convert);
+            .map(RegnalYear::convert);
     }
 
 }

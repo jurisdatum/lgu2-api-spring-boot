@@ -1,17 +1,21 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 import java.util.List;
 
-public class RegnalYearLD {
+public class RegnalYear {
 
-    @JsonProperty("@id")
-    public URI id;
+    @JsonProperty("uri")
+    @JsonAlias("@id")
+    public URI uri;
 
-    @JsonProperty("@type")
+    @JsonProperty("type")
+    @JsonAlias("@type")
     public URI type;
 
     @JsonProperty
@@ -29,7 +33,7 @@ public class RegnalYearLD {
     @JsonProperty
     public URI endDate;
 
-    @JsonProperty
+    @JsonFormat(with = JsonFormat.Feature.ACCEPT_SINGLE_VALUE_AS_ARRAY)
     public List<URI> overlapsCalendarYear;
 
     @JsonProperty
@@ -38,8 +42,8 @@ public class RegnalYearLD {
     @JsonProperty
     public URI startDate;
 
-    public static RegnalYearLD convert(ObjectNode node) {
-        return Graph.mapper.convertValue(node, RegnalYearLD.class);
+    public static RegnalYear convert(ObjectNode node) {
+        return Graph.mapper.convertValue(node, RegnalYear.class);
     }
 
 }

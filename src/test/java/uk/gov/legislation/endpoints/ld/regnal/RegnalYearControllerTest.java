@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.accept.ContentNegotiationManager;
-import uk.gov.legislation.data.virtuoso.jsonld.RegnalYearLD;
+import uk.gov.legislation.data.virtuoso.jsonld.RegnalYear;
 import uk.gov.legislation.data.virtuoso.queries.RegnalYearQuery;
 
 import java.net.URI;
@@ -100,34 +100,34 @@ class RegnalYearControllerTest {
     @DisplayName("Should return converted mapped data for JSON format")
     void shouldReturnMappedDataForJson() throws Exception {
         // Create test data for the mapped path
-        RegnalYearLD regnalYearLD = new RegnalYearLD();
-        regnalYearLD.id = URI.create("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1");
-        regnalYearLD.label = "1st year of reign of Queen Elizabeth I";
-        regnalYearLD.yearOfReign = 1;
-        regnalYearLD.reign = URI.create("http://www.legislation.gov.uk/id/reign/Eliz1");
-        regnalYearLD.startDate = URI.create("http://www.legislation.gov.uk/def/date/1558-11-17");
-        regnalYearLD.endDate = URI.create("http://www.legislation.gov.uk/def/date/1559-11-16");
+        RegnalYear regnalYear = new RegnalYear();
+        regnalYear.uri = URI.create("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1");
+        regnalYear.label = "1st year of reign of Queen Elizabeth I";
+        regnalYear.yearOfReign = 1;
+        regnalYear.reign = URI.create("http://www.legislation.gov.uk/id/reign/Eliz1");
+        regnalYear.startDate = URI.create("http://www.legislation.gov.uk/def/date/1558-11-17");
+        regnalYear.endDate = URI.create("http://www.legislation.gov.uk/def/date/1559-11-16");
 
         ArgumentCaptor<String> reignCaptor = ArgumentCaptor.forClass(String.class);
         ArgumentCaptor<Integer> yearCaptor = ArgumentCaptor.forClass(Integer.class);
 
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
-        when(query.fetchMappedData(any(), any())).thenReturn(Optional.of(regnalYearLD));
+        when(query.fetchMappedData(any(), any())).thenReturn(Optional.of(regnalYear));
 
-        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
+        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, this.regnalYear)
                 .accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
             .andExpect(jsonPath("$.uri").value("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1"))
             .andExpect(jsonPath("$.label").value("1st year of reign of Queen Elizabeth I"))
             .andExpect(jsonPath("$.yearOfReign").value(1))
-            .andExpect(jsonPath("$.reign").value("Eliz1"))
-            .andExpect(jsonPath("$.startDate").value("1558-11-17"))
-            .andExpect(jsonPath("$.endDate").value("1559-11-16"));
+            .andExpect(jsonPath("$.reign").value("http://www.legislation.gov.uk/id/reign/Eliz1"))
+            .andExpect(jsonPath("$.startDate").value("http://www.legislation.gov.uk/def/date/1558-11-17"))
+            .andExpect(jsonPath("$.endDate").value("http://www.legislation.gov.uk/def/date/1559-11-16"));
 
         verify(query).fetchMappedData(reignCaptor.capture(), yearCaptor.capture());
         assertEquals(reign, reignCaptor.getValue(), "Reign parameter should match");
-        assertEquals(regnalYear, yearCaptor.getValue(), "Regnal year parameter should match");
+        assertEquals(this.regnalYear, yearCaptor.getValue(), "Regnal year parameter should match");
         verifyNoMoreInteractions(query);
     }
 

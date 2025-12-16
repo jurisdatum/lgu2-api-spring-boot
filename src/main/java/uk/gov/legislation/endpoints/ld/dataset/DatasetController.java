@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.converters.ld.DataSetConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.DatasetQuery;
 
@@ -35,7 +34,6 @@ public class DatasetController implements DatasetApi {
             return ResponseEntity.ok(data);
         }
         return query.get(id)
-            .map(DataSetConverter::convert)
             .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }

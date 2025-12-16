@@ -2,11 +2,9 @@ package uk.gov.legislation.data.virtuoso.queries;
 
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
-import uk.gov.legislation.converters.ld.MonarchConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.api.responses.ld.Monarch;
-import uk.gov.legislation.data.virtuoso.jsonld.MonarchLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Monarch;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -36,8 +34,7 @@ public class MonarchQuery {
         return Optional.ofNullable(Graph.extract(jsonData))
             .filter(graph -> !graph.isEmpty())
             .map(graph -> (ObjectNode) graph.get(0))
-            .map(MonarchLD::convert)
-            .map(MonarchConverter::convert);
+            .map(Monarch::convert);
     }
 
 }

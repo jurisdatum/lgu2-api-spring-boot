@@ -3,11 +3,9 @@ package uk.gov.legislation.data.virtuoso.queries;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
-import uk.gov.legislation.api.responses.ld.Legislature;
-import uk.gov.legislation.converters.ld.LegislatureConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
-import uk.gov.legislation.data.virtuoso.jsonld.LegislatureLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Legislature;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -38,8 +36,7 @@ public class LegislatureQuery {
             return Optional.empty();
         return Optional.of(graph.get(0))
             .map(ObjectNode.class::cast)
-            .map(LegislatureLD::convert)
-            .map(LegislatureConverter::convert);
+            .map(Legislature::convert);
     }
 
 }

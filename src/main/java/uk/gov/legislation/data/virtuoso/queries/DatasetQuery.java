@@ -2,13 +2,13 @@ package uk.gov.legislation.data.virtuoso.queries;
 
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.jsonld.DatasetLD;
+import uk.gov.legislation.data.virtuoso.jsonld.Dataset;
 
 @Repository
-public class DatasetQuery extends SingleParameterQuery<DatasetLD> {
+public class DatasetQuery extends SingleParameterQuery<Dataset> {
 
     public DatasetQuery(Virtuoso virtuoso) {
-        super(virtuoso, DatasetLD.class);
+        super(virtuoso, Dataset.class);
     }
 
     @Override
