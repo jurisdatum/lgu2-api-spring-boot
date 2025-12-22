@@ -1,9 +1,14 @@
 package uk.gov.legislation.endpoints.document;
 
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
+import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.converters.ImpactAssessmentConverter;
+import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.transform.Transforms;
@@ -20,9 +25,12 @@ public class DocumentController implements DocumentApi {
 
     private final Transforms transforms;
 
-    public DocumentController(Legislation marklogic, Transforms transforms) {
+    private final Impacts impacts;
+
+    public DocumentController(Legislation marklogic, Transforms transforms, Impacts impacts) {
         this.marklogic = marklogic;
         this.transforms = transforms;
+        this.impacts = impacts;
     }
 
     /* CLML */
@@ -38,6 +46,12 @@ public class DocumentController implements DocumentApi {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, clml -> clml);
+    }
+
+    @Override
+    public String getImpactAssessmentClml(int year, int number) throws Exception {
+        return impacts.getXml(year, number)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     /* Akoma Ntoso */
@@ -85,6 +99,13 @@ public class DocumentController implements DocumentApi {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2document);
+    }
+
+    @Override
+    public Associated getImpactAssessmentJson(int year, int number) throws Exception {
+        return impacts.get(year, number)
+            .map(ImpactAssessmentConverter::convert)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     /* Word (.docx) */

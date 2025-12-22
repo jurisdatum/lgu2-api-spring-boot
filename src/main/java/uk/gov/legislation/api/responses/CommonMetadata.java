@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.responses.meta.AssociatedDocument;
+import uk.gov.legislation.api.responses.meta.MetaCore;
 import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
@@ -11,26 +12,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 
-public abstract class CommonMetadata {
-
-    @Schema(example = "ukpga/2024/1")
-    public String id;
-
-    @Schema(example = "UnitedKingdomPublicGeneralAct")
-    public String longType;
-
-    @Schema(allowableValues = { "ukpga" }, example = "ukpga")
-    public String shortType;
-
-    @Schema(example = "2014")
-    public int year;
-
-    @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    public String regnalYear;
-
-    @Schema(example = "1")
-    public Integer number;
+public abstract class CommonMetadata extends MetaCore {
 
     @Schema(requiredMode = Schema.RequiredMode.NOT_REQUIRED)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)

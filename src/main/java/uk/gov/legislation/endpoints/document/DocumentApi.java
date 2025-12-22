@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.Document;
 
 import java.util.Locale;
@@ -63,6 +64,11 @@ public interface DocumentApi {
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
             Locale locale) throws Exception;
+
+    @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/xml")
+    String getImpactAssessmentClml(
+        @PathVariable @Year int year,
+        @PathVariable @Number int number) throws Exception;
 
     /**
      * Retrieves document content in AKN format.
@@ -124,6 +130,10 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             Locale locale) throws Exception;
 
+    @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/json")
+    Associated getImpactAssessmentJson(
+        @PathVariable int year,
+        @PathVariable int number) throws Exception;
 
     /* Word (.docx) */
 
