@@ -27,9 +27,8 @@ public class EffectsController implements EffectsApi {
     }
 
     public String atom(EffectsParameters param) throws IOException, InterruptedException {
-
         validateType(param.getTargetType());
-        validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getSourceEndYear());
+        validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
         validateType(param.getSourceType());
         validateYears(param.getSourceYear(), param.getSourceStartYear(), param.getSourceEndYear());
         Parameters params = Parameters.builder()
@@ -53,11 +52,7 @@ public class EffectsController implements EffectsApi {
 
 
     public PageOfEffects json(EffectsParameters param) throws IOException, InterruptedException, SaxonApiException {
-
-        validateType(param.getTargetType());
-        validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getSourceEndYear());
-        validateType(param.getSourceType());
-        validateYears(param.getSourceYear(), param.getSourceStartYear(), param.getSourceEndYear());
+        // parameter validation done in atom() method
         String atom = atom(param);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);

@@ -1,6 +1,7 @@
 package uk.gov.legislation.endpoints.effects;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 
 public class EffectsParameters {
@@ -18,7 +19,7 @@ public class EffectsParameters {
     private Integer sourceEndYear;
     private String sourceTitle;
     private Parameters.AppliedStatus applied;
-    private int page;
+    private Integer page;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Parameters.AppliedStatus getApplied() {
@@ -30,11 +31,12 @@ public class EffectsParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public int getPage() {
+    @Schema(defaultValue = "1")
+    public Integer getPage() {
         return page;
     }
 
-    public void setPage(int page) {
+    public void setPage(Integer page) {
         this.page = page;
     }
 
