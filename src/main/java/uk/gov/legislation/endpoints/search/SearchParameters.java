@@ -3,10 +3,9 @@ package uk.gov.legislation.endpoints.search;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Sort;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
-import uk.gov.legislation.util.Stage;
 
 import java.time.LocalDate;
 import java.util.EnumSet;
@@ -36,7 +35,7 @@ public class SearchParameters {
     private EnumSet<Extent> extent;
     private Boolean exclusiveExtent;
     private String department;
-    private Stage stage;
+    private String stage;
     private LocalDate pointInTime;
     private Integer page;
     private Integer pageSize;
@@ -164,14 +163,24 @@ public class SearchParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Stage getStage() {
+    @Schema(allowableValues = {
+        "Consultation",
+        "Development",
+        "Enactment",
+        "Final",
+        "Implementation",
+        "Options",
+        "Post Implementation"
+    })
+    public String getStage() {
         return stage;
     }
 
-    public void setStage(Stage stage) {
+    public void setStage(String stage) {
         this.stage = stage;
     }
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate getPointInTime() {
         return pointInTime;
     }
