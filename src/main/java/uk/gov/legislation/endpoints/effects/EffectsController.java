@@ -12,6 +12,7 @@ import uk.gov.legislation.transform.simple.effects.Page;
 import java.io.IOException;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+import static uk.gov.legislation.endpoints.search.SearchController.validateYears;
 
 @RestController
 public class EffectsController implements EffectsApi {
@@ -25,45 +26,34 @@ public class EffectsController implements EffectsApi {
         this.simplifier = simplifier;
     }
 
-    public String atom(
-        String targetType,
-        Integer targetYear,
-        Integer targetNumber,
-        String targetTitle,
-        String sourceType,
-        Integer sourceYear,
-        Integer sourceNumber,
-        String sourceTitle,
-        int page
-    ) throws IOException, InterruptedException {
-        validateType(targetType);
+    public String atom(EffectsParameters param) throws IOException, InterruptedException {
+        validateType(param.getTargetType());
+        validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
+        validateType(param.getSourceType());
+        validateYears(param.getSourceYear(), param.getSourceStartYear(), param.getSourceEndYear());
         Parameters params = Parameters.builder()
-            .affectedType(targetType)
-            .affectedYear(targetYear)
-            .affectedNumber(targetNumber)
-            .affectedTitle(targetTitle)
-            .affectingType(sourceType)
-            .affectingYear(sourceYear)
-            .affectingNumber(sourceNumber)
-            .affectingTitle(sourceTitle)
-            .page(page)
+            .affectedType(param.getTargetType())
+            .affectedYear(param.getTargetYear())
+            .affectedNumber(param.getTargetNumber())
+            .affectedStartYear(param.getTargetStartYear())
+            .affectedEndYear(param.getTargetEndYear())
+            .affectedTitle(param.getTargetTitle())
+            .affectingType(param.getSourceType())
+            .affectingYear(param.getSourceYear())
+            .affectingNumber(param.getSourceNumber())
+            .affectingStartYear(param.getSourceStartYear())
+            .affectingEndYear(param.getSourceEndYear())
+            .affectingTitle(param.getSourceTitle())
+            .applied(param.getApplied())
+            .page(param.getPage())
             .build();
         return db.fetch(params);
     }
 
-    public PageOfEffects json(
-        String targetType,
-        Integer targetYear,
-        Integer targetNumber,
-        String targetTitle,
-        String sourceType,
-        Integer sourceYear,
-        Integer sourceNumber,
-        String sourceTitle,
-        int page
-    ) throws IOException, InterruptedException, SaxonApiException {
-        validateType(targetType);
-        String atom = atom(targetType, targetYear, targetNumber, targetTitle, sourceType, sourceYear, sourceNumber, sourceTitle, page);
+
+    public PageOfEffects json(EffectsParameters param) throws IOException, InterruptedException, SaxonApiException {
+        // parameter validation done in atom() method
+        String atom = atom(param);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);
     }

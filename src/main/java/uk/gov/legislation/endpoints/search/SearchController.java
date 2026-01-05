@@ -53,7 +53,6 @@ public class SearchController implements SearchApi {
         throws IOException, InterruptedException {
 
         validateSearchParameters(param);
-
         return Optional.of(db.get(convert(param)))
             .map(results -> DocumentsFeedConverter.convert(results, param))
             .map(ResponseEntity::ok)
@@ -72,6 +71,8 @@ public class SearchController implements SearchApi {
             .published(params.getPublished())
             .text(params.getQ())
             .sort(params.getSort())
+            .extent(params.getExtent(), params.isExclusiveExtent())
+            .version(params.getPointInTime())
             .page(params.getPage())
             .pageSize(params.getPageSize());
         try {
