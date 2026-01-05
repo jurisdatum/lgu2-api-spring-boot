@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.endpoints.contents;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.legislation.api.test.response.ExpectedWelshResponseDataCy;
+import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
+import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
-import uk.gov.legislation.endpoints.fragment.FragmentController;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Transforms;
@@ -23,9 +23,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(FragmentController.class)
+@WebMvcTest(ContentsController.class)
 @Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class, Clml2Docx.class})
-class WelshFragmentTest {
+class WelshContentsTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -36,16 +36,16 @@ class WelshFragmentTest {
     @Test
     void test() throws Exception {
 
-        String clml = UnappliedEffectsHelper.read("/fragment_wsi_2024_1002_regulation_2_cy.xml");
+        String clml = UnappliedEffectsHelper.read("/contents_wsi_2024_1002_cy.xml");
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
-        when(mock.getDocumentSection("wsi", "2024", 1002, "regulation-2", Optional.empty(), Optional.of("cy")))
+        when(mock.getTableOfContents("wsi", "2024", 1002, Optional.empty(), Optional.of("cy")))
             .thenReturn(response);
 
-        mockMvc.perform(get("/fragment/wsi/2024/1002/regulation-2")
+        mockMvc.perform(get("/contents/wsi/2024/1002")
                 .header("Accept-Language", "cy"))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(content().json(ExpectedWelshResponseDataCy.FRAGMENT_WELSH_RESPONSE_CY_JSON));
+            .andExpect(content().json(ExpectedWelshResponseDataCy.CONTENT_WELSH_RESPONSE_CY_JSON));
     }
 
 }

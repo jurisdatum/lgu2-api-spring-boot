@@ -1,20 +1,19 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.util.UpToDate;
 
 import java.time.ZonedDateTime;
 import java.util.function.BiPredicate;
 
-import static uk.gov.legislation.api.test.TransformHelper.MAPPER;
-import static uk.gov.legislation.api.test.TransformTest.*;
+import static uk.gov.legislation.transform.TransformHelper.MAPPER;
+import static uk.gov.legislation.transform.TransformTest.*;
 
-public class TransformTestRedo {
+ class TransformTestRedo {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);

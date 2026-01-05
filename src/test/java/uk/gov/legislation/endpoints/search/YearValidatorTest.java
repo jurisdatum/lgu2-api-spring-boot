@@ -1,10 +1,10 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.endpoints.search;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
-import uk.gov.legislation.endpoints.search.SearchController;
+import uk.gov.legislation.api.test.LoggingTestWatcher;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(LoggingTestWatcher.class)

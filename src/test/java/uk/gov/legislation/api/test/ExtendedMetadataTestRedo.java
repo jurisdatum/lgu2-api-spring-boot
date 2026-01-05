@@ -7,9 +7,11 @@ import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.ExtendedMetadata;
 import uk.gov.legislation.converters.ExtendedMetadataConverter;
+import uk.gov.legislation.transform.TransformHelper;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 
 import javax.xml.transform.TransformerException;
 import java.io.IOException;
