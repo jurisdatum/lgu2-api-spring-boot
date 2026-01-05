@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
 
@@ -48,6 +49,7 @@ public class SearchParameters {
         this.types = types;
     }
 
+    @Year
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Integer getYear() {
         return year;
@@ -75,6 +77,7 @@ public class SearchParameters {
         this.endYear = endYear;
     }
 
+    @Number
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String getNumber() {
         return number;
@@ -84,6 +87,7 @@ public class SearchParameters {
         this.number = number;
     }
 
+    @Title
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String getTitle() {
         return title;
@@ -129,8 +133,8 @@ public class SearchParameters {
         this.q = q;
     }
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
     @Sort
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public Parameters.Sort getSort() {
         return sort;
     }
@@ -159,6 +163,7 @@ public class SearchParameters {
         this.pointInTime = pointInTime;
     }
 
+    @Page
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(defaultValue = "1")
     public Integer getPage() {

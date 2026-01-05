@@ -7,7 +7,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
-@Parameter(description = "The number of the document", example = "1")
-public @interface Number { }
+@Parameter(
+    name = "country",
+    description = "Country Specific Document Types(ex-uk, wales, scotland, ni etc.",
+    example = "uk"
+)
+public @interface Country {
+}

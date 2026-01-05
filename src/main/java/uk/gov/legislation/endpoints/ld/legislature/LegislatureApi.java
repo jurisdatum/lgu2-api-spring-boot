@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.context.request.NativeWebRequest;
+import uk.gov.legislation.api.parameters.Name;
 
 @Tag(name = "Linked Data")
 @RequestMapping("/ld/legislature")
@@ -25,5 +26,5 @@ public interface LegislatureApi {
         "text/turtle"
     })
      ResponseEntity <?> getCalendar(NativeWebRequest request,
-        @PathVariable String name) throws Exception;
+        @PathVariable @Name String name) throws Exception;
 }

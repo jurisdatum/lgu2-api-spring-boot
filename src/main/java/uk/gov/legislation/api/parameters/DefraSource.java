@@ -1,5 +1,6 @@
 package uk.gov.legislation.api.parameters;
 
+
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.media.Schema;
 
@@ -8,12 +9,13 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
 @Parameter(
-    description = "The sort order",
+    name = "source",
+    description = "The source of legislation",
     schema = @Schema(
-        allowableValues = { "title", "type", "relevance", "published" }
+        examples = { "domestic", "eu", "hybrid", "international" }
     )
 )
-public @interface Sort { }
+public @interface DefraSource { }
