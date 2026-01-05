@@ -1,0 +1,148 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/mwa/2011/7" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7" NumberOfProvisions="34" xml:lang="en" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" SchemaVersion="1.0" RestrictStartDate="2022-09-01" RestrictExtent="E+W">
+    <ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+        <dc:identifier>http://www.legislation.gov.uk/mwa/2011/7/section/1</dc:identifier>
+        <dc:title>Education (Wales) Measure 2011</dc:title>
+        <dc:description>A Measure of the National Assembly for Wales to make provision for collaboration between local authorities, governing bodies of maintained schools and further education institutions; to make provision for the federation of maintained schools, the training of governors and clerks to governing bodies of maintained schools and the provision of such clerks; to make provision prohibiting new foundation schools; and for connected purposes.</dc:description>
+        <dc:type>text</dc:type>
+        <dc:format>text/xml</dc:format>
+        <dc:language>en</dc:language>
+        <dc:publisher>Statute Law Database</dc:publisher>
+        <dc:modified>2025-03-10</dc:modified>
+        <dc:contributor>Expert Participation</dc:contributor>
+        <dct:valid>2022-09-01</dct:valid>
+        <atom:link rel="self" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.xml" type="application/xml"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/mwa/2011/7/resources" title="More Resources"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes" href="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/notes" title="Explanatory Notes"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/notes/toc" href="http://www.legislation.gov.uk/mwa/2011/7/notes/contents" title="Explanatory Notes Table of Contents"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/mwa/2011/7" title="whole act"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/mwa/2011/7/introduction" title="introduction"/>
+        <atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/mwa/2011/7/body" title="body"/>
+        <atom:link rel="alternate" hreflang="cy" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/welsh"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="cy" href="http://www.legislation.gov.uk/mwa/2011/7/contents/welsh" title="Table of Contents"/>
+        <atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.rdf" title="RDF/XML"/>
+        <atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.akn" title="AKN"/>
+        <atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.xht" title="HTML snippet"/>
+        <atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.htm" title="Website (XHTML) Default View"/>
+        <atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.csv" title="CSV"/>
+        <atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.pdf" title="PDF"/>
+        <atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/data.html" title="HTML5 snippet"/>
+        <atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/mwa/2011/7/contents" title="Table of Contents"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/enacted" title="enacted" hreflang="en"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/enacted/welsh" title="enacted" hreflang="cy"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/2012-11-16" title="2012-11-16" hreflang="en"/>
+        <atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/mwa/2011/7/section/1/2012-11-16/welsh" title="2012-11-16" hreflang="cy"/>
+        <atom:link rel="up" href="http://www.legislation.gov.uk/mwa/2011/7" title="Entire legislation"/>
+        <atom:link rel="prev" href="http://www.legislation.gov.uk/mwa/2011/7/introduction" title="Introduction; Introduction"/>
+        <atom:link rel="prevInForce" href="http://www.legislation.gov.uk/mwa/2011/7/introduction" title="Introduction; Introduction"/>
+        <atom:link rel="next" href="http://www.legislation.gov.uk/mwa/2011/7/section/2" title="Provision; Section 2"/>
+        <atom:link rel="nextInForce" href="http://www.legislation.gov.uk/mwa/2011/7/section/2" title="Provision; Section 2"/>
+        <ukm:PrimaryMetadata>
+            <ukm:DocumentClassification>
+                <ukm:DocumentCategory Value="primary"/>
+                <ukm:DocumentMainType Value="WelshAssemblyMeasure"/>
+                <ukm:DocumentStatus Value="revised"/>
+            </ukm:DocumentClassification>
+            <ukm:Year Value="2011"/>
+            <ukm:Number Value="7"/>
+            <ukm:ISBN Value="9780348105001"/>
+        </ukm:PrimaryMetadata>
+        <ukm:Notes>
+            <ukm:Note IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/notes" DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/notes"/>
+            <ukm:Alternatives>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_we.pdf" Date="2011-05-12" Title="Explanatory Note" Size="135060" Language="Welsh"/>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_mi.pdf" Date="2011-05-12" Title="Explanatory Note" Size="213719" Language="Mixed"/>
+                <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaen_20110007_en.pdf" Date="2011-05-12" Title="Explanatory Note" Size="121000"/>
+            </ukm:Alternatives>
+        </ukm:Notes>
+        <ukm:OrdersInCouncil>
+            <ukm:OrderInCouncil URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwaoic_20110007_en.pdf" Date="2011-05-12" Title="Order in Council" Size="63843"/>
+        </ukm:OrdersInCouncil>
+        <ukm:Alternatives>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_mi.pdf" Date="2011-05-11" Size="151652" Language="Mixed"/>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_en.pdf" Date="2011-05-11" Size="149269"/>
+            <ukm:Alternative URI="http://www.legislation.gov.uk/mwa/2011/7/pdfs/mwa_20110007_we.pdf" Date="2011-05-11" Size="151060" Language="Welsh"/>
+        </ukm:Alternatives>
+        <ukm:Statistics>
+            <ukm:TotalParagraphs Value="34"/>
+            <ukm:BodyParagraphs Value="34"/>
+            <ukm:ScheduleParagraphs Value="0"/>
+            <ukm:AttachmentParagraphs Value="0"/>
+            <ukm:TotalImages Value="0"/>
+        </ukm:Statistics>
+    </ukm:Metadata>
+    <Primary>
+        <Body DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/body" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/body" NumberOfProvisions="34" RestrictStartDate="2022-09-01">
+            <Part DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/part/1" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/part/1" NumberOfProvisions="9" id="part-1" RestrictStartDate="2022-09-01">
+                <Number>
+                    <Strong>PART 1</Strong>
+                </Number>
+                <Title>COLLABORATION BY EDUCATION BODIES</Title>
+                <P1group RestrictStartDate="2012-11-16">
+                    <Title>Education bodies</Title>
+                    <P1 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1" id="section-1">
+                        <Pnumber PuncAfter="">
+                            <CommentaryRef Ref="key-f2d6aa2d488b3b45c298cb3b66e2612f"/>
+                            1
+                        </Pnumber>
+                        <P1para>
+                            <Text>
+                                For the purposes of this Part, an “
+                                <Term id="term-education-body">education body</Term>
+                                ” means—
+                            </Text>
+                            <P3 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/a" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/a" id="section-1-a">
+                                <Pnumber>a</Pnumber>
+                                <P3para>
+                                    <Text>a local authority in Wales;</Text>
+                                </P3para>
+                            </P3>
+                            <P3 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/b" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/b" id="section-1-b">
+                                <Pnumber>b</Pnumber>
+                                <P3para>
+                                    <Text>the governing body of a maintained school in Wales;</Text>
+                                </P3para>
+                            </P3>
+                            <P3 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/c" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/c" id="section-1-c">
+                                <Pnumber>c</Pnumber>
+                                <P3para>
+                                    <Text>a further education corporation (as defined by section 17(1) of the Further and Higher Education Act 1992) in Wales;</Text>
+                                </P3para>
+                            </P3>
+                            <P3 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/d" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/d" id="section-1-d">
+                                <Pnumber>d</Pnumber>
+                                <P3para>
+                                    <Text>the governing body of a designated institution (as defined by section 28(4) of that Act) in Wales, which—</Text>
+                                    <P4 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/d/i" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/d/i" id="section-1-d-i">
+                                        <Pnumber>i</Pnumber>
+                                        <P4para>
+                                            <Text>is a body incorporated by virtue of section 143(5) of the Learning and Skills Act 2000, and</Text>
+                                        </P4para>
+                                    </P4>
+                                    <P4 DocumentURI="http://www.legislation.gov.uk/mwa/2011/7/section/1/d/ii" IdURI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1/d/ii" id="section-1-d-ii">
+                                        <Pnumber>ii</Pnumber>
+                                        <P4para>
+                                            <Text>is exclusively or mainly providing full-time education for persons who are above compulsory school age but who have not attained the age of 19.</Text>
+                                        </P4para>
+                                    </P4>
+                                </P3para>
+                            </P3>
+                        </P1para>
+                    </P1>
+                </P1group>
+            </Part>
+        </Body>
+    </Primary>
+    <Commentaries>
+        <Commentary id="key-f2d6aa2d488b3b45c298cb3b66e2612f" Type="I">
+            <Para>
+                <Text>
+                    <CitationSubRef SectionRef="section-1" URI="http://www.legislation.gov.uk/id/mwa/2011/7/section/1" id="cpv2rlbm1-00007">S. 1</CitationSubRef>
+                    in force at 16.11.2012 by
+                    <Citation URI="http://www.legislation.gov.uk/id/wsi/2012/2656" Class="WelshStatutoryInstrument" Year="2012" Number="2656" Title="The Education (Wales) Measure 2011 (Commencement No. 1) Order 2012" id="cpv2rlbm1-00008">S.I. 2012/2656</Citation>
+                    ,
+                    <CitationSubRef SectionRef="article-2" URI="http://www.legislation.gov.uk/id/wsi/2012/2656/article/2" CitationRef="cpv2rlbm1-00008" Operative="true" id="cpv2rlbm1-00009">art. 2</CitationSubRef>
+                </Text>
+            </Para>
+        </Commentary>
+    </Commentaries>
+</Legislation>

@@ -1,0 +1,78 @@
+{
+  "meta" : {
+    "id" : "eudr/2020/2089",
+    "longType" : "EuropeanUnionDirective",
+    "shortType" : "eudr",
+    "year" : 2020,
+    "number" : 2089,
+    "date" : "2020-12-11",
+    "cite" : "2020 No. 2089",
+    "version" : "2020-12-11",
+    "status" : "revised",
+    "title" : "Commission Directive (EU) 2020/2089 of 11 December 2020 amending Annex II to Directive 2009/48/EC of the European Parliament and of the Council as regards the prohibition of allergenic fragrances in toys (Text with EEA relevance)",
+    "extent" : [ "E", "W", "S", "NI" ],
+    "lang" : "en",
+    "publisher" : "King's Printer of Acts of Parliament",
+    "modified" : "2020-12-17",
+    "versions" : [ "adopted", "2020-12-11" ],
+    "has" : {
+      "introduction" : true,
+      "signature" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : "2020-12-11",
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/eudr/2020/2089/pdfs/eudr_20202089_adopted_en.pdf",
+      "name" : null,
+      "date" : "2020-12-11",
+      "size" : 532550
+    } ],
+    "associated" : [ ],
+    "fragment" : "article/1",
+    "prev" : "introduction",
+    "next" : "article/2",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "article-1",
+      "href" : "article/1",
+      "number" : "Article 1",
+      "title" : null,
+      "label" : "Article 1",
+      "start" : "2020-12-11"
+    },
+    "prevInfo" : {
+      "href" : "introduction",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "article/2",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "article-1",
+      "href" : "article/1",
+      "number" : "Article 1",
+      "title" : null,
+      "label" : "Article 1",
+      "start" : "2020-12-11"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "article-1",
+      "href" : "article/1",
+      "number" : "Article 1",
+      "title" : null,
+      "label" : "Article 1",
+      "start" : "2020-12-11"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act euretained eudr\"><div class=\"body\" id=\"body\" data-x-extent=\"E+W+S+N.I.\" data-x-restrict-start-date=\"2020-12-11\">\n            <section class=\"article\" id=\"article-1\" data-uk-target=\"true\" data-x-extent=\"E+W+S+N.I.\" data-x-restrict-start-date=\"2020-12-11\"><h2><span class=\"num\">Article 1</span></h2><div class=\"content\">\n                    <p>Annex II to Directive 2009/48/EC is amended in accordance with the Annex to this Directive.</p>\n                </div></section>\n        </div></article>"
+}

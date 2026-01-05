@@ -1,7 +1,6 @@
 package uk.gov.legislation.transform;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
-import uk.gov.legislation.api.test.LoggingTestWatcher;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.UpToDate;
 
@@ -19,7 +17,7 @@ import java.util.stream.Stream;
 import static uk.gov.legislation.transform.TransformHelper.MAPPER;
 
 @SpringBootTest(classes = Application.class)
-@ExtendWith(LoggingTestWatcher.class)
+//@ExtendWith(LoggingTestWatcher.class)
 public class TransformTest {
 
     private final Transforms transforms;
@@ -42,7 +40,12 @@ public class TransformTest {
             "aep/Ann/6/11/1991-02-01", "aep/Ann/6/11/part/1/1991-02-01",
             "aip/Geo3/40/38/1991-02-01", "aip/Geo3/40/38/part/1/1991-02-01",
             "apgb/Geo3/39-40/14", "apgb/Geo3/39-40/14/section/2",
-            "asc/2025/1/2025-03-25", "asc/2025/1/part/1/chapter/2/2025-03-25"
+            "asc/2025/1/2025-03-25", "asc/2025/1/part/1/chapter/2/2025-03-25",
+            "mwa/2011/7/section/1", "mwa/2011/7/section/1/2012-11-16",
+            "mnia/1974/4/section/5/2006-01-01","ukcm/2025/2/section/1",
+            "ssi/2025/281/regulation/1/made", "anaw/2020/3/section/2/welsh",
+            "eudr/2020/2089/article/1/2020-12-11"
+
         );
     }
 
@@ -88,7 +91,7 @@ public class TransformTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    public static final LocalDate CUTOFF = LocalDate.of(2025, 3, 30);
+    static final LocalDate CUTOFF = LocalDate.of(2025, 3, 30);
 
     @ParameterizedTest
     @MethodSource("provide")

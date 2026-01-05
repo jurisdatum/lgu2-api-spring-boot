@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body>
+      <w:p>
+         <w:pPr>
+            <w:jc w:val="center"/>
+         </w:pPr>
+         <w:r>
+            <w:drawing>
+               <wp:inline xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"
+                          distT="0"
+                          distB="0"
+                          distL="0"
+                          distR="0">
+                  <wp:extent cx="1761744" cy="1520952"/>
+                  <wp:effectExtent l="0" t="0" r="0" b="0"/>
+                  <wp:docPr id="10000" name="crest.png" descr="crest"/>
+                  <wp:cNvGraphicFramePr/>
+                  <a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">
+                     <a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                        <pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">
+                           <pic:nvPicPr>
+                              <pic:cNvPr id="20000" name="crest.png" descr="crest.png"/>
+                              <pic:cNvPicPr>
+                                 <a:picLocks noChangeAspect="1"/>
+                              </pic:cNvPicPr>
+                           </pic:nvPicPr>
+                           <pic:blipFill>
+                              <a:blip xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                                      r:embed="image0">
+                                 <a:extLst/>
+                              </a:blip>
+                              <a:srcRect l="0" t="0" r="0" b="0"/>
+                              <a:stretch>
+                                 <a:fillRect/>
+                              </a:stretch>
+                           </pic:blipFill>
+                           <pic:spPr>
+                              <a:xfrm>
+                                 <a:off x="0" y="0"/>
+                                 <a:ext cx="1761744" cy="1520952"/>
+                              </a:xfrm>
+                              <a:prstGeom prst="rect">
+                                 <a:avLst/>
+                              </a:prstGeom>
+                              <a:ln w="12700" cap="flat">
+                                 <a:noFill/>
+                                 <a:miter lim="400000"/>
+                              </a:ln>
+                              <a:effectLst/>
+                           </pic:spPr>
+                        </pic:pic>
+                     </a:graphicData>
+                  </a:graphic>
+               </wp:inline>
+            </w:drawing>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">School Age Act (Northern Ireland) 2022</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="DocumentNumber"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">2022 Chapter 21</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="LongTitle"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">An Act to amend the meaning of “compulsory school age” in the Education Orders; and for connected purposes.</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">[27th April 2022]</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="EnactingText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">BE IT ENACTED by being passed by the Northern Ireland Assembly and assented to by Her Majesty as follows:</w:t>
+         </w:r>
+      </w:p>
+      <!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Meaning of “compulsory school age”</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionAndSubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="true"/>
+            </w:rPr>
+            <w:t/>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">—</w:t>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In Article 46 of the Education and Libraries (Northern Ireland) Order 1986 (compulsory school age), in paragraph (1), after “sixteen years”, in each place it appears, insert </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“or, in some deferred cases, seventeen years”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">After paragraph (1) of that Article insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1A</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In this Article, “</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">deferred case</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” means a case in which a person who attains the age of four years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year does not begin to receive full-time education until the following year, having attained the age of five years.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1B</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">A reference in this Article to a person who attains a specified age on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year includes—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+            <w:ind w:left="1620" w:hanging="360"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">a reference to a person who would have attained that age on a day in that period were it not for having been born prematurely, and</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+            <w:ind w:left="1620" w:hanging="360"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">a reference to a person who was born before the beginning of that period but in whose case the expected week of childbirth was after the end of that period.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">3</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (2) of that Article, in sub-paragraph (a), at the beginning insert </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“except in a deferred case,”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">4</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">After paragraph (2) of that Article insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2A</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In a deferred case, where a person attains the age of four years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, the person shall be deemed not to have attained the lower limit of compulsory school age until 1st August in the year in which the person attained the age of five years.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">5</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (3) of that Article—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in sub-paragraph (a), at the beginning insert </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“except in a deferred case,”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">, and</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in each of sub-paragraphs (a) and (b), for “such other date as the Department may, by order subject to affirmative resolution, prescribe” substitute </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“a prescribed date”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">6</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">After paragraph (3) of that Article insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">4</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In a deferred case, where a person attains the age of sixteen years on any date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, the person shall be deemed not to have attained the upper limit of compulsory school age until or, as the case may be, deemed to have attained that upper limit on 30th June in the following year or on a prescribed date.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">7</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">After paragraph (4) of that Article (inserted by subsection (6)), insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">5</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In this Article—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedListItem"/>
+            <w:ind w:left="1440"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">“</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">full-time education</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” means full-time education of the kind referred to in Article 45(1);</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedListItem"/>
+            <w:ind w:left="1440"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">“</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">prescribed date</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” means such date as the Department may, by order subject to affirmative resolution, prescribe.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Consequential amendments</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionAndSubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="true"/>
+            </w:rPr>
+            <w:t/>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">—</w:t>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In Article 46A of the Education and Libraries (Northern Ireland) Order 1986 (commencement of secondary education), in paragraph (1), in sub-paragraph (a), after “where” insert </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“, except in a deferred case,”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (1) of that Article, after sub-paragraph (a) insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+            <w:ind w:left="1620" w:hanging="360"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">aa</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in a deferred case, where the child attains the age of eleven years on a date occurring in the period beginning on (and including) 1st April in any year and ending on (and including) 1st July in the same year, on 1st August in the following year, with the child having attained the age of twelve years;</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">3</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (1) of that Article, in sub-paragraph (b), after “1st August in the following year” insert </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“, with the child having attained the age of twelve years”</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">4</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (9) of that Article (interpretation), at the appropriate place insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedListItem"/>
+            <w:ind w:left="1440"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">deferred case</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” has the meaning given in Article 46 and paragraph (1B) of that Article applies for the purposes of this Article as it applies for the purposes of that Article;</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">5</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In regulation 2 of the Pre-School Education in Schools (Admissions Criteria) Regulations (Northern Ireland) 1999 (interpretation), in paragraph (1), for the definition of “final pre-school year” substitute—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedListItem"/>
+            <w:ind w:left="1440"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">final pre-school year</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">”, in relation to a child, means—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="ListItem"/>
+            <w:ind w:left="2160" w:hanging="540"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(a)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in the case of a child born in the period beginning on (and including) 2nd July in a year and ending on (and including) 31st March in the following year, the school year immediately prior to the school year in which the child is of compulsory school age;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="ListItem"/>
+            <w:ind w:left="2160" w:hanging="540"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(b)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">subject to paragraph (c), in the case of a child born in the period beginning on (and including) 1st April in a year and ending on (and including) 1st July in the same year, the next school year beginning after the child attains the age of 3 years;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="ListItem"/>
+            <w:ind w:left="2160" w:hanging="540"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(c)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in the case of a child born in the period referred to in paragraph (b), but whose application for admission to pre-school education indicated the intention to defer that admission for one year or who has not previously had a funded pre-school education place (as to which, see paragraph (b)), the next school year beginning after the child attains the age of 4 years;</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">6</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In regulation 2 of those Regulations, after paragraph (1) insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1A</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Paragraph (b) of the definition of “final pre-school year” in paragraph (1) is to be read with Article 46(1B) of the Education and Libraries (Northern Ireland) Order 1986.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+            <w:ind w:left="720"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1B</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In paragraph (c) of the definition of “final pre-school year” in paragraph (1), “</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">funded pre-school education</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” has the meaning given in Article 21 of the 1998 Order.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">7</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">The amendments made by subsections (5) and (6) do not affect the power to make regulations amending or revoking the provision made by those amendments.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Review</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionAndSubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="true"/>
+            </w:rPr>
+            <w:t/>
+            <w:t xml:space="preserve">3</w:t>
+            <w:t>.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">—</w:t>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">The Department of Education must, before the fifth anniversary of the commencement of this Act, review and make a report on the effectiveness of the definition of “deferred case” contained in the amendment made by section 1(2).</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">The Department must lay a copy of the report before the Assembly.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Commencement and short title</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionAndSubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="true"/>
+            </w:rPr>
+            <w:t/>
+            <w:t xml:space="preserve">4</w:t>
+            <w:t>.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">—</w:t>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">This Act comes into operation on the day after Royal Assent.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">This Act may be cited as the School Age Act (Northern Ireland) 2022.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

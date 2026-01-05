@@ -1,0 +1,97 @@
+{
+  "meta" : {
+    "id" : "ssi/2025/281",
+    "longType" : "ScottishStatutoryInstrument",
+    "shortType" : "ssi",
+    "year" : 2025,
+    "number" : 281,
+    "isbn" : "9780111063286",
+    "date" : "2025-10-09",
+    "cite" : "S.S.I. 2025/281",
+    "version" : "made",
+    "status" : "final",
+    "title" : "The Climate Change (Scotland) Act 2009 (Scottish Carbon Budgets) Amendment Regulations 2025",
+    "extent" : [ ],
+    "subjects" : [ "CLIMATE CHANGE" ],
+    "lang" : null,
+    "publisher" : "King's Printer for Scotland",
+    "modified" : "2025-10-09",
+    "versions" : [ "made" ],
+    "has" : {
+      "introduction" : true,
+      "signature" : true,
+      "note" : true
+    },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssi_20250281_en.pdf",
+      "name" : null,
+      "date" : "2025-10-09",
+      "size" : 187376
+    } ],
+    "associated" : [ {
+      "type" : "Note",
+      "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssipn_20250281_en_001.pdf",
+      "name" : "Policy Note",
+      "date" : "2025-10-09",
+      "size" : 48686
+    }, {
+      "type" : "ImpactAssessment",
+      "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssifia_20250281_en_001.pdf",
+      "name" : "Final Impact Assessment",
+      "date" : "2025-10-09",
+      "size" : 47373,
+      "stage" : "Final"
+    }, {
+      "type" : "Other",
+      "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssiod_20250281_en_001.pdf",
+      "name" : "Child Rights and Wellbeing Impact Assessment ",
+      "date" : "2025-10-09",
+      "size" : 37669
+    } ],
+    "fragment" : "regulation/1",
+    "prev" : "introduction",
+    "next" : "regulation/2",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "regulation-1",
+      "href" : "regulation/1",
+      "number" : "1",
+      "title" : "Citation and commencement",
+      "label" : "Regulation 1"
+    },
+    "prevInfo" : {
+      "href" : "introduction",
+      "label" : "Introduction"
+    },
+    "nextInfo" : {
+      "href" : "regulation/2",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "P1",
+      "id" : "regulation-1",
+      "href" : "regulation/1",
+      "number" : "1",
+      "title" : "Citation and commencement",
+      "label" : "Regulation 1"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "regulation-1",
+      "href" : "regulation/1",
+      "number" : "1",
+      "title" : "Citation and commencement",
+      "label" : "Regulation 1"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act secondary ssi\"><div class=\"body\">\n            <section class=\"hcontainer regulation\" id=\"regulation-1\" data-uk-target=\"true\"><h2><span class=\"heading\">Citation and commencement</span><span class=\"num\">1.</span></h2><div class=\"content\">\n                        <p>These Regulations may be cited as the Climate Change (Scotland) Act 2009 (Scottish Carbon Budgets) Amendment Regulations 2025 and come into force on the day after the day on which they are made.</p>\n                    </div></section>\n        </div></article>"
+}

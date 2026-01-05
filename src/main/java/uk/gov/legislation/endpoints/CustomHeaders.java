@@ -19,7 +19,7 @@ public class CustomHeaders {
             headers.set(TYPE_HEADER, redirect.type());
             headers.set(YEAR_HEADER, redirect.year());
             headers.set(NUMBER_HEADER, Long.toString(redirect.number()));
-            headers.set(VERSION_HEADER, redirect.version().orElse("current"));
+            redirect.version().ifPresent(version -> headers.set(VERSION_HEADER, version));
         }
         return headers;
     }

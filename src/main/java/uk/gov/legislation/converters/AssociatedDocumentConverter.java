@@ -57,6 +57,7 @@ public class AssociatedDocumentConverter {
         doc.name = alt.title;
         doc.date = alt.date;
         doc.size = alt.size;
+        doc.stage = alt.stage;
         return doc;
     }
 

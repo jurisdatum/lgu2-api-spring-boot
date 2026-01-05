@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="PartNumber"/>
+            <w:outlineLvl w:val="0"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Article First.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Great Britain and Ireland to be united for ever from 1 Jan. 1801.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionText"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">That it be first article of the union of the kingdoms of Great Britain and Ireland, that the said kingdoms of Great Britain and Ireland shall, upon the first day of January, which shall be in the year of our lord one thousand eight hundred and one, and for ever, be united into one kingdom, by the name of “the united kingdom of Great Britain and Ireland,” and that the royal stile and titles appertaining to the imperial crown of the said united kingdom and its dependencies, and also the ensigns, armourial flags and banners thereof, shall be such as his Majesty by his royal proclamation under the great seal of the united kingdom shall be pleased to appoint.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

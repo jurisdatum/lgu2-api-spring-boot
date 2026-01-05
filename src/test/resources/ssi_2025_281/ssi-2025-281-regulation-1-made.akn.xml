@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <act name="ssi">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ssi/2025/281"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ssi/2025/281"/>
+               <FRBRdate date="2025-10-09" name="made"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/government/scotland"/>
+               <FRBRcountry value="GB-SCT"/>
+               <FRBRsubtype value="regulation"/>
+               <FRBRnumber value="281"/>
+               <FRBRname value="S.S.I. 2025/281"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ssi/2025/281/made"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ssi/2025/281/made"/>
+               <FRBRdate date="2025-10-09" name="made"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ssi/2025/281/made/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ssi/2025/281/made/data.akn"/>
+               <FRBRdate date="2025-10-14+05:30" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#">
+            <eventRef refersTo="#made" date="2025-10-09" eId="date-made" source="#"/>
+            <eventRef refersTo="#coming-into-force" date="2025-10-10" eId="date-cif-1" source="#"/>
+         </lifecycle>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#">
+            <TLCEvent eId="made" href="" showAs="Made"/>
+            <TLCEvent eId="cif" href="" showAs="ComingIntoForce"/>
+         </references>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#">
+            <dc:identifier>http://www.legislation.gov.uk/ssi/2025/281/regulation/1/made</dc:identifier>
+            <dc:title>The Climate Change (Scotland) Act 2009 (Scottish Carbon Budgets) Amendment Regulations 2025</dc:title>
+            <dc:publisher>King's Printer for Scotland</dc:publisher>
+            <dc:modified>2025-10-09</dc:modified>
+            <dc:subject scheme="SIheading">CLIMATE CHANGE</dc:subject>
+            <dc:description>These Regulations are made under section A4(1) of the Climate Change (Scotland) Act 2009 (“the 2009 Act”) which requires the Scottish Ministers to set Scottish carbon budgets so that every year between 2026 and the net-zero emissions target year is covered by a budget. A Scottish carbon budget is the number of tonnes of carbon dioxide equivalent prescribed for a given period. The Scottish Ministers have a duty under section A3 of the 2009 Act to ensure that each Scottish carbon budget target is met.</dc:description>
+            <ukm:SecondaryMetadata>
+               <ukm:DocumentClassification>
+                  <ukm:DocumentCategory Value="secondary"/>
+                  <ukm:DocumentMainType Value="ScottishStatutoryInstrument"/>
+                  <ukm:DocumentStatus Value="final"/>
+                  <ukm:DocumentMinorType Value="regulation"/>
+               </ukm:DocumentClassification>
+               <ukm:Year Value="2025"/>
+               <ukm:Number Value="281"/>
+               <ukm:Made Date="2025-10-09"/>
+               <ukm:ComingIntoForce>
+                  <ukm:DateTime Date="2025-10-10" Time="00:00:00"/>
+               </ukm:ComingIntoForce>
+               <ukm:ISBN Value="9780111063859"/>
+            </ukm:SecondaryMetadata>
+            <ukm:Supersedes URI="http://www.legislation.gov.uk/id/sdsi/2025/9780111063286">
+               <dc:title>The Climate Change (Scotland) Act 2009 (Scottish Carbon Budgets) Amendment Regulations 2025</dc:title>
+               <ukm:DocumentMainType Value="ScottishDraftStatutoryInstrument"/>
+               <ukm:Year Value="2025"/>
+               <ukm:ISBN Value="9780111063286"/>
+            </ukm:Supersedes>
+            <ukm:Notes>
+               <ukm:Note IdURI="http://www.legislation.gov.uk/id/ssi/2025/281/notes"/>
+               <ukm:Alternatives>
+                  <ukm:Alternative URI="http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssipn_20250281_en_001.pdf" Date="2025-10-09" Title="Policy Note" Size="48686"/>
+               </ukm:Alternatives>
+            </ukm:Notes>
+            <ukm:Alternatives>
+               <ukm:Alternative URI="http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssi_20250281_en.pdf" Date="2025-10-09" Size="187376" Print="true"/>
+            </ukm:Alternatives>
+            <ukm:OtherDocuments>
+               <ukm:OtherDocument URI="http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssiod_20250281_en_001.pdf" Date="2025-10-09" Title="Child Rights and Wellbeing Impact Assessment " Size="37669"/>
+            </ukm:OtherDocuments>
+            <ukm:ImpactAssessments>
+               <ukm:ImpactAssessment URI="http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssifia_20250281_en_001.pdf" Stage="Final" Title="Final Impact Assessment" Year="2025" Number="ssifia20250281en001" Size="47373" Date="2025-10-09"/>
+            </ukm:ImpactAssessments>
+            <ukm:Statistics>
+               <ukm:TotalParagraphs Value="3"/>
+               <ukm:BodyParagraphs Value="3"/>
+               <ukm:ScheduleParagraphs Value="0"/>
+               <ukm:AttachmentParagraphs Value="0"/>
+               <ukm:TotalImages Value="0"/>
+            </ukm:Statistics>
+         </proprietary>
+      </meta>
+      <body>
+         <hcontainer xmlns:ns0="https://www.legislation.gov.uk/namespaces/UK-AKN" name="regulation" eId="regulation-1" ns0:target="true">
+            <heading>Citation and commencement</heading>
+            <num>1.</num>
+            <content>
+               <p>These Regulations may be cited as the Climate Change (Scotland) Act 2009 (Scottish Carbon Budgets) Amendment Regulations 2025 and come into force on the day after the day on which they are made.</p>
+            </content>
+         </hcontainer>
+      </body>
+   </act>
+</akomaNtoso>

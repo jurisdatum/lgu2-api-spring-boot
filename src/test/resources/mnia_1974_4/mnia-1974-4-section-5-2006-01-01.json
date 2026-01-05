@@ -1,0 +1,77 @@
+{
+  "meta" : {
+    "id" : "mnia/1974/4",
+    "longType" : "NorthernIrelandAssemblyMeasure",
+    "shortType" : "mnia",
+    "year" : 1974,
+    "number" : 4,
+    "date" : "1974-05-21",
+    "cite" : "1974 c. 4 (N.I.)",
+    "version" : "2006-01-01",
+    "status" : "revised",
+    "title" : "National Insurance Measure (Northern Ireland) 1974",
+    "extent" : [ "NI" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2011-05-26",
+    "versions" : [ "2006-01-01" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml" ],
+    "pointInTime" : "2006-01-01",
+    "alternatives" : [ ],
+    "associated" : [ ],
+    "fragment" : "section/5",
+    "prev" : "paragraph/p1",
+    "next" : "section/6",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-5",
+      "href" : "section/5",
+      "number" : "5",
+      "title" : "Supplementary provisions and minor amendments.",
+      "label" : "Section 5"
+    },
+    "prevInfo" : {
+      "href" : "paragraph/p1",
+      "label" : "Provision"
+    },
+    "nextInfo" : {
+      "href" : "section/6",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "Pblock",
+      "id" : "crossheading-miscellaneous",
+      "href" : "crossheading/miscellaneous",
+      "number" : null,
+      "title" : "Miscellaneous",
+      "label" : "Miscellaneous",
+      "start" : "2006-01-01"
+    }, {
+      "element" : "P1",
+      "id" : "section-5",
+      "href" : "section/5",
+      "number" : "5",
+      "title" : "Supplementary provisions and minor amendments.",
+      "label" : "Section 5"
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-5",
+      "href" : "section/5",
+      "number" : "5",
+      "title" : "Supplementary provisions and minor amendments.",
+      "label" : "Section 5"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary mnia\"><div class=\"body\" id=\"body\" data-x-restrict-start-date=\"2006-01-01\">\n            <section class=\"hcontainer crossheading\" data-ukl-Name=\"Pblock\" id=\"crossheading-miscellaneous\" data-x-restrict-start-date=\"2006-01-01\"><h2><span class=\"heading\">Miscellaneous</span></h2><section class=\"section\" id=\"section-5\" data-uk-target=\"true\" data-x-restrict-start-date=\"2006-01-01\"><h2><span class=\"num\">5</span><span class=\"heading\">Supplementary provisions and minor amendments.</span></h2><div class=\"content\">\n                            <ul class=\"unordered none\" data-ukl-Name=\"UnorderedList\" data-ukl-Decoration=\"none\">\n                                <li>\n                                    \n                                        <p>\n                                            <i>Subs. (1) rep. by 1992 c. 9</i>\n                                        </p>\n                                    \n                                </li>\n                                <li>\n                                    \n                                        <p>\n                                            <i>Subs. (2) rep. with saving by 1975 c. 18</i>\n                                        </p>\n                                    \n                                </li>\n                                <li>\n                                    \n                                        <p>\n                                            <i>Subs. (3), (4) rep. by 1992 c. 9</i>\n                                        </p>\n                                    \n                                </li>\n                                <li>\n                                    \n                                        <p>\n                                            <i>Subs. (5), with Schedule 4, effects amendments</i>\n                                        </p>\n                                    \n                                </li>\n                            </ul>\n                        </div></section></section>\n        </div></article>"
+}

@@ -23,6 +23,8 @@ public class TransformHelper {
             file += "-contents";
         if (comps.version().isPresent())
             file += "-" + comps.version().get();
+        if (comps.language().isPresent())
+            file += "-" + comps.language().get();
         file += "." + ext;
         return  "/" +  dir + file;
     }
@@ -43,7 +45,7 @@ public class TransformHelper {
         Files.writeString(path, content);
     }
 
-    static final ObjectMapper MAPPER = new ObjectMapper()
+    public static final ObjectMapper MAPPER = new ObjectMapper()
         .registerModules(new JavaTimeModule())
         .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .enable(SerializationFeature.INDENT_OUTPUT);

@@ -344,6 +344,18 @@ public class Metadata {
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     public List<Effect> rawEffects = Collections.emptyList();
 
+
+    /* ConfersPower and BlanketAmendment */
+
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "ConfersPower", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<TitledThing> confersPower;
+
+    @JacksonXmlElementWrapper(useWrapping = false)
+    @JacksonXmlProperty(localName = "BlanketAmendment", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public List<TitledThing> blanketAmendments;
+
+
     /* notes|memorandum|executive-note|policy-note */
 
     @JacksonXmlProperty(localName = "Notes", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
