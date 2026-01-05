@@ -14,18 +14,18 @@ import java.util.concurrent.CompletionStage;
 public interface DefraLexApi {
 
     @GetMapping(path ="/items", produces = "application/json")
-     CompletionStage <Response> x(
+    CompletionStage<Response> x(
         @RequestParam(required = false) Boolean inForce,
         @RequestParam(required = false) Boolean isCommencementOrder,
         @RequestParam(required = false) Boolean isRevocationOrder,
         @RequestParam(required = false) @Type String type,
         @RequestParam(required = false) @Year Integer year,
-        @RequestParam(required = false) @Chapter String chapter,
-        @RequestParam(required = false) @Extent String extent,
-        @RequestParam(required = false) @Source String source,
-        @RequestParam(required = false) @Regulator String regulator,
-        @RequestParam(required = false) @Subject String subject,
-        @RequestParam(required = false) @Review Integer review,
+        @RequestParam(required = false) @DefraChapter String chapter,
+        @RequestParam(required = false) @DefraExtent String extent,
+        @RequestParam(required = false) @DefraSource String source,
+        @RequestParam(required = false) @DefraRegulator String regulator,
+        @RequestParam(required = false) @DefraSubject String subject,
+        @RequestParam(required = false) @DefraReviewYear Integer review,
         @RequestParam(defaultValue = "1") int page,
         @RequestParam(defaultValue = "20") int pageSize);
 }

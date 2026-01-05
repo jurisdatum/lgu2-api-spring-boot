@@ -10,8 +10,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
 @Parameter(
-    name = "chapter",
-    description = "The sequential number of an Act (except an Act of the Scottish Parliament) is called a ‘Chapter number",
-    example = "Police Reform Act 2002 (c. 30)"
+    name = "review",
+    description = "The year of review",
+    example = "2025"
 )
-public @interface Chapter {}
+public @interface DefraReviewYear { }
