@@ -44,6 +44,7 @@ public class Parameters extends AbstractParameters {
             params.affectedNumber = affectedNumber;
             return this;
         }
+
         public Builder affectedStartYear(Integer affectedStartYear) {
             params.affectedStartYear = affectedStartYear;
             return this;
@@ -72,6 +73,7 @@ public class Parameters extends AbstractParameters {
             params.affectingNumber = affectingNumber;
             return this;
         }
+
         public Builder affectingStartYear(Integer affectingStartYear) {
             params.affectingStartYear = affectingStartYear;
             return this;
@@ -91,7 +93,7 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
-        public Builder page(int page) {
+        public Builder page(Integer page) {
             params.page = page;
             return this;
         }
@@ -100,8 +102,9 @@ public class Parameters extends AbstractParameters {
             return params;
         }
     }
+
     public enum AppliedStatus {
         applied, unapplied
     }
-}
 
+}

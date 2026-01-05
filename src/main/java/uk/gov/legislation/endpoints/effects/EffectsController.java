@@ -26,73 +26,34 @@ public class EffectsController implements EffectsApi {
         this.simplifier = simplifier;
     }
 
-    public String atom(
-        String targetType,
-        Integer targetYear,
-        Integer targetNumber,
-        Integer targetStartYear,
-        Integer targetEndYear,
-        String targetTitle,
-        String sourceType,
-        Integer sourceYear,
-        Integer sourceNumber,
-        Integer sourceStartYear,
-        Integer sourceEndYear,
-        String sourceTitle,
-        Parameters.AppliedStatus applied,
-        int page
-    ) throws IOException, InterruptedException {
-        validateType(targetType);
-        validateYears(targetYear, targetStartYear, targetEndYear);
-        validateType(sourceType);
-        validateYears(sourceYear, sourceStartYear, sourceEndYear);
+    public String atom(EffectsParameters param) throws IOException, InterruptedException {
+        validateType(param.getTargetType());
+        validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
+        validateType(param.getSourceType());
+        validateYears(param.getSourceYear(), param.getSourceStartYear(), param.getSourceEndYear());
         Parameters params = Parameters.builder()
-            .affectedType(targetType)
-            .affectedYear(targetYear)
-            .affectedNumber(targetNumber)
-            .affectedStartYear(targetStartYear)
-            .affectedEndYear(targetEndYear)
-            .affectedTitle(targetTitle)
-            .affectingType(sourceType)
-            .affectingYear(sourceYear)
-            .affectingNumber(sourceNumber)
-            .affectingStartYear(sourceStartYear)
-            .affectingEndYear(sourceEndYear)
-            .affectingTitle(sourceTitle)
-            .applied(applied)
-            .page(page)
+            .affectedType(param.getTargetType())
+            .affectedYear(param.getTargetYear())
+            .affectedNumber(param.getTargetNumber())
+            .affectedStartYear(param.getTargetStartYear())
+            .affectedEndYear(param.getTargetEndYear())
+            .affectedTitle(param.getTargetTitle())
+            .affectingType(param.getSourceType())
+            .affectingYear(param.getSourceYear())
+            .affectingNumber(param.getSourceNumber())
+            .affectingStartYear(param.getSourceStartYear())
+            .affectingEndYear(param.getSourceEndYear())
+            .affectingTitle(param.getSourceTitle())
+            .applied(param.getApplied())
+            .page(param.getPage())
             .build();
         return db.fetch(params);
     }
 
 
-    public PageOfEffects json(
-        String targetType,
-        Integer targetYear,
-        Integer targetNumber,
-        Integer targetStartYear,
-        Integer targetEndYear,
-        String targetTitle,
-        String sourceType,
-        Integer sourceYear,
-        Integer sourceNumber,
-        Integer sourceStartYear,
-        Integer sourceEndYear,
-        String sourceTitle,
-        Parameters.AppliedStatus applied,
-        int page
-    ) throws IOException, InterruptedException, SaxonApiException {
-        validateType(targetType);
-        validateYears(targetYear, targetStartYear, targetEndYear);
-        validateType(sourceType);
-        validateYears(sourceYear, sourceStartYear, sourceEndYear);
-        String atom = atom(targetType, targetYear,
-            targetNumber,targetStartYear,
-            targetEndYear, targetTitle,
-            sourceType, sourceYear,
-            sourceNumber,sourceStartYear,
-            sourceEndYear, sourceTitle,
-            applied, page);
+    public PageOfEffects json(EffectsParameters param) throws IOException, InterruptedException, SaxonApiException {
+        // parameter validation done in atom() method
+        String atom = atom(param);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);
     }
