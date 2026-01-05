@@ -1,10 +1,10 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.converters;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.PageOfDocuments;
-import uk.gov.legislation.converters.DocumentsFeedConverter;
+import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.io.IOException;

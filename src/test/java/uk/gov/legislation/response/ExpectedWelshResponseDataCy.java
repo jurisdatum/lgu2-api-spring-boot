@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test.response;
+package uk.gov.legislation.response;
 
 public class ExpectedWelshResponseDataCy {
 

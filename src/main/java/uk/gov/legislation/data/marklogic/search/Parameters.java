@@ -26,7 +26,7 @@ public class Parameters extends AbstractParameters {
 
     public String subject;
 
-    public String language;
+    public String lang;
 
     public LocalDate published;
 
@@ -39,6 +39,8 @@ public class Parameters extends AbstractParameters {
     public String stage;
 
     public String department;
+
+    public  LocalDate version;
 
     public Integer page;
 
@@ -122,8 +124,8 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
-        public Builder language(String language) {
-            params.language = language;
+        public Builder language(String lang) {
+            params.lang = lang;
             return this;
         }
 
@@ -162,6 +164,11 @@ public class Parameters extends AbstractParameters {
         public Builder department(String department) {
             params.department = department;
             return this;
+        }
+
+        public Builder version(LocalDate version) {
+            params.version = version;
+              return this;
         }
 
         public Builder page(Integer page) {

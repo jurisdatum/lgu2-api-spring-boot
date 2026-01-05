@@ -1,11 +1,9 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.simple;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
@@ -14,11 +12,11 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static uk.gov.legislation.api.test.TransformTest.isFragment;
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.write;
-import static uk.gov.legislation.api.test.UnappliedEffectsTest.indent;
-import static uk.gov.legislation.api.test.UnappliedEffectsTest.mapper;
+import static uk.gov.legislation.transform.TransformTest.isFragment;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.write;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.indent;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.mapper;
 
 public class UnappliedEffectsTestRedo {
 

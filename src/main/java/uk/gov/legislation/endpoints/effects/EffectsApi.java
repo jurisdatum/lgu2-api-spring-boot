@@ -2,6 +2,7 @@ package uk.gov.legislation.endpoints.effects;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
 import net.sf.saxon.s9api.SaxonApiException;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,39 +17,11 @@ import java.io.IOException;
 public interface EffectsApi {
 
     @GetMapping(value = "/effects", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-    String atom(
-        @RequestParam(required = false) @Type String targetType,
-        @RequestParam(required = false) @Year Integer targetYear,
-        @RequestParam(required = false) @Number Integer targetNumber,
-        @RequestParam(required = false) @Year Integer targetStartYear,
-        @RequestParam(required = false) @Year Integer targetEndYear,
-        @RequestParam(required = false) @Title String targetTitle,
-        @RequestParam(required = false) @Type String sourceType,
-        @RequestParam(required = false) @Year Integer sourceYear,
-        @RequestParam(required = false) @Number Integer sourceNumber,
-        @RequestParam(required = false) @Year Integer sourceStartYear,
-        @RequestParam(required = false) @Year Integer sourceEndYear,
-        @RequestParam(required = false) @Title String sourceTitle,
-        @RequestParam(required = false) Parameters.AppliedStatus applied,
-        @RequestParam(required = false, defaultValue = "1") @Page int page
+    String atom(@ParameterObject EffectsParameters param
     ) throws IOException, InterruptedException;
 
     @GetMapping(value = "/effects", produces = MediaType.APPLICATION_JSON_VALUE)
-    PageOfEffects json(
-        @RequestParam(required = false) String targetType,
-        @RequestParam(required = false) Integer targetYear,
-        @RequestParam(required = false) Integer targetNumber,
-        @RequestParam(required = false) Integer targetStartYear,
-        @RequestParam(required = false) Integer targetEndYear,
-        @RequestParam(required = false) String targetTitle,
-        @RequestParam(required = false) String sourceType,
-        @RequestParam(required = false) Integer sourceYear,
-        @RequestParam(required = false) Integer sourceNumber,
-        @RequestParam(required = false) Integer sourceStartYear,
-        @RequestParam(required = false) Integer sourceEndYear,
-        @RequestParam(required = false) String sourceTitle,
-        @RequestParam(required = false) Parameters.AppliedStatus applied,
-        @RequestParam(required = false, defaultValue = "1") int page
+    PageOfEffects json(@ParameterObject EffectsParameters param
     ) throws IOException, InterruptedException, SaxonApiException;
 
 }

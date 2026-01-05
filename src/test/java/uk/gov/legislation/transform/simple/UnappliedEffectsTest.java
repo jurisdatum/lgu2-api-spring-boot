@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -11,8 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.transform.TransformTest;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
 
@@ -29,10 +28,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static uk.gov.legislation.api.test.UnappliedEffectsHelper.read;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
 
 @SpringBootTest(classes = Application.class)
-class UnappliedEffectsTest {
+public class UnappliedEffectsTest {
 
     private final Simplify simplifier;
 
@@ -45,7 +44,7 @@ class UnappliedEffectsTest {
         return Stream.of("ukpga/2000/8/section/91" , "ukpga/2023/29/2024-11-01");
     }
 
-    static final ObjectMapper mapper = new ObjectMapper()
+    public static final ObjectMapper mapper = new ObjectMapper()
         .registerModules(new JavaTimeModule())
         .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .enable(SerializationFeature.INDENT_OUTPUT);
@@ -60,7 +59,7 @@ class UnappliedEffectsTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    static String indent(String xml) throws TransformerException {
+    public static String indent(String xml) throws TransformerException {
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");

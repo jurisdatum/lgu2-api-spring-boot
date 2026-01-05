@@ -1,4 +1,4 @@
-package uk.gov.legislation.api.test;
+package uk.gov.legislation.transform;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -29,7 +29,7 @@ public class TransformHelper {
         return  "/" +  dir + file;
     }
 
-    static String read(String id, String ext) throws IOException {
+    public static String read(String id, String ext) throws IOException {
         String resource = makeResourceName(id, ext);
         String content;
         try (var input = TransformTest.class.getResourceAsStream(resource)) {
@@ -39,13 +39,13 @@ public class TransformHelper {
         return content;
     }
 
-    static void write(String id, String ext, String content) throws IOException {
+    public static void write(String id, String ext, String content) throws IOException {
         String resource = makeResourceName(id, ext);
         Path path = Path.of("src/test/resources", resource.substring(1));
         Files.writeString(path, content);
     }
 
-    static final ObjectMapper MAPPER = new ObjectMapper()
+    public static final ObjectMapper MAPPER = new ObjectMapper()
         .registerModules(new JavaTimeModule())
         .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
         .enable(SerializationFeature.INDENT_OUTPUT);
