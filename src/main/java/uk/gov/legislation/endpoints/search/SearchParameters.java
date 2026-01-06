@@ -3,7 +3,8 @@ package uk.gov.legislation.endpoints.search;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.parameters.Sort;
+import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.util.Extent;
 
