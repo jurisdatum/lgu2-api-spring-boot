@@ -31,6 +31,25 @@ public class AssociatedDocument {
         ExplanatoryDocument,
         TranspositionNote,
         UKRPCOpinion;
+
+        public String toLabel() {
+            return switch (this) {
+                case Note -> "Note";
+                case PolicyEqualityStatement -> "Policy Equality Statement";
+                case Alternative -> "Alternative";
+                case CorrectionSlip -> "Correction Slip";
+                case CodeOfPractice -> "Code of Practice";
+                case CodeOfConduct -> "Code of Conduct";
+                case TableOfOrigins -> "Table of Origins";
+                case TableOfDestinations -> "Table of Destinations";
+                case OrderInCouncil -> "Order in Council";
+                case ImpactAssessment -> "Impact Assessment";
+                case Other -> "Other";
+                case ExplanatoryDocument -> "Explanatory Document";
+                case TranspositionNote -> "Transposition Note";
+                case UKRPCOpinion -> "UKRPC Opinion";
+            };
+        }
     }
 
     @JsonProperty
@@ -47,6 +66,10 @@ public class AssociatedDocument {
 
     @JsonProperty
     public Integer size;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String label;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(
