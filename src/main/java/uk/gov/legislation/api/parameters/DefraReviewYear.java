@@ -7,7 +7,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
-@Parameter(description = "The number of the document", example = "1")
-public @interface Number { }
+@Parameter(
+    name = "review",
+    description = "The year of review",
+    example = "2025"
+)
+public @interface DefraReviewYear { }

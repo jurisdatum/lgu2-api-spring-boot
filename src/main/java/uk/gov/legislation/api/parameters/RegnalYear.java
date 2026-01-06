@@ -8,6 +8,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
-@Parameter(description = "The number of the document", example = "1")
-public @interface Number { }
+@Target(ElementType.PARAMETER)
+@Parameter(
+    description = "Regnal year number within the monarch’s reign",
+    example = "12"
+)
+public @interface RegnalYear {
+}

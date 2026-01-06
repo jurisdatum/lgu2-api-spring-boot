@@ -7,7 +7,12 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+@Target(ElementType.PARAMETER)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
-@Parameter(description = "The number of the document", example = "1")
-public @interface Number { }
+@Parameter(
+    name = "region",
+    description = "Search Document By Region. Ex: all, uk, scotland, wales, ni.",
+    example = "all"
+)
+public @interface Region {
+}

@@ -8,6 +8,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PARAMETER, ElementType.METHOD })
-@Parameter(description = "The number of the document", example = "1")
-public @interface Number { }
+@Target(ElementType.PARAMETER)
+@Parameter(
+    description = "Monarch's reign identifier (e.g., 'Eliz1' for Queen Elizabeth I, 'Geo6' for George VI)",
+    example = "Eliz1"
+)
+public @interface Reign {
+}
