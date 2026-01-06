@@ -35,7 +35,7 @@ public class Types {
 
     public static final List<Type> PRIMARILY_UK = List.of(
         Type.UKPGA, Type.UKLA, Type.UKPPA, Type.UKSI,
-        Type.UKMD, Type.UKMO, Type.UKSRO, Type.UKDSI
+        Type.UKMD, Type.UKMO, Type.UKSRO, Type.UKDSI, Type.UKIA
     );
     public static final List<Type> POSSIBLY_UK = List.of(
         Type.ASP, Type.NIA, Type.AOSP, Type.AEP, Type.AIP, Type.APGB, Type.GBLA, Type.GBPPA,

@@ -36,6 +36,15 @@
     "date" : "2025-10-13",
     "size" : 953472
   } ],
+  "altFormats" : [ {
+    "url" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf",
+    "label" : "Original: King's Printer Version",
+    "date" : "2025-08-06",
+    "size" : 1631326,
+    "language" : "English",
+    "type" : "application/pdf",
+    "thumbnail" : "http://www.legislation.gov.uk/asp/2025/11/images/asp_20250011_en.jpg"
+  } ],
   "unappliedEffects" : [ ],
   "upToDate" : true,
   "confersPower" : [ {

@@ -13,6 +13,8 @@ public enum Type {
     UKDSI("UnitedKingdomDraftStatutoryInstrument", Category.Secondary, Country.UK),
     UKCM("UnitedKingdomChurchMeasure", Category.Primary, Country.UK),
     UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.UK),
+    UKIA("UnitedKingdomImpactAssessment", Category.Secondary, Country.UK),
+
 
     // Wales Acts
     ASC("WelshParliamentAct", Category.Primary, Country.WALES),

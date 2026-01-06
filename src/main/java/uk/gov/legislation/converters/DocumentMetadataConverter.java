@@ -29,6 +29,7 @@ public class DocumentMetadataConverter {
             else
                 UpToDate.setUpToDate(converted, converted.pointInTime);
         }
+        converted.altFormats = AlternateFormatConverter.convert(simple.alternatives);
     }
 
     static void convertCommon(Metadata simple, CommonMetadata converted) {

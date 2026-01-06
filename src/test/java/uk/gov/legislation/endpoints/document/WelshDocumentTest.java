@@ -9,6 +9,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
+import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
@@ -32,6 +33,9 @@ class WelshDocumentTest {
 
     @MockitoBean
     private Legislation mock;
+
+    @MockitoBean
+    private Impacts impacts;
 
     @Test
     void test() throws Exception {

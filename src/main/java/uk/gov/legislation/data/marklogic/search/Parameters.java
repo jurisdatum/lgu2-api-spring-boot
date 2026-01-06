@@ -36,6 +36,10 @@ public class Parameters extends AbstractParameters {
 
     public String extent;
 
+    public String stage;
+
+    public String department;
+
     public  LocalDate version;
 
     public Integer page;
@@ -149,6 +153,16 @@ public class Parameters extends AbstractParameters {
                 .collect(Collectors.joining("+"));
             if (exclusive != null && exclusive)
                 params.extent = "=" + params.extent;
+            return this;
+        }
+
+        public Builder stage(String stage) {
+            params.stage = stage;
+            return this;
+        }
+
+        public Builder department(String department) {
+            params.department = department;
             return this;
         }
 

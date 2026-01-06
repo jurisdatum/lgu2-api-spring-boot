@@ -58,6 +58,12 @@ public class PageOfDocuments {
         @Schema
         public List<ByInitial> bySubjectInitial;
 
+        @Schema
+        public List<ByStage> byStage;
+
+        @Schema
+        public List<ByDepartment> byDepartment;
+
     }
 
     public static class ByType {
@@ -84,6 +90,26 @@ public class PageOfDocuments {
 
         @Schema
         public String initial;
+
+        @Schema
+        public int count;
+
+    }
+
+    public static class ByStage {
+
+        @Schema
+        public String stage;
+
+        @Schema
+        public int count;
+
+    }
+
+    public static class ByDepartment {
+
+        @Schema
+        public String department;
 
         @Schema
         public int count;
@@ -138,6 +164,17 @@ public class PageOfDocuments {
 
         @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
         public SortedSet<String> formats;
+
+        /* for impact assessments */
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String assessmentOf;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String stage;
+
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public String department;
 
     }
 

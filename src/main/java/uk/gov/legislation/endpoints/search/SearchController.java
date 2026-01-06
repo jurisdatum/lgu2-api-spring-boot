@@ -37,6 +37,7 @@ public class SearchController implements SearchApi {
         validateYears(param.getYear(), param.getStartYear(), param.getEndYear());
         validateTitle(param.getTitle());
         validateLanguage(param.getLanguage());
+        validateStage(param.getStage());
     }
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
@@ -72,6 +73,8 @@ public class SearchController implements SearchApi {
             .text(params.getQ())
             .sort(params.getSort())
             .extent(params.getExtent(), params.isExclusiveExtent())
+            .stage(params.getStage())
+            .department(params.getDepartment())
             .version(params.getPointInTime())
             .page(params.getPage())
             .pageSize(params.getPageSize());

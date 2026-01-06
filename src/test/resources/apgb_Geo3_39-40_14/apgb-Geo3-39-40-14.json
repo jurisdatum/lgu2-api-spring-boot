@@ -28,6 +28,7 @@
     "pointInTime" : null,
     "alternatives" : [ ],
     "associated" : [ ],
+    "altFormats" : [ ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

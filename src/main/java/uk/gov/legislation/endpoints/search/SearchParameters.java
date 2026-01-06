@@ -35,6 +35,8 @@ public class SearchParameters {
     private Parameters.Sort sort;
     private EnumSet<Extent> extent;
     private Boolean exclusiveExtent;
+    private String department;
+    private String stage;
     private LocalDate pointInTime;
     private Integer page;
     private Integer pageSize;
@@ -155,6 +157,34 @@ public class SearchParameters {
 
     public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Schema(allowableValues = {
+        "Consultation",
+        "Development",
+        "Enactment",
+        "Final",
+        "Implementation",
+        "Options",
+        "Post Implementation"
+    })
+    public String getStage() {
+        return stage;
+    }
+
+    public void setStage(String stage) {
+        this.stage = stage;
+    }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate getPointInTime() {
         return pointInTime;
     }

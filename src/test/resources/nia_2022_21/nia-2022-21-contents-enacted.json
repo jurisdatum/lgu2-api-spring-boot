@@ -30,6 +30,15 @@
       "size" : 352718
     } ],
     "associated" : [ ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/nia/2022/21/pdfs/nia_20220021_en.pdf",
+      "label" : null,
+      "date" : "2022-04-28",
+      "size" : 352718,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/nia/2022/21/images/nia_20220021_en.jpg"
+    } ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

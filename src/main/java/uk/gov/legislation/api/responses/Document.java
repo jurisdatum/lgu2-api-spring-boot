@@ -2,10 +2,7 @@ package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 
-public class Document {
-
-    @Schema
-    public DocumentMetadata meta;
+public class Document extends AnyDocument<DocumentMetadata> {
 
     @Schema
     public String html;

@@ -69,6 +69,14 @@ public static class Facets {
     @JacksonXmlProperty(localName = "facetSubjectsInitials", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
     public Subjects subjects;
 
+    @JacksonXmlElementWrapper(localName = "facetStages", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+    @JacksonXmlProperty(localName = "facetStage", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+    public List<TypeAndValueFacet> facetStages;
+
+    @JacksonXmlElementWrapper(localName = "facetDepartments", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+    @JacksonXmlProperty(localName = "facetDepartment", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+    public List<TypeAndValueFacet> facetDepartments;
+
 }
 
 public static class FacetTypes {
@@ -143,6 +151,16 @@ public static class SubjectHeading {
 
     @JacksonXmlProperty(localName = "Value", isAttribute = true)
     public String name;
+
+}
+
+public static class TypeAndValueFacet {
+
+    @JacksonXmlProperty(isAttribute = true)
+    public String type;
+
+    @JacksonXmlProperty(isAttribute = true)
+    public int value;
 
 }
 
@@ -221,6 +239,14 @@ public static class Entry {
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "link")
     public List<Link> links;
+
+    /* for impact assessments */
+
+    @JacksonXmlProperty(localName = "DocumentStage", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public Value stage;
+
+    @JacksonXmlProperty(localName = "Department", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+    public Value department;
 
 }
 
