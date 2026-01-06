@@ -65,13 +65,10 @@ public class AssociatedDocumentConverter {
     }
 
     private static String buildLabelFromStageAndType(String stage, AssociatedDocument.Type type) {
-        if (stage == null || stage.isBlank()) {
-            return type.toString();
-        }
-        String normalizedStage = stage.trim().replace("-", " ");
-        var normalizedType = type.toString()
-            .replace("_", " ")
-            .replaceAll("(?<=[a-z])(?=[A-Z])", " ");
-        return String.format("%s %s", normalizedStage, normalizedType).trim();
+        String normalizedStage = stage == null ? null : stage.replace("-", " ").trim();
+        String normalizedType = type.toLabel();
+        if (normalizedStage == null || normalizedStage.isBlank())
+            return normalizedType;
+        return String.format("%s %s", normalizedStage, normalizedType);
     }
 }
