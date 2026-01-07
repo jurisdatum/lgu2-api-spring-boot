@@ -2,6 +2,7 @@ package uk.gov.legislation.data.health.endpoint;
 
 import org.springframework.boot.actuate.health.HealthEndpoint;
 import org.springframework.boot.actuate.health.HealthIndicator;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,15 +26,19 @@ public class HealthController {
             this.healthEndpoint = healthEndpoint;
         }
 
-        @GetMapping("/health")
-        public Map <String, String> health() {
-            String status = healthEndpoint.health().getStatus().getCode();
-            return Map.of(
-                "status", status.equals("UP") ? "ok" : "fail"
-            );
+    @GetMapping("/health")
+    public ResponseEntity<Map<String, String>> health() {
+        String status = healthEndpoint.health().getStatus().getCode();
+        Map<String, String> body = Map.of("status", status.equals("UP") ? "ok" : "fail");
+        if (status.equals("UP")) {
+            return ResponseEntity.ok(body);
+        } else {
+            return ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body(body);
         }
+    }
 
-        @GetMapping("/health/dependencies")
+
+    @GetMapping("/health/dependencies")
         public ResponseEntity <Map <String, Object>> healthDependencies() {
             Map<String, String> dbChecks = new LinkedHashMap <>();
             dbChecks.put("markLogic", markLogicHealth.health().getStatus().getCode().equals("UP") ? "ok" : "fail");
