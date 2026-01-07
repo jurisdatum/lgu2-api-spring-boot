@@ -31,6 +31,8 @@ public class ImpactAssessmentConverter {
     }
 
     public static MetaCore convert(ImpactAssessment.Legislation leg) {
+        if (leg == null)
+            return null;
         MetaCore aw = new MetaCore();
         aw.id = Links.shorten(leg.uri.toString());
         aw.longType = leg.clazz;
