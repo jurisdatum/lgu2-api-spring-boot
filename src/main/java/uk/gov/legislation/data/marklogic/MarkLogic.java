@@ -62,4 +62,13 @@ public class MarkLogic {
         return response.body();
     }
 
+    public void getStatus(String endpoint) throws IOException, InterruptedException {
+        URI uri = URI.create(baseUri + endpoint);
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .header("Authorization", authHeader)
+            .build();
+        HttpResponse <String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+        response.body();
+    }
 }

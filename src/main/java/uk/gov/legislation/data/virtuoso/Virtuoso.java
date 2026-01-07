@@ -2,7 +2,6 @@ package uk.gov.legislation.data.virtuoso;
 
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -17,6 +16,7 @@ public class Virtuoso {
 
     private final String endpoint;
 
+
     public Virtuoso(Environment env) {
         String host = env.getProperty("VIRTUOSO_HOST");
         String port = env.getProperty("VIRTUOSO_PORT");
@@ -24,7 +24,7 @@ public class Virtuoso {
         if (host == null || port == null) {
             throw new IllegalArgumentException("VIRTUOSO_HOST or VIRTUOSO_PORT cannot be null");
         }
-        this.endpoint = "http://" + host + ":" + port + "/sparql";
+        endpoint = "http://" + host + ":" + port + "/sparql";
     }
 
     public static final Set<String> Formats = Set.of(
@@ -46,6 +46,21 @@ public class Virtuoso {
             .GET()
             .uri(uri)
             .header("Accept", format)
+            .build();
+        HttpResponse<String> response;
+        try (HttpClient client = HttpClient.newHttpClient()) {
+            response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        }
+        return response.body();
+    }
+
+    public String getStatus() throws IOException, InterruptedException {
+
+        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode("ASK {}", StandardCharsets.UTF_8));
+        HttpRequest request = HttpRequest.newBuilder()
+            .GET()
+            .uri(uri)
+            .header("Accept", "application/sparql-results+json")
             .build();
         HttpResponse<String> response;
         try (HttpClient client = HttpClient.newHttpClient()) {
