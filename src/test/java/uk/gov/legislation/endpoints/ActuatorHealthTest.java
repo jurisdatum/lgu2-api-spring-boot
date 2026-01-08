@@ -33,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     void testUnhealthy() throws Exception {
         mockMvc.perform(get("/health"))
             .andExpect(status().isServiceUnavailable())
-            .andExpect(jsonPath("$.status").value("DOWN"));
+            .andExpect(jsonPath("$.status").value("fail"));
 
     }
 }
