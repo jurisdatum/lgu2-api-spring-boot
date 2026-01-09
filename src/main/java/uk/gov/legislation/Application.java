@@ -1,5 +1,6 @@
 package uk.gov.legislation;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.info.Info;
 import org.springframework.boot.SpringApplication;
@@ -43,5 +44,8 @@ public class Application implements WebMvcConfigurer {
 		resolver.setDefaultLocale(Locale.forLanguageTag("en"));
 		return resolver;
 	}
-
+	@Bean
+	public ObjectMapper objectMapper(){
+		return new ObjectMapper();
+	}
 }
