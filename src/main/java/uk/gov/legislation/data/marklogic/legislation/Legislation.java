@@ -56,6 +56,14 @@ public class Legislation {
         return getAndFollowRedirect(params);
     }
 
+    public StreamResponse getTableOfContentsStream(String type, String year, int number, Optional<String> version, Optional<String> language) {
+        Parameters params = new Parameters(type, year, number)
+            .version(version)
+            .view(CONTENTS_VIEW)
+            .lang(language);
+        return getAndFollowRedirect2(params);
+    }
+
     /**
      * Get document section
      */

@@ -1,17 +1,26 @@
 package uk.gov.legislation.endpoints.contents;
 
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.transform.Transforms;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UncheckedIOException;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.function.BiConsumer;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+import static uk.gov.legislation.endpoints.document.DocumentController.APPLICATION_AKN_XML;
+import static uk.gov.legislation.endpoints.document.DocumentController.MS_WORD;
 
 @RestController
 public class ContentsController implements ContentsApi {
@@ -26,32 +35,36 @@ public class ContentsController implements ContentsApi {
 
     /* CLML */
 
+    private final BiConsumer<InputStream, OutputStream> transferToWrapper = (input, output) -> {
+        try {
+            input.transferTo(output);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    };
+
     @Override
-    public ResponseEntity<String> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, clml -> clml);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, version, locale, clml -> clml);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
     }
 
     /* Akoma Ntoso */
 
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2akn);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
     }
 
     @Override
-    public ResponseEntity<String> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2akn);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
     }
 
     /* JSON */
@@ -72,18 +85,17 @@ public class ContentsController implements ContentsApi {
     /* Word (.docx) */
 
     @Override
-    public ResponseEntity<byte[]> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2docx);
-    }
-    @Override
-    public ResponseEntity<byte[]> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
-        validateType(type);
-        String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2docx);
+    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2docx, MS_WORD);
     }
 
-    /* helper */
+    @Override
+    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+        String regnalYear = String.join("/", monarch, years);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2docx, MS_WORD);
+    }
+
+    /* helpers */
 
     @FunctionalInterface
     private interface Transform<T> {
@@ -97,6 +109,21 @@ public class ContentsController implements ContentsApi {
         T body = transform.apply(leg.clml());
         HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
+    }
+
+    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number,
+            Optional<String> version, Locale locale, BiConsumer<InputStream, OutputStream> transform, MediaType mt) {
+        validateType(type);
+        String language = locale.getLanguage();
+        Legislation.StreamResponse doc =
+            marklogic.getTableOfContentsStream(type, year, number, version, Optional.of(language));
+        StreamingResponseBody body = output -> {
+            try (InputStream in = doc.clml()) {
+                transform.accept(in, output);
+            }
+        };
+        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+        return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
     }
 
 }
