@@ -10,6 +10,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Base64;
 
 @Component
@@ -54,12 +55,28 @@ public class MarkLogic {
                 .uri(uri)
                 .header("Authorization", authHeader)
                 .build();
-
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         if (response.statusCode() >= 400) {
             throw new MarkLogicRequestException("Error response from MarkLogic: " + response.body());
         }
         return response.body();
+    }
+
+    /* status checks for health endpoint with shorter timeouts */
+
+    private final HttpClient statusClient = HttpClient.newBuilder()
+        .connectTimeout(Duration.ofMillis(300))
+        .build();
+
+    public int getStatus(String endpoint, String query) throws IOException, InterruptedException {
+        URI uri = URI.create(baseUri + endpoint + query);
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .header("Authorization", authHeader)
+            .timeout(Duration.ofMillis(800))
+            .build();
+        HttpResponse<Void> response = statusClient.send(request, HttpResponse.BodyHandlers.discarding());
+        return response.statusCode();
     }
 
 }
