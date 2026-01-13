@@ -2,6 +2,7 @@ package uk.gov.legislation.data.virtuoso;
 
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -9,13 +10,13 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Set;
 
 @Repository
 public class Virtuoso {
 
     private final String endpoint;
-
 
     public Virtuoso(Environment env) {
         String host = env.getProperty("VIRTUOSO_HOST");
@@ -54,24 +55,27 @@ public class Virtuoso {
         return response.body();
     }
 
-    public String getStatus() throws IOException, InterruptedException {
+    public JsonResults query(String query) throws IOException, InterruptedException {
+        String json = query(query, "application/sparql-results+json");
+        return JsonResults.parse(json);
+    }
 
-        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode("ASK {}", StandardCharsets.UTF_8));
+    /* status checks for health endpoint with shorter timeouts */
+
+    private final HttpClient statusClient = HttpClient.newBuilder()
+        .connectTimeout(Duration.ofMillis(300))
+        .build();
+
+    public int getStatus(String query) throws IOException, InterruptedException {
+        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
         HttpRequest request = HttpRequest.newBuilder()
             .GET()
             .uri(uri)
             .header("Accept", "application/sparql-results+json")
+            .timeout(Duration.ofMillis(800))
             .build();
-        HttpResponse<String> response;
-        try (HttpClient client = HttpClient.newHttpClient()) {
-            response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        }
-        return response.body();
-    }
-
-    public JsonResults query(String query) throws IOException, InterruptedException {
-        String json = query(query, "application/sparql-results+json");
-        return JsonResults.parse(json);
+        HttpResponse<Void> response = statusClient.send(request, HttpResponse.BodyHandlers.discarding());
+        return response.statusCode();
     }
 
 }
