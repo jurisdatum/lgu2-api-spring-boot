@@ -64,10 +64,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, year, number, version, language))
             .thenReturn(streamResponse);
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .header("Accept-Language", "en")
                 .queryParam("version", "enacted")
                 .accept("application/xml"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_XML))
             .andExpect(content().string(clmlXml));
@@ -85,10 +89,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
             .thenReturn(streamResponse);
 
-        mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .header("Accept-Language", "en")
                 .queryParam("version", "enacted")
                 .accept("application/xml"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_XML))
             .andExpect(content().string(clmlXml));
@@ -403,9 +411,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, year, number, Optional.empty(), language))
             .thenReturn(streamResponse);
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .header("Accept-Language", "en")
                 .accept("application/xml"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().string(clmlXml))
             .andExpect(header().string("X-Document-Type", type))
@@ -492,10 +504,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, year, number, version, language))
             .thenReturn(streamResponse);
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept("application/xml")
                 .header("Accept-Language", acceptLanguageHeader)
                 .queryParam("version", "enacted"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_XML))
             .andExpect(content().string(clmlXml))
@@ -516,9 +532,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
         when(marklogic.getDocumentStream(type, year, number, version, defaultLanguage))
             .thenReturn(streamResponse);
 
-        mockMvc.perform(get("/document/ukla/2020/1")
+        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept("application/xml")
                 .queryParam("version", "enacted"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentType(MediaType.APPLICATION_XML))
             .andExpect(content().string(clmlXml))
