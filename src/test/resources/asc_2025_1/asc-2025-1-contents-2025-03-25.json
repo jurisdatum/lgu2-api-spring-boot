@@ -61,6 +61,31 @@
       "date" : "2025-04-09",
       "size" : 555756
     } ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_mi.pdf",
+      "label" : "Original: King's Printer Version",
+      "date" : "2025-03-25",
+      "size" : 1162223,
+      "language" : "Mixed",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/asc/2025/1/images/asc_20250001_mi.jpg"
+    }, {
+      "url" : "http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_we.pdf",
+      "label" : null,
+      "date" : "2025-03-25",
+      "size" : 2233225,
+      "language" : "Welsh",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/asc/2025/1/images/asc_20250001_we.jpg"
+    }, {
+      "url" : "http://www.legislation.gov.uk/asc/2025/1/pdfs/asc_20250001_en.pdf",
+      "label" : null,
+      "date" : "2025-03-25",
+      "size" : 2692449,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/asc/2025/1/images/asc_20250001_en.jpg"
+    } ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

@@ -46,6 +46,8 @@ public class Legislation {
 
     private static final Optional<String> CONTENTS_VIEW = Optional.of("contents");
 
+    private static final Optional<String> METADATA_VIEW = Optional.of("metadata");
+
     public Response getTableOfContents(String type, String year, int number, Optional<String> version, Optional<String> language) {
         Parameters params = new Parameters(type, year, number)
             .version(version)
@@ -61,6 +63,13 @@ public class Legislation {
         Parameters params = new Parameters(type, year, number)
             .version(version)
             .section(Optional.of(section))
+            .lang(language);
+        return getAndFollowRedirect(params);
+    }
+
+    public Response getMetadata(String type, String year, int number, Optional<String> language) {
+        Parameters params = new Parameters(type, year, number)
+            .view(METADATA_VIEW)
             .lang(language);
         return getAndFollowRedirect(params);
     }

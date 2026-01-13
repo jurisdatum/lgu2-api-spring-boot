@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:t xml:space="preserve">Amendment of the State Pension Credit Regulations 2002</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SectionAndSubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:b w:val="true"/>
+            </w:rPr>
+            <w:t/>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>.</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">—</w:t>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">The State Pension Credit Regulations 2002</w:t>
+         </w:r>
+         <!--FootnoteRef f00007-->
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>(</w:t>
+         </w:r>
+         <w:bookmarkStart w:id="8" w:name="_Ref00007"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteNumber"/>
+            </w:rPr>
+            <w:footnoteReference w:id="7"/>
+         </w:r>
+         <w:bookmarkEnd w:id="8"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> are amended as follows.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionCompact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">In Schedule 2A (additional amount applicable for claimants responsible for a child or qualifying young person)—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in paragraph 2(1) (general) after the definition of “child” insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="UnnumberedListItem"/>
+            <w:ind w:left="2160"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">“</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">foster parent</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">” has the meaning given in regulation 2 of the Universal Credit Regulations 2013</w:t>
+         </w:r>
+         <!--FootnoteRef f00008-->
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>(</w:t>
+         </w:r>
+         <w:bookmarkStart w:id="11" w:name="_Ref00008"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteNumber"/>
+            </w:rPr>
+            <w:footnoteReference w:id="8"/>
+         </w:r>
+         <w:bookmarkEnd w:id="11"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">;</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">in paragraph 4(3) (child or qualifying young person looked after by a local authority)—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P4Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">i</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">omit the “or” after paragraph (a);</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P4Compact"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">ii</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">after paragraph (b) insert—</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="Text"/>
+            <w:ind w:left="2160"/>
+         </w:pPr>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 147 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">; or</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Compact"/>
+            <w:ind w:left="3060" w:hanging="360"/>
+         </w:pPr>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">c</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">during which the child or qualifying young person is placed for adoption under the Adoption and Children Act 2002</w:t>
+         </w:r>
+         <!--FootnoteRef f00009-->
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>(</w:t>
+         </w:r>
+         <w:bookmarkStart w:id="14" w:name="_Ref00009"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteNumber"/>
+            </w:rPr>
+            <w:footnoteReference w:id="9"/>
+         </w:r>
+         <w:bookmarkEnd w:id="14"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> or the Adoption and Children (Scotland) Act 2007</w:t>
+         </w:r>
+         <!--FootnoteRef f00010-->
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>(</w:t>
+         </w:r>
+         <w:bookmarkStart w:id="16" w:name="_Ref00010"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteNumber"/>
+            </w:rPr>
+            <w:footnoteReference w:id="10"/>
+         </w:r>
+         <w:bookmarkEnd w:id="16"/>
+         <w:r>
+            <w:rPr>
+               <w:rStyle w:val="FootnoteReference"/>
+            </w:rPr>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="begin"/>
+         </w:r>
+         <w:r>
+            <w:instrText xml:space="preserve"> SYMBOL 148 \* MERGEFORMAT </w:instrText>
+         </w:r>
+         <w:r>
+            <w:fldChar w:fldCharType="end"/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">.</w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:footnotePr>
+            <w:numFmt w:val="lowerLetter"/>
+            <w:numRestart w:val="eachPage"/>
+         </w:footnotePr>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

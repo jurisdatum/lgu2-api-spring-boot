@@ -1,6 +1,8 @@
 package uk.gov.legislation.api.responses.meta;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.net.URI;
 import java.time.LocalDate;
@@ -29,6 +31,25 @@ public class AssociatedDocument {
         ExplanatoryDocument,
         TranspositionNote,
         UKRPCOpinion;
+
+        public String toLabel() {
+            return switch (this) {
+                case Note -> "Note";
+                case PolicyEqualityStatement -> "Policy Equality Statement";
+                case Alternative -> "Alternative";
+                case CorrectionSlip -> "Correction Slip";
+                case CodeOfPractice -> "Code of Practice";
+                case CodeOfConduct -> "Code of Conduct";
+                case TableOfOrigins -> "Table of Origins";
+                case TableOfDestinations -> "Table of Destinations";
+                case OrderInCouncil -> "Order in Council";
+                case ImpactAssessment -> "Impact Assessment";
+                case Other -> "Other";
+                case ExplanatoryDocument -> "Explanatory Document";
+                case TranspositionNote -> "Transposition Note";
+                case UKRPCOpinion -> "UKRPC Opinion";
+            };
+        }
     }
 
     @JsonProperty
@@ -45,6 +66,17 @@ public class AssociatedDocument {
 
     @JsonProperty
     public Integer size;
+
+    @JsonProperty
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public String label;
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @Schema(
+        description = "Indicates the stage of the development of the legislation to which the Impact Assessment relates, which may be before its development (Consultation), during its development (Development), after the drafting of the document (Final), after its amendment in Parliament (Enactment) or after its enactment (Post-Implementation)",
+        allowableValues = { "Consultation", "Development", "Final", "Enactment", "Post-Implementation" }
+    )
+    public String stage;
 
     public AssociatedDocument(Type type, URI uri) {
         this.type = type;

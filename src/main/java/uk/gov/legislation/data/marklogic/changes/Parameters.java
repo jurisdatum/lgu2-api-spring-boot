@@ -7,13 +7,16 @@ public class Parameters extends AbstractParameters {
     public String affectedType;
     public Integer affectedYear;
     public Integer affectedNumber;
+    public Integer affectedStartYear;
+    public Integer affectedEndYear;
     public String affectedTitle;
-
     public String affectingType;
     public Integer affectingYear;
     public Integer affectingNumber;
+    public Integer affectingStartYear;
+    public Integer affectingEndYear;
     public String affectingTitle;
-
+    public AppliedStatus applied;
     public Integer page;
 
     public static Builder builder() {
@@ -24,7 +27,8 @@ public class Parameters extends AbstractParameters {
 
         private final Parameters params = new Parameters();
 
-        private Builder() { }
+        private Builder() {
+        }
 
         public Builder affectedType(String affectedType) {
             params.affectedType = affectedType;
@@ -38,6 +42,15 @@ public class Parameters extends AbstractParameters {
 
         public Builder affectedNumber(Integer affectedNumber) {
             params.affectedNumber = affectedNumber;
+            return this;
+        }
+
+        public Builder affectedStartYear(Integer affectedStartYear) {
+            params.affectedStartYear = affectedStartYear;
+            return this;
+        }
+        public Builder affectedEndYear(Integer affectedEndYear) {
+            params.affectedEndYear = affectedEndYear;
             return this;
         }
 
@@ -61,12 +74,26 @@ public class Parameters extends AbstractParameters {
             return this;
         }
 
+        public Builder affectingStartYear(Integer affectingStartYear) {
+            params.affectingStartYear = affectingStartYear;
+            return this;
+        }
+        public Builder affectingEndYear(Integer affectingEndYear) {
+            params.affectingEndYear = affectingEndYear;
+            return this;
+        }
+
         public Builder affectingTitle(String affectingTitle) {
             params.affectingTitle = affectingTitle;
             return this;
         }
 
-        public Builder page(int page) {
+        public Builder applied(AppliedStatus appliedStatus) {
+            params.applied = appliedStatus;
+            return this;
+        }
+
+        public Builder page(Integer page) {
             params.page = page;
             return this;
         }
@@ -74,7 +101,10 @@ public class Parameters extends AbstractParameters {
         public Parameters build() {
             return params;
         }
+    }
 
+    public enum AppliedStatus {
+        applied, unapplied
     }
 
 }

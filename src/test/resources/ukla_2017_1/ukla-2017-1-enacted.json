@@ -31,6 +31,15 @@
       "size" : 440723
     } ],
     "associated" : [ ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/ukla/2017/1/pdfs/ukla_20170001_en.pdf",
+      "label" : null,
+      "date" : "2017-05-18",
+      "size" : 440723,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/ukla/2017/1/images/ukla_20170001_en.jpg"
+    } ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

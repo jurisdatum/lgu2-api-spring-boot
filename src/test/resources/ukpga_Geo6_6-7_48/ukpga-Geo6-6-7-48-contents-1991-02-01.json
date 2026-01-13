@@ -35,6 +35,15 @@
       "size" : 3178982
     } ],
     "associated" : [ ],
+    "altFormats" : [ {
+      "url" : "http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/pdfs/ukpga_19430048_en.pdf",
+      "label" : "Original: King's Printer Version",
+      "date" : "2025-03-24",
+      "size" : 3178982,
+      "language" : "English",
+      "type" : "application/pdf",
+      "thumbnail" : "http://www.legislation.gov.uk/ukpga/Geo6/6-7/48/images/ukpga_19430048_en.jpg"
+    } ],
     "unappliedEffects" : [ ],
     "upToDate" : true
   },

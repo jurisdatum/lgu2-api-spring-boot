@@ -55,4 +55,28 @@ public class Facets {
         return byInitial;
     }
 
+    static List<PageOfDocuments.ByStage> convertStageFacets(List<SearchResults.TypeAndValueFacet> stages) {
+        if (stages == null)
+            return Collections.emptyList();
+        return stages.stream().map(Facets::conertStageFacet).toList();
+    }
+    static PageOfDocuments.ByStage conertStageFacet(SearchResults.TypeAndValueFacet atom) {
+        PageOfDocuments.ByStage stage = new PageOfDocuments.ByStage();
+        stage.stage = atom.type;
+        stage.count = atom.value;
+        return stage;
+    }
+
+    static List<PageOfDocuments.ByDepartment> convertDepartmentFacets(List<SearchResults.TypeAndValueFacet> stages) {
+        if (stages == null)
+            return Collections.emptyList();
+        return stages.stream().map(Facets::convertDepartmentFacet).toList();
+    }
+    static PageOfDocuments.ByDepartment convertDepartmentFacet(SearchResults.TypeAndValueFacet atom) {
+        PageOfDocuments.ByDepartment dept = new PageOfDocuments.ByDepartment();
+        dept.department = atom.type;
+        dept.count = atom.value;
+        return dept;
+    }
+
 }

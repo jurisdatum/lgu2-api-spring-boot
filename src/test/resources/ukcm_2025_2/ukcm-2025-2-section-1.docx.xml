@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+   <w:body><!--body-->
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="NumberedSectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:rPr>
+               <w:vanish w:val="true"/>
+            </w:rPr>
+            <w:footnoteReference w:id="-1" w:customMarkFollows="true"/>
+            <w:t>I1</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> 1 </w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Scheme to transfer assets of certain Church funds</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">1</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">The trustee of a CBF Church of England Fund may make a scheme for the transfer of the assets of that fund to a charity authorised investment fund established for that purpose.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">2</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> A “CBF Church of England Fund” is a fund to which the </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e135">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">Church Funds Investment Measure 1958</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> applies known by one of the following names— </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England Investment Fund;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England Short Duration Bond Fund;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">c</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England Deposit Fund;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">d</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England Property Fund;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">e</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England UK Equity Fund;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">f</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the CBF Church of England Global Equity Fund.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">3</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> A scheme under </w:t>
+         </w:r>
+         <w:hyperlink w:anchor="section-1">
+            <w:r>
+               <w:t xml:space="preserve">this section</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> may include supplementary, incidental, consequential, transitional or saving provision and may in particular make provision for— </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the dissolution of the fund the assets of which are being transferred;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the retention of assets of the fund to meet its liabilities;</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">c</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">the payment of fees and expenses.</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:bookmarkStart w:id="14" w:name="section-1-4"/>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">4</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:bookmarkEnd w:id="14"/>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> “ </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">Charity authorised investment fund</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> ” means a fund which is— </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:bookmarkStart w:id="16" w:name="section-1-4-a"/>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:bookmarkEnd w:id="16"/>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">an authorised fund, and</w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> established under a common investment scheme under </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e276">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">section 96</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> of the </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e279">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">Charities Act 2011</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> . </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="SubsectionHeading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">5</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> In </w:t>
+         </w:r>
+         <w:hyperlink w:anchor="section-1-4">
+            <w:r>
+               <w:t xml:space="preserve">subsection (4)</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:hyperlink w:anchor="section-1-4-a">
+            <w:r>
+               <w:t xml:space="preserve">(a)</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> , “ </w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve">authorised fund</w:t>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> ” means a fund the property of which is— </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">a</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> held under a unit trust scheme authorised by an order under </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e313">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">section 243</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> of the </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e316">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">Financial Services and Markets Act 2000</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> , </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">b</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> held under a contractual scheme authorised by an order under </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e330">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">section 261D</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e333">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">(1)</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> of </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e336">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">that Act</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> , or </w:t>
+         </w:r>
+      </w:p>
+      <w:p>
+         <w:pPr>
+            <w:pStyle w:val="P3Heading"/>
+         </w:pPr>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t>(</w:t>
+            <w:t xml:space="preserve">c</w:t>
+            <w:t>)</w:t>
+         </w:r>
+         <w:r>
+            <w:tab/>
+         </w:r>
+         <w:r>
+            <w:t xml:space="preserve"> subject to a collective investment scheme constituted by an open-ended investment company in respect of which an authorisation order is in force under regulations made under </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e350">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">section 262</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> of </w:t>
+         </w:r>
+         <w:hyperlink xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                      r:id="d45203e353">
+            <w:r>
+               <w:rPr>
+                  <w:rStyle w:val="Hyperlink"/>
+               </w:rPr>
+               <w:t xml:space="preserve">that Act</w:t>
+            </w:r>
+         </w:hyperlink>
+         <w:r>
+            <w:t xml:space="preserve"> . </w:t>
+         </w:r>
+      </w:p>
+      <w:sectPr>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-first"
+                            w:type="first"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-odd"
+                            w:type="default"/>
+         <w:headerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-header-even"
+                            w:type="even"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer-first"
+                            w:type="first"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="default"/>
+         <w:footerReference xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"
+                            r:id="body-footer"
+                            w:type="even"/>
+         <w:pgSz w:w="11907" w:h="16840"/>
+         <w:pgMar w:top="1440"
+                  w:right="1440"
+                  w:bottom="1440"
+                  w:left="1440"
+                  w:header="720"
+                  w:footer="720"
+                  w:gutter="0"/>
+         <w:titlePg/>
+      </w:sectPr>
+   </w:body>
+</w:document>

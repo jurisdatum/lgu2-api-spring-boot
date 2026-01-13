@@ -1,5 +1,7 @@
 package uk.gov.legislation.endpoints;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
@@ -52,6 +54,23 @@ public class ParameterValidator {
         if ("en".equals(language) || "cy".equals(language))
             return;
         throw new UnsupportedLanguageException(language);
+    }
+
+    private static final Set<String> STAGES = Set.of(
+        "Consultation",
+        "Development",
+        "Enactment",
+        "Final",
+        "Implementation",
+        "Options",
+        "Post Implementation"
+    );
+
+    public static void validateStage(String stage) {
+        if (stage == null)
+            return;
+        if (STAGES.stream().noneMatch(s -> s.equalsIgnoreCase(stage)))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "unrecognized stage: " + stage);
     }
 
 }

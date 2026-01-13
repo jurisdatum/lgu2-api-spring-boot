@@ -1,0 +1,117 @@
+{
+  "id" : "asp/2025/11",
+  "longType" : "ScottishAct",
+  "shortType" : "asp",
+  "year" : 2025,
+  "number" : 11,
+  "isbn" : "9780105904403",
+  "date" : "2025-08-06",
+  "cite" : "2025 asp 11",
+  "version" : "2025-08-07",
+  "status" : "revised",
+  "title" : "Education (Scotland) Act 2025",
+  "extent" : [ "S" ],
+  "lang" : null,
+  "publisher" : "Statute Law Database",
+  "modified" : "2025-09-11",
+  "versions" : [ "enacted", "2025-08-07" ],
+  "has" : {
+    "introduction" : true,
+    "schedules" : true
+  },
+  "schedules" : true,
+  "formats" : [ "pdf" ],
+  "pointInTime" : null,
+  "alternatives" : [ {
+    "type" : "Alternative",
+    "uri" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf",
+    "name" : null,
+    "date" : "2025-08-06",
+    "size" : 1631326
+  } ],
+  "associated" : [ {
+    "type" : "Note",
+    "uri" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/aspen_20250011_en.pdf",
+    "name" : "Explanatory Note",
+    "date" : "2025-10-13",
+    "size" : 953472
+  } ],
+  "altFormats" : [ {
+    "url" : "http://www.legislation.gov.uk/asp/2025/11/pdfs/asp_20250011_en.pdf",
+    "label" : "Original: King's Printer Version",
+    "date" : "2025-08-06",
+    "size" : 1631326,
+    "language" : "English",
+    "type" : "application/pdf",
+    "thumbnail" : "http://www.legislation.gov.uk/asp/2025/11/images/asp_20250011_en.jpg"
+  } ],
+  "unappliedEffects" : [ ],
+  "upToDate" : true,
+  "confersPower" : [ {
+    "id" : "section-7",
+    "href" : "section/7",
+    "label" : "Section 7",
+    "title" : "Section 7: Duties when exercising functions"
+  }, {
+    "id" : "section-9",
+    "href" : "section/9",
+    "label" : "Section 9",
+    "title" : "Section 9: Strategic Advisory Council"
+  }, {
+    "id" : "section-37",
+    "href" : "section/37",
+    "label" : "Section 37",
+    "title" : "Section 37: Purpose of inspection"
+  }, {
+    "id" : "section-38",
+    "href" : "section/38",
+    "label" : "Section 38",
+    "title" : "Section 38: The inspection function"
+  }, {
+    "id" : "section-39",
+    "href" : "section/39",
+    "label" : "Section 39",
+    "title" : "Section 39: Meaning of “relevant educational establishment” and “excepted establishment”"
+  }, {
+    "id" : "section-45",
+    "href" : "section/45",
+    "label" : "Section 45",
+    "title" : "Section 45: Inspection plan"
+  }, {
+    "id" : "section-48",
+    "href" : "section/48",
+    "label" : "Section 48",
+    "title" : "Section 48: Report on performance of the Scottish education system"
+  }, {
+    "id" : "section-64",
+    "href" : "section/64",
+    "label" : "Section 64",
+    "title" : "Section 64: Regulation-making powers"
+  }, {
+    "id" : "section-65",
+    "href" : "section/65",
+    "label" : "Section 65",
+    "title" : "Section 65: Ancillary provision"
+  }, {
+    "id" : "section-66",
+    "href" : "section/66",
+    "label" : "Section 66",
+    "title" : "Section 66: Commencement"
+  }, {
+    "id" : "schedule-1-paragraph-2",
+    "href" : "schedule/1/paragraph/2",
+    "label" : "Schedule 1 paragraph 2",
+    "title" : "Schedule 1 paragraph 2: Number and appointment of members"
+  }, {
+    "id" : "schedule-1-paragraph-14",
+    "href" : "schedule/1/paragraph/14",
+    "label" : "Schedule 1 paragraph 14",
+    "title" : "Schedule 1 paragraph 14: Regulation of procedure"
+  }, {
+    "id" : "schedule-3-paragraph-5",
+    "href" : "schedule/3/paragraph/5",
+    "label" : "Schedule 3 paragraph 5",
+    "title" : "Schedule 3 paragraph 5: Appointment of initial board members"
+  } ],
+  "blanketAmendments" : [ ]
+}

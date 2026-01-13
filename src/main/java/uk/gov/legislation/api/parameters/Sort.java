@@ -12,6 +12,8 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Parameter(
     description = "The sort order",
-    schema = @Schema(allowableValues = { "title", "type", "relevance" })
+    schema = @Schema(
+        allowableValues = { "title", "type", "relevance", "published" }
+    )
 )
 public @interface Sort { }

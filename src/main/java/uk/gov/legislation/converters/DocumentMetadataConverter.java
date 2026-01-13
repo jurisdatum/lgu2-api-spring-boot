@@ -14,6 +14,11 @@ public class DocumentMetadataConverter {
     public static DocumentMetadata convert(Metadata simple) {
         DocumentMetadata converted = new DocumentMetadata();
         convert(simple, converted);
+        return converted;
+    }
+
+    public static void convert(Metadata simple, DocumentMetadata converted) {
+        convertCommon(simple, converted);
         // perhaps this should be combined with fragment metadata
         converted.unappliedEffects = simple.rawEffects.stream()
             .sorted(EffectsComparator.INSTANCE)
@@ -24,10 +29,10 @@ public class DocumentMetadataConverter {
             else
                 UpToDate.setUpToDate(converted, converted.pointInTime);
         }
-        return converted;
+        converted.altFormats = AlternateFormatConverter.convert(simple.alternatives);
     }
 
-    protected static void convert(Metadata simple, CommonMetadata converted) {
+    static void convertCommon(Metadata simple, CommonMetadata converted) {
         converted.id = simple.id;
         converted.longType = simple.longType;
         converted.shortType = Types.longToShort(simple.longType);

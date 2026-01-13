@@ -1,8 +1,5 @@
 package uk.gov.legislation.endpoints.defra;
 
-import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.virtuoso.defra.DefraLex;
@@ -14,9 +11,7 @@ import java.util.concurrent.CompletionStage;
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @RestController
-@Tag(name = "Linked Data")
-@RequestMapping(path = "/defra", produces = "application/json")
-public class DefraLexController {
+public class DefraLexController implements DefraLexApi {
 
     private final DefraLex query;
 
@@ -24,7 +19,7 @@ public class DefraLexController {
         this.query = query;
     }
 
-    @GetMapping("/items")
+    @Override
     public CompletionStage<Response> x(
             @RequestParam(required = false) Boolean inForce,
             @RequestParam(required = false) Boolean isCommencementOrder,

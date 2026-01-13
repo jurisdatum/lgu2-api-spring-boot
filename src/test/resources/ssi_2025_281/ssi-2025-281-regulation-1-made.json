@@ -43,7 +43,9 @@
       "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssifia_20250281_en_001.pdf",
       "name" : "Final Impact Assessment",
       "date" : "2025-10-09",
-      "size" : 47373
+      "size" : 47373,
+      "label" : "Final Impact Assessment",
+      "stage" : "Final"
     }, {
       "type" : "Other",
       "uri" : "http://www.legislation.gov.uk/ssi/2025/281/pdfs/ssiod_20250281_en_001.pdf",
