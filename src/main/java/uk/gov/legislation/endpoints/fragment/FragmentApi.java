@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.responses.Fragment;
@@ -37,13 +38,13 @@ public interface FragmentApi {
             )
         }
     )
-    ResponseEntity<String> getFragmentClml(
+    ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Year Integer year,
             @PathVariable @Number Integer number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
     @Operation(
@@ -57,56 +58,56 @@ public interface FragmentApi {
             )
         }
     )
-    ResponseEntity<String> getFragmentClml(
+    ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     /* Akoma Ntoso */
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/akn+xml")
-    ResponseEntity<String> getFragmentAkn(
+    ResponseEntity<StreamingResponseBody> getFragmentAkn(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/akn+xml")
-    ResponseEntity<String> getFragmentAkn(
+    ResponseEntity<StreamingResponseBody> getFragmentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     /* HTML5 */
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "text/html")
-    ResponseEntity<String> getFragmentHtml(
+    ResponseEntity<StreamingResponseBody> getFragmentHtml(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "text/html")
-    ResponseEntity<String> getFragmentHtml(
+    ResponseEntity<StreamingResponseBody> getFragmentHtml(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     /* JSON */
 
@@ -132,22 +133,22 @@ public interface FragmentApi {
     /* Word (.docx) */
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
 }

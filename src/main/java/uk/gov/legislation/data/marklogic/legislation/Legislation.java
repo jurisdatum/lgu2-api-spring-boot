@@ -33,7 +33,7 @@ public class Legislation {
         return getAndFollowRedirect(params);
     }
 
-    public StreamResponse getDocumentStream(String type, String year, int number, Optional<String> version, Optional<String> language) throws IOException {
+    public StreamResponse getDocumentStream(String type, String year, int number, Optional<String> version, Optional<String> language) {
         Parameters params = new Parameters(type, year, number)
             .version(version)
             .lang(language);
@@ -65,6 +65,14 @@ public class Legislation {
             .section(Optional.of(section))
             .lang(language);
         return getAndFollowRedirect(params);
+    }
+
+    public StreamResponse getDocumentSectionStream(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
+        Parameters params = new Parameters(type, year, number)
+            .version(version)
+            .section(Optional.of(section))
+            .lang(language);
+        return getAndFollowRedirect2(params);
     }
 
     public Response getMetadata(String type, String year, int number, Optional<String> language) {

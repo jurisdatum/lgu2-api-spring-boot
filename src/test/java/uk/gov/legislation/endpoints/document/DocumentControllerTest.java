@@ -1,6 +1,5 @@
 package uk.gov.legislation.endpoints.document;
 
-import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -15,6 +14,7 @@ import org.springframework.test.web.servlet.MvcResult;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Transforms;
 
 import java.io.ByteArrayInputStream;
@@ -240,12 +240,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .thenReturn(streamResponse);
         doAnswer(invocation -> {
             InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(2);
+            OutputStream htmlStream = invocation.getArgument(1);
             clmlIn.transferTo(OutputStream.nullOutputStream());
             htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
             htmlStream.flush();
             return null;
-        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
         MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept(MediaType.TEXT_HTML)
@@ -261,7 +261,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
-        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -276,12 +276,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .thenReturn(streamResponse);
         doAnswer(invocation -> {
             InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(2);
+            OutputStream htmlStream = invocation.getArgument(1);
             clmlIn.transferTo(OutputStream.nullOutputStream());
             htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
             htmlStream.flush();
             return null;
-        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
         MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
                 .accept(MediaType.TEXT_HTML)
@@ -297,7 +297,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
-        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -430,12 +430,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .thenReturn(streamResponse);
         doAnswer(invocation -> {
             InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(2);
+            OutputStream htmlStream = invocation.getArgument(1);
             clmlIn.transferTo(OutputStream.nullOutputStream());
             htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
             htmlStream.flush();
             return null;
-        }).when(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
         MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
                 .accept(MediaType.TEXT_HTML)
@@ -454,7 +454,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, Optional.empty(), language);
-        verify(transforms).clml2html(any(InputStream.class), eq(true), any(OutputStream.class));
+        verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
 
@@ -466,7 +466,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
             Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
             .thenReturn(streamResponse);
-        doThrow(new SaxonApiException("boom")).when(transforms)
+        doThrow(new TransformationException("boom", null)).when(transforms)
             .clml2akn(any(InputStream.class), any(OutputStream.class));
 
         MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")

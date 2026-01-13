@@ -1,27 +1,27 @@
 package uk.gov.legislation.endpoints.document;
 
-import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.MediaType;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.converters.ImpactAssessmentConverter;
 import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
-import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Transforms;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.UncheckedIOException;
 import java.util.Locale;
 import java.util.Optional;
+import java.util.function.BiConsumer;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
@@ -42,69 +42,61 @@ public class DocumentController implements DocumentApi {
 
     /* CLML */
 
+    private final BiConsumer<InputStream, OutputStream> transferToWrapper = (input, output) -> {
+        try {
+            input.transferTo(output);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        }
+    };
+
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
+    public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, InputStream::transferTo, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
     }
 
     @Override
-    public String getImpactAssessmentClml(int year, int number) throws Exception {
-        return impacts.getXml(year, number)
+    public ResponseEntity<StreamingResponseBody> getImpactAssessmentClml(int year, int number) throws Exception {
+        return impacts.getStream(year, number)
+            .map(input -> (StreamingResponseBody) output -> {
+                try (input) { input.transferTo(output); }
+            })
+            .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     /* Akoma Ntoso */
 
-    private StreamingTransform aknTransform() {
-        return (clml, akn) -> {
-            try {
-                transforms.clml2akn(clml, akn);
-            } catch (SaxonApiException e) {
-                throw new TransformationException("AkN transform failed", e);
-            }
-        };
-    }
-
-    private static final MediaType APPLICATION_AKN_XML = MediaType.parseMediaType("application/akn+xml");
+    public static final MediaType APPLICATION_AKN_XML = MediaType.parseMediaType("application/akn+xml");
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, aknTransform(), APPLICATION_AKN_XML);
+    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, aknTransform(), APPLICATION_AKN_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
     }
 
     /* HTML */
 
-    private StreamingTransform htmlTransform() {
-        return (clml, html) -> {
-            try {
-                transforms.clml2html(clml, true, html);
-            } catch (SaxonApiException e) {
-                throw new TransformationException("HTML transform failed", e);
-            }
-        };
+    @Override
+    public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
-    }
-
-    @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, htmlTransform(), MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
     }
 
     /* JSON */
@@ -121,35 +113,26 @@ public class DocumentController implements DocumentApi {
     }
 
     @Override
-    public Associated getImpactAssessmentJson(int year, int number) throws Exception {
+    public ResponseEntity<Associated> getImpactAssessmentJson(int year, int number) throws Exception {
         return impacts.get(year, number)
             .map(ImpactAssessmentConverter::convert)
+            .map(associated -> ResponseEntity.ok().body(associated))
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     /* Word (.docx) */
 
-    private StreamingTransform wordTransform() {
-        return (clml, docx) -> {
-            try {
-                transforms.clml2docx(clml, docx);
-            } catch (SaxonApiException e) {
-                throw new TransformationException("Word transform failed", e);
-            }
-        };
-    }
-
-    private static final MediaType MS_WORD = MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+    public static final MediaType MS_WORD = MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, wordTransform(), MS_WORD);
+    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2docx, MS_WORD);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, wordTransform(), MS_WORD);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2docx, MS_WORD);
     }
 
     /* helpers */
@@ -170,12 +153,7 @@ public class DocumentController implements DocumentApi {
         return ResponseEntity.ok().headers(headers).contentType(MediaType.APPLICATION_JSON).body(body);
     }
 
-    @FunctionalInterface
-    public interface StreamingTransform {
-        void accept(InputStream t, OutputStream u) throws IOException;
-    }
-
-    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number, Optional<String> version, Locale locale, StreamingTransform transform, MediaType mt) throws Exception {
+    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number, Optional<String> version, Locale locale, BiConsumer<InputStream, OutputStream> transform, MediaType mt) {
         validateType(type);
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =

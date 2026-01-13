@@ -10,6 +10,7 @@ import uk.gov.legislation.api.responses.*;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.converters.TableOfContentsConverter;
+import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Metadata;
@@ -41,8 +42,12 @@ public class Transforms {
         return Clml2Akn.serialize(aknNode);
     }
 
-    public void clml2akn(InputStream clml, OutputStream akn) throws SaxonApiException {
-        clml2akn.transform(clml, akn);
+    public void clml2akn(InputStream clml, OutputStream akn) {
+        try {
+            clml2akn.transform(clml, akn);
+        } catch (SaxonApiException e) {
+            throw new TransformationException("Error in AkN transform", e);
+        }
     }
 
     public String clml2html(String clml, boolean standalone) throws SaxonApiException {
@@ -50,9 +55,16 @@ public class Transforms {
         return akn2html.transform(akn, standalone);
     }
 
-    public void clml2html(InputStream clml, boolean standalone, OutputStream html) throws SaxonApiException {
+    public void clml2html(InputStream clml, boolean standalone, OutputStream html) {
         Destination next = akn2html.asDestination(standalone, html);
-        clml2akn.transform(clml, next);
+        try {
+            clml2akn.transform(clml, next);
+        } catch (SaxonApiException e) {
+            throw new TransformationException("Error in HTML transform", e);
+        }
+    }
+    public void clml2htmlStandalone(InputStream clml, OutputStream html) {
+        clml2html(clml, true, html);
     }
 
     public Document clml2document(String clml) throws SaxonApiException, JsonProcessingException {
@@ -94,8 +106,14 @@ public class Transforms {
         return clml2docx.transform(input);
     }
 
-    public void clml2docx(InputStream clml, OutputStream docx) throws IOException, SaxonApiException {
-        clml2docx.transform(clml, docx);
+    public void clml2docx(InputStream clml, OutputStream docx) {
+        try {
+            clml2docx.transform(clml, docx);
+        } catch (IOException e) {
+            throw new UncheckedIOException(e);
+        } catch (SaxonApiException e) {
+            throw new TransformationException("Error in Word transform", e);
+        }
     }
 
 }

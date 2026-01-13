@@ -1,6 +1,7 @@
 package uk.gov.legislation.data.marklogic.impacts;
 
 import org.springframework.stereotype.Repository;
+import uk.gov.legislation.data.marklogic.Error;
 import uk.gov.legislation.data.marklogic.MarkLogic;
 import uk.gov.legislation.transform.simple.SimpleXmlMapper;
 
@@ -10,6 +11,8 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PushbackInputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
@@ -43,6 +46,17 @@ public class Impacts {
         String query = "?impacttype=ukia&impactyear=%d&impactnumber=%d".formatted(year, number);
         String xml = db.get(ENDPOINT, query);
         return isError(xml) ? Optional.empty() : Optional.of(xml);
+    }
+
+    public Optional<InputStream> getStream(int year, int number) throws IOException, InterruptedException {
+        String query = "?impacttype=ukia&impactyear=%d&impactnumber=%d".formatted(year, number);
+        PushbackInputStream stream = db.getStream(ENDPOINT, query);
+        Optional<Error> maybeError = Error.parse(stream);
+        if (maybeError.isPresent()) {
+            stream.close();
+            return Optional.empty();
+        }
+        return Optional.of(stream);
     }
 
     public Optional<ImpactAssessment> get(int year, int number) throws IOException, InterruptedException {
