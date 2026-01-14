@@ -26,7 +26,7 @@ public class Impacts {
 
     private static final XMLInputFactory factory = XMLInputFactory.newFactory();
 
-    boolean isError(String xml) throws IOException {
+    public static boolean isError(String xml) throws IOException {
         try (ByteArrayInputStream sample = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
             XMLStreamReader reader = factory.createXMLStreamReader(sample);
             try {
