@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.parameters.Region;
 import uk.gov.legislation.api.parameters.Type;
 import uk.gov.legislation.api.parameters.Year;
@@ -42,7 +43,7 @@ public interface DocumentsApi {
             @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-    ResponseEntity<String> getFeed(
+    ResponseEntity<StreamingResponseBody> getFeed(
             @PathVariable String type,
             @RequestParam(defaultValue = "1") int page) throws Exception;
 
@@ -68,7 +69,7 @@ public interface DocumentsApi {
             @RequestParam(defaultValue = "1") int page) throws Exception;
 
     @GetMapping(value = "/documents/{type}/{year:[\\d]+}", produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-    ResponseEntity<String> getFeedByTypeAndYear(
+    ResponseEntity<StreamingResponseBody> getFeedByTypeAndYear(
             @PathVariable String type,
             @PathVariable int year,
             @RequestParam(defaultValue = "1") int page) throws Exception;
