@@ -51,12 +51,21 @@ public class Impacts {
     public Optional<InputStream> getStream(int year, int number) throws IOException, InterruptedException {
         String query = "?impacttype=ukia&impactyear=%d&impactnumber=%d".formatted(year, number);
         PushbackInputStream stream = db.getStream(ENDPOINT, query);
-        Optional<Error> maybeError = Error.parse(stream);
-        if (maybeError.isPresent()) {
-            stream.close();
-            return Optional.empty();
+        try {
+            Optional<Error> maybeError = Error.parse(stream);
+            if (maybeError.isPresent()) {
+                stream.close();
+                return Optional.empty();
+            }
+            return Optional.of(stream);
+        } catch (IOException | RuntimeException e) {
+            try {
+                stream.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
+            }
+            throw e;
         }
-        return Optional.of(stream);
     }
 
     public Optional<ImpactAssessment> get(int year, int number) throws IOException, InterruptedException {
