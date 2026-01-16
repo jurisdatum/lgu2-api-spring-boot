@@ -4,15 +4,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
+import static uk.gov.legislation.endpoints.documents.DocumentsController.APPLICATION_ATOM_XML_UTF8;
 
 @RestController
 public class SearchController implements SearchApi {
@@ -24,12 +27,25 @@ public class SearchController implements SearchApi {
     }
 
     @Override
-    public ResponseEntity<String> searchByAtom(SearchParameters param)
-        throws IOException, InterruptedException {
-
+    public ResponseEntity<StreamingResponseBody> searchByAtom(SearchParameters param)
+            throws IOException, InterruptedException {
         validateSearchParameters(param);
-        String atom = db.getAtom(convert(param));
-        return ResponseEntity.ok(atom);
+        InputStream atom = db.getAtomStream(convert(param));
+        try {
+            StreamingResponseBody body = output -> {
+                try (atom) { atom.transferTo(output); }
+            };
+            return ResponseEntity.ok()
+                .contentType(APPLICATION_ATOM_XML_UTF8)
+                .body(body);
+        } catch (RuntimeException e) {
+            try {
+                atom.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
+            }
+            throw e;
+        }
     }
 
     private static void validateSearchParameters(SearchParameters param) {

@@ -5,15 +5,16 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.accept.ContentNegotiationManager;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.request.NativeWebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
-import uk.gov.legislation.data.marklogic.search.LastUpdated;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.io.IOException;
-import java.time.ZonedDateTime;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
@@ -37,7 +38,7 @@ public class DocumentsController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<String> getFeed(String type, int page) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getFeed(String type, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).page(page).build();
         return getAtom(params);
@@ -51,7 +52,7 @@ public class DocumentsController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<String> getFeedByTypeAndYear(String type, int year, int page) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getFeedByTypeAndYear(String type, int year, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).year(year).page(page).build();
         return getAtom(params);
@@ -71,12 +72,25 @@ public class DocumentsController implements DocumentsApi {
         return getJson(params);
     }
 
-    private ResponseEntity<String> getAtom(Parameters params) throws IOException, InterruptedException {
-        String atom = search.getAtom(params);
-        ZonedDateTime updated = LastUpdated.get(atom);
-        return ResponseEntity.ok()
-            .lastModified(updated)
-            .body(atom);
+    public static final MediaType APPLICATION_ATOM_XML_UTF8 = new MediaType(MediaType.APPLICATION_ATOM_XML, StandardCharsets.UTF_8);
+
+    private ResponseEntity<StreamingResponseBody> getAtom(Parameters params) throws IOException, InterruptedException {
+        InputStream atom = search.getAtomStream(params);
+        try {
+            StreamingResponseBody body = output -> {
+                try (atom) { atom.transferTo(output); }
+            };
+            return ResponseEntity.ok()
+                .contentType(APPLICATION_ATOM_XML_UTF8)
+                .body(body);
+        } catch (RuntimeException e) {
+            try {
+                atom.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
+            }
+            throw e;
+        }
     }
 
     private ResponseEntity<PageOfDocuments> getJson(Parameters params) throws IOException, InterruptedException {
