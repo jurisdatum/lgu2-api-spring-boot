@@ -1,7 +1,6 @@
 package uk.gov.legislation.endpoints.search;
 
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -16,6 +15,7 @@ import java.io.InputStream;
 import java.util.Optional;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.*;
+import static uk.gov.legislation.endpoints.documents.DocumentsController.APPLICATION_ATOM_XML_UTF8;
 
 @RestController
 public class SearchController implements SearchApi {
@@ -31,12 +31,21 @@ public class SearchController implements SearchApi {
             throws IOException, InterruptedException {
         validateSearchParameters(param);
         InputStream atom = db.getAtomStream(convert(param));
-        StreamingResponseBody body = output -> {
-            try (atom) { atom.transferTo(output); }
-        };
-        return ResponseEntity.ok()
-            .contentType(MediaType.APPLICATION_ATOM_XML)
-            .body(body);
+        try {
+            StreamingResponseBody body = output -> {
+                try (atom) { atom.transferTo(output); }
+            };
+            return ResponseEntity.ok()
+                .contentType(APPLICATION_ATOM_XML_UTF8)
+                .body(body);
+        } catch (RuntimeException e) {
+            try {
+                atom.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
+            }
+            throw e;
+        }
     }
 
     private static void validateSearchParameters(SearchParameters param) {

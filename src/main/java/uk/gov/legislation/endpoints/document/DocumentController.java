@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
 import java.util.Locale;
 import java.util.Optional;
 import java.util.function.BiConsumer;
@@ -50,30 +51,43 @@ public class DocumentController implements DocumentApi {
         }
     };
 
+    public static final MediaType APPLICATION_XML_UTF8 = new MediaType(MediaType.APPLICATION_XML, StandardCharsets.UTF_8);
+
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getImpactAssessmentClml(int year, int number) throws Exception {
         return impacts.getStream(year, number)
-            .map(input -> (StreamingResponseBody) output -> {
-                try (input) { input.transferTo(output); }
+            .map(input -> {
+                try {
+                    StreamingResponseBody body = output -> {
+                        try (input) { input.transferTo(output); }
+                    };
+                    return ResponseEntity.ok().contentType(APPLICATION_XML_UTF8).body(body);
+                } catch (RuntimeException e) {
+                    try {
+                        input.close();
+                    } catch (IOException closeException) {
+                        e.addSuppressed(closeException);
+                    }
+                    throw e;
+                }
             })
-            .map(ResponseEntity::ok)
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     /* Akoma Ntoso */
 
-    public static final MediaType APPLICATION_AKN_XML = MediaType.parseMediaType("application/akn+xml");
+    public static final MediaType APPLICATION_AKN_XML = MediaType.parseMediaType("application/akn+xml;charset=UTF-8");
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentAkn(String type, int year, int number, Optional<String> version, Locale locale) {
@@ -88,15 +102,17 @@ public class DocumentController implements DocumentApi {
 
     /* HTML */
 
+    public static final MediaType TEXT_HTML_UTF8 = new MediaType(MediaType.TEXT_HTML, StandardCharsets.UTF_8);
+
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentHtml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
     }
 
     /* JSON */
@@ -158,13 +174,23 @@ public class DocumentController implements DocumentApi {
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
             marklogic.getDocumentStream(type, year, number, version, Optional.of(language));
-        StreamingResponseBody body = output -> {
-            try (InputStream in = doc.clml()) {
-                transform.accept(in, output);
+        InputStream clml = doc.clml();
+        try {
+            StreamingResponseBody body = output -> {
+                try (InputStream in = clml) {
+                    transform.accept(in, output);
+                }
+            };
+            HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+            return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+        } catch (RuntimeException e) {
+            try {
+                clml.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
             }
-        };
-        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+            throw e;
+        }
     }
 
 }

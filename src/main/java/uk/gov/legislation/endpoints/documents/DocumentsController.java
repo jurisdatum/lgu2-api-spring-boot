@@ -14,6 +14,7 @@ import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
@@ -71,14 +72,25 @@ public class DocumentsController implements DocumentsApi {
         return getJson(params);
     }
 
+    public static final MediaType APPLICATION_ATOM_XML_UTF8 = new MediaType(MediaType.APPLICATION_ATOM_XML, StandardCharsets.UTF_8);
+
     private ResponseEntity<StreamingResponseBody> getAtom(Parameters params) throws IOException, InterruptedException {
         InputStream atom = search.getAtomStream(params);
-        StreamingResponseBody body = output -> {
-            try (atom) { atom.transferTo(output); }
-        };
-        return ResponseEntity.ok()
-            .contentType(MediaType.APPLICATION_ATOM_XML)
-            .body(body);
+        try {
+            StreamingResponseBody body = output -> {
+                try (atom) { atom.transferTo(output); }
+            };
+            return ResponseEntity.ok()
+                .contentType(APPLICATION_ATOM_XML_UTF8)
+                .body(body);
+        } catch (RuntimeException e) {
+            try {
+                atom.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
+            }
+            throw e;
+        }
     }
 
     private ResponseEntity<PageOfDocuments> getJson(Parameters params) throws IOException, InterruptedException {

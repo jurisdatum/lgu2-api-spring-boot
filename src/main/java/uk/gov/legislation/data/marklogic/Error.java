@@ -39,8 +39,12 @@ public class Error {
         boolean isError;
         try (ByteArrayInputStream sample = new ByteArrayInputStream(peek)) {
             XMLStreamReader reader = factory.createXMLStreamReader(sample);
-            int event = reader.nextTag();
-            isError = event == XMLStreamConstants.START_ELEMENT && "error".equals(reader.getLocalName());
+            try {
+                int event = reader.nextTag();
+                isError = event == XMLStreamConstants.START_ELEMENT && "error".equals(reader.getLocalName());
+            } finally {
+                reader.close();
+            }
         } catch (XMLStreamException e) {
             input.unread(peek, 0, peek.length);
             return Optional.empty();

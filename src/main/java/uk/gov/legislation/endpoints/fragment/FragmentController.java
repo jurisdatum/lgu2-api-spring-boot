@@ -19,8 +19,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
-import static uk.gov.legislation.endpoints.document.DocumentController.APPLICATION_AKN_XML;
-import static uk.gov.legislation.endpoints.document.DocumentController.MS_WORD;
+import static uk.gov.legislation.endpoints.document.DocumentController.*;
 
 @RestController
 public class FragmentController implements FragmentApi {
@@ -46,14 +45,14 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, Integer year, Integer number, String section,
             Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */
@@ -75,13 +74,13 @@ public class FragmentController implements FragmentApi {
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentHtml(String type, int year, int number, String section,
             Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
     }
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentHtml(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2htmlStandalone, MediaType.TEXT_HTML);
+        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
     }
 
     /* JSON */
@@ -134,13 +133,23 @@ public class FragmentController implements FragmentApi {
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
             marklogic.getDocumentSectionStream(type, year, number, section, version, Optional.of(String.valueOf(language)));
-        StreamingResponseBody body = output -> {
-            try (InputStream in = doc.clml()) {
-                transform.accept(in, output);
+        InputStream clml = doc.clml();
+        try {
+            StreamingResponseBody body = output -> {
+                try (InputStream in = clml) {
+                    transform.accept(in, output);
+                }
+            };
+            HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+            return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+        } catch (RuntimeException e) {
+            try {
+                clml.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
             }
-        };
-        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+            throw e;
+        }
     }
 
 }

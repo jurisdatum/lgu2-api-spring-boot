@@ -73,7 +73,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_XML))
+            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
             .andExpect(content().string(clmlXml));
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verifyNoMoreInteractions(marklogic);
@@ -98,7 +98,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_XML))
+            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
             .andExpect(content().string(clmlXml));
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verifyNoMoreInteractions(marklogic);
@@ -337,7 +337,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
+            .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
             .andExpect(content().string(aknXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -373,7 +373,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.parseMediaType("application/akn+xml")))
+            .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
             .andExpect(content().string(aknXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
@@ -513,7 +513,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_XML))
+            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
             .andExpect(content().string(clmlXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
@@ -540,7 +540,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
         mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_XML))
+            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
             .andExpect(content().string(clmlXml))
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 

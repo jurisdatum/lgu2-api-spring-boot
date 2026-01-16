@@ -19,8 +19,7 @@ import java.util.Optional;
 import java.util.function.BiConsumer;
 
 import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
-import static uk.gov.legislation.endpoints.document.DocumentController.APPLICATION_AKN_XML;
-import static uk.gov.legislation.endpoints.document.DocumentController.MS_WORD;
+import static uk.gov.legislation.endpoints.document.DocumentController.*;
 
 @RestController
 public class ContentsController implements ContentsApi {
@@ -45,13 +44,13 @@ public class ContentsController implements ContentsApi {
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, MediaType.APPLICATION_XML);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */
@@ -117,13 +116,23 @@ public class ContentsController implements ContentsApi {
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
             marklogic.getTableOfContentsStream(type, year, number, version, Optional.of(language));
-        StreamingResponseBody body = output -> {
-            try (InputStream in = doc.clml()) {
-                transform.accept(in, output);
+        InputStream clml = doc.clml();
+        try {
+            StreamingResponseBody body = output -> {
+                try (InputStream in = clml) {
+                    transform.accept(in, output);
+                }
+            };
+            HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
+            return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+        } catch (RuntimeException e) {
+            try {
+                clml.close();
+            } catch (IOException closeException) {
+                e.addSuppressed(closeException);
             }
-        };
-        HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
-        return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
+            throw e;
+        }
     }
 
 }
