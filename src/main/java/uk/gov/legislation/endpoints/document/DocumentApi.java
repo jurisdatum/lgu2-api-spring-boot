@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
 import uk.gov.legislation.api.responses.Associated;
@@ -38,12 +39,12 @@ public interface DocumentApi {
             )
         }
     )
-    ResponseEntity<String> getDocumentClml(
+    ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Year int year,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(
@@ -57,16 +58,16 @@ public interface DocumentApi {
             )
         }
     )
-    ResponseEntity<String> getDocumentClml(
+    ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
             @PathVariable @Number int number,
             @RequestParam @Version Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/xml")
-    String getImpactAssessmentClml(
+    ResponseEntity<StreamingResponseBody> getImpactAssessmentClml(
         @PathVariable @Year int year,
         @PathVariable @Number int number) throws Exception;
 
@@ -74,41 +75,41 @@ public interface DocumentApi {
      * Retrieves document content in AKN format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
-    ResponseEntity<String> getDocumentAkn(
+    ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
-    ResponseEntity<String> getDocumentAkn(
+    ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     /**
      * Retrieves document content in HTML format.
      */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "text/html")
-    ResponseEntity<String> getDocumentHtml(
+    ResponseEntity<StreamingResponseBody> getDocumentHtml(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "text/html")
-    ResponseEntity<String> getDocumentHtml(
+    ResponseEntity<StreamingResponseBody> getDocumentHtml(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     /**
      * Retrieves document metadata and HTML content in JSON format.
@@ -131,27 +132,27 @@ public interface DocumentApi {
             Locale locale) throws Exception;
 
     @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/json")
-    Associated getImpactAssessmentJson(
+    ResponseEntity<Associated> getImpactAssessmentJson(
         @PathVariable int year,
         @PathVariable int number) throws Exception;
 
     /* Word (.docx) */
 
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-    ResponseEntity<byte[]> docx(
+    ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale);
 
 }

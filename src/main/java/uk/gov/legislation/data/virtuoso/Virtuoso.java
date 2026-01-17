@@ -10,6 +10,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Set;
 
 @Repository
@@ -24,7 +25,7 @@ public class Virtuoso {
         if (host == null || port == null) {
             throw new IllegalArgumentException("VIRTUOSO_HOST or VIRTUOSO_PORT cannot be null");
         }
-        this.endpoint = "http://" + host + ":" + port + "/sparql";
+        endpoint = "http://" + host + ":" + port + "/sparql";
     }
 
     public static final Set<String> Formats = Set.of(
@@ -57,6 +58,24 @@ public class Virtuoso {
     public JsonResults query(String query) throws IOException, InterruptedException {
         String json = query(query, "application/sparql-results+json");
         return JsonResults.parse(json);
+    }
+
+    /* status checks for health endpoint with shorter timeouts */
+
+    private final HttpClient statusClient = HttpClient.newBuilder()
+        .connectTimeout(Duration.ofMillis(300))
+        .build();
+
+    public int getStatus(String query) throws IOException, InterruptedException {
+        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+        HttpRequest request = HttpRequest.newBuilder()
+            .GET()
+            .uri(uri)
+            .header("Accept", "application/sparql-results+json")
+            .timeout(Duration.ofMillis(800))
+            .build();
+        HttpResponse<Void> response = statusClient.send(request, HttpResponse.BodyHandlers.discarding());
+        return response.statusCode();
     }
 
 }

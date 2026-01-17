@@ -62,7 +62,7 @@ class ExceptionHandlingIntegrationTest {
         error.statusCode = 404;
         error.message = "Document not found";
 
-        when(marklogic.getDocument(anyString(), anyString(), anyInt(), any(), any()))
+        when(marklogic.getDocumentStream(anyString(), anyString(), anyInt(), any(), any()))
             .thenThrow(new NoDocumentException(error));
 
         mockMvc.perform(get("/document/ukpga/2020/1")

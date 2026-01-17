@@ -5,11 +5,14 @@ import org.springframework.stereotype.Component;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.PushbackInputStream;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
+import java.time.Duration;
 import java.util.Base64;
 
 @Component
@@ -54,12 +57,54 @@ public class MarkLogic {
                 .uri(uri)
                 .header("Authorization", authHeader)
                 .build();
-
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         if (response.statusCode() >= 400) {
             throw new MarkLogicRequestException("Error response from MarkLogic: " + response.body());
         }
         return response.body();
+    }
+
+    /**
+     * Internal helper intended for data-layer callers that need to stream the raw response body.
+     * External callers should prefer higher-level APIs in {@code uk.gov.legislation.data.marklogic.legislation}.
+     *
+     * @param endpoint endpoint path relative to {@code /queries/}
+     * @param query query string to append (must include leading {@code ?})
+     * @return {@link PushbackInputStream} wrapping the HTTP response body; caller must close it
+     * @throws MarkLogicRequestException when MarkLogic responds with a 4xx/5xx status
+     */
+    public PushbackInputStream getStream(String endpoint, String query) throws IOException, InterruptedException {
+        URI uri = URI.create(baseUri + endpoint + query);
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .header("Authorization", authHeader)
+            .build();
+        HttpResponse<InputStream> response = httpClient.send(request, HttpResponse.BodyHandlers.ofInputStream());
+        InputStream bodyStream = response.body();
+        if (response.statusCode() >= 400) {
+            try (bodyStream) {  // closes the stream even though we’re about to throw
+                String body = new String(bodyStream.readAllBytes(), StandardCharsets.UTF_8);
+                throw new MarkLogicRequestException("Error response from MarkLogic: " + body);
+            }
+        }
+        return new PushbackInputStream(bodyStream, 1024);
+    }
+
+    /* status checks for health endpoint with shorter timeouts */
+
+    private final HttpClient statusClient = HttpClient.newBuilder()
+        .connectTimeout(Duration.ofMillis(300))
+        .build();
+
+    public int getStatus(String endpoint, String query) throws IOException, InterruptedException {
+        URI uri = URI.create(baseUri + endpoint + query);
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(uri)
+            .header("Authorization", authHeader)
+            .timeout(Duration.ofMillis(800))
+            .build();
+        HttpResponse<Void> response = statusClient.send(request, HttpResponse.BodyHandlers.discarding());
+        return response.statusCode();
     }
 
 }

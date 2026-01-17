@@ -10,6 +10,8 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
@@ -19,11 +21,16 @@ import java.util.Map;
 @JacksonXmlRootElement(localName = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class SearchResults {
 
+    static final ObjectMapper MAPPER = new XmlMapper()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+        .registerModules(new JavaTimeModule());
+
     public static SearchResults parse(String xml) throws JsonProcessingException {
-        ObjectMapper mapper = new XmlMapper()
-            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-            .registerModules(new JavaTimeModule());
-        return mapper.readValue(xml, SearchResults.class);
+        return MAPPER.readValue(xml, SearchResults.class);
+    }
+
+    public static SearchResults parse(InputStream xml) throws IOException {
+        return MAPPER.readValue(xml, SearchResults.class);
     }
 
     @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")

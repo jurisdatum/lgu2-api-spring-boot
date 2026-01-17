@@ -5,18 +5,22 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
 import uk.gov.legislation.data.marklogic.search.Search;
 
-import static org.hamcrest.Matchers.containsString;
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import java.io.ByteArrayInputStream;
+import java.nio.charset.StandardCharsets;
 
+import static org.hamcrest.Matchers.containsString;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(controllers = SearchController.class)
@@ -48,15 +52,19 @@ class SearchControllerTest {
         </feed>
         """;
 
-        when(search.getAtom(argThat(params ->
+        when(search.getAtomStream(argThat(params ->
             "ukpga".equals(params.type) &&
                 Integer.valueOf(2021).equals(params.year)
-        ))).thenReturn(mockAtomFeed);
+        ))).thenReturn(new ByteArrayInputStream(mockAtomFeed.getBytes(StandardCharsets.UTF_8)));
 
-        mockMvc.perform(get("/search")
+        MvcResult mvcResult = mockMvc.perform(get("/search")
                 .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
                 .param("type", "ukpga")
                 .param("year", "2021"))
+            .andExpect(request().asyncStarted())
+            .andReturn();
+
+        mockMvc.perform(asyncDispatch(mvcResult))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
             .andExpect(content().string(containsString("<feed")));
@@ -126,6 +134,5 @@ class SearchControllerTest {
         verifyNoInteractions(search);
     }
 }
-
 
 

@@ -1,9 +1,10 @@
 package uk.gov.legislation.transform.clml2docx;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import net.sf.saxon.s9api.XdmNode;
+
+import javax.xml.transform.*;
+import javax.xml.transform.stream.StreamResult;
+import java.io.*;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -11,16 +12,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
-
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.TransformerFactoryConfigurationError;
-import javax.xml.transform.stream.StreamResult;
-
-import net.sf.saxon.s9api.XdmNode;
 
 public class Package {
 	
@@ -43,7 +34,24 @@ public class Package {
 	};
 	
 	private ZipOutputStream zip;
-		
+
+	void save(OutputStream docx) throws IOException {
+		try (ZipOutputStream zipStream = new ZipOutputStream(new NonClosingOutputStream(docx))) {
+			zip = zipStream;
+			saveComponents();
+			saveCoreProperties();
+			saveDocument();
+			saveStyles();
+			saveHeadersAndFooters();
+			saveFootnotes();
+			saveRelationships();
+			saveFootnoteRelationships();
+			saveResources();
+		} finally {
+			zip = null;
+		}
+	}
+
 	/**
 	 * Generates a docx file by generating the individual files within the archive, and returns it
 	 * @return docx file
@@ -51,17 +59,8 @@ public class Package {
 	 */
 	byte[] save() throws IOException {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		zip = new ZipOutputStream(baos);
-		saveComponents();
-		saveCoreProperties();
-		saveDocument();
-		saveStyles();
-		saveHeadersAndFooters();
-		saveFootnotes();
-		saveRelationships();
-		saveFootnoteRelationships();
-		saveResources();
-		zip.close();
+		save(baos);
+		baos.close();
 		return baos.toByteArray();
 	}
 	
@@ -201,6 +200,23 @@ public class Package {
 			transformer.transform(document.asSource(), new StreamResult(output));
 		} catch (TransformerException e) {
 			throw new RuntimeException(e);
+		}
+	}
+
+	private static final class NonClosingOutputStream extends FilterOutputStream {
+		private NonClosingOutputStream(OutputStream out) {
+			super(out);
+		}
+
+		// FilterOutputStream writes byte-by-byte by default; delegate bulk writes directly
+		@Override
+		public void write(byte[] b, int off, int len) throws IOException {
+			out.write(b, off, len);
+		}
+
+		@Override
+		public void close() throws IOException {
+			flush();
 		}
 	}
 

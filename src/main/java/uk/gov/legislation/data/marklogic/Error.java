@@ -10,7 +10,15 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
 
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.PushbackInputStream;
 import java.util.List;
+import java.util.Optional;
 
 @JacksonXmlRootElement
 @JsonIgnoreProperties(ignoreUnknown = false)
@@ -20,6 +28,33 @@ public class Error {
         Error error = READER.readValue(xml);
         validate(error);
         return error;
+    }
+
+    private static final XMLInputFactory factory = XMLInputFactory.newFactory();
+
+    public static Optional<Error> parse(PushbackInputStream input) throws IOException {
+        byte[] peek = input.readNBytes(1024);
+        if (peek.length == 0)
+            return Optional.empty();
+        boolean isError;
+        try (ByteArrayInputStream sample = new ByteArrayInputStream(peek)) {
+            XMLStreamReader reader = factory.createXMLStreamReader(sample);
+            try {
+                int event = reader.nextTag();
+                isError = event == XMLStreamConstants.START_ELEMENT && "error".equals(reader.getLocalName());
+            } finally {
+                reader.close();
+            }
+        } catch (XMLStreamException e) {
+            input.unread(peek, 0, peek.length);
+            return Optional.empty();
+        }
+        input.unread(peek, 0, peek.length);
+        if (!isError)
+            return Optional.empty();
+        Error error = READER.readValue(input);
+        validate(error);
+        return Optional.of(error);
     }
 
     private static final XmlMapper MAPPER = (XmlMapper) new XmlMapper()
