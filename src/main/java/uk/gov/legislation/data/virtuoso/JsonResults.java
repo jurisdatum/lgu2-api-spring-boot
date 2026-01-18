@@ -13,10 +13,11 @@ import java.util.Map;
 
 public class JsonResults {
 
+    public static final ObjectMapper MAPPER = new ObjectMapper()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
     public static JsonResults parse(String json) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper()
-            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        return mapper.readValue(json, JsonResults.class);
+        return MAPPER.readValue(json, JsonResults.class);
     }
 
     public Results results;

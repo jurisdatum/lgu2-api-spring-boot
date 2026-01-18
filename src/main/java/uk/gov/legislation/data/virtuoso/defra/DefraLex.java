@@ -1,10 +1,10 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
+import uk.gov.legislation.data.virtuoso.JsonResults;
 
 import java.net.URI;
 import java.net.URLEncoder;
@@ -25,8 +25,7 @@ public class DefraLex {
 
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
-    static final ObjectMapper mapper = new ObjectMapper()
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    static final ObjectMapper mapper = JsonResults.MAPPER;
 
     public DefraLex(Environment env) {
         String host = env.getProperty("VIRTUOSO_HOST");

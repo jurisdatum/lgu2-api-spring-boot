@@ -1,17 +1,16 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import uk.gov.legislation.data.virtuoso.JsonResults;
 
 import java.util.Optional;
 
 public class Graph {
 
-    public static final ObjectMapper mapper = new ObjectMapper()
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    public static final ObjectMapper mapper = JsonResults.MAPPER;
 
     public static ArrayNode extract(String json) throws JsonProcessingException {
         JsonNode tree = mapper.readTree(json);
