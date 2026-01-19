@@ -1,11 +1,10 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.node.ObjectNode;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -16,7 +15,7 @@ class ValueAndTypeTest {
     @DisplayName("convert() returns correct ValueAndType for TextNode")
     void testConvert_WithTextNode() {
 
-        JsonNode textNode = new TextNode("example text");
+        JsonNode textNode = new ObjectMapper().valueToTree("example text");
         ValueAndType result = ValueAndType.convert(textNode);
 
         assertAll("TextNode conversion",

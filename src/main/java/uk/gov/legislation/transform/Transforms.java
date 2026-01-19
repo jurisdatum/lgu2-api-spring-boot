@@ -1,11 +1,11 @@
 package uk.gov.legislation.transform;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.Destination;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XsltTransformer;
 import org.springframework.stereotype.Service;
+import tools.jackson.core.JacksonException;
 import uk.gov.legislation.api.responses.*;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
@@ -67,7 +67,7 @@ public class Transforms {
         clml2html(clml, true, html);
     }
 
-    public Document clml2document(String clml) throws SaxonApiException, JsonProcessingException {
+    public Document clml2document(String clml) throws SaxonApiException, JacksonException {
         XdmNode doc = Helper.parse(clml);
         XdmNode akn = clml2akn.transform(doc);
         String html = akn2html.transform(akn, false);
@@ -76,7 +76,7 @@ public class Transforms {
         return new Document(converted, html);
     }
 
-    public Document clml2document(InputStream clml) throws SaxonApiException, JsonProcessingException {
+    public Document clml2document(InputStream clml) throws SaxonApiException, JacksonException {
         XdmNode doc = Helper.parse(clml);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         XsltTransformer next = akn2html.asDestination(false, baos);
@@ -87,7 +87,7 @@ public class Transforms {
         return new Document(converted, html);
     }
 
-    public Fragment clml2fragment(String clml) throws SaxonApiException, JsonProcessingException {
+    public Fragment clml2fragment(String clml) throws SaxonApiException, JacksonException {
         XdmNode doc = Helper.parse(clml);
         XdmNode akn = clml2akn.transform(doc);
         String html = akn2html.transform(akn, false);
@@ -96,7 +96,7 @@ public class Transforms {
         return new Fragment(converted, html);
     }
 
-    public TableOfContents clml2toc(String clml) throws SaxonApiException, JsonProcessingException {
+    public TableOfContents clml2toc(String clml) throws SaxonApiException, JacksonException {
         Contents simple = simplifier.contents(clml);
         return TableOfContentsConverter.convert(simple);
     }

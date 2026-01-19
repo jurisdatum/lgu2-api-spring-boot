@@ -1,8 +1,7 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.TextNode;
+import tools.jackson.databind.JsonNode;
 
 public class ValueAndType {
 
@@ -13,9 +12,9 @@ public class ValueAndType {
     public String type;
 
     static ValueAndType convert(JsonNode node) {
-        if (node instanceof TextNode) {
+        if (node != null && node.isTextual()) {
             ValueAndType value = new ValueAndType();
-            value.value = node.asText();
+            value.value = node.textValue();
             value.type = "http://www.w3.org/2001/XMLSchema#string";
             return value;
         }

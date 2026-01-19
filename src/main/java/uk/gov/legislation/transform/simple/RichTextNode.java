@@ -1,10 +1,10 @@
 package uk.gov.legislation.transform.simple;
 
+import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.util.List;
 
@@ -18,7 +18,7 @@ import java.util.List;
     @JsonSubTypes.Type(value = RichTextNode.Section.class, name = "section"),
     @JsonSubTypes.Type(value = RichTextNode.Range.class, name = "range")
 })
-@JacksonXmlRootElement(localName = "node")
+@JsonRootName("node")
 public abstract class RichTextNode {
 
     public static class Text extends RichTextNode {

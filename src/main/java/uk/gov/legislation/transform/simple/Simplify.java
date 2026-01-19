@@ -1,8 +1,8 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Service;
+import tools.jackson.core.JacksonException;
 import uk.gov.legislation.transform.Helper;
 
 import javax.xml.transform.Source;
@@ -66,7 +66,7 @@ public class Simplify {
         return output.toString(StandardCharsets.UTF_8);
     }
 
-    public Contents contents(String clml) throws SaxonApiException, JsonProcessingException {
+    public Contents contents(String clml) throws SaxonApiException, JacksonException {
         Parameters params = new Parameters(false, true);
         String simplified = transform(clml, params);
         return Contents.parse(simplified);
@@ -74,28 +74,28 @@ public class Simplify {
 
     /* metadata */
 
-    private Metadata metadata(XdmNode clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
+    private Metadata metadata(XdmNode clml, boolean isFragment) throws SaxonApiException, JacksonException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
         return Contents.parse(simplified).meta;
     }
-    private Metadata metadata(String clml, boolean isFragment) throws SaxonApiException, JsonProcessingException {
+    private Metadata metadata(String clml, boolean isFragment) throws SaxonApiException, JacksonException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
         return Contents.parse(simplified).meta;
     }
 
-    public Metadata extractDocumentMetadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
+    public Metadata extractDocumentMetadata(XdmNode clml) throws SaxonApiException, JacksonException {
         return metadata(clml, false);
     }
-    public Metadata extractDocumentMetadata(String clml) throws SaxonApiException, JsonProcessingException {
+    public Metadata extractDocumentMetadata(String clml) throws SaxonApiException, JacksonException {
         return metadata(clml, false);
     }
 
-    public Metadata extractFragmentMetadata(XdmNode clml) throws SaxonApiException, JsonProcessingException {
+    public Metadata extractFragmentMetadata(XdmNode clml) throws SaxonApiException, JacksonException {
         return metadata(clml, true);
     }
-    public Metadata extractFragmentMetadata(String clml) throws SaxonApiException, JsonProcessingException {
+    public Metadata extractFragmentMetadata(String clml) throws SaxonApiException, JacksonException {
         return metadata(clml, true);
     }
 

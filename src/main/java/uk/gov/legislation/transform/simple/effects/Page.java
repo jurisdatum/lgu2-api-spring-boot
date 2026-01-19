@@ -1,14 +1,14 @@
 package uk.gov.legislation.transform.simple.effects;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.time.ZonedDateTime;
 import java.util.Collections;
 import java.util.List;
 
-@JacksonXmlRootElement(localName = "feed", namespace = "http://www.w3.org/2005/Atom")
+@JsonRootName(value = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class Page {
 
     @JacksonXmlProperty

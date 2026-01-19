@@ -1,9 +1,9 @@
 package uk.gov.legislation.api.test;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
+import tools.jackson.core.JacksonException;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.ExtendedMetadata;
 import uk.gov.legislation.converters.ExtendedMetadataConverter;
@@ -76,7 +76,7 @@ public class ExtendedMetadataTestRedo {
         return UnappliedEffectsTest.indent(simple);
     }
 
-    static String toJson(String simple) throws JsonProcessingException {
+    static String toJson(String simple) throws JacksonException {
         Metadata meta1 = Contents.parse(simple).meta;
         ExtendedMetadata meta2 = ExtendedMetadataConverter.convert(meta1);
         return TransformHelper.MAPPER.writeValueAsString(meta2);

@@ -1,13 +1,13 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 import java.util.Optional;
 import java.util.stream.Stream;
@@ -18,7 +18,7 @@ class GraphTest {
 
     @Test
     @DisplayName("Should extract valid graph from JSON with one object")
-    void testExtractWithValidJsonContainingGraph() throws JsonProcessingException {
+    void testExtractWithValidJsonContainingGraph() throws JacksonException {
         String validJson = "{ \"@graph\": [{ \"id\": \"1\", \"name\": \"Test\" }] }";
 
         ArrayNode result = Graph.extract(validJson);
@@ -33,7 +33,7 @@ class GraphTest {
 
     @Test
     @DisplayName("Should extract empty graph from valid JSON")
-    void testExtractWithValidJsonEmptyGraph() throws JsonProcessingException {
+    void testExtractWithValidJsonEmptyGraph() throws JacksonException {
         String validJson = "{ \"@graph\": [] }";
 
         ArrayNode result = Graph.extract(validJson);
@@ -49,7 +49,7 @@ class GraphTest {
     void testExtractWithInvalidJson() {
         String invalidJson = "{ invalid json ";
 
-        assertThrows(JsonProcessingException.class,
+        assertThrows(JacksonException.class,
             () -> Graph.extract(invalidJson),
             "Passing invalid JSON should throw a JsonProcessingException.");
     }
@@ -57,7 +57,7 @@ class GraphTest {
     @ParameterizedTest(name = "{index} => JSON: {0}, expectedId: {1}, expectedName: {2}")
     @MethodSource("validGraphObjectProvider")
     @DisplayName("Should extract first object from valid JSON graph")
-    void testExtractFirstObjectWithValidJson(String json, String expectedId, String expectedName) throws JsonProcessingException {
+    void testExtractFirstObjectWithValidJson(String json, String expectedId, String expectedName) throws JacksonException {
 
         Optional<JsonNode> result = Graph.extractFirstObject(json, JsonNode.class);
 
@@ -80,7 +80,7 @@ class GraphTest {
 
     @Test
     @DisplayName("Should return empty Optional for empty graph in extractFirstObject")
-    void testExtractFirstObjectWithEmptyGraph() throws JsonProcessingException {
+    void testExtractFirstObjectWithEmptyGraph() throws JacksonException {
         String validJson = "{ \"@graph\": [] }";
 
         Optional<JsonNode> result = Graph.extractFirstObject(validJson, JsonNode.class);
@@ -93,7 +93,7 @@ class GraphTest {
     void testExtractFirstObjectWithInvalidJson() {
         String invalidJson = "{ invalid json ";
 
-        assertThrows(JsonProcessingException.class,
+        assertThrows(JacksonException.class,
             () -> Graph.extractFirstObject(invalidJson, JsonNode.class),
             "Passing invalid JSON should throw a JsonProcessingException.");
     }
