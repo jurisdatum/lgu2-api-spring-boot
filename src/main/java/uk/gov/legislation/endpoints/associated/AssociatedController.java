@@ -8,8 +8,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Type;
 import uk.gov.legislation.api.parameters.Year;
 import uk.gov.legislation.api.responses.Associated;
+import uk.gov.legislation.converters.ExplanatoryNotesConvertor;
 import uk.gov.legislation.converters.ImpactAssessmentConverter;
 import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.notes.EnNotes;
@@ -58,4 +60,19 @@ public class AssociatedController {
                 .body(xml)).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+
+    @GetMapping(
+        value = "/notes/{type}/{year}/{number}",
+        produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public Associated getJson(
+        @PathVariable @Type String type,
+        @PathVariable @Year int year,
+        @PathVariable @Number int number
+    ) throws IOException, InterruptedException {
+
+        return notes.get(type, year, number)
+            .map(ExplanatoryNotesConvertor::convert)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+    }
 }

@@ -2,6 +2,8 @@ package uk.gov.legislation.data.marklogic.notes;
 
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.marklogic.MarkLogic;
+import uk.gov.legislation.transform.simple.SimpleXmlMapper;
+
 import java.io.IOException;
 import java.util.Optional;
 
@@ -16,6 +18,18 @@ public class EnNotes {
 
     public EnNotes(MarkLogic db) {
         this.db = db;
+    }
+
+    public Optional<EN> get(String type, int year, int number)
+        throws IOException, InterruptedException {
+
+        Optional <String> xml = getXml(type, year, number);
+        if(xml.isEmpty()) {
+            return Optional.empty();
+        }
+
+        return Optional.of(SimpleXmlMapper.INSTANCE.readValue(xml.get(), EN.class));
+
     }
 
     public Optional<String> getXml(String type, int year, int number)
