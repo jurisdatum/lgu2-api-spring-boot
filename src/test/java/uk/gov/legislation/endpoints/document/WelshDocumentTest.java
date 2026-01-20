@@ -9,15 +9,16 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.context.bean.override.mockito.MockitoSpyBean;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
-import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.data.marklogic.impacts.Impacts;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.Clml2Pdf;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
 import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -32,7 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(DocumentController.class)
-@Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class, Clml2Docx.class})
+@Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class})
 class WelshDocumentTest {
 
     @Autowired
@@ -43,6 +44,12 @@ class WelshDocumentTest {
 
     @MockitoBean
     private Legislation mock;
+
+    @MockitoBean
+    private Clml2Docx clml2Docx;
+
+    @MockitoBean
+    private Clml2Pdf clml2Pdf;
 
     @BeforeEach
     void setUp() throws Exception {

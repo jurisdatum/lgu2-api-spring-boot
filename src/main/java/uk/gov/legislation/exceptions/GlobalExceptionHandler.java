@@ -111,7 +111,7 @@ public class GlobalExceptionHandler {
 
     // a wrapper around an IOException or an InterruptedException thrown during a request to MarkLogic
     @ExceptionHandler(DocumentFetchException.class)
-    public ResponseEntity<Object> handleDocumentFetchException(DocumentFetchException ex) {
+    public ResponseEntity<ErrorResponse> handleDocumentFetchException(DocumentFetchException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.SERVICE_UNAVAILABLE,
                 "Document Fetch Error",
@@ -121,7 +121,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(UnknownTypeException.class)
-    public ResponseEntity<Object> handleUnknownTypeException(UnknownTypeException ex) {
+    public ResponseEntity<ErrorResponse> handleUnknownTypeException(UnknownTypeException ex) {
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.BAD_REQUEST,
                 "Unknown Document Type Error",

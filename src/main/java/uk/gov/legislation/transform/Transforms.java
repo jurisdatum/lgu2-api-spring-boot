@@ -28,12 +28,15 @@ public class Transforms {
 
     private final Simplify simplifier;
 
+    private final Clml2Pdf clml2pdf;
+
     private final Clml2Docx clml2docx;
 
-    public Transforms(Clml2Akn clml2akn, Akn2Html akn2html, Simplify simplify, Clml2Docx clml2docx) {
+    public Transforms(Clml2Akn clml2akn, Akn2Html akn2html, Simplify simplify, Clml2Pdf clml2pdf, Clml2Docx clml2docx) {
         this.clml2akn = clml2akn;
         this.akn2html = akn2html;
         this.simplifier = simplify;
+        this.clml2pdf = clml2pdf;
         this.clml2docx = clml2docx;
     }
 
@@ -99,6 +102,14 @@ public class Transforms {
     public TableOfContents clml2toc(String clml) throws SaxonApiException, JsonProcessingException {
         Contents simple = simplifier.contents(clml);
         return TableOfContentsConverter.convert(simple);
+    }
+
+    public void clml2pdf(InputStream clml, OutputStream pdf) {
+        try {
+            clml2pdf.transform(clml, pdf);
+        } catch (SaxonApiException e) {
+            throw new TransformationException("Error in PDF transform", e);
+        }
     }
 
     public byte[] clml2docx(String clml) throws IOException, SaxonApiException {
