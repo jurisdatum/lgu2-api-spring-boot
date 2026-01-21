@@ -1,5 +1,13 @@
 package uk.gov.legislation.transform.clml2docx;
 
+import net.sf.saxon.s9api.*;
+import net.sf.saxon.value.ObjectValue;
+import uk.gov.legislation.transform.clml2docx.Delegate.Resource;
+
+import javax.xml.transform.Source;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.URIResolver;
+import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -7,27 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.URIResolver;
-import javax.xml.transform.stream.StreamSource;
-
-import net.sf.saxon.s9api.Processor;
-import net.sf.saxon.s9api.QName;
-import net.sf.saxon.s9api.SaxonApiException;
-import net.sf.saxon.s9api.XPathCompiler;
-import net.sf.saxon.s9api.XPathExecutable;
-import net.sf.saxon.s9api.XPathSelector;
-import net.sf.saxon.s9api.XdmAtomicValue;
-import net.sf.saxon.s9api.XdmDestination;
-import net.sf.saxon.s9api.XdmNode;
-import net.sf.saxon.s9api.XdmValue;
-import net.sf.saxon.s9api.XsltCompiler;
-import net.sf.saxon.s9api.XsltExecutable;
-import net.sf.saxon.s9api.XsltTransformer;
-import net.sf.saxon.value.ObjectValue;
-import uk.gov.legislation.transform.clml2docx.Delegate.Resource;
 
 /**
  * Loads and runs the CLML to Word XSLT
@@ -48,9 +35,9 @@ public class XSLT {
 
 	}
 	
-	private static XsltExecutable executable;
-	private static XPathExecutable docType;
-	private static XPathExecutable resourceURIs;
+	private XsltExecutable executable;
+	private XPathExecutable docType;
+	private XPathExecutable resourceURIs;
 	
 	/**
 	 * Load the XSLT
@@ -67,27 +54,25 @@ public class XSLT {
 		processor.getUnderlyingConfiguration().registerExtensionFunction(new SaxonExtensionFunctions.GetImageHeight(delegate));
 		processor.getUnderlyingConfiguration().registerExtensionFunction(new SaxonExtensionFunctions.GetImageType(delegate));
 		
-		if (executable == null) {
-			XsltCompiler xsltCompiler = processor.newXsltCompiler();
-			xsltCompiler.setURIResolver(new Importer());
-			InputStream stream = this.getClass().getResourceAsStream(path + stylesheet);
-			Source source = new StreamSource(stream, stylesheet);
-			try {
-				executable = xsltCompiler.compile(source);
-			} catch (SaxonApiException e) {
-				throw new RuntimeException(e);
-			} finally {
-				stream.close();
-			}
-			XPathCompiler xPathCompiler = processor.newXPathCompiler();
-			xPathCompiler.declareNamespace("", "http://www.legislation.gov.uk/namespaces/legislation");
-			xPathCompiler.declareNamespace("ukm", "http://www.legislation.gov.uk/namespaces/metadata");
-			try {
-				docType = xPathCompiler.compile("/Legislation/ukm:Metadata/*/ukm:DocumentClassification/ukm:DocumentMainType/@Value");
-				resourceURIs = xPathCompiler.compile("/Legislation/Resources/Resource/ExternalVersion/@URI");
-			} catch (SaxonApiException e) {
-				throw new RuntimeException(e);
-			}
+		XsltCompiler xsltCompiler = processor.newXsltCompiler();
+		xsltCompiler.setURIResolver(new Importer());
+		InputStream stream = this.getClass().getResourceAsStream(path + stylesheet);
+		Source source = new StreamSource(stream, stylesheet);
+		try {
+			executable = xsltCompiler.compile(source);
+		} catch (SaxonApiException e) {
+			throw new RuntimeException(e);
+		} finally {
+			stream.close();
+		}
+		XPathCompiler xPathCompiler = processor.newXPathCompiler();
+		xPathCompiler.declareNamespace("", "http://www.legislation.gov.uk/namespaces/legislation");
+		xPathCompiler.declareNamespace("ukm", "http://www.legislation.gov.uk/namespaces/metadata");
+		try {
+			docType = xPathCompiler.compile("/Legislation/ukm:Metadata/*/ukm:DocumentClassification/ukm:DocumentMainType/@Value");
+			resourceURIs = xPathCompiler.compile("/Legislation/Resources/Resource/ExternalVersion/@URI");
+		} catch (SaxonApiException e) {
+			throw new RuntimeException(e);
 		}
 	}
 
