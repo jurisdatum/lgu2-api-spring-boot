@@ -24,6 +24,7 @@ public class ExplanatoryNotesConvertor {
             }
             AssocMeta meta = new AssocMeta();
             meta.id = Links.shorten(metadata.identifier);
+            meta.altFormats= metadata.alternatives.stream().map(AlternateFormatConverter::convert).toList();
             meta.associatedWith = toMetaCore(metadata.enMetadata);
             return meta;
         }

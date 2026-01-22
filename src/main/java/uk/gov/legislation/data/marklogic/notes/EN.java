@@ -5,6 +5,7 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.data.marklogic.models.AtomLink;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
+import uk.gov.legislation.transform.simple.Alternative;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -50,6 +51,10 @@ public class EN {
         )
         public ENMetadata enMetadata;
 
+        @JacksonXmlElementWrapper(localName = "Alternatives", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        @JacksonXmlProperty(localName = "Alternative", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public List<Alternative> alternatives;
+
     }
 
     public static class ENMetadata {
@@ -65,6 +70,9 @@ public class EN {
 
         @JacksonXmlProperty(localName = "Number")
         public SearchResults.IntValue number;
+
+        @JacksonXmlProperty(localName = "ISBN")
+        public SearchResults.Value isbn;
     }
 
 
