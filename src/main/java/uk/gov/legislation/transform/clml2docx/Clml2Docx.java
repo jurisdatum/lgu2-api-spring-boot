@@ -1,5 +1,12 @@
 package uk.gov.legislation.transform.clml2docx;
 
+import net.sf.saxon.s9api.DocumentBuilder;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.XdmNode;
+import org.springframework.stereotype.Service;
+import uk.gov.legislation.transform.clml2docx.Delegate.Resource;
+
+import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -9,14 +16,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-import javax.xml.transform.stream.StreamSource;
-
-import net.sf.saxon.s9api.DocumentBuilder;
-import net.sf.saxon.s9api.SaxonApiException;
-import net.sf.saxon.s9api.XdmNode;
-import org.springframework.stereotype.Service;
-import uk.gov.legislation.transform.clml2docx.Delegate.Resource;
 
 /**
  * Convert a CLML file to docx. 

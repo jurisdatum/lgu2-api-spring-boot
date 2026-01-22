@@ -1,8 +1,9 @@
 package uk.gov.legislation.transform;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import tools.jackson.databind.MapperFeature;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.json.JsonMapper;
 import uk.gov.legislation.util.Links;
 
 import java.io.IOException;
@@ -45,9 +46,9 @@ public class TransformHelper {
         Files.writeString(path, content);
     }
 
-    public static final ObjectMapper MAPPER = new ObjectMapper()
-        .registerModules(new JavaTimeModule())
-        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-        .enable(SerializationFeature.INDENT_OUTPUT);
+    public static final ObjectMapper MAPPER = JsonMapper.builder()
+        .configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, false)
+        .configure(SerializationFeature.INDENT_OUTPUT, true)
+        .build();
 
 }

@@ -2,9 +2,9 @@ package uk.gov.legislation.data.virtuoso;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.DeserializationFeature;
+import tools.jackson.databind.json.JsonMapper;
 import uk.gov.legislation.data.virtuoso.rdf.TypedValue;
 
 import java.net.URI;
@@ -13,10 +13,12 @@ import java.util.Map;
 
 public class JsonResults {
 
-    public static JsonResults parse(String json) throws JsonProcessingException {
-        ObjectMapper mapper = new ObjectMapper()
-            .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        return mapper.readValue(json, JsonResults.class);
+    public static final JsonMapper MAPPER = JsonMapper.builder()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+        .build();
+
+    public static JsonResults parse(String json) throws JacksonException {
+        return MAPPER.readValue(json, JsonResults.class);
     }
 
     public Results results;

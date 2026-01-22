@@ -2,9 +2,8 @@ package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ObjectNode;
 
 import java.net.URI;
 import java.util.Collections;
@@ -86,7 +85,7 @@ public class ItemLD {
 
     @JsonSetter("originalLanguageOfTextIsoCode")
     public void setOriginalLanguageOfTextIsoCode(JsonNode node) {
-        if (node instanceof TextNode) {
+        if (node != null && node.isTextual()) {
             this.originalLanguageOfTextIsoCode = Collections.singletonList(ValueAndType.convert(node));
         } else {
             this.originalLanguageOfTextIsoCode = oneOrMany(node, ValueAndType.class);

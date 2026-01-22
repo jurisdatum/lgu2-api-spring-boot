@@ -1,8 +1,8 @@
 package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
