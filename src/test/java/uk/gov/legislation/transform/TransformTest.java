@@ -45,7 +45,6 @@ public class TransformTest {
             "mnia/1974/4/section/5/2006-01-01","ukcm/2025/2/section/1",
             "ssi/2025/281/regulation/1/made", "anaw/2020/3/section/2/welsh",
             "eudr/2020/2089/article/1/2020-12-11"
-
         );
     }
 

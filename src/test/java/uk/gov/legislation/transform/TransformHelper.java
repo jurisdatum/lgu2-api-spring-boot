@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import uk.gov.legislation.util.Links;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -29,6 +30,10 @@ public class TransformHelper {
         return  "/" +  dir + file;
     }
 
+    public static InputStream open(String id, String ext) {
+        String resource = makeResourceName(id, ext);
+        return TransformTest.class.getResourceAsStream(resource);
+    }
     public static String read(String id, String ext) throws IOException {
         String resource = makeResourceName(id, ext);
         String content;
