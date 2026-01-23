@@ -19,6 +19,8 @@ public class EffectsParameters {
     private Integer sourceEndYear;
     private String sourceTitle;
     private Parameters.AppliedStatus applied;
+    private Parameters.EffectsSort sort;
+    private Parameters.OrderBy orderBy;
     private Integer page;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -28,6 +30,22 @@ public class EffectsParameters {
 
     public void setApplied(Parameters.AppliedStatus applied) {
         this.applied = applied;
+    }
+
+    public Parameters.EffectsSort getSort() {
+        return sort;
+    }
+
+    public void setSort(Parameters.EffectsSort sort) {
+        this.sort = sort;
+    }
+
+    public Parameters.OrderBy getOrderBy() {
+        return orderBy;
+    }
+
+    public void setOrderBy(Parameters.OrderBy orderBy) {
+        this.orderBy = orderBy;
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)

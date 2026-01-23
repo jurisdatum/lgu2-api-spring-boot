@@ -17,6 +17,8 @@ public class Parameters extends AbstractParameters {
     public Integer affectingEndYear;
     public String affectingTitle;
     public AppliedStatus applied;
+    public String sort;
+    public OrderBy order;
     public Integer page;
 
     public static Builder builder() {
@@ -92,6 +94,15 @@ public class Parameters extends AbstractParameters {
             params.applied = appliedStatus;
             return this;
         }
+        public Builder sort(String sort) {
+            params.sort = sort;
+            return this;
+        }
+
+        public Builder orderBy(OrderBy order) {
+            params.order = order;
+            return this;
+        }
 
         public Builder page(Integer page) {
             params.page = page;
@@ -105,6 +116,28 @@ public class Parameters extends AbstractParameters {
 
     public enum AppliedStatus {
         applied, unapplied
+    }
+
+    public enum EffectsSort {
+        AFFECTING_YEAR_NUMBER("affecting-year-number"),
+        AFFECTING_TITLE("affecting-title"),
+        AFFECTED_YEAR_NUMBER("affected-year-number"),
+        AFFECTED_TITLE("affected-title"),
+        APPLIED("applied");
+
+        private final String value;
+
+        EffectsSort(String value) {
+            this.value = value;
+        }
+
+        public String value() {
+            return value;
+        }
+    }
+
+    public enum OrderBy {
+        ascending, descending
     }
 
 }
