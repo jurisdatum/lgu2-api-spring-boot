@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://www.legislation.gov.uk/namespaces/UK-AKN" xmlns:ukl="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://docs.oasis-open.org/legaldocml/ns/akn/3.0 http://docs.oasis-open.org/legaldocml/akn-core/v1.0/cos01/part2-specs/schemas/akomantoso30.xsd">
+   <doc name="ExplanatoryNote">
+      <meta>
+         <identification source="#">
+            <FRBRWork>
+               <FRBRthis value="http://www.legislation.gov.uk/id/ukpga//18"/>
+               <FRBRuri value="http://www.legislation.gov.uk/id/ukpga//18"/>
+               <FRBRdate date="-01-01" name="estimated"/>
+               <FRBRauthor href="http://www.legislation.gov.uk/id/legislature/UnitedKingdomParliament"/>
+               <FRBRcountry value="GB-UKM"/>
+               <FRBRnumber value="18"/>
+               <FRBRname value=" c. 18"/>
+               <FRBRprescriptive value="true"/>
+            </FRBRWork>
+            <FRBRExpression>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga//18/enacted"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga//18/enacted"/>
+               <FRBRdate date="-01-01" name="estimated"/>
+               <FRBRauthor href="#"/>
+               <FRBRlanguage language="eng"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+               <FRBRthis value="http://www.legislation.gov.uk/ukpga//18/enacted/data.akn"/>
+               <FRBRuri value="http://www.legislation.gov.uk/ukpga//18/enacted/data.akn"/>
+               <FRBRdate date="2026-01-22-08:00" name="transform"/>
+               <FRBRauthor href="http://www.legislation.gov.uk"/>
+               <FRBRformat value="application/akn+xml"/>
+            </FRBRManifestation>
+         </identification>
+         <lifecycle source="#"/>
+         <analysis source="#">
+            <otherAnalysis source=""/>
+         </analysis>
+         <references source="#"/>
+         <proprietary xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata" source="#"/>
+      </meta>
+      <preface>
+         <heading>
+            <ref eId="c00001" href="http://www.legislation.gov.uk/id/ukpga/2012/18">Mental Health (Approval Functions) Act 2012</ref>
+         </heading>
+         <num>18</num>
+         <block name="dateOfEnactment" refersTo="#date-enacted">
+            <docDate date="2012-10-31">31st October 2012</docDate>
+         </block>
+      </preface>
+      <mainBody>
+         <hcontainer name="division" eId="d00001">
+            <heading>Introduction</heading>
+            <content>
+               <paragraph>
+                  <num>(1)</num>
+                  <p>These explanatory notes relate to the Mental Health (Approval Functions) Act 2012 which received Royal Assent on 31 October 2012.  They have been prepared by the Department of Health in order to assist the reader of the Act and to inform debate on it.  They do not form part of the Act and have not been endorsed by Parliament.</p>
+               </paragraph>
+               <paragraph>
+                  <num>(2)</num>
+                  <p>The notes need to be read in conjunction with the Act.  They are not, and are not meant to be, a comprehensive description of the Act.  So where a section or part of a section does not seem to require any explanation or comment, none is given.</p>
+               </paragraph>
+            </content>
+         </hcontainer>
+         <hcontainer name="division" eId="d00002">
+            <heading>Summary and Background</heading>
+            <content>
+               <paragraph>
+                  <num>(3)</num>
+                  <p>A technical issue was identified in the way doctors had been approved for the purpose of enabling them to make medical recommendations about admitting mentally disordered patients to hospital and detaining them for their own health or safety or for the protection of the public under the Mental Health Act 1983.  That issue applied in four regions (North East, Yorkshire and Humber, West Midlands and East Midlands).</p>
+               </paragraph>
+               <paragraph>
+                  <num>(4)</num>
+                  <p>The purpose of the Mental Health (Approval Functions) Act 2012 is to give retrospective validation to the power to approve practitioners or clinicians under the Mental Health Act 1983 and hence ensure the lawfulness of any detention or other action which was taken on the basis that a valid power to approve existed.</p>
+               </paragraph>
+               <paragraph>
+                  <num>(5)</num>
+                  <p>The Mental Health Act 1983 makes provision for applications to be made for the admission to and detention in a hospital of those who are suffering from mental disorder where it is for their own health or safety or for the protection of others.  The purpose of such admission and detention is to enable the individual concerned to be assessed or treated in an appropriate environment.  In order for a person to be detained in hospital for assessment or treatment, an application must be made to the managers of the hospital in question and supported by written recommendations from two doctors (one of whom must be an approved practitioner or an approved clinician) who have personally examined the patient, along with an approved mental health professional (usually a social worker). Similar requirements apply in other contexts, for example to support the powers of the courts or the Secretary of State to order hospital admission or to transfer to hospital persons serving sentences of imprisonment. Approved clinicians are also in charge of patients’ treatment once they have been admitted to hospital and are responsible for making a number of other decisions in relation to patients under the Mental Health Act.</p>
+               </paragraph>
+               <paragraph>
+                  <num>(6)</num>
+                  <p>Under the Mental Health Act, the function of approving practitioners under section 12, and clinicians under section 145, is vested in the Secretary of State<authorialNote class="footnote" eId="f00001" marker="1">
+                        <p>In relation to Wales, Welsh Ministers approve “approved clinicians”.</p>
+                     </authorialNote>. Regulations<authorialNote class="footnote" eId="f00002" marker="2">
+                        <p>The National Health Service (Functions of Strategic Health Authorities and Primary Care Trusts and Administration Arrangements) (England) Regulations 2002 (<ref eId="c00012" href="http://www.legislation.gov.uk/id/uksi/2002/2375">
+                              <abbr class="acronym" title="Statutory Instrument">SI</abbr> 2002/2375</ref>).</p>
+                     </authorialNote> (in the case of practitioners) and Directions<authorialNote class="footnote" eId="f00003" marker="3">
+                        <p>Mental Health Act 1983 Approved Clinicians (General) Directions 2008.</p>
+                     </authorialNote> (in the case of approved clinicians) allow for the approval functions to be carried out by Strategic Health Authorities (<abbr title="Strategic Health Authorities">SHAs</abbr>).</p>
+               </paragraph>
+               <paragraph>
+                  <num>(7)</num>
+                  <p>SHAs have no legal power to delegate the exercise of the approval functions to <abbr class="acronym" title="National Health Service">NHS</abbr> trusts or NHS foundation trusts. In spite of this, four SHAs (North East, Yorkshire and Humber, West Midlands and East Midlands) delegated the exercise of the approval functions to trusts providing mental health services. This meant that these trusts granted approvals but had no legal power to do so.  The SHAs have recently rectified the position for all future approvals.</p>
+               </paragraph>
+            </content>
+         </hcontainer>
+         <hcontainer name="division" eId="d00003">
+            <heading>Territorial Extent</heading>
+            <content>
+               <paragraph>
+                  <num>(8)</num>
+                  <p>The Act extends to the whole of the United Kingdom.</p>
+               </paragraph>
+            </content>
+         </hcontainer>
+         <hcontainer name="division" eId="d00004">
+            <heading>COMMENTARY ON THE SECTIONS</heading>
+            <content>
+               <heading>
+                  <ref eId="c00003" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/18/section/1">Section 1</ref> - Authorisation of approvals given before this Act</heading>
+               <paragraph>
+                  <num>(9)</num>
+                  <p>
+                     <ref eId="c00005" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/18/section/1">Section 1</ref> operates to give any person (which includes a body such as an NHS trust or NHS foundation trust) retrospective power under the Mental Health Act 1983 to approve a registered medical practitioner for the purposes of section 12 and to approve a clinician under section 145, where the approval was given before the Mental Health (Approval Functions) Act 2012 obtained Royal Assent. This means that bodies to which an <abbr title="Strategic Health Authority">SHA</abbr> had no power to delegate these approval functions will be treated as if they had always had the power to give approvals for the purposes of section 12 and to approve persons as approved clinicians under section 145.  The Act only has effect in relation to any approval given before Royal Assent (and so does not affect what SHAs or any other bodies can do in the future).</p>
+               </paragraph>
+               <heading>
+                  <ref eId="c00007" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/18/section/2">Section 2</ref> - Commencement, extent and short title</heading>
+               <paragraph>
+                  <num>(10)</num>
+                  <p>Subsection (<ref eId="c00009" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/18/section/2/1">1</ref>) provides for the Act to come into force on Royal Assent. The Act operates only on approvals given before this date.</p>
+               </paragraph>
+               <paragraph>
+                  <num>(11)</num>
+                  <p>Subsection (<ref eId="c00011" class="subref" href="http://www.legislation.gov.uk/id/ukpga/2012/18/section/2/2">2</ref>) provides for the Act to extend to the whole of the United Kingdom. Although the approvals to which section 1 relates were given in cases involving patients in England or Wales, it is possible that a patient detained in England or Wales might be transferred to Scotland or Northern Ireland for detention there. By providing that the retrospective validation extends to Scotland and Northern Ireland, the Act removes any doubt about the validity of the detention in Scotland or Northern Ireland.</p>
+               </paragraph>
+            </content>
+         </hcontainer>
+         <hcontainer name="division" eId="d00005">
+            <heading>Commencement</heading>
+            <content>
+               <paragraph>
+                  <num>(12)</num>
+                  <p>The Act came into force on 31 October 2012, the date of Royal Assent.</p>
+               </paragraph>
+            </content>
+         </hcontainer>
+         <hcontainer name="division" eId="d00006">
+            <heading>Hansard References</heading>
+            <content>
+               <paragraph>
+                  <num>(13)</num>
+                  <p>The following table sets out the dates and Hansard references for each stage of the Act’s passage through Parliament.</p>
+                  <tblock class="table" ukl:Orientation="portrait">
+                     <foreign>
+                        <table xmlns="http://www.w3.org/1999/xhtml">
+                           <colgroup>
+                              <col style="width:33%"/>
+                              <col style="width:33%"/>
+                              <col style="width:33%"/>
+                           </colgroup>
+                           <thead>
+                              <tr>
+                                 <th>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">Stage</p>
+                                 </th>
+                                 <th>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">Date</p>
+                                 </th>
+                                 <th/>
+                              </tr>
+                              <tr>
+                                 <th/>
+                                 <th>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">House of Commons</p>
+                                 </th>
+                                 <th>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">Hansard reference</p>
+                                 </th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Introduction</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>
+                                          <abbr title="Volume">Vol.</abbr> 552 Col 173</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Second Reading</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>30 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol. 552  Col 180-203</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Committee</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>30 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol. 552  Col 204-209</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Third Reading</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>30 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol. 552 Col 209</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <th/>
+                                 <th>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">House of Lords</p>
+                                 </th>
+                                 <th/>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Introduction</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>30 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol.740 Col 587</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Second Reading</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>31 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol.740 Col 628-642</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Third Reading</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>31 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Vol.740 Col 642</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td rowspan="2">
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>Royal Assent</b>
+                                    </p>
+                                 </td>
+                                 <td rowspan="2">
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>31 October 2012</b>
+                                    </p>
+                                 </td>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>House of Commons Hansard  Vol. 552 Col 346</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>
+                                    <p xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+                                       <b>House of Lords Hansard Vol. 740 Col 642</b>
+                                    </p>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </foreign>
+                  </tblock>
+               </paragraph>
+            </content>
+         </hcontainer>
+      </mainBody>
+      <num>1</num>
+      <p>In relation to Wales, Welsh Ministers approve “approved clinicians”.</p>
+      <num>2</num>
+      <p>The National Health Service (Functions of Strategic Health Authorities and Primary Care Trusts and Administration Arrangements) (England) Regulations 2002 (<ref eId="c00012" href="http://www.legislation.gov.uk/id/uksi/2002/2375">
+            <abbr class="acronym" title="Statutory Instrument">SI</abbr> 2002/2375</ref>).</p>
+      <num>3</num>
+      <p>Mental Health Act 1983 Approved Clinicians (General) Directions 2008.</p>
+   </doc>
+</akomaNtoso>

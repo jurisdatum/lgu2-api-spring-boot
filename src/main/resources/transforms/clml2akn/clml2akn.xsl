@@ -39,6 +39,7 @@
 <xsl:include href="commentaries.xsl" />
 <xsl:include href="resources.xsl" />
 <xsl:include href="euretained.xsl" />
+<xsl:include href="en.xsl" />
 
 
 <xsl:template match="/">

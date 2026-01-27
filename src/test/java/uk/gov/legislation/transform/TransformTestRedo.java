@@ -8,6 +8,7 @@ import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.util.UpToDate;
 
 import java.time.ZonedDateTime;
+import java.util.List;
 import java.util.function.BiPredicate;
 
 import static uk.gov.legislation.transform.TransformHelper.MAPPER;
@@ -17,12 +18,16 @@ import static uk.gov.legislation.transform.TransformTest.*;
 
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-        for (String id : TransformTest.provide().toList()) {
+        redo(ctx, TransformTest.provide().toList());
+        SpringApplication.exit(ctx);
+    }
+
+    static void redo(ApplicationContext ctx, List<String> ids) throws Exception {
+        for (String id : ids) {
             akn(ctx, id);
             html(ctx, id);
             json(ctx, id);
         }
-        SpringApplication.exit(ctx);
     }
 
     @FunctionalInterface
@@ -67,7 +72,11 @@ import static uk.gov.legislation.transform.TransformTest.*;
         redo(id, transform, String::equals, "json");
     }
 
-    static void redo(String id, ITransform transform, BiPredicate<String, String> compare,  String format) throws Exception {
+     static void json(ApplicationContext ctx, String id, ITransform transform) throws Exception {
+         redo(id, transform, String::equals, "json");
+     }
+
+     static void redo(String id, ITransform transform, BiPredicate<String, String> compare,  String format) throws Exception {
         String clml = TransformHelper.read(id, "xml");
         String actual = transform.apply(clml);
         String expected;

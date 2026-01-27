@@ -69,7 +69,7 @@
     </dc:identifier>
 </xsl:template>
 
-<xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
+<xsl:variable name="dc-identifier" as="xs:string" select="/*/ukm:Metadata/dc:identifier[1]" />
 
 <xsl:key name="document-uri" match="*[not(self::InternalLink)]" use="@DocumentURI"/>
 

@@ -406,10 +406,10 @@
 
 <!-- variables -->
 
-<xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
+<xsl:variable name="dc-identifier" as="xs:string" select="/*/ukm:Metadata/dc:identifier[1]" />
 
 <xsl:variable name="doc-long-type" as="xs:string">
-	<xsl:sequence select="/Legislation/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentMainType/@Value" />
+	<xsl:sequence select="/*/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentMainType/@Value" />
 </xsl:variable>
 
 <xsl:variable name="doc-short-type" as="xs:string">
@@ -429,13 +429,13 @@
 </xsl:variable>
 
 <xsl:variable name="doc-category" as="xs:string">
-	<xsl:sequence select="/Legislation/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentCategory/@Value" />
+	<xsl:sequence select="/*/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentCategory/@Value" />
 </xsl:variable>
 
-<xsl:variable name="doc-minor-type" as="xs:string?" select="/Legislation/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentMinorType/@Value" />
+<xsl:variable name="doc-minor-type" as="xs:string?" select="/*/ukm:Metadata/ukm:*/ukm:DocumentClassification/ukm:DocumentMinorType/@Value" />
 
 <xsl:variable name="doc-year" as="xs:integer?">
-	<xsl:variable name="ukm-year" as="element(ukm:Year)?" select="/Legislation/ukm:Metadata/(ukm:PrimaryMetadata | ukm:SecondaryMetadata | ukm:EUMetadata)/ukm:Year" />
+	<xsl:variable name="ukm-year" as="element(ukm:Year)?" select="/*/ukm:Metadata/(ukm:PrimaryMetadata | ukm:SecondaryMetadata | ukm:EUMetadata)/ukm:Year" />
 	<xsl:choose>
 		<xsl:when test="exists($ukm-year)">
 			<xsl:sequence select="xs:integer($ukm-year/@Value)" />
@@ -444,7 +444,7 @@
 </xsl:variable>
 
 <xsl:variable name="doc-number" as="xs:string">
-	<xsl:variable name="ukm-number" as="element()*" select="/Legislation/ukm:Metadata/ukm:*/ukm:Number" />
+	<xsl:variable name="ukm-number" as="element()*" select="/*/ukm:Metadata/ukm:*/ukm:Number" />
 	<xsl:choose>
 		<xsl:when test="exists($ukm-number)">
 			<xsl:sequence select="$ukm-number[1]/@Value" />
@@ -470,7 +470,7 @@
 	</xsl:choose>
 </xsl:variable>
 
-<xsl:variable name="doc-title" as="xs:string" select="/Legislation/ukm:Metadata/dc:title" />
+<xsl:variable name="doc-title" as="xs:string" select="/*/ukm:Metadata/dc:title" />
 
 <xsl:variable name="doc-short-id" as="xs:string">
 	<xsl:sequence select="concat($doc-short-type, '/', $doc-year, '/', $doc-number)" />

@@ -1,0 +1,207 @@
+{
+  "meta" : {
+    "id" : "ukpga/2012/18",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "shortType" : "ukpga",
+    "year" : 2012,
+    "number" : 18,
+    "isbn" : "9780105618126",
+    "date" : null,
+    "cite" : "2012 c. 18",
+    "version" : "enacted",
+    "status" : "final",
+    "title" : "Explanatory Notes to Mental Health (Approval Functions) Act 2012",
+    "extent" : [ ],
+    "lang" : null,
+    "publisher" : "King's Printer of Acts of Parliament",
+    "modified" : "2014-03-18",
+    "versions" : [ "enacted" ],
+    "has" : { },
+    "schedules" : false,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukpga/2012/18/pdfs/ukpgaen_20120018_en.pdf",
+      "name" : "Explanatory Note",
+      "date" : "2012-11-14",
+      "size" : 154607
+    } ],
+    "associated" : [ ],
+    "fragment" : "notes",
+    "prev" : null,
+    "next" : null,
+    "fragmentInfo" : {
+      "element" : "EN",
+      "id" : null,
+      "href" : "notes",
+      "number" : null,
+      "title" : null,
+      "label" : "EN"
+    },
+    "prevInfo" : null,
+    "nextInfo" : null,
+    "ancestors" : [ ],
+    "descendants" : [ {
+      "element" : "EN",
+      "id" : null,
+      "href" : "notes",
+      "number" : null,
+      "title" : null,
+      "label" : "EN"
+    }, {
+      "element" : "Division",
+      "id" : "d00001",
+      "href" : "notes/division/1",
+      "number" : null,
+      "title" : "Introduction",
+      "label" : "Division"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-1",
+      "href" : "notes/paragraph/1",
+      "number" : "1",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-2",
+      "href" : "notes/paragraph/2",
+      "number" : "2",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "Division",
+      "id" : "d00002",
+      "href" : "notes/division/2",
+      "number" : null,
+      "title" : "Summary and Background",
+      "label" : "Division"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-3",
+      "href" : "notes/paragraph/3",
+      "number" : "3",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-4",
+      "href" : "notes/paragraph/4",
+      "number" : "4",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-5",
+      "href" : "notes/paragraph/5",
+      "number" : "5",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-6",
+      "href" : "notes/paragraph/6",
+      "number" : "6",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-7",
+      "href" : "notes/paragraph/7",
+      "number" : "7",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "Division",
+      "id" : "d00003",
+      "href" : "notes/division/3",
+      "number" : null,
+      "title" : "Territorial Extent",
+      "label" : "Division"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-8",
+      "href" : "notes/paragraph/8",
+      "number" : "8",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "Division",
+      "id" : "d00004",
+      "href" : "notes/division/4",
+      "number" : null,
+      "title" : "COMMENTARY ON THE SECTIONS",
+      "label" : "Division"
+    }, {
+      "element" : "CommentaryP1",
+      "id" : "n00001",
+      "href" : "notes/division/4/1",
+      "number" : null,
+      "title" : "Section 1 - Authorisation of approvals given before this Act",
+      "label" : "CommentaryP1"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-9",
+      "href" : "notes/paragraph/9",
+      "number" : "9",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "CommentaryP1",
+      "id" : "n00002",
+      "href" : "notes/division/4/2",
+      "number" : null,
+      "title" : "Section 2 - Commencement, extent and short title",
+      "label" : "CommentaryP1"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-10",
+      "href" : "notes/paragraph/10",
+      "number" : "10",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-11",
+      "href" : "notes/paragraph/11",
+      "number" : "11",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "Division",
+      "id" : "d00005",
+      "href" : "notes/division/5",
+      "number" : null,
+      "title" : "Commencement",
+      "label" : "Division"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-12",
+      "href" : "notes/paragraph/12",
+      "number" : "12",
+      "title" : null,
+      "label" : "NumberedPara"
+    }, {
+      "element" : "Division",
+      "id" : "d00006",
+      "href" : "notes/division/6",
+      "number" : null,
+      "title" : "Hansard References",
+      "label" : "Division"
+    }, {
+      "element" : "NumberedPara",
+      "id" : "paragraph-13",
+      "href" : "notes/paragraph/13",
+      "number" : "13",
+      "title" : null,
+      "label" : "NumberedPara"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article data-name=\"ExplanatoryNote\">\n<div class=\"preface\">\n<span class=\"heading\"><cite><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18\">Mental Health (Approval Functions) Act 2012</a></cite></span>\n<span class=\"num\">18</span>\n<div class=\"block dateOfEnactment\" data-refersTo=\"#date-enacted\">\n<time class=\"docDate\" datetime=\"2012-10-31\">31st October 2012</time>\n</div>\n</div>\n<span class=\"mainBody\">\n<div class=\"hcontainer division no-num\" id=\"d00001\"><h3><span class=\"heading\">Introduction</span></h3><div class=\"content\"><section class=\"paragraph\"><h2><span class=\"num\">(1)</span></h2><p>These explanatory notes relate to the Mental Health (Approval Functions) Act 2012 which received Royal Assent on 31 October 2012.  They have been prepared by the Department of Health in order to assist the reader of the Act and to inform debate on it.  They do not form part of the Act and have not been endorsed by Parliament.</p></section><section class=\"paragraph\"><h2><span class=\"num\">(2)</span></h2><p>The notes need to be read in conjunction with the Act.  They are not, and are not meant to be, a comprehensive description of the Act.  So where a section or part of a section does not seem to require any explanation or comment, none is given.</p></section></div></div>\n<div class=\"hcontainer division no-num\" id=\"d00002\"><h3><span class=\"heading\">Summary and Background</span></h3><div class=\"content\"><section class=\"paragraph\"><h2><span class=\"num\">(3)</span></h2><p>A technical issue was identified in the way doctors had been approved for the purpose of enabling them to make medical recommendations about admitting mentally disordered patients to hospital and detaining them for their own health or safety or for the protection of the public under the Mental Health Act 1983.  That issue applied in four regions (North East, Yorkshire and Humber, West Midlands and East Midlands).</p></section><section class=\"paragraph\"><h2><span class=\"num\">(4)</span></h2><p>The purpose of the Mental Health (Approval Functions) Act 2012 is to give retrospective validation to the power to approve practitioners or clinicians under the Mental Health Act 1983 and hence ensure the lawfulness of any detention or other action which was taken on the basis that a valid power to approve existed.</p></section><section class=\"paragraph\"><h2><span class=\"num\">(5)</span></h2><p>The Mental Health Act 1983 makes provision for applications to be made for the admission to and detention in a hospital of those who are suffering from mental disorder where it is for their own health or safety or for the protection of others.  The purpose of such admission and detention is to enable the individual concerned to be assessed or treated in an appropriate environment.  In order for a person to be detained in hospital for assessment or treatment, an application must be made to the managers of the hospital in question and supported by written recommendations from two doctors (one of whom must be an approved practitioner or an approved clinician) who have personally examined the patient, along with an approved mental health professional (usually a social worker). Similar requirements apply in other contexts, for example to support the powers of the courts or the Secretary of State to order hospital admission or to transfer to hospital persons serving sentences of imprisonment. Approved clinicians are also in charge of patients’ treatment once they have been admitted to hospital and are responsible for making a number of other decisions in relation to patients under the Mental Health Act.</p></section><section class=\"paragraph\"><h2><span class=\"num\">(6)</span></h2><div class=\"p\">Under the Mental Health Act, the function of approving practitioners under section 12, and clinicians under section 145, is vested in the Secretary of State<a class=\"fnRef\" id=\"ref-d1e100\" href=\"#d1e100\">1</a>. Regulations<a class=\"fnRef\" id=\"ref-d1e106\" href=\"#d1e106\">2</a> (in the case of practitioners) and Directions<a class=\"fnRef\" id=\"ref-d1e117\" href=\"#d1e117\">3</a> (in the case of approved clinicians) allow for the approval functions to be carried out by Strategic Health Authorities (<abbr title=\"Strategic Health Authorities\">SHAs</abbr>).</div></section><section class=\"paragraph\"><h2><span class=\"num\">(7)</span></h2><p>SHAs have no legal power to delegate the exercise of the approval functions to <abbr class=\"acronym\" title=\"National Health Service\">NHS</abbr> trusts or NHS foundation trusts. In spite of this, four SHAs (North East, Yorkshire and Humber, West Midlands and East Midlands) delegated the exercise of the approval functions to trusts providing mental health services. This meant that these trusts granted approvals but had no legal power to do so.  The SHAs have recently rectified the position for all future approvals.</p></section></div></div>\n<div class=\"hcontainer division no-num\" id=\"d00003\"><h3><span class=\"heading\">Territorial Extent</span></h3><div class=\"content\"><section class=\"paragraph\"><h2><span class=\"num\">(8)</span></h2><p>The Act extends to the whole of the United Kingdom.</p></section></div></div>\n<div class=\"hcontainer division no-num\" id=\"d00004\"><h3><span class=\"heading\">COMMENTARY ON THE SECTIONS</span></h3><div class=\"content\">\n<span class=\"heading\"><cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18/section/1\">Section 1</a></cite> - Authorisation of approvals given before this Act</span>\n<section class=\"paragraph\"><h2><span class=\"num\">(9)</span></h2><p><cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18/section/1\">Section 1</a></cite> operates to give any person (which includes a body such as an NHS trust or NHS foundation trust) retrospective power under the Mental Health Act 1983 to approve a registered medical practitioner for the purposes of section 12 and to approve a clinician under section 145, where the approval was given before the Mental Health (Approval Functions) Act 2012 obtained Royal Assent. This means that bodies to which an <abbr title=\"Strategic Health Authority\">SHA</abbr> had no power to delegate these approval functions will be treated as if they had always had the power to give approvals for the purposes of section 12 and to approve persons as approved clinicians under section 145.  The Act only has effect in relation to any approval given before Royal Assent (and so does not affect what SHAs or any other bodies can do in the future).</p></section>\n\n<span class=\"heading\"><cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18/section/2\">Section 2</a></cite> - Commencement, extent and short title</span>\n<section class=\"paragraph\"><h2><span class=\"num\">(10)</span></h2><p>Subsection (<cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18/section/2/1\">1</a></cite>) provides for the Act to come into force on Royal Assent. The Act operates only on approvals given before this date.</p></section>\n<section class=\"paragraph\"><h2><span class=\"num\">(11)</span></h2><p>Subsection (<cite class=\"subref\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2012/18/section/2/2\">2</a></cite>) provides for the Act to extend to the whole of the United Kingdom. Although the approvals to which section 1 relates were given in cases involving patients in England or Wales, it is possible that a patient detained in England or Wales might be transferred to Scotland or Northern Ireland for detention there. By providing that the retrospective validation extends to Scotland and Northern Ireland, the Act removes any doubt about the validity of the detention in Scotland or Northern Ireland.</p></section>\n</div></div>\n<div class=\"hcontainer division no-num\" id=\"d00005\"><h3><span class=\"heading\">Commencement</span></h3><div class=\"content\"><section class=\"paragraph\"><h2><span class=\"num\">(12)</span></h2><p>The Act came into force on 31 October 2012, the date of Royal Assent.</p></section></div></div>\n<div class=\"hcontainer division no-num\" id=\"d00006\"><h3><span class=\"heading\">Hansard References</span></h3><div class=\"content\"><section class=\"paragraph\"><h2><span class=\"num\">(13)</span></h2><p>The following table sets out the dates and Hansard references for each stage of the Act’s passage through Parliament.</p><div class=\"tblock table\" data-ukl-Orientation=\"portrait\">\n<table class=\"level-2\"><colgroup><col style=\"width:33%\"><col style=\"width:33%\"><col style=\"width:33%\"></colgroup><thead><tr><th><p>Stage</p></th><th><p>Date</p></th><th></th></tr><tr><th></th><th><p>House of Commons</p></th><th><p>Hansard reference</p></th></tr></thead><tbody><tr><td><p><b>Introduction</b></p></td><td><p><b>October 2012</b></p></td><td><p><b><abbr title=\"Volume\">Vol.</abbr> 552 Col 173</b></p></td></tr><tr><td><p><b>Second Reading</b></p></td><td><p><b>30 October 2012</b></p></td><td><p><b>Vol. 552&nbsp;&nbsp;Col 180-203</b></p></td></tr><tr><td><p><b>Committee</b></p></td><td><p><b>30 October 2012</b></p></td><td><p><b>Vol. 552&nbsp;&nbsp;Col 204-209</b></p></td></tr><tr><td><p><b>Third Reading</b></p></td><td><p><b>30 October 2012</b></p></td><td><p><b>Vol. 552 Col 209</b></p></td></tr><tr><th></th><th><p>House of Lords</p></th><th></th></tr><tr><td><p><b>Introduction</b></p></td><td><p><b>30 October 2012</b></p></td><td><p><b>Vol.740 Col 587</b></p></td></tr><tr><td><p><b>Second Reading</b></p></td><td><p><b>31 October 2012</b></p></td><td><p><b>Vol.740 Col 628-642</b></p></td></tr><tr><td><p><b>Third Reading</b></p></td><td><p><b>31 October 2012</b></p></td><td><p><b>Vol.740 Col 642</b></p></td></tr><tr><td rowspan=\"2\"><p><b>Royal Assent</b></p></td><td rowspan=\"2\"><p><b>31 October 2012</b></p></td><td><p><b>House of Commons Hansard&nbsp;&nbsp;Vol. 552 Col 346</b></p></td></tr><tr><td><p><b>House of Lords Hansard Vol. 740 Col 642</b></p></td></tr></tbody></table>\n</div></section></div></div>\n</span>\n\n<span class=\"num\">1</span>\n\n\n<p>In relation to Wales, Welsh Ministers approve “approved clinicians”.</p>\n\n\n\n<span class=\"num\">2</span>\n\n\n<p>The National Health Service (Functions of Strategic Health Authorities and Primary Care Trusts and Administration Arrangements) (England) Regulations 2002 (<cite><a href=\"http://www.legislation.gov.uk/id/uksi/2002/2375\"><abbr class=\"acronym\" title=\"Statutory Instrument\">SI</abbr> 2002/2375</a></cite>).</p>\n\n\n\n<span class=\"num\">3</span>\n\n\n<p>Mental Health Act 1983 Approved Clinicians (General) Directions 2008.</p>\n\n\n</article>"
+}
