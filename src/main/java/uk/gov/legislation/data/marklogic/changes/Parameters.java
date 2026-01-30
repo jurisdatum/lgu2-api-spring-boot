@@ -119,11 +119,11 @@ public class Parameters extends AbstractParameters {
     }
 
     public enum EffectsSort {
-        AFFECTING_YEAR_NUMBER("affecting-year-number"),
-        AFFECTING_TITLE("affecting-title"),
-        AFFECTED_YEAR_NUMBER("affected-year-number"),
-        AFFECTED_TITLE("affected-title"),
-        APPLIED("applied");
+        SourceYearNumber ("affecting-year-number"),
+        SourceTitle ("affecting-title"),
+        TargetYearNumber ("affected-year-number"),
+        TargetTitle ("affected-title"),
+        Applied ("applied");
 
         private final String value;
 

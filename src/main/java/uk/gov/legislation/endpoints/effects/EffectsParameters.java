@@ -32,8 +32,8 @@ public class EffectsParameters {
         this.applied = applied;
     }
 
-    public Parameters.EffectsSort getSort() {
-        return sort;
+    public String getSort() {
+        return sort != null ? sort.value() : null;
     }
 
     public void setSort(Parameters.EffectsSort sort) {
