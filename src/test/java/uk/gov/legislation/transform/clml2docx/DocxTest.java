@@ -2,6 +2,7 @@ package uk.gov.legislation.transform.clml2docx;
 
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.legislation.transform.TransformHelper;
@@ -18,7 +19,7 @@ import java.util.stream.Stream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
-
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class DocxTest {
 
     public static Stream<String> provide() {
