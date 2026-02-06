@@ -61,7 +61,7 @@ public abstract class RichTextNode {
         @JacksonXmlProperty(isAttribute = true)
         public String upTo;
 
-        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlElementWrapper(localName = "children")
         @JacksonXmlProperty(localName = "node")
         public List<RichTextNode> children;
 
