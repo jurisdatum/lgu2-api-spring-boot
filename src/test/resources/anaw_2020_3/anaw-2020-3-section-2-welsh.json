@@ -69,7 +69,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "section/1",
@@ -85,7 +86,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -93,7 +95,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "Hybu ymwybyddiaeth y cyhoedd bod adran 1 yn dod i rym",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

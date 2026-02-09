@@ -39,7 +39,8 @@
       "href" : "section/1",
       "number" : "1",
       "title" : "Scheme to transfer assets of certain Church funds",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -55,7 +56,8 @@
       "href" : "section/1",
       "number" : "1",
       "title" : "Scheme to transfer assets of certain Church funds",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -63,161 +65,184 @@
       "href" : "section/1",
       "number" : "1",
       "title" : "Scheme to transfer assets of certain Church funds",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-1-1",
       "href" : "section/1/1",
       "number" : "1",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-1-2",
       "href" : "section/1/2",
       "number" : "2",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-a",
       "href" : "section/1/2/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-b",
       "href" : "section/1/2/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-c",
       "href" : "section/1/2/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-d",
       "href" : "section/1/2/d",
       "number" : "d",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-e",
       "href" : "section/1/2/e",
       "number" : "e",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-2-f",
       "href" : "section/1/2/f",
       "number" : "f",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-1-3",
       "href" : "section/1/3",
       "number" : "3",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/1",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-3-a",
       "href" : "section/1/3/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-3-b",
       "href" : "section/1/3/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-3-c",
       "href" : "section/1/3/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-1-4",
       "href" : "section/1/4",
       "number" : "4",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-4-a",
       "href" : "section/1/4/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-4-b",
       "href" : "section/1/4/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-1-5",
       "href" : "section/1/5",
       "number" : "5",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/1/4",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/1/4/a",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-5-a",
       "href" : "section/1/5/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-5-b",
       "href" : "section/1/5/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-5-c",
       "href" : "section/1/5/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

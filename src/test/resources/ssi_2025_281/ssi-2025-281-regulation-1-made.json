@@ -62,7 +62,8 @@
       "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
-      "label" : "Regulation 1"
+      "label" : "Regulation 1",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -78,7 +79,8 @@
       "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
-      "label" : "Regulation 1"
+      "label" : "Regulation 1",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -86,7 +88,8 @@
       "href" : "regulation/1",
       "number" : "1",
       "title" : "Citation and commencement",
-      "label" : "Regulation 1"
+      "label" : "Regulation 1",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

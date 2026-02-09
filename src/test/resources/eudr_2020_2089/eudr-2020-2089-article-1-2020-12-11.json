@@ -40,7 +40,8 @@
       "number" : "Article 1",
       "title" : null,
       "label" : "Article 1",
-      "start" : "2020-12-11"
+      "start" : "2020-12-11",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -57,7 +58,8 @@
       "number" : "Article 1",
       "title" : null,
       "label" : "Article 1",
-      "start" : "2020-12-11"
+      "start" : "2020-12-11",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -66,7 +68,8 @@
       "number" : "Article 1",
       "title" : null,
       "label" : "Article 1",
-      "start" : "2020-12-11"
+      "start" : "2020-12-11",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],
