@@ -39,7 +39,8 @@
     "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
-    "label" : "Schedule 6 paragraph 4A"
+    "label" : "Schedule 6 paragraph 4A",
+    "confersPower" : true
   },
   "prevInfo" : {
     "href" : "schedule/6/paragraph/3E",
@@ -56,7 +57,8 @@
     "number" : "SCHEDULE 6",
     "title" : null,
     "label" : "SCHEDULE 6",
-    "start" : "2020-12-31"
+    "start" : "2020-12-31",
+    "confersPower" : true
   }, {
     "element" : "Part",
     "id" : "schedule-6-part-1D",
@@ -64,14 +66,16 @@
     "number" : "PART 1D",
     "title" : "Part 4A permission: conditions for which the PRA is responsible in relation to insurers etc.",
     "label" : "PART 1D",
-    "start" : "2020-12-31"
+    "start" : "2020-12-31",
+    "confersPower" : true
   }, {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",
     "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
-    "label" : "Schedule 6 paragraph 4A"
+    "label" : "Schedule 6 paragraph 4A",
+    "confersPower" : true
   } ],
   "descendants" : [ {
     "element" : "P1",
@@ -79,98 +83,112 @@
     "href" : "schedule/6/paragraph/4A",
     "number" : "4A",
     "title" : "Introduction",
-    "label" : "Schedule 6 paragraph 4A"
+    "label" : "Schedule 6 paragraph 4A",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-1",
     "href" : "schedule/6/paragraph/4A/1",
     "number" : "1",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-2",
     "href" : "schedule/6/paragraph/4A/2",
     "number" : "2",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-3",
     "href" : "schedule/6/paragraph/4A/3",
     "number" : "3",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-4",
     "href" : "schedule/6/paragraph/4A/4",
     "number" : "4",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-4-a",
     "href" : "schedule/6/paragraph/4A/4/a",
     "number" : "a",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-4-b",
     "href" : "schedule/6/paragraph/4A/4/b",
     "number" : "b",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-5",
     "href" : "schedule/6/paragraph/4A/5",
     "number" : "5",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-6",
     "href" : "schedule/6/paragraph/4A/6",
     "number" : "6",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-a",
     "href" : "schedule/6/paragraph/4A/6/a",
     "number" : "a",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-b",
     "href" : "schedule/6/paragraph/4A/6/b",
     "number" : "b",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-c",
     "href" : "schedule/6/paragraph/4A/6/c",
     "number" : "c",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P3",
     "id" : "schedule-6-paragraph-4A-6-d",
     "href" : "schedule/6/paragraph/4A/6/d",
     "number" : "d",
     "title" : null,
-    "label" : "P3"
+    "label" : "P3",
+    "confersPower" : true
   }, {
     "element" : "P2",
     "id" : "schedule-6-paragraph-4A-7",
     "href" : "schedule/6/paragraph/4A/7",
     "number" : "7",
     "title" : null,
-    "label" : "P2"
+    "label" : "P2",
+    "confersPower" : true
   } ],
   "unappliedEffects" : {
     "fragment" : [ {

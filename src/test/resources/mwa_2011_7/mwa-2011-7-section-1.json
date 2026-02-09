@@ -75,7 +75,8 @@
       "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -92,14 +93,16 @@
       "number" : "PART 1",
       "title" : "COLLABORATION BY EDUCATION BODIES",
       "label" : "PART 1",
-      "start" : "2022-09-01"
+      "start" : "2022-09-01",
+      "confersPower" : true
     }, {
       "element" : "P1",
       "id" : "section-1",
       "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -107,49 +110,56 @@
       "href" : "section/1",
       "number" : "1",
       "title" : "Education bodies",
-      "label" : "Section 1"
+      "label" : "Section 1",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-a",
       "href" : "section/1/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-b",
       "href" : "section/1/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-c",
       "href" : "section/1/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-1-d",
       "href" : "section/1/d",
       "number" : "d",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P4",
       "id" : "section-1-d-i",
       "href" : "section/1/d/i",
       "number" : "i",
       "title" : null,
-      "label" : "P4"
+      "label" : "P4",
+      "confersPower" : true
     }, {
       "element" : "P4",
       "id" : "section-1-d-ii",
       "href" : "section/1/d/ii",
       "number" : "ii",
       "title" : null,
-      "label" : "P4"
+      "label" : "P4",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

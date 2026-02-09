@@ -39,7 +39,8 @@
       "href" : "introduction",
       "number" : "2022 Chapter 21",
       "title" : "School Age Act (Northern Ireland) 2022",
-      "label" : "PrimaryPrelims"
+      "label" : "PrimaryPrelims",
+      "confersPower" : true
     },
     "prevInfo" : null,
     "nextInfo" : {
@@ -53,7 +54,8 @@
       "href" : "introduction",
       "number" : "2022 Chapter 21",
       "title" : "School Age Act (Northern Ireland) 2022",
-      "label" : "PrimaryPrelims"
+      "label" : "PrimaryPrelims",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

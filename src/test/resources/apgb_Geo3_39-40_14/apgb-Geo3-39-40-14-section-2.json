@@ -37,7 +37,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "section/1.",
@@ -50,7 +51,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -58,7 +60,8 @@
       "href" : "section/2",
       "number" : "2",
       "title" : "How orders made by Parliament shall be deemed to have been appointed.",
-      "label" : "Section 2"
+      "label" : "Section 2",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

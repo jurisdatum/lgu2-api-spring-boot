@@ -2,6 +2,7 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.time.LocalDate;
 
@@ -33,5 +34,8 @@ public class Level {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate end;
+
+    @JacksonXmlProperty(isAttribute = true)
+    public Boolean confersPower;
 
 }

@@ -41,7 +41,8 @@
       "number" : null,
       "title" : "Reviews",
       "label" : "Reviews",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "part/1/crossheading/supporting-provisions",
@@ -58,7 +59,8 @@
       "number" : "Part 1",
       "title" : "Qualifications Scotland",
       "label" : "Part 1",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     }, {
       "element" : "Pblock",
       "id" : "part-1-crossheading-reviews",
@@ -66,7 +68,8 @@
       "number" : null,
       "title" : "Reviews",
       "label" : "Reviews",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "Pblock",
@@ -75,7 +78,8 @@
       "number" : null,
       "title" : "Reviews",
       "label" : "Reviews",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     }, {
       "element" : "P1",
       "id" : "section-31",
@@ -83,105 +87,120 @@
       "number" : "31",
       "title" : "Review of arrangements for assuring quality of qualifications",
       "label" : "Section 31",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-31-1",
       "href" : "section/31/1",
       "number" : "1",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-31-2",
       "href" : "section/31/2",
       "number" : "2",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-2-a",
       "href" : "section/31/2/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/31/1",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-2-b",
       "href" : "section/31/2/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/31/1",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-31-3",
       "href" : "section/31/3",
       "number" : "3",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "InternalLink",
       "id" : null,
       "href" : "section/31/1",
       "number" : null,
       "title" : null,
-      "label" : "InternalLink"
+      "label" : "InternalLink",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-3-a",
       "href" : "section/31/3/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-3-b",
       "href" : "section/31/3/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-31-4",
       "href" : "section/31/4",
       "number" : "4",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-4-a",
       "href" : "section/31/4/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-4-b",
       "href" : "section/31/4/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-31-4-c",
       "href" : "section/31/4/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P1",
       "id" : "section-32",
@@ -189,140 +208,160 @@
       "number" : "32",
       "title" : "Review of accreditation function",
       "label" : "Section 32",
-      "prospective" : true
+      "prospective" : true,
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-1",
       "href" : "section/32/1",
       "number" : "1",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-1-a",
       "href" : "section/32/1/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-1-b",
       "href" : "section/32/1/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-1-c",
       "href" : "section/32/1/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-2",
       "href" : "section/32/2",
       "number" : "2",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-2-a",
       "href" : "section/32/2/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-2-b",
       "href" : "section/32/2/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-2-c",
       "href" : "section/32/2/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-3",
       "href" : "section/32/3",
       "number" : "3",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-3-a",
       "href" : "section/32/3/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-3-b",
       "href" : "section/32/3/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P4",
       "id" : "section-32-3-b-i",
       "href" : "section/32/3/b/i",
       "number" : "i",
       "title" : null,
-      "label" : "P4"
+      "label" : "P4",
+      "confersPower" : true
     }, {
       "element" : "P4",
       "id" : "section-32-3-b-ii",
       "href" : "section/32/3/b/ii",
       "number" : "ii",
       "title" : null,
-      "label" : "P4"
+      "label" : "P4",
+      "confersPower" : true
     }, {
       "element" : "P4",
       "id" : "section-32-3-b-iii",
       "href" : "section/32/3/b/iii",
       "number" : "iii",
       "title" : null,
-      "label" : "P4"
+      "label" : "P4",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-4",
       "href" : "section/32/4",
       "number" : "4",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-5",
       "href" : "section/32/5",
       "number" : "5",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-5-a",
       "href" : "section/32/5/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P3",
       "id" : "section-32-5-b",
       "href" : "section/32/5/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3"
+      "label" : "P3",
+      "confersPower" : true
     }, {
       "element" : "P2",
       "id" : "section-32-6",
       "href" : "section/32/6",
       "number" : "6",
       "title" : null,
-      "label" : "P2"
+      "label" : "P2",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

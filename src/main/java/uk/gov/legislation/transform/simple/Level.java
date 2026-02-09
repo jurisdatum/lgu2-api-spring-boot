@@ -48,6 +48,7 @@ public class Level {
         other.prospective = "Prospective".equals(this.status);
         other.start = this.start;
         other.end = this.end;
+        other.confersPower=true;
         return other;
     }
 

@@ -33,7 +33,8 @@
       "number" : null,
       "title" : null,
       "label" : "P",
-      "end" : "2007-01-01"
+      "end" : "2007-01-01",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -47,7 +48,8 @@
       "number" : null,
       "title" : null,
       "label" : "P",
-      "end" : "2007-01-01"
+      "end" : "2007-01-01",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P",
@@ -56,7 +58,8 @@
       "number" : null,
       "title" : null,
       "label" : "P",
-      "end" : "2007-01-01"
+      "end" : "2007-01-01",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

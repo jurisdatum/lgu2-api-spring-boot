@@ -33,7 +33,8 @@
       "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
-      "label" : "Section 5"
+      "label" : "Section 5",
+      "confersPower" : true
     },
     "prevInfo" : {
       "href" : "paragraph/p1",
@@ -50,14 +51,16 @@
       "number" : null,
       "title" : "Miscellaneous",
       "label" : "Miscellaneous",
-      "start" : "2006-01-01"
+      "start" : "2006-01-01",
+      "confersPower" : true
     }, {
       "element" : "P1",
       "id" : "section-5",
       "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
-      "label" : "Section 5"
+      "label" : "Section 5",
+      "confersPower" : true
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -65,7 +68,8 @@
       "href" : "section/5",
       "number" : "5",
       "title" : "Supplementary provisions and minor amendments.",
-      "label" : "Section 5"
+      "label" : "Section 5",
+      "confersPower" : true
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],
