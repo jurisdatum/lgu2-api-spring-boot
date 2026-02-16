@@ -3,7 +3,9 @@
 ## Red/Green "Up to Date" Messages
 
 ### Rule
-A resource is up to date if it has no required, unapplied effects that are in force on or before the cutoff date. In other words, for every unapplied required effect, all its in‑force dates are either applied, missing, or after the cutoff.
+A resource is up to date if it has no required, unapplied effects that are in force on or before the cutoff date. In other words, for every unapplied required effect, all its in‑force dates are either missing or after the cutoff.
+
+In Simon's words: A resource is up to date if: all required-to-be-applied effects affecting it, its descendants, and—if it is a fragment of a whole document—its ancestors, are applied for all those effects' in force dates dated today and earlier.
 
 ### New Algorithm
 1. Choose a cutoff date (normally today).
@@ -11,8 +13,7 @@ A resource is up to date if it has no required, unapplied effects that are in fo
     - If the effect is already marked applied, it is not outstanding.
     - If the effect is not required (the `required` field on the effect), it is not outstanding.
     - Otherwise, inspect each in-force entry on the effect; an in-force entry is outstanding only if
-        - it is not applied,
-        - it has a non-null date, and 
+        - it has a non-null date, and
         - that date is on or before the cutoff.
     - The effect is outstanding if any of its in-force entries are outstanding.
 3. The resource (document or fragment) is up to date if none of its effects are outstanding.
@@ -29,7 +30,7 @@ Code: `src/main/java/uk/gov/legislation/util/UpToDate.java`
     - has a `@Date` that is after today (with a guard that the date is castable as `xs:date`).
 5. If all in-force entries satisfy step 4, the document is still treated as up to date (green message). Otherwise it is not up to date (red message).
 
-Note: unlike the new algorithm, the XSLT version has no per-in-force-entry "applied" check and no effect-level "applied" short-circuit — effects are already filtered to `UnappliedEffect` elements by the data source. It also handles a "prospective" concept that the new algorithm does not.
+Note: unlike the new algorithm, the XSLT version has no effect-level "applied" short-circuit — effects are already filtered to `UnappliedEffect` elements by the data source. It also handles a "prospective" concept that the new algorithm does not.
 
 Code: `tna.legislation.transformations.clml-html-fo/src/legislation/html/statuswarning.xsl`— functions `leg:IsOutstandingEffectExists` and `leg:IsOutstandingEffectsOnlyProspectiveOrFutureDate`
 
@@ -39,6 +40,5 @@ Code: `tna.legislation.transformations.clml-html-fo/src/legislation/html/statusw
 |---|---|---|
 | Welsh-specific filtering | No (not yet implemented) | Yes (`RequiresWelshApplied`) |
 | Effect-level `applied` check | Yes | No (implicit via `UnappliedEffect` element) |
-| Per-in-force `applied` check | Yes | No |
 | Prospective effects | No (prospective flag is not checked) | Treated as non-outstanding |
 | Date validation | Assumes valid | `castable as xs:date` guard |
