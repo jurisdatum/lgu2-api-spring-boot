@@ -40,8 +40,7 @@
       "href" : "section/91",
       "number" : "91",
       "title" : "Penalties for breach of Part 6 rules",
-      "label" : "Section 91",
-      "confersPower" : true
+      "label" : "Section 91"
     },
     "prevInfo" : {
       "href" : "section/90B",
@@ -58,8 +57,7 @@
       "number" : "Part VI",
       "title" : "Official Listing",
       "label" : "Part VI",
-      "start" : "2024-01-30",
-      "confersPower" : true
+      "start" : "2024-01-30"
     }, {
       "element" : "Pblock",
       "id" : "part-VI-crossheading-penalties",
@@ -67,16 +65,14 @@
       "number" : null,
       "title" : "Penalties",
       "label" : "Penalties",
-      "start" : "2024-01-30",
-      "confersPower" : true
+      "start" : "2024-01-30"
     }, {
       "element" : "P1",
       "id" : "section-91",
       "href" : "section/91",
       "number" : "91",
       "title" : "Penalties for breach of Part 6 rules",
-      "label" : "Section 91",
-      "confersPower" : true
+      "label" : "Section 91"
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -84,240 +80,210 @@
       "href" : "section/91",
       "number" : "91",
       "title" : "Penalties for breach of Part 6 rules",
-      "label" : "Section 91",
-      "confersPower" : true
+      "label" : "Section 91"
     }, {
       "element" : "P2",
       "id" : "section-91-1",
       "href" : "section/91/1",
       "number" : "1",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-1-a",
       "href" : "section/91/1/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-1-b",
       "href" : "section/91/1/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-91-1ZA",
       "href" : "section/91/1ZA",
       "number" : "1ZA",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-1A",
       "href" : "section/91/1A",
       "number" : "1A",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-1A-a",
       "href" : "section/91/1A/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-1A-b",
       "href" : "section/91/1A/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-1A-c",
       "href" : "section/91/1A/c",
       "number" : "c",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-1A-d",
       "href" : "section/91/1A/d",
       "number" : "d",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-1A-e",
       "href" : "section/91/1A/e",
       "number" : "e",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-91-1B",
       "href" : "section/91/1B",
       "number" : "1B",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-1B-a",
       "href" : "section/91/1B/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "section-91-1B-a-i",
       "href" : "section/91/1B/a/i",
       "number" : "i",
       "title" : null,
-      "label" : "P4",
-      "confersPower" : true
+      "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "section-91-1B-a-ii",
       "href" : "section/91/1B/a/ii",
       "number" : "ii",
       "title" : null,
-      "label" : "P4",
-      "confersPower" : true
+      "label" : "P4"
     }, {
       "element" : "P3",
       "id" : "section-91-1B-b",
       "href" : "section/91/1B/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-91-2",
       "href" : "section/91/2",
       "number" : "2",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-2A",
       "href" : "section/91/2A",
       "number" : "2A",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-2A-a",
       "href" : "section/91/2A/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-2A-b",
       "href" : "section/91/2A/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-91-2B",
       "href" : "section/91/2B",
       "number" : "2B",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-2B-a",
       "href" : "section/91/2B/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-2B-b",
       "href" : "section/91/2B/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P2",
       "id" : "section-91-3",
       "href" : "section/91/3",
       "number" : "3",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-4",
       "href" : "section/91/4",
       "number" : "4",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-5",
       "href" : "section/91/5",
       "number" : "5",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-6",
       "href" : "section/91/6",
       "number" : "6",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "section-91-7",
       "href" : "section/91/7",
       "number" : "7",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "section-91-7-a",
       "href" : "section/91/7/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "section-91-7-b",
       "href" : "section/91/7/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     } ],
     "unappliedEffects" : {
       "fragment" : [ {

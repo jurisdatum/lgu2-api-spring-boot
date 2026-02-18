@@ -44,8 +44,7 @@
       "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
-      "label" : "Parts I, II",
-      "confersPower" : true
+      "label" : "Parts I, II"
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -61,8 +60,7 @@
       "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
-      "label" : "Parts I, II",
-      "confersPower" : true
+      "label" : "Parts I, II"
     } ],
     "descendants" : [ {
       "element" : "Part",
@@ -70,24 +68,21 @@
       "href" : "part/1",
       "number" : "Parts I, II",
       "title" : null,
-      "label" : "Parts I, II",
-      "confersPower" : true
+      "label" : "Parts I, II"
     }, {
       "element" : "P1",
       "id" : "section-125",
       "href" : "section/125",
       "number" : "1",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
-      "label" : "Section 125",
-      "confersPower" : true
+      "label" : "Section 125"
     }, {
       "element" : "P1",
       "id" : "section-2633",
       "href" : "section/2633",
       "number" : "26–33",
       "title" : ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
-      "label" : "Section 2633",
-      "confersPower" : true
+      "label" : "Section 2633"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

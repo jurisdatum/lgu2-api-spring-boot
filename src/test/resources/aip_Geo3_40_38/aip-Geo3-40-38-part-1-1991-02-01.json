@@ -37,8 +37,7 @@
       "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
-      "label" : "Article First.",
-      "confersPower" : true
+      "label" : "Article First."
     },
     "prevInfo" : {
       "href" : "section/I.",
@@ -54,8 +53,7 @@
       "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
-      "label" : "Article First.",
-      "confersPower" : true
+      "label" : "Article First."
     } ],
     "descendants" : [ {
       "element" : "Part",
@@ -63,16 +61,14 @@
       "href" : "part/1",
       "number" : "Article First.",
       "title" : null,
-      "label" : "Article First.",
-      "confersPower" : true
+      "label" : "Article First."
     }, {
       "element" : "P1group",
       "id" : "section-wrapper2",
       "href" : "section/wrapper2",
       "number" : null,
       "title" : "Great Britain and Ireland to be united for ever from 1 Jan. 1801.",
-      "label" : "P1group",
-      "confersPower" : true
+      "label" : "P1group"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

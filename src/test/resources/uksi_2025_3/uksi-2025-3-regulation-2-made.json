@@ -48,8 +48,7 @@
       "href" : "regulation/2",
       "number" : "2",
       "title" : "Amendment of the State Pension Credit Regulations 2002",
-      "label" : "Regulation 2",
-      "confersPower" : true
+      "label" : "Regulation 2"
     },
     "prevInfo" : {
       "href" : "regulation/1",
@@ -65,8 +64,7 @@
       "href" : "regulation/2",
       "number" : "2",
       "title" : "Amendment of the State Pension Credit Regulations 2002",
-      "label" : "Regulation 2",
-      "confersPower" : true
+      "label" : "Regulation 2"
     } ],
     "descendants" : [ {
       "element" : "P1",
@@ -74,56 +72,49 @@
       "href" : "regulation/2",
       "number" : "2",
       "title" : "Amendment of the State Pension Credit Regulations 2002",
-      "label" : "Regulation 2",
-      "confersPower" : true
+      "label" : "Regulation 2"
     }, {
       "element" : "P2",
       "id" : "regulation-2-1",
       "href" : "regulation/2/1",
       "number" : "1",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P2",
       "id" : "regulation-2-2",
       "href" : "regulation/2/2",
       "number" : "2",
       "title" : null,
-      "label" : "P2",
-      "confersPower" : true
+      "label" : "P2"
     }, {
       "element" : "P3",
       "id" : "regulation-2-2-a",
       "href" : "regulation/2/2/a",
       "number" : "a",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P3",
       "id" : "regulation-2-2-b",
       "href" : "regulation/2/2/b",
       "number" : "b",
       "title" : null,
-      "label" : "P3",
-      "confersPower" : true
+      "label" : "P3"
     }, {
       "element" : "P4",
       "id" : "regulation-2-2-b-i",
       "href" : "regulation/2/2/b/i",
       "number" : "i",
       "title" : null,
-      "label" : "P4",
-      "confersPower" : true
+      "label" : "P4"
     }, {
       "element" : "P4",
       "id" : "regulation-2-2-b-ii",
       "href" : "regulation/2/2/b/ii",
       "number" : "ii",
       "title" : null,
-      "label" : "P4",
-      "confersPower" : true
+      "label" : "P4"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

@@ -37,8 +37,7 @@
       "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
-      "label" : "ARTICLE I.",
-      "confersPower" : true
+      "label" : "ARTICLE I."
     },
     "prevInfo" : {
       "href" : "introduction",
@@ -54,8 +53,7 @@
       "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
-      "label" : "ARTICLE I.",
-      "confersPower" : true
+      "label" : "ARTICLE I."
     } ],
     "descendants" : [ {
       "element" : "Part",
@@ -63,16 +61,14 @@
       "href" : "part/1",
       "number" : "ARTICLE I.",
       "title" : null,
-      "label" : "ARTICLE I.",
-      "confersPower" : true
+      "label" : "ARTICLE I."
     }, {
       "element" : "P1group",
       "id" : "section-wrapper1",
       "href" : "section/wrapper1",
       "number" : null,
       "title" : "The Kingdoms United;     Ensigns Armorial",
-      "label" : "P1group",
-      "confersPower" : true
+      "label" : "P1group"
     } ],
     "unappliedEffects" : {
       "fragment" : [ ],

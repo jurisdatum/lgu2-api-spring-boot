@@ -33,6 +33,10 @@ public class Level {
     @JacksonXmlProperty
     public String title;
 
+    @JacksonXmlProperty
+    public Boolean confersPower;
+
+
     /* conversion */
 
     /* mabye this should be moved to the .converters package? */
@@ -48,7 +52,7 @@ public class Level {
         other.prospective = "Prospective".equals(this.status);
         other.start = this.start;
         other.end = this.end;
-        other.confersPower=true;
+        other.confersPower = Boolean.TRUE.equals(this.confersPower);
         return other;
     }
 
