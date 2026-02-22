@@ -34,4 +34,7 @@ public class Level {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public LocalDate end;
 
+    @JsonInclude(JsonInclude.Include.NON_DEFAULT)
+    public Boolean confersPower;
+
 }

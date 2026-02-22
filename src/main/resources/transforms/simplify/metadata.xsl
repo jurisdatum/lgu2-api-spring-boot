@@ -338,6 +338,13 @@
         <xsl:copy-of select="@DocumentURI" />
         <xsl:copy-of select="@Status | self::P1/parent::P1group/@Status" />
         <xsl:copy-of select="@RestrictStartDate | @RestrictEndDate" />
+        <xsl:variable name="power" select="@ConfersPower | self::P1/parent::P1group/@ConfersPower"/>
+
+        <xsl:if test="$power">
+            <confersPower>
+                <xsl:value-of select="$power"/>
+            </confersPower>
+        </xsl:if>
         <xsl:apply-templates select="Number | Pnumber" mode="simplify-number" />
         <xsl:apply-templates select="child::Title | self::P1/parent::P1group/Title" mode="simplify-title" />
     </xsl:element>
