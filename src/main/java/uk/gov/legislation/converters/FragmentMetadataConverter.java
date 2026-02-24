@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static uk.gov.legislation.converters.DocumentMetadataConverter.simplifyWelshEffects;
+
 public class FragmentMetadataConverter {
 
     /**
@@ -79,6 +81,10 @@ public class FragmentMetadataConverter {
         FragmentMetadata.Effects effects = new FragmentMetadata.Effects();
         effects.fragment = EffectsFeedConverter.convertEffects(direct);
         effects.ancestor = EffectsFeedConverter.convertEffects(ancestor);
+        if ("cy".equals(metadata.lang)) {
+            simplifyWelshEffects(effects.fragment);
+            simplifyWelshEffects(effects.ancestor);
+        }
         return effects;
     }
 

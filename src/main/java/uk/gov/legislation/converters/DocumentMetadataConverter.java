@@ -2,6 +2,7 @@ package uk.gov.legislation.converters;
 
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
+import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.meta.AssociatedDocument;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.util.*;
@@ -17,12 +18,23 @@ public class DocumentMetadataConverter {
         return converted;
     }
 
+    static void simplifyWelshEffects(List<Effect> effects) {
+        effects.forEach(effect -> {
+            effect.applied = Boolean.TRUE.equals(effect.appliedWelsh);
+            effect.required = !Boolean.FALSE.equals(effect.requiredWelsh);
+            effect.appliedWelsh = null;
+            effect.requiredWelsh = null;
+        });
+    }
+
     public static void convert(Metadata simple, DocumentMetadata converted) {
         convertCommon(simple, converted);
         // perhaps this should be combined with fragment metadata
         converted.unappliedEffects = simple.rawEffects.stream()
             .sorted(EffectsComparator.INSTANCE)
             .map(EffectsFeedConverter::convertEffect).toList();
+        if ("cy".equals(simple.lang))
+            simplifyWelshEffects(converted.unappliedEffects);
         if ("revised".equals(simple.status) && simple.version().equals(simple.versions().getLast())) {
             if (converted.pointInTime == null)
                 UpToDate.setUpToDate(converted);

@@ -9,17 +9,19 @@ In Simon's words: A resource is up to date if: all required-to-be-applied effect
 
 ### New Algorithm
 1. Choose a cutoff date (normally today).
-2. For each effect in the resource's list of unapplied effects (see step 4 for scoping), mark whether the effect is outstanding.
+2. For Welsh resources (`lang` is `"cy"`), the converter normalises the effects before the up-to-date check runs: each effect's `applied` is overwritten with `appliedWelsh`, and `required` is overwritten with `requiredWelsh`. The result is that English documents use the original `applied` and `required` values, while Welsh documents use the Welsh-specific values, but the up-to-date logic doesn't need to know the difference.
+3. For each effect in the resource's list of unapplied effects (see step 5 for scoping), mark whether the effect is outstanding.
     - If the effect is already marked applied, it is not outstanding.
-    - If the effect is not required (the `required` field on the effect), it is not outstanding.
+    - If the effect is not required, it is not outstanding.
     - Otherwise, inspect each in-force entry on the effect; an in-force entry is outstanding only if
         - it has a non-null date, and
         - that date is on or before the cutoff.
     - The effect is outstanding if any of its in-force entries are outstanding.
-3. The resource (document or fragment) is up to date if none of its effects are outstanding.
-4. For full documents, only the document's `unappliedEffects` list is considered. For fragments, both the fragment-targeting list and the ancestor-targeting list are considered; any outstanding effect in either list means the fragment is not up to date.
+4. The resource (document or fragment) is up to date if none of its effects are outstanding.
+5. For full documents, only the document's `unappliedEffects` list is considered. For fragments, both the fragment-targeting list and the ancestor-targeting list are considered; any outstanding effect in either list means the fragment is not up to date.
 
-Code: `src/main/java/uk/gov/legislation/util/UpToDate.java`
+Welsh normalisation: `DocumentMetadataConverter.simplifyWelshEffects()`
+Up-to-date logic: `UpToDate.java`
 
 ### Old Algorithm (XSLT legacy system)
 1. The cutoff date is always today (`current-date()`).
@@ -38,7 +40,6 @@ Code: `tna.legislation.transformations.clml-html-fo/src/legislation/html/statusw
 
 | Aspect | New (Java) | Old (XSLT) |
 |---|---|---|
-| Welsh-specific filtering | No (not yet implemented) | Yes (`RequiresWelshApplied`) |
 | Effect-level `applied` check | Yes | No (implicit via `UnappliedEffect` element) |
 | Prospective effects | No (prospective flag is not checked) | Treated as non-outstanding |
 | Date validation | Assumes valid | `castable as xs:date` guard |
