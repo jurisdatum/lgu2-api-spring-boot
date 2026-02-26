@@ -14,6 +14,7 @@ import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.transform.simple.Simplify;
 
 import java.util.Optional;
@@ -32,6 +33,9 @@ class WelshFragmentTest {
 
     @MockitoBean
     private Legislation mock;
+
+    @MockitoBean
+    private UnappliedEffectsFetcher effectsFetcher;
 
     @Test
     void test() throws Exception {

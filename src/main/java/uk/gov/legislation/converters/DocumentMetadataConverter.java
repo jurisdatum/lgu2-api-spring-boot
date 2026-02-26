@@ -35,7 +35,9 @@ public class DocumentMetadataConverter {
             .map(EffectsFeedConverter::convertEffect).toList();
         if ("cy".equals(simple.lang))
             simplifyWelshEffects(converted.unappliedEffects);
-        if ("revised".equals(simple.status) && simple.version().equals(simple.versions().getLast())) {
+        // Not sure we need the ("revised".equals(simple.status) || ("final".equals(simple.status) condition
+        if (("revised".equals(simple.status) || ("final".equals(simple.status) && simple.finalEffectsEnriched))
+                && simple.version().equals(simple.versions().getLast())) {
             if (converted.pointInTime == null)
                 UpToDate.setUpToDate(converted);
             else

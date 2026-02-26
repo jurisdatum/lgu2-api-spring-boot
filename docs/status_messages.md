@@ -36,6 +36,16 @@ Note: unlike the new algorithm, the XSLT version has no effect-level "applied" s
 
 Code: `tna.legislation.transformations.clml-html-fo/src/legislation/html/statuswarning.xsl`— functions `leg:IsOutstandingEffectExists` and `leg:IsOutstandingEffectsOnlyProspectiveOrFutureDate`
 
+### Enacted/Made-Only Documents
+
+The old website does not compute up-to-date status for enacted/made-only documents (status `"final"`, no revised versions). Their source XML contains no unapplied effects, so there is nothing to evaluate.
+
+The new API adds this capability. When a document's status is `"final"` and the requested version is the latest, `UnappliedEffectsFetcher` queries MarkLogic's changes feed for all unapplied effects targeting that document. These fetched effects are injected into the same `rawEffects` list that revised documents populate from the XML, so the existing filtering, Welsh normalisation, and up-to-date logic all apply unchanged.
+
+If the fetch fails (e.g. MarkLogic outage), `upToDate` is left as `null` rather than being set to a potentially incorrect value. This is controlled by the `finalEffectsEnriched` flag on `Metadata`, which is only set to `true` on a successful fetch.
+
+Code: `UnappliedEffectsFetcher.java`
+
 ### Material Differences
 
 | Aspect | New (Java) | Old (XSLT) |
@@ -43,3 +53,4 @@ Code: `tna.legislation.transformations.clml-html-fo/src/legislation/html/statusw
 | Effect-level `applied` check | Yes | No (implicit via `UnappliedEffect` element) |
 | Prospective effects | No (prospective flag is not checked) | Treated as non-outstanding |
 | Date validation | Assumes valid | `castable as xs:date` guard |
+| Enacted/made-only documents | Fetches unapplied effects from changes feed; computes up-to-date status | Not supported |
