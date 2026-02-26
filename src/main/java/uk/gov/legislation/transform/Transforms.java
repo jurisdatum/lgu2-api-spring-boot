@@ -10,6 +10,7 @@ import uk.gov.legislation.api.responses.*;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.converters.TableOfContentsConverter;
+import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
 import uk.gov.legislation.transform.simple.Contents;
@@ -30,11 +31,14 @@ public class Transforms {
 
     private final Clml2Docx clml2docx;
 
-    public Transforms(Clml2Akn clml2akn, Akn2Html akn2html, Simplify simplify, Clml2Docx clml2docx) {
+    private final UnappliedEffectsFetcher effectsFetcher;
+
+    public Transforms(Clml2Akn clml2akn, Akn2Html akn2html, Simplify simplify, Clml2Docx clml2docx, UnappliedEffectsFetcher effectsFetcher) {
         this.clml2akn = clml2akn;
         this.akn2html = akn2html;
         this.simplifier = simplify;
         this.clml2docx = clml2docx;
+        this.effectsFetcher = effectsFetcher;
     }
 
     public String clml2akn(String clml) throws SaxonApiException {
@@ -72,6 +76,7 @@ public class Transforms {
         XdmNode akn = clml2akn.transform(doc);
         String html = akn2html.transform(akn, false);
         Metadata simple = simplifier.extractDocumentMetadata(doc);
+        effectsFetcher.fetchIfNeeded(simple);
         DocumentMetadata converted = DocumentMetadataConverter.convert(simple);
         return new Document(converted, html);
     }
@@ -83,6 +88,7 @@ public class Transforms {
         clml2akn.transform(doc, next);
         String html = baos.toString(StandardCharsets.UTF_8);
         Metadata simple = simplifier.extractDocumentMetadata(doc);
+        effectsFetcher.fetchIfNeeded(simple);
         DocumentMetadata converted = DocumentMetadataConverter.convert(simple);
         return new Document(converted, html);
     }
@@ -92,12 +98,14 @@ public class Transforms {
         XdmNode akn = clml2akn.transform(doc);
         String html = akn2html.transform(akn, false);
         Metadata simple = simplifier.extractFragmentMetadata(doc);
+        effectsFetcher.fetchIfNeeded(simple);
         FragmentMetadata converted = FragmentMetadataConverter.convert(simple);
         return new Fragment(converted, html);
     }
 
     public TableOfContents clml2toc(String clml) throws SaxonApiException, JacksonException {
         Contents simple = simplifier.contents(clml);
+        effectsFetcher.fetchIfNeeded(simple.meta);
         return TableOfContentsConverter.convert(simple);
     }
 

@@ -17,6 +17,14 @@ public class Effect {
     public boolean required;
 
     @Schema
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean appliedWelsh;
+
+    @Schema
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean requiredWelsh;
+
+    @Schema
     public String type;
 
     @Schema
