@@ -9,8 +9,11 @@ import uk.gov.legislation.transform.Helper;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 
+import java.lang.management.GarbageCollectorMXBean;
+import java.lang.management.ManagementFactory;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.List;
 
 public class Timing {
 
@@ -53,6 +56,12 @@ public class Timing {
         long t5 = System.currentTimeMillis();
         System.out.printf("It took %.2f seconds to read the XML file%n", (t5 - t1) / 1000.0);
 
+        Runtime rt = Runtime.getRuntime();
+        rt.gc();
+        long memBefore = rt.totalMemory() - rt.freeMemory();
+        long gcCountBefore = gcCount();
+        long gcTimeBefore = gcTime();
+
         long start = System.currentTimeMillis();
 
         XdmNode doc = Helper.parse(clml);
@@ -72,6 +81,28 @@ public class Timing {
         long t9 = System.currentTimeMillis();
         System.out.printf("It took %.2f seconds to extract the JSON metadata; %.2f seconds total%n", (t9 - t8) / 1000.0, (t9 - start) / 1000.0);
 
+        long memAfter = rt.totalMemory() - rt.freeMemory();
+        long gcCountAfter = gcCount();
+        long gcTimeAfter = gcTime();
+        System.out.printf("Memory: %.1f MB before, %.1f MB after, %.1f MB allocated%n",
+            memBefore / 1_000_000.0, memAfter / 1_000_000.0, (memAfter - memBefore) / 1_000_000.0);
+        System.out.printf("GC: %d collections, %d ms%n",
+            gcCountAfter - gcCountBefore, gcTimeAfter - gcTimeBefore);
+
+    }
+
+    private static long gcCount() {
+        long count = 0;
+        for (GarbageCollectorMXBean bean : ManagementFactory.getGarbageCollectorMXBeans())
+            count += bean.getCollectionCount();
+        return count;
+    }
+
+    private static long gcTime() {
+        long time = 0;
+        for (GarbageCollectorMXBean bean : ManagementFactory.getGarbageCollectorMXBeans())
+            time += bean.getCollectionTime();
+        return time;
     }
 
 }
