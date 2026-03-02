@@ -17,6 +17,9 @@ public class Timing {
     public static void main(String[] args) throws Exception {
         Timing instance = new Timing();
         instance.time("/debug/asp-2003-13.xml");
+        instance.time("/debug/nisi-2006-3336-body.xml");
+        instance.time("/debug/ukpga-1996-18.xml");
+        instance.time("/debug/uksi-2015-596.xml");
         instance.time("/debug/wsi-2018-191.xml");
     }
 
