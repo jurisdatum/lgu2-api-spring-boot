@@ -10,7 +10,7 @@ public class DocumentMetadata extends CommonMetadata {
     @Schema(description = "alternative formats")
     public List<AltFormat> altFormats;
 
-    @Schema()
+    @Schema
     public List<Effect> unappliedEffects;
 
     @Schema(nullable = true)

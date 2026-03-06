@@ -16,6 +16,7 @@ import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 
@@ -57,6 +58,9 @@ class WelshDocumentTest {
 
     @MockitoBean
     private Impacts impacts;
+
+    @MockitoBean
+    private UnappliedEffectsFetcher effectsFetcher;
 
     @Test
     void test() throws Exception {

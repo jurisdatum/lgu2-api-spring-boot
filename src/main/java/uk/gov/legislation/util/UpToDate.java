@@ -45,8 +45,6 @@ public class UpToDate {
 
     private static void markInForce(Effect.InForce inForce, LocalDate cutoff) {
         inForce.outstanding = false;
-        if (inForce.applied)
-            return;
         if (inForce.date == null)
             return;
         // check prospective?

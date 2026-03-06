@@ -1,5 +1,6 @@
 package uk.gov.legislation.transform.simple;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
@@ -343,6 +344,10 @@ public class Metadata {
     @JacksonXmlElementWrapper(localName = "UnappliedEffects", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     @JacksonXmlProperty(localName = "UnappliedEffect", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
     public List<Effect> rawEffects = Collections.emptyList();
+
+    /** Set to true when unapplied effects have been successfully fetched from MarkLogic for final documents. */
+    @JsonIgnore
+    public boolean finalEffectsEnriched = false;
 
 
     /* ConfersPower and BlanketAmendment */
