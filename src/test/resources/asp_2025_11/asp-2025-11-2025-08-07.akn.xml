@@ -23,7 +23,7 @@
             <FRBRManifestation>
                <FRBRthis value="http://www.legislation.gov.uk/asp/2025/11/2025-08-07/data.akn"/>
                <FRBRuri value="http://www.legislation.gov.uk/asp/2025/11/2025-08-07/data.akn"/>
-               <FRBRdate date="2025-09-29-04:00" name="transform"/>
+               <FRBRdate date="2026-03-03-05:00" name="transform"/>
                <FRBRauthor href="http://www.legislation.gov.uk"/>
                <FRBRformat value="application/akn+xml"/>
             </FRBRManifestation>
@@ -5654,7 +5654,7 @@
                <part eId="schedule-1-part-1">
                   <num>Part 1</num>
                   <heading>Status</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4030">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4023">
                      <heading>Exclusion of Crown status</heading>
                      <paragraph eId="schedule-1-paragraph-1" class="schProv1">
                         <num>1</num>
@@ -5688,7 +5688,7 @@
                <part eId="schedule-1-part-2">
                   <num>Part 2</num>
                   <heading>Membership</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4056">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4049">
                      <heading>Number and appointment of members</heading>
                      <paragraph eId="schedule-1-paragraph-2" class="schProv1">
                         <num>2</num>
@@ -5745,7 +5745,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4113">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4106">
                      <heading>Appointment as a member: criteria</heading>
                      <paragraph eId="schedule-1-paragraph-3" class="schProv1">
                         <num>3</num>
@@ -6032,7 +6032,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4382">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4375">
                      <heading>Period and conditions of membership</heading>
                      <paragraph eId="schedule-1-paragraph-4" class="schProv1">
                         <num>4</num>
@@ -6098,7 +6098,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4429">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4422">
                      <heading>Early termination of membership</heading>
                      <paragraph eId="schedule-1-paragraph-5" class="schProv1">
                         <num>5</num>
@@ -6184,7 +6184,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4500">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4493">
                      <heading>Members’ remuneration and allowances</heading>
                      <paragraph eId="schedule-1-paragraph-6" class="schProv1">
                         <num>6</num>
@@ -6193,7 +6193,7 @@
                         </content>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4508">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4501">
                      <heading>Co-opted members</heading>
                      <paragraph eId="schedule-1-paragraph-7" class="schProv1">
                         <num>7</num>
@@ -6355,7 +6355,7 @@
                <part eId="schedule-1-part-3">
                   <num>Part 3</num>
                   <heading>Staff</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4644">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4637">
                      <heading>Chief executive, chief examiner, chief accreditation officer and other staff</heading>
                      <paragraph eId="schedule-1-paragraph-8" class="schProv1">
                         <num>8</num>
@@ -6439,7 +6439,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4707">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e4700">
                      <heading>Staff pensions</heading>
                      <paragraph eId="schedule-1-paragraph-9" class="schProv1">
                         <num>9</num>
@@ -6482,7 +6482,7 @@
                   <chapter eId="schedule-1-part-4-chapter-1">
                      <num>Chapter 1</num>
                      <heading>Committees</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4744">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4737">
                         <heading>Committees</heading>
                         <paragraph eId="schedule-1-paragraph-10" class="schProv1">
                            <num>10</num>
@@ -6536,7 +6536,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4806">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4799">
                         <heading>The Learner Interest Committee</heading>
                         <paragraph eId="schedule-1-paragraph-11" class="schProv1">
                            <num>11</num>
@@ -6705,7 +6705,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4958">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e4951">
                         <heading>The Teacher and Practitioner Interest Committee</heading>
                         <paragraph eId="schedule-1-paragraph-12" class="schProv1">
                            <num>12</num>
@@ -6842,7 +6842,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5079">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5072">
                         <heading>The Accreditation Committee</heading>
                         <paragraph eId="schedule-1-paragraph-13" class="schProv1">
                            <num>13</num>
@@ -6969,7 +6969,7 @@
                   <chapter eId="schedule-1-part-4-chapter-2">
                      <num>Chapter 2</num>
                      <heading>Administration of Qualifications Scotland and its committees</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5179">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5172">
                         <heading>Regulation of procedure</heading>
                         <paragraph eId="schedule-1-paragraph-14" class="schProv1">
                            <num>14</num>
@@ -7048,7 +7048,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5248">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5241">
                         <heading>Authority to perform functions</heading>
                         <paragraph eId="schedule-1-paragraph-15" class="schProv1">
                            <num>15</num>
@@ -7180,7 +7180,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5361">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5354">
                         <heading>Member consultation requirement</heading>
                         <paragraph eId="schedule-1-paragraph-16" class="schProv1">
                            <num>16</num>
@@ -7222,7 +7222,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5399">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5392">
                         <heading>Validity of things done</heading>
                         <paragraph eId="schedule-1-paragraph-17" class="schProv1">
                            <num>17</num>
@@ -7263,7 +7263,7 @@
                <part eId="schedule-2-part-1">
                   <num>Part 1</num>
                   <heading>Status</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5436">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5429">
                      <heading>Status</heading>
                      <paragraph eId="schedule-2-paragraph-1" class="schProv1">
                         <num>1</num>
@@ -7272,7 +7272,7 @@
                         </content>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5444">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5437">
                      <heading>Independence</heading>
                      <paragraph eId="schedule-2-paragraph-2" class="schProv1">
                         <num>2</num>
@@ -7295,7 +7295,7 @@
                <part eId="schedule-2-part-2">
                   <num>Part 2</num>
                   <heading>Appointment and terms</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5465">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5458">
                      <heading>Appointment</heading>
                      <paragraph eId="schedule-2-paragraph-3" class="schProv1">
                         <num>3</num>
@@ -7325,7 +7325,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5488">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5481">
                      <heading>Period and conditions of office</heading>
                      <paragraph eId="schedule-2-paragraph-4" class="schProv1">
                         <num>4</num>
@@ -7347,7 +7347,7 @@
                <part eId="schedule-2-part-3">
                   <num>Part 3</num>
                   <heading>Staff</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5506">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5499">
                      <heading>Staff</heading>
                      <paragraph eId="schedule-2-paragraph-5" class="schProv1">
                         <num>5</num>
@@ -7369,7 +7369,7 @@
                <part eId="schedule-2-part-4">
                   <num>Part 4</num>
                   <heading>Procedure</heading>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5524">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5517">
                      <heading>Authority to perform functions</heading>
                      <paragraph eId="schedule-2-paragraph-6" class="schProv1">
                         <num>6</num>
@@ -7450,7 +7450,7 @@
                         </subparagraph>
                      </paragraph>
                   </hcontainer>
-                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5591">
+                  <hcontainer name="crossheading" class="schGroup7" eId="d1e5584">
                      <heading>Validity of things done</heading>
                      <paragraph eId="schedule-2-paragraph-8" class="schProv1">
                         <num>8</num>
@@ -7467,7 +7467,7 @@
                   </authorialNote>
                </num>
                <heading>Transfer of staff, property etc. to Qualifications Scotland</heading>
-               <hcontainer name="crossheading" class="schGroup7" eId="d1e5605">
+               <hcontainer name="crossheading" class="schGroup7" eId="d1e5598">
                   <heading>Transfer date</heading>
                   <paragraph eId="schedule-3-paragraph-1" class="schProv1">
                      <num>1</num>
@@ -7476,7 +7476,7 @@
                      </content>
                   </paragraph>
                </hcontainer>
-               <hcontainer name="crossheading" class="schGroup7" eId="d1e5617">
+               <hcontainer name="crossheading" class="schGroup7" eId="d1e5610">
                   <heading>Transfer of staff</heading>
                   <paragraph eId="schedule-3-paragraph-2" class="schProv1">
                      <num>2</num>
@@ -7560,7 +7560,7 @@
                      </subparagraph>
                   </paragraph>
                </hcontainer>
-               <hcontainer name="crossheading" class="schGroup7" eId="d1e5694">
+               <hcontainer name="crossheading" class="schGroup7" eId="d1e5687">
                   <heading>Transfer of property</heading>
                   <paragraph eId="schedule-3-paragraph-3" class="schProv1">
                      <num>3</num>
@@ -7598,7 +7598,7 @@
                      </subparagraph>
                   </paragraph>
                </hcontainer>
-               <hcontainer name="crossheading" class="schGroup7" eId="d1e5731">
+               <hcontainer name="crossheading" class="schGroup7" eId="d1e5724">
                   <heading>Duty to secure vesting of foreign property</heading>
                   <paragraph eId="schedule-3-paragraph-4" class="schProv1">
                      <num>4</num>
@@ -7607,7 +7607,7 @@
                      </content>
                   </paragraph>
                </hcontainer>
-               <hcontainer name="crossheading" class="schGroup7" eId="d1e5739">
+               <hcontainer name="crossheading" class="schGroup7" eId="d1e5732">
                   <heading>Appointment of initial board members</heading>
                   <paragraph eId="schedule-3-paragraph-5" class="schProv1">
                      <num>5</num>
@@ -7695,7 +7695,7 @@
                   <chapter eId="schedule-4-part-1-chapter-1">
                      <num>Chapter 1</num>
                      <heading>Application of legislation relating to public bodies to Qualifications Scotland</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5832">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5825">
                         <heading>Ethical Standards in Public Life etc. (Scotland) Act 2000</heading>
                         <paragraph eId="schedule-4-paragraph-1" class="schProv1">
                            <num>1</num>
@@ -7727,7 +7727,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5858">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5851">
                         <heading>Scottish Public Services Ombudsman Act 2002</heading>
                         <paragraph eId="schedule-4-paragraph-2" class="schProv1">
                            <num>2</num>
@@ -7768,7 +7768,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5887">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5880">
                         <heading>Freedom of Information (Scotland) Act 2002</heading>
                         <paragraph eId="schedule-4-paragraph-3" class="schProv1">
                            <num>3</num>
@@ -7809,7 +7809,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5916">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5909">
                         <heading>Public Appointments and Public Bodies etc. (Scotland) Act 2003</heading>
                         <paragraph eId="schedule-4-paragraph-4" class="schProv1">
                            <num>4</num>
@@ -7841,7 +7841,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5942">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5935">
                         <heading>Public Services Reform (Scotland) Act 2010</heading>
                         <paragraph eId="schedule-4-paragraph-5" class="schProv1">
                            <num>5</num>
@@ -7893,7 +7893,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5983">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e5976">
                         <heading>Public Records (Scotland) Act 2011</heading>
                         <paragraph eId="schedule-4-paragraph-6" class="schProv1">
                            <num>6</num>
@@ -7925,7 +7925,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6009">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6002">
                         <heading>Procurement Reform (Scotland) Act 2014</heading>
                         <paragraph eId="schedule-4-paragraph-7" class="schProv1">
                            <num>7</num>
@@ -7966,7 +7966,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6038">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6031">
                         <heading>Gender Representation on Public Boards (Scotland) Act 2018</heading>
                         <paragraph eId="schedule-4-paragraph-8" class="schProv1">
                            <num>8</num>
@@ -7998,7 +7998,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6064">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6057">
                         <heading>Islands (Scotland) Act 2018</heading>
                         <paragraph eId="schedule-4-paragraph-9" class="schProv1">
                            <num>9</num>
@@ -8043,7 +8043,7 @@
                   <chapter eId="schedule-4-part-1-chapter-2">
                      <num>Chapter 2</num>
                      <heading>Other modifications relating to Qualifications Scotland</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6096">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6089">
                         <heading>Further and Higher Education (Scotland) Act 1992</heading>
                         <paragraph eId="schedule-4-paragraph-10" class="schProv1">
                            <num>10</num>
@@ -8071,7 +8071,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6121">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6114">
                         <heading>Education (Scotland) Act 1996</heading>
                         <paragraph eId="schedule-4-paragraph-11" class="schProv1">
                            <num>11</num>
@@ -8107,7 +8107,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6148">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6141">
                         <heading>Scottish Qualifications Authority Act 2002</heading>
                         <paragraph eId="schedule-4-paragraph-12" class="schProv1">
                            <num>12</num>
@@ -8116,7 +8116,7 @@
                            </content>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6156">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6149">
                         <heading>Further and Higher Education (Scotland) Act 2005</heading>
                         <paragraph eId="schedule-4-paragraph-13" class="schProv1">
                            <num>13</num>
@@ -8202,7 +8202,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6228">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6221">
                         <heading>Children and Young People (Scotland) Act 2014</heading>
                         <paragraph eId="schedule-4-paragraph-14" class="schProv1">
                            <num>14</num>
@@ -8222,7 +8222,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6246">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6239">
                         <heading>Coronavirus (Recovery and Reform) (Scotland) Act 2022</heading>
                         <paragraph eId="schedule-4-paragraph-15" class="schProv1">
                            <num>15</num>
@@ -8268,7 +8268,7 @@
                   <chapter eId="schedule-4-part-2-chapter-1">
                      <num>Chapter 1</num>
                      <heading>Application of legislation relating to office-holders to the Chief Inspector</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6297">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6290">
                         <heading>Freedom of Information (Scotland) Act 2002</heading>
                         <paragraph eId="schedule-4-paragraph-16" class="schProv1">
                            <num>16</num>
@@ -8288,7 +8288,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6315">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6308">
                         <heading>Protection of Vulnerable Groups (Scotland) Act 2007</heading>
                         <paragraph eId="schedule-4-paragraph-17" class="schProv1">
                            <num>17</num>
@@ -8332,7 +8332,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6349">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6342">
                         <heading>Public Services Reform (Scotland) Act 2010</heading>
                         <paragraph eId="schedule-4-paragraph-18" class="schProv1">
                            <num>18</num>
@@ -8368,7 +8368,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6381">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6374">
                         <heading>Public Records (Scotland) Act 2011</heading>
                         <paragraph eId="schedule-4-paragraph-19" class="schProv1">
                            <num>19</num>
@@ -8388,7 +8388,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6399">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6392">
                         <heading>Procurement Reform (Scotland) Act 2014</heading>
                         <paragraph eId="schedule-4-paragraph-20" class="schProv1">
                            <num>20</num>
@@ -8412,7 +8412,7 @@
                   <chapter eId="schedule-4-part-2-chapter-2">
                      <num>Chapter 2</num>
                      <heading>Other modifications relating to the Chief Inspector</heading>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6420">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6413">
                         <heading>Education (Scotland) Act 1980</heading>
                         <paragraph eId="schedule-4-paragraph-21" class="schProv1">
                            <num>21</num>
@@ -8466,7 +8466,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6459">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6452">
                         <heading>Standards in Scotland’s Schools etc. Act 2000</heading>
                         <paragraph eId="schedule-4-paragraph-22" class="schProv1">
                            <num>22</num>
@@ -8484,7 +8484,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6474">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6467">
                         <heading>Scottish Schools (Parental Involvement) Act 2006</heading>
                         <paragraph eId="schedule-4-paragraph-23" class="schProv1">
                            <num>23</num>
@@ -8540,7 +8540,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6521">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6514">
                         <heading>Schools (Consultation) (Scotland) Act 2010</heading>
                         <paragraph eId="schedule-4-paragraph-24" class="schProv1">
                            <num>24</num>
@@ -8820,7 +8820,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6760">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6753">
                         <heading>Public Services Reform (Scotland) Act 2010</heading>
                         <paragraph eId="schedule-4-paragraph-25" class="schProv1">
                            <num>25</num>
@@ -8840,7 +8840,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6778">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6771">
                         <heading>Education (Scotland) Act 2016</heading>
                         <paragraph eId="schedule-4-paragraph-26" class="schProv1">
                            <num>26</num>
@@ -8860,7 +8860,7 @@
                            </subparagraph>
                         </paragraph>
                      </hcontainer>
-                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6796">
+                     <hcontainer name="crossheading" class="schGroup7" eId="d1e6789">
                         <heading>Schools General (Scotland) Regulations 1975</heading>
                         <paragraph eId="schedule-4-paragraph-27" class="schProv1">
                            <num>27</num>
