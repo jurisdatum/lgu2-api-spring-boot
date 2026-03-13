@@ -85,21 +85,33 @@ class SectionRangeContainment {
 
     /* token comparison */
 
-    private static final Pattern NUMBER_ALPHA = Pattern.compile("^(\\d+)([a-zA-Z]*)$");
+    // optional alpha prefix + digits + optional alphanumeric suffix
+    // e.g. "1", "1A", "10ZA", "360Z10", "ZA1", "A1", "B1"
+    private static final Pattern PROVISION_NUMBER = Pattern.compile("^([a-zA-Z]*)(\\d+)([a-zA-Z0-9]*)$");
     private static final Pattern ROMAN_CHARS = Pattern.compile("^[ivxlcdm]+$", Pattern.CASE_INSENSITIVE);
+    private static final Pattern ALPHA_ONLY = Pattern.compile("^[a-zA-Z]+$");
 
     private static int compareTokens(String a, String b) {
         if (a.equalsIgnoreCase(b))
             return 0;
 
-        // numeric, with optional alpha suffix (e.g. "1", "10", "1A", "10ZA")
-        Matcher ma = NUMBER_ALPHA.matcher(a);
-        Matcher mb = NUMBER_ALPHA.matcher(b);
+        // provision numbers: prefix < bare < suffix (ZA1 < A1 < 1 < 1ZA < 1A)
+        Matcher ma = PROVISION_NUMBER.matcher(a);
+        Matcher mb = PROVISION_NUMBER.matcher(b);
         if (ma.matches() && mb.matches()) {
-            int cmp = Integer.compare(Integer.parseInt(ma.group(1)), Integer.parseInt(mb.group(1)));
+            int cmp = Integer.compare(Integer.parseInt(ma.group(2)), Integer.parseInt(mb.group(2)));
             if (cmp != 0)
                 return cmp;
-            return ma.group(2).compareToIgnoreCase(mb.group(2));
+            // category: has-prefix (0) < bare (1) < has-suffix (2)
+            int catA = !ma.group(1).isEmpty() ? 0 : ma.group(3).isEmpty() ? 1 : 2;
+            int catB = !mb.group(1).isEmpty() ? 0 : mb.group(3).isEmpty() ? 1 : 2;
+            if (catA != catB)
+                return Integer.compare(catA, catB);
+            if (catA == 0)
+                return compareSuffix(ma.group(1), mb.group(1));
+            if (catA == 2)
+                return compareSuffix(ma.group(3), mb.group(3));
+            return 0;
         }
 
         // roman numerals: both tokens consist of roman characters, and at least one
@@ -112,8 +124,69 @@ class SectionRangeContainment {
                 return Integer.compare(ra, rb);
         }
 
-        // alphabetic or fallback: case-insensitive lexicographic
+        // alphabetic (paragraph labels, etc.) using insertion ordering
+        if (ALPHA_ONLY.matcher(a).matches() && ALPHA_ONLY.matcher(b).matches())
+            return compareSuffix(a, b);
+
+        // fallback: case-insensitive lexicographic
         return a.compareToIgnoreCase(b);
+    }
+
+    /* suffix comparison for inserted provisions */
+
+    /**
+     * Compares two provision suffixes according to UK legislation insertion conventions.
+     * <p>The ordering follows the guidance in section 6.4 of Statutory Instrument Practice:
+     * <ul>
+     *   <li>Z followed by a letter is a prefix meaning "before" (ZA, ZB... sort before A)</li>
+     *   <li>Letters A through Y are ordered normally</li>
+     *   <li>Z at the end (or followed by a digit) is the letter Z (sorts after Y)</li>
+     *   <li>The convention is recursive: ZZA sorts before ZA, which sorts before A</li>
+     * </ul>
+     * <p>Example ordering: ZZA &lt; ZA &lt; ZB &lt; A &lt; AZA &lt; AA &lt; AB &lt; AZ &lt; B &lt; ... &lt; Z
+     */
+    static int compareSuffix(String s1, String s2) {
+        if (s1.equalsIgnoreCase(s2))
+            return 0;
+        if (s1.isEmpty())
+            return -1;
+        if (s2.isEmpty())
+            return 1;
+
+        // Numeric sub-suffixes (e.g. "10" in "Z10"): compare numerically
+        if (Character.isDigit(s1.charAt(0)) && Character.isDigit(s2.charAt(0))) {
+            int i1 = 0;
+            while (i1 < s1.length() && Character.isDigit(s1.charAt(i1))) i1++;
+            int i2 = 0;
+            while (i2 < s2.length() && Character.isDigit(s2.charAt(i2))) i2++;
+            int cmp = Integer.compare(
+                Integer.parseInt(s1.substring(0, i1)),
+                Integer.parseInt(s2.substring(0, i2)));
+            if (cmp != 0)
+                return cmp;
+            return compareSuffix(s1.substring(i1), s2.substring(i2));
+        }
+
+        int rank1 = suffixRank(s1);
+        int rank2 = suffixRank(s2);
+        if (rank1 != rank2)
+            return Integer.compare(rank1, rank2);
+
+        // Same rank: strip first character and recurse
+        return compareSuffix(s1.substring(1), s2.substring(1));
+    }
+
+    /**
+     * Returns the sort rank of the first character of a suffix string.
+     * Z followed by a letter = 0 (before everything).
+     * A through Y = 1 through 25.
+     * Z at end or followed by a digit = 26 (after Y).
+     */
+    private static int suffixRank(String s) {
+        char first = Character.toUpperCase(s.charAt(0));
+        if (first == 'Z' && s.length() > 1 && Character.isLetter(s.charAt(1)))
+            return 0;
+        return first - 'A' + 1;
     }
 
 }

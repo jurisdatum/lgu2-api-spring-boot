@@ -248,6 +248,172 @@ class SectionRangeContainmentTest {
     }
 
     @Nested
+    @DisplayName("compareSuffix: inserted provision ordering (section 6.4)")
+    class InsertedProvisionOrdering {
+
+        @ParameterizedTest(name = "[{index}] {0} vs {1} => {2}")
+        @MethodSource
+        @DisplayName("compare: full identifier examples from section 6.4 guidance")
+        void testGuidanceCompare(String id1, String id2, int expectedSign) {
+            int result = SectionRangeContainment.compare(id1, id2);
+            assertEquals(expectedSign, Integer.signum(result),
+                String.format("Expected comparison of '%s' vs '%s' to have sign %d but got %d",
+                    id1, id2, expectedSign, Integer.signum(result)));
+        }
+
+        static Stream<Arguments> testGuidanceCompare() {
+            return Stream.of(
+                // beginning of a series: ZA1, A1, B1, ... then 1
+                Arguments.of("schedule-ZA1", "schedule-A1", -1),
+                Arguments.of("schedule-A1", "schedule-B1", -1),
+                Arguments.of("schedule-B1", "schedule-1", -1),
+
+                // inserted between existing provisions
+                Arguments.of("section-1", "section-1ZA", -1),
+                Arguments.of("section-1ZA", "section-1A", -1),
+                Arguments.of("section-1A", "section-1AZA", -1),
+                Arguments.of("section-1AZA", "section-1AA", -1),
+
+                // do not generate a lower level unless needed
+                Arguments.of("section-1AA", "section-1AB", -1),
+                Arguments.of("section-1AB", "section-1B", -1),
+                Arguments.of("section-1AA", "section-1AAA", -1),
+                Arguments.of("section-1AAA", "section-1AB", -1),
+
+                // lettered paragraphs
+                Arguments.of("section-1-zza", "section-1-za", -1),
+                Arguments.of("section-1-za", "section-1-a", -1),
+                Arguments.of("section-1-a", "section-1-aza", -1),
+                Arguments.of("section-1-aza", "section-1-aa", -1),
+                Arguments.of("section-1-aa", "section-1-ab", -1),
+                Arguments.of("section-1-ab", "section-1-b", -1),
+
+                // roman numeral equivalents
+                Arguments.of("section-1-a-i", "section-1-a-ia", -1),
+                Arguments.of("section-1-a-ia", "section-1-a-ib", -1),
+                Arguments.of("section-1-a-ib", "section-1-a-ii", -1),
+
+                // after Z use Z1, Z2, Z3, ...
+                Arguments.of("section-360Z", "section-360Z1", -1),
+                Arguments.of("section-360Z1", "section-360Z2", -1),
+                Arguments.of("section-360Z2", "section-360Z10", -1)
+            );
+        }
+
+        @ParameterizedTest(name = "[{index}] {0} vs {1} => {2}")
+        @MethodSource
+        void testCompareSuffix(String s1, String s2, int expectedSign) {
+            int result = SectionRangeContainment.compareSuffix(s1, s2);
+            assertEquals(expectedSign, Integer.signum(result),
+                String.format("Expected compareSuffix('%s', '%s') to have sign %d but got %d",
+                    s1, s2, expectedSign, Integer.signum(result)));
+        }
+
+        static Stream<Arguments> testCompareSuffix() {
+            return Stream.of(
+                // basic: empty < A < B < ... < Z
+                Arguments.of("", "A", -1),
+                Arguments.of("A", "B", -1),
+                Arguments.of("Y", "Z", -1),
+
+                // Z-prefix: ZA sorts before A (inserted before first sub-item)
+                Arguments.of("ZA", "A", -1),
+                Arguments.of("ZB", "A", -1),
+                Arguments.of("ZZ", "A", -1),
+
+                // recursive Z-prefix: ZZA before ZA before A
+                Arguments.of("ZZA", "ZA", -1),
+                Arguments.of("ZZA", "A", -1),
+
+                // sub-insertions: between A and B come AA, AB, ...
+                Arguments.of("A", "AA", -1),
+                Arguments.of("AA", "AB", -1),
+                Arguments.of("AZ", "B", -1),
+
+                // Z-prefix at deeper level: AZA before AA (inserted between A and AA)
+                Arguments.of("AZA", "AA", -1),
+                Arguments.of("AZB", "AA", -1),
+
+                // Z at end is the letter Z (sorts last among A-Z)
+                Arguments.of("Y", "Z", -1),
+                Arguments.of("Z", "ZA", 1),  // Z (letter) > ZA (prefix)
+
+                // case insensitive
+                Arguments.of("za", "A", -1),
+                Arguments.of("a", "B", -1),
+
+                // numeric sub-suffixes (e.g. Z1, Z10)
+                Arguments.of("Z9", "Z10", -1),
+                Arguments.of("Z2", "Z10", -1),
+                Arguments.of("A5", "A10", -1)
+            );
+        }
+
+        @Test
+        @DisplayName("contains with beginning-of-series whole provisions: ZA1 to 1")
+        void containsWithBeginningOfSeriesWholeProvisions() {
+            assertTrue(contains("schedule-ZA1", "schedule-1", "schedule-ZA1"));
+            assertTrue(contains("schedule-ZA1", "schedule-1", "schedule-A1"));
+            assertTrue(contains("schedule-ZA1", "schedule-1", "schedule-B1"));
+            assertTrue(contains("schedule-ZA1", "schedule-1", "schedule-1"));
+            assertFalse(contains("schedule-ZA1", "schedule-1", "schedule-2"));
+        }
+
+        @Test
+        @DisplayName("contains with inserted provisions: section-1ZA to section-1B")
+        void containsWithInsertedProvisions() {
+            // 1ZA is inserted before 1A; 1A and 1B are the first two insertions after 1
+            assertTrue(contains("section-1ZA", "section-1B", "section-1A"));
+            assertTrue(contains("section-1ZA", "section-1B", "section-1AA"));
+            assertFalse(contains("section-1ZA", "section-1B", "section-1C"));
+        }
+
+        @Test
+        @DisplayName("contains with inserted paragraphs before paragraph (a)")
+        void containsWithParagraphsBeforeA() {
+            assertTrue(contains("section-1-zza", "section-1-a", "section-1-za"));
+            assertFalse(contains("section-1-zza", "section-1-a", "section-1-aa"));
+        }
+
+        @Test
+        @DisplayName("contains with inserted paragraphs: (aza) to (b)")
+        void containsWithInsertedParagraphs() {
+            // aza is between a and aa; aa is between a and b
+            // order: a < aza < aa < ab < ... < az < b
+            assertTrue(contains("section-1-aza", "section-1-b", "section-1-aa"));
+            assertTrue(contains("section-1-aza", "section-1-b", "section-1-ab"));
+            assertFalse(contains("section-1-aza", "section-1-b", "section-1-a"));  // a is before aza
+            assertFalse(contains("section-1-aza", "section-1-b", "section-1-c"));
+        }
+
+        @Test
+        @DisplayName("contains with inserted roman sub-paragraphs: (i) to (ii)")
+        void containsWithInsertedRomanSubParagraphs() {
+            assertTrue(contains("section-1-a-i", "section-1-a-ii", "section-1-a-ia"));
+            assertTrue(contains("section-1-a-i", "section-1-a-ii", "section-1-a-ib"));
+            assertFalse(contains("section-1-a-i", "section-1-a-ii", "section-1-a-iii"));
+        }
+
+        @Test
+        @DisplayName("numeric sub-suffixes: section-360Z1 to section-360Z10")
+        void numericSubSuffixes() {
+            assertTrue(contains("section-360Z1", "section-360Z10", "section-360Z2"));
+            assertTrue(contains("section-360Z1", "section-360Z10", "section-360Z9"));
+            assertFalse(contains("section-360Z1", "section-360Z10", "section-360Z11"));
+        }
+
+        @Test
+        @DisplayName("1Z sorts after 1AA (Z is 26th letter, not a prefix)")
+        void zAsLetterSortsAfterAA() {
+            // 1Z is the last inserted section before 2
+            // 1AA is a sub-insertion after 1A
+            // So 1AA < 1AZ < 1B < ... < 1Z
+            assertFalse(contains("section-1AA", "section-1AZ", "section-1Z"));
+            assertTrue(contains("section-1AA", "section-1Z", "section-1B"));
+        }
+    }
+
+    @Nested
     @DisplayName("parseRoman: roman numeral validation")
     class ParseRomanTests {
 
