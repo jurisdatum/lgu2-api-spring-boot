@@ -41,8 +41,17 @@ public class Contents {
 
         @JacksonXmlElementWrapper(localName = "attachments")
         @JacksonXmlProperty(localName = "attachment")
-        public List<Item> attachments;
+        public Attachments attachments;
 
+    }
+
+    public static class Attachments {
+
+        public String title;
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(localName = "attachment")
+        public List<Item> attachment;
     }
 
     public static class Item {
@@ -67,5 +76,6 @@ public class Contents {
         public List<Item> children;
 
     }
+
 
 }
