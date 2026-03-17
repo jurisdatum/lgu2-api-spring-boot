@@ -35,10 +35,7 @@ public class TableOfContentsConverter {
         toc.contents.appendices = convertItems(simple.contents.appendices);
         toc.contents.attachmentsBeforeSchedules = convertItems(simple.contents.attachmentsBeforeSchedules);
         toc.contents.schedules = convertItems(simple.contents.schedules);
-        toc.contents.attachments =
-            (simple.contents != null && simple.contents.attachments != null)
-                ? convertItems(simple.contents.attachments.attachment)
-                : null;
+        toc.contents.attachments = convertItems(simple.contents.attachments);
         if (simple.meta.hasParts.note != null) {
             toc.contents.explanatoryNote = new TableOfContents.ExplanatoryNote();
             toc.contents.explanatoryNote.extent = toc.meta.extent;
