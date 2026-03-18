@@ -48,16 +48,35 @@ public class Parameters extends AbstractParameters {
 
     public enum Sort {
 
-        RELEVANCE,
-        PUBLISHED,
-        TITLE,
+        RELEVANCE("relevance"),
+        PUBLISHED("published"),
+        TITLE("title"),
 //        YEAR,
-        TYPE;
+        TYPE("type");
 
+        private final String value;
+
+        Sort(String value) {
+            this.value = value;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static Sort fromValue(String value) {
+            if (value == null)
+                throw new IllegalArgumentException("Unknown sort: null");
+            String normalized = value.trim();
+            for (Sort sort : values())
+                if (sort.value.equalsIgnoreCase(normalized))
+                    return sort;
+            throw new IllegalArgumentException("Unknown sort: " + normalized);
+        }
 
         @Override
         public String toString() {
-            return name().toLowerCase();
+            return value;
         }
     }
 
