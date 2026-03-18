@@ -315,18 +315,33 @@
         </nextTitle>
     </xsl:if>
     <ancestors>
-        <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
-            <xsl:call-template name="ancestor-or-descendant">
-                <xsl:with-param name="name" select="'ancestor'" />
-            </xsl:call-template>
-        </xsl:for-each>
+        <xsl:choose>
+            <xsl:when test="exists($target)">
+                <xsl:for-each select="$target/ancestor-or-self::*[not(self::Schedules)][exists(@id)]">
+                    <xsl:call-template name="ancestor-or-descendant">
+                        <xsl:with-param name="name" select="'ancestor'" />
+                    </xsl:call-template>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <ancestor/>
+            </xsl:otherwise>
+        </xsl:choose>
     </ancestors>
+
     <descendants>
-        <xsl:for-each select="$target/descendant-or-self::*[exists(@DocumentURI)]">
-            <xsl:call-template name="ancestor-or-descendant">
-                <xsl:with-param name="name" select="'descendant'" />
-            </xsl:call-template>
-        </xsl:for-each>
+        <xsl:choose>
+            <xsl:when test="exists($target)">
+                <xsl:for-each select="$target/descendant-or-self::*[exists(@DocumentURI)]">
+                    <xsl:call-template name="ancestor-or-descendant">
+                        <xsl:with-param name="name" select="'descendant'" />
+                    </xsl:call-template>
+                </xsl:for-each>
+            </xsl:when>
+            <xsl:otherwise>
+                <descendant/>
+            </xsl:otherwise>
+        </xsl:choose>
     </descendants>
 </xsl:template>
 
