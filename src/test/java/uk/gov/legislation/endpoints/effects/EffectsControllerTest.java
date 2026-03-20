@@ -13,7 +13,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import uk.gov.legislation.api.parameters.SortConverter;
+import uk.gov.legislation.api.parameters.EffectsSortConverter;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.data.marklogic.changes.Changes;
@@ -29,7 +29,7 @@ import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-@Import(SortConverter.EffectsSortConverter.class)
+@Import(EffectsSortConverter.class)
 @WebMvcTest(controllers = EffectsController.class)
 class EffectsControllerTest {
 

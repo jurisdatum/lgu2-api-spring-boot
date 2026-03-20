@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class SortConverterTest {
 
     private final SortConverter converter = new SortConverter();
-    private final SortConverter.EffectsSortConverter effectSortConverter= new SortConverter.EffectsSortConverter();
+    private final EffectsSortConverter effectSortConverter= new EffectsSortConverter();
 
     @Test
     void convertsWireValuesUsingEnumParser() {
