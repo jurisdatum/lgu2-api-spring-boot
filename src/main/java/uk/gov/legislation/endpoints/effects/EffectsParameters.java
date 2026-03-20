@@ -2,7 +2,6 @@ package uk.gov.legislation.endpoints.effects;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.parameters.EffectSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 
 public class EffectsParameters {
