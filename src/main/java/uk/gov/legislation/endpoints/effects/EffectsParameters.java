@@ -2,6 +2,7 @@ package uk.gov.legislation.endpoints.effects;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
+import uk.gov.legislation.api.parameters.EffectSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 
 public class EffectsParameters {
@@ -32,7 +33,10 @@ public class EffectsParameters {
         this.applied = applied;
     }
 
-    public String getSort() {
+    public Parameters.EffectsSort getSort() {
+        return sort;
+    }
+    public String getSortValue() {
         return sort != null ? sort.value() : null;
     }
 

@@ -119,11 +119,12 @@ public class Parameters extends AbstractParameters {
     }
 
     public enum EffectsSort {
-        SourceYearNumber ("affecting-year-number"),
-        SourceTitle ("affecting-title"),
-        TargetYearNumber ("affected-year-number"),
-        TargetTitle ("affected-title"),
-        Applied ("applied");
+
+        SourceYearNumber("affecting-year-number"),
+        SourceTitle("affecting-title"),
+        TargetYearNumber("affected-year-number"),
+        TargetTitle("affected-title"),
+        Applied("applied");
 
         private final String value;
 
@@ -133,6 +134,21 @@ public class Parameters extends AbstractParameters {
 
         public String value() {
             return value;
+        }
+
+        @Override
+        public String toString() {
+            return value;
+        }
+
+        public static Parameters.EffectsSort fromValue(String value) {
+            if (value == null)
+                throw new IllegalArgumentException("Unknown EffectsSort: null");
+            String normalized = value.trim();
+            for (Parameters.EffectsSort sort : values())
+                if (sort.value.equalsIgnoreCase(normalized))
+                    return sort;
+            throw new IllegalArgumentException("Unknown EffectsSort: " + normalized);
         }
     }
 

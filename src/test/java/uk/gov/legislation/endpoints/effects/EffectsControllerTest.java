@@ -8,10 +8,12 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.MockedStatic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import uk.gov.legislation.api.parameters.SortConverter;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.data.marklogic.changes.Changes;
@@ -19,13 +21,15 @@ import uk.gov.legislation.data.marklogic.changes.Parameters;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
 
+import java.io.IOException;
+
 import static org.hamcrest.Matchers.containsString;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
+@Import(SortConverter.EffectsSortConverter.class)
 @WebMvcTest(controllers = EffectsController.class)
 class EffectsControllerTest {
 
@@ -118,7 +122,7 @@ class EffectsControllerTest {
         verifyNoInteractions(simplifier);
     }
 
-    private void stubFetchForValidEffectsRequest() {
+    private void stubFetchForValidEffectsRequest() throws IOException, InterruptedException {
         when(db.fetch(argThat(params ->
             VALID_TARGET_TYPE.equals(params.affectedType) &&
                 Integer.valueOf(VALID_TARGET_YEAR).equals(params.affectedYear)
