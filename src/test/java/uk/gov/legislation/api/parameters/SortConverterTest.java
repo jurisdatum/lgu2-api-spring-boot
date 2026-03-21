@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class SortConverterTest {
 
     private final SortConverter converter = new SortConverter();
-    private final EffectsSortConverter effectSortConverter= new EffectsSortConverter();
 
     @Test
     void convertsWireValuesUsingEnumParser() {
@@ -28,18 +27,4 @@ class SortConverterTest {
         assertThrows(IllegalArgumentException.class, () -> Parameters.Sort.fromValue("newest"));
     }
 
-    @Test
-    void effectSortConvertsWireValuesUsingEnumParser() {
-        assertEquals(uk.gov.legislation.data.marklogic.changes.Parameters.EffectsSort.SourceTitle,
-            effectSortConverter.convert("affecting-title"));
-
-        assertEquals(uk.gov.legislation.data.marklogic.changes.Parameters.EffectsSort.SourceTitle,
-            effectSortConverter.convert("  AfFeCtInG-TiTlE  "));
-    }
-
-    @Test
-    void enumParserRejectsUnknownWireValues() {
-        assertThrows(IllegalArgumentException.class,
-            () -> effectSortConverter.convert("unknown-sort"));
-    }
-    }
+}

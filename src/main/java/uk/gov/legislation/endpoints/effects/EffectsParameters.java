@@ -35,9 +35,6 @@ public class EffectsParameters {
     public Parameters.EffectsSort getSort() {
         return sort;
     }
-    public String getSortValue() {
-        return sort != null ? sort.value() : null;
-    }
 
     public void setSort(Parameters.EffectsSort sort) {
         this.sort = sort;
@@ -168,4 +165,5 @@ public class EffectsParameters {
     public void setTargetYear(Integer targetYear) {
         this.targetYear = targetYear;
     }
+
 }

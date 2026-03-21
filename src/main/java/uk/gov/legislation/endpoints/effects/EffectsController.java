@@ -45,7 +45,7 @@ public class EffectsController implements EffectsApi {
             .affectingEndYear(param.getSourceEndYear())
             .affectingTitle(param.getSourceTitle())
             .applied(param.getApplied())
-            .sort(param.getSortValue())
+            .sort(param.getSort() != null ? param.getSort().value() : null)
             .orderBy(param.getOrderBy())
             .page(param.getPage())
             .build();
