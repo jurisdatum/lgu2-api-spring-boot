@@ -67,11 +67,7 @@
     </xsl:element>
 </xsl:template>
 
-<xsl:template match="ContentsAttachments">
-    <xsl:element name="{ if (exists(following-sibling::ContentsSchedules)) then 'attachments1' else 'attachments' }">
-        <xsl:apply-templates />
-    </xsl:element>
-</xsl:template>
+    <xsl:template match="ContentsAttachments/ContentsTitle" />
 
 <xsl:template match="ContentsAttachment">
     <xsl:element name="{ if (exists(../following-sibling::ContentsSchedules)) then 'attachment1' else 'attachment' }">
