@@ -7,9 +7,9 @@ import uk.gov.legislation.data.marklogic.changes.Parameters;
 @Component
 public class EffectsSortConverter implements Converter<String, Parameters.EffectsSort> {
 
-        @Override
-        public Parameters.EffectsSort convert(String source) {
-            return Parameters.EffectsSort.fromValue(source);
-        }
+    @Override
+    public Parameters.EffectsSort convert(String source) {
+        return Parameters.EffectsSort.fromValue(source);
+    }
 
 }
