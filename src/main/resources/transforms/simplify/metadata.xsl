@@ -71,20 +71,34 @@
 
 <xsl:variable name="dc-identifier" as="xs:string" select="/Legislation/ukm:Metadata/dc:identifier[1]" />
 
-<xsl:key name="document-uri" match="*[not(self::InternalLink)]" use="@DocumentURI"/>
+<xsl:key name="document-uri" match="*[@DocumentURI][not(self::InternalLink)]" use="@DocumentURI" />
+
+<xsl:variable name="language-suffix-pattern" as="xs:string" select="'/(english|welsh)$'" />
+<xsl:variable name="version-suffix-pattern" as="xs:string"
+    select="'/(enacted|made|created|adopted|current|prospective|\d{4}-\d{2}-\d{2})$'" />
 
 <xsl:variable name="target" as="element()?">
-    <xsl:variable name="id" as="xs:string">
-        <xsl:choose>
-            <xsl:when test="ends-with($dc-identifier, '/contents')">
-                <xsl:sequence select="substring-before($dc-identifier, '/contents')" />
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:sequence select="$dc-identifier" />
-            </xsl:otherwise>
-        </xsl:choose>
+    <!-- $lookup-id is the dc:identifer; it should match a @DocumentURI attribute -->
+    <!-- We exclude any `/contents` component so a "contents" URI matches the whole document -->
+    <xsl:variable name="lookup-id" as="xs:string">
+        <xsl:sequence select="replace(replace($dc-identifier, '/contents/', '/'), '/contents$', '')" />
     </xsl:variable>
-    <xsl:sequence select="key('document-uri', $id)" />
+    <!-- $fallback-id removes any version or language components -->
+    <!-- It's purpose it to facilitate the /schedules check -->
+    <xsl:variable name="fallback-id" as="xs:string">
+        <xsl:variable name="fallback-id-no-language" as="xs:string">
+            <xsl:sequence select="replace($lookup-id, $language-suffix-pattern, '')" />
+        </xsl:variable>
+        <xsl:sequence select="replace($fallback-id-no-language, $version-suffix-pattern, '')" />
+    </xsl:variable>
+    <xsl:choose>
+        <xsl:when test="exists(key('document-uri', $lookup-id))">
+            <xsl:sequence select="key('document-uri', $lookup-id)" />
+        </xsl:when>
+        <xsl:when test="matches($fallback-id, '/(annexes|schedules)$')">
+            <xsl:sequence select="/*/*/Schedules" />
+        </xsl:when>
+    </xsl:choose>
 </xsl:variable>
 
 <xsl:variable name="id-components" as="xs:string+">
@@ -322,6 +336,11 @@
         </xsl:for-each>
     </ancestors>
     <descendants>
+        <xsl:for-each select="$target/self::Schedules[empty(@DocumentURI)]">
+            <xsl:call-template name="ancestor-or-descendant">
+                <xsl:with-param name="name" select="'descendant'" />
+            </xsl:call-template>
+        </xsl:for-each>
         <xsl:for-each select="$target/descendant-or-self::*[exists(@DocumentURI)]">
             <xsl:call-template name="ancestor-or-descendant">
                 <xsl:with-param name="name" select="'descendant'" />
@@ -335,7 +354,19 @@
     <xsl:element name="{ $name }">
         <xsl:attribute name="name" select="local-name(.)" />
         <xsl:copy-of select="@id" />
+        <xsl:if test="empty(@id) and . is $target">
+            <xsl:variable name="no-language">
+                <xsl:sequence select="replace($dc-identifier, $language-suffix-pattern, '')" />
+            </xsl:variable>
+            <xsl:variable name="no-version">
+                <xsl:sequence select="replace($no-language, $version-suffix-pattern, '')" />
+            </xsl:variable>
+            <xsl:attribute name="id" select="tokenize($no-version, '/')[last()]" />
+        </xsl:if>
         <xsl:copy-of select="@DocumentURI" />
+        <xsl:if test="empty(@DocumentURI) and . is $target">
+            <xsl:attribute name="DocumentURI" select="$dc-identifier" />
+        </xsl:if>
         <xsl:copy-of select="@Status | self::P1/parent::P1group/@Status" />
         <xsl:copy-of select="@RestrictStartDate | @RestrictEndDate" />
         <xsl:variable name="power" select="@ConfersPower | self::P1/parent::P1group/@ConfersPower"/>
