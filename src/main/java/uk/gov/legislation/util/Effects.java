@@ -49,11 +49,7 @@ public class Effects {
         return ids.stream().anyMatch(id -> rangeIncludes(range, id));
     }
     static boolean rangeIncludes(RichTextNode.Range range, String id) {
-        if (range.start.equals(id))
-            return true;
-        if (range.end.equals(id))
-            return true;
-        return false;
+        return SectionRangeContainment.contains(range.start, range.end, id);
     }
 
     static boolean relatesTo(Effect effect, Set<String> ids, boolean includeWhole) {
