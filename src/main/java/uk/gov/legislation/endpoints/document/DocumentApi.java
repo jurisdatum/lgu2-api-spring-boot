@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -135,6 +136,25 @@ public interface DocumentApi {
     ResponseEntity<Associated> getImpactAssessmentJson(
         @PathVariable int year,
         @PathVariable int number) throws Exception;
+
+    /* PDF */
+
+    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_PDF_VALUE)
+    ResponseEntity<StreamingResponseBody> pdf(
+        @PathVariable String type,
+        @PathVariable int year,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
+        Locale locale);
+
+    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = MediaType.APPLICATION_PDF_VALUE)
+    ResponseEntity<StreamingResponseBody> pdf(
+        @PathVariable String type,
+        @PathVariable String monarch,
+        @PathVariable String years,
+        @PathVariable int number,
+        @RequestParam Optional<String> version,
+        Locale locale);
 
     /* Word (.docx) */
 

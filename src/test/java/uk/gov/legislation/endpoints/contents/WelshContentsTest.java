@@ -7,15 +7,16 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
-import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
-import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
+import uk.gov.legislation.transform.Clml2Pdf;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
 import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.transform.simple.Simplify;
+import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 
 import java.util.Optional;
 
@@ -25,7 +26,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest(ContentsController.class)
-@Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class, Clml2Docx.class})
+@Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class})
 class WelshContentsTest {
 
     @Autowired
@@ -35,7 +36,10 @@ class WelshContentsTest {
     private Legislation mock;
 
     @MockitoBean
-    private UnappliedEffectsFetcher effectsFetcher;
+    private Clml2Docx clml2Docx;
+
+    @MockitoBean
+    private Clml2Pdf clml2Pdf;
 
     @Test
     void test() throws Exception {
