@@ -1,0 +1,190 @@
+<Legislation xmlns="http://www.legislation.gov.uk/namespaces/legislation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2" NumberOfProvisions="158" SchemaVersion="2.0" xsi:schemaLocation="http://www.legislation.gov.uk/namespaces/legislation http://www.legislation.gov.uk/schema/legislation.xsd" RestrictExtent="E+W+S+N.I." RestrictStartDate="2026-01-22"><ukm:Metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dct="http://purl.org/dc/terms/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ukm="http://www.legislation.gov.uk/namespaces/metadata">
+					<dc:identifier>http://www.legislation.gov.uk/ukpga/2026/2/section/22</dc:identifier><dc:title>Sentencing Act 2026</dc:title><dc:language>en</dc:language><dc:publisher>Statute Law Database</dc:publisher><dc:modified>2026-02-11</dc:modified><dc:contributor>Expert Participation</dc:contributor><dct:valid>2026-01-22</dct:valid>
+					
+					<atom:link rel="self" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.xml" type="application/xml"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/resources" href="http://www.legislation.gov.uk/ukpga/2026/2/resources" title="More Resources"/>
+					
+					
+					
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/act" href="http://www.legislation.gov.uk/ukpga/2026/2" title="whole act"/><atom:link rel="http://www.legislation.gov.uk/def/navigation/introduction" href="http://www.legislation.gov.uk/ukpga/2026/2/introduction" title="introduction"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/body" href="http://www.legislation.gov.uk/ukpga/2026/2/body" title="body"/>
+					<atom:link rel="http://www.legislation.gov.uk/def/navigation/schedules" href="http://www.legislation.gov.uk/ukpga/2026/2/schedules" title="schedules"/>
+					
+										
+					
+					
+					
+					<atom:link rel="alternate" type="application/rdf+xml" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.rdf" title="RDF/XML"/><atom:link rel="alternate" type="application/akn+xml" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.akn" title="AKN"/><atom:link rel="alternate" type="application/xhtml+xml" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.xht" title="HTML snippet"/><atom:link rel="alternate" type="text/html" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.htm" title="Website (XHTML) Default View"/><atom:link rel="alternate" type="text/csv" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.csv" title="CSV"/><atom:link rel="alternate" type="application/pdf" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.pdf" title="PDF"/>
+					<atom:link rel="alternate" type="application/akn+xhtml" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/data.html" title="HTML5 snippet"/>
+
+					
+					<atom:link rel="http://purl.org/dc/terms/tableOfContents" hreflang="en" href="http://www.legislation.gov.uk/ukpga/2026/2/contents" title="Table of Contents"/>
+					
+					<atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/enacted" title="enacted"/><atom:link rel="http://purl.org/dc/terms/hasVersion" href="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2026-01-22" title="2026-01-22"/>
+					
+					<atom:link rel="up" href="http://www.legislation.gov.uk/ukpga/2026/2" title="Entire legislation"/><atom:link rel="prev" href="http://www.legislation.gov.uk/ukpga/2026/2/section/21" title="Provision; Section 21"/><atom:link rel="prevInForce" href="http://www.legislation.gov.uk/ukpga/2026/2/section/18" title="Provision; Section 18"/><atom:link rel="next" href="http://www.legislation.gov.uk/ukpga/2026/2/section/23" title="Provision; Section 23"/><atom:link rel="nextInForce" href="http://www.legislation.gov.uk/ukpga/2026/2/section/24" title="Provision; Section 24"/>
+					<ukm:PrimaryMetadata><ukm:DocumentClassification><ukm:DocumentCategory Value="primary"/><ukm:DocumentMainType Value="UnitedKingdomPublicGeneralAct"/><ukm:DocumentStatus Value="revised"/></ukm:DocumentClassification><ukm:Year Value="2026"/><ukm:Number Value="2"/><ukm:EnactmentDate Date="2026-01-22"/><ukm:ISBN Value="9780105703075"/></ukm:PrimaryMetadata>
+					
+
+                    
+									 
+					<ukm:Alternatives><ukm:Alternative URI="http://www.legislation.gov.uk/ukpga/2026/2/pdfs/ukpga_20260002_en.pdf" Date="2026-01-26" Size="1470529" Print="true"/></ukm:Alternatives>
+					
+					<ukm:Statistics>
+									<ukm:TotalParagraphs Value="159"/>
+									<ukm:BodyParagraphs Value="99"/>
+									<ukm:ScheduleParagraphs Value="60"/>
+									<ukm:AttachmentParagraphs Value="0"/>
+									<ukm:TotalImages Value="0"/>
+								</ukm:Statistics>
+				</ukm:Metadata><Primary><Body DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/body" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/body" NumberOfProvisions="99" RestrictExtent="E+W+S+N.I." RestrictStartDate="2026-01-22"><Part DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/part/1" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/part/1" NumberOfProvisions="59" id="part-1" RestrictExtent="E+W+S+N.I." RestrictStartDate="2026-01-22"><Number>Part 1</Number><Title>Sentencing</Title><Pblock DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/part/1/crossheading/court-transcripts" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/part/1/crossheading/court-transcripts" NumberOfProvisions="1" id="part-1-crossheading-court-transcripts" RestrictExtent="E+W" RestrictStartDate="2026-01-22"><Title>Court transcripts</Title><P1group ConfersPower="true" RestrictExtent="E+W" RestrictStartDate="2026-01-22"><Title>Provision of transcripts of sentencing remarks to victims</Title><P1 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" id="section-22">
+<Pnumber><CommentaryRef Ref="key-5d3edca9b1e043031900770441c21f28"/>22</Pnumber>
+<P1para>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/1" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/1" id="section-22-1">
+<Pnumber>1</Pnumber>
+<P2para>
+<Text><InternalLink Ref="section-22-2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2">Subsection (2)</InternalLink> applies if a victim (“<Term id="term-v">V</Term>”) requests the Secretary of State to supply V with a transcript of sentencing remarks that are relevant to V.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2" id="section-22-2">
+<Pnumber>2</Pnumber>
+<P2para>
+<Text>The Secretary of State must supply the transcript to V, or arrange for the transcript to be supplied to V—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2/a" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2/a" id="section-22-2-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>free of charge, and</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2/b" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2/b" id="section-22-2-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>before the end of the period specified in regulations made by the Secretary of State.</Text>
+</P3para>
+</P3>
+</P2para>
+<P2para>
+<Text>This is subject to regulations under <InternalLink Ref="section-22-3" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3">subsection (3)</InternalLink> and Criminal Procedure Rules under <InternalLink Ref="section-22-5" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/5" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/5">subsection (5)</InternalLink>.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3" id="section-22-3">
+<Pnumber>3</Pnumber>
+<P2para>
+<Text>The Secretary of State may by regulations—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3/a" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3/a" id="section-22-3-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>make provision about how a request under <InternalLink Ref="section-22-1" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/1" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/1">subsection (1)</InternalLink> is to be made;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3/b" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3/b" id="section-22-3-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>make provision about the information to be provided in making such a request;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3/c" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3/c" id="section-22-3-c">
+<Pnumber>c</Pnumber>
+<P3para>
+<Text>provide for exceptions to the requirement in <InternalLink Ref="section-22-2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2">subsection (2)</InternalLink> to supply a transcript of sentencing remarks;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3/d" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3/d" id="section-22-3-d">
+<Pnumber>d</Pnumber>
+<P3para>
+<Text>provide that, in circumstances specified in the regulations, a transcript must be provided with the omission of information so specified;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3/e" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3/e" id="section-22-3-e">
+<Pnumber>e</Pnumber>
+<P3para>
+<Text>make further provision about the supply of a transcript under <InternalLink Ref="section-22-2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2">subsection (2)</InternalLink>.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/4" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/4" id="section-22-4">
+<Pnumber>4</Pnumber>
+<P2para>
+<Text>Regulations under <InternalLink Ref="section-22-3" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3">subsection (3)</InternalLink> may, in particular—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/4/a" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/4/a" id="section-22-4-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>confer a function (including the exercise of a discretion) on the Secretary of State or another person or description of person;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/4/b" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/4/b" id="section-22-4-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>make provision which refers to Criminal Procedure Rules (including as amended or replaced from time to time).</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/5" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/5" id="section-22-5">
+<Pnumber>5</Pnumber>
+<P2para>
+<Text>Criminal Procedure Rules may make provision about the supply of a transcript under <InternalLink Ref="section-22-2" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/2" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/2">subsection (2)</InternalLink> (including any provision that may be made by regulations under <InternalLink Ref="section-22-3" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/3" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/3">subsection (3)</InternalLink> or by virtue of <InternalLink Ref="section-22-4" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/4" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/4">subsection (4)</InternalLink><InternalLink Ref="section-22-4-a" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/4/a" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/4/a">(a)</InternalLink>).</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/6" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/6" id="section-22-6">
+<Pnumber>6</Pnumber>
+<P2para>
+<Text>A power to make regulations under <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink> includes power to make—</Text>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/6/a" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/6/a" id="section-22-6-a">
+<Pnumber>a</Pnumber>
+<P3para>
+<Text>supplementary, incidental, transitional or saving provision;</Text>
+</P3para>
+</P3>
+<P3 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/6/b" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/6/b" id="section-22-6-b">
+<Pnumber>b</Pnumber>
+<P3para>
+<Text>different provision for different purposes.</Text>
+</P3para>
+</P3>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/7" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/7" id="section-22-7">
+<Pnumber>7</Pnumber>
+<P2para>
+<Text>Regulations under <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink> are to be made by statutory instrument.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/8" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/8" id="section-22-8">
+<Pnumber>8</Pnumber>
+<P2para>
+<Text>The Secretary of State must consult the Lord Chief Justice before making regulations under <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink>.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/9" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/9" id="section-22-9">
+<Pnumber>9</Pnumber>
+<P2para>
+<Text>A statutory instrument containing regulations under <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink> may not be made unless a draft of the instrument has been laid before and approved by a resolution of each House of Parliament.</Text>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/10" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/10" id="section-22-10">
+<Pnumber>10</Pnumber>
+<P2para>
+<Text>In <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink>—</Text>
+<UnorderedList Class="Definition" Decoration="none">
+<ListItem id="p03972">
+<Para>
+<Text>“<Term id="term-sentencing-remarks">sentencing remarks</Term>” means remarks made by a judge of the Crown Court in England and Wales when sentencing an offender for an offence;</Text>
+</Para>
+</ListItem>
+<ListItem id="p03976">
+<Para>
+<Text>“<Term id="term-victim">victim</Term>” has the meaning given by regulations made by the Secretary of State.</Text>
+</Para>
+</ListItem>
+</UnorderedList>
+</P2para>
+</P2>
+<P2 DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22/11" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22/11" id="section-22-11">
+<Pnumber>11</Pnumber>
+<P2para>
+<Text>The Secretary of State may by regulations make provision about the circumstances in which, for the purposes of <InternalLink Ref="section-22" IdURI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/22" DocumentURI="http://www.legislation.gov.uk/ukpga/2026/2/section/22">this section</InternalLink>, sentencing remarks are relevant to a victim.</Text>
+</P2para>
+</P2>
+</P1para>
+</P1></P1group></Pblock></Part></Body></Primary><Commentaries><Commentary Type="I" id="key-5d3edca9b1e043031900770441c21f28"><Para><Text>S. 22  in force at Royal Assent for specified purposes, see <CitationSubRef id="n36dc56ba9c209c3d" SectionRef="section-49-3-c" URI="http://www.legislation.gov.uk/id/ukpga/2026/2/section/49/3/c" Operative="true">s. 49(3)(c)</CitationSubRef></Text></Para></Commentary></Commentaries></Legislation>

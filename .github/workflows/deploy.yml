@@ -46,7 +46,7 @@ jobs:
     
     - name: Upload JAR to S3
       run: |
-        cp target/*.jar ${{ steps.deployment-info.outputs.jar-name }}
+        cp target/lgu2-api.jar ${{ steps.deployment-info.outputs.jar-name }}
         aws s3 cp ${{ steps.deployment-info.outputs.jar-name }} s3://lgu2-code/api/
     
     - name: Create Elastic Beanstalk application version

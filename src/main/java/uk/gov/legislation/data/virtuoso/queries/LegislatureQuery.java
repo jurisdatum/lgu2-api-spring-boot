@@ -1,8 +1,8 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
+import tools.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.node.ObjectNode;
 import uk.gov.legislation.api.responses.ld.Legislature;
 import uk.gov.legislation.converters.ld.LegislatureConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;

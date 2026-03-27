@@ -19,6 +19,8 @@ public class ImpactAssessmentConverter {
     public static AssocMeta convert(ImpactAssessment.Metadata clml) {
         AssocMeta meta = new AssocMeta();
         meta.id = Links.shorten(clml.identifier);
+        meta.title = clml.title;
+        meta.modified = clml.modified;
         meta.longType = clml.impactAssessmentMetadata.documentClassification.documentMainType.value;
         meta.shortType = "ukia";
         meta.year = clml.impactAssessmentMetadata.year.value;

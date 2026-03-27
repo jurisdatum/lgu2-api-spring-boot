@@ -1,6 +1,6 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.util.Labels;
 import uk.gov.legislation.util.Links;
 
@@ -33,6 +33,10 @@ public class Level {
     @JacksonXmlProperty
     public String title;
 
+    @JacksonXmlProperty
+    public Boolean confersPower;
+
+
     /* conversion */
 
     /* mabye this should be moved to the .converters package? */
@@ -48,6 +52,7 @@ public class Level {
         other.prospective = "Prospective".equals(this.status);
         other.start = this.start;
         other.end = this.end;
+        other.confersPower = Boolean.TRUE.equals(this.confersPower);
         return other;
     }
 

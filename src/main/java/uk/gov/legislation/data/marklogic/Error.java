@@ -1,14 +1,14 @@
 package uk.gov.legislation.data.marklogic;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectReader;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.DeserializationFeature;
+import tools.jackson.databind.ObjectReader;
+import tools.jackson.dataformat.xml.XmlMapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlText;
 
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamConstants;
@@ -24,7 +24,7 @@ import java.util.Optional;
 @JsonIgnoreProperties(ignoreUnknown = false)
 public class Error {
 
-    public static Error parse(String xml) throws JsonProcessingException {
+    public static Error parse(String xml) throws JacksonException {
         Error error = READER.readValue(xml);
         validate(error);
         return error;
@@ -57,8 +57,9 @@ public class Error {
         return Optional.of(error);
     }
 
-    private static final XmlMapper MAPPER = (XmlMapper) new XmlMapper()
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true);
+    private static final XmlMapper MAPPER = XmlMapper.builder()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, true)
+        .build();
 
     private static final ObjectReader READER = MAPPER.readerFor(Error.class);
 

@@ -1,13 +1,14 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import tools.jackson.databind.MapperFeature;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.json.JsonMapper;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.converters.EffectsFeedConverter;
@@ -44,10 +45,10 @@ public class UnappliedEffectsTest {
         return Stream.of("ukpga/2000/8/section/91" , "ukpga/2023/29/2024-11-01");
     }
 
-    public static final ObjectMapper mapper = new ObjectMapper()
-        .registerModules(new JavaTimeModule())
-        .disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-        .enable(SerializationFeature.INDENT_OUTPUT);
+    public static final ObjectMapper mapper = JsonMapper.builder()
+        .configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, false)
+        .configure(SerializationFeature.INDENT_OUTPUT, true)
+        .build();
 
     @ParameterizedTest
     @MethodSource("provide")

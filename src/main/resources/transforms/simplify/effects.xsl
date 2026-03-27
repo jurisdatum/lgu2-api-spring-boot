@@ -22,9 +22,15 @@
     <node type="text" text="{.}" />
 </xsl:template>
 
+<xsl:template match="ukm:CommencementAuthority//text()" > <!-- can be child of SectionRange -->
+    <node type="text" text="{.}" />
+</xsl:template>
+
 <xsl:template match="ukm:SectionRange">
     <node type="range" start="{ @Start }" end="{ @End }" uri="{ @URI }" upTo="{ @UpTo }">
-        <xsl:apply-templates />
+        <children>
+            <xsl:apply-templates />
+        </children>
     </node>
 </xsl:template>
 

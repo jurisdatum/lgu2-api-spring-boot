@@ -2,7 +2,7 @@ package uk.gov.legislation.endpoints.fragment;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
@@ -14,6 +14,7 @@ import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Clml2Pdf;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
+import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 
@@ -39,6 +40,7 @@ class WelshFragmentTest {
 
     @MockitoBean
     private Clml2Pdf clml2Pdf;
+    private UnappliedEffectsFetcher effectsFetcher;
 
     @Test
     void test() throws Exception {

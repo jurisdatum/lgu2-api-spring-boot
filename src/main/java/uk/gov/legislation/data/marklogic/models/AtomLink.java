@@ -1,6 +1,6 @@
 package uk.gov.legislation.data.marklogic.models;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class AtomLink {
 

@@ -84,7 +84,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
@@ -123,7 +125,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
@@ -190,7 +194,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
@@ -350,9 +356,11 @@
             <ukm:AffectedTitle>Building Act 1984</ukm:AffectedTitle>
             <ukm:AffectedProvisions>
                <node xmlns="" type="range" start="section-56-1" end="section-56-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1" upTo="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4">
-                  <node type="section" ref="section-56-1" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1" text="s. 56(1)"/>
-                  <node type="text" text="-"/>
-                  <node type="section" ref="section-56-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4" text="(4)"/>
+                  <children>
+                     <node type="section" ref="section-56-1" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/1" text="s. 56(1)"/>
+                     <node type="text" text="-"/>
+                     <node type="section" ref="section-56-4" uri="http://www.legislation.gov.uk/id/ukpga/1984/55/section/56/4" text="(4)"/>
+                  </children>
                </node>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Sustainable and Secure Buildings Act 2004</ukm:AffectingTitle>
@@ -420,7 +428,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
@@ -459,7 +469,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>
@@ -498,7 +510,9 @@
             <ukm:Savings>
                <node xmlns="" type="section" ref="schedule-14" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14" text="Sch. 14 "/>
                <node xmlns="" type="range" start="schedule-14-paragraph-1" end="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" upTo="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3">
-                  <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  <children>
+                     <node type="section" ref="schedule-14-paragraph-1" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/1" text="para. 1"/>-<node type="section" ref="schedule-14-paragraph-3" uri="http://www.legislation.gov.uk/id/asc/2023/3/schedule/14/paragraph/3" text="3"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>

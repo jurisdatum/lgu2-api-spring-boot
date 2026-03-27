@@ -1,13 +1,12 @@
 package uk.gov.legislation.converters;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.transform.simple.Contents;
@@ -48,14 +47,14 @@ class MetadataExtractionTest {
 			</Legislation>
 			""";
     @Test
-    void versions() throws SaxonApiException, JsonProcessingException {
+    void versions() throws SaxonApiException, JacksonException {
 		Contents simple = this.simplifier.contents(CLML);
 		List<String> versions = simple.meta.versions().stream().toList();
 		Assertions.assertEquals(3, versions.size(), "There should be exactly three versions");
 		Assertions.assertEquals("enacted", versions.get(0), "First version should be 'enacted'");
 		Assertions.assertEquals("2017-01-16", versions.get(1), "Second version should be '2017-01-16'");
 		Assertions.assertEquals("2017-03-16", versions.get(2), "Third version should be '2017-03-16'");
-		ObjectMapper mapper = new ObjectMapper().registerModules(new JavaTimeModule());
+		ObjectMapper mapper = new ObjectMapper();
 		DocumentMetadata meta = DocumentMetadataConverter.convert(simple.meta);
 		String json = mapper.writeValueAsString(meta);
 		Assertions.assertTrue(json.contains("\"versions\":[\"enacted\",\"2017-01-16\",\"2017-03-16\""));

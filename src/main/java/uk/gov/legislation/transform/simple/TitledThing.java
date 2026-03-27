@@ -1,6 +1,6 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.net.URI;
 

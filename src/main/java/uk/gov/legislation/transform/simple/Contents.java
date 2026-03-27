@@ -1,17 +1,17 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import com.fasterxml.jackson.annotation.JsonRootName;
+import tools.jackson.core.JacksonException;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 import java.net.URI;
 import java.util.List;
 
-@JacksonXmlRootElement()
+@JsonRootName("Contents")
 public class Contents {
 
-    public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JsonProcessingException {
+    public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JacksonException {
         return SimpleXmlMapper.INSTANCE.readValue(xml, uk.gov.legislation.transform.simple.Contents.class);
     }
 

@@ -1,9 +1,8 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.node.TextNode;
 import org.springframework.stereotype.Repository;
+import tools.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.node.ObjectNode;
 import uk.gov.legislation.api.responses.ld.Interpretation;
 import uk.gov.legislation.converters.ld.InterpretationConverter;
 import uk.gov.legislation.converters.ld.ItemConverter;
@@ -62,8 +61,10 @@ public class InterpretationQuery {
         ObjectNode item0;
         ObjectNode interpretation0;
         ObjectNode o0 = (ObjectNode) graph.get(0);
-        TextNode id0 = (TextNode) o0.get("@id");
-        String id = id0.asText();
+        if (!o0.path("@id").isTextual()) {
+            throw new IllegalStateException("Interpretation query result missing textual @id");
+        }
+        String id = o0.path("@id").asText();
         if (id.contains("/id/")) {
             item0 = o0;
             interpretation0 = (ObjectNode) graph.get(1);

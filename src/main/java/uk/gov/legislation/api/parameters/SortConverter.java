@@ -9,7 +9,6 @@ public class SortConverter implements Converter<String, Sort> {
 
     @Override
     public Sort convert(String sort) {
-        return Sort.valueOf(sort.trim().toUpperCase());
+        return Sort.fromValue(sort);
     }
-
 }

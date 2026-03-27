@@ -1,0 +1,21 @@
+# Ignore everything by default
+**
+
+# Allow Docker build configuration
+!.dockerignore
+!Dockerfile
+
+# Allow Maven wrapper + build definition
+!mvnw
+!mvnw.cmd
+!pom.xml
+!.mvn/**
+
+# Allow application source (includes tests/resources)
+!src/**
+
+# keep secrets out of the build context
+src/main/resources/application-secrets.properties
+
+# Exclude .DS_Store files
+**/.DS_Store
