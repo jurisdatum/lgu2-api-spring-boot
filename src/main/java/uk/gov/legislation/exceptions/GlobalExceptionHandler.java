@@ -3,6 +3,8 @@ package uk.gov.legislation.exceptions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -15,119 +17,75 @@ public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    private ResponseEntity<ErrorResponse> json(HttpStatusCode status, ErrorResponse body) {
+        return ResponseEntity.status(status)
+            .contentType(MediaType.APPLICATION_JSON)
+            .body(body);
+    }
+
+    private ResponseEntity<ErrorResponse> json(HttpStatusCode status, String message, Exception e) {
+        ErrorResponse body = new ErrorResponse(status, message, e.getMessage());
+        return json(status, body);
+    }
+
     @ExceptionHandler(UnsupportedLanguageException.class)
     public ResponseEntity<ErrorResponse> handleUnsupportedLanguageException(UnsupportedLanguageException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.BAD_REQUEST,
-                "Unsupported Language",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        return json(HttpStatus.BAD_REQUEST, "Unsupported Language", ex);
     }
 
     // FixMe this sometimes obscures error unrelated to user input
     @ExceptionHandler(IllegalArgumentException.class)
     public ResponseEntity<ErrorResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.BAD_REQUEST,
-                "Invalid Input",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+        return json(HttpStatus.BAD_REQUEST, "Invalid Input", ex);
     }
 
     @ExceptionHandler(NoDocumentException.class)
-    public ResponseEntity <ErrorResponse> handleNoDocumentException(NoDocumentException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.NOT_FOUND,
-                "Document Not Found",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+    public ResponseEntity<ErrorResponse> handleNoDocumentException(NoDocumentException ex) {
+        return json(HttpStatus.NOT_FOUND, "Document Not Found", ex);
     }
 
     @ExceptionHandler(TransformationException.class)
     public ResponseEntity<ErrorResponse> handleAknTransformationException(TransformationException ex) {
         logger.error("TransformationException: {}", ex.getMessage(), ex);
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.INTERNAL_SERVER_ERROR,
-                "Transformation Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return json(HttpStatus.INTERNAL_SERVER_ERROR, "Transformation Error", ex);
     }
 
     @ExceptionHandler(XSLTCompilationException.class)
     public ResponseEntity<ErrorResponse> handleXSLTCompilationException(XSLTCompilationException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.INTERNAL_SERVER_ERROR,
-                "XSLT Compilation Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return json(HttpStatus.INTERNAL_SERVER_ERROR, "XSLT Compilation Error", ex);
     }
 
     @ExceptionHandler(InvalidURISyntaxException.class)
     public ResponseEntity<ErrorResponse> handleInvalidURISyntaxException(InvalidURISyntaxException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.INTERNAL_SERVER_ERROR,
-                "Invalid URI Syntax Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return json(HttpStatus.INTERNAL_SERVER_ERROR, "Invalid URI Syntax Error", ex);
     }
 
     // thrown when MarkLogic returns an error response
     @ExceptionHandler(MarkLogicRequestException.class)
     public ResponseEntity<ErrorResponse> handleMarkLogicRequestException(MarkLogicRequestException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.INTERNAL_SERVER_ERROR,
-                "MarkLogic Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return json(HttpStatus.INTERNAL_SERVER_ERROR, "MarkLogic Error", ex);
     }
 
     @ExceptionHandler(IOException.class)
     public ResponseEntity<ErrorResponse> handleIOException(IOException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.SERVICE_UNAVAILABLE,
-                "IO Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
+        return json(HttpStatus.SERVICE_UNAVAILABLE, "IO Error", ex);
     }
 
     @ExceptionHandler(InterruptedException.class)
     public ResponseEntity<ErrorResponse> handleInterruptedException(InterruptedException ex) {
         Thread.currentThread().interrupt();
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.SERVICE_UNAVAILABLE,
-                "Network Interruption Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
+        return json(HttpStatus.SERVICE_UNAVAILABLE, "Network Interruption Error", ex);
     }
 
     // a wrapper around an IOException or an InterruptedException thrown during a request to MarkLogic
     @ExceptionHandler(DocumentFetchException.class)
-    public ResponseEntity<Object> handleDocumentFetchException(DocumentFetchException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.SERVICE_UNAVAILABLE,
-                "Document Fetch Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.SERVICE_UNAVAILABLE);
+    public ResponseEntity<ErrorResponse> handleDocumentFetchException(DocumentFetchException ex) {
+        return json(HttpStatus.SERVICE_UNAVAILABLE, "Document Fetch Error", ex);
     }
 
     @ExceptionHandler(UnknownTypeException.class)
-    public ResponseEntity<Object> handleUnknownTypeException(UnknownTypeException ex) {
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.BAD_REQUEST,
-                "Unknown Document Type Error",
-                ex.getMessage()
-        );
-        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<ErrorResponse> handleUnknownTypeException(UnknownTypeException ex) {
+        return json(HttpStatus.BAD_REQUEST, "Unknown Document Type Error", ex);
     }
 
     @ExceptionHandler(ResponseStatusException.class)
@@ -140,7 +98,7 @@ public class GlobalExceptionHandler {
             e.getBody().getTitle(),
             e.getBody().getDetail()
         );
-        return new ResponseEntity<>(error, e.getStatusCode());
+        return json(e.getStatusCode(), error);
     }
 
 }
