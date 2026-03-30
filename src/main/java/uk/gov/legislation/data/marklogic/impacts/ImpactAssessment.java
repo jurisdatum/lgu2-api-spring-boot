@@ -1,8 +1,8 @@
 package uk.gov.legislation.data.marklogic.impacts;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import uk.gov.legislation.data.marklogic.models.AtomLink;
 import uk.gov.legislation.data.marklogic.models.LocalDateValue;
 import uk.gov.legislation.data.marklogic.search.SearchResults;

@@ -47,8 +47,12 @@ public class EffectsFeedConverter {
     public static Effect convertEffect(uk.gov.legislation.transform.simple.effects.Effect simple) {
 
         Effect effect = new Effect();
+
         effect.applied = simple.applied;
         effect.required = simple.requiresApplied;
+        effect.appliedWelsh = simple.welshApplied;
+        effect.requiredWelsh = simple.requiresWelshApplied;
+
         effect.type = simple.type;
 
         effect.target = new Effect.Source();

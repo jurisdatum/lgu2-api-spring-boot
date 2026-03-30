@@ -1256,15 +1256,17 @@
                      end="section-395-13-be"
                      uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc"
                      upTo="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be">
-                  <node type="section"
-                        ref="section-395-13-bc"
-                        uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc"
-                        text="s. 395(13)(bc)"/>
-                  <node type="text" text="-"/>
-                  <node type="section"
-                        ref="section-395-13-be"
-                        uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be"
-                        text="(be)"/>
+                  <children>
+                     <node type="section"
+                           ref="section-395-13-bc"
+                           uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/bc"
+                           text="s. 395(13)(bc)"/>
+                     <node type="text" text="-"/>
+                     <node type="section"
+                           ref="section-395-13-be"
+                           uri="http://www.legislation.gov.uk/id/ukpga/2000/8/section/395/13/be"
+                           text="(be)"/>
+                  </children>
                </node>
             </ukm:AffectedProvisions>
             <ukm:AffectingTitle>Financial Services Act 2021</ukm:AffectingTitle>
@@ -1806,13 +1808,15 @@
                      end="section-249-3"
                      uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1"
                      upTo="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/3">
-                  <node type="section"
-                        ref="section-249-1"
-                        uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1"
-                        text="s. 249(1)"/>-<node type="section"
-                        ref="section-249-3"
-                        uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/3"
-                        text="(3)"/>
+                  <children>
+                     <node type="section"
+                           ref="section-249-1"
+                           uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/1"
+                           text="s. 249(1)"/>-<node type="section"
+                           ref="section-249-3"
+                           uri="http://www.legislation.gov.uk/id/ukpga/2002/40/section/249/3"
+                           text="(3)"/>
+                  </children>
                </node>
             </ukm:Savings>
             <ukm:CommencementAuthority>

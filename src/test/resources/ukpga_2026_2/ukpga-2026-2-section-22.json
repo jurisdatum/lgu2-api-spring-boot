@@ -1,0 +1,368 @@
+{
+  "meta" : {
+    "id" : "ukpga/2026/2",
+    "longType" : "UnitedKingdomPublicGeneralAct",
+    "shortType" : "ukpga",
+    "year" : 2026,
+    "number" : 2,
+    "isbn" : "9780105703075",
+    "date" : "2026-01-22",
+    "cite" : "2026 c. 2",
+    "version" : "2026-01-22",
+    "status" : "revised",
+    "title" : "Sentencing Act 2026",
+    "extent" : [ "E", "W" ],
+    "lang" : "en",
+    "publisher" : "Statute Law Database",
+    "modified" : "2026-02-11",
+    "versions" : [ "enacted", "2026-01-22" ],
+    "has" : {
+      "introduction" : true,
+      "schedules" : true
+    },
+    "schedules" : true,
+    "formats" : [ "xml", "pdf" ],
+    "pointInTime" : null,
+    "alternatives" : [ {
+      "type" : "Alternative",
+      "uri" : "http://www.legislation.gov.uk/ukpga/2026/2/pdfs/ukpga_20260002_en.pdf",
+      "name" : null,
+      "date" : "2026-01-26",
+      "size" : 1470529
+    } ],
+    "associated" : [ ],
+    "fragment" : "section/22",
+    "prev" : "section/21",
+    "next" : "section/23",
+    "fragmentInfo" : {
+      "element" : "P1",
+      "id" : "section-22",
+      "href" : "section/22",
+      "number" : "22",
+      "title" : "Provision of transcripts of sentencing remarks to victims",
+      "label" : "Section 22",
+      "confersPower" : true
+    },
+    "prevInfo" : {
+      "href" : "section/21",
+      "label" : "Provision"
+    },
+    "nextInfo" : {
+      "href" : "section/23",
+      "label" : "Provision"
+    },
+    "ancestors" : [ {
+      "element" : "Part",
+      "id" : "part-1",
+      "href" : "part/1",
+      "number" : "Part 1",
+      "title" : "Sentencing",
+      "label" : "Part 1",
+      "start" : "2026-01-22"
+    }, {
+      "element" : "Pblock",
+      "id" : "part-1-crossheading-court-transcripts",
+      "href" : "part/1/crossheading/court-transcripts",
+      "number" : null,
+      "title" : "Court transcripts",
+      "label" : "Court transcripts",
+      "start" : "2026-01-22"
+    }, {
+      "element" : "P1",
+      "id" : "section-22",
+      "href" : "section/22",
+      "number" : "22",
+      "title" : "Provision of transcripts of sentencing remarks to victims",
+      "label" : "Section 22",
+      "confersPower" : true
+    } ],
+    "descendants" : [ {
+      "element" : "P1",
+      "id" : "section-22",
+      "href" : "section/22",
+      "number" : "22",
+      "title" : "Provision of transcripts of sentencing remarks to victims",
+      "label" : "Section 22",
+      "confersPower" : true
+    }, {
+      "element" : "P2",
+      "id" : "section-22-1",
+      "href" : "section/22/1",
+      "number" : "1",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/2",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-2",
+      "href" : "section/22/2",
+      "number" : "2",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-2-a",
+      "href" : "section/22/2/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-2-b",
+      "href" : "section/22/2/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/3",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/5",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-3",
+      "href" : "section/22/3",
+      "number" : "3",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-3-a",
+      "href" : "section/22/3/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/1",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-3-b",
+      "href" : "section/22/3/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-3-c",
+      "href" : "section/22/3/c",
+      "number" : "c",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/2",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-3-d",
+      "href" : "section/22/3/d",
+      "number" : "d",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-3-e",
+      "href" : "section/22/3/e",
+      "number" : "e",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/2",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-4",
+      "href" : "section/22/4",
+      "number" : "4",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/3",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-4-a",
+      "href" : "section/22/4/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-4-b",
+      "href" : "section/22/4/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-5",
+      "href" : "section/22/5",
+      "number" : "5",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/2",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/3",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/4",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22/4/a",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-6",
+      "href" : "section/22/6",
+      "number" : "6",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-6-a",
+      "href" : "section/22/6/a",
+      "number" : "a",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P3",
+      "id" : "section-22-6-b",
+      "href" : "section/22/6/b",
+      "number" : "b",
+      "title" : null,
+      "label" : "P3"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-7",
+      "href" : "section/22/7",
+      "number" : "7",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-8",
+      "href" : "section/22/8",
+      "number" : "8",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-9",
+      "href" : "section/22/9",
+      "number" : "9",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-10",
+      "href" : "section/22/10",
+      "number" : "10",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    }, {
+      "element" : "P2",
+      "id" : "section-22-11",
+      "href" : "section/22/11",
+      "number" : "11",
+      "title" : null,
+      "label" : "P2"
+    }, {
+      "element" : "InternalLink",
+      "id" : null,
+      "href" : "section/22",
+      "number" : null,
+      "title" : null,
+      "label" : "InternalLink"
+    } ],
+    "unappliedEffects" : {
+      "fragment" : [ ],
+      "ancestor" : [ ]
+    },
+    "upToDate" : true
+  },
+  "html" : "<article class=\"act primary ukpga\"><div class=\"body\" id=\"body\" data-x-extent=\"E+W+S+N.I.\" data-x-restrict-start-date=\"2026-01-22\"><section class=\"part\" id=\"part-1\" data-x-extent=\"E+W+S+N.I.\" data-x-restrict-start-date=\"2026-01-22\"><h2><span class=\"num\">Part 1</span><span class=\"heading\">Sentencing</span></h2><section class=\"hcontainer crossheading\" data-ukl-Name=\"Pblock\" id=\"part-1-crossheading-court-transcripts\" data-x-extent=\"E+W\" data-x-restrict-start-date=\"2026-01-22\"><h2><span class=\"heading\">Court transcripts</span></h2><section class=\"section\" id=\"section-22\" data-uk-target=\"true\" data-x-extent=\"E+W\" data-x-restrict-start-date=\"2026-01-22\" data-x-confers-power=\"true\"><h2><span class=\"num\">22</span><span class=\"heading\">Provision of transcripts of sentencing remarks to victims</span></h2><section class=\"subsection\" id=\"section-22-1\"><h2><span class=\"num\">(1)</span></h2><div class=\"content\">\n<p><cite><a href=\"#section-22-2\">Subsection (2)</a></cite> applies if a victim (“<span class=\"term\" data-refersTo=\"#term-v\" id=\"term-v\">V</span>”) requests the Secretary of State to supply V with a transcript of sentencing remarks that are relevant to V.</p>\n</div></section><section class=\"subsection\" id=\"section-22-2\"><h2><span class=\"num\">(2)</span></h2><div class=\"intro\"><p>The Secretary of State must supply the transcript to V, or arrange for the transcript to be supplied to V—</p></div><div class=\"level para1\" id=\"section-22-2-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>free of charge, and</p>\n</div></div><div class=\"level para1\" id=\"section-22-2-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>before the end of the period specified in regulations made by the Secretary of State.</p>\n</div></div><div class=\"wrapUp\"><p>This is subject to regulations under <cite><a href=\"#section-22-3\">subsection (3)</a></cite> and Criminal Procedure Rules under <cite><a href=\"#section-22-5\">subsection (5)</a></cite>.</p></div></section><section class=\"subsection\" id=\"section-22-3\"><h2><span class=\"num\">(3)</span></h2><div class=\"intro\"><p>The Secretary of State may by regulations—</p></div><div class=\"level para1\" id=\"section-22-3-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>make provision about how a request under <cite><a href=\"#section-22-1\">subsection (1)</a></cite> is to be made;</p>\n</div></div><div class=\"level para1\" id=\"section-22-3-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>make provision about the information to be provided in making such a request;</p>\n</div></div><div class=\"level para1\" id=\"section-22-3-c\"><h3><span class=\"num\">(c)</span></h3><div class=\"content\">\n<p>provide for exceptions to the requirement in <cite><a href=\"#section-22-2\">subsection (2)</a></cite> to supply a transcript of sentencing remarks;</p>\n</div></div><div class=\"level para1\" id=\"section-22-3-d\"><h3><span class=\"num\">(d)</span></h3><div class=\"content\">\n<p>provide that, in circumstances specified in the regulations, a transcript must be provided with the omission of information so specified;</p>\n</div></div><div class=\"level para1\" id=\"section-22-3-e\"><h3><span class=\"num\">(e)</span></h3><div class=\"content\">\n<p>make further provision about the supply of a transcript under <cite><a href=\"#section-22-2\">subsection (2)</a></cite>.</p>\n</div></div></section><section class=\"subsection\" id=\"section-22-4\"><h2><span class=\"num\">(4)</span></h2><div class=\"intro\"><p>Regulations under <cite><a href=\"#section-22-3\">subsection (3)</a></cite> may, in particular—</p></div><div class=\"level para1\" id=\"section-22-4-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>confer a function (including the exercise of a discretion) on the Secretary of State or another person or description of person;</p>\n</div></div><div class=\"level para1\" id=\"section-22-4-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>make provision which refers to Criminal Procedure Rules (including as amended or replaced from time to time).</p>\n</div></div></section><section class=\"subsection\" id=\"section-22-5\"><h2><span class=\"num\">(5)</span></h2><div class=\"content\">\n<p>Criminal Procedure Rules may make provision about the supply of a transcript under <cite><a href=\"#section-22-2\">subsection (2)</a></cite> (including any provision that may be made by regulations under <cite><a href=\"#section-22-3\">subsection (3)</a></cite> or by virtue of <cite><a href=\"#section-22-4\">subsection (4)</a></cite><cite><a href=\"#section-22-4-a\">(a)</a></cite>).</p>\n</div></section><section class=\"subsection\" id=\"section-22-6\"><h2><span class=\"num\">(6)</span></h2><div class=\"intro\"><p>A power to make regulations under <cite><a href=\"#section-22\">this section</a></cite> includes power to make—</p></div><div class=\"level para1\" id=\"section-22-6-a\"><h3><span class=\"num\">(a)</span></h3><div class=\"content\">\n<p>supplementary, incidental, transitional or saving provision;</p>\n</div></div><div class=\"level para1\" id=\"section-22-6-b\"><h3><span class=\"num\">(b)</span></h3><div class=\"content\">\n<p>different provision for different purposes.</p>\n</div></div></section><section class=\"subsection\" id=\"section-22-7\"><h2><span class=\"num\">(7)</span></h2><div class=\"content\">\n<p>Regulations under <cite><a href=\"#section-22\">this section</a></cite> are to be made by statutory instrument.</p>\n</div></section><section class=\"subsection\" id=\"section-22-8\"><h2><span class=\"num\">(8)</span></h2><div class=\"content\">\n<p>The Secretary of State must consult the Lord Chief Justice before making regulations under <cite><a href=\"#section-22\">this section</a></cite>.</p>\n</div></section><section class=\"subsection\" id=\"section-22-9\"><h2><span class=\"num\">(9)</span></h2><div class=\"content\">\n<p>A statutory instrument containing regulations under <cite><a href=\"#section-22\">this section</a></cite> may not be made unless a draft of the instrument has been laid before and approved by a resolution of each House of Parliament.</p>\n</div></section><section class=\"subsection\" id=\"section-22-10\"><h2><span class=\"num\">(10)</span></h2><div class=\"intro\"><p>In <cite><a href=\"#section-22\">this section</a></cite>—</p></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>“<span class=\"term\" data-refersTo=\"#term-sentencing-remarks\" id=\"term-sentencing-remarks\">sentencing remarks</span>” means remarks made by a judge of the Crown Court in England and Wales when sentencing an offender for an offence;</p>\n\n</div></div><div class=\"hcontainer definition no-num\"><div class=\"content\">\n\n<p>“<span class=\"term\" data-refersTo=\"#term-victim\" id=\"term-victim\">victim</span>” has the meaning given by regulations made by the Secretary of State.</p>\n\n</div></div></section><section class=\"subsection\" id=\"section-22-11\"><h2><span class=\"num\">(11)</span></h2><div class=\"content\">\n<p>The Secretary of State may by regulations make provision about the circumstances in which, for the purposes of <cite><a href=\"#section-22\">this section</a></cite>, sentencing remarks are relevant to a victim.</p>\n</div></section><footer class=\"annotations\"><div>Annotations:</div><div><div>Commencement Information</div><div class=\"note commentary I\"><p><span class=\"marker\">I1</span>S. 22  in force at Royal Assent for specified purposes, see <cite class=\"subref operative\"><a href=\"http://www.legislation.gov.uk/id/ukpga/2026/2/section/49/3/c\">s. 49(3)(c)</a></cite></p></div></div></footer></section></section></section></div></article>"
+}

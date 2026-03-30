@@ -1,8 +1,8 @@
 package uk.gov.legislation.transform.simple.effects;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import net.sf.saxon.s9api.*;
 import org.springframework.stereotype.Service;
+import tools.jackson.core.JacksonException;
 import uk.gov.legislation.transform.Helper;
 import uk.gov.legislation.transform.simple.SimpleXmlMapper;
 
@@ -45,7 +45,7 @@ public class EffectsSimplifier {
         return simple.toString();
     }
 
-    public Page parse(String atom) throws SaxonApiException, JsonProcessingException {
+    public Page parse(String atom) throws SaxonApiException, JacksonException {
         String simple = simpify(atom);
         return SimpleXmlMapper.INSTANCE.readValue(simple, Page.class);
     }

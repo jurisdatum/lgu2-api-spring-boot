@@ -1,7 +1,7 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 import java.util.Collections;
 import java.util.List;

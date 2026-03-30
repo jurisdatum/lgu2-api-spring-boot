@@ -1,8 +1,7 @@
 package uk.gov.legislation.transform.simple;
 
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import tools.jackson.databind.DeserializationFeature;
+import tools.jackson.dataformat.xml.XmlMapper;
 
 /**
  * Central place to build the XML-aware Jackson mapper used across the
@@ -16,8 +15,8 @@ public final class SimpleXmlMapper {
         // no instances
     }
 
-    public static final XmlMapper INSTANCE = (XmlMapper) new XmlMapper()
-        .registerModules(new JavaTimeModule())
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+    public static final XmlMapper INSTANCE = XmlMapper.builder()
+        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+        .build();
 
 }

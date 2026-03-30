@@ -1,9 +1,9 @@
 package uk.gov.legislation.data.marklogic;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.core.io.ClassPathResource;
+import tools.jackson.core.JacksonException;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -33,7 +33,7 @@ class ErrorParsingTest {
         ClassPathResource resource = new ClassPathResource("ukpga_2023_29/ukpga-2023-29-2024-11-01.xml");
         String xml = resource.getContentAsString(StandardCharsets.UTF_8);
 
-        assertThrows(JsonProcessingException.class, () -> Error.parse(xml));
+        assertThrows(JacksonException.class, () -> Error.parse(xml));
     }
 
     @Test

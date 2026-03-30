@@ -1,7 +1,8 @@
 package uk.gov.legislation.transform.simple.effects;
 
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.transform.simple.RichTextNode;
 
 import java.util.Collections;
@@ -17,6 +18,14 @@ public class Effect {
 
     @JacksonXmlProperty(localName = "RequiresApplied", isAttribute = true)
     public boolean requiresApplied;
+
+    @JacksonXmlProperty(localName = "WelshApplied", isAttribute = true)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean welshApplied;
+
+    @JacksonXmlProperty(localName = "RequiresWelshApplied", isAttribute = true)
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean requiresWelshApplied;
 
     @JacksonXmlProperty(localName = "Type", isAttribute = true)
     public String type;

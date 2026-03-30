@@ -1,8 +1,8 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import org.springframework.stereotype.Repository;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.node.ObjectNode;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.SessionLD;
@@ -56,7 +56,7 @@ public class SessionQuery {
         return toMappedData(jsonData);
     }
 
-    private Optional<SessionLD> toMappedData(String jsonData) throws JsonProcessingException {
+    private Optional<SessionLD> toMappedData(String jsonData) throws JacksonException {
         return Optional.ofNullable(Graph.extract(jsonData))
             .filter(graph -> !graph.isEmpty())
             .map(graph -> (ObjectNode) graph.get(0))

@@ -1,8 +1,8 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 import java.util.Comparator;
 import java.util.List;
@@ -33,7 +33,7 @@ public class YearFacets {
         JsonNode tree;
         try {
             tree = DefraLex.mapper.readTree(json);
-        } catch (JsonProcessingException e) {
+        } catch (JacksonException e) {
             throw new CompletionException(e);
         }
         ArrayNode bindings = (ArrayNode) tree.get("results").get("bindings");
