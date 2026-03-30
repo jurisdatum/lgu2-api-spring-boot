@@ -41,6 +41,7 @@ class WelshContentsTest {
     @MockitoBean
     private Clml2Pdf clml2Pdf;
 
+    @MockitoBean
     private UnappliedEffectsFetcher effectsFetcher;
 
 

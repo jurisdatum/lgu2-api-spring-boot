@@ -41,7 +41,8 @@ class WelshFragmentTest {
     @MockitoBean
     private Clml2Pdf clml2Pdf;
 
-    private UnappliedEffectsFetcher effectsFetcher;
+    @MockitoBean
+    private UnappliedEffectsFetcher unappliedEffectsFetcher;
 
 
     @Test
