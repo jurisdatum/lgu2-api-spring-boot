@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
@@ -21,6 +22,20 @@ public class GlobalExceptionHandler {
                 HttpStatus.BAD_REQUEST,
                 "Unsupported Language",
                 ex.getMessage()
+        );
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity<ErrorResponse> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
+        String message = ex.getFieldErrors().stream()
+            .map(e -> "Invalid value '" + e.getRejectedValue() + "' for parameter '" + e.getField() + "'")
+            .findFirst()
+            .orElse(ex.getMessage());
+        ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.BAD_REQUEST,
+                "Invalid Parameter",
+                message
         );
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }

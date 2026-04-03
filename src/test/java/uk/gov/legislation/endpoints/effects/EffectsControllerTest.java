@@ -8,15 +8,14 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.MockedStatic;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
-import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import uk.gov.legislation.api.parameters.EffectsSortConverter;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.data.marklogic.changes.Changes;
+import uk.gov.legislation.data.marklogic.changes.EffectsSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
@@ -29,7 +28,6 @@ import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-@Import(EffectsSortConverter.class)
 @WebMvcTest(controllers = EffectsController.class)
 class EffectsControllerTest {
 
@@ -92,14 +90,28 @@ class EffectsControllerTest {
 
         mockMvc.perform(get("/effects")
                 .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
-                .param("sort", "affecting-title"))
+                .param("sort", "sourceTitle"))
             .andExpect(status().isOk())
             .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE));
 
         ArgumentCaptor<Parameters> captor = ArgumentCaptor.forClass(Parameters.class);
         verify(db).fetch(captor.capture());
-        assertEquals("affecting-title", captor.getValue().sort,
+        assertEquals(EffectsSort.AFFECTING_TITLE, captor.getValue().sort,
             "sort query parameter should flow through to the changes request");
+        verifyNoInteractions(simplifier);
+    }
+
+    @Test
+    @DisplayName("Should return 400 Bad Request for an unsupported sort value")
+    void shouldReturn400ForInvalidSort() throws Exception {
+        mockMvc.perform(get("/effects")
+                .param("sort", "unknown-sort")
+                .accept(MediaType.APPLICATION_JSON))
+            .andExpect(status().isBadRequest())
+            .andExpect(jsonPath("$.error").value("Invalid Parameter"))
+            .andExpect(jsonPath("$.message").value("Invalid value 'unknown-sort' for parameter 'sort'"));
+
+        verifyNoInteractions(db);
         verifyNoInteractions(simplifier);
     }
 

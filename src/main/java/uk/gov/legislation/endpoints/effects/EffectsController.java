@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.data.marklogic.changes.Changes;
+import uk.gov.legislation.data.marklogic.changes.EffectsSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
@@ -26,6 +27,17 @@ public class EffectsController implements EffectsApi {
         this.simplifier = simplifier;
     }
 
+    private EffectsSort convert(EffectsParameters.Sort sort) {
+        return switch (sort) {
+            case null -> null;
+            case targetYear -> EffectsSort.AFFECTED_YEAR_NUMBER;
+            case targetTitle -> EffectsSort.AFFECTED_TITLE;
+            case sourceYear -> EffectsSort.AFFECTING_YEAR_NUMBER;
+            case sourceTitle -> EffectsSort.AFFECTING_TITLE;
+            case applied -> EffectsSort.APPLIED;
+        };
+    }
+
     public String atom(EffectsParameters param) throws IOException, InterruptedException {
         validateType(param.getTargetType());
         validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
@@ -45,7 +57,7 @@ public class EffectsController implements EffectsApi {
             .affectingEndYear(param.getSourceEndYear())
             .affectingTitle(param.getSourceTitle())
             .applied(param.getApplied())
-            .sort(param.getSort() != null ? param.getSort().value() : null)
+            .sort(convert(param.getSort()))
             .orderBy(param.getOrderBy())
             .page(param.getPage())
             .build();
