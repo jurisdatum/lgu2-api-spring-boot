@@ -19,9 +19,13 @@ public class EffectsParameters {
     private Integer sourceEndYear;
     private String sourceTitle;
     private Parameters.AppliedStatus applied;
-    private Parameters.EffectsSort sort;
+    private Sort sort;
     private Parameters.OrderBy orderBy;
     private Integer page;
+
+    public enum Sort {
+        targetYear, targetTitle, sourceYear, sourceTitle, applied;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Parameters.AppliedStatus getApplied() {
@@ -32,11 +36,11 @@ public class EffectsParameters {
         this.applied = applied;
     }
 
-    public Parameters.EffectsSort getSort() {
+    public Sort getSort() {
         return sort;
     }
 
-    public void setSort(Parameters.EffectsSort sort) {
+    public void setSort(Sort sort) {
         this.sort = sort;
     }
 

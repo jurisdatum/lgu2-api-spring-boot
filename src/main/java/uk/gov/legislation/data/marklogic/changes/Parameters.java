@@ -17,7 +17,7 @@ public class Parameters extends AbstractParameters {
     public Integer affectingEndYear;
     public String affectingTitle;
     public AppliedStatus applied;
-    public String sort;
+    public EffectsSort sort;
     public OrderBy order;
     public Integer page;
 
@@ -94,7 +94,8 @@ public class Parameters extends AbstractParameters {
             params.applied = appliedStatus;
             return this;
         }
-        public Builder sort(String sort) {
+
+        public Builder sort(EffectsSort sort) {
             params.sort = sort;
             return this;
         }
@@ -116,40 +117,6 @@ public class Parameters extends AbstractParameters {
 
     public enum AppliedStatus {
         applied, unapplied
-    }
-
-    public enum EffectsSort {
-
-        SourceYearNumber("affecting-year-number"),
-        SourceTitle("affecting-title"),
-        TargetYearNumber("affected-year-number"),
-        TargetTitle("affected-title"),
-        Applied("applied");
-
-        private final String value;
-
-        EffectsSort(String value) {
-            this.value = value;
-        }
-
-        public String value() {
-            return value;
-        }
-
-        @Override
-        public String toString() {
-            return value;
-        }
-
-        public static Parameters.EffectsSort fromValue(String value) {
-            if (value == null)
-                throw new IllegalArgumentException("Unknown EffectsSort: null");
-            String normalized = value.trim();
-            for (Parameters.EffectsSort sort : values())
-                if (sort.value.equalsIgnoreCase(normalized))
-                    return sort;
-            throw new IllegalArgumentException("Unknown EffectsSort: " + normalized);
-        }
     }
 
     public enum OrderBy {
