@@ -98,6 +98,9 @@
         <xsl:when test="matches($fallback-id, '/(annexes|schedules)$')">
             <xsl:sequence select="/*/*/Schedules" />
         </xsl:when>
+        <xsl:when test="matches($fallback-id, '/attachments$')">
+            <xsl:sequence select="/*/*/Attachments" />
+        </xsl:when>
     </xsl:choose>
 </xsl:variable>
 
