@@ -94,6 +94,7 @@
         "description" : "with effect in accordance with",
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -149,6 +150,7 @@
         "description" : "with effect in accordance with",
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -215,6 +217,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -282,6 +285,7 @@
         "applied" : false,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -339,6 +343,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -400,6 +405,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -456,6 +462,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -513,6 +520,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -570,6 +578,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -631,6 +640,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -691,6 +701,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -743,6 +754,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -802,6 +814,7 @@
         "applied" : false,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. This amending provision is revoked (15.7.2004) by S.I. 2004/1610, art. 2.",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -871,6 +884,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -932,6 +946,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -997,6 +1012,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1052,6 +1068,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 4 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 11",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1107,6 +1124,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 6 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 12",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1162,6 +1180,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 6 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 12",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1217,6 +1236,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 6 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 12",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1272,6 +1292,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 6 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 12",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1327,6 +1348,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 6 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 12",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1382,6 +1404,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(2)(a) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(a)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1437,6 +1460,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(3)(4) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1492,6 +1516,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(3)(4) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1547,6 +1572,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(3)(4) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1602,6 +1628,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1657,6 +1684,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1712,6 +1740,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1767,6 +1796,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1822,6 +1852,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1877,6 +1908,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1932,6 +1964,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -1987,6 +2020,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2042,6 +2076,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2097,6 +2132,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2152,6 +2188,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2207,6 +2244,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 9 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 14",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2262,6 +2300,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(2)(b) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(a)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2317,6 +2356,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2372,6 +2412,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2427,6 +2468,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 11 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(a)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2482,6 +2524,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 11 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(a)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2545,6 +2588,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 12 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2608,6 +2652,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 14 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(d)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2663,6 +2708,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 15 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(e)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2718,6 +2764,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 16 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(f)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2773,6 +2820,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 17 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(g)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2828,6 +2876,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13 omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 16(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2883,6 +2932,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2938,6 +2988,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -2993,6 +3044,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 31(a)(b) substituted immediately before IP completion day by virtue of S.I. 2019/1234, regs. 1(3), 18",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3048,6 +3100,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 31(a)(b) substituted immediately before IP completion day by virtue of S.I. 2019/1234, regs. 1(3), 18",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3103,6 +3156,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(7) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(a)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3158,6 +3212,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(8)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(b)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3213,6 +3268,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(9)(b)-(d) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3268,6 +3324,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(9)(b)-(d) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3323,6 +3380,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(9)(b)-(d) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(c)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3378,6 +3436,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(10)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(d)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3433,6 +3492,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3488,6 +3548,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3543,6 +3604,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3598,6 +3660,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3653,6 +3716,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(14)(b)(iii) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(g)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3714,6 +3778,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3775,6 +3840,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3836,6 +3902,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3897,6 +3964,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -3958,6 +4026,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4014,6 +4083,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -4070,6 +4140,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -4130,6 +4201,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4196,6 +4268,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4248,6 +4321,7 @@
         "applied" : false,
         "description" : "coming into force in accordance with"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. This amendment is omitted (20.2.2019) by virtue of S.I. 2019/328, reg. 20(2)(a) without ever being in force",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4316,6 +4390,7 @@
         "applied" : false,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4384,6 +4459,7 @@
         "applied" : false,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4440,6 +4516,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4501,6 +4578,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4557,6 +4635,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4613,6 +4692,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4669,6 +4749,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4725,6 +4806,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4786,6 +4868,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4847,6 +4930,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4908,6 +4992,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -4969,6 +5054,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5029,6 +5115,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Sch. 1 para. 8(2)(3) substituted immediately before IP completion day by S.I. 2020/1343, regs. 1(1), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5089,6 +5176,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Sch. 1 para. 8(2)(3) substituted immediately before IP completion day by S.I. 2020/1343, regs. 1(1), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5149,6 +5237,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Sch. 1 para. 8(2)(3) substituted immediately before IP completion day by S.I. 2020/1343, regs. 1(1), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5210,6 +5299,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5271,6 +5361,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5332,6 +5423,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5393,6 +5485,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5449,6 +5542,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5504,6 +5598,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(2)(c)(i) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(2)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5559,6 +5654,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 2 omitted 25.6.2020) by virtue of S.I. 2020/646, regs. 1(2)(c), 15(2)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5611,6 +5707,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5663,6 +5760,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5729,6 +5827,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5790,6 +5889,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5852,6 +5952,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5907,6 +6008,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -5962,6 +6064,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6017,6 +6120,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6078,6 +6182,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6139,6 +6244,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6208,6 +6314,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6277,6 +6384,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6346,6 +6454,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6407,6 +6516,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6476,6 +6586,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6537,6 +6648,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6598,6 +6710,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6685,6 +6798,7 @@
         "applied" : false,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6754,6 +6868,7 @@
         "applied" : true,
         "description" : "in force in so far as not already in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6815,6 +6930,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -6871,6 +6987,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -6927,6 +7044,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -6983,6 +7101,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -7039,6 +7158,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -7095,6 +7215,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -7147,6 +7268,7 @@
         "applied" : false,
         "description" : "coming into force in accordance with"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. This amendment is omitted (20.2.2019) by virtue of S.I. 2019/328, reg. 20(2)(b) without ever being in force",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7202,6 +7324,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This S.I. is amended by S.I. 2014/1313",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7257,6 +7380,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This S.I. is amended by S.I. 2014/1313",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7318,6 +7442,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7373,6 +7498,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This S.I. is amended by S.I. 2014/1313",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7428,6 +7554,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 88(f) substituted immediately before IP completion day by S.I. 2019/680, regs. 1(3), 9(5)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7484,6 +7611,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -7545,6 +7673,7 @@
         "applied" : false,
         "prospective" : true
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A.",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7614,6 +7743,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7683,6 +7813,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7747,6 +7878,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7817,6 +7949,7 @@
         "applied" : false,
         "description" : "for specified purposes"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7883,6 +8016,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -7940,6 +8074,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8005,6 +8140,7 @@
         "applied" : false,
         "description" : "for specified purposes"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8070,6 +8206,7 @@
         "applied" : false,
         "description" : "for specified purposes"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8127,6 +8264,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8184,6 +8322,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8245,6 +8384,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8306,6 +8446,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8372,6 +8513,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8433,6 +8575,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8494,6 +8637,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8555,6 +8699,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8616,6 +8761,7 @@
         "description" : "wholly in force",
         "outstanding" : true
       } ],
+      "notes" : null,
       "outstanding" : true
     }, {
       "applied" : false,
@@ -8685,6 +8831,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Sch. 11 repealed (1.7.2005) by S.I. 2005/1433, reg. 2(1), Sch. 1 para. 16",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8745,6 +8892,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8805,6 +8953,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8865,6 +9014,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8925,6 +9075,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -8985,6 +9136,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9045,6 +9197,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9105,6 +9258,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9165,6 +9319,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9225,6 +9380,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9285,6 +9441,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9345,6 +9502,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 106(2) omitted immediately before IP completion day by virtue of S.I. 2019/680, regs. 1(3), 9(6)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9408,6 +9566,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 106(2) omitted immediately before IP completion day by virtue of S.I. 2019/680, regs. 1(3), 9(6)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9460,6 +9619,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9512,6 +9672,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9578,6 +9739,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9644,6 +9806,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9710,6 +9873,7 @@
         "prospective" : true,
         "outstanding" : false
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9779,6 +9943,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : null,
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9841,6 +10006,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)",
       "outstanding" : false
     }, {
       "applied" : false,
@@ -9897,6 +10063,7 @@
         "applied" : false,
         "description" : "wholly in force"
       } ],
+      "notes" : "This amendment not applied to legislation.gov.uk. Sch. 19 repealed (20.6.2003) by Enterprise Act 2002 (c. 40), ss. 247(k), 278(2), 279, Sch. 26 (with s. 237); S.I. 2003/1397, art. 2(1), Sch.",
       "outstanding" : false
     } ],
     "upToDate" : false
