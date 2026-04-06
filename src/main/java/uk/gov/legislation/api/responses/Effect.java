@@ -39,6 +39,9 @@ public class Effect {
     @Schema
     public List<InForce> inForce;
 
+    @Schema(nullable = true)
+    public String notes;
+
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @Schema(nullable = true)
     public Boolean outstanding;
