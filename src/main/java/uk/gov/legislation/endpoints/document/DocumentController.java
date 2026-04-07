@@ -136,6 +136,21 @@ public class DocumentController implements DocumentApi {
             .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
+    /* PDF */
+
+    public static final MediaType PDF = new MediaType(MediaType.APPLICATION_PDF, StandardCharsets.UTF_8);
+
+    @Override
+    public ResponseEntity<StreamingResponseBody> pdf(String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2pdf, PDF);
+    }
+
+    @Override
+    public ResponseEntity<StreamingResponseBody> pdf(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+        String regnalYear = String.join("/", monarch, years);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2pdf, PDF);
+    }
+
     /* Word (.docx) */
 
     public static final MediaType MS_WORD = MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
