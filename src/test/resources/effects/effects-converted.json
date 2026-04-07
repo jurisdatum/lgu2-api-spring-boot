@@ -65,7 +65,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -119,7 +120,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -182,7 +184,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -245,7 +248,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -307,7 +311,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -370,7 +375,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -424,7 +430,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -478,7 +485,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -532,7 +540,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -591,7 +600,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -645,7 +655,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -707,7 +718,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -777,7 +789,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -840,7 +853,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -903,7 +917,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : true,
     "required" : true,
@@ -967,7 +982,8 @@
       "date" : "2024-11-04",
       "applied" : true,
       "description" : "wholly in force"
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -1021,7 +1037,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -1075,7 +1092,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -1129,7 +1147,8 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   }, {
     "applied" : false,
     "required" : true,
@@ -1183,6 +1202,7 @@
       "date" : null,
       "applied" : false,
       "prospective" : true
-    } ]
+    } ],
+    "notes" : null
   } ]
 }

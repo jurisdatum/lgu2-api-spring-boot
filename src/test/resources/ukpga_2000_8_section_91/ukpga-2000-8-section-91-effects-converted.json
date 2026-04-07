@@ -51,7 +51,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 8(6)-(10) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 13(c)"
 }, {
   "applied" : false,
   "required" : false,
@@ -105,7 +106,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 10(4)(5) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 15(b)"
 }, {
   "applied" : false,
   "required" : false,
@@ -159,7 +161,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17"
 }, {
   "applied" : false,
   "required" : false,
@@ -213,7 +216,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17"
 }, {
   "applied" : false,
   "required" : false,
@@ -267,7 +271,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(11)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(e)"
 }, {
   "applied" : false,
   "required" : false,
@@ -321,7 +326,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)"
 }, {
   "applied" : false,
   "required" : false,
@@ -375,7 +381,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 5(12)(a)(b) omitted immediately before IP completion day by virtue of S.I. 2020/1385, regs. 1(4), 51(2)(f)"
 }, {
   "applied" : false,
   "required" : false,
@@ -434,7 +441,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 38(2)-(5)(7)(8) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 20"
 }, {
   "applied" : false,
   "required" : false,
@@ -495,7 +503,8 @@
     "date" : "2020-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. Reg. 13(1) substituted (25.6.2020) by S.I. 2020/646, regs. 1(2)(c), 11(3)"
 }, {
   "applied" : false,
   "required" : false,
@@ -564,7 +573,8 @@
     "date" : "2023-06-29",
     "applied" : false,
     "description" : "for specified purposes"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -619,7 +629,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -683,7 +694,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -737,7 +749,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -792,7 +805,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -850,7 +864,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -905,7 +920,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -960,7 +976,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1015,7 +1032,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1070,7 +1088,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1133,7 +1152,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1192,7 +1212,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1252,7 +1273,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1319,7 +1341,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1378,7 +1401,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1437,7 +1461,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1504,7 +1529,8 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1557,7 +1583,8 @@
     "applied" : false,
     "prospective" : true,
     "description" : "with effect in accordance with"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1610,7 +1637,8 @@
     "applied" : false,
     "prospective" : true,
     "description" : "with effect in accordance with"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : false,
@@ -1678,7 +1706,8 @@
     "date" : "2024-11-01",
     "applied" : true,
     "description" : "in force in so far as not already in force"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1737,7 +1766,8 @@
     "date" : "2024-12-31",
     "applied" : false,
     "description" : "wholly in force"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1800,7 +1830,8 @@
     "date" : "2025-01-01",
     "applied" : false,
     "description" : "for specified purposes"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : true,
@@ -1863,7 +1894,8 @@
     "date" : "2025-01-01",
     "applied" : false,
     "description" : "for specified purposes"
-  } ]
+  } ],
+  "notes" : null
 }, {
   "applied" : false,
   "required" : false,
@@ -1923,5 +1955,6 @@
     "date" : null,
     "applied" : false,
     "prospective" : true
-  } ]
+  } ],
+  "notes" : "This amendment not applied to legislation.gov.uk. The Financial Services and Markets Act 2000 does not contain a section 427A."
 } ]

@@ -340,6 +340,7 @@
           "applied" : false,
           "description" : "wholly in force"
         } ],
+        "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
         "outstanding" : false
       }, {
         "applied" : false,
@@ -395,6 +396,7 @@
           "applied" : false,
           "description" : "wholly in force"
         } ],
+        "notes" : "This amendment not applied to legislation.gov.uk. Reg. 30(2) omitted (6.9.2019) by virtue of S.I. 2019/1234, regs. 1(2), 17",
         "outstanding" : false
       } ],
       "ancestor" : [ {
@@ -451,6 +453,7 @@
           "description" : "with effect in accordance with",
           "outstanding" : false
         } ],
+        "notes" : null,
         "outstanding" : false
       }, {
         "applied" : false,
@@ -506,6 +509,7 @@
           "description" : "with effect in accordance with",
           "outstanding" : false
         } ],
+        "notes" : null,
         "outstanding" : false
       } ]
     },

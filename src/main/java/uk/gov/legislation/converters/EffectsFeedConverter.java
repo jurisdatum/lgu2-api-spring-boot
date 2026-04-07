@@ -85,6 +85,8 @@ public class EffectsFeedConverter {
             effect.commencement.plain = effect.commencement.rich.stream().filter(node -> node.text != null).map(node -> node.text).collect(Collectors.joining());
         }
 
+        effect.notes = simple.notes;
+
         effect.inForce = simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();
 
         return effect;

@@ -13,7 +13,7 @@ import java.time.ZonedDateTime;
 
 import static uk.gov.legislation.transform.TransformHelper.*;
 import static uk.gov.legislation.transform.TransformTest.CUTOFF;
-import static uk.gov.legislation.transform.TransformTest.provide;
+import static uk.gov.legislation.transform.TocTest.provide;
 
 public class TocTestRedo {
 
