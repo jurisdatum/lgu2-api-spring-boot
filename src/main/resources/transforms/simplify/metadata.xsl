@@ -98,6 +98,12 @@
         <xsl:when test="matches($fallback-id, '/(annexes|schedules)$')">
             <xsl:sequence select="/*/*/Schedules" />
         </xsl:when>
+        <xsl:when test="matches($fallback-id, '/attachments$')">
+            <!-- A document can have more than one Attachments element, but MarkLogic
+                 only returns the first. The [1] here documents that behavior and guards
+                 against future changes in MarkLogic. -->
+            <xsl:sequence select="/*/*/Attachments[1]" />
+        </xsl:when>
     </xsl:choose>
 </xsl:variable>
 
