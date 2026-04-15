@@ -3,17 +3,12 @@ package uk.gov.legislation.data.marklogic.impacts;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.marklogic.Error;
 import uk.gov.legislation.data.marklogic.MarkLogic;
+import uk.gov.legislation.exceptions.MarkLogicRequestException;
 import uk.gov.legislation.transform.simple.SimpleXmlMapper;
 
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamConstants;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
-import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PushbackInputStream;
-import java.nio.charset.StandardCharsets;
 import java.util.Optional;
 
 @Repository
@@ -27,33 +22,23 @@ public class Impacts {
         this.db = db;
     }
 
-    private static final XMLInputFactory factory = XMLInputFactory.newFactory();
-
-    boolean isError(String xml) throws IOException {
-        try (ByteArrayInputStream sample = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
-            XMLStreamReader reader = factory.createXMLStreamReader(sample);
-            try {
-                return reader.nextTag() == XMLStreamConstants.START_ELEMENT && "error".equals(reader.getLocalName());
-            } finally {
-                reader.close();
-            }
-        } catch (XMLStreamException e) {
-            return false;
-        }
-    }
-
     public Optional<String> getXml(int year, int number) throws IOException, InterruptedException {
         String query = "?impacttype=ukia&impactyear=%d&impactnumber=%d".formatted(year, number);
         String xml = db.get(ENDPOINT, query);
-        return isError(xml) ? Optional.empty() : Optional.of(xml);
+        Error.RootClassification classification = Error.classifyRoot(xml);
+        if (classification == Error.RootClassification.MALFORMED)
+            throw new MarkLogicRequestException("MarkLogic response is not well-formed XML");
+        return classification == Error.RootClassification.OTHER ? Optional.of(xml) : Optional.empty();
     }
 
     public Optional<InputStream> getStream(int year, int number) throws IOException, InterruptedException {
         String query = "?impacttype=ukia&impactyear=%d&impactnumber=%d".formatted(year, number);
         PushbackInputStream stream = db.getStream(ENDPOINT, query);
         try {
-            Optional<Error> maybeError = Error.parse(stream);
-            if (maybeError.isPresent()) {
+            Error.RootClassification classification = Error.classifyRoot(stream);
+            // classifyRoot on a PushbackInputStream never returns MALFORMED (see RootClassification),
+            // so != OTHER is equivalent to == ERROR here.
+            if (classification != Error.RootClassification.OTHER) {
                 stream.close();
                 return Optional.empty();
             }

@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.marklogic.Error;
 import uk.gov.legislation.data.marklogic.MarkLogic;
+import tools.jackson.core.JacksonException;
 import uk.gov.legislation.exceptions.DocumentFetchException;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 import uk.gov.legislation.exceptions.NoDocumentException;
@@ -131,35 +132,46 @@ public class Legislation {
             throw new DocumentFetchException("Failed to fetch document due to interruption", e);
         }
 
-        // test to see whether the XML is an <error> response
-        Error error;
-        try {
-            error = Error.parse(xml);
-        } catch (Exception e) {
-            // the XML was not an <error> response, so it's good CLML; return it
+        Error.RootClassification classification = Error.classifyRoot(xml);
+        if (classification == Error.RootClassification.MALFORMED)
+            throw new MarkLogicRequestException("MarkLogic response is not well-formed XML");
+        if (classification == Error.RootClassification.OTHER) {
             Optional<Redirect> redirect = Redirect.make(afterRedirect, params);
             return new Response(xml, redirect);
         }
-        // the response from MarkLogic was an <error>, so try to follow the redirect
-        return handleError(error, params);
+        Error error;
+        try {
+            error = Error.parse(xml);
+        } catch (JacksonException e) {
+            throw new MarkLogicRequestException("Failed to parse MarkLogic <error> payload", e);
+        }
+        return getAndFollowRedirect(buildRedirectParams(error, params), true);
     }
 
-    private Response handleError(Error error, Parameters oldParams) {
+    private Parameters buildRedirectParams(Error error, Parameters oldParams) {
         if (error.statusCode >= 400)
             throw new NoDocumentException(error);  // don't use error.toString()
-        if (!error.header.name.equals("Location"))
-            throw new MarkLogicRequestException("Error parsing MarkLogic error response");
-        String location = error.header.value;
+        String location = extractRedirectLocation(error);
         logger.debug("MarkLogic redirecting to {}", location);
         Links.Components comp = Links.parse(location);
         if (comp == null)
             throw new IllegalStateException("Invalid redirect location: " + location);
-        Parameters newParams = new Parameters(comp.type(), comp.year(), comp.number())
+        return new Parameters(comp.type(), comp.year(), comp.number())
             .version(comp.version())
             .view(oldParams.view())
             .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
             .lang(comp.language());
-        return getAndFollowRedirect(newParams, true);
+    }
+
+    private static String extractRedirectLocation(Error error) {
+        if (error.statusCode < 300)
+            throw new MarkLogicRequestException("Expected redirect status (3xx) but got " + error.statusCode);
+        if (error.header == null || !"Location".equals(error.header.name))
+            throw new MarkLogicRequestException("MarkLogic redirect <header> missing 'Location' name");
+        String location = error.header.value;
+        if (location == null || location.isEmpty())
+            throw new MarkLogicRequestException("MarkLogic redirect Location header is empty");
+        return location;
     }
 
     private StreamResponse getAndFollowRedirect2(Parameters params) {
@@ -185,14 +197,20 @@ public class Legislation {
     private StreamResponse handleStream(PushbackInputStream stream, Parameters params, boolean afterRedirect) {
         boolean keepOpen = false;
         try {
-            Optional<Error> maybeError = Error.parse(stream);
-            if (maybeError.isEmpty()) {
+            // classifyRoot on a PushbackInputStream never returns MALFORMED (see RootClassification),
+            // so the only non-OTHER result is ERROR.
+            Error.RootClassification classification = Error.classifyRoot(stream);
+            if (classification == Error.RootClassification.OTHER) {
                 keepOpen = true;
                 return new StreamResponse(stream, Redirect.make(afterRedirect, params));
             }
-            Parameters redirect = getNewParametersFromError(maybeError.get())
-                .view(params.view());
-            return getAndFollowRedirect2(redirect, true);
+            Error error;
+            try {
+                error = Error.parseAssumingError(stream);
+            } catch (IOException e) {
+                throw new MarkLogicRequestException("Failed to parse MarkLogic <error> stream", e);
+            }
+            return getAndFollowRedirect2(buildRedirectParams(error, params), true);
         } catch (IOException e) {
             throw new DocumentFetchException("Failed to fetch document due to I/O exception", e);
         } finally {
@@ -200,26 +218,9 @@ public class Legislation {
                 try {
                     stream.close();
                 } catch (IOException ignored) {
-                    // nothing else we can do
                 }
             }
         }
-    }
-
-    private Parameters getNewParametersFromError(Error error) {
-        if (error.statusCode >= 400)
-            throw new NoDocumentException(error);
-        if (!error.header.name.equals("Location"))
-            throw new MarkLogicRequestException("Error parsing MarkLogic error response");
-        String location = error.header.value;
-        logger.debug("MarkLogic redirecting to {}", location);
-        Links.Components comp = Links.parse(location);
-        if (comp == null)
-            throw new IllegalStateException("Invalid redirect location: " + location);
-        return new Parameters(comp.type(), comp.year(), comp.number())
-            .version(comp.version())
-            .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
-            .lang(comp.language());
     }
 
 }
