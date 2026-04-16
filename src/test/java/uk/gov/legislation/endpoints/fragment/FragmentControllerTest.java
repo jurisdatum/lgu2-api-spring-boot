@@ -13,6 +13,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.transform.Transforms;
 
 import java.io.ByteArrayInputStream;
@@ -37,6 +38,9 @@ class FragmentControllerTest {
 
     @MockitoBean
     private Transforms transforms;
+
+    @MockitoBean
+    private LegislationById legislationById;
 
     private static final String DOCX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
