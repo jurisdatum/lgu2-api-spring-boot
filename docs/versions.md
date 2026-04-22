@@ -48,7 +48,7 @@ The Java API `version` field is not the raw point-in-time date. It is the label 
 
 ## Java API Contract
 
-The Java API should expose `versions` on every metadata response, including versioned responses. That differs from the MCP server, which currently suppresses `versions` for some versioned tool responses.
+The Java API should expose `versions` on every metadata response, including versioned responses. The MCP server's metadata and table-of-contents responses now follow the same exposure rule, though MCP tool inputs remain a separate contract; see [MCP Note](#mcp-note).
 
 The Java API `versions` field is a list of version labels in the relevant scope:
 
@@ -449,12 +449,16 @@ For modern observed data, the XML is determinative enough to derive every versio
 
 ## MCP Note
 
-The MCP server follows the same core derivation rules, but its tool responses are not the Java API contract.
+The MCP server follows the same core derivation rules for metadata response fields:
 
-Current MCP deviations:
+- response `versions` is exposed for both unversioned and versioned metadata/table-of-contents responses
+- response `version` is the selected label of the returned representation, not the raw URL segment
+- `pointInTime` is exposed separately when the request URI contains an ISO date and the response is not final
 
-- MCP suppresses `versions` for some versioned tool responses.
-- MCP represents prospective state separately from the `versions` labels where possible.
-- Tool documentation warns that `version = "prospective"` is not a valid input parameter; when `prospective` appears in `versions`, callers should omit the `version` input to fetch that content.
+Remaining MCP-specific differences are tool-contract differences, not version-derivation differences:
 
-The Java API should treat this document, not the MCP tool-response shape, as canonical.
+- MCP tool input `version` still means the URL version segment to request, such as a first-version keyword or ISO date.
+- `version = "prospective"` is not a valid MCP input parameter; when `"prospective"` appears in response `versions`, callers should omit the `version` input to fetch that content.
+- MCP may expose helper fields such as `prospective`, and may suppress `unappliedEffects` and `upToDate` for versioned tool responses.
+
+The Java API should treat this document as canonical for derivation, and the MCP documentation should stay aligned with it.
