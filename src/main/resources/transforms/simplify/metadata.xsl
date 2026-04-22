@@ -29,6 +29,9 @@
         <xsl:apply-templates select="ukm:*/ukm:EnactmentDate" />
         <xsl:apply-templates select="ukm:*/ukm:Made" />
         <xsl:apply-templates select="ukm:*/ukm:DocumentClassification/ukm:DocumentStatus" />
+        <xsl:if test="$target/@Status = 'Prospective' or $target/self::P1/parent::P1group/@Status = 'Prospective'">
+            <prospective>true</prospective>
+        </xsl:if>
         <xsl:apply-templates select="dct:valid" />
         <xsl:apply-templates select="dc:title" />
         <xsl:call-template name="extent" />
@@ -237,6 +240,9 @@
 
 <xsl:template match="atom:link[@rel='http://purl.org/dc/terms/hasVersion']">
     <hasVersion>
+        <xsl:if test="@hreflang">
+            <xsl:attribute name="hreflang" select="@hreflang" />
+        </xsl:if>
         <xsl:value-of select="@title" />
     </hasVersion>
 </xsl:template>

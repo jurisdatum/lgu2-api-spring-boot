@@ -56,9 +56,7 @@ public class FragmentMetadataConverter {
         converted.descendants = simple.descendants();
         converted.fragmentInfo = converted.descendants.getFirst();
         converted.unappliedEffects = convertEffects(simple);
-        // Not sure we need the ("revised".equals(simple.status) || ("final".equals(simple.status) condition
-        if (("revised".equals(simple.status) || ("final".equals(simple.status) && simple.finalEffectsEnriched))
-                && simple.version().equals(simple.versions().getLast())) {
+        if (DocumentMetadataConverter.shouldComputeUpToDate(simple)) {
             if (converted.pointInTime == null)
                 UpToDate.setUpToDate(converted);
             else
