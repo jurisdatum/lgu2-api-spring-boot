@@ -38,8 +38,8 @@ public interface FragmentApi {
     )
     ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
-            @PathVariable @Year Integer year,
-            @PathVariable @Number Integer number,
+            @PathVariable @Year int year,
+            @PathVariable @Number int number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional<String> version,
             Locale locale);
@@ -149,6 +149,8 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
+
+    /* HEAD (existence check) */
 
     @RequestMapping(value = "/fragment/{type}/{year}/{number}/{section}", method = RequestMethod.HEAD)
     @Operation(summary = "check whether a document fragment exists (calendar year)")

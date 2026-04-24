@@ -25,6 +25,7 @@ import java.util.Optional;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.asyncDispatch;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.head;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(FragmentController.class)
@@ -472,6 +473,56 @@ class FragmentControllerTest {
             .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
+        verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("HEAD should return 200 when fragment exists")
+    void headShouldReturn200_whenFragmentExists() throws Exception {
+        when(legislationById.exists(type, year, number, section)).thenReturn(true);
+
+        mockMvc.perform(head("/fragment/ukla/2020/1/section-1"))
+            .andExpect(status().isOk());
+
+        verify(legislationById).exists(type, year, number, section);
+        verifyNoInteractions(marklogic);
+        verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("HEAD should return 404 when fragment does not exist")
+    void headShouldReturn404_whenFragmentDoesNotExist() throws Exception {
+        when(legislationById.exists(type, year, number, section)).thenReturn(false);
+
+        mockMvc.perform(head("/fragment/ukla/2020/1/section-1"))
+            .andExpect(status().isNotFound());
+
+        verify(legislationById).exists(type, year, number, section);
+        verifyNoInteractions(marklogic);
+        verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("HEAD should return 200 when fragment exists (regnal year)")
+    void headShouldReturn200_whenFragmentExistsWithMonarch() throws Exception {
+        when(legislationById.exists(type, regnalYear, number, section)).thenReturn(true);
+
+        mockMvc.perform(head("/fragment/ukla/Eliz1/2020/1/section-1"))
+            .andExpect(status().isOk());
+
+        verify(legislationById).exists(type, regnalYear, number, section);
+        verifyNoInteractions(marklogic);
+        verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("HEAD should return 400 for invalid document type")
+    void headShouldReturn400_forInvalidType() throws Exception {
+        mockMvc.perform(head("/fragment/invalid/2020/1/section-1"))
+            .andExpect(status().isBadRequest());
+
+        verifyNoInteractions(legislationById);
+        verifyNoInteractions(marklogic);
         verifyNoInteractions(transforms);
     }
 }

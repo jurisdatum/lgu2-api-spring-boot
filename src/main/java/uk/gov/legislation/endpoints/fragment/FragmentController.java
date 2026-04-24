@@ -29,8 +29,6 @@ public class FragmentController implements FragmentApi {
     private final Transforms transforms;
     private final LegislationById legislationById;
 
-
-
     public FragmentController(Legislation marklogic, Transforms transforms, LegislationById legislationById) {
         this.marklogic = marklogic;
         this.transforms = transforms;
@@ -48,7 +46,7 @@ public class FragmentController implements FragmentApi {
     };
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, Integer year, Integer number, String section,
+    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, int year, int number, String section,
             Optional<String> version, Locale locale) {
         return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
@@ -115,6 +113,8 @@ public class FragmentController implements FragmentApi {
         return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2docx, MS_WORD);
     }
 
+    /* HEAD (existence check) */
+
     @Override
     public ResponseEntity<Void> headFragment(String type, int year, int number, String section) {
         validateType(type);
@@ -133,7 +133,6 @@ public class FragmentController implements FragmentApi {
             ? ResponseEntity.ok().build()
             : ResponseEntity.notFound().build();
     }
-
 
     /* helper */
 
