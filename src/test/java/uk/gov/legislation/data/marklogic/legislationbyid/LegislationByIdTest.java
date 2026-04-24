@@ -2,6 +2,7 @@ package uk.gov.legislation.data.marklogic.legislationbyid;
 
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.data.marklogic.MarkLogic;
+import uk.gov.legislation.exceptions.DocumentFetchException;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -76,6 +77,21 @@ class LegislationByIdTest {
 
         // The '/' in the regnal year "Edw1/25" must be URL-encoded as "%2F"
         verify(db).get("legislation-by-id.xq", "?type=aep&year=Edw1%2F25&number=9&section=section-1");
+    }
+
+    @Test
+    void exists_throws_onUnexpectedStatusCode() throws Exception {
+        String response = """
+                <error xmlns="">
+                    <status-code>500</status-code>
+                    <message>Server error</message>
+                </error>
+                """;
+        when(db.get(eq("legislation-by-id.xq"), anyString())).thenReturn(response);
+
+        DocumentFetchException thrown = assertThrows(DocumentFetchException.class,
+            () -> legislationById.exists("ukpga", "2024", 1, "section-1-1"));
+        assertTrue(thrown.getMessage().contains("500"));
     }
 
 }
