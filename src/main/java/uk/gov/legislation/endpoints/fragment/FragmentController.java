@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.transform.Transforms;
 
@@ -26,10 +27,12 @@ public class FragmentController implements FragmentApi {
 
     private final Legislation marklogic;
     private final Transforms transforms;
+    private final LegislationById legislationById;
 
-    public FragmentController(Legislation marklogic, Transforms transforms) {
+    public FragmentController(Legislation marklogic, Transforms transforms, LegislationById legislationById) {
         this.marklogic = marklogic;
         this.transforms = transforms;
+        this.legislationById = legislationById;
     }
 
     /* CLML */
@@ -43,7 +46,7 @@ public class FragmentController implements FragmentApi {
     };
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, Integer year, Integer number, String section,
+    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, int year, int number, String section,
             Optional<String> version, Locale locale) {
         return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
     }
@@ -108,6 +111,27 @@ public class FragmentController implements FragmentApi {
     public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2docx, MS_WORD);
+    }
+
+    /* HEAD (existence check) */
+
+    @Override
+    public ResponseEntity<Void> headFragment(String type, int year, int number, String section) {
+        validateType(type);
+        boolean exists = legislationById.exists(type, Integer.toString(year), number, section);
+        return exists
+            ? ResponseEntity.ok().build()
+            : ResponseEntity.notFound().build();
+    }
+
+    @Override
+    public ResponseEntity<Void> headFragment(String type, String monarch, String years, int number, String section) {
+        validateType(type);
+        String regnalYear = String.join("/", monarch, years);
+        boolean exists = legislationById.exists(type, regnalYear, number, section);
+        return exists
+            ? ResponseEntity.ok().build()
+            : ResponseEntity.notFound().build();
     }
 
     /* helper */

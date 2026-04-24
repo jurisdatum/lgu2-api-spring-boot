@@ -6,9 +6,7 @@ import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.parameters.*;
 import uk.gov.legislation.api.parameters.Number;
@@ -40,8 +38,8 @@ public interface FragmentApi {
     )
     ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
-            @PathVariable @Year Integer year,
-            @PathVariable @Number Integer number,
+            @PathVariable @Year int year,
+            @PathVariable @Number int number,
             @PathVariable @Section String section,
             @RequestParam @Version Optional<String> version,
             Locale locale);
@@ -151,4 +149,23 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
+
+    /* HEAD (existence check) */
+
+    @RequestMapping(value = "/fragment/{type}/{year}/{number}/{section}", method = RequestMethod.HEAD)
+    @Operation(summary = "check whether a document fragment exists (calendar year)")
+    ResponseEntity<Void> headFragment(
+        @PathVariable @Type String type,
+        @PathVariable @Year int year,
+        @PathVariable @Number int number,
+        @PathVariable @Section String section);
+
+    @RequestMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", method = RequestMethod.HEAD)
+    @Operation(summary = "check whether a document fragment exists (regnal year)")
+    ResponseEntity<Void> headFragment(
+        @PathVariable @Type String type,
+        @PathVariable @Monarch String monarch,
+        @PathVariable @Years String years,
+        @PathVariable @Number int number,
+        @PathVariable @Section String section);
 }
