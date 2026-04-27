@@ -79,6 +79,7 @@ public class SearchController implements SearchApi {
     private static Parameters convert(SearchParameters params) {
         var builder = Parameters.builder()
             .type(params.getTypes())
+            .ukamended(params.getUkAmended())
             .year(params.getYear())
             .startYear(params.getStartYear())
             .endYear(params.getEndYear())

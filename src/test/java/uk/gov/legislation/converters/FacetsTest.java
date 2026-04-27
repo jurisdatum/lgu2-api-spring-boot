@@ -69,6 +69,43 @@ class FacetsTest {
     }
 
     @Test
+    @DisplayName("Should split ukamended qualifier out of the type string")
+    void testConvertTypeFacets_UkAmendedQualifier_SplitIntoSeparateField() {
+        SearchResults.FacetType plain = new SearchResults.FacetType();
+        plain.type = "EuropeanUnionRegulation";
+        plain.value = 124855;
+
+        SearchResults.FacetType amended = new SearchResults.FacetType();
+        amended.type = "EuropeanUnionRegulation|ukamended=true";
+        amended.value = 3683;
+
+        SearchResults.FacetType notAmended = new SearchResults.FacetType();
+        notAmended.type = "EuropeanUnionRegulation|ukamended=false";
+        notAmended.value = 121172;
+
+        SearchResults.FacetTypes facetTypes = new SearchResults.FacetTypes();
+        facetTypes.entries = List.of(plain, amended, notAmended);
+
+        List<PageOfDocuments.ByType> result = Facets.convertTypeFacets(facetTypes);
+
+        assertAll("ukamended split",
+            () -> assertEquals(3, result.size()),
+
+            () -> assertEquals("EuropeanUnionRegulation", result.get(0).type),
+            () -> assertNull(result.get(0).ukAmended),
+            () -> assertEquals(124855, result.get(0).count),
+
+            () -> assertEquals("EuropeanUnionRegulation", result.get(1).type),
+            () -> assertEquals(Boolean.TRUE, result.get(1).ukAmended),
+            () -> assertEquals(3683, result.get(1).count),
+
+            () -> assertEquals("EuropeanUnionRegulation", result.get(2).type),
+            () -> assertEquals(Boolean.FALSE, result.get(2).ukAmended),
+            () -> assertEquals(121172, result.get(2).count)
+        );
+    }
+
+    @Test
     @DisplayName("Should exclude filtered type 'UnitedKingdomDraftPublicBill'")
     void testConvertTypeFacets_FilteredType_ExcludesFilteredEntries() {
         SearchResults.FacetType entry1 = new SearchResults.FacetType();

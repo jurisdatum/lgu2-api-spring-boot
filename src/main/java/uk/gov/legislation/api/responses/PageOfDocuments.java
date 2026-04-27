@@ -72,6 +72,10 @@ public class PageOfDocuments {
         public String type;
 
         @Schema
+        @JsonInclude(JsonInclude.Include.NON_NULL)
+        public Boolean ukAmended;
+
+        @Schema
         public int count;
 
     }
