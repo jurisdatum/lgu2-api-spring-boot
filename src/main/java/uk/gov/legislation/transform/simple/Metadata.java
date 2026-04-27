@@ -1,9 +1,11 @@
 package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlText;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
@@ -20,7 +22,7 @@ public class Metadata {
     public String dcIdentifier;
 
     public Optional<LocalDate> getPointInTime() {
-        if ("final".equals(status))
+        if (FINAL.equals(status))
             return Optional.empty();
         Links.Components comps = Links.parse(dcIdentifier);
         if (comps == null)
@@ -75,54 +77,80 @@ public class Metadata {
 
     public LocalDate date;
 
+    /**
+     * {@code dct:valid}: valid-from date of the returned revised representation.
+     *
+     * <p>This is not necessarily the requested point-in-time from the URL, a version label, or a
+     * fragment milestone. For fragment responses it can be later than the selected fragment
+     * milestone when the fragment is served from a later revised representation.</p>
+     */
     private LocalDate valid;
     @JsonSetter("valid")
     public void setValid(String value) { valid = LocalDate.parse(value); }
 
-    private static Optional<LocalDate> tryParseDate(String s) {
-        try {
-            return Optional.of(LocalDate.parse(s));
-        } catch (DateTimeParseException e) {
-            return Optional.empty();
-        }
-    }
+    public static final String FINAL = "final";
+    public static final String REVISED = "revised";
 
     private static final String PROSPECTIVE = "prospective";
+    private static final String CURRENT = "current";
+    private static final String REPEALED = " repealed";
+
+    private String _computedVersion;
 
     /**
-     * Determines the most appropriate version label for the current payload.
+     * Label selected by the request.
      *
-     * <p>Rules applied in order:
-     * <ol>
-     * <li>No {@code dct:valid} → return the type-specific first-version label
-     *     (e.g. enacted, made, created, adopted).</li>
-     * <li>Scan {@link #versions()} from newest to oldest and pick the first ISO date available.
-     *     If none exist, fall back to either {@link #PROSPECTIVE} (when the current fragment is
-     *     marked {@code Status="Prospective"}) or the raw {@code dct:valid} string.</li>
-     * <li>If the fragment-level {@code dct:valid} is newer than the latest dated label
-     *     (typical for fragments lagging behind a whole-document revision), return that latest
-     *     dated label instead of the fragment {@code dct:valid}.</li>
-     * <li>Otherwise return the {@code dct:valid} value.</li>
-     * </ol>
+     * <p>{@code dct:valid} is the valid-from date of the returned revised representation and need
+     * not itself be a milestone. For ordinary revised responses, choose the latest emitted
+     * milestone that is not after that valid-from date. For prospective revised responses, use the
+     * label-only {@code prospective} value that mirrors legislation.gov.uk's timeline label.</p>
      */
-
     public String version() {
+        if (_computedVersion != null)
+            return _computedVersion;
+        _computedVersion = computeVersion();
+        return _computedVersion;
+    }
+
+    private String computeVersion() {
+        if (isProspectiveRevised())
+            return PROSPECTIVE;
         if (valid == null)
             return FirstVersion.getFirstVersion(longType);
-        Optional<LocalDate> last = versions().reversed().stream()
-            .map(Metadata::tryParseDate)
-            .filter(Optional::isPresent)
-            .map(Optional::get)
-            .findFirst();
-        if (last.isEmpty())
-            return descendants.stream()  // first entry mirrors the current level; see descendants() doc
-                .findFirst()
-                .filter(d -> "Prospective".equals(d.status)).isPresent()
-                ? PROSPECTIVE
-                : valid.toString();
-        if (valid.isAfter(last.get()))
-            return last.get().toString();
-        return valid.toString();
+        String selected = latestEligibleMilestoneNotAfter(valid);
+        // A null result means the normalised version set contains no first-version keyword and no
+        // dated milestone on or before dct:valid. The response is still a revised snapshot valid
+        // from dct:valid, so dct:valid is the only value we have that identifies the returned
+        // revision.
+        return selected == null ? valid.toString() : selected;
+    }
+
+    /**
+     * Selects the latest milestone in {@link #versions()} that can describe a revised snapshot
+     * valid from {@code dctValid}.
+     *
+     * <p>{@link #versions()} returns labels sorted by {@link Versions#COMPARATOR}: first-version
+     * keywords first, then ISO dates chronologically, then {@code prospective}. This method walks
+     * that set and keeps replacing {@code selected} when it sees an eligible label: the
+     * type-specific first-version keyword, or an ISO date that is not after {@code dctValid}.
+     * Non-date labels such as {@code prospective} are skipped. Because the scan is ordered, the
+     * value left in {@code selected} at the end is the latest eligible milestone.</p>
+     */
+    private String latestEligibleMilestoneNotAfter(LocalDate dctValid) {
+        String firstVersion = FirstVersion.getFirstVersion(longType);
+        String selected = null;
+        for (String label : versions()) {
+            if (label.equals(firstVersion)) {
+                selected = label;
+                continue;
+            }
+            try {
+                LocalDate milestone = LocalDate.parse(label);
+                if (!milestone.isAfter(dctValid))
+                    selected = label;
+            } catch (DateTimeParseException ignored) {}
+        }
+        return selected;
     }
 
     public String status;
@@ -141,70 +169,152 @@ public class Metadata {
 
     public LocalDate modified;
 
-    private List<String> _versions;
+    /**
+     * A single {@code <hasVersion>} entry, carrying the source link's {@code hreflang} attribute
+     * so language-aware filtering can tell Welsh links apart from English ones in bilingual XML.
+     */
+    public static class HasVersionEntry {
+
+        /**
+         * BCP 47 language tag of the source {@code atom:link} ({@code "en"} or {@code "cy"}),
+         * or {@code null} when the link carries no {@code @hreflang}. Untagged entries apply to
+         * both languages.
+         */
+        @JacksonXmlProperty(isAttribute = true)
+        public String hreflang;
+
+        /**
+         * The milestone label from the source link's {@code @title}. Either an ISO date
+         * ({@code "2024-11-22"}), a first-version keyword ({@code "enacted"}, {@code "made"},
+         * {@code "created"}, {@code "adopted"}), the {@code "current"} alias for the latest
+         * snapshot, a literal {@code "prospective"}, or a dated-and-repealed label
+         * ({@code "2020-12-31 repealed"}) which is normalised back to its base date by
+         * {@link #versions()}.
+         */
+        @JacksonXmlText
+        public String title;
+
+        public static HasVersionEntry of(String hreflang, String title) {
+            HasVersionEntry entry = new HasVersionEntry();
+            entry.hreflang = hreflang;
+            entry.title = title;
+            return entry;
+        }
+    }
+
+    private List<HasVersionEntry> _versions;
 
     @JacksonXmlElementWrapper(localName = "hasVersions")
     @JacksonXmlProperty(localName = "hasVersion")
     @JsonSetter
-    public void setVersions(List<String> value) { _versions = value; }
+    public void setVersions(List<HasVersionEntry> value) { _versions = value; }
 
-    private TreeSet<String> _versions2;
-
-    private static final String REPEALED = " repealed";
+    private TreeSet<String> _computedVersions;
 
     /**
-     * Produces a normalised, ordered set of version labels for this document or fragment.
+     * Normalised, ordered version labels available in this response's scope.
      *
-     * <p>Behavioural notes:
-     * <ul>
-     * <li>Start from the titles supplied via {@code atom:link[@rel='…hasVersion']}.</li>
-     * <li>Strip the noisy {@code current} marker and, when present, substitute the appropriate
-     *     fallback:
-     *     <ul>
-     *     <li>If {@link #status} is {@code final} and no other labels remain, assume a
-     *         prospective snapshot exists and inject {@link #PROSPECTIVE}.</li>
-     *     <li>Otherwise re-add the authoritative {@code dct:valid} date for this snapshot
-     *         (unless {@link #version()} already resolved to {@link #PROSPECTIVE}).</li>
-     *     </ul>
-     * </li>
-     * <li>Always ensure the type-specific first-version label is present for {@code final}
-     *     documents.</li>
-     * <li>Normalise any trailing {@code "… repealed"} markers back to their base date.</li>
-     * <li>If {@link #version()} resolved to {@link #PROSPECTIVE}, add it once so the scalar and
-     *     set stay in sync.</li>
-     * </ul>
+     * <p>The scope is the thing requested: whole-document responses expose document milestones;
+     * fragment responses expose fragment milestones. In bilingual XML, the scope is further
+     * narrowed to links for the response language, plus untagged links. The returned
+     * {@code dct:valid} date is not automatically in this scope; for a fragment it may identify a
+     * containing-document snapshot rather than a fragment milestone.</p>
      *
-     * @return version labels sorted by {@link Versions#COMPARATOR}
+     * <p>The method first builds the scoped label set from {@code hasVersion} links, then removes
+     * unstable aliases, and finally repairs the few cases where legislation.gov.uk omits a label
+     * that the API still needs to expose.</p>
+     *
+     * <ol>
+     *   <li>Keep {@code hasVersion} entries whose {@code hreflang} matches the response language,
+     *       plus any untagged entries.</li>
+     *   <li>Strip the trailing {@code " repealed"} suffix.</li>
+     *   <li>Remove the {@code current} alias; remember whether it was present and whether it was
+     *       the only retained link.</li>
+     *   <li>For {@code final} status, ensure the type-specific first-version keyword is present.</li>
+     *   <li>For {@code final} XML where {@code current} was the only retained entry, synthesise a
+     *       label-only {@code prospective} entry.</li>
+     *   <li>For prospective revised content, synthesise a label-only {@code prospective}
+     *       entry.</li>
+     *   <li>Otherwise, when {@code current} was present alongside {@code dct:valid}, add that date
+     *       if it identifies the returned representation in this scope: always for whole-document
+     *       responses, and for fragment responses only when no other dated fragment labels remain.</li>
+     * </ol>
      */
     public SortedSet<String> versions() {
-        if (_versions2 != null)
-            return _versions2;
-        _versions2 = new TreeSet<>(Versions.COMPARATOR);
-        _versions2.addAll(_versions);
-        if (_versions2.remove("current")) {
-            if ("final".equals(status)) {
-                if (_versions2.isEmpty())
-                    _versions2.add(PROSPECTIVE);
-            } else {
-                if (!PROSPECTIVE.equals(version()) && this.valid != null) // should never be null if !"final".equals(status)
-                    _versions2.add( this.valid.toString());
-            }
+        if (_computedVersions != null)
+            return _computedVersions;
+        if (_versions == null)
+            _versions = List.of();
+        TreeSet<String> result = new TreeSet<>(Versions.COMPARATOR);
+        for (HasVersionEntry entry : _versions) {
+            if (!matchesResponseLanguage(entry.hreflang))
+                continue;
+            result.add(stripRepealed(entry.title));
         }
-        if ("final".equals(status)) {
-            String first = FirstVersion.getFirstVersion(longType);
-            _versions2.add(first);
-        }
-        if (!_versions2.isEmpty()) {
-            String last = _versions2.last();
-            if (last.endsWith(REPEALED)) {
-                _versions2.pollLast();
-                String base = last.substring(0, last.length() - REPEALED.length());
-                _versions2.add(base);
-            }
-        }
-        if (PROSPECTIVE.equals(version()))
-            _versions2.add(PROSPECTIVE);
-        return _versions2;
+        boolean hadCurrent = result.remove(CURRENT);
+        boolean onlyCurrent = hadCurrent && result.isEmpty();
+        boolean isFinal = FINAL.equals(status);
+        if (isFinal)
+            result.add(FirstVersion.getFirstVersion(longType));
+        if (isFinal && onlyCurrent)
+            result.add(PROSPECTIVE);
+        if (isProspectiveRevised())
+            result.add(PROSPECTIVE);
+        else if (!isFinal && valid != null && shouldRecoverValidDate(hadCurrent, result))
+            result.add(valid.toString());
+        _computedVersions = result;
+        return _computedVersions;
+    }
+
+    /**
+     * Whether {@code dct:valid} should be added to {@link #versions()} as a recovered label.
+     *
+     * <p>Stripping the {@code current} alias can leave the result set with no label identifying
+     * the returned representation. {@code dct:valid} is the valid-from date of that
+     * representation, so using it as a label recovers the identity that was lost — but only when
+     * {@code current} was actually present in the scoped input; otherwise there is nothing to
+     * recover.</p>
+     *
+     * <p>The whole-document vs fragment asymmetry: a whole-document response's {@code dct:valid}
+     * identifies the returned document snapshot, so when {@code current} was stripped we recover
+     * it as the missing document label. A fragment response's {@code dct:valid} may be a
+     * containing-document snapshot date rather than a fragment milestone, so we recover it only
+     * when no other dated fragment label is already present — i.e. as a last-resort label when
+     * fragment-specific milestones are unavailable.</p>
+     */
+    private boolean shouldRecoverValidDate(boolean hadCurrent, SortedSet<String> labels) {
+        if (!hadCurrent)
+            return false;
+        return isWholeDocument() || !hasDatedLabel(labels);
+    }
+
+    private boolean isProspectiveRevised() {
+        return prospective && REVISED.equals(status);
+    }
+
+    private static boolean hasDatedLabel(SortedSet<String> labels) {
+        for (String s : labels)
+            if (Versions.isDateLabel(s))
+                return true;
+        return false;
+    }
+
+    /**
+     * True when the payload is a whole-document response rather than a fragment response.
+     * {@code simplify/metadata.xsl} only emits the {@code <fragment>} element (from which
+     * {@link #fragment} is populated) when the {@code is-fragment} parameter is true, so a null
+     * {@code fragment} uniquely indicates a whole-document request.
+     */
+    private boolean isWholeDocument() {
+        return fragment == null;
+    }
+
+    private boolean matchesResponseLanguage(String hreflang) {
+        return hreflang == null || lang == null || lang.equals(hreflang);
+    }
+
+    private static String stripRepealed(String title) {
+        return title.endsWith(REPEALED) ? title.substring(0, title.length() - REPEALED.length()) : title;
     }
 
     @JacksonXmlProperty
@@ -330,14 +440,31 @@ public class Metadata {
 
     public static class Descendant extends Level {}
 
+    /**
+     * Descendants of the current payload. Only populated for fragment requests.
+     *
+     * <p>By convention of {@code simplify/metadata.xsl}, the first entry describes the target
+     * fragment itself; {@link uk.gov.legislation.converters.FragmentMetadataConverter} relies on
+     * that to populate {@code fragmentInfo}.
+     */
     @JacksonXmlProperty(localName = "descendants")
     private List<Descendant> descendants = Collections.emptyList();
-
-    /* simplify/metadata.xsl places the current fragment as the first descendant; version() relies on that. */
 
     public List<uk.gov.legislation.api.responses.Level> descendants() {
         return descendants.stream().map(Level::convert).toList();
     }
+
+    /**
+     * True when the target element carries {@code Status="Prospective"}.
+     *
+     * <p>Set by {@code simplify/metadata.xsl} from the target's {@code @Status} attribute —
+     * the root {@code <Legislation>} for whole-document requests, or the fragment element for
+     * fragment requests. Drives the "add {@code prospective} to versions" rule for prospective
+     * revised content.
+     */
+    @JacksonXmlProperty
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    public boolean prospective;
 
     /* unapplied effects */
 

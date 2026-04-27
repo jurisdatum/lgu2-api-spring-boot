@@ -35,15 +35,33 @@ public class DocumentMetadataConverter {
             .map(EffectsFeedConverter::convertEffect).toList();
         if ("cy".equals(simple.lang))
             simplifyWelshEffects(converted.unappliedEffects);
-        // Not sure we need the ("revised".equals(simple.status) || ("final".equals(simple.status) condition
-        if (("revised".equals(simple.status) || ("final".equals(simple.status) && simple.finalEffectsEnriched))
-                && simple.version().equals(simple.versions().getLast())) {
+        if (shouldComputeUpToDate(simple)) {
             if (converted.pointInTime == null)
                 UpToDate.setUpToDate(converted);
             else
                 UpToDate.setUpToDate(converted, converted.pointInTime);
         }
         converted.altFormats = AlternateFormatConverter.convert(simple.alternatives);
+    }
+
+    static boolean shouldComputeUpToDate(Metadata simple) {
+        if (!isLatestVersion(simple))
+            return false;
+        if (Metadata.FINAL.equals(simple.status))
+            return simple.finalEffectsEnriched;
+        return Metadata.REVISED.equals(simple.status);
+    }
+
+    /**
+     * Latest-version predicate.
+     *
+     * <p>A payload is considered the latest iff the milestone selected by the request is the last
+     * milestone exposed in {@link Metadata#versions()}. The payload point-in-time may be later than
+     * that milestone, especially for fragments that have not changed at the document snapshot date.
+     */
+    private static boolean isLatestVersion(Metadata simple) {
+        var versions = simple.versions();
+        return !versions.isEmpty() && versions.last().equals(simple.version());
     }
 
     static void convertCommon(Metadata simple, CommonMetadata converted) {

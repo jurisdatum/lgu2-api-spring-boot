@@ -30,11 +30,11 @@ class UnappliedEffectsFetcherTest {
 
     private static Metadata createFinalMetadata() {
         Metadata m = new Metadata();
-        m.status = "final";
+        m.status = Metadata.FINAL;
         m.longType = "UnitedKingdomPublicGeneralAct";
         m.year = 2024;
         m.number = 10;
-        m.setVersions(List.of("enacted"));
+        m.setVersions(List.of(Metadata.HasVersionEntry.of(null, "enacted")));
         return m;
     }
 
@@ -60,12 +60,27 @@ class UnappliedEffectsFetcherTest {
     @Test
     void skipsRevisedStatus() {
         Metadata m = new Metadata();
-        m.status = "revised";
+        m.status = Metadata.REVISED;
         m.longType = "UnitedKingdomPublicGeneralAct";
         m.year = 2024;
         m.number = 10;
 
         fetcher.fetchIfNeeded(m);
+
+        assertFalse(m.finalEffectsEnriched);
+        assertEquals(Collections.emptyList(), m.rawEffects);
+        verifyNoInteractions(changes);
+    }
+
+    @Test
+    void skipsUnknownTypeBeforeVersionCheck() {
+        Metadata m = new Metadata();
+        m.status = Metadata.FINAL;
+        m.longType = "UnknownType";
+        m.year = 2024;
+        m.number = 10;
+
+        assertDoesNotThrow(() -> fetcher.fetchIfNeeded(m));
 
         assertFalse(m.finalEffectsEnriched);
         assertEquals(Collections.emptyList(), m.rawEffects);

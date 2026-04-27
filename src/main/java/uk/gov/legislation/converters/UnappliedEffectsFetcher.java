@@ -34,16 +34,15 @@ public class UnappliedEffectsFetcher {
      * {@code simple.rawEffects}. For all other documents, does nothing.
      */
     public void fetchIfNeeded(Metadata simple) {
-        if (!"final".equals(simple.status))
+        if (!Metadata.FINAL.equals(simple.status))
             return;
-        if (!simple.version().equals(simple.versions().getLast()))
-            return;
-
         String shortType = Types.longToShort(simple.longType);
         if (shortType == null) {
             logger.debug("skipping effects fetch: unknown type {}", simple.longType);
             return;
         }
+        if (!simple.versions().last().equals(simple.version()))
+            return;
         if (simple.number == null) {
             logger.debug("skipping effects fetch: no number for {} {}", simple.longType, simple.year);
             return;
