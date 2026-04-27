@@ -9,6 +9,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Clml2Pdf;
@@ -39,6 +40,9 @@ class FragmentVersioningTest {
 
     @MockitoBean
     private Legislation marklogic;
+
+    @MockitoBean
+    private LegislationById legislationById;
 
     @MockitoBean
     private Clml2Docx clml2Docx;
