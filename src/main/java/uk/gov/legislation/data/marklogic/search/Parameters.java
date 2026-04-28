@@ -12,6 +12,8 @@ public class Parameters extends AbstractParameters {
 
     public String type;
 
+    public Boolean ukamended;
+
     public Integer year;
 
     public Integer startYear;
@@ -109,6 +111,11 @@ public class Parameters extends AbstractParameters {
             } else {
                 params.type = String.join("+", types);
             }
+            return this;
+        }
+
+        public Builder ukamended(Boolean ukamended) {
+            params.ukamended = ukamended;
             return this;
         }
 

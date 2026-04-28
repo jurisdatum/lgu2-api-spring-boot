@@ -20,8 +20,18 @@ public class Facets {
 
     private static PageOfDocuments.ByType make1(SearchResults.FacetType atom) {
         PageOfDocuments.ByType byType = new PageOfDocuments.ByType();
-        byType.type = atom.type;
         byType.count = atom.value;
+        int pipe = atom.type == null ? -1 : atom.type.indexOf('|');
+        if (pipe < 0) {
+            byType.type = atom.type;
+        } else {
+            byType.type = atom.type.substring(0, pipe);
+            String qualifier = atom.type.substring(pipe + 1);
+            if ("ukamended=true".equals(qualifier))
+                byType.ukAmended = Boolean.TRUE;
+            else if ("ukamended=false".equals(qualifier))
+                byType.ukAmended = Boolean.FALSE;
+        }
         return byType;
     }
 

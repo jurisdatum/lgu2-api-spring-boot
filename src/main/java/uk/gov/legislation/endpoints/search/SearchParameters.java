@@ -23,6 +23,7 @@ import java.util.Set;
 public class SearchParameters {
 
     private List<String> types;
+    private Boolean ukAmended;
     private Integer year;
     private Integer startYear;
     private Integer endYear;
@@ -49,6 +50,15 @@ public class SearchParameters {
 
     public void setType(List<String> types) {
         this.types = types;
+    }
+
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public Boolean getUkAmended() {
+        return ukAmended;
+    }
+
+    public void setUkAmended(Boolean ukAmended) {
+        this.ukAmended = ukAmended;
     }
 
     @Year
