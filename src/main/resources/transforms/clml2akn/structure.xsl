@@ -217,26 +217,38 @@
 	</xsl:for-each>
 </xsl:function>
 
-<xsl:function name="local:get-intro-elements" as="element()*">
-	<xsl:param name="children" as="element()*" />
-	<xsl:if test="exists($children)">
-		<xsl:variable name="first-child" as="element()" select="$children[1]" />
-		<xsl:if test="not(local:element-is-structural($first-child))">
-			<xsl:sequence select="($first-child, local:get-intro-elements(subsequence($children, 2)))" />
-		</xsl:if>
-	</xsl:if>
-</xsl:function>
+	<!-- OPTIMIZED: single-pass index detection -->
+	<xsl:function name="local:get-intro-elements" as="element()*">
+		<xsl:param name="children" as="element()*"/>
+		<!-- Find first structural position ONCE -->
+		<xsl:variable name="first-struct-pos" as="xs:integer?">
+			<xsl:sequence select="
+            (for $i in 1 to count($children)
+             return if (local:element-is-structural($children[$i])) then $i else ())[1] "/>
+		</xsl:variable>
+		<!-- If no structural elements → all are intro -->
+		<xsl:sequence select="
+        if (empty($first-struct-pos))
+        then $children
+        else $children[position() lt $first-struct-pos]" />
+	</xsl:function>
 
-<xsl:function name="local:get-wrapup-elements" as="element()*">
-	<xsl:param name="children" as="element()*" />
-	<xsl:if test="exists($children)">
-		<xsl:variable name="last-child" as="element()" select="$children[last()]" />
-		<xsl:if test="not(local:element-is-structural($last-child))">
-			<xsl:sequence select="(local:get-wrapup-elements($children[position() lt last()]), $last-child)" />
-		</xsl:if>
-	</xsl:if>
-</xsl:function>
 
+	<!-- OPTIMIZED: avoids repeated sibling traversal -->
+	<xsl:function name="local:get-wrapup-elements" as="element()*">
+		<xsl:param name="children" as="element()*"/>
+		<!-- Find last structural position ONCE -->
+		<xsl:variable name="last-struct-pos" as="xs:integer?">
+			<xsl:sequence select="
+            (for $i in reverse(1 to count($children))
+             return if (local:element-is-structural($children[$i])) then $i else ())[1] "/>
+		</xsl:variable>
+		<!-- If no structural elements → no wrapup -->
+		<xsl:sequence select="
+        if (empty($last-struct-pos))
+        then ()
+        else $children[position() gt $last-struct-pos] "/>
+	</xsl:function>
 <xsl:function name="local:children-must-be-divided" as="xs:boolean">
 	<xsl:param name="children" as="element()*" />
 	<xsl:param name="found-first-structural-child" as="xs:boolean" />
@@ -338,22 +350,25 @@
 	</xsl:if>
 </xsl:template>
 
-<xsl:template name="handle-one-group-of-children">
-	<xsl:param name="children" as="element()+" />
-	<xsl:variable name="intro" as="element()*" select="local:get-intro-elements($children)" />
-	<xsl:variable name="wrapup" as="element()*" select="local:get-wrapup-elements($children)" />
-	<xsl:if test="exists($intro)">
-		<intro>
-			<xsl:apply-templates select="$intro" />
-		</intro>
-	</xsl:if>
-	<xsl:apply-templates select="$children except $intro except $wrapup" />
-	<xsl:if test="exists($wrapup)">
-		<wrapUp>
-			<xsl:apply-templates select="$wrapup" />
-		</wrapUp>
-	</xsl:if>
-</xsl:template>
+	<xsl:template name="handle-one-group-of-children">
+		<xsl:param name="children" as="element()+" />
+		<!-- OPT: compute ONCE (already was, but now cheaper functions) -->
+		<xsl:variable name="intro" select="local:get-intro-elements($children)" />
+		<xsl:variable name="wrapup" select="local:get-wrapup-elements($children)" />
+		<xsl:if test="exists($intro)">
+			<intro>
+				<xsl:apply-templates select="$intro" />
+			</intro>
+		</xsl:if>
+		<!-- OPT COMMENT:
+             previously multiple sequence scans; now reused variables -->
+		<xsl:apply-templates select="$children except $intro except $wrapup" />
+		<xsl:if test="exists($wrapup)">
+			<wrapUp>
+				<xsl:apply-templates select="$wrapup" />
+			</wrapUp>
+		</xsl:if>
+	</xsl:template>
 
 <xsl:template name="hcontainer-body">
 	<xsl:choose>
