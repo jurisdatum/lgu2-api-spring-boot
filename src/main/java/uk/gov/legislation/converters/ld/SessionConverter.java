@@ -1,9 +1,11 @@
 package uk.gov.legislation.converters.ld;
 
+import static uk.gov.legislation.converters.ld.LDConverter.extractDateAtEndOfUri;
+import static uk.gov.legislation.converters.ld.LDConverter.extractIntegerAtEndOfUri;
+import static uk.gov.legislation.converters.ld.LDConverter.extractLastComponentOfUri;
+
 import uk.gov.legislation.api.responses.ld.Session;
 import uk.gov.legislation.data.virtuoso.jsonld.SessionLD;
-
-import static uk.gov.legislation.converters.ld.LDConverter.*;
 
 public class SessionConverter {
     public static Session convert(SessionLD ld) {

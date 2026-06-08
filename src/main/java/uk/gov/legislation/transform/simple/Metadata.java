@@ -3,6 +3,14 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import java.net.URI;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlText;
@@ -10,11 +18,6 @@ import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.FirstVersion;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.Versions;
-
-import java.net.URI;
-import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
-import java.util.*;
 
 public class Metadata {
 

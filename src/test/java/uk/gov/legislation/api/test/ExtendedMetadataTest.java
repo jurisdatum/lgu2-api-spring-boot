@@ -1,5 +1,15 @@
 package uk.gov.legislation.api.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.readClml;
+import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.readJson;
+import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.readSimpleXml;
+import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.simplify;
+import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.toJson;
+
+import java.io.IOException;
+import java.util.stream.Stream;
+import javax.xml.transform.TransformerException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -7,13 +17,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.transform.simple.Simplify;
-
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static uk.gov.legislation.api.test.ExtendedMetadataTestRedo.*;
 
 @SpringBootTest(classes = Application.class)
 class ExtendedMetadataTest {

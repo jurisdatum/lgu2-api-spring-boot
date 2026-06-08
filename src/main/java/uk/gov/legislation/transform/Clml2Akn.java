@@ -1,10 +1,5 @@
 package uk.gov.legislation.transform;
 
-import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,6 +7,17 @@ import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import net.sf.saxon.s9api.Destination;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.Serializer;
+import net.sf.saxon.s9api.XdmDestination;
+import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XsltCompiler;
+import net.sf.saxon.s9api.XsltExecutable;
+import net.sf.saxon.s9api.XsltTransformer;
+import org.springframework.stereotype.Service;
 
 @Service
 public class Clml2Akn {

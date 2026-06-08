@@ -1,19 +1,19 @@
 package uk.gov.legislation.converters.ld;
 
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
-import uk.gov.legislation.api.responses.ld.ClassResponse;
-import uk.gov.legislation.data.virtuoso.jsonld.ClassLD;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.net.URI;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
+import uk.gov.legislation.api.responses.ld.ClassResponse;
+import uk.gov.legislation.data.virtuoso.jsonld.ClassLD;
 
  class ClassConverterTest {
 

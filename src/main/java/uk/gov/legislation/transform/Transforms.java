@@ -1,12 +1,23 @@
 package uk.gov.legislation.transform;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UncheckedIOException;
+import java.nio.charset.StandardCharsets;
 import net.sf.saxon.s9api.Destination;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.s9api.XsltTransformer;
 import org.springframework.stereotype.Service;
 import tools.jackson.core.JacksonException;
-import uk.gov.legislation.api.responses.*;
+import uk.gov.legislation.api.responses.Document;
+import uk.gov.legislation.api.responses.DocumentMetadata;
+import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.api.responses.FragmentMetadata;
+import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.converters.DocumentMetadataConverter;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.converters.TableOfContentsConverter;
@@ -16,9 +27,6 @@ import uk.gov.legislation.transform.clml2docx.Clml2Docx;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
-
-import java.io.*;
-import java.nio.charset.StandardCharsets;
 
 @Service
 public class Transforms {

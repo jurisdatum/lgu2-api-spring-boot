@@ -1,5 +1,12 @@
 package uk.gov.legislation.converters.ld;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import java.net.URI;
+import java.time.ZonedDateTime;
+import java.util.List;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -7,13 +14,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import uk.gov.legislation.api.responses.ld.DataSet;
 import uk.gov.legislation.data.virtuoso.jsonld.DatasetLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ValueAndType;
-
-import java.net.URI;
-import java.time.ZonedDateTime;
-import java.util.List;
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
  class DataSetConverterTest {
 

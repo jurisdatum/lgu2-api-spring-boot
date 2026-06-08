@@ -113,7 +113,7 @@
 						<arg>--should-stop=ifError=FLOW</arg>
 						<!-- JavaLangClash off: Number/Error/Package are deliberate domain class names. -->
 						<!-- EmptyBlockTag off: bare @throws tags (e.g. @throws IOException) are legitimate javadoc. -->
-						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF -Xep:EmptyBlockTag:OFF -Xep:FieldCanBeFinal:WARN -Xep:PatternMatchingInstanceof:WARN</arg>
+						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF -Xep:EmptyBlockTag:OFF -Xep:FieldCanBeFinal:WARN -Xep:PatternMatchingInstanceof:WARN -Xep:WildcardImport:WARN</arg>
 					</compilerArgs>
 					<annotationProcessorPaths>
 						<path>

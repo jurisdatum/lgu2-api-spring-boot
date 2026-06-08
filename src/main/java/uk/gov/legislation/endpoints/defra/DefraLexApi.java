@@ -1,13 +1,19 @@
 package uk.gov.legislation.endpoints.defra;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
+import java.util.concurrent.CompletionStage;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.DefraChapter;
+import uk.gov.legislation.api.parameters.DefraExtent;
+import uk.gov.legislation.api.parameters.DefraRegulator;
+import uk.gov.legislation.api.parameters.DefraReviewYear;
+import uk.gov.legislation.api.parameters.DefraSource;
+import uk.gov.legislation.api.parameters.DefraSubject;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Year;
 import uk.gov.legislation.data.virtuoso.defra.Response;
-
-import java.util.concurrent.CompletionStage;
 
 @Tag(name = "Linked Data")
 @RequestMapping("/defra")

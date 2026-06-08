@@ -1,11 +1,14 @@
 package uk.gov.legislation.transform.simple;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.transform.TransformHelper;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConfersPowerTest {
 

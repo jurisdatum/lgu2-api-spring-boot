@@ -1,14 +1,18 @@
 package uk.gov.legislation.converters;
 
+import java.util.Collections;
+import java.util.List;
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.meta.AssociatedDocument;
 import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.util.*;
-
-import java.util.Collections;
-import java.util.List;
+import uk.gov.legislation.util.Cites;
+import uk.gov.legislation.util.EffectsComparator;
+import uk.gov.legislation.util.ISBN;
+import uk.gov.legislation.util.Type;
+import uk.gov.legislation.util.Types;
+import uk.gov.legislation.util.UpToDate;
 
 public class DocumentMetadataConverter {
 

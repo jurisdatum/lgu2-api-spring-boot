@@ -1,12 +1,15 @@
 package uk.gov.legislation.converters;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Collections;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.transform.simple.Metadata;
-
-import java.util.*;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DocumentMetadataConverterTest {
 

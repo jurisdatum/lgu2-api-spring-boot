@@ -1,5 +1,15 @@
 package uk.gov.legislation.converters;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verifyNoInteractions;
+import static org.mockito.Mockito.when;
+
+import java.util.Collections;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -7,14 +17,10 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import uk.gov.legislation.data.marklogic.changes.Changes;
 import uk.gov.legislation.transform.simple.Metadata;
-import uk.gov.legislation.transform.simple.effects.*;
-
-import java.util.Collections;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
+import uk.gov.legislation.transform.simple.effects.Effect;
+import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
+import uk.gov.legislation.transform.simple.effects.Entry;
+import uk.gov.legislation.transform.simple.effects.Page;
 
 @ExtendWith(MockitoExtension.class)
 class UnappliedEffectsFetcherTest {

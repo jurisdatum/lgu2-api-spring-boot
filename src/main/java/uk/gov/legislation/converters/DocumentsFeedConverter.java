@@ -1,15 +1,22 @@
 package uk.gov.legislation.converters;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+import java.util.SortedSet;
+import java.util.TreeSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import uk.gov.legislation.api.responses.CommonMetadata;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.SearchParameters;
-import uk.gov.legislation.util.*;
-
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
+import uk.gov.legislation.util.Cites;
+import uk.gov.legislation.util.ISBN;
+import uk.gov.legislation.util.Links;
+import uk.gov.legislation.util.Type;
+import uk.gov.legislation.util.Types;
 
 public class DocumentsFeedConverter {
 

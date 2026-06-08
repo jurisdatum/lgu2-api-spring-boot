@@ -1,9 +1,10 @@
 package uk.gov.legislation.converters;
 
-import org.junit.jupiter.api.Test;
-import uk.gov.legislation.api.responses.PageOfDocuments;
-import uk.gov.legislation.data.marklogic.search.SearchResults;
-import uk.gov.legislation.endpoints.search.SearchParameters;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
@@ -11,8 +12,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
+import uk.gov.legislation.endpoints.search.SearchParameters;
 
 class DocumentsFeedConverterTest {
 

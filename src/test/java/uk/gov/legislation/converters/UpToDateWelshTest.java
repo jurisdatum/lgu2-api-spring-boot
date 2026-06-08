@@ -1,15 +1,15 @@
 package uk.gov.legislation.converters;
 
-import org.junit.jupiter.api.Test;
-import uk.gov.legislation.api.responses.DocumentMetadata;
-import uk.gov.legislation.api.responses.Effect;
-import uk.gov.legislation.util.UpToDate;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import uk.gov.legislation.api.responses.DocumentMetadata;
+import uk.gov.legislation.api.responses.Effect;
+import uk.gov.legislation.util.UpToDate;
 
 /**
  * Tests that the Welsh simplification in the converter correctly overwrites
