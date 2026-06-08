@@ -112,7 +112,8 @@
 						<arg>-XDcompilePolicy=simple</arg>
 						<arg>--should-stop=ifError=FLOW</arg>
 						<!-- JavaLangClash off: Number/Error/Package are deliberate domain class names. -->
-						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF</arg>
+						<!-- EmptyBlockTag off: bare @throws tags (e.g. @throws IOException) are legitimate javadoc. -->
+						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF -Xep:EmptyBlockTag:OFF</arg>
 					</compilerArgs>
 					<annotationProcessorPaths>
 						<path>

@@ -28,9 +28,9 @@ public class Facets {
             byType.type = atom.type.substring(0, pipe);
             String qualifier = atom.type.substring(pipe + 1);
             if ("ukamended=true".equals(qualifier))
-                byType.ukAmended = Boolean.TRUE;
+                byType.ukAmended = true;
             else if ("ukamended=false".equals(qualifier))
-                byType.ukAmended = Boolean.FALSE;
+                byType.ukAmended = false;
         }
         return byType;
     }

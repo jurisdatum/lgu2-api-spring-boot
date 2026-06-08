@@ -28,6 +28,7 @@ public class XSLT {
 	
 	static class Importer implements URIResolver {
 
+		@Override
 		public Source resolve(String href, String base) throws TransformerException {
 			InputStream file = this.getClass().getResourceAsStream(path + href);
 			return new StreamSource(file, href);

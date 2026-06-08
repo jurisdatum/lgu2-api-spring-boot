@@ -54,6 +54,7 @@ public class SaxonExtensionFunctions {
 		@Override
 		public ExtensionFunctionCall makeCallExpression() {
 			return new ExtensionFunctionCall() {
+				@Override
 				@SuppressWarnings("rawtypes")
 				public Sequence call(XPathContext context, Sequence[] arguments) throws XPathException {
 					String uri = ((StringValue) arguments[0]).getStringValue();
@@ -107,6 +108,7 @@ public class SaxonExtensionFunctions {
 		@Override
 		public ExtensionFunctionCall makeCallExpression() {
 			return new ExtensionFunctionCall() {
+				@Override
 				@SuppressWarnings("rawtypes")
 				public Sequence call(XPathContext context, Sequence[] arguments) throws XPathException {
 					String uri = ((StringValue) arguments[0]).getStringValue();
@@ -160,6 +162,7 @@ public class SaxonExtensionFunctions {
 		@Override
 		public ExtensionFunctionCall makeCallExpression() {
 			return new ExtensionFunctionCall() {
+				@Override
 				@SuppressWarnings("rawtypes")
 				public Sequence call(XPathContext context, Sequence[] arguments) throws XPathException {
 					String uri = arguments[0].iterate().next().getStringValue();

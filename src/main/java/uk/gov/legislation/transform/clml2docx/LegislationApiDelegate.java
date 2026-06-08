@@ -180,6 +180,7 @@ public class LegislationApiDelegate implements Delegate {
 	 * Set parameters for the conversion
 	 * @param conversionParameters Parameters for the conversion
 	 */
+	@Override
 	public void setConversionParameters(Map<String, String> conversionParameters) {
 		this.conversionParameters = conversionParameters;
 	}
@@ -188,6 +189,7 @@ public class LegislationApiDelegate implements Delegate {
 	 * Get parameters for the conversion
 	 * @return Parameters for the conversion
 	 */
+	@Override
 	public Map<String, String> getConversionParameters() {
 		return conversionParameters;
 	}

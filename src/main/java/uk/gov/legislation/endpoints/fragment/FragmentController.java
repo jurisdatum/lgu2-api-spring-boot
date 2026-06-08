@@ -37,25 +37,25 @@ public class FragmentController implements FragmentApi {
 
     /* CLML */
 
-    private final BiConsumer<InputStream, OutputStream> transferToWrapper = (input, output) -> {
+    private void transferToWrapper(InputStream input, OutputStream output) {
         try {
             input.transferTo(output);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
-    };
+    }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, int year, int number, String section,
             Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, String monarch, String years, int number,
             String section, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */
