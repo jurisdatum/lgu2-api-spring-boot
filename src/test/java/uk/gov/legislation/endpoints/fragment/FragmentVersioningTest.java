@@ -33,6 +33,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @WebMvcTest(FragmentController.class)
 @Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class })
+@SuppressWarnings("UnusedVariable") // @MockitoBean fields are wired into the @WebMvcTest context, not read directly
 class FragmentVersioningTest {
 
     @Autowired

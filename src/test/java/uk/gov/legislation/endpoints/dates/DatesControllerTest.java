@@ -12,6 +12,7 @@ import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Collections;
 import java.util.List;
 
@@ -32,6 +33,8 @@ class DatesControllerTest {
     @MockitoBean
     private Search search;
 
+    private static final ZoneId LONDON = ZoneId.of("Europe/London");
+
     @Test
     void shouldReturnEmptyList_whenNoPublishedDates() throws Exception {
         SearchResults results = new SearchResults();
@@ -42,7 +45,7 @@ class DatesControllerTest {
         when(search.get(any(Parameters.class))).thenReturn(results);
 
         // Capture the current date before the request to guard against a midnight rollover.
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -51,7 +54,7 @@ class DatesControllerTest {
             .andExpect(content().json("[]"));  // Expecting an empty list
 
         // Second capture after the request so we allow either “yesterday” value.
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 
@@ -75,7 +78,7 @@ class DatesControllerTest {
         ArgumentCaptor<Parameters> paramsCaptor = ArgumentCaptor.forClass(Parameters.class);
         when(search.get(any(Parameters.class))).thenReturn(results);
 
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -84,7 +87,7 @@ class DatesControllerTest {
             .andExpect(jsonPath("$[0].date").value("2023-09-24"))
             .andExpect(jsonPath("$[0].count").value(5));
 
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 
@@ -112,7 +115,7 @@ class DatesControllerTest {
         ArgumentCaptor<Parameters> paramsCaptor = ArgumentCaptor.forClass(Parameters.class);
         when(search.get(any(Parameters.class))).thenReturn(results);
 
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -123,7 +126,7 @@ class DatesControllerTest {
             .andExpect(jsonPath("$[1].date").value("2023-09-23"))
             .andExpect(jsonPath("$[1].count").value(7));
 
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 

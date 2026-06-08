@@ -5,6 +5,7 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.endpoints.search.SearchParameters;
 
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -332,7 +333,7 @@ class DocumentsFeedConverterTest {
         sr.itemsPerPage = 10;
         sr.morePages = morePages;
         sr.totalResults = totalResults;
-        sr.updated = ZonedDateTime.now();
+        sr.updated = ZonedDateTime.now(ZoneOffset.UTC);
         return sr;
     }
 

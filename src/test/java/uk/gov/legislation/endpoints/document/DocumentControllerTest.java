@@ -41,6 +41,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     @MockitoBean
     private Transforms transforms;
 
+    @SuppressWarnings("UnusedVariable") // wired into the @WebMvcTest context, not read directly
     @MockitoBean
     private Impacts impacts;
 
@@ -53,7 +54,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
     private final String year = "2020";
     private final int number = 1;
     private final String clmlXml = "<document><type>enacted</type></document>";
-    private final Legislation.Response response = new Legislation.Response(clmlXml, Optional.empty());
 
     @Test
     void shouldReturnXml_whenValidRequest() throws Exception {

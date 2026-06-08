@@ -40,6 +40,7 @@ class ExceptionHandlingIntegrationTest {
     @MockitoBean
     private Search search;
 
+    @SuppressWarnings("UnusedVariable") // wired into the @WebMvcTest context, not read directly
     @MockitoBean
     private Transforms transforms;
 

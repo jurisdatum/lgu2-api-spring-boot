@@ -26,9 +26,9 @@ class TypeTest {
      }
      static Stream<Arguments> type() {
          return Stream.of(
-             Arguments.of(("ukpga"), "ukpga"),
-             Arguments.of(("asp"), "asp"),
-             Arguments.of(("primary"), "primary")
+             Arguments.of("ukpga", "ukpga"),
+             Arguments.of("asp", "asp"),
+             Arguments.of("primary", "primary")
          );
      }
 

@@ -9,6 +9,7 @@ import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.util.UpToDate;
 
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
 import static uk.gov.legislation.transform.TransformHelper.*;
@@ -35,7 +36,7 @@ public class TocTestRedo {
         try {
             expected = read(id, "json");
         } catch (NullPointerException e) {
-            expected = ZonedDateTime.now().toString();
+            expected = ZonedDateTime.now(ZoneOffset.UTC).toString();
         }
         if (actual.equals(expected))
             return;

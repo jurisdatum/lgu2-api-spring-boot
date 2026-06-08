@@ -96,11 +96,11 @@ class FacetsTest {
             () -> assertEquals(124855, result.get(0).count),
 
             () -> assertEquals("EuropeanUnionRegulation", result.get(1).type),
-            () -> assertEquals(Boolean.TRUE, result.get(1).ukAmended),
+            () -> assertEquals(true, result.get(1).ukAmended),
             () -> assertEquals(3683, result.get(1).count),
 
             () -> assertEquals("EuropeanUnionRegulation", result.get(2).type),
-            () -> assertEquals(Boolean.FALSE, result.get(2).ukAmended),
+            () -> assertEquals(false, result.get(2).ukAmended),
             () -> assertEquals(121172, result.get(2).count)
         );
     }

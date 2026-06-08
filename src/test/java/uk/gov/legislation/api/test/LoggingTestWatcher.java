@@ -90,15 +90,13 @@ public class LoggingTestWatcher implements TestWatcher, BeforeEachCallback, Afte
     }
 
     private String buildErrorMessage(String testName, Throwable exception) {
-        return new StringBuilder()
-            .append(RED)
-            .append("❌  TEST FAILED: ").append(testName).append("\n")
-            .append("Reason: ").append(exception.getMessage()).append("\n")
-            .append("Stack Trace:\n")
-            .append(Arrays.stream(exception.getStackTrace())
+        return RED
+            + "❌  TEST FAILED: " + testName + "\n"
+            + "Reason: " + exception.getMessage() + "\n"
+            + "Stack Trace:\n"
+            + Arrays.stream(exception.getStackTrace())
                 .map(e -> "\tat " + e + "\n")
-                .collect(Collectors.joining()))
-            .toString();
+                .collect(Collectors.joining());
     }
 }
 
