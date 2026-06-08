@@ -33,7 +33,7 @@ public class LegislationApiDelegate implements Delegate {
 	private String password = "";
 	private String rewriteHostName = "";
 	private Map<String, String> conversionParameters = new HashMap<>();
-	private Logger logger = Logger.getLogger(LegislationApiDelegate.class.getName());
+	private final Logger logger = Logger.getLogger(LegislationApiDelegate.class.getName());
 	
 	/**
 	 * Fetches a resource from it's URI

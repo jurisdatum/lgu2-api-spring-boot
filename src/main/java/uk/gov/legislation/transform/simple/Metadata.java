@@ -433,6 +433,7 @@ public class Metadata {
     public static class Ancestor extends Level {}
 
     @JacksonXmlProperty(localName = "ancestors")
+    @SuppressWarnings("FieldCanBeFinal") // Jackson deserializes this field from XML by reflection
     private List<Ancestor> ancestors = Collections.emptyList();
 
     public List<uk.gov.legislation.api.responses.Level> ancestors() {
@@ -449,6 +450,7 @@ public class Metadata {
      * that to populate {@code fragmentInfo}.
      */
     @JacksonXmlProperty(localName = "descendants")
+    @SuppressWarnings("FieldCanBeFinal") // Jackson deserializes this field from XML by reflection
     private List<Descendant> descendants = Collections.emptyList();
 
     public List<uk.gov.legislation.api.responses.Level> descendants() {

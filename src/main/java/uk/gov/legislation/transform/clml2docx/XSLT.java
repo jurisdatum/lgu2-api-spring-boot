@@ -36,9 +36,9 @@ public class XSLT {
 
 	}
 	
-	private XsltExecutable executable;
-	private XPathExecutable docType;
-	private XPathExecutable resourceURIs;
+	private final XsltExecutable executable;
+	private final XPathExecutable docType;
+	private final XPathExecutable resourceURIs;
 	
 	/**
 	 * Load the XSLT
