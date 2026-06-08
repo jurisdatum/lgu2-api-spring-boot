@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -91,7 +92,7 @@ public class LegislationApiDelegate implements Delegate {
 	    		Iterator<ImageReader> imageReaders = ImageIO.getImageReaders(iis);
 	    		if (imageReaders.hasNext()) {
 	    		    ImageReader reader = (ImageReader) imageReaders.next();
-	    		    contentType = "image/" + reader.getFormatName().toLowerCase();
+	    		    contentType = "image/" + reader.getFormatName().toLowerCase(Locale.ROOT);
 	    		} else {
 	    			contentType = "image/gif";	// http://www.legislation.gov.uk/uksi/2018/4/images/uksi_20180004_en_001
 	    		}
@@ -103,7 +104,7 @@ public class LegislationApiDelegate implements Delegate {
 	    		Iterator<ImageReader> imageReaders = ImageIO.getImageReaders(iis);
 	    		if (imageReaders.hasNext()) {
 	    		    ImageReader reader = (ImageReader) imageReaders.next();
-	    		    contentType = "image/" + reader.getFormatName().toLowerCase();
+	    		    contentType = "image/" + reader.getFormatName().toLowerCase(Locale.ROOT);
 	    		} else {
 	    			contentType = "application/pdf";
 	    		}

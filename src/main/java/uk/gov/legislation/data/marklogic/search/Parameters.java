@@ -5,6 +5,7 @@ import uk.gov.legislation.util.Extent;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -88,7 +89,7 @@ public class Parameters extends AbstractParameters {
 
         @Override
         public String toString() {
-            return name().toLowerCase();
+            return name().toLowerCase(Locale.ROOT);
         }
     }
 
