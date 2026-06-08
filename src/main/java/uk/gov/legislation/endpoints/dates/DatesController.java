@@ -8,10 +8,14 @@ import uk.gov.legislation.data.marklogic.search.Search;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.List;
 
 @RestController
 public class DatesController implements DatesApi{
+
+    // UK legislation dates are relative to the UK day, not the server's zone.
+    private static final ZoneId LONDON = ZoneId.of("Europe/London");
 
     private final Search search;
 
@@ -21,7 +25,7 @@ public class DatesController implements DatesApi{
 
      @Override
      public List<DateCount> published() throws IOException, InterruptedException {
-        LocalDate date = LocalDate.now().minusDays(1);
+        LocalDate date = LocalDate.now(LONDON).minusDays(1);
         Parameters params = Parameters.builder().published(date).build();
         return search.get(params).facets.facetPublishDates.stream()
             .map(DateCount::new).toList();

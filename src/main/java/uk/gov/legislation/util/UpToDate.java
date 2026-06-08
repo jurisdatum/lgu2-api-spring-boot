@@ -5,11 +5,15 @@ import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 
 import java.time.LocalDate;
+import java.time.ZoneId;
 
 public class UpToDate {
 
+    // UK legislation is up to date relative to the UK day, not the server's zone.
+    private static final ZoneId LONDON = ZoneId.of("Europe/London");
+
     public static void setUpToDate(DocumentMetadata meta) {
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.now(LONDON);
         setUpToDate(meta, today);
     }
     public static void setUpToDate(DocumentMetadata meta, LocalDate cutoff) {
@@ -18,7 +22,7 @@ public class UpToDate {
     }
 
     public static void setUpToDate(FragmentMetadata meta) {
-        LocalDate today = LocalDate.now();
+        LocalDate today = LocalDate.now(LONDON);
         setUpToDate(meta, today);
     }
     public static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {

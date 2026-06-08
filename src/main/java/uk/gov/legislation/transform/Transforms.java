@@ -122,7 +122,7 @@ public class Transforms {
     }
 
     public byte[] clml2docx(String clml) throws IOException, SaxonApiException {
-        ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes());
+        ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes(StandardCharsets.UTF_8));
         return clml2docx.transform(input);
     }
 
