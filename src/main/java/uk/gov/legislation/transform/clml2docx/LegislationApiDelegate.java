@@ -59,7 +59,7 @@ public class LegislationApiDelegate implements Delegate {
 			logger.log(Level.FINE, "Applying basic auth");
 			String auth = getUsername() + ":" + getPassword();
 			byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.UTF_8));
-			String authHeaderValue = "Basic " + new String(encodedAuth);
+			String authHeaderValue = "Basic " + new String(encodedAuth, StandardCharsets.US_ASCII);
 			connection.setRequestProperty("Authorization", authHeaderValue);
 		}		
 		
@@ -77,7 +77,7 @@ public class LegislationApiDelegate implements Delegate {
 				logger.log(Level.FINE, "Applying basic auth");
 				String auth = getUsername() + ":" + getPassword();
 				byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.UTF_8));
-				String authHeaderValue = "Basic " + new String(encodedAuth);
+				String authHeaderValue = "Basic " + new String(encodedAuth, StandardCharsets.US_ASCII);
 				connection.setRequestProperty("Authorization", authHeaderValue);
 			}	
 		}

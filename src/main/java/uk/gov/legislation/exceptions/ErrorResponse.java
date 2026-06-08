@@ -2,6 +2,7 @@ package uk.gov.legislation.exceptions;
 
 import org.springframework.http.HttpStatusCode;
 
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -16,7 +17,7 @@ public class ErrorResponse {
         this.status = status;
         this.error = error;
         this.message = message;
-        this.timestamp = ZonedDateTime.now().format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+        this.timestamp = ZonedDateTime.now(ZoneOffset.UTC).format(DateTimeFormatter.ISO_OFFSET_DATE_TIME);
     }
 
     ErrorResponse(HttpStatusCode status, String error, String message) {

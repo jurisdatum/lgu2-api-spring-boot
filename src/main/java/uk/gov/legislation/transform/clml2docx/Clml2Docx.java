@@ -127,7 +127,6 @@ public class Clml2Docx {
 	 * @param resourceURIs List of images to download
 	 * @param cache Existing cache of the images
 	 * @return Modified cache of the images
-	 * @throws IOException
 	 */
 	private LinkedHashMap<String, byte[]> fetchLinkedResources(List<String> resourceURIs, Map<String, Resource> cache) {
 		LinkedHashMap<String, byte[]> resources = new LinkedHashMap<>();

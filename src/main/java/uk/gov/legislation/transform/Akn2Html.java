@@ -44,10 +44,10 @@ public class Akn2Html {
     static final Properties Indent = createProperties(true);
     static final Properties DontIndent = createProperties(false);
 
-    private static Properties createProperties(boolean indent) {
+    private static Properties createProperties(boolean shouldIndent) {
         Properties properties = new Properties();
         properties.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
-        properties.setProperty(Serializer.Property.INDENT.toString(), indent ? "yes" : "no");
+        properties.setProperty(Serializer.Property.INDENT.toString(), shouldIndent ? "yes" : "no");
         return properties;
     }
 

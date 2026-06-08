@@ -59,7 +59,7 @@ public class Clml2Akn {
     public void transform(InputStream clml, OutputStream akn) throws SaxonApiException {
         Source source = new StreamSource(clml);
         Serializer serializer = executable.getProcessor().newSerializer(akn);
-        serializer.setOutputProperties(Properties);
+        serializer.setOutputProperties(OUTPUT_PROPERTIES);
         transform(source, serializer);
     }
 
@@ -79,15 +79,15 @@ public class Clml2Akn {
         return destination.getXdmNode();
     }
 
-    static final Properties Properties = new Properties();
+    static final Properties OUTPUT_PROPERTIES = new Properties();
     static {
-        Properties.setProperty(Serializer.Property.INDENT.toString(), "yes");
+        OUTPUT_PROPERTIES.setProperty(Serializer.Property.INDENT.toString(), "yes");
     }
 
     public static String serialize(XdmNode akn) throws SaxonApiException {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         Serializer serializer = akn.getProcessor().newSerializer(output);
-        serializer.setOutputProperties(Properties);
+        serializer.setOutputProperties(OUTPUT_PROPERTIES);
         serializer.serialize(akn.asSource());
         return output.toString(StandardCharsets.UTF_8);
     }
