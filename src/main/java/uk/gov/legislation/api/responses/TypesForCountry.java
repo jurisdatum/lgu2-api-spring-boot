@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import java.util.List;
 
 @Schema
+@SuppressWarnings("UnusedVariable") // fields are set in the constructor and serialized by Jackson via @JsonProperty
 public class TypesForCountry {
 
     @JsonProperty(index = 1)

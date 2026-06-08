@@ -194,6 +194,7 @@ public class Legislation {
         }
     }
 
+    @SuppressWarnings("EmptyCatch") // close() failure in the finally is intentionally ignored
     private StreamResponse handleStream(PushbackInputStream stream, Parameters params, boolean afterRedirect) {
         boolean keepOpen = false;
         try {

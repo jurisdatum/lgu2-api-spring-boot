@@ -136,6 +136,7 @@ public class Metadata {
      * Non-date labels such as {@code prospective} are skipped. Because the scan is ordered, the
      * value left in {@code selected} at the end is the latest eligible milestone.</p>
      */
+    @SuppressWarnings("EmptyCatch") // non-date labels (e.g. "prospective") are skipped on purpose
     private String latestEligibleMilestoneNotAfter(LocalDate dctValid) {
         String firstVersion = FirstVersion.getFirstVersion(longType);
         String selected = null;

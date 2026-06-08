@@ -111,7 +111,8 @@
 					<compilerArgs>
 						<arg>-XDcompilePolicy=simple</arg>
 						<arg>--should-stop=ifError=FLOW</arg>
-						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode</arg>
+						<!-- JavaLangClash off: Number/Error/Package are deliberate domain class names. -->
+						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF</arg>
 					</compilerArgs>
 					<annotationProcessorPaths>
 						<path>
