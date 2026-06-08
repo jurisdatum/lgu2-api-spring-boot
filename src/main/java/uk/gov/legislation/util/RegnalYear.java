@@ -38,7 +38,7 @@ public class RegnalYear {
         return "(" + String.join(" ", fixed) + ")";
     }
 
-    static String forCitation(RegnalYear regnal) {
+    static String spacedCitationOrEmpty(RegnalYear regnal) {
         if (regnal == null)
             return "";
         return " " + regnal.forCitation();
