@@ -9,7 +9,8 @@ public class ISBN {
             return isbn;
         String first = isbn.substring(0, 1);
         char second = isbn.charAt(1);
-        String group, publisher;
+        String group;
+        String publisher;
         if (second == '0' || second == '1') {
             group     = isbn.substring(1, 3);
             publisher = isbn.substring(3, 9);
