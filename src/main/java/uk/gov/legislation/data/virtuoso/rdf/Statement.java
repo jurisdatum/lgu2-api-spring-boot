@@ -8,18 +8,16 @@ import java.util.Map;
 
 public record Statement(URI subject, URI predicate, TypedValue object) {
 
-    public static Map<URI, Map<URI, List<TypedValue>>> groupBySubjectAndPredicate(List<Statement> tripes) {
+    public static Map<URI, Map<URI, List<TypedValue>>> groupBySubjectAndPredicate(
+            List<Statement> tripes) {
         LinkedHashMap<URI, Map<URI, List<TypedValue>>> map1 = new LinkedHashMap<>();
-        for (Statement triple: tripes) {
-            if (!map1.containsKey(triple.subject))
-                map1.put(triple.subject, new LinkedHashMap<>());
+        for (Statement triple : tripes) {
+            if (!map1.containsKey(triple.subject)) map1.put(triple.subject, new LinkedHashMap<>());
             Map<URI, List<TypedValue>> map2 = map1.get(triple.subject);
-            if (!map2.containsKey(triple.predicate))
-                map2.put(triple.predicate, new ArrayList<>());
+            if (!map2.containsKey(triple.predicate)) map2.put(triple.predicate, new ArrayList<>());
             List<TypedValue> list = map2.get(triple.predicate);
             list.add(triple.object);
         }
         return map1;
     }
-
 }

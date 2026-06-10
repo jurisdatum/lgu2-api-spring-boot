@@ -12,8 +12,10 @@ class Roman {
         if (number < 1 || number > 3999)
             throw new IllegalArgumentException("value must be between 1 and 3999");
         StringBuilder roman = new StringBuilder();
-        String[] romanNumerals = { "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
-        int[] values = { 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 };
+        String[] romanNumerals = {
+            "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"
+        };
+        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
         for (int i = 0; i < values.length; i++) {
             while (number >= values[i]) {
                 number -= values[i];
@@ -24,9 +26,8 @@ class Roman {
     }
 
     /**
-     * Parses a roman numeral string, returning its integer value,
-     * or 0 if the string is not a valid roman numeral.
-     * Uses roundtrip validation via {@link #toUpperRoman}.
+     * Parses a roman numeral string, returning its integer value, or 0 if the string is not a valid
+     * roman numeral. Uses roundtrip validation via {@link #toUpperRoman}.
      */
     static int parse(String s) {
         String upper = s.toUpperCase(Locale.ROOT);
@@ -34,18 +35,13 @@ class Roman {
         int prev = 0;
         for (int i = upper.length() - 1; i >= 0; i--) {
             int value = charValue(upper.charAt(i));
-            if (value == 0)
-                return 0;
-            if (value < prev)
-                result -= value;
-            else
-                result += value;
+            if (value == 0) return 0;
+            if (value < prev) result -= value;
+            else result += value;
             prev = value;
         }
-        if (result <= 0 || result > 3999)
-            return 0;
-        if (!toUpperRoman(result).equals(upper))
-            return 0;
+        if (result <= 0 || result > 3999) return 0;
+        if (!toUpperRoman(result).equals(upper)) return 0;
         return result;
     }
 
@@ -61,5 +57,4 @@ class Roman {
             default -> 0;
         };
     }
-
 }

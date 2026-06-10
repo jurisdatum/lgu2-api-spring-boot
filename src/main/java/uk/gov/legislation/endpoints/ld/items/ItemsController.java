@@ -23,12 +23,15 @@ public class ItemsController implements ItemsApi {
         this.query = query;
         this.negotiation = negotiation;
     }
+
     @Override
-    public ResponseEntity<?> typeAndYear(NativeWebRequest request,
+    public ResponseEntity<?> typeAndYear(
+            NativeWebRequest request,
             @PathVariable String type,
             @PathVariable(required = false) Integer year,
             @RequestParam(defaultValue = "1") int page,
-            @RequestParam(defaultValue = "10") int pageSize) throws Exception {
+            @RequestParam(defaultValue = "10") int pageSize)
+            throws Exception {
         final int offset = (page - 1) * pageSize;
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
@@ -36,8 +39,7 @@ public class ItemsController implements ItemsApi {
             return ResponseEntity.ok(data);
         }
         return query.get(type, year, pageSize, offset)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

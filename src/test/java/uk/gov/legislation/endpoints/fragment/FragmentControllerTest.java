@@ -39,19 +39,16 @@ import uk.gov.legislation.transform.Transforms;
 @WebMvcTest(FragmentController.class)
 class FragmentControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Legislation marklogic;
+    @MockitoBean private Legislation marklogic;
 
-    @MockitoBean
-    private Transforms transforms;
+    @MockitoBean private Transforms transforms;
 
-    @MockitoBean
-    private LegislationById legislationById;
+    @MockitoBean private LegislationById legislationById;
 
-    private static final String DOCX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    private static final String DOCX_MIME_TYPE =
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
     private final String expectedXml = "<fragment><section>1</section></fragment>";
     private final Optional<String> version = Optional.of("enacted");
@@ -61,29 +58,32 @@ class FragmentControllerTest {
     private final String type = "ukla";
     private final String year = "2020";
     private final int number = 1;
-    private final Legislation.Response mockResponse = new Legislation.Response(expectedXml, Optional.empty());
-
+    private final Legislation.Response mockResponse =
+            new Legislation.Response(expectedXml, Optional.empty());
 
     @Test
     void shouldReturnFragmentXml_whenValidRequest() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .header("Accept-Language", "en")
+                                        .queryParam("version", "enacted")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
-            .andExpect(content().string(expectedXml));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
+                .andExpect(content().string(expectedXml));
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verifyNoMoreInteractions(marklogic);
         verifyNoInteractions(transforms);
@@ -92,24 +92,29 @@ class FragmentControllerTest {
     @Test
     void shouldReturnFragmentXml_whenValidRequestWithMonarch() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
-        when(marklogic.getDocumentSectionStream(type, regnalYear, number, section, version, language))
-            .thenReturn(streamResponse);
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
+        when(marklogic.getDocumentSectionStream(
+                        type, regnalYear, number, section, version, language))
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/Eliz1/2020/1/section-1")
+                                        .header("Accept-Language", "en")
+                                        .queryParam("version", "enacted")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
-            .andExpect(content().string(expectedXml));
-        verify(marklogic).getDocumentSectionStream(type, regnalYear, number, section, version, language);
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
+                .andExpect(content().string(expectedXml));
+        verify(marklogic)
+                .getDocumentSectionStream(type, regnalYear, number, section, version, language);
         verifyNoMoreInteractions(marklogic);
         verifyNoInteractions(transforms);
     }
@@ -117,21 +122,21 @@ class FragmentControllerTest {
     @Test
     void shouldReturnJsonFragmentWhenAcceptsJson() throws Exception {
 
-        when(marklogic.getDocumentSection(
-            type, year, number, section, version, language))
-            .thenReturn(mockResponse);
+        when(marklogic.getDocumentSection(type, year, number, section, version, language))
+                .thenReturn(mockResponse);
 
         Fragment fragment = new Fragment(null, "rendered fragment");
         when(transforms.clml2fragment(expectedXml)).thenReturn(fragment);
 
-        mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept(MediaType.APPLICATION_JSON)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.html").value("rendered fragment"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+        mockMvc.perform(
+                        get("/fragment/ukla/2020/1/section-1")
+                                .accept(MediaType.APPLICATION_JSON)
+                                .param("version", "enacted")
+                                .header("Accept-Language", "en"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.html").value("rendered fragment"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSection(type, year, number, section, version, language);
         verify(transforms).clml2fragment(expectedXml);
@@ -141,21 +146,21 @@ class FragmentControllerTest {
     @Test
     void shouldReturnJsonFragmentWhenAcceptsJsonWithMonarch() throws Exception {
 
-        when(marklogic.getDocumentSection(
-            type, regnalYear, number, section, version, language))
-            .thenReturn(mockResponse);
+        when(marklogic.getDocumentSection(type, regnalYear, number, section, version, language))
+                .thenReturn(mockResponse);
 
         Fragment fragment = new Fragment(null, "rendered fragment");
         when(transforms.clml2fragment(expectedXml)).thenReturn(fragment);
 
-        mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .accept(MediaType.APPLICATION_JSON)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.html").value("rendered fragment"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+        mockMvc.perform(
+                        get("/fragment/ukla/Eliz1/2020/1/section-1")
+                                .accept(MediaType.APPLICATION_JSON)
+                                .param("version", "enacted")
+                                .header("Accept-Language", "en"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.html").value("rendered fragment"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSection(type, regnalYear, number, section, version, language);
         verify(transforms).clml2fragment(expectedXml);
@@ -165,34 +170,40 @@ class FragmentControllerTest {
     @Test
     void shouldReturnDocxWhenAcceptsDocx() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            docxOut.write(docx);
-            docxOut.flush();
-            return null;
-        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
+        byte[] docx = new byte[] {0x01, 0x02, 0x03};
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            docxOut.write(docx);
+                            docxOut.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .accept(MediaType.valueOf(DOCX_MIME_TYPE))
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
-            .andExpect(content().bytes(docx))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
+                .andExpect(content().bytes(docx))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
@@ -202,36 +213,44 @@ class FragmentControllerTest {
     @Test
     void shouldReturnDocxWhenAcceptsDocxWithMonarch() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
-        when(marklogic.getDocumentSectionStream(type, regnalYear, number, section, version, language))
-            .thenReturn(streamResponse);
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
+        when(marklogic.getDocumentSectionStream(
+                        type, regnalYear, number, section, version, language))
+                .thenReturn(streamResponse);
 
-        byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            docxOut.write(docx);
-            docxOut.flush();
-            return null;
-        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
+        byte[] docx = new byte[] {0x01, 0x02, 0x03};
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            docxOut.write(docx);
+                            docxOut.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/Eliz1/2020/1/section-1")
+                                        .accept(MediaType.valueOf(DOCX_MIME_TYPE))
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
-            .andExpect(content().bytes(docx))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
+                .andExpect(content().bytes(docx))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocumentSectionStream(type, regnalYear, number, section, version, language);
+        verify(marklogic)
+                .getDocumentSectionStream(type, regnalYear, number, section, version, language);
         verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
@@ -240,32 +259,38 @@ class FragmentControllerTest {
     void shouldReturnHtmlFragmentWhenAcceptsHtml() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
-            htmlStream.flush();
-            return null;
-        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream htmlStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+                            htmlStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept(MediaType.TEXT_HTML)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .accept(MediaType.TEXT_HTML)
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-            .andExpect(content().string(renderedHtml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                .andExpect(content().string(renderedHtml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
@@ -276,34 +301,42 @@ class FragmentControllerTest {
     void shouldReturnHtmlFragmentWhenAcceptsHtmlWithMonarch() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
-        when(marklogic.getDocumentSectionStream(type, regnalYear, number, section, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
-            htmlStream.flush();
-            return null;
-        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
+        when(marklogic.getDocumentSectionStream(
+                        type, regnalYear, number, section, version, language))
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream htmlStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+                            htmlStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .accept(MediaType.TEXT_HTML)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/Eliz1/2020/1/section-1")
+                                        .accept(MediaType.TEXT_HTML)
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-            .andExpect(content().string(renderedHtml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                .andExpect(content().string(renderedHtml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocumentSectionStream(type, regnalYear, number, section, version, language);
+        verify(marklogic)
+                .getDocumentSectionStream(type, regnalYear, number, section, version, language);
         verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
@@ -312,32 +345,41 @@ class FragmentControllerTest {
     void shouldReturnAknFragmentWhenAcceptsAkn() throws Exception {
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream aknStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
-            aknStream.flush();
-            return null;
-        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream aknStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+                            aknStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept("application/akn+xml")
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .accept("application/akn+xml")
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.parseMediaType("application/akn+xml")))
-            .andExpect(content().string(aknXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(
+                        content()
+                                .contentTypeCompatibleWith(
+                                        MediaType.parseMediaType("application/akn+xml")))
+                .andExpect(content().string(aknXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
@@ -348,34 +390,45 @@ class FragmentControllerTest {
     void shouldReturnAknFragmentWhenAcceptsAknWithMonarch() throws Exception {
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
-        when(marklogic.getDocumentSectionStream(type, regnalYear, number, section, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream aknStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
-            aknStream.flush();
-            return null;
-        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
+        when(marklogic.getDocumentSectionStream(
+                        type, regnalYear, number, section, version, language))
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream aknStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+                            aknStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/Eliz1/2020/1/section-1")
-                .accept("application/akn+xml")
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/Eliz1/2020/1/section-1")
+                                        .accept("application/akn+xml")
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.parseMediaType("application/akn+xml")))
-            .andExpect(content().string(aknXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(
+                        content()
+                                .contentTypeCompatibleWith(
+                                        MediaType.parseMediaType("application/akn+xml")))
+                .andExpect(content().string(aknXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocumentSectionStream(type, regnalYear, number, section, version, language);
+        verify(marklogic)
+                .getDocumentSectionStream(type, regnalYear, number, section, version, language);
         verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
         verifyNoMoreInteractions(transforms);
     }
@@ -385,14 +438,19 @@ class FragmentControllerTest {
     @DisplayName("Should return 400 Bad Request for invalid document types")
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
 
-        mockMvc.perform(get("/fragment/{type}/2020/1/section-1", invalidType)
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
-            .andExpect(jsonPath("$.message")
-                .value("The document type '" + invalidType + "' is not recognized."));
+        mockMvc.perform(
+                        get("/fragment/{type}/2020/1/section-1", invalidType)
+                                .header("Accept-Language", "en")
+                                .queryParam("version", "enacted")
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value(
+                                        "The document type '"
+                                                + invalidType
+                                                + "' is not recognized."));
         verifyNoInteractions(marklogic);
         verifyNoInteractions(transforms);
     }
@@ -400,30 +458,36 @@ class FragmentControllerTest {
     @Test
     @DisplayName("Should include redirect headers when MarkLogic returns redirect")
     void shouldIncludeRedirectHeaders_whenMarkLogicReturnsRedirect() throws Exception {
-        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.of(redirect));
+        Legislation.Redirect redirect =
+                new Legislation.Redirect(type, year, number, Optional.of("enacted"));
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.of(redirect));
 
-        when(marklogic.getDocumentSectionStream(type, year, number, section, Optional.empty(), language))
-            .thenReturn(streamResponse);
+        when(marklogic.getDocumentSectionStream(
+                        type, year, number, section, Optional.empty(), language))
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .header("Accept-Language", "en")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .header("Accept-Language", "en")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().string(expectedXml))
-            .andExpect(header().string("X-Document-Type", type))
-            .andExpect(header().string("X-Document-Year", year))
-            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
-            .andExpect(header().string("X-Document-Version", "enacted"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().string(expectedXml))
+                .andExpect(header().string("X-Document-Type", type))
+                .andExpect(header().string("X-Document-Year", year))
+                .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+                .andExpect(header().string("X-Document-Version", "enacted"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
-        verify(marklogic).getDocumentSectionStream(type, year, number, section, Optional.empty(), language);
+        verify(marklogic)
+                .getDocumentSectionStream(type, year, number, section, Optional.empty(), language);
         verifyNoInteractions(transforms);
     }
 
@@ -431,24 +495,27 @@ class FragmentControllerTest {
     @DisplayName("Default Accept language header 'en'")
     void shouldUseDefaultLocale_whenNoAcceptLanguageHeaderProvided() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept("application/xml")
-                // No Accept-Language header set
-                .queryParam("version", "enacted"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .accept("application/xml")
+                                        // No Accept-Language header set
+                                        .queryParam("version", "enacted"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith("application/xml"))
-            .andExpect(content().string(expectedXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith("application/xml"))
+                .andExpect(content().string(expectedXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verifyNoInteractions(transforms);
@@ -461,24 +528,27 @@ class FragmentControllerTest {
 
         Optional<String> language = Optional.of(acceptLanguageHeader);
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(expectedXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentSectionStream(type, year, number, section, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/fragment/ukla/2020/1/section-1")
-                .accept("application/xml")
-                .header("Accept-Language", acceptLanguageHeader)
-                .queryParam("version", "enacted"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/fragment/ukla/2020/1/section-1")
+                                        .accept("application/xml")
+                                        .header("Accept-Language", acceptLanguageHeader)
+                                        .queryParam("version", "enacted"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith("application/xml"))
-            .andExpect(content().string(expectedXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith("application/xml"))
+                .andExpect(content().string(expectedXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
         verify(marklogic).getDocumentSectionStream(type, year, number, section, version, language);
         verifyNoInteractions(transforms);
@@ -489,8 +559,7 @@ class FragmentControllerTest {
     void headShouldReturn200_whenFragmentExists() throws Exception {
         when(legislationById.exists(type, year, number, section)).thenReturn(true);
 
-        mockMvc.perform(head("/fragment/ukla/2020/1/section-1"))
-            .andExpect(status().isOk());
+        mockMvc.perform(head("/fragment/ukla/2020/1/section-1")).andExpect(status().isOk());
 
         verify(legislationById).exists(type, year, number, section);
         verifyNoInteractions(marklogic);
@@ -502,8 +571,7 @@ class FragmentControllerTest {
     void headShouldReturn404_whenFragmentDoesNotExist() throws Exception {
         when(legislationById.exists(type, year, number, section)).thenReturn(false);
 
-        mockMvc.perform(head("/fragment/ukla/2020/1/section-1"))
-            .andExpect(status().isNotFound());
+        mockMvc.perform(head("/fragment/ukla/2020/1/section-1")).andExpect(status().isNotFound());
 
         verify(legislationById).exists(type, year, number, section);
         verifyNoInteractions(marklogic);
@@ -515,8 +583,7 @@ class FragmentControllerTest {
     void headShouldReturn200_whenFragmentExistsWithMonarch() throws Exception {
         when(legislationById.exists(type, regnalYear, number, section)).thenReturn(true);
 
-        mockMvc.perform(head("/fragment/ukla/Eliz1/2020/1/section-1"))
-            .andExpect(status().isOk());
+        mockMvc.perform(head("/fragment/ukla/Eliz1/2020/1/section-1")).andExpect(status().isOk());
 
         verify(legislationById).exists(type, regnalYear, number, section);
         verifyNoInteractions(marklogic);
@@ -527,7 +594,7 @@ class FragmentControllerTest {
     @DisplayName("HEAD should return 400 for invalid document type")
     void headShouldReturn400_forInvalidType() throws Exception {
         mockMvc.perform(head("/fragment/invalid/2020/1/section-1"))
-            .andExpect(status().isBadRequest());
+                .andExpect(status().isBadRequest());
 
         verifyNoInteractions(legislationById);
         verifyNoInteractions(marklogic);

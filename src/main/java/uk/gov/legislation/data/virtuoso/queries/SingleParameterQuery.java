@@ -1,12 +1,11 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
-import uk.gov.legislation.data.virtuoso.Virtuoso;
-import uk.gov.legislation.data.virtuoso.jsonld.Graph;
+import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
 
 import java.io.IOException;
 import java.util.Optional;
-
-import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
+import uk.gov.legislation.data.virtuoso.Virtuoso;
+import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 
 abstract class SingleParameterQuery<T> {
 
@@ -34,5 +33,4 @@ abstract class SingleParameterQuery<T> {
         String json = get(param, "application/ld+json");
         return Graph.extractFirstObject(json, mapping);
     }
-
 }

@@ -29,8 +29,7 @@ public class Parameters extends AbstractParameters {
 
         private final Parameters params = new Parameters();
 
-        private Builder() {
-        }
+        private Builder() {}
 
         public Builder affectedType(String affectedType) {
             params.affectedType = affectedType;
@@ -51,6 +50,7 @@ public class Parameters extends AbstractParameters {
             params.affectedStartYear = affectedStartYear;
             return this;
         }
+
         public Builder affectedEndYear(Integer affectedEndYear) {
             params.affectedEndYear = affectedEndYear;
             return this;
@@ -80,6 +80,7 @@ public class Parameters extends AbstractParameters {
             params.affectingStartYear = affectingStartYear;
             return this;
         }
+
         public Builder affectingEndYear(Integer affectingEndYear) {
             params.affectingEndYear = affectingEndYear;
             return this;
@@ -116,11 +117,12 @@ public class Parameters extends AbstractParameters {
     }
 
     public enum AppliedStatus {
-        applied, unapplied
+        applied,
+        unapplied
     }
 
     public enum OrderBy {
-        ascending, descending
+        ascending,
+        descending
     }
-
 }

@@ -29,7 +29,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class Clml2Pdf {
 
-    private static final String STYLESHEET = "/transforms/clml2xslfo/legislation/fo/legislation_schema_FO.xslt";
+    private static final String STYLESHEET =
+            "/transforms/clml2xslfo/legislation/fo/legislation_schema_FO.xslt";
 
     private final XsltExecutable executable;
 
@@ -50,7 +51,7 @@ public class Clml2Pdf {
             throw new RuntimeException(e);
         }
         FopFactoryBuilder builder = new FopFactoryBuilder(new File(".").toURI());
-        builder.setStrictFOValidation(false);  // our XSL-FO contains duplicate IDs
+        builder.setStrictFOValidation(false); // our XSL-FO contains duplicate IDs
         factory = builder.build();
     }
 
@@ -100,5 +101,4 @@ public class Clml2Pdf {
         Result res = new SAXResult(fop.getDefaultHandler());
         transformer.transform(src, res);
     }
-
 }

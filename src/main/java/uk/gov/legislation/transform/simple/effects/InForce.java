@@ -1,8 +1,7 @@
 package uk.gov.legislation.transform.simple.effects;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.time.LocalDate;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class InForce {
 
@@ -17,5 +16,4 @@ public class InForce {
 
     @JacksonXmlProperty(localName = "Qualification", isAttribute = true)
     public String qualification;
-
 }

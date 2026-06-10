@@ -15,5 +15,4 @@ public class DatasetQuery extends SingleParameterQuery<DatasetLD> {
     public String makeUri(String param) {
         return String.format("http://www.legislation.gov.uk/id/dataset/%s", param);
     }
-
 }

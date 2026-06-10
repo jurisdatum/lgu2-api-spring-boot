@@ -1,15 +1,14 @@
 package uk.gov.legislation.converters;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.util.Objects;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import tools.jackson.databind.ObjectMapper;
 import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
-
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.util.Objects;
 
 class FeedConversionTest {
 
@@ -50,5 +49,4 @@ class FeedConversionTest {
         String actual = mapper.writeValueAsString(response);
         Assertions.assertEquals(expected, actual);
     }
-
 }

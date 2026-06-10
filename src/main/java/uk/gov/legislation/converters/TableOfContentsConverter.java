@@ -1,12 +1,11 @@
 package uk.gov.legislation.converters;
 
+import java.util.EnumSet;
+import java.util.List;
 import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.util.Extent;
 import uk.gov.legislation.util.Links;
-
-import java.util.EnumSet;
-import java.util.List;
 
 public class TableOfContentsConverter {
 
@@ -15,12 +14,15 @@ public class TableOfContentsConverter {
         toc.meta = DocumentMetadataConverter.convert(simple.meta);
         // to compensate for missing data
         if (toc.meta.extent.isEmpty() && simple.contents != null)
-            toc.meta.extent = simple.contents.body.stream()
-                .map(item -> item.extent)
-                .map(ExtentConverter::convert)
-                .collect(() -> EnumSet.noneOf(Extent.class), EnumSet::addAll, EnumSet::addAll);
-        if (simple.contents == null)
-            return toc;
+            toc.meta.extent =
+                    simple.contents.body.stream()
+                            .map(item -> item.extent)
+                            .map(ExtentConverter::convert)
+                            .collect(
+                                    () -> EnumSet.noneOf(Extent.class),
+                                    EnumSet::addAll,
+                                    EnumSet::addAll);
+        if (simple.contents == null) return toc;
         toc.contents = new TableOfContents.Contents();
         toc.contents.title = simple.contents.title;
         if (simple.meta.hasParts.introduction != null) {
@@ -33,7 +35,8 @@ public class TableOfContentsConverter {
             toc.contents.signature.extent = toc.meta.extent;
         }
         toc.contents.appendices = convertItems(simple.contents.appendices);
-        toc.contents.attachmentsBeforeSchedules = convertItems(simple.contents.attachmentsBeforeSchedules);
+        toc.contents.attachmentsBeforeSchedules =
+                convertItems(simple.contents.attachmentsBeforeSchedules);
         toc.contents.schedules = convertItems(simple.contents.schedules);
         toc.contents.attachments = convertItems(simple.contents.attachments);
         if (simple.meta.hasParts.note != null) {
@@ -48,8 +51,7 @@ public class TableOfContentsConverter {
     }
 
     private static List<TableOfContents.Item> convertItems(List<Contents.Item> items) {
-        if (items == null)
-            return null;
+        if (items == null) return null;
         return items.stream().map(TableOfContentsConverter::convertItem).toList();
     }
 
@@ -65,5 +67,4 @@ public class TableOfContentsConverter {
         converted.children = convertItems(item.children);
         return converted;
     }
-
 }

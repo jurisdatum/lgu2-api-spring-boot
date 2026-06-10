@@ -2,9 +2,8 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.responses.meta.Provision;
-
 import java.util.List;
+import uk.gov.legislation.api.responses.meta.Provision;
 
 public class ExtendedMetadata extends DocumentMetadata {
 
@@ -13,7 +12,8 @@ public class ExtendedMetadata extends DocumentMetadata {
     public List<Provision> confersPower;
 
     @JsonProperty
-    @Schema(description = "provisions containing an amendment that affects the legislation in general")
+    @Schema(
+            description =
+                    "provisions containing an amendment that affects the legislation in general")
     public List<Provision> blanketAmendments;
-
 }

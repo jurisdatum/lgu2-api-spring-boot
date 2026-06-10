@@ -1,5 +1,7 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import java.io.IOException;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import tools.jackson.databind.node.ObjectNode;
 import uk.gov.legislation.api.responses.ld.Monarch;
@@ -7,9 +9,6 @@ import uk.gov.legislation.converters.ld.MonarchConverter;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.MonarchLD;
-
-import java.io.IOException;
-import java.util.Optional;
 
 @Repository
 public class MonarchQuery {
@@ -25,19 +24,20 @@ public class MonarchQuery {
         return Query.makeSingleConstructQuery(uri);
     }
 
-    public String fetchRawData(String name, String format) throws IOException, InterruptedException {
+    public String fetchRawData(String name, String format)
+            throws IOException, InterruptedException {
         String query = buildMonarchQuery(name);
         return virtuoso.query(query, format);
     }
 
-    public Optional<Monarch> fetchMappedData(String monarchName) throws IOException, InterruptedException {
+    public Optional<Monarch> fetchMappedData(String monarchName)
+            throws IOException, InterruptedException {
         String jsonData = fetchRawData(monarchName, "application/ld+json");
 
         return Optional.ofNullable(Graph.extract(jsonData))
-            .filter(graph -> !graph.isEmpty())
-            .map(graph -> (ObjectNode) graph.get(0))
-            .map(MonarchLD::convert)
-            .map(MonarchConverter::convert);
+                .filter(graph -> !graph.isEmpty())
+                .map(graph -> (ObjectNode) graph.get(0))
+                .map(MonarchLD::convert)
+                .map(MonarchConverter::convert);
     }
-
 }

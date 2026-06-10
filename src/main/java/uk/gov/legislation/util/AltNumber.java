@@ -5,5 +5,4 @@ public interface AltNumber {
     String category();
 
     String value();
-
 }

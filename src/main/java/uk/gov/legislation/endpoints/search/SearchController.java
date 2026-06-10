@@ -34,12 +34,13 @@ public class SearchController implements SearchApi {
         validateSearchParameters(param);
         InputStream atom = db.getAtomStream(convert(param));
         try {
-            StreamingResponseBody body = output -> {
-                try (atom) { atom.transferTo(output); }
-            };
-            return ResponseEntity.ok()
-                .contentType(APPLICATION_ATOM_XML_UTF8)
-                .body(body);
+            StreamingResponseBody body =
+                    output -> {
+                        try (atom) {
+                            atom.transferTo(output);
+                        }
+                    };
+            return ResponseEntity.ok().contentType(APPLICATION_ATOM_XML_UTF8).body(body);
         } catch (RuntimeException e) {
             try {
                 atom.close();
@@ -60,50 +61,51 @@ public class SearchController implements SearchApi {
 
     public static void validateYears(Integer year, Integer startYear, Integer endYear) {
         if (year != null && (startYear != null || endYear != null))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                "`year` cannot be combined with `startYear` or `endYear`");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST,
+                    "`year` cannot be combined with `startYear` or `endYear`");
         if (startYear != null && endYear != null && startYear > endYear)
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                "`startYear` must be ≤ `endYear`");
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, "`startYear` must be ≤ `endYear`");
     }
 
     @Override
     public ResponseEntity<PageOfDocuments> searchByJson(SearchParameters param)
-        throws IOException, InterruptedException {
+            throws IOException, InterruptedException {
 
         validateSearchParameters(param);
         return Optional.of(db.get(convert(param)))
-            .map(results -> DocumentsFeedConverter.convert(results, param))
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
+                .map(results -> DocumentsFeedConverter.convert(results, param))
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR));
     }
 
     private static Parameters convert(SearchParameters params) {
-        var builder = Parameters.builder()
-            .type(params.getTypes())
-            .ukamended(params.getUkAmended())
-            .year(params.getYear())
-            .startYear(params.getStartYear())
-            .endYear(params.getEndYear())
-            .title(params.getTitle())
-            .subject(params.getSubject())
-            .language(params.getLanguage())
-            .published(params.getPublished())
-            .text(params.getQ())
-            .sort(params.getSort())
-            .extent(params.getExtent(), params.isExclusiveExtent())
-            .stage(params.getStage())
-            .department(params.getDepartment())
-            .version(params.getPointInTime())
-            .page(params.getPage())
-            .pageSize(params.getPageSize());
+        var builder =
+                Parameters.builder()
+                        .type(params.getTypes())
+                        .ukamended(params.getUkAmended())
+                        .year(params.getYear())
+                        .startYear(params.getStartYear())
+                        .endYear(params.getEndYear())
+                        .title(params.getTitle())
+                        .subject(params.getSubject())
+                        .language(params.getLanguage())
+                        .published(params.getPublished())
+                        .text(params.getQ())
+                        .sort(params.getSort())
+                        .extent(params.getExtent(), params.isExclusiveExtent())
+                        .stage(params.getStage())
+                        .department(params.getDepartment())
+                        .version(params.getPointInTime())
+                        .page(params.getPage())
+                        .pageSize(params.getPageSize());
         try {
             NumberAndSeries.parse(params.getNumber())
-                .ifPresent(x -> builder.number(x.number(), x.series()));
+                    .ifPresent(x -> builder.number(x.number(), x.series()));
         } catch (IllegalArgumentException e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
         return builder.build();
     }
-
 }

@@ -1,17 +1,17 @@
 package uk.gov.legislation.data.marklogic;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 @SuppressWarnings("unused")
 class AbstractParametersTest {
 
     /**
-     * This is a test class for the AbstractParameters class.
-     * The purpose of this test is to validate the behavior of the toQuery() method,
-     * which generates a query string representation of the object's fields.
+     * This is a test class for the AbstractParameters class. The purpose of this test is to
+     * validate the behavior of the toQuery() method, which generates a query string representation
+     * of the object's fields.
      */
-
     @Test
     void testToQuery_withMultipleFields() {
         class TestParameters extends AbstractParameters {
@@ -26,11 +26,9 @@ class AbstractParametersTest {
         assertEquals("?field-one=value1&field-two=value2", query);
     }
 
-
     @Test
     void testToQuery_withNoFields() {
-        class TestParameters extends AbstractParameters {
-        }
+        class TestParameters extends AbstractParameters {}
 
         TestParameters parameters = new TestParameters();
         String query = parameters.toQuery();
@@ -77,7 +75,6 @@ class AbstractParametersTest {
         assertEquals("?field=value", query);
     }
 
-
     @Test
     void testToQuery_withEmptyStringField() {
         class TestParameters extends AbstractParameters {
@@ -89,5 +86,4 @@ class AbstractParametersTest {
 
         assertEquals("?field=", query);
     }
-
 }

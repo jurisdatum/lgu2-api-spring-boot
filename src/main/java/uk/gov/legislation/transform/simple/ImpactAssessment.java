@@ -1,14 +1,13 @@
 package uk.gov.legislation.transform.simple;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.net.URI;
 import java.time.LocalDate;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * Jackson mapping for the "IAalterType" complex type in schemaLegislationMetadata.xsd.
- * Represents Impact Assessments and UK Regulatory Policy Committee Opinions with additional
- * metadata fields for tracking legislative process information (stage, department, year, number).
+ * Jackson mapping for the "IAalterType" complex type in schemaLegislationMetadata.xsd. Represents
+ * Impact Assessments and UK Regulatory Policy Committee Opinions with additional metadata fields
+ * for tracking legislative process information (stage, department, year, number).
  */
 public class ImpactAssessment {
 
@@ -41,5 +40,4 @@ public class ImpactAssessment {
 
     @JacksonXmlProperty(isAttribute = true, localName = "Size")
     public Integer size;
-
 }

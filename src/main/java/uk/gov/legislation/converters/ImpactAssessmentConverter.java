@@ -1,12 +1,12 @@
 package uk.gov.legislation.converters;
 
+import static uk.gov.legislation.util.Types.longToShort;
+
 import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.meta.AssocMeta;
 import uk.gov.legislation.api.responses.meta.MetaCore;
 import uk.gov.legislation.data.marklogic.impacts.ImpactAssessment;
 import uk.gov.legislation.util.Links;
-
-import static uk.gov.legislation.util.Types.longToShort;
 
 public class ImpactAssessmentConverter {
 
@@ -33,8 +33,7 @@ public class ImpactAssessmentConverter {
     }
 
     public static MetaCore convert(ImpactAssessment.Legislation leg) {
-        if (leg == null)
-            return null;
+        if (leg == null) return null;
         MetaCore aw = new MetaCore();
         aw.id = Links.shorten(leg.uri.toString());
         aw.longType = leg.clazz;
@@ -43,5 +42,4 @@ public class ImpactAssessmentConverter {
         aw.number = leg.number;
         return aw;
     }
-
 }

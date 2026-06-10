@@ -1,11 +1,10 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.ArrayNode;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.StreamSupport;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 class Helper {
 
@@ -13,11 +12,8 @@ class Helper {
     static <T> List<T> oneOrMany(JsonNode node, Class<T> t) {
         if (node instanceof ArrayNode)
             return StreamSupport.stream(node.spliterator(), false)
-                .map(o -> Graph.mapper.convertValue(o, t))
-                .toList();
-        return Collections.singletonList(
-            Graph.mapper.convertValue(node, t)
-        );
+                    .map(o -> Graph.mapper.convertValue(o, t))
+                    .toList();
+        return Collections.singletonList(Graph.mapper.convertValue(node, t));
     }
-
 }

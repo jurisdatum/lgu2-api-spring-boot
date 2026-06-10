@@ -60,12 +60,14 @@ class RegnalYearTest {
 
     static Stream<Arguments> combineYearsProvider() {
         return Stream.of(
-            arguments(new String[]{}, new String[]{}),
-            arguments(new String[]{"10", "George", "V"}, new String[]{"10", "George", "V"}),
-            arguments(new String[]{"10", "and", "20", "George", "VI"}, new String[]{"10 & 20", "George", "VI"}),
-            arguments(new String[]{"5", "and", "10", "George", "and", "15", "Elizabeth"},
-                new String[]{"5 & 10", "George", "and", "15", "Elizabeth"})
-        );
+                arguments(new String[] {}, new String[] {}),
+                arguments(new String[] {"10", "George", "V"}, new String[] {"10", "George", "V"}),
+                arguments(
+                        new String[] {"10", "and", "20", "George", "VI"},
+                        new String[] {"10 & 20", "George", "VI"}),
+                arguments(
+                        new String[] {"5", "and", "10", "George", "and", "15", "Elizabeth"},
+                        new String[] {"5 & 10", "George", "and", "15", "Elizabeth"}));
     }
 
     // addPunctuation(...) tests
@@ -79,11 +81,12 @@ class RegnalYearTest {
 
     static Stream<Arguments> addPunctuationProvider() {
         return Stream.of(
-            arguments(new String[]{}, new String[]{}),
-            arguments(new String[]{"20", "and", "30"}, new String[]{"20", "and", "30"}),
-            arguments(new String[]{"Elizabeth", "George"}, new String[]{"Elizabeth.", "George."}),
-            arguments(new String[]{"10", "George"}, new String[]{"10", "George."})
-        );
+                arguments(new String[] {}, new String[] {}),
+                arguments(new String[] {"20", "and", "30"}, new String[] {"20", "and", "30"}),
+                arguments(
+                        new String[] {"Elizabeth", "George"},
+                        new String[] {"Elizabeth.", "George."}),
+                arguments(new String[] {"10", "George"}, new String[] {"10", "George."}));
     }
 
     // forCitation() tests
@@ -97,13 +100,12 @@ class RegnalYearTest {
 
     static Stream<Arguments> forCitationProvider() {
         return Stream.of(
-            arguments("10/George/V", "(10 George. V)"),
-            arguments("10_and_20/George", "(10 & 20 George.)"),
-            arguments("10/Elizabeth", "(10 Elizabeth.)"),
-            arguments("10/Elizabeth_and_George", "(10 Elizabeth. and George.)"),
-            arguments("10_and_20", "(10 & 20)"),
-            arguments("10/Elizabeth_and_20/George", "(10 Elizabeth. and 20 George.)")
-        );
+                arguments("10/George/V", "(10 George. V)"),
+                arguments("10_and_20/George", "(10 & 20 George.)"),
+                arguments("10/Elizabeth", "(10 Elizabeth.)"),
+                arguments("10/Elizabeth_and_George", "(10 Elizabeth. and George.)"),
+                arguments("10_and_20", "(10 & 20)"),
+                arguments("10/Elizabeth_and_20/George", "(10 Elizabeth. and 20 George.)"));
     }
 
     @Test

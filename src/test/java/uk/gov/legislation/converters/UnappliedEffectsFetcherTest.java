@@ -25,14 +25,11 @@ import uk.gov.legislation.transform.simple.effects.Page;
 @ExtendWith(MockitoExtension.class)
 class UnappliedEffectsFetcherTest {
 
-    @Mock
-    private Changes changes;
+    @Mock private Changes changes;
 
-    @Mock
-    private EffectsSimplifier simplifier;
+    @Mock private EffectsSimplifier simplifier;
 
-    @InjectMocks
-    private UnappliedEffectsFetcher fetcher;
+    @InjectMocks private UnappliedEffectsFetcher fetcher;
 
     private static Metadata createFinalMetadata() {
         Metadata m = new Metadata();
@@ -129,9 +126,7 @@ class UnappliedEffectsFetcherTest {
         Page page1 = createPage(2, e1);
         Page page2 = createPage(2, e2);
 
-        when(changes.fetch(any()))
-            .thenReturn("<atom-page-1/>")
-            .thenReturn("<atom-page-2/>");
+        when(changes.fetch(any())).thenReturn("<atom-page-1/>").thenReturn("<atom-page-2/>");
         when(simplifier.parse("<atom-page-1/>")).thenReturn(page1);
         when(simplifier.parse("<atom-page-2/>")).thenReturn(page2);
 
@@ -142,5 +137,4 @@ class UnappliedEffectsFetcherTest {
         assertEquals("e1", m.rawEffects.get(0).id);
         assertEquals("e2", m.rawEffects.get(1).id);
     }
-
 }

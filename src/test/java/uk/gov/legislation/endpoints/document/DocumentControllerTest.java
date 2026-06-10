@@ -37,24 +37,21 @@ import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.exceptions.TransformationException;
 import uk.gov.legislation.transform.Transforms;
 
-
 @WebMvcTest(DocumentController.class)
- class DocumentControllerTest {
+class DocumentControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Legislation marklogic;
+    @MockitoBean private Legislation marklogic;
 
-    @MockitoBean
-    private Transforms transforms;
+    @MockitoBean private Transforms transforms;
 
     @SuppressWarnings("UnusedVariable") // wired into the @WebMvcTest context, not read directly
     @MockitoBean
     private Impacts impacts;
 
-    private static final String DOCX_MIME_TYPE = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+    private static final String DOCX_MIME_TYPE =
+            "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
     private final Optional<String> version = Optional.of("enacted");
     private final Optional<String> language = Optional.of("en");
@@ -67,23 +64,26 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnXml_whenValidRequest() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .header("Accept-Language", "en")
+                                        .queryParam("version", "enacted")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
-            .andExpect(content().string(clmlXml));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
+                .andExpect(content().string(clmlXml));
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verifyNoMoreInteractions(marklogic);
         verifyNoInteractions(transforms);
@@ -92,23 +92,26 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnXml_whenValidRequestWithMonarch() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/Eliz1/2020/1")
+                                        .header("Accept-Language", "en")
+                                        .queryParam("version", "enacted")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
-            .andExpect(content().string(clmlXml));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
+                .andExpect(content().string(clmlXml));
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verifyNoMoreInteractions(marklogic);
         verifyNoInteractions(transforms);
@@ -117,26 +120,30 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnJsonWhenAcceptsJson() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
         Document document = new Document(null, "rendered document");
-        when(transforms.clml2document(any(InputStream.class))).then(invocation -> {
-            invocation.getArgument(0, InputStream.class);
-            return document;
-        });
+        when(transforms.clml2document(any(InputStream.class)))
+                .then(
+                        invocation -> {
+                            invocation.getArgument(0, InputStream.class);
+                            return document;
+                        });
 
-        mockMvc.perform(get("/document/ukla/2020/1")
-                .accept(MediaType.APPLICATION_JSON)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.html").value("rendered document"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+        mockMvc.perform(
+                        get("/document/ukla/2020/1")
+                                .accept(MediaType.APPLICATION_JSON)
+                                .param("version", "enacted")
+                                .header("Accept-Language", "en"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.html").value("rendered document"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verify(transforms).clml2document(any(InputStream.class));
@@ -146,26 +153,30 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnJsonWhenAcceptsJsonWithMonarch() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
         Document document = new Document(null, "rendered document");
-        when(transforms.clml2document(any(InputStream.class))).then(invocation -> {
-            invocation.getArgument(0, InputStream.class);
-            return document;
-        });
+        when(transforms.clml2document(any(InputStream.class)))
+                .then(
+                        invocation -> {
+                            invocation.getArgument(0, InputStream.class);
+                            return document;
+                        });
 
-        mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .accept(MediaType.APPLICATION_JSON)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.html").value("rendered document"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+        mockMvc.perform(
+                        get("/document/ukla/Eliz1/2020/1")
+                                .accept(MediaType.APPLICATION_JSON)
+                                .param("version", "enacted")
+                                .header("Accept-Language", "en"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.html").value("rendered document"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verify(transforms).clml2document(any(InputStream.class));
@@ -175,34 +186,40 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnDocxWhenAcceptsDocx() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            docxOut.write(docx);
-            docxOut.flush();
-            return null;
-        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
+        byte[] docx = new byte[] {0x01, 0x02, 0x03};
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            docxOut.write(docx);
+                            docxOut.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept(MediaType.valueOf(DOCX_MIME_TYPE))
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
-            .andExpect(content().bytes(docx))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
+                .andExpect(content().bytes(docx))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
@@ -212,34 +229,40 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     void shouldReturnDocxWhenAcceptsDocxWithMonarch() throws Exception {
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        byte[] docx = new byte[] { 0x01, 0x02, 0x03 };
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            docxOut.write(docx);
-            docxOut.flush();
-            return null;
-        }).when(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
+        byte[] docx = new byte[] {0x01, 0x02, 0x03};
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream docxOut = invocation.getArgument(1, OutputStream.class);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            docxOut.write(docx);
+                            docxOut.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2docx(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .accept(MediaType.valueOf(DOCX_MIME_TYPE))
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/Eliz1/2020/1")
+                                        .accept(MediaType.valueOf(DOCX_MIME_TYPE))
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
-            .andExpect(content().bytes(docx))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.valueOf(DOCX_MIME_TYPE)))
+                .andExpect(content().bytes(docx))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verify(transforms).clml2docx(any(InputStream.class), any(OutputStream.class));
@@ -250,32 +273,38 @@ import uk.gov.legislation.transform.Transforms;
     void shouldReturnHtmlWhenAcceptsHtml() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
-            htmlStream.flush();
-            return null;
-        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream htmlStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+                            htmlStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept(MediaType.TEXT_HTML)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept(MediaType.TEXT_HTML)
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-            .andExpect(content().string(renderedHtml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                .andExpect(content().string(renderedHtml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
@@ -286,32 +315,38 @@ import uk.gov.legislation.transform.Transforms;
     void shouldReturnHtmlWhenAcceptsHtmlWithMonarch() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
-            htmlStream.flush();
-            return null;
-        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream htmlStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+                            htmlStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .accept(MediaType.TEXT_HTML)
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/Eliz1/2020/1")
+                                        .accept(MediaType.TEXT_HTML)
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-            .andExpect(content().string(renderedHtml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                .andExpect(content().string(renderedHtml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
@@ -323,32 +358,38 @@ import uk.gov.legislation.transform.Transforms;
 
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream aknStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
-            aknStream.flush();
-            return null;
-        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream aknStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+                            aknStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept("application/akn+xml")
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept("application/akn+xml")
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
-            .andExpect(content().string(aknXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
+                .andExpect(content().string(aknXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
@@ -359,32 +400,38 @@ import uk.gov.legislation.transform.Transforms;
     void shouldReturnAknWhenAcceptsAknWithMonarch() throws Exception {
         String aknXml = "<akn:doc xmlns:akn='http://www.akomantoso.org/2.0'>...</akn:doc>";
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, regnalYear, number, version, language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream aknStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
-            aknStream.flush();
-            return null;
-        }).when(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream aknStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            aknStream.write(aknXml.getBytes(StandardCharsets.UTF_8));
+                            aknStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/Eliz1/2020/1")
-                .accept("application/akn+xml")
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/Eliz1/2020/1")
+                                        .accept("application/akn+xml")
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
-            .andExpect(content().string(aknXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_AKN_XML))
+                .andExpect(content().string(aknXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, regnalYear, number, version, language);
         verify(transforms).clml2akn(any(InputStream.class), any(OutputStream.class));
@@ -396,14 +443,19 @@ import uk.gov.legislation.transform.Transforms;
     @DisplayName("Should return 400 Bad Request for invalid document types")
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
 
-        mockMvc.perform(get("/document/{type}/2020/1", invalidType)
-                .header("Accept-Language", "en")
-                .queryParam("version", "enacted")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
-            .andExpect(jsonPath("$.message")
-                .value("The document type '" + invalidType + "' is not recognized."));
+        mockMvc.perform(
+                        get("/document/{type}/2020/1", invalidType)
+                                .header("Accept-Language", "en")
+                                .queryParam("version", "enacted")
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value(
+                                        "The document type '"
+                                                + invalidType
+                                                + "' is not recognized."));
 
         verifyNoInteractions(marklogic);
         verifyNoInteractions(transforms);
@@ -412,28 +464,32 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     @DisplayName("Should include redirect headers when MarkLogic returns redirect")
     void shouldIncludeRedirectHeaders_whenMarkLogicReturnsRedirect() throws Exception {
-        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
+        Legislation.Redirect redirect =
+                new Legislation.Redirect(type, year, number, Optional.of("enacted"));
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.of(redirect));
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.of(redirect));
         when(marklogic.getDocumentStream(type, year, number, Optional.empty(), language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .header("Accept-Language", "en")
-                .accept("application/xml"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .header("Accept-Language", "en")
+                                        .accept("application/xml"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().string(clmlXml))
-            .andExpect(header().string("X-Document-Type", type))
-            .andExpect(header().string("X-Document-Year", year))
-            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
-            .andExpect(header().string("X-Document-Version", "enacted"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().string(clmlXml))
+                .andExpect(header().string("X-Document-Type", type))
+                .andExpect(header().string("X-Document-Year", year))
+                .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+                .andExpect(header().string("X-Document-Version", "enacted"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, Optional.empty(), language);
         verifyNoInteractions(transforms);
@@ -443,36 +499,43 @@ import uk.gov.legislation.transform.Transforms;
     @DisplayName("Should include redirect headers for HTML streaming")
     void shouldIncludeRedirectHeaders_whenHtmlStreaming() throws Exception {
         String renderedHtml = "<html><body>Some content</body></html>";
-        Legislation.Redirect redirect = new Legislation.Redirect(type, year, number, Optional.of("enacted"));
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.of(redirect));
+        Legislation.Redirect redirect =
+                new Legislation.Redirect(type, year, number, Optional.of("enacted"));
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.of(redirect));
         when(marklogic.getDocumentStream(type, year, number, Optional.empty(), language))
-            .thenReturn(streamResponse);
-        doAnswer(invocation -> {
-            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
-            OutputStream htmlStream = invocation.getArgument(1);
-            clmlIn.transferTo(OutputStream.nullOutputStream());
-            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
-            htmlStream.flush();
-            return null;
-        }).when(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doAnswer(
+                        invocation -> {
+                            InputStream clmlIn = invocation.getArgument(0, InputStream.class);
+                            OutputStream htmlStream = invocation.getArgument(1);
+                            clmlIn.transferTo(OutputStream.nullOutputStream());
+                            htmlStream.write(renderedHtml.getBytes(StandardCharsets.UTF_8));
+                            htmlStream.flush();
+                            return null;
+                        })
+                .when(transforms)
+                .clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept(MediaType.TEXT_HTML)
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept(MediaType.TEXT_HTML)
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-            .andExpect(content().string(renderedHtml))
-            .andExpect(header().string("X-Document-Type", type))
-            .andExpect(header().string("X-Document-Year", year))
-            .andExpect(header().string("X-Document-Number", Integer.toString(number)))
-            .andExpect(header().string("X-Document-Version", "enacted"))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
+                .andExpect(content().string(renderedHtml))
+                .andExpect(header().string("X-Document-Type", type))
+                .andExpect(header().string("X-Document-Year", year))
+                .andExpect(header().string("X-Document-Number", Integer.toString(number)))
+                .andExpect(header().string("X-Document-Version", "enacted"))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, Optional.empty(), language);
         verify(transforms).clml2htmlStandalone(any(InputStream.class), any(OutputStream.class));
@@ -482,23 +545,26 @@ import uk.gov.legislation.transform.Transforms;
     @Test
     @DisplayName("AkN transform failure returns 500 with error JSON")
     void shouldReturn500WhenAknTransformFails() throws Exception {
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
-        doThrow(new TransformationException("boom", null)).when(transforms)
-            .clml2akn(any(InputStream.class), any(OutputStream.class));
+                .thenReturn(streamResponse);
+        doThrow(new TransformationException("boom", null))
+                .when(transforms)
+                .clml2akn(any(InputStream.class), any(OutputStream.class));
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept("application/akn+xml")
-                .param("version", "enacted")
-                .header("Accept-Language", "en"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept("application/akn+xml")
+                                        .param("version", "enacted")
+                                        .header("Accept-Language", "en"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
-        mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isInternalServerError());
+        mockMvc.perform(asyncDispatch(mvcResult)).andExpect(status().isInternalServerError());
     }
 
     @ParameterizedTest
@@ -507,24 +573,27 @@ import uk.gov.legislation.transform.Transforms;
     void acceptLanguageHeader(String acceptLanguageHeader) throws Exception {
         Optional<String> language = Optional.of(acceptLanguageHeader);
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, language))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept("application/xml")
-                .header("Accept-Language", acceptLanguageHeader)
-                .queryParam("version", "enacted"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept("application/xml")
+                                        .header("Accept-Language", acceptLanguageHeader)
+                                        .queryParam("version", "enacted"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
-            .andExpect(content().string(clmlXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
+                .andExpect(content().string(clmlXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, acceptLanguageHeader));
 
         verify(marklogic).getDocumentStream(type, year, number, version, language);
         verifyNoInteractions(transforms);
@@ -535,26 +604,28 @@ import uk.gov.legislation.transform.Transforms;
     void shouldDefaultToEnglish_whenAcceptLanguageHeaderIsMissing() throws Exception {
         Optional<String> defaultLanguage = Optional.of("en");
 
-        Legislation.StreamResponse streamResponse = new Legislation.StreamResponse(
-            new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
-            Optional.empty());
+        Legislation.StreamResponse streamResponse =
+                new Legislation.StreamResponse(
+                        new ByteArrayInputStream(clmlXml.getBytes(StandardCharsets.UTF_8)),
+                        Optional.empty());
         when(marklogic.getDocumentStream(type, year, number, version, defaultLanguage))
-            .thenReturn(streamResponse);
+                .thenReturn(streamResponse);
 
-        MvcResult mvcResult = mockMvc.perform(get("/document/ukla/2020/1")
-                .accept("application/xml")
-                .queryParam("version", "enacted"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/document/ukla/2020/1")
+                                        .accept("application/xml")
+                                        .queryParam("version", "enacted"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
-            .andExpect(content().string(clmlXml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(DocumentController.APPLICATION_XML_UTF8))
+                .andExpect(content().string(clmlXml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, "en"));
 
         verify(marklogic).getDocumentStream(type, year, number, version, defaultLanguage);
         verifyNoInteractions(transforms);
     }
-
 }

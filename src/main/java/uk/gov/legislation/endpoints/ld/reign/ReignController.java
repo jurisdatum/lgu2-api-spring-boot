@@ -27,14 +27,11 @@ public class ReignController implements ReignApi {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
             String result = query.get(id, media.toString());
-            return ResponseEntity.ok()
-                .contentType(media)
-                .body(result);
+            return ResponseEntity.ok().contentType(media).body(result);
         }
         return query.get(id)
-            .map(ReignConverter::convert)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ReignConverter::convert)
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

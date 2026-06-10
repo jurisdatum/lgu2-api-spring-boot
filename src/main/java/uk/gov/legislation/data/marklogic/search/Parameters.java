@@ -1,13 +1,12 @@
 package uk.gov.legislation.data.marklogic.search;
 
-import uk.gov.legislation.data.marklogic.AbstractParameters;
-import uk.gov.legislation.util.Extent;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
+import uk.gov.legislation.data.marklogic.AbstractParameters;
+import uk.gov.legislation.util.Extent;
 
 public class Parameters extends AbstractParameters {
 
@@ -43,18 +42,17 @@ public class Parameters extends AbstractParameters {
 
     public String department;
 
-    public  LocalDate version;
+    public LocalDate version;
 
     public Integer page;
 
     public Integer resultsCount; // page size
 
     public enum Sort {
-
         RELEVANCE("relevance"),
         PUBLISHED("published"),
         TITLE("title"),
-//        YEAR,
+        //        YEAR,
         TYPE("type");
 
         private final String value;
@@ -68,12 +66,9 @@ public class Parameters extends AbstractParameters {
         }
 
         public static Sort fromValue(String value) {
-            if (value == null)
-                throw new IllegalArgumentException("Unknown sort: null");
+            if (value == null) throw new IllegalArgumentException("Unknown sort: null");
             String normalized = value.trim();
-            for (Sort sort : values())
-                if (sort.value.equalsIgnoreCase(normalized))
-                    return sort;
+            for (Sort sort : values()) if (sort.value.equalsIgnoreCase(normalized)) return sort;
             throw new IllegalArgumentException("Unknown sort: " + normalized);
         }
 
@@ -84,8 +79,11 @@ public class Parameters extends AbstractParameters {
     }
 
     public enum Series {
-
-        W, S, C, L, NI;
+        W,
+        S,
+        C,
+        L,
+        NI;
 
         @Override
         public String toString() {
@@ -93,13 +91,15 @@ public class Parameters extends AbstractParameters {
         }
     }
 
-    public static Builder builder() { return new Builder(); }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public static class Builder {
 
         private final Parameters params = new Parameters();
 
-        public Builder() { }
+        public Builder() {}
 
         public Builder type(String type) {
             params.type = type;
@@ -176,10 +176,11 @@ public class Parameters extends AbstractParameters {
                 params.extent = null;
                 return this;
             }
-            params.extent = extent.stream().map(e -> e == Extent.NI ? "N.I." : e.name())
-                .collect(Collectors.joining("+"));
-            if (exclusive != null && exclusive)
-                params.extent = "=" + params.extent;
+            params.extent =
+                    extent.stream()
+                            .map(e -> e == Extent.NI ? "N.I." : e.name())
+                            .collect(Collectors.joining("+"));
+            if (exclusive != null && exclusive) params.extent = "=" + params.extent;
             return this;
         }
 
@@ -195,7 +196,7 @@ public class Parameters extends AbstractParameters {
 
         public Builder version(LocalDate version) {
             params.version = version;
-              return this;
+            return this;
         }
 
         public Builder page(Integer page) {
@@ -211,7 +212,5 @@ public class Parameters extends AbstractParameters {
         public Parameters build() {
             return params;
         }
-
     }
-
 }

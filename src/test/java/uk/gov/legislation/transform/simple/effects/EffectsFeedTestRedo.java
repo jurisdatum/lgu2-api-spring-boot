@@ -1,16 +1,15 @@
 package uk.gov.legislation.transform.simple.effects;
 
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+
+import java.nio.file.Files;
+import java.nio.file.Path;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-
-import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
 
 public class EffectsFeedTestRedo {
 
@@ -29,8 +28,7 @@ public class EffectsFeedTestRedo {
     static void simplify(EffectsSimplifier simplifier, String atom) throws Exception {
         String actual = simplifier.simpify(atom);
         String expected = read("/effects/effects-simple.feed");
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing effects-simple.feed");
         writeResource("/effects/effects-simple.feed", actual);
     }
@@ -39,8 +37,7 @@ public class EffectsFeedTestRedo {
         Page feed = simplifier.parse(atom);
         String actual = UnappliedEffectsTest.mapper.writeValueAsString(feed);
         String expected = read("/effects/effects.json");
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing effects.json");
         writeResource("/effects/effects.json", actual);
     }
@@ -50,8 +47,7 @@ public class EffectsFeedTestRedo {
         PageOfEffects converted = EffectsFeedConverter.convert(feed);
         String actual = UnappliedEffectsTest.mapper.writeValueAsString(converted);
         String expected = read("/effects/effects-converted.json");
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing effects-converted.json");
         writeResource("/effects/effects-converted.json", actual);
     }

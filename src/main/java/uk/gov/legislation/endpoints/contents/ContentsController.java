@@ -44,39 +44,91 @@ public class ContentsController implements ContentsApi {
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(
+            String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                version,
+                locale,
+                this::transferToWrapper,
+                APPLICATION_XML_UTF8);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(
+                type,
+                regnalYear,
+                number,
+                version,
+                locale,
+                this::transferToWrapper,
+                APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(
+            String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                version,
+                locale,
+                transforms::clml2akn,
+                APPLICATION_AKN_XML);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> getDocumentContentsAkn(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
+        return fetchAndTransformToStream(
+                type,
+                regnalYear,
+                number,
+                version,
+                locale,
+                transforms::clml2akn,
+                APPLICATION_AKN_XML);
     }
 
     /* JSON */
 
     @Override
-    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, int year, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<TableOfContents> getDocumentContentsJson(
+            String type, int year, int number, Optional<String> version, Locale locale)
+            throws Exception {
         validateType(type);
-        return fetchAndTransform(type, Integer.toString(year), number, version, locale, transforms::clml2toc);
+        return fetchAndTransform(
+                type, Integer.toString(year), number, version, locale, transforms::clml2toc);
     }
 
     @Override
-    public ResponseEntity<TableOfContents> getDocumentContentsJson(String type, String monarch, String years, int number, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<TableOfContents> getDocumentContentsJson(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            Optional<String> version,
+            Locale locale)
+            throws Exception {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return fetchAndTransform(type, regnalYear, number, version, locale, transforms::clml2toc);
@@ -85,14 +137,29 @@ public class ContentsController implements ContentsApi {
     /* Word (.docx) */
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transforms::clml2docx, MS_WORD);
+    public ResponseEntity<StreamingResponseBody> docx(
+            String type, int year, int number, Optional<String> version, Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                version,
+                locale,
+                transforms::clml2docx,
+                MS_WORD);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> docx(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transforms::clml2docx, MS_WORD);
+        return fetchAndTransformToStream(
+                type, regnalYear, number, version, locale, transforms::clml2docx, MS_WORD);
     }
 
     /* helpers */
@@ -102,28 +169,43 @@ public class ContentsController implements ContentsApi {
         T apply(String clml) throws Exception;
     }
 
-    private <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, Optional<String> version,
-            Locale locale, Transform<T> transform) throws Exception {
+    private <T> ResponseEntity<T> fetchAndTransform(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Locale locale,
+            Transform<T> transform)
+            throws Exception {
         String language = locale.getLanguage();
-        Legislation.Response leg = marklogic.getTableOfContents(type, year, number, version, Optional.of(language));
+        Legislation.Response leg =
+                marklogic.getTableOfContents(type, year, number, version, Optional.of(language));
         T body = transform.apply(leg.clml());
         HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
     }
 
-    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number,
-            Optional<String> version, Locale locale, BiConsumer<InputStream, OutputStream> transform, MediaType mt) {
+    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Locale locale,
+            BiConsumer<InputStream, OutputStream> transform,
+            MediaType mt) {
         validateType(type);
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
-            marklogic.getTableOfContentsStream(type, year, number, version, Optional.of(language));
+                marklogic.getTableOfContentsStream(
+                        type, year, number, version, Optional.of(language));
         InputStream clml = doc.clml();
         try {
-            StreamingResponseBody body = output -> {
-                try (InputStream in = clml) {
-                    transform.accept(in, output);
-                }
-            };
+            StreamingResponseBody body =
+                    output -> {
+                        try (InputStream in = clml) {
+                            transform.accept(in, output);
+                        }
+                    };
             HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
             return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
         } catch (RuntimeException e) {
@@ -135,5 +217,4 @@ public class ContentsController implements ContentsApi {
             throw e;
         }
     }
-
 }

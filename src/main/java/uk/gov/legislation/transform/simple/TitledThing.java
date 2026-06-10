@@ -1,8 +1,7 @@
 package uk.gov.legislation.transform.simple;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.net.URI;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 public class TitledThing {
 
@@ -11,5 +10,4 @@ public class TitledThing {
 
     @JacksonXmlProperty(localName = "title", isAttribute = true)
     public String title;
-
 }

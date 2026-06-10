@@ -23,27 +23,26 @@ import uk.gov.legislation.api.parameters.Year;
 import uk.gov.legislation.api.parameters.Years;
 import uk.gov.legislation.api.responses.Fragment;
 
-/**
- * API interface for accessing document fragments in various formats.
- */
+/** API interface for accessing document fragments in various formats. */
 @Tag(name = "Document fragments")
-
 public interface FragmentApi {
 
     /* CLML */
 
     @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/xml")
     @Operation(
-        summary = "get a document fragment, e.g., a section (calendar year)",
-        parameters = {
-            @Parameter(
-                name = "Accept-Language",
-                description = "language of the document",
-                in = ParameterIn.HEADER,
-                schema = @Schema(type = "string", allowableValues = { "en", "cy" }, examples = "en")
-            )
-        }
-    )
+            summary = "get a document fragment, e.g., a section (calendar year)",
+            parameters = {
+                @Parameter(
+                        name = "Accept-Language",
+                        description = "language of the document",
+                        in = ParameterIn.HEADER,
+                        schema =
+                                @Schema(
+                                        type = "string",
+                                        allowableValues = {"en", "cy"},
+                                        examples = "en"))
+            })
     ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Year int year,
@@ -52,18 +51,22 @@ public interface FragmentApi {
             @RequestParam @Version Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/xml")
+    @GetMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            produces = "application/xml")
     @Operation(
-        summary = "get a document fragment, e.g., a section (regnal year)",
-        parameters = {
-            @Parameter(
-                name = "Accept-Language",
-                description = "language of the document",
-                in = ParameterIn.HEADER,
-                schema = @Schema(type = "string", allowableValues = { "en", "cy" }, examples = "en")
-            )
-        }
-    )
+            summary = "get a document fragment, e.g., a section (regnal year)",
+            parameters = {
+                @Parameter(
+                        name = "Accept-Language",
+                        description = "language of the document",
+                        in = ParameterIn.HEADER,
+                        schema =
+                                @Schema(
+                                        type = "string",
+                                        allowableValues = {"en", "cy"},
+                                        examples = "en"))
+            })
     ResponseEntity<StreamingResponseBody> getFragmentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
@@ -75,7 +78,9 @@ public interface FragmentApi {
 
     /* Akoma Ntoso */
 
-    @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/akn+xml")
+    @GetMapping(
+            value = "/fragment/{type}/{year}/{number}/{section}",
+            produces = "application/akn+xml")
     ResponseEntity<StreamingResponseBody> getFragmentAkn(
             @PathVariable String type,
             @PathVariable int year,
@@ -84,7 +89,9 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/akn+xml")
+    @GetMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            produces = "application/akn+xml")
     ResponseEntity<StreamingResponseBody> getFragmentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -105,7 +112,9 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "text/html")
+    @GetMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            produces = "text/html")
     ResponseEntity<StreamingResponseBody> getFragmentHtml(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -124,9 +133,12 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale)
+            throws Exception;
 
-    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/json")
+    @GetMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            produces = "application/json")
     ResponseEntity<Fragment> getFragmentJson(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -134,11 +146,14 @@ public interface FragmentApi {
             @PathVariable int number,
             @PathVariable String section,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale)
+            throws Exception;
 
     /* Word (.docx) */
 
-    @GetMapping(value = "/fragment/{type}/{year}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    @GetMapping(
+            value = "/fragment/{type}/{year}/{number}/{section}",
+            produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable int year,
@@ -147,7 +162,9 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    @GetMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -157,23 +174,26 @@ public interface FragmentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-
     /* HEAD (existence check) */
 
-    @RequestMapping(value = "/fragment/{type}/{year}/{number}/{section}", method = RequestMethod.HEAD)
+    @RequestMapping(
+            value = "/fragment/{type}/{year}/{number}/{section}",
+            method = RequestMethod.HEAD)
     @Operation(summary = "check whether a document fragment exists (calendar year)")
     ResponseEntity<Void> headFragment(
-        @PathVariable @Type String type,
-        @PathVariable @Year int year,
-        @PathVariable @Number int number,
-        @PathVariable @Section String section);
+            @PathVariable @Type String type,
+            @PathVariable @Year int year,
+            @PathVariable @Number int number,
+            @PathVariable @Section String section);
 
-    @RequestMapping(value = "/fragment/{type}/{monarch}/{years}/{number}/{section}", method = RequestMethod.HEAD)
+    @RequestMapping(
+            value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
+            method = RequestMethod.HEAD)
     @Operation(summary = "check whether a document fragment exists (regnal year)")
     ResponseEntity<Void> headFragment(
-        @PathVariable @Type String type,
-        @PathVariable @Monarch String monarch,
-        @PathVariable @Years String years,
-        @PathVariable @Number int number,
-        @PathVariable @Section String section);
+            @PathVariable @Type String type,
+            @PathVariable @Monarch String monarch,
+            @PathVariable @Years String years,
+            @PathVariable @Number int number,
+            @PathVariable @Section String section);
 }

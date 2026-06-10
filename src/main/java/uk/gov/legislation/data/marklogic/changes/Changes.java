@@ -1,11 +1,10 @@
 package uk.gov.legislation.data.marklogic.changes;
 
+import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.marklogic.MarkLogic;
-
-import java.io.IOException;
 
 @Repository
 public class Changes {
@@ -29,5 +28,4 @@ public class Changes {
         logger.debug("it took {} milliseconds to fetch changes", end - start);
         return atom;
     }
-
 }

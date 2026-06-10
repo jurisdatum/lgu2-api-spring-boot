@@ -1,13 +1,12 @@
 package uk.gov.legislation.endpoints;
 
+import java.util.List;
+import java.util.Set;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.exceptions.UnknownTypeException;
 import uk.gov.legislation.exceptions.UnsupportedLanguageException;
 import uk.gov.legislation.util.Types;
-
-import java.util.List;
-import java.util.Set;
 
 public class ParameterValidator {
 
@@ -17,13 +16,18 @@ public class ParameterValidator {
         }
     }
 
-    private static final Set<String> GROUP_TYPES = Set.of(
-        "primary", "secondary",
-        "primary+secondary",  // for convenience of front-end
-        "uk", "scotland", "wales", "ni",
-        "eu-origin"
-        // "drafts", "impacts"
-    );
+    private static final Set<String> GROUP_TYPES =
+            Set.of(
+                    "primary",
+                    "secondary",
+                    "primary+secondary", // for convenience of front-end
+                    "uk",
+                    "scotland",
+                    "wales",
+                    "ni",
+                    "eu-origin"
+                    // "drafts", "impacts"
+                    );
 
     public static void validateType(String type) {
         if (type == null) return;
@@ -49,28 +53,25 @@ public class ParameterValidator {
 
     // used only for query parameter for search endpoint
     public static void validateLanguage(String language) {
-        if (language == null)
-            return;
-        if ("en".equals(language) || "cy".equals(language))
-            return;
+        if (language == null) return;
+        if ("en".equals(language) || "cy".equals(language)) return;
         throw new UnsupportedLanguageException(language);
     }
 
-    private static final Set<String> STAGES = Set.of(
-        "Consultation",
-        "Development",
-        "Enactment",
-        "Final",
-        "Implementation",
-        "Options",
-        "Post Implementation"
-    );
+    private static final Set<String> STAGES =
+            Set.of(
+                    "Consultation",
+                    "Development",
+                    "Enactment",
+                    "Final",
+                    "Implementation",
+                    "Options",
+                    "Post Implementation");
 
     public static void validateStage(String stage) {
-        if (stage == null)
-            return;
+        if (stage == null) return;
         if (STAGES.stream().noneMatch(s -> s.equalsIgnoreCase(stage)))
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "unrecognized stage: " + stage);
+            throw new ResponseStatusException(
+                    HttpStatus.BAD_REQUEST, "unrecognized stage: " + stage);
     }
-
 }

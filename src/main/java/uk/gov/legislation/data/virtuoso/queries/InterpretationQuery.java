@@ -1,5 +1,7 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import java.io.IOException;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import tools.jackson.databind.node.ArrayNode;
 import tools.jackson.databind.node.ObjectNode;
@@ -11,54 +13,56 @@ import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.InterpretationLD;
 import uk.gov.legislation.data.virtuoso.jsonld.ItemLD;
 
-import java.io.IOException;
-import java.util.Optional;
-
 @Repository
 public class InterpretationQuery {
 
     private final Virtuoso virtuoso;
 
-    public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public InterpretationQuery(Virtuoso virtuoso) {
+        this.virtuoso = virtuoso;
+    }
 
     /**
      * Builds the SPARQL query that fetches interpretation triples for the given URI components.
-     * @param type    the first component of the URI, cannot be null
-     * @param middle  the following components of the URI, can contain slashes, cannot be null
-     * @param number  can be null
+     *
+     * @param type the first component of the URI, cannot be null
+     * @param middle the following components of the URI, can contain slashes, cannot be null
+     * @param number can be null
      * @param version can be null
-     * @param welsh   whether to append /welsh
+     * @param welsh whether to append /welsh
      * @return the SPARQL query string
      */
-    String makeSparqlQuery(String type, String middle, String number, String version, boolean welsh) {
+    String makeSparqlQuery(
+            String type, String middle, String number, String version, boolean welsh) {
         String workUri = "http://www.legislation.gov.uk/id/%s/%s".formatted(type, middle);
         String exprUri = "http://www.legislation.gov.uk/%s/%s".formatted(type, middle);
         if (number != null) {
             workUri += "/" + number;
             exprUri += "/" + number;
         }
-        if (version != null)
-            exprUri += "/" + version;
-        if (welsh)
-            exprUri += "/welsh";
+        if (version != null) exprUri += "/" + version;
+        if (welsh) exprUri += "/welsh";
         return """
-            CONSTRUCT { ?s ?p ?o . }
-            WHERE { VALUES ?s { <%s> <%s> } ?s ?p ?o . }
-            """.formatted(workUri, exprUri);
+        CONSTRUCT { ?s ?p ?o . }
+        WHERE { VALUES ?s { <%s> <%s> } ?s ?p ?o . }
+        """
+                .formatted(workUri, exprUri);
     }
 
-    public String get(String type, String middle, String number, String version, boolean welsh, String format) throws IOException, InterruptedException {
+    public String get(
+            String type, String middle, String number, String version, boolean welsh, String format)
+            throws IOException, InterruptedException {
         String query = makeSparqlQuery(type, middle, number, version, welsh);
         return virtuoso.query(query, format);
     }
 
-    public Optional<Interpretation> get(String type, String middle, String number, String version, boolean welsh) throws IOException, InterruptedException {
+    public Optional<Interpretation> get(
+            String type, String middle, String number, String version, boolean welsh)
+            throws IOException, InterruptedException {
         String json = get(type, middle, number, version, welsh, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
-        if (graph == null)
-            return Optional.empty();
-        if (graph.size() < 2)
-            return Optional.empty();
+        if (graph == null) return Optional.empty();
+        if (graph.size() < 2) return Optional.empty();
         ObjectNode item0;
         ObjectNode interpretation0;
         ObjectNode o0 = (ObjectNode) graph.get(0);
@@ -79,5 +83,4 @@ public class InterpretationQuery {
         interpretation2.item = ItemConverter.convert(item1);
         return Optional.of(interpretation2);
     }
-
 }

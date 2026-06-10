@@ -1,21 +1,20 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import tools.jackson.core.JacksonException;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.ArrayNode;
+import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
+import static uk.gov.legislation.data.virtuoso.defra.LabeledFacets.getBinding;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.stream.StreamSupport;
-
-import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
-import static uk.gov.legislation.data.virtuoso.defra.LabeledFacets.getBinding;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 public class YearFacets {
 
-    public record Count(int year, int count) { }
+    public record Count(int year, int count) {}
 
     static CompletableFuture<List<Count>> fetch(DefraLex defra, String baseWhere) {
         String prop = "http://www.legislation.gov.uk/def/legislation/year";
@@ -25,8 +24,7 @@ public class YearFacets {
     static CompletableFuture<List<Count>> fetch(DefraLex defra, String baseWhere, String prop) {
         String where = baseWhere + " ?item <" + prop + "> ?year .";
         String query = FACET_QUERY.formatted("?year", where, "?year");
-        return defra.getSparqlResultsJson(query)
-            .thenApply(YearFacets::parse);
+        return defra.getSparqlResultsJson(query).thenApply(YearFacets::parse);
     }
 
     private static List<Count> parse(String json) {
@@ -38,9 +36,9 @@ public class YearFacets {
         }
         ArrayNode bindings = (ArrayNode) tree.get("results").get("bindings");
         return StreamSupport.stream(bindings.spliterator(), false)
-            .map(YearFacets::map)
-            .sorted(Comparator.comparingInt(Count::year).reversed())
-            .toList();
+                .map(YearFacets::map)
+                .sorted(Comparator.comparingInt(Count::year).reversed())
+                .toList();
     }
 
     private static Count map(JsonNode binding) {
@@ -48,5 +46,4 @@ public class YearFacets {
         int count = Integer.parseInt(getBinding(binding, "cnt"));
         return new Count(year, count);
     }
-
 }

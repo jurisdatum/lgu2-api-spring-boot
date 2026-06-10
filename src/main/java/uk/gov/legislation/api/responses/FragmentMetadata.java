@@ -1,15 +1,14 @@
 package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.util.List;
 
 /**
  * Metadata describing a specific document fragment and its context.
  *
- * <p>Notes on navigation labels: {@link #prevInfo} and {@link #nextInfo} include a
- * human‑readable {@code label} derived from the Atom {@code link/@title} in the
- * source XML. See {@link LabelledLink}.</p>
+ * <p>Notes on navigation labels: {@link #prevInfo} and {@link #nextInfo} include a human‑readable
+ * {@code label} derived from the Atom {@code link/@title} in the source XML. See {@link
+ * LabelledLink}.
  */
 public class FragmentMetadata extends CommonMetadata {
 
@@ -22,8 +21,7 @@ public class FragmentMetadata extends CommonMetadata {
     @Schema(example = "section/3", deprecated = true, description = "use nextInfo")
     public String next;
 
-    @Schema
-    public Level fragmentInfo;
+    @Schema public Level fragmentInfo;
 
     @Schema(description = "Previous fragment with display label (see LabelledLink).")
     public LabelledLink prevInfo;
@@ -31,14 +29,11 @@ public class FragmentMetadata extends CommonMetadata {
     @Schema(description = "Next fragment with display label (see LabelledLink).")
     public LabelledLink nextInfo;
 
-    @Schema
-    public List<Level> ancestors;
+    @Schema public List<Level> ancestors;
 
-    @Schema
-    public List<Level> descendants;
+    @Schema public List<Level> descendants;
 
-    @Schema
-    public Effects unappliedEffects;
+    @Schema public Effects unappliedEffects;
 
     @Schema(nullable = true)
     public Boolean upToDate;
@@ -51,5 +46,4 @@ public class FragmentMetadata extends CommonMetadata {
         @Schema(description = "affecting one of the fragment's ancestors")
         public List<Effect> ancestor;
     }
-
 }

@@ -5,22 +5,16 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 public class MetaCore {
 
-    @Schema
-    public String id;
+    @Schema public String id;
 
-    @Schema
-    public String longType;
+    @Schema public String longType;
 
-    @Schema
-    public String shortType;
+    @Schema public String shortType;
 
-    @Schema
-    public int year;
+    @Schema public int year;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String regnalYear;
 
-    @Schema
-    public long number;
-
+    @Schema public long number;
 }

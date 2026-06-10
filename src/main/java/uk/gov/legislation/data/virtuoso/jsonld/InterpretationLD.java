@@ -2,11 +2,10 @@ package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.ObjectNode;
-
 import java.net.URI;
 import java.util.List;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ObjectNode;
 
 public class InterpretationLD {
 
@@ -16,52 +15,38 @@ public class InterpretationLD {
     @JsonProperty("@type")
     public List<String> type;
 
-    @JsonProperty
-    public String interpretationOf;
+    @JsonProperty public String interpretationOf;
 
-    @JsonProperty
-    public String languageOfText;
+    @JsonProperty public String languageOfText;
 
-    @JsonProperty
-    public ValueAndType languageOfTextIsoCode;
+    @JsonProperty public ValueAndType languageOfTextIsoCode;
 
     @JsonSetter("languageOfTextIsoCode")
     public void setLanguageOfTextIsoCode(JsonNode node) {
         languageOfTextIsoCode = ValueAndType.convert(node);
     }
 
-    @JsonProperty
-    public ValueAndLanguage longTitle;
+    @JsonProperty public ValueAndLanguage longTitle;
 
-    @JsonProperty
-    public ValueAndLanguage shortTitle;
+    @JsonProperty public ValueAndLanguage shortTitle;
 
-    @JsonProperty
-    public ValueAndLanguage orderTitle;
+    @JsonProperty public ValueAndLanguage orderTitle;
 
-    @JsonProperty
-    public ValueAndLanguage statuteTitle;
+    @JsonProperty public ValueAndLanguage statuteTitle;
 
-    @JsonProperty
-    public ValueAndLanguage statuteTitleAbbreviated;
+    @JsonProperty public ValueAndLanguage statuteTitleAbbreviated;
 
-    @JsonProperty
-    public ValueAndLanguage alternativeStatuteTitle;
+    @JsonProperty public ValueAndLanguage alternativeStatuteTitle;
 
-    @JsonProperty
-    public ValueAndLanguage europeanUnionTitle;
+    @JsonProperty public ValueAndLanguage europeanUnionTitle;
 
-    @JsonProperty
-    public ValueAndLanguage subjectDescription;
+    @JsonProperty public ValueAndLanguage subjectDescription;
 
-    @JsonProperty
-    public URI within;
+    @JsonProperty public URI within;
 
-    @JsonProperty
-    public List<URI> contains;
+    @JsonProperty public List<URI> contains;
 
     public static InterpretationLD convert(ObjectNode node) {
         return Graph.mapper.convertValue(node, InterpretationLD.class);
     }
-
 }

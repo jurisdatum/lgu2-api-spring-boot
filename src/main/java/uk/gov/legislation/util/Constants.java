@@ -1,9 +1,6 @@
 package uk.gov.legislation.util;
 
-
-
 public enum Constants {
-
 
     // Transformation failure messages
     TRANSFORMATION_FAIL_AKN("Failed to transform CLML to AKN"),
@@ -12,7 +9,7 @@ public enum Constants {
 
     // Document not found messages
     DOCUMENT_NOT_FOUND("Document not found: %s, %s, %d");
-     final String error;
+    final String error;
 
     Constants(String error) {
         this.error = error;
@@ -22,5 +19,3 @@ public enum Constants {
         return error;
     }
 }
-
-

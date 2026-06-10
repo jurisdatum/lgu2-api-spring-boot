@@ -1,10 +1,9 @@
 package uk.gov.legislation.util;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
-
 import java.util.Collection;
 import java.util.Collections;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 class CiteConstructionTest {
 
@@ -43,11 +42,13 @@ class CiteConstructionTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    private record AltNumber(String category, String value) implements uk.gov.legislation.util.AltNumber { }
+    private record AltNumber(String category, String value)
+            implements uk.gov.legislation.util.AltNumber {}
 
     @Test
     void aep() {
-        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "6_Ann"));
+        Collection<AltNumber> altNumbers =
+                Collections.singletonList(new AltNumber("Regnal", "6_Ann"));
         String actual = Cites.make("aep", 1706, 11, altNumbers);
         String expected = "1706 (6 Ann.) c. 11";
         Assertions.assertEquals(expected, actual);
@@ -55,7 +56,8 @@ class CiteConstructionTest {
 
     @Test
     void aip() {
-        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "40_Geo_3"));
+        Collection<AltNumber> altNumbers =
+                Collections.singletonList(new AltNumber("Regnal", "40_Geo_3"));
         String actual = Cites.make("aip", 1800, 38, altNumbers);
         String expected = "1800 (40 Geo. 3) c. 38 [I]";
         Assertions.assertEquals(expected, actual);
@@ -63,7 +65,8 @@ class CiteConstructionTest {
 
     @Test
     void apgb() {
-        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
+        Collection<AltNumber> altNumbers =
+                Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
         String actual = Cites.make("apgb", 1800, 88, altNumbers);
         String expected = "1800 (39 & 40 Geo. 3) c. 88";
         Assertions.assertEquals(expected, actual);
@@ -71,7 +74,8 @@ class CiteConstructionTest {
 
     @Test
     void gbla() {
-        Collection<AltNumber> altNumbers = Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
+        Collection<AltNumber> altNumbers =
+                Collections.singletonList(new AltNumber("Regnal", "39_and_40_Geo_3"));
         String actual = Cites.make("gbla", 1800, 120, altNumbers);
         String expected = "1800 (39 & 40 Geo. 3) c. cxx";
         Assertions.assertEquals(expected, actual);
@@ -156,7 +160,6 @@ class CiteConstructionTest {
         Assertions.assertEquals(expected, actual);
     }
 
-
     @Test
     void ukci() {
         String actual = Cites.make("ukci", 2024, 1, null);
@@ -177,5 +180,4 @@ class CiteConstructionTest {
         String expected = "2024 c. 1";
         Assertions.assertEquals(expected, actual);
     }
-
 }

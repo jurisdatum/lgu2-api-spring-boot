@@ -1,14 +1,13 @@
 package uk.gov.legislation.endpoints.defra;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
+import java.util.concurrent.CompletionStage;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.data.virtuoso.defra.DefraLex;
 import uk.gov.legislation.data.virtuoso.defra.Parameters;
 import uk.gov.legislation.data.virtuoso.defra.Response;
-
-import java.util.concurrent.CompletionStage;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @RestController
 public class DefraLexController implements DefraLexApi {
@@ -35,22 +34,22 @@ public class DefraLexController implements DefraLexApi {
             @RequestParam(defaultValue = "1") int page,
             @RequestParam(defaultValue = "20") int pageSize) {
         validateType(type);
-        Parameters params = Parameters.builder()
-            .inForce(inForce)
-            .isCommencementOrder(isCommencementOrder)
-            .isRevocationOrder(isRevocationOrder)
-            .type(type)
-            .year(year)
-            .chapter(chapter)
-            .extent(extent)
-            .source(source)
-            .regulator(regulator)
-            .subject(subject)
-            .review(review)
-            .page(page)
-            .pageSize(pageSize)
-            .build();
+        Parameters params =
+                Parameters.builder()
+                        .inForce(inForce)
+                        .isCommencementOrder(isCommencementOrder)
+                        .isRevocationOrder(isRevocationOrder)
+                        .type(type)
+                        .year(year)
+                        .chapter(chapter)
+                        .extent(extent)
+                        .source(source)
+                        .regulator(regulator)
+                        .subject(subject)
+                        .review(review)
+                        .page(page)
+                        .pageSize(pageSize)
+                        .build();
         return query.fetch(params);
     }
-
 }

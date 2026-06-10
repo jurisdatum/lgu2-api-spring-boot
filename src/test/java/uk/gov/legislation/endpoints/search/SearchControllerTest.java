@@ -28,11 +28,9 @@ import uk.gov.legislation.data.marklogic.search.Search;
 @WebMvcTest(controllers = SearchController.class)
 class SearchControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Search search;
+    @MockitoBean private Search search;
 
     private final String type = "ukpga";
     private final String year = "2021";
@@ -43,47 +41,56 @@ class SearchControllerTest {
     @DisplayName("Should return Atom XML for valid parameters")
     void shouldReturnAtomXmlForValidSearch() throws Exception {
 
-        String mockAtomFeed = """
-        <feed xmlns="http://www.w3.org/2005/Atom">
-            <title>Test Feed</title>
-            <entry>
-                <title>Document 1</title>
-                <id>doc-1</id>
-                <updated>2025-01-01T00:00:00Z</updated>
-            </entry>
-        </feed>
-        """;
+        String mockAtomFeed =
+                """
+                <feed xmlns="http://www.w3.org/2005/Atom">
+                    <title>Test Feed</title>
+                    <entry>
+                        <title>Document 1</title>
+                        <id>doc-1</id>
+                        <updated>2025-01-01T00:00:00Z</updated>
+                    </entry>
+                </feed>
+                """;
 
-        when(search.getAtomStream(argThat(params ->
-            "ukpga".equals(params.type) &&
-                Integer.valueOf(2021).equals(params.year)
-        ))).thenReturn(new ByteArrayInputStream(mockAtomFeed.getBytes(StandardCharsets.UTF_8)));
+        when(search.getAtomStream(
+                        argThat(
+                                params ->
+                                        "ukpga".equals(params.type)
+                                                && Integer.valueOf(2021).equals(params.year))))
+                .thenReturn(
+                        new ByteArrayInputStream(mockAtomFeed.getBytes(StandardCharsets.UTF_8)));
 
-        MvcResult mvcResult = mockMvc.perform(get("/search")
-                .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
-                .param("type", "ukpga")
-                .param("year", "2021"))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/search")
+                                        .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
+                                        .param("type", "ukpga")
+                                        .param("year", "2021"))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
-            .andExpect(content().string(containsString("<feed")));
+                .andExpect(status().isOk())
+                .andExpect(
+                        content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
+                .andExpect(content().string(containsString("<feed")));
     }
 
     @Test
     @DisplayName("Should return 400 when 'year' is combined with 'startYear'")
     void shouldReturn400ForYearAndStartYearConflict() throws Exception {
 
-        mockMvc.perform(get("/search")
-                .param("type", type)
-                .param("year", year)
-                .param("startYear", startYear)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.message")
-                .value("`year` cannot be combined with `startYear` or `endYear`"));
+        mockMvc.perform(
+                        get("/search")
+                                .param("type", type)
+                                .param("year", year)
+                                .param("startYear", startYear)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(
+                        jsonPath("$.message")
+                                .value("`year` cannot be combined with `startYear` or `endYear`"));
 
         verifyNoInteractions(search);
     }
@@ -91,14 +98,16 @@ class SearchControllerTest {
     @Test
     @DisplayName("Should return 400 when 'year' is combined with 'endYear'")
     void shouldReturn400ForYearAndEndYearConflict() throws Exception {
-        mockMvc.perform(get("/search")
-                .param("type", type)
-                .param("year", year)
-                .param("endYear", endYear)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.message")
-                .value("`year` cannot be combined with `startYear` or `endYear`"));
+        mockMvc.perform(
+                        get("/search")
+                                .param("type", type)
+                                .param("year", year)
+                                .param("endYear", endYear)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(
+                        jsonPath("$.message")
+                                .value("`year` cannot be combined with `startYear` or `endYear`"));
 
         verifyNoInteractions(search);
     }
@@ -106,14 +115,14 @@ class SearchControllerTest {
     @Test
     @DisplayName("Should return 400 when 'startYear' is greater than 'endYear'")
     void shouldReturn400ForInvalidYearRange() throws Exception {
-        mockMvc.perform(get("/search")
-                .param("type", type)
-                .param("startYear", startYear)
-                .param("endYear", endYear)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.message")
-                .value("`startYear` must be ≤ `endYear`"));
+        mockMvc.perform(
+                        get("/search")
+                                .param("type", type)
+                                .param("startYear", startYear)
+                                .param("endYear", endYear)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.message").value("`startYear` must be ≤ `endYear`"));
 
         verifyNoInteractions(search);
     }
@@ -123,18 +132,20 @@ class SearchControllerTest {
     @DisplayName("Should return 400 Bad Request for invalid document types")
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
 
-        mockMvc.perform(get("/search")
-                .param("type", invalidType)
-                .param("year", year)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error")
-                .value("Unknown Document Type Error"))
-            .andExpect(jsonPath("$.message")
-                .value("The document type '" + invalidType + "' is not recognized."));
+        mockMvc.perform(
+                        get("/search")
+                                .param("type", invalidType)
+                                .param("year", year)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value(
+                                        "The document type '"
+                                                + invalidType
+                                                + "' is not recognized."));
 
         verifyNoInteractions(search);
     }
 }
-
-

@@ -1,7 +1,6 @@
 package uk.gov.legislation.api;
 
 import io.swagger.v3.oas.annotations.tags.Tag;
-
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -14,7 +13,6 @@ public class Tags {
 
     @Target(ElementType.TYPE)
     @Retention(RetentionPolicy.RUNTIME)
-    @Tag(
-        name = "Tables of contents")
+    @Tag(name = "Tables of contents")
     public @interface TablesOfContents {}
 }

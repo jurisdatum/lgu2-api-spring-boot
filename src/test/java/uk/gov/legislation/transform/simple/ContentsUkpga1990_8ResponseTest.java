@@ -1,8 +1,8 @@
 package uk.gov.legislation.transform.simple;
 
-import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
 
 class ContentsUkpga1990_8ResponseTest {
 

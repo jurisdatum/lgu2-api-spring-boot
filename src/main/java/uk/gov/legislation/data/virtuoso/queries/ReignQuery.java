@@ -1,16 +1,15 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
+
+import java.io.IOException;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import tools.jackson.databind.node.ArrayNode;
 import tools.jackson.databind.node.ObjectNode;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 import uk.gov.legislation.data.virtuoso.jsonld.ReignLD;
-
-import java.io.IOException;
-import java.util.Optional;
-
-import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
 
 @Repository
 public class ReignQuery {
@@ -35,13 +34,8 @@ public class ReignQuery {
         String json = get(reignId, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
 
-        if (graph == null || graph.isEmpty())
-            return Optional.empty();
+        if (graph == null || graph.isEmpty()) return Optional.empty();
 
-        return Optional.of(graph.get(0))
-            .map(ObjectNode.class::cast)
-            .map(ReignLD::convert);
+        return Optional.of(graph.get(0)).map(ObjectNode.class::cast).map(ReignLD::convert);
     }
-
 }
-

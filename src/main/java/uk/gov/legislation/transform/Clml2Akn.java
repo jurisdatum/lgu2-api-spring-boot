@@ -86,6 +86,7 @@ public class Clml2Akn {
     }
 
     static final Properties OUTPUT_PROPERTIES = new Properties();
+
     static {
         OUTPUT_PROPERTIES.setProperty(Serializer.Property.INDENT.toString(), "yes");
     }
@@ -97,5 +98,4 @@ public class Clml2Akn {
         serializer.serialize(akn.asSource());
         return output.toString(StandardCharsets.UTF_8);
     }
-
 }

@@ -2,11 +2,11 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.util.List;
 
 @Schema
-@SuppressWarnings("UnusedVariable") // fields are set in the constructor and serialized by Jackson via @JsonProperty
+// fields are set in the constructor and serialized by Jackson via @JsonProperty
+@SuppressWarnings("UnusedVariable")
 public class TypesForCountry {
 
     @JsonProperty(index = 1)
@@ -21,10 +21,10 @@ public class TypesForCountry {
     @Schema(description = "Types that may contain legislation that applies to the country")
     private final List<TypeWrapper> possibly;
 
-    public TypesForCountry(String country, List<TypeWrapper> primarily, List<TypeWrapper> possibly) {
+    public TypesForCountry(
+            String country, List<TypeWrapper> primarily, List<TypeWrapper> possibly) {
         this.country = country;
         this.primarily = primarily;
         this.possibly = possibly;
     }
-
 }

@@ -1,7 +1,8 @@
 package uk.gov.legislation.util;
 
 public enum Extent {
-
-    E, W, S, NI;
-
+    E,
+    W,
+    S,
+    NI;
 }

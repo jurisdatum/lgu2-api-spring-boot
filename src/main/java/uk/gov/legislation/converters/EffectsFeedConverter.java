@@ -1,5 +1,7 @@
 package uk.gov.legislation.converters;
 
+import java.util.List;
+import java.util.stream.Collectors;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.PageOfEffects;
 import uk.gov.legislation.transform.simple.effects.Entry;
@@ -7,9 +9,6 @@ import uk.gov.legislation.transform.simple.effects.InForce;
 import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.util.Cites;
 import uk.gov.legislation.util.Links;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class EffectsFeedConverter {
 
@@ -40,7 +39,8 @@ public class EffectsFeedConverter {
         return convertEffect(simple);
     }
 
-    public static List<Effect> convertEffects(List<uk.gov.legislation.transform.simple.effects.Effect> simple) {
+    public static List<Effect> convertEffects(
+            List<uk.gov.legislation.transform.simple.effects.Effect> simple) {
         return simple.stream().map(EffectsFeedConverter::convertEffect).toList();
     }
 
@@ -61,7 +61,8 @@ public class EffectsFeedConverter {
         effect.target.year = simple.affectedYear;
         effect.target.number = simple.affectedNumber;
         effect.target.title = simple.affectedTitle;
-        effect.target.cite = Cites.make(simple.affectedClass, simple.affectedYear, simple.affectedNumber);
+        effect.target.cite =
+                Cites.make(simple.affectedClass, simple.affectedYear, simple.affectedNumber);
         effect.target.provisions = new Effect.Provisions();
         effect.target.provisions.plain = simple.affectedProvisionsText;
         effect.target.provisions.rich = RichTextConverter.convert(simple.affectedProvisions);
@@ -73,7 +74,8 @@ public class EffectsFeedConverter {
         effect.source.year = simple.affectingYear;
         effect.source.number = simple.affectingNumber;
         effect.source.title = simple.affectingTitle;
-        effect.source.cite = Cites.make(simple.affectingClass, simple.affectingYear, simple.affectingNumber);
+        effect.source.cite =
+                Cites.make(simple.affectingClass, simple.affectingYear, simple.affectingNumber);
         effect.source.provisions = new Effect.Provisions();
         effect.source.provisions.plain = simple.affectingProvisionsText;
         effect.source.provisions.rich = RichTextConverter.convert(simple.affectingProvisions);
@@ -82,12 +84,17 @@ public class EffectsFeedConverter {
         if (!simple.commencementAuthority.isEmpty()) {
             effect.commencement = new Effect.Provisions();
             effect.commencement.rich = RichTextConverter.convert(simple.commencementAuthority);
-            effect.commencement.plain = effect.commencement.rich.stream().filter(node -> node.text != null).map(node -> node.text).collect(Collectors.joining());
+            effect.commencement.plain =
+                    effect.commencement.rich.stream()
+                            .filter(node -> node.text != null)
+                            .map(node -> node.text)
+                            .collect(Collectors.joining());
         }
 
         effect.notes = simple.notes;
 
-        effect.inForce = simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();
+        effect.inForce =
+                simple.inForceDates.stream().map(EffectsFeedConverter::convertInForceDate).toList();
 
         return effect;
     }
@@ -100,5 +107,4 @@ public class EffectsFeedConverter {
         inForce.description = clml.qualification;
         return inForce;
     }
-
 }

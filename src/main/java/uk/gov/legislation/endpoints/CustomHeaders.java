@@ -24,6 +24,5 @@ public class CustomHeaders {
         return headers;
     }
 
-    private CustomHeaders() { }
-
+    private CustomHeaders() {}
 }

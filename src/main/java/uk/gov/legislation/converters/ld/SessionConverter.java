@@ -9,8 +9,7 @@ import uk.gov.legislation.data.virtuoso.jsonld.SessionLD;
 
 public class SessionConverter {
     public static Session convert(SessionLD ld) {
-        if (ld == null)
-            return null;
+        if (ld == null) return null;
         Session session = new Session();
         session.uri = ld.id;
         session.label = ld.label;
@@ -22,6 +21,4 @@ public class SessionConverter {
         session.endRegnalYear = extractIntegerAtEndOfUri(ld.endRegnalYear);
         return session;
     }
-
 }
-

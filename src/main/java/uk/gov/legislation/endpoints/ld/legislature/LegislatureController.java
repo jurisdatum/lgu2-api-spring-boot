@@ -12,7 +12,7 @@ import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.queries.LegislatureQuery;
 
 @RestController
-public class LegislatureController implements LegislatureApi{
+public class LegislatureController implements LegislatureApi {
 
     private final LegislatureQuery query;
 
@@ -22,16 +22,17 @@ public class LegislatureController implements LegislatureApi{
         this.query = query;
         this.negotiation = negotiation;
     }
+
     @Override
-    public ResponseEntity<?> getCalendar(NativeWebRequest request, @PathVariable String name) throws Exception {
+    public ResponseEntity<?> getCalendar(NativeWebRequest request, @PathVariable String name)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
             String data = query.get(name, media.toString());
             return ResponseEntity.ok(data);
         }
         return query.get(name)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

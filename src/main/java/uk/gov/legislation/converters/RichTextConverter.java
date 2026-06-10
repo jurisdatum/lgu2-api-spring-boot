@@ -1,13 +1,12 @@
 package uk.gov.legislation.converters;
 
+import java.util.List;
+import java.util.stream.Stream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import uk.gov.legislation.api.responses.RichText;
 import uk.gov.legislation.transform.simple.RichTextNode;
 import uk.gov.legislation.util.Links;
-
-import java.util.List;
-import java.util.stream.Stream;
 
 class RichTextConverter {
 
@@ -18,12 +17,9 @@ class RichTextConverter {
     }
 
     static Stream<RichText.Node> convert1(RichTextNode clml) {
-        if (clml instanceof RichTextNode.Text text)
-            return Stream.of(convertText(text));
-        if (clml instanceof RichTextNode.Section section)
-            return Stream.of(convertSection(section));
-        if (clml instanceof RichTextNode.Range range)
-            return convertRange(range);
+        if (clml instanceof RichTextNode.Text text) return Stream.of(convertText(text));
+        if (clml instanceof RichTextNode.Section section) return Stream.of(convertSection(section));
+        if (clml instanceof RichTextNode.Range range) return convertRange(range);
         logger.warn("unrecognized type {}", clml.getClass());
         return null;
     }
@@ -48,5 +44,4 @@ class RichTextConverter {
     static Stream<RichText.Node> convertRange(RichTextNode.Range range) {
         return range.children.stream().flatMap(RichTextConverter::convert1);
     }
-
 }

@@ -2,12 +2,11 @@ package uk.gov.legislation.data.virtuoso.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.net.URI;
+import java.util.List;
 import uk.gov.legislation.data.virtuoso.Resources.Leg;
 import uk.gov.legislation.data.virtuoso.Resources.RDF;
 import uk.gov.legislation.data.virtuoso.rdf.RdfProperty;
-
-import java.net.URI;
-import java.util.List;
 
 @Deprecated(forRemoval = true)
 public class Interpretation {
@@ -36,5 +35,4 @@ public class Interpretation {
     public boolean current() {
         return types.stream().anyMatch(t -> t.equals(Leg.CurrentInterpretation));
     }
-
 }

@@ -11,5 +11,4 @@ public class NoDocumentException extends RuntimeException {
     public NoDocumentException(Error error) {
         this(error.message);
     }
-
 }

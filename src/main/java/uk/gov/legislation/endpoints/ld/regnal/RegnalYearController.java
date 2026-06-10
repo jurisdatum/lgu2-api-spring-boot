@@ -23,18 +23,16 @@ public class RegnalYearController implements RegnalYearApi {
     }
 
     @Override
-    public ResponseEntity <?> getRegnalYearInfo(NativeWebRequest request, String reign, Integer regnalYear) throws Exception {
+    public ResponseEntity<?> getRegnalYearInfo(
+            NativeWebRequest request, String reign, Integer regnalYear) throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
-            String result = query.fetchRawData(reign,regnalYear, media.toString());
-            return ResponseEntity.ok()
-                .contentType(media)
-                .body(result);
+            String result = query.fetchRawData(reign, regnalYear, media.toString());
+            return ResponseEntity.ok().contentType(media).body(result);
         }
         return query.fetchMappedData(reign, regnalYear)
-            .map(RegnalYearConverter::convert)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(RegnalYearConverter::convert)
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

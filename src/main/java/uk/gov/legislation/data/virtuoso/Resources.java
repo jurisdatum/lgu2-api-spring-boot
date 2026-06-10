@@ -1,11 +1,10 @@
 package uk.gov.legislation.data.virtuoso;
 
-import uk.gov.legislation.data.virtuoso.rdf.TypedValue;
-
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import uk.gov.legislation.data.virtuoso.rdf.TypedValue;
 
 public class Resources {
 
@@ -14,7 +13,6 @@ public class Resources {
         public static final String Prefix = "http://www.w3.org/1999/02/22-rdf-syntax-ns#";
 
         public static final String Type = Prefix + "type";
-
     }
 
     public static class Leg {
@@ -30,9 +28,7 @@ public class Resources {
         /* document types */
 
         public static final String UKPGA = Prefix + "UnitedKingdomPublicGeneralAct";
-        public static final Set<String> DocumentTypes = Set.of(
-            UKPGA
-        );
+        public static final Set<String> DocumentTypes = Set.of(UKPGA);
 
         /* properties */
 
@@ -46,13 +42,11 @@ public class Resources {
         public static final String Language = Prefix + "languageOfTextIsoCode";
         public static final String ShortTitle = Prefix + "shortTitle";
         public static final String LongTitle = Prefix + "longTitle";
-
     }
 
     private static boolean is(String uri, Map<URI, List<TypedValue>> properties) {
         URI prop = URI.create(RDF.Type);
-        if (!properties.containsKey(prop))
-            return false;
+        if (!properties.containsKey(prop)) return false;
         List<TypedValue> values = properties.get(prop);
         return values.stream().anyMatch(v -> v.value().equals(uri));
     }
@@ -64,5 +58,4 @@ public class Resources {
     public static boolean isInterpretation(Map<URI, List<TypedValue>> properties) {
         return is(Leg.Interpretation, properties);
     }
-
 }

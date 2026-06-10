@@ -23,38 +23,35 @@ public class SessionController implements SessionApi {
     }
 
     @Override
-    public ResponseEntity <?> getSessionByLegislatureReign(NativeWebRequest request, String legislature,
-        String reign, String session) throws Exception {
+    public ResponseEntity<?> getSessionByLegislatureReign(
+            NativeWebRequest request, String legislature, String reign, String session)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
 
         if (Virtuoso.Formats.contains(media.toString())) {
             String result = query.fetchRawData(legislature, reign, session, media.toString());
-            return ResponseEntity.ok()
-                .contentType(media)
-                .body(result);
+            return ResponseEntity.ok().contentType(media).body(result);
         }
 
         return query.fetchMappedData(legislature, reign, session)
-            .map(SessionConverter::convert)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
-
+                .map(SessionConverter::convert)
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 
     @Override
-    public ResponseEntity <?> getEnglishParliamentSession(NativeWebRequest request,String session) throws Exception {
+    public ResponseEntity<?> getEnglishParliamentSession(NativeWebRequest request, String session)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
 
         if (Virtuoso.Formats.contains(media.toString())) {
             String result = query.fetchRawData(session, media.toString());
-            return ResponseEntity.ok()
-                .contentType(media)
-                .body(result);
+            return ResponseEntity.ok().contentType(media).body(result);
         }
 
         return query.fetchMappedData(session)
-            .map(SessionConverter::convert)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(SessionConverter::convert)
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }

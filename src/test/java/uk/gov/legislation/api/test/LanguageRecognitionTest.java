@@ -1,5 +1,8 @@
 package uk.gov.legislation.api.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Locale;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,10 +10,6 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver;
 import uk.gov.legislation.Application;
-
-import java.util.Locale;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest(classes = Application.class)
 class LanguageRecognitionTest {
@@ -80,5 +79,4 @@ class LanguageRecognitionTest {
         Locale locale = resolver.resolveLocale(request);
         return locale.getLanguage();
     }
-
 }

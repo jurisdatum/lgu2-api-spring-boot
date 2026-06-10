@@ -10,7 +10,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 
- class NumberParameterTest {
+class NumberParameterTest {
 
     @Test
     void testNullInputReturnsNull() {
@@ -60,32 +60,33 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
     @Test
     void testWhitespaceAroundNumberHandledCorrectly() {
         String input = "w  123 ";
-        IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> NumberAndSeries.parse(input),
-            "Expected input to throw Exception: " + input
-        );
+        IllegalArgumentException exception =
+                assertThrows(
+                        IllegalArgumentException.class,
+                        () -> NumberAndSeries.parse(input),
+                        "Expected input to throw Exception: " + input);
         assertNotNull(exception.getMessage());
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {
-        "x123",   // invalid prefix
-        "ni",     // missing number
-        "niabc",  // non-numeric number
-        "w ",     // empty number
-        "s",      // missing number
-        "lXYZ",   // non-numeric
-        "c  ",    // blank number
-        "ni  ",   // trailing spaces only
-        "w--12"   // malformed number
-    })
+    @ValueSource(
+            strings = {
+                "x123", // invalid prefix
+                "ni", // missing number
+                "niabc", // non-numeric number
+                "w ", // empty number
+                "s", // missing number
+                "lXYZ", // non-numeric
+                "c  ", // blank number
+                "ni  ", // trailing spaces only
+                "w--12" // malformed number
+            })
     void testInvalidInputsThrowNumberFormatException(String input) {
-        IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> NumberAndSeries.parse(input),
-            "Expected input to throw Exception: " + input
-        );
+        IllegalArgumentException exception =
+                assertThrows(
+                        IllegalArgumentException.class,
+                        () -> NumberAndSeries.parse(input),
+                        "Expected input to throw Exception: " + input);
         assertNotNull(exception.getMessage());
     }
 }

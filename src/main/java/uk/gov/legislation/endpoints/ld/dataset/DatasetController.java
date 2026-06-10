@@ -24,10 +24,10 @@ public class DatasetController implements DatasetApi {
         this.negotiation = negotiation;
     }
 
-   @Override
-    public ResponseEntity<?> get(NativeWebRequest request, @PathVariable String id) throws Exception {
-        if (id.isEmpty())
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+    @Override
+    public ResponseEntity<?> get(NativeWebRequest request, @PathVariable String id)
+            throws Exception {
+        if (id.isEmpty()) throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         id = id.substring(1); // trim leading slash
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
@@ -35,9 +35,8 @@ public class DatasetController implements DatasetApi {
             return ResponseEntity.ok(data);
         }
         return query.get(id)
-            .map(DataSetConverter::convert)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(DataSetConverter::convert)
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

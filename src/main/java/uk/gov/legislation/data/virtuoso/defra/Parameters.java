@@ -32,14 +32,15 @@ public class Parameters {
 
     public Integer pageSize;
 
-
-    public static Builder builder() { return new Builder(); }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public static class Builder {
 
         private final Parameters params = new Parameters();
 
-        private Builder() { }
+        private Builder() {}
 
         public Builder inForce(Boolean inForce) {
             params.inForce = inForce;
@@ -109,7 +110,5 @@ public class Parameters {
         public Parameters build() {
             return params;
         }
-
     }
-
 }

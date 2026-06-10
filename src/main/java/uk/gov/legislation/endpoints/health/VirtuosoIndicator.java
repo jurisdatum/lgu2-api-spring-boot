@@ -8,8 +8,8 @@ import uk.gov.legislation.data.virtuoso.queries.AskNothing;
 /**
  * Spring Boot Actuator health indicator for Virtuoso.
  *
- * <p>Retained for use when Actuator web endpoints are enabled, or for
- * other Actuator features such as metrics.
+ * <p>Retained for use when Actuator web endpoints are enabled, or for other Actuator features such
+ * as metrics.
  */
 @Component("virtuosoStatus")
 public class VirtuosoIndicator implements HealthIndicator {
@@ -24,5 +24,4 @@ public class VirtuosoIndicator implements HealthIndicator {
     public Health health() {
         return virtuoso.getAsBoolean() ? Health.up().build() : Health.down().build();
     }
-
 }

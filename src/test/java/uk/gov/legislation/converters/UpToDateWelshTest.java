@@ -12,17 +12,16 @@ import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.util.UpToDate;
 
 /**
- * Tests that the Welsh simplification in the converter correctly overwrites
- * applied/required with Welsh-specific values, so that UpToDate produces
- * the correct result for Welsh documents.
+ * Tests that the Welsh simplification in the converter correctly overwrites applied/required with
+ * Welsh-specific values, so that UpToDate produces the correct result for Welsh documents.
  */
 class UpToDateWelshTest {
 
     private static final LocalDate CUTOFF = LocalDate.of(2025, 6, 1);
 
     /**
-     * An effect that is applied in English but not in Welsh.
-     * An English document should be up to date; a Welsh document should not.
+     * An effect that is applied in English but not in Welsh. An English document should be up to
+     * date; a Welsh document should not.
      */
     @Test
     void welshDocumentUsesWelshAppliedField() {
@@ -34,7 +33,9 @@ class UpToDateWelshTest {
 
         DocumentMetadata english = makeDocument("en", effect);
         UpToDate.setUpToDate(english, CUTOFF);
-        assertTrue(english.upToDate, "English document should be up to date (effect applied in English)");
+        assertTrue(
+                english.upToDate,
+                "English document should be up to date (effect applied in English)");
 
         Effect welshEffect = makeEffect();
         welshEffect.applied = true;
@@ -44,12 +45,14 @@ class UpToDateWelshTest {
         DocumentMetadata welsh = makeDocument("cy", welshEffect);
         DocumentMetadataConverter.simplifyWelshEffects(welsh.unappliedEffects);
         UpToDate.setUpToDate(welsh, CUTOFF);
-        assertFalse(welsh.upToDate, "Welsh document should NOT be up to date (effect not applied in Welsh)");
+        assertFalse(
+                welsh.upToDate,
+                "Welsh document should NOT be up to date (effect not applied in Welsh)");
     }
 
     /**
-     * An effect that is required in English but not in Welsh.
-     * An English document should not be up to date; a Welsh document should.
+     * An effect that is required in English but not in Welsh. An English document should not be up
+     * to date; a Welsh document should.
      */
     @Test
     void welshDocumentUsesWelshRequiredField() {
@@ -61,7 +64,8 @@ class UpToDateWelshTest {
 
         DocumentMetadata english = makeDocument("en", effect);
         UpToDate.setUpToDate(english, CUTOFF);
-        assertFalse(english.upToDate, "English document should NOT be up to date (effect is required)");
+        assertFalse(
+                english.upToDate, "English document should NOT be up to date (effect is required)");
 
         Effect welshEffect = makeEffect();
         welshEffect.applied = false;
@@ -71,12 +75,14 @@ class UpToDateWelshTest {
         DocumentMetadata welsh = makeDocument("cy", welshEffect);
         DocumentMetadataConverter.simplifyWelshEffects(welsh.unappliedEffects);
         UpToDate.setUpToDate(welsh, CUTOFF);
-        assertTrue(welsh.upToDate, "Welsh document should be up to date (effect not required in Welsh)");
+        assertTrue(
+                welsh.upToDate,
+                "Welsh document should be up to date (effect not required in Welsh)");
     }
 
     /**
-     * An effect that is not applied in English but is applied in Welsh.
-     * An English document should not be up to date; a Welsh document should.
+     * An effect that is not applied in English but is applied in Welsh. An English document should
+     * not be up to date; a Welsh document should.
      */
     @Test
     void englishDocumentUsesEnglishAppliedField() {
@@ -88,7 +94,9 @@ class UpToDateWelshTest {
 
         DocumentMetadata english = makeDocument("en", effect);
         UpToDate.setUpToDate(english, CUTOFF);
-        assertFalse(english.upToDate, "English document should NOT be up to date (effect not applied in English)");
+        assertFalse(
+                english.upToDate,
+                "English document should NOT be up to date (effect not applied in English)");
 
         Effect welshEffect = makeEffect();
         welshEffect.applied = false;
@@ -102,8 +110,8 @@ class UpToDateWelshTest {
     }
 
     /**
-     * An effect that is not required in English but is required in Welsh.
-     * An English document should be up to date; a Welsh document should not.
+     * An effect that is not required in English but is required in Welsh. An English document
+     * should be up to date; a Welsh document should not.
      */
     @Test
     void englishDocumentUsesEnglishRequiredField() {
@@ -115,7 +123,9 @@ class UpToDateWelshTest {
 
         DocumentMetadata english = makeDocument("en", effect);
         UpToDate.setUpToDate(english, CUTOFF);
-        assertTrue(english.upToDate, "English document should be up to date (effect not required in English)");
+        assertTrue(
+                english.upToDate,
+                "English document should be up to date (effect not required in English)");
 
         Effect welshEffect = makeEffect();
         welshEffect.applied = false;
@@ -125,7 +135,9 @@ class UpToDateWelshTest {
         DocumentMetadata welsh = makeDocument("cy", welshEffect);
         DocumentMetadataConverter.simplifyWelshEffects(welsh.unappliedEffects);
         UpToDate.setUpToDate(welsh, CUTOFF);
-        assertFalse(welsh.upToDate, "Welsh document should NOT be up to date (effect is required in Welsh)");
+        assertFalse(
+                welsh.upToDate,
+                "Welsh document should NOT be up to date (effect is required in Welsh)");
     }
 
     private static DocumentMetadata makeDocument(String lang, Effect effect) {

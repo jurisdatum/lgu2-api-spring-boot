@@ -1,14 +1,13 @@
 package uk.gov.legislation.transform.simple;
 
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.net.URI;
 import java.time.LocalDate;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 /**
- * Jackson mapping for the "AlterType" complex type in schemaLegislationMetadata.xsd.
- * Represents general-purpose associated documents like alternative formats, correction slips,
- * explanatory documents, etc.
+ * Jackson mapping for the "AlterType" complex type in schemaLegislationMetadata.xsd. Represents
+ * general-purpose associated documents like alternative formats, correction slips, explanatory
+ * documents, etc.
  */
 public class Alternative {
 
@@ -35,5 +34,4 @@ public class Alternative {
 
     @JacksonXmlProperty(isAttribute = true, localName = "Print")
     public Boolean print;
-
 }

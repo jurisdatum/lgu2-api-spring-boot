@@ -12,19 +12,20 @@ import uk.gov.legislation.api.parameters.Name;
 @RequestMapping("/ld/legislature")
 public interface LegislatureApi {
 
-
-    @GetMapping(path = "/{name}", produces = {
-        "application/xml",
-        "application/json",
-        "application/rdf+xml",
-        "application/rdf+json",
-        "application/ld+json",
-        "application/sparql-results+json",
-        "application/sparql-results+xml",
-        "text/csv",
-        "text/plain",
-        "text/turtle"
-    })
-     ResponseEntity <?> getCalendar(NativeWebRequest request,
-        @PathVariable @Name String name) throws Exception;
+    @GetMapping(
+            path = "/{name}",
+            produces = {
+                "application/xml",
+                "application/json",
+                "application/rdf+xml",
+                "application/rdf+json",
+                "application/ld+json",
+                "application/sparql-results+json",
+                "application/sparql-results+xml",
+                "text/csv",
+                "text/plain",
+                "text/turtle"
+            })
+    ResponseEntity<?> getCalendar(NativeWebRequest request, @PathVariable @Name String name)
+            throws Exception;
 }

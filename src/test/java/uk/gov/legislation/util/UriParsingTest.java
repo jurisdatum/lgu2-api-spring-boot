@@ -238,5 +238,4 @@ class UriParsingTest {
         Links.Components comp = Links.parse(uri);
         assertNull(comp);
     }
-
 }

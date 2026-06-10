@@ -16,13 +16,15 @@ public class ImpactsParameters extends AbstractParameters {
 
     String impactnumber;
 
-    public static Builder builder() { return new Builder(); }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public static class Builder {
 
         private final ImpactsParameters params = new ImpactsParameters();
 
-        private Builder() { }
+        private Builder() {}
 
         public Builder type(String type) {
             params.type = type;
@@ -38,7 +40,5 @@ public class ImpactsParameters extends AbstractParameters {
             params.number = Integer.toString(number);
             return this;
         }
-
     }
-
 }

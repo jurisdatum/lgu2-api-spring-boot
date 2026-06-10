@@ -8,8 +8,8 @@ import uk.gov.legislation.data.marklogic.Ping;
 /**
  * Spring Boot Actuator health indicator for MarkLogic.
  *
- * <p>Retained for use when Actuator web endpoints are enabled, or for
- * other Actuator features such as metrics.
+ * <p>Retained for use when Actuator web endpoints are enabled, or for other Actuator features such
+ * as metrics.
  */
 @Component("marklogicStatus")
 public class MarkLogicIndicator implements HealthIndicator {
@@ -24,5 +24,4 @@ public class MarkLogicIndicator implements HealthIndicator {
     public Health health() {
         return markLogic.getAsBoolean() ? Health.up().build() : Health.down().build();
     }
-
 }

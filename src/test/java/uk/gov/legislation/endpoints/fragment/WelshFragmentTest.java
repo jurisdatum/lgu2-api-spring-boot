@@ -1,5 +1,11 @@
 package uk.gov.legislation.endpoints.fragment;
 
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Optional;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
@@ -7,6 +13,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
@@ -15,54 +22,41 @@ import uk.gov.legislation.transform.Clml2Akn;
 import uk.gov.legislation.transform.Clml2Pdf;
 import uk.gov.legislation.transform.Transforms;
 import uk.gov.legislation.transform.clml2docx.Clml2Docx;
-import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.UnappliedEffectsHelper;
 
-import java.util.Optional;
-
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 @WebMvcTest(FragmentController.class)
-@Import({ Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class})
-@SuppressWarnings("UnusedVariable") // @MockitoBean fields are wired into the @WebMvcTest context, not read directly
+@Import({Transforms.class, Clml2Akn.class, Akn2Html.class, Simplify.class})
+// @MockitoBean fields are wired into the @WebMvcTest context, not read directly
+@SuppressWarnings("UnusedVariable")
 class WelshFragmentTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Legislation mock;
+    @MockitoBean private Legislation mock;
 
-    @MockitoBean
-    private Clml2Docx clml2Docx;
+    @MockitoBean private Clml2Docx clml2Docx;
 
-    @MockitoBean
-    private Clml2Pdf clml2Pdf;
+    @MockitoBean private Clml2Pdf clml2Pdf;
 
-    @MockitoBean
-    private UnappliedEffectsFetcher unappliedEffectsFetcher;
+    @MockitoBean private UnappliedEffectsFetcher unappliedEffectsFetcher;
 
-    @MockitoBean
-    private LegislationById legislationById;
-
+    @MockitoBean private LegislationById legislationById;
 
     @Test
     void test() throws Exception {
 
         String clml = UnappliedEffectsHelper.read("/fragment_wsi_2024_1002_regulation_2_cy.xml");
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
-        when(mock.getDocumentSection("wsi", "2024", 1002, "regulation-2", Optional.empty(), Optional.of("cy")))
-            .thenReturn(response);
+        when(mock.getDocumentSection(
+                        "wsi", "2024", 1002, "regulation-2", Optional.empty(), Optional.of("cy")))
+                .thenReturn(response);
 
-        mockMvc.perform(get("/fragment/wsi/2024/1002/regulation-2")
-                .header("Accept-Language", "cy"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(content().json(ExpectedWelshResponseDataCy.FRAGMENT_WELSH_RESPONSE_CY_JSON));
+        mockMvc.perform(get("/fragment/wsi/2024/1002/regulation-2").header("Accept-Language", "cy"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(
+                        content()
+                                .json(ExpectedWelshResponseDataCy.FRAGMENT_WELSH_RESPONSE_CY_JSON));
     }
-
 }

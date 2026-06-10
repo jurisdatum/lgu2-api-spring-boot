@@ -1,6 +1,5 @@
 package uk.gov.legislation.data.marklogic.search;
 
-
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -18,36 +17,35 @@ import uk.gov.legislation.exceptions.UnknownTypeException;
 
 class TypeTest {
 
-     static Stream<Arguments> types() {
-         return Stream.of(
-             Arguments.of(List.of("ukpga", "ukla"), "ukpga+ukla"),
-             Arguments.of(List.of("asp"), "asp"),
-             Arguments.of(List.of("primary", "eu-origin"), "primary+eu-origin")
-         );
-     }
-     static Stream<Arguments> type() {
-         return Stream.of(
-             Arguments.of("ukpga", "ukpga"),
-             Arguments.of("asp", "asp"),
-             Arguments.of("primary", "primary")
-         );
-     }
+    static Stream<Arguments> types() {
+        return Stream.of(
+                Arguments.of(List.of("ukpga", "ukla"), "ukpga+ukla"),
+                Arguments.of(List.of("asp"), "asp"),
+                Arguments.of(List.of("primary", "eu-origin"), "primary+eu-origin"));
+    }
 
-     @ParameterizedTest
-     @MethodSource("types")
-     void listTypesTest(List<String> input, String expected) {
-         Parameters.Builder builder = new Parameters.Builder();
-         Parameters result = builder.type(input).build();
-         assertEquals(expected, result.type);
-     }
+    static Stream<Arguments> type() {
+        return Stream.of(
+                Arguments.of("ukpga", "ukpga"),
+                Arguments.of("asp", "asp"),
+                Arguments.of("primary", "primary"));
+    }
 
-     @ParameterizedTest
-     @MethodSource("type")
-     void singleTypesTest(String input, String expected) {
-         Parameters.Builder builder = new Parameters.Builder();
-         Parameters result = builder.type(input).build();
-         assertEquals(expected, result.type);
-     }
+    @ParameterizedTest
+    @MethodSource("types")
+    void listTypesTest(List<String> input, String expected) {
+        Parameters.Builder builder = new Parameters.Builder();
+        Parameters result = builder.type(input).build();
+        assertEquals(expected, result.type);
+    }
+
+    @ParameterizedTest
+    @MethodSource("type")
+    void singleTypesTest(String input, String expected) {
+        Parameters.Builder builder = new Parameters.Builder();
+        Parameters result = builder.type(input).build();
+        assertEquals(expected, result.type);
+    }
 
     @ParameterizedTest
     @ValueSource(strings = {"ukpga", "ukla", "uksi"}) // valid types
@@ -75,10 +73,6 @@ class TypeTest {
     }
 
     static Stream<List<String>> invalidTypeLists() {
-        return Stream.of(
-            List.of("A", "invalid"),
-            List.of("unknown", "X")
-        );
+        return Stream.of(List.of("A", "invalid"), List.of("unknown", "X"));
     }
-
 }

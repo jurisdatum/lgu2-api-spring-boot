@@ -1,5 +1,11 @@
 package uk.gov.legislation.api.test;
 
+import static uk.gov.legislation.api.test.ExtendedMetadataTest.provide;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import javax.xml.transform.TransformerException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,14 +19,6 @@ import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 
-import javax.xml.transform.TransformerException;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-
-import static uk.gov.legislation.api.test.ExtendedMetadataTest.provide;
-
-
 public class ExtendedMetadataTestRedo {
 
     public static void main(String[] args) throws Exception {
@@ -33,14 +31,14 @@ public class ExtendedMetadataTestRedo {
     }
 
     static Path makePath(String id, String extra) {
-        String resource = id.replace('/', '_') +
-            "/" + id.replace('/', '-') + "-metadata" + extra;
+        String resource = id.replace('/', '_') + "/" + id.replace('/', '-') + "-metadata" + extra;
         return Path.of("src/test/resources", resource);
     }
 
     static Path makePathForClml(String id) {
         return makePath(id, ".xml");
     }
+
     static String readClml(String id) throws IOException {
         Path path = makePathForClml(id);
         return Files.readString(path);
@@ -49,10 +47,12 @@ public class ExtendedMetadataTestRedo {
     static Path makePathForSimpleXml(String id) {
         return makePath(id, "-simple.xml");
     }
+
     static String readSimpleXml(String id) throws IOException {
         Path path = makePathForSimpleXml(id);
         return Files.readString(path);
     }
+
     static void writeSimpleXml(String id, String xml) throws IOException {
         Path path = makePathForSimpleXml(id);
         Files.writeString(path, xml);
@@ -61,16 +61,19 @@ public class ExtendedMetadataTestRedo {
     static Path makePathForJson(String id) {
         return makePath(id, ".json");
     }
+
     static String readJson(String id) throws IOException {
         Path path = makePathForJson(id);
         return Files.readString(path);
     }
+
     static void writeJson(String id, String json) throws IOException {
         Path path = makePathForJson(id);
         Files.writeString(path, json);
     }
 
-    static String simplify(Simplify simplifier, String clml) throws SaxonApiException, TransformerException {
+    static String simplify(Simplify simplifier, String clml)
+            throws SaxonApiException, TransformerException {
         Simplify.Parameters params = new Simplify.Parameters(false, false);
         String simple = simplifier.transform(clml, params);
         return UnappliedEffectsTest.indent(simple);
@@ -110,5 +113,4 @@ public class ExtendedMetadataTestRedo {
             writeJson(id, json);
         }
     }
-
 }

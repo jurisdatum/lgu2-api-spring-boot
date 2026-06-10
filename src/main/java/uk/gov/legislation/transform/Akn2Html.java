@@ -40,7 +40,8 @@ public class Akn2Html {
         }
     }
 
-    private void transform(Source akn, Destination html, boolean standalone) throws SaxonApiException {
+    private void transform(Source akn, Destination html, boolean standalone)
+            throws SaxonApiException {
         XsltTransformer transform = executable.load();
         transform.setParameter(new QName("standalone"), new XdmAtomicValue(standalone));
         transform.setSource(akn);
@@ -74,5 +75,4 @@ public class Akn2Html {
         transform.setDestination(serializer);
         return transform;
     }
-
 }

@@ -31,7 +31,8 @@ public class FragmentController implements FragmentApi {
     private final Transforms transforms;
     private final LegislationById legislationById;
 
-    public FragmentController(Legislation marklogic, Transforms transforms, LegislationById legislationById) {
+    public FragmentController(
+            Legislation marklogic, Transforms transforms, LegislationById legislationById) {
         this.marklogic = marklogic;
         this.transforms = transforms;
         this.legislationById = legislationById;
@@ -48,71 +49,198 @@ public class FragmentController implements FragmentApi {
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, int year, int number, String section,
-            Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
+    public ResponseEntity<StreamingResponseBody> getFragmentClml(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                section,
+                version,
+                locale,
+                this::transferToWrapper,
+                APPLICATION_XML_UTF8);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentClml(String type, String monarch, String years, int number,
-            String section, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> getFragmentClml(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(
+                type,
+                regnalYear,
+                number,
+                section,
+                version,
+                locale,
+                this::transferToWrapper,
+                APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentAkn(String type, int year, int number, String section,
-            Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
+    public ResponseEntity<StreamingResponseBody> getFragmentAkn(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2akn,
+                APPLICATION_AKN_XML);
     }
+
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentAkn(String type, String monarch, String years, int number,
-            String section, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> getFragmentAkn(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2akn, APPLICATION_AKN_XML);
+        return fetchAndTransformToStream(
+                type,
+                regnalYear,
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2akn,
+                APPLICATION_AKN_XML);
     }
 
     /* HTML */
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentHtml(String type, int year, int number, String section,
-            Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
+    public ResponseEntity<StreamingResponseBody> getFragmentHtml(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2htmlStandalone,
+                TEXT_HTML_UTF8);
     }
+
     @Override
-    public ResponseEntity<StreamingResponseBody> getFragmentHtml(String type, String monarch, String years, int number,
-            String section, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> getFragmentHtml(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2htmlStandalone, TEXT_HTML_UTF8);
+        return fetchAndTransformToStream(
+                type,
+                regnalYear,
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2htmlStandalone,
+                TEXT_HTML_UTF8);
     }
 
     /* JSON */
 
     @Override
-    public ResponseEntity<Fragment> getFragmentJson(String type, int year, int number, String section,
-            Optional<String> version, Locale locale) throws Exception {
-        return fetchAndTransform(type, Integer.toString(year), number, section, version, locale, transforms::clml2fragment);
+    public ResponseEntity<Fragment> getFragmentJson(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale)
+            throws Exception {
+        return fetchAndTransform(
+                type,
+                Integer.toString(year),
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2fragment);
     }
+
     @Override
-    public ResponseEntity<Fragment> getFragmentJson(String type, String monarch, String years, int number,
-            String section, Optional<String> version, Locale locale) throws Exception {
+    public ResponseEntity<Fragment> getFragmentJson(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale)
+            throws Exception {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransform(type, regnalYear, number, section, version, locale, transforms::clml2fragment);
+        return fetchAndTransform(
+                type, regnalYear, number, section, version, locale, transforms::clml2fragment);
     }
 
     /* Word (.docx) */
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, int year, int number, String section, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, section, version, locale, transforms::clml2docx, MS_WORD);
+    public ResponseEntity<StreamingResponseBody> docx(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
+        return fetchAndTransformToStream(
+                type,
+                Integer.toString(year),
+                number,
+                section,
+                version,
+                locale,
+                transforms::clml2docx,
+                MS_WORD);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> docx(String type, String monarch, String years, int number, String section, Optional<String> version, Locale locale) {
+    public ResponseEntity<StreamingResponseBody> docx(
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, section, version, locale, transforms::clml2docx, MS_WORD);
+        return fetchAndTransformToStream(
+                type, regnalYear, number, section, version, locale, transforms::clml2docx, MS_WORD);
     }
 
     /* HEAD (existence check) */
@@ -121,19 +249,16 @@ public class FragmentController implements FragmentApi {
     public ResponseEntity<Void> headFragment(String type, int year, int number, String section) {
         validateType(type);
         boolean exists = legislationById.exists(type, Integer.toString(year), number, section);
-        return exists
-            ? ResponseEntity.ok().build()
-            : ResponseEntity.notFound().build();
+        return exists ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
     @Override
-    public ResponseEntity<Void> headFragment(String type, String monarch, String years, int number, String section) {
+    public ResponseEntity<Void> headFragment(
+            String type, String monarch, String years, int number, String section) {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         boolean exists = legislationById.exists(type, regnalYear, number, section);
-        return exists
-            ? ResponseEntity.ok().build()
-            : ResponseEntity.notFound().build();
+        return exists ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
     }
 
     /* helper */
@@ -143,29 +268,57 @@ public class FragmentController implements FragmentApi {
         T apply(String clml) throws Exception;
     }
 
-    private <T> ResponseEntity<T> fetchAndTransform(String type, String year, int number, String section,
-            Optional<String> version, Locale locale, Transform<T> transform) throws Exception {
+    private <T> ResponseEntity<T> fetchAndTransform(
+            String type,
+            String year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale,
+            Transform<T> transform)
+            throws Exception {
         validateType(type);
         String language = locale.getLanguage();
-        Legislation.Response leg = marklogic.getDocumentSection(type, year, number, section, version, Optional.of(String.valueOf(language)));
+        Legislation.Response leg =
+                marklogic.getDocumentSection(
+                        type,
+                        year,
+                        number,
+                        section,
+                        version,
+                        Optional.of(String.valueOf(language)));
         T body = transform.apply(leg.clml());
         HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
     }
 
-    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(String type, String year, int number, String section,
-            Optional<String> version, Locale locale, BiConsumer<InputStream, OutputStream> transform, MediaType mt) {
+    private ResponseEntity<StreamingResponseBody> fetchAndTransformToStream(
+            String type,
+            String year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale,
+            BiConsumer<InputStream, OutputStream> transform,
+            MediaType mt) {
         validateType(type);
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
-            marklogic.getDocumentSectionStream(type, year, number, section, version, Optional.of(String.valueOf(language)));
+                marklogic.getDocumentSectionStream(
+                        type,
+                        year,
+                        number,
+                        section,
+                        version,
+                        Optional.of(String.valueOf(language)));
         InputStream clml = doc.clml();
         try {
-            StreamingResponseBody body = output -> {
-                try (InputStream in = clml) {
-                    transform.accept(in, output);
-                }
-            };
+            StreamingResponseBody body =
+                    output -> {
+                        try (InputStream in = clml) {
+                            transform.accept(in, output);
+                        }
+                    };
             HttpHeaders headers = CustomHeaders.make(language, doc.redirect().orElse(null));
             return ResponseEntity.ok().headers(headers).contentType(mt).body(body);
         } catch (RuntimeException e) {
@@ -177,5 +330,4 @@ public class FragmentController implements FragmentApi {
             throw e;
         }
     }
-
 }

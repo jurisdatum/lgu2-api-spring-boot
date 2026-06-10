@@ -26,34 +26,45 @@ class RichTextConverterTest {
     @ParameterizedTest(name = "{index} => case: {0}")
     @MethodSource("provideInvalidInputs")
     @DisplayName("Should handle null/empty/unrecognized inputs gracefully")
-    void testConvert_InvalidInputs(String caseName, List<RichTextNode> input, Executable assertion) {
+    void testConvert_InvalidInputs(
+            String caseName, List<RichTextNode> input, Executable assertion) {
         assertAll(caseName, assertion);
     }
 
     static Stream<Arguments> provideInvalidInputs() {
         RichTextNode unrecognizedNode = mock(RichTextNode.class);
         return Stream.of(
-            Arguments.of(
-                "Empty input list",
-                List.of(),
-                (Executable) () -> assertTrue(RichTextConverter.convert(List.of()).isEmpty())
-            ),
-            Arguments.of(
-                "Null input list",
-                null,
-                (Executable) () -> assertThrows(NullPointerException.class, () -> RichTextConverter.convert(null))
-            ),
-            Arguments.of(
-                "Range node with no children",
-                List.of(newRangeNode(List.of())),
-                (Executable) () -> assertTrue(RichTextConverter.convert(List.of(newRangeNode(List.of()))).isEmpty())
-            ),
-            Arguments.of(
-                "Unrecognized node type",
-                List.of(unrecognizedNode),
-                (Executable) () -> assertEquals(List.of(), RichTextConverter.convert(List.of(unrecognizedNode)))
-            )
-        );
+                Arguments.of(
+                        "Empty input list",
+                        List.of(),
+                        (Executable)
+                                () -> assertTrue(RichTextConverter.convert(List.of()).isEmpty())),
+                Arguments.of(
+                        "Null input list",
+                        null,
+                        (Executable)
+                                () ->
+                                        assertThrows(
+                                                NullPointerException.class,
+                                                () -> RichTextConverter.convert(null))),
+                Arguments.of(
+                        "Range node with no children",
+                        List.of(newRangeNode(List.of())),
+                        (Executable)
+                                () ->
+                                        assertTrue(
+                                                RichTextConverter.convert(
+                                                                List.of(newRangeNode(List.of())))
+                                                        .isEmpty())),
+                Arguments.of(
+                        "Unrecognized node type",
+                        List.of(unrecognizedNode),
+                        (Executable)
+                                () ->
+                                        assertEquals(
+                                                List.of(),
+                                                RichTextConverter.convert(
+                                                        List.of(unrecognizedNode)))));
     }
 
     @Test
@@ -67,13 +78,13 @@ class RichTextConverterTest {
         assertEquals(1, result.size());
         RichText.Node node = result.getFirst();
 
-        assertAll("Text Node",
-            () -> assertEquals("text", node.type),
-            () -> assertEquals("Sample text", node.text),
-            () -> assertNull(node.id),
-            () -> assertNull(node.href),
-            () -> assertNull(node.missing)
-        );
+        assertAll(
+                "Text Node",
+                () -> assertEquals("text", node.type),
+                () -> assertEquals("Sample text", node.text),
+                () -> assertNull(node.id),
+                () -> assertNull(node.href),
+                () -> assertNull(node.missing));
     }
 
     @Test
@@ -86,21 +97,22 @@ class RichTextConverterTest {
         sectionNode.missing = true;
 
         try (MockedStatic<Links> mockedLinks = mockStatic(Links.class)) {
-            mockedLinks.when(() -> Links.shorten("http://example.com/section-1"))
-                .thenReturn("shortened/section-1");
+            mockedLinks
+                    .when(() -> Links.shorten("http://example.com/section-1"))
+                    .thenReturn("shortened/section-1");
 
             List<RichText.Node> result = RichTextConverter.convert(List.of(sectionNode));
 
             assertEquals(1, result.size());
             RichText.Node node = result.getFirst();
 
-            assertAll("Section Node",
-                () -> assertEquals("link", node.type),
-                () -> assertEquals("Section text", node.text),
-                () -> assertEquals("section-1", node.id),
-                () -> assertEquals("shortened/section-1", node.href),
-                () -> assertTrue(node.missing)
-            );
+            assertAll(
+                    "Section Node",
+                    () -> assertEquals("link", node.type),
+                    () -> assertEquals("Section text", node.text),
+                    () -> assertEquals("section-1", node.id),
+                    () -> assertEquals("shortened/section-1", node.href),
+                    () -> assertTrue(node.missing));
         }
     }
 
@@ -116,13 +128,13 @@ class RichTextConverterTest {
         assertEquals(1, result.size());
         RichText.Node node = result.getFirst();
 
-        assertAll("Range -> Text",
-            () -> assertEquals("text", node.type),
-            () -> assertEquals("Child text", node.text),
-            () -> assertNull(node.id),
-            () -> assertNull(node.href),
-            () -> assertNull(node.missing)
-        );
+        assertAll(
+                "Range -> Text",
+                () -> assertEquals("text", node.type),
+                () -> assertEquals("Child text", node.text),
+                () -> assertNull(node.id),
+                () -> assertNull(node.href),
+                () -> assertNull(node.missing));
     }
 
     @Test
@@ -137,8 +149,9 @@ class RichTextConverterTest {
         sectionChild.uri = "http://example.com/section-2";
 
         try (MockedStatic<Links> mockedLinks = mockStatic(Links.class)) {
-            mockedLinks.when(() -> Links.shorten("http://example.com/section-2"))
-                .thenReturn("http://example.com/section-2");
+            mockedLinks
+                    .when(() -> Links.shorten("http://example.com/section-2"))
+                    .thenReturn("http://example.com/section-2");
 
             RichTextNode.Range range = newRangeNode(List.of(textChild, sectionChild));
             List<RichText.Node> result = RichTextConverter.convert(List.of(range));
@@ -146,20 +159,20 @@ class RichTextConverterTest {
             assertEquals(2, result.size());
 
             RichText.Node textNode = result.get(0);
-            assertAll("Text child",
-                () -> assertEquals("text", textNode.type),
-                () -> assertEquals("Child text", textNode.text),
-                () -> assertNull(textNode.id),
-                () -> assertNull(textNode.href)
-            );
+            assertAll(
+                    "Text child",
+                    () -> assertEquals("text", textNode.type),
+                    () -> assertEquals("Child text", textNode.text),
+                    () -> assertNull(textNode.id),
+                    () -> assertNull(textNode.href));
 
             RichText.Node sectionNode = result.get(1);
-            assertAll("Section child",
-                () -> assertEquals("link", sectionNode.type),
-                () -> assertEquals("Section child", sectionNode.text),
-                () -> assertEquals("section-2", sectionNode.id),
-                () -> assertEquals("http://example.com/section-2", sectionNode.href)
-            );
+            assertAll(
+                    "Section child",
+                    () -> assertEquals("link", sectionNode.type),
+                    () -> assertEquals("Section child", sectionNode.text),
+                    () -> assertEquals("section-2", sectionNode.id),
+                    () -> assertEquals("http://example.com/section-2", sectionNode.href));
         }
     }
 

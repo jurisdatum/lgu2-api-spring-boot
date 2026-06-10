@@ -39,27 +39,39 @@ class RegnalYearConverterTest {
 
         try (var mockedStatic = mockStatic(LDConverter.class)) {
             // Mock static methods
-            mockedStatic.when(() -> LDConverter.extractLastComponentOfUri(regnalYearLD.reign))
-                .thenReturn("monarch1");
-            mockedStatic.when(() -> LDConverter.extractDateAtEndOfUri(regnalYearLD.startDate))
-                .thenReturn(LocalDate.of(1850, 1, 1));
-            mockedStatic.when(() -> LDConverter.extractDateAtEndOfUri(regnalYearLD.endDate))
-                .thenReturn(LocalDate.of(1850, 12, 31));
+            mockedStatic
+                    .when(() -> LDConverter.extractLastComponentOfUri(regnalYearLD.reign))
+                    .thenReturn("monarch1");
+            mockedStatic
+                    .when(() -> LDConverter.extractDateAtEndOfUri(regnalYearLD.startDate))
+                    .thenReturn(LocalDate.of(1850, 1, 1));
+            mockedStatic
+                    .when(() -> LDConverter.extractDateAtEndOfUri(regnalYearLD.endDate))
+                    .thenReturn(LocalDate.of(1850, 12, 31));
 
             RegnalYear result = RegnalYearConverter.convert(regnalYearLD);
 
-            assertAll("RegnalYear conversion result",
-                () -> assertNotNull(result, "Result should not be null"),
-                () -> assertEquals(regnalYearLD.id, result.uri, "URI mismatch"),
-                () -> assertEquals(regnalYearLD.label, result.label, "Label mismatch"),
-                () -> assertEquals(regnalYearLD.yearOfReign, result.yearOfReign, "Year of reign mismatch"),
-                () -> assertEquals("monarch1", result.reign, "Reign mismatch"),
-                () -> assertEquals(LocalDate.of(1850, 1, 1), result.startDate, "Start date mismatch"),
-                () -> assertEquals(LocalDate.of(1850, 12, 31), result.endDate, "End date mismatch")
-            );
-
+            assertAll(
+                    "RegnalYear conversion result",
+                    () -> assertNotNull(result, "Result should not be null"),
+                    () -> assertEquals(regnalYearLD.id, result.uri, "URI mismatch"),
+                    () -> assertEquals(regnalYearLD.label, result.label, "Label mismatch"),
+                    () ->
+                            assertEquals(
+                                    regnalYearLD.yearOfReign,
+                                    result.yearOfReign,
+                                    "Year of reign mismatch"),
+                    () -> assertEquals("monarch1", result.reign, "Reign mismatch"),
+                    () ->
+                            assertEquals(
+                                    LocalDate.of(1850, 1, 1),
+                                    result.startDate,
+                                    "Start date mismatch"),
+                    () ->
+                            assertEquals(
+                                    LocalDate.of(1850, 12, 31),
+                                    result.endDate,
+                                    "End date mismatch"));
         }
     }
-
-
 }

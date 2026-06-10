@@ -1,9 +1,8 @@
 package uk.gov.legislation.data.virtuoso.jsonld;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import tools.jackson.databind.node.ObjectNode;
-
 import java.net.URI;
+import tools.jackson.databind.node.ObjectNode;
 
 public class SessionLD {
 
@@ -13,29 +12,21 @@ public class SessionLD {
     @JsonProperty("@type")
     public URI type;
 
-    @JsonProperty
-    public String label;
+    @JsonProperty public String label;
 
-    @JsonProperty
-    public String comment;
+    @JsonProperty public String comment;
 
-    @JsonProperty
-    public URI sessionOf;
+    @JsonProperty public URI sessionOf;
 
-    @JsonProperty
-    public URI startDate;
+    @JsonProperty public URI startDate;
 
-    @JsonProperty
-    public URI endDate;
+    @JsonProperty public URI endDate;
 
-    @JsonProperty
-    public URI startRegnalYear;
+    @JsonProperty public URI startRegnalYear;
 
-    @JsonProperty
-    public URI endRegnalYear;
+    @JsonProperty public URI endRegnalYear;
 
     public static SessionLD convert(ObjectNode node) {
         return Graph.mapper.convertValue(node, SessionLD.class);
     }
-
 }

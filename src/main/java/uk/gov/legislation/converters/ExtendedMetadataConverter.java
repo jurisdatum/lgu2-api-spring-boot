@@ -1,12 +1,11 @@
 package uk.gov.legislation.converters;
 
+import java.util.List;
 import uk.gov.legislation.api.responses.ExtendedMetadata;
 import uk.gov.legislation.api.responses.meta.Provision;
 import uk.gov.legislation.transform.simple.Metadata;
 import uk.gov.legislation.transform.simple.TitledThing;
 import uk.gov.legislation.util.Links;
-
-import java.util.List;
 
 public class ExtendedMetadataConverter {
 
@@ -19,8 +18,7 @@ public class ExtendedMetadataConverter {
     }
 
     static List<Provision> convert(List<TitledThing> things) {
-        if (things == null)
-            return List.of();
+        if (things == null) return List.of();
         return things.stream().map(ExtendedMetadataConverter::convert1).toList();
     }
 
@@ -29,8 +27,7 @@ public class ExtendedMetadataConverter {
         if (thing.uri != null) {
             Links.Components components = Links.parse(thing.uri.toASCIIString());
             provision.href = components.fragment().orElse(null);
-            if (provision.href != null)
-                provision.id = provision.href.replace('/', '-');
+            if (provision.href != null) provision.id = provision.href.replace('/', '-');
         }
         if (thing.title != null) {
             provision.title = thing.title;
@@ -39,5 +36,4 @@ public class ExtendedMetadataConverter {
         }
         return provision;
     }
-
 }
