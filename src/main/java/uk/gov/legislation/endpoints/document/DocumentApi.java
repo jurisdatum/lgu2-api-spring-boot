@@ -5,19 +5,22 @@ import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
+import java.util.Locale;
+import java.util.Optional;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
-import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Monarch;
 import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Version;
+import uk.gov.legislation.api.parameters.Year;
+import uk.gov.legislation.api.parameters.Years;
 import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.Document;
-
-import java.util.Locale;
-import java.util.Optional;
 
 /**
  * API for document retrieval and transformation operations.

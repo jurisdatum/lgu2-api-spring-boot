@@ -1,5 +1,19 @@
 package uk.gov.legislation.endpoints.dates;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Collections;
+import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,18 +25,6 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
 
-import java.time.LocalDate;
-import java.util.Collections;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 @WebMvcTest(DatesController.class)
 class DatesControllerTest {
 
@@ -31,6 +33,8 @@ class DatesControllerTest {
 
     @MockitoBean
     private Search search;
+
+    private static final ZoneId LONDON = ZoneId.of("Europe/London");
 
     @Test
     void shouldReturnEmptyList_whenNoPublishedDates() throws Exception {
@@ -42,7 +46,7 @@ class DatesControllerTest {
         when(search.get(any(Parameters.class))).thenReturn(results);
 
         // Capture the current date before the request to guard against a midnight rollover.
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -51,7 +55,7 @@ class DatesControllerTest {
             .andExpect(content().json("[]"));  // Expecting an empty list
 
         // Second capture after the request so we allow either “yesterday” value.
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 
@@ -75,7 +79,7 @@ class DatesControllerTest {
         ArgumentCaptor<Parameters> paramsCaptor = ArgumentCaptor.forClass(Parameters.class);
         when(search.get(any(Parameters.class))).thenReturn(results);
 
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -84,7 +88,7 @@ class DatesControllerTest {
             .andExpect(jsonPath("$[0].date").value("2023-09-24"))
             .andExpect(jsonPath("$[0].count").value(5));
 
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 
@@ -112,7 +116,7 @@ class DatesControllerTest {
         ArgumentCaptor<Parameters> paramsCaptor = ArgumentCaptor.forClass(Parameters.class);
         when(search.get(any(Parameters.class))).thenReturn(results);
 
-        LocalDate beforeRequest = LocalDate.now();
+        LocalDate beforeRequest = LocalDate.now(LONDON);
 
         mockMvc.perform(get("/dates/published")
                 .accept(MediaType.APPLICATION_JSON))
@@ -123,7 +127,7 @@ class DatesControllerTest {
             .andExpect(jsonPath("$[1].date").value("2023-09-23"))
             .andExpect(jsonPath("$[1].count").value(7));
 
-        LocalDate afterRequest = LocalDate.now();
+        LocalDate afterRequest = LocalDate.now(LONDON);
 
         verify(search).get(paramsCaptor.capture());
 

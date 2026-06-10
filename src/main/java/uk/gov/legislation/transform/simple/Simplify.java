@@ -1,18 +1,26 @@
 package uk.gov.legislation.transform.simple;
 
-import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
-import tools.jackson.core.JacksonException;
-import uk.gov.legislation.transform.Helper;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayOutputStream;
 import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import net.sf.saxon.s9api.Destination;
+import net.sf.saxon.s9api.QName;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.Serializer;
+import net.sf.saxon.s9api.XdmAtomicValue;
+import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XdmValue;
+import net.sf.saxon.s9api.Xslt30Transformer;
+import net.sf.saxon.s9api.XsltCompiler;
+import net.sf.saxon.s9api.XsltExecutable;
+import org.springframework.stereotype.Service;
+import tools.jackson.core.JacksonException;
+import uk.gov.legislation.transform.Helper;
 
 @Service
 public class Simplify {

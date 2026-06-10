@@ -1,5 +1,7 @@
 package uk.gov.legislation.api.responses;
 
+import java.util.Locale;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
 import uk.gov.legislation.util.Type;
@@ -46,7 +48,7 @@ public class TypeWrapper {
     @JsonProperty(index = 3)
     @Schema(allowableValues = { "primary", "secondary" })
     public String category() {
-        return type.category().name().toLowerCase();
+        return type.category().name().toLowerCase(Locale.ROOT);
     }
 
 }

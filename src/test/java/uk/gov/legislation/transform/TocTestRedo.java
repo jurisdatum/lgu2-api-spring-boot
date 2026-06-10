@@ -1,5 +1,13 @@
 package uk.gov.legislation.transform;
 
+import static uk.gov.legislation.transform.TocTest.provide;
+import static uk.gov.legislation.transform.TransformHelper.MAPPER;
+import static uk.gov.legislation.transform.TransformHelper.read;
+import static uk.gov.legislation.transform.TransformHelper.write;
+import static uk.gov.legislation.transform.TransformTest.CUTOFF;
+
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
@@ -8,12 +16,6 @@ import uk.gov.legislation.converters.TableOfContentsConverter;
 import uk.gov.legislation.transform.simple.Contents;
 import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.util.UpToDate;
-
-import java.time.ZonedDateTime;
-
-import static uk.gov.legislation.transform.TransformHelper.*;
-import static uk.gov.legislation.transform.TransformTest.CUTOFF;
-import static uk.gov.legislation.transform.TocTest.provide;
 
 public class TocTestRedo {
 
@@ -35,7 +37,7 @@ public class TocTestRedo {
         try {
             expected = read(id, "json");
         } catch (NullPointerException e) {
-            expected = ZonedDateTime.now().toString();
+            expected = ZonedDateTime.now(ZoneOffset.UTC).toString();
         }
         if (actual.equals(expected))
             return;

@@ -1,11 +1,14 @@
 package uk.gov.legislation.transform.simple;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
 import uk.gov.legislation.transform.TransformHelper;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConfersPowerTest {
 
@@ -19,7 +22,7 @@ class ConfersPowerTest {
 
         assertNotNull(meta.fragmentInfo);
         assertEquals("section-22", meta.fragmentInfo.id);
-        assertEquals(Boolean.TRUE, meta.fragmentInfo.confersPower);
+        assertEquals(true, meta.fragmentInfo.confersPower);
 
         String fragmentInfoJson = TransformHelper.MAPPER.writeValueAsString(meta.fragmentInfo);
         assertTrue(fragmentInfoJson.contains("\"confersPower\" : true"));
@@ -28,7 +31,7 @@ class ConfersPowerTest {
             .filter(level -> "section-22-1".equals(level.id))
             .findFirst()
             .orElseThrow();
-        assertEquals(Boolean.FALSE, subSection.confersPower);
+        assertEquals(false, subSection.confersPower);
 
         String subSectionJson = TransformHelper.MAPPER.writeValueAsString(subSection);
         assertFalse(subSectionJson.contains("\"confersPower\""));

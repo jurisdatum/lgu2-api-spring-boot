@@ -10,6 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,7 +33,7 @@ public class LegislationApiDelegate implements Delegate {
 	private String password = "";
 	private String rewriteHostName = "";
 	private Map<String, String> conversionParameters = new HashMap<>();
-	private Logger logger = Logger.getLogger(LegislationApiDelegate.class.getName());
+	private final Logger logger = Logger.getLogger(LegislationApiDelegate.class.getName());
 	
 	/**
 	 * Fetches a resource from it's URI
@@ -58,7 +59,7 @@ public class LegislationApiDelegate implements Delegate {
 			logger.log(Level.FINE, "Applying basic auth");
 			String auth = getUsername() + ":" + getPassword();
 			byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.UTF_8));
-			String authHeaderValue = "Basic " + new String(encodedAuth);
+			String authHeaderValue = "Basic " + new String(encodedAuth, StandardCharsets.US_ASCII);
 			connection.setRequestProperty("Authorization", authHeaderValue);
 		}		
 		
@@ -76,7 +77,7 @@ public class LegislationApiDelegate implements Delegate {
 				logger.log(Level.FINE, "Applying basic auth");
 				String auth = getUsername() + ":" + getPassword();
 				byte[] encodedAuth = Base64.getEncoder().encode(auth.getBytes(StandardCharsets.UTF_8));
-				String authHeaderValue = "Basic " + new String(encodedAuth);
+				String authHeaderValue = "Basic " + new String(encodedAuth, StandardCharsets.US_ASCII);
 				connection.setRequestProperty("Authorization", authHeaderValue);
 			}	
 		}
@@ -91,7 +92,7 @@ public class LegislationApiDelegate implements Delegate {
 	    		Iterator<ImageReader> imageReaders = ImageIO.getImageReaders(iis);
 	    		if (imageReaders.hasNext()) {
 	    		    ImageReader reader = (ImageReader) imageReaders.next();
-	    		    contentType = "image/" + reader.getFormatName().toLowerCase();
+	    		    contentType = "image/" + reader.getFormatName().toLowerCase(Locale.ROOT);
 	    		} else {
 	    			contentType = "image/gif";	// http://www.legislation.gov.uk/uksi/2018/4/images/uksi_20180004_en_001
 	    		}
@@ -103,7 +104,7 @@ public class LegislationApiDelegate implements Delegate {
 	    		Iterator<ImageReader> imageReaders = ImageIO.getImageReaders(iis);
 	    		if (imageReaders.hasNext()) {
 	    		    ImageReader reader = (ImageReader) imageReaders.next();
-	    		    contentType = "image/" + reader.getFormatName().toLowerCase();
+	    		    contentType = "image/" + reader.getFormatName().toLowerCase(Locale.ROOT);
 	    		} else {
 	    			contentType = "application/pdf";
 	    		}
@@ -180,6 +181,7 @@ public class LegislationApiDelegate implements Delegate {
 	 * Set parameters for the conversion
 	 * @param conversionParameters Parameters for the conversion
 	 */
+	@Override
 	public void setConversionParameters(Map<String, String> conversionParameters) {
 		this.conversionParameters = conversionParameters;
 	}
@@ -188,6 +190,7 @@ public class LegislationApiDelegate implements Delegate {
 	 * Get parameters for the conversion
 	 * @return Parameters for the conversion
 	 */
+	@Override
 	public Map<String, String> getConversionParameters() {
 		return conversionParameters;
 	}

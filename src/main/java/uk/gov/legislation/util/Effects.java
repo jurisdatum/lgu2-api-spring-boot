@@ -63,6 +63,7 @@ public class Effects {
     }
 
     /**
+     Removes effects that don't target any of the given fragment ids.
      @param effects all the effects
      @param ids the fragment ids to be retained
      @param includeWhole retain those targeting no particular section

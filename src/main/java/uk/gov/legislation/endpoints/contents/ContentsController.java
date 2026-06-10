@@ -1,5 +1,17 @@
 package uk.gov.legislation.endpoints.contents;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+import static uk.gov.legislation.endpoints.document.DocumentController.APPLICATION_AKN_XML;
+import static uk.gov.legislation.endpoints.document.DocumentController.APPLICATION_XML_UTF8;
+import static uk.gov.legislation.endpoints.document.DocumentController.MS_WORD;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.io.UncheckedIOException;
+import java.util.Locale;
+import java.util.Optional;
+import java.util.function.BiConsumer;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -9,17 +21,6 @@ import uk.gov.legislation.api.responses.TableOfContents;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
 import uk.gov.legislation.endpoints.CustomHeaders;
 import uk.gov.legislation.transform.Transforms;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.UncheckedIOException;
-import java.util.Locale;
-import java.util.Optional;
-import java.util.function.BiConsumer;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
-import static uk.gov.legislation.endpoints.document.DocumentController.*;
 
 @RestController
 public class ContentsController implements ContentsApi {
@@ -34,23 +35,23 @@ public class ContentsController implements ContentsApi {
 
     /* CLML */
 
-    private final BiConsumer<InputStream, OutputStream> transferToWrapper = (input, output) -> {
+    private void transferToWrapper(InputStream input, OutputStream output) {
         try {
             input.transferTo(output);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
         }
-    };
+    }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, int year, int number, Optional<String> version, Locale locale) {
-        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(type, Integer.toString(year), number, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     @Override
     public ResponseEntity<StreamingResponseBody> getDocumentContentsClml(String type, String monarch, String years, int number, Optional<String> version, Locale locale) {
         String regnalYear = String.join("/", monarch, years);
-        return fetchAndTransformToStream(type, regnalYear, number, version, locale, transferToWrapper, APPLICATION_XML_UTF8);
+        return fetchAndTransformToStream(type, regnalYear, number, version, locale, this::transferToWrapper, APPLICATION_XML_UTF8);
     }
 
     /* Akoma Ntoso */

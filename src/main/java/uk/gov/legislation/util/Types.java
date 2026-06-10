@@ -1,6 +1,9 @@
 package uk.gov.legislation.util;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Types {
@@ -28,7 +31,7 @@ public class Types {
             type = LongToShort.get(type);
         if (!ShortToLong.containsKey(type))
             return null;
-        return Type.valueOf(type.toUpperCase());
+        return Type.valueOf(type.toUpperCase(Locale.ROOT));
     }
 
     /* by country */

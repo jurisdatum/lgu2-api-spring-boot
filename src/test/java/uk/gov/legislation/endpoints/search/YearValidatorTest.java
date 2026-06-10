@@ -1,12 +1,16 @@
 package uk.gov.legislation.endpoints.search;
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.api.test.LoggingTestWatcher;
-
-import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(LoggingTestWatcher.class)
  class YearValidatorTest {
 

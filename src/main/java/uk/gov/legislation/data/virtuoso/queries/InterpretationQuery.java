@@ -22,6 +22,7 @@ public class InterpretationQuery {
     public InterpretationQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
 
     /**
+     * Builds the SPARQL query that fetches interpretation triples for the given URI components.
      * @param type    the first component of the URI, cannot be null
      * @param middle  the following components of the URI, can contain slashes, cannot be null
      * @param number  can be null

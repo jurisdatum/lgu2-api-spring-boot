@@ -7,6 +7,7 @@ import uk.gov.legislation.transform.clml2docx.DocxTest;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
 class DocxTestRedo {
@@ -27,7 +28,7 @@ class DocxTestRedo {
         try {
             expected = TransformHelper.read(id, DocxTest.DOCX_XML_EXT);
         } catch (NullPointerException e) {
-            expected = ZonedDateTime.now().toString();
+            expected = ZonedDateTime.now(ZoneOffset.UTC).toString();
         }
         byte[] docx = transform.transform(new ByteArrayInputStream(clml.getBytes(StandardCharsets.UTF_8)));
         String actual = DocxTest.extractDocumentXml(docx);

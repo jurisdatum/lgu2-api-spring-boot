@@ -1,15 +1,18 @@
 package uk.gov.legislation.endpoints.pdf.api;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import io.swagger.v3.oas.annotations.responses.ApiResponse;
-import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import uk.gov.legislation.api.parameters.*;
+import uk.gov.legislation.api.parameters.Monarch;
 import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Type;
+import uk.gov.legislation.api.parameters.Year;
+import uk.gov.legislation.api.parameters.Years;
 
 @Tag(name = "PDFs")
 public interface PdfApi {

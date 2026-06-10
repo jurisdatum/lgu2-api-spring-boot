@@ -1,10 +1,5 @@
 package uk.gov.legislation.transform;
 
-import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -12,6 +7,17 @@ import java.io.StringReader;
 import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.util.Properties;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import net.sf.saxon.s9api.Destination;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.Serializer;
+import net.sf.saxon.s9api.XdmDestination;
+import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XsltCompiler;
+import net.sf.saxon.s9api.XsltExecutable;
+import net.sf.saxon.s9api.XsltTransformer;
+import org.springframework.stereotype.Service;
 
 @Service
 public class Clml2Akn {
@@ -59,7 +65,7 @@ public class Clml2Akn {
     public void transform(InputStream clml, OutputStream akn) throws SaxonApiException {
         Source source = new StreamSource(clml);
         Serializer serializer = executable.getProcessor().newSerializer(akn);
-        serializer.setOutputProperties(Properties);
+        serializer.setOutputProperties(OUTPUT_PROPERTIES);
         transform(source, serializer);
     }
 
@@ -79,15 +85,15 @@ public class Clml2Akn {
         return destination.getXdmNode();
     }
 
-    static final Properties Properties = new Properties();
+    static final Properties OUTPUT_PROPERTIES = new Properties();
     static {
-        Properties.setProperty(Serializer.Property.INDENT.toString(), "yes");
+        OUTPUT_PROPERTIES.setProperty(Serializer.Property.INDENT.toString(), "yes");
     }
 
     public static String serialize(XdmNode akn) throws SaxonApiException {
         ByteArrayOutputStream output = new ByteArrayOutputStream();
         Serializer serializer = akn.getProcessor().newSerializer(output);
-        serializer.setOutputProperties(Properties);
+        serializer.setOutputProperties(OUTPUT_PROPERTIES);
         serializer.serialize(akn.asSource());
         return output.toString(StandardCharsets.UTF_8);
     }

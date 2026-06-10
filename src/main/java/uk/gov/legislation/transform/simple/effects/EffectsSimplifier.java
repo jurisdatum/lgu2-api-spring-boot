@@ -1,17 +1,20 @@
 package uk.gov.legislation.transform.simple.effects;
 
-import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
-import tools.jackson.core.JacksonException;
-import uk.gov.legislation.transform.Helper;
-import uk.gov.legislation.transform.simple.SimpleXmlMapper;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.Objects;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.Serializer;
+import net.sf.saxon.s9api.Xslt30Transformer;
+import net.sf.saxon.s9api.XsltCompiler;
+import net.sf.saxon.s9api.XsltExecutable;
+import org.springframework.stereotype.Service;
+import tools.jackson.core.JacksonException;
+import uk.gov.legislation.transform.Helper;
+import uk.gov.legislation.transform.simple.SimpleXmlMapper;
 
 @Service("effectsSimplifier")
 public class EffectsSimplifier {

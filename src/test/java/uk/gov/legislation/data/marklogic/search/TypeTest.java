@@ -1,6 +1,12 @@
 package uk.gov.legislation.data.marklogic.search;
 
 
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import java.util.List;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -9,11 +15,6 @@ import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import uk.gov.legislation.endpoints.ParameterValidator;
 import uk.gov.legislation.exceptions.UnknownTypeException;
-
-import java.util.List;
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class TypeTest {
 
@@ -26,9 +27,9 @@ class TypeTest {
      }
      static Stream<Arguments> type() {
          return Stream.of(
-             Arguments.of(("ukpga"), "ukpga"),
-             Arguments.of(("asp"), "asp"),
-             Arguments.of(("primary"), "primary")
+             Arguments.of("ukpga", "ukpga"),
+             Arguments.of("asp", "asp"),
+             Arguments.of("primary", "primary")
          );
      }
 

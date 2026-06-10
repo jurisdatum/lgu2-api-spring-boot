@@ -3,15 +3,17 @@ package uk.gov.legislation.endpoints.search;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.parameters.*;
-import uk.gov.legislation.api.parameters.Number;
-import uk.gov.legislation.data.marklogic.search.Parameters;
-import uk.gov.legislation.util.Extent;
-
 import java.time.LocalDate;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
+import uk.gov.legislation.api.parameters.Number;
+import uk.gov.legislation.api.parameters.Page;
+import uk.gov.legislation.api.parameters.Sort;
+import uk.gov.legislation.api.parameters.Title;
+import uk.gov.legislation.api.parameters.Year;
+import uk.gov.legislation.data.marklogic.search.Parameters;
+import uk.gov.legislation.util.Extent;
 
 /**
  * Search parameters for legislation search endpoints.

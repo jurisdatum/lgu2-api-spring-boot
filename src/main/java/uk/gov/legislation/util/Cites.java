@@ -63,7 +63,7 @@ public class Cites {
 
     @SuppressWarnings("DuplicateBranchesInSwitch")
     private static String make(Type type, int year, RegnalYear regnal, int number) {
-        String regnalYear = RegnalYear.forCitation(regnal);
+        String regnalYear = RegnalYear.spacedCitationOrEmpty(regnal);
         if (type == null)
             return null;
         return switch (type) {

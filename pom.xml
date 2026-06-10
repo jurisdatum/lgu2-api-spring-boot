@@ -37,6 +37,7 @@
 	</scm>
 	<properties>
 		<java.version>21</java.version>
+		<errorprone.version>2.39.0</errorprone.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -100,6 +101,28 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- Error Prone static analysis: runs as a javac plugin during compilation.
+			     JDK 16+ requires the add-exports/add-opens flags in .mvn/jvm.config. -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<compilerArgs>
+						<arg>-XDcompilePolicy=simple</arg>
+						<arg>--should-stop=ifError=FLOW</arg>
+						<!-- JavaLangClash off: Number/Error/Package are deliberate domain class names. -->
+						<!-- EmptyBlockTag off: bare @throws tags (e.g. @throws IOException) are legitimate javadoc. -->
+						<arg>-Xplugin:ErrorProne -XepDisableWarningsInGeneratedCode -Xep:JavaLangClash:OFF -Xep:EmptyBlockTag:OFF -Xep:FieldCanBeFinal:WARN -Xep:PatternMatchingInstanceof:WARN -Xep:WildcardImport:WARN -Xep:MissingCasesInEnumSwitch:WARN -Xep:UnnecessaryDefaultInEnumSwitch:WARN -Xep:MultiVariableDeclaration:WARN -Xep:StringConcatToTextBlock:WARN -Xep:ConstantField:WARN</arg>
+					</compilerArgs>
+					<annotationProcessorPaths>
+						<path>
+							<groupId>com.google.errorprone</groupId>
+							<artifactId>error_prone_core</artifactId>
+							<version>${errorprone.version}</version>
+						</path>
+					</annotationProcessorPaths>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

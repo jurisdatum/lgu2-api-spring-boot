@@ -38,6 +38,7 @@ public class EffectsController implements EffectsApi {
         };
     }
 
+    @Override
     public String atom(EffectsParameters param) throws IOException, InterruptedException {
         validateType(param.getTargetType());
         validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
@@ -65,6 +66,7 @@ public class EffectsController implements EffectsApi {
     }
 
 
+    @Override
     public PageOfEffects json(EffectsParameters param) throws IOException, InterruptedException, SaxonApiException {
         // parameter validation done in atom() method
         String atom = atom(param);

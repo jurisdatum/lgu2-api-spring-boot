@@ -20,7 +20,7 @@ public class AltFormat {
     @JsonProperty
     public Long size;
 
-    @JsonProperty()
+    @JsonProperty
     @Schema(allowableValues = {"English", "Welsh", "Mixed" })
     public String language;
 

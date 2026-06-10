@@ -1,17 +1,19 @@
 package uk.gov.legislation.transform;
 
+import static uk.gov.legislation.transform.TransformHelper.MAPPER;
+import static uk.gov.legislation.transform.TransformTest.CUTOFF;
+import static uk.gov.legislation.transform.TransformTest.replaceAknDate;
+import static uk.gov.legislation.transform.TransformTest.replaceHtmlDate;
+
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.util.function.BiPredicate;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.util.UpToDate;
-
-import java.time.ZonedDateTime;
-import java.util.function.BiPredicate;
-
-import static uk.gov.legislation.transform.TransformHelper.MAPPER;
-import static uk.gov.legislation.transform.TransformTest.*;
 
  class TransformTestRedo {
 
@@ -74,7 +76,7 @@ import static uk.gov.legislation.transform.TransformTest.*;
         try {
             expected = TransformHelper.read(id, format);
         } catch (NullPointerException e) {
-            expected = ZonedDateTime.now().toString();
+            expected = ZonedDateTime.now(ZoneOffset.UTC).toString();
         }
         if (compare.test(actual, expected)) {
             System.out.println("skipping " + id);

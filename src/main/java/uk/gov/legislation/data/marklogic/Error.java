@@ -232,6 +232,7 @@ public class Error {
         }
     }
 
+    @SuppressWarnings("EmptyCatch") // nothing useful to do if closing the reader fails
     private static void closeQuietly(XMLStreamReader reader) {
         if (reader == null)
             return;

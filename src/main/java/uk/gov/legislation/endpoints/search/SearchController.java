@@ -1,5 +1,14 @@
 package uk.gov.legislation.endpoints.search;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateLanguage;
+import static uk.gov.legislation.endpoints.ParameterValidator.validateStage;
+import static uk.gov.legislation.endpoints.ParameterValidator.validateTitle;
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+import static uk.gov.legislation.endpoints.documents.DocumentsController.APPLICATION_ATOM_XML_UTF8;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Optional;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,13 +18,6 @@ import uk.gov.legislation.api.responses.PageOfDocuments;
 import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Optional;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.*;
-import static uk.gov.legislation.endpoints.documents.DocumentsController.APPLICATION_ATOM_XML_UTF8;
 
 @RestController
 public class SearchController implements SearchApi {

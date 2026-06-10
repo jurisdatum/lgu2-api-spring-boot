@@ -1,5 +1,14 @@
 package uk.gov.legislation.endpoints;
 
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.io.IOException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,14 +23,6 @@ import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.exceptions.NoDocumentException;
 import uk.gov.legislation.transform.Transforms;
-
-import java.io.IOException;
-
-import static org.mockito.ArgumentMatchers.*;
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
  * Integration tests for exception handling across the application.
@@ -40,6 +41,7 @@ class ExceptionHandlingIntegrationTest {
     @MockitoBean
     private Search search;
 
+    @SuppressWarnings("UnusedVariable") // wired into the @WebMvcTest context, not read directly
     @MockitoBean
     private Transforms transforms;
 

@@ -1,17 +1,19 @@
 package uk.gov.legislation.converters.ld;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.mockito.Mockito.mockStatic;
+
+import java.net.URI;
+import java.time.LocalDate;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.NullSource;
 import uk.gov.legislation.api.responses.ld.RegnalYear;
 import uk.gov.legislation.data.virtuoso.jsonld.RegnalYearLD;
-
-import java.net.URI;
-import java.time.LocalDate;
-
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
 
 class RegnalYearConverterTest {
 

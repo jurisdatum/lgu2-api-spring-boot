@@ -1,5 +1,7 @@
 package uk.gov.legislation.util;
 
+import java.util.Locale;
+
 public enum Type {
 
     // United Kingdom Acts
@@ -70,7 +72,7 @@ public enum Type {
     }
 
     public String shortName() {
-        return name().toLowerCase();
+        return name().toLowerCase(Locale.ROOT);
     }
 
     public String longName() {

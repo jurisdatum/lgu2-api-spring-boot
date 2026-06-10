@@ -1,9 +1,11 @@
 package uk.gov.legislation.util;
 
+import java.util.Locale;
+
 class Roman {
 
     static String toLowerRoman(int number) {
-        return toUpperRoman(number).toLowerCase();
+        return toUpperRoman(number).toLowerCase(Locale.ROOT);
     }
 
     static String toUpperRoman(int number) {
@@ -27,7 +29,7 @@ class Roman {
      * Uses roundtrip validation via {@link #toUpperRoman}.
      */
     static int parse(String s) {
-        String upper = s.toUpperCase();
+        String upper = s.toUpperCase(Locale.ROOT);
         int result = 0;
         int prev = 0;
         for (int i = upper.length() - 1; i >= 0; i--) {

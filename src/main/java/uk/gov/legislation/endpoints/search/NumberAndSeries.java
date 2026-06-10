@@ -2,6 +2,7 @@ package uk.gov.legislation.endpoints.search;
 
 import uk.gov.legislation.data.marklogic.search.Parameters;
 
+import java.util.Locale;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,7 +41,7 @@ public record NumberAndSeries(int number, Parameters.Series series) {
     }
 
     private NumberAndSeries(String number, String series) {
-        this(Integer.parseInt(number), series == null ? null : Parameters.Series.valueOf(series.toUpperCase()));
+        this(Integer.parseInt(number), series == null ? null : Parameters.Series.valueOf(series.toUpperCase(Locale.ROOT)));
     }
 
 }

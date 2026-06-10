@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.SequencedMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -117,7 +118,7 @@ public class Clml2Docx {
 	 */
 	private Map<String, byte[]> fetchAllResources(XdmNode clml, Map<String, Resource> cache) throws IOException {
 		List<String> resourceURIs = xslt.getResourceURIs(clml);
-		LinkedHashMap<String, byte[]> resources = fetchLinkedResources(resourceURIs, cache);
+		SequencedMap<String, byte[]> resources = fetchLinkedResources(resourceURIs, cache);
 		fetchCrest(clml, resources);
 		return resources;
 	}
@@ -127,9 +128,8 @@ public class Clml2Docx {
 	 * @param resourceURIs List of images to download
 	 * @param cache Existing cache of the images
 	 * @return Modified cache of the images
-	 * @throws IOException
 	 */
-	private LinkedHashMap<String, byte[]> fetchLinkedResources(List<String> resourceURIs, Map<String, Resource> cache) {
+	private SequencedMap<String, byte[]> fetchLinkedResources(List<String> resourceURIs, Map<String, Resource> cache) {
 		LinkedHashMap<String, byte[]> resources = new LinkedHashMap<>();
 		for (String uri : resourceURIs) {
 			Resource resource;
@@ -158,34 +158,17 @@ public class Clml2Docx {
 	 * @param resources Existing cache of the images
 	 * @throws IOException
 	 */
-	private void fetchCrest(XdmNode clml, LinkedHashMap<String, byte[]> resources) throws IOException {
+	private void fetchCrest(XdmNode clml, SequencedMap<String, byte[]> resources) throws IOException {
 		
 		// choose the appropriate crest depending on the document type
-		final String crest;
-		switch (xslt.getDocumentMainType(clml)) {
-			case "UnitedKingdomPublicGeneralAct":
-			case "UnitedKingdomLocalAct":
-			case "UnitedKingdomChurchMeasure":
-			case "NorthernIrelandAct":
-			case "EnglandAct":
-			case "IrelandAct":
-			case "GreatBritainAct":
-			case "NorthernIrelandAssemblyMeasure": 
-			case "NorthernIrelandParliamentAct":
-				crest = "ukpga.png";
-				break;
-			case "ScottishAct":
-			case "ScottishOldAct":
-				crest = "asp.png";
-				break;
-			case "WelshParliamentAct":
-			case "WelshNationalAssemblyAct":
-			case "WelshAssemblyMeasure":
-				crest = "asc.png";
-				break;
-			default:
-				crest = null;
-		}
+		final String crest = switch (xslt.getDocumentMainType(clml)) {
+			case "UnitedKingdomPublicGeneralAct", "UnitedKingdomLocalAct", "UnitedKingdomChurchMeasure",
+				"NorthernIrelandAct", "EnglandAct", "IrelandAct", "GreatBritainAct",
+				"NorthernIrelandAssemblyMeasure", "NorthernIrelandParliamentAct" -> "ukpga.png";
+			case "ScottishAct", "ScottishOldAct" -> "asp.png";
+			case "WelshParliamentAct", "WelshNationalAssemblyAct", "WelshAssemblyMeasure" -> "asc.png";
+			default -> null;
+		};
 		if (crest != null) {
 			// read the crest from the embedded resources
 			InputStream input = getClass().getResourceAsStream("/transforms/clml2docx/images/" + crest);

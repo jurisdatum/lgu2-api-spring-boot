@@ -1,18 +1,27 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.verifyNoMoreInteractions;
+import static org.mockito.Mockito.when;
+
+import java.net.URI;
+import java.util.List;
+import java.util.Locale;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.ArgumentCaptor;
-import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
-import java.util.stream.Stream;
-
-import static java.net.URI.create;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.Mockito.*;
 
 class LabeledFacetsTest {
 
@@ -126,7 +135,7 @@ class LabeledFacetsTest {
             var actual = result.get(i);
 
             assertAll("Facet " + i,
-                () -> assertEquals(create(expected.uri()), actual.uri(), "URI mismatch"),
+                () -> assertEquals(URI.create(expected.uri()), actual.uri(), "URI mismatch"),
                 () -> assertEquals(expected.id(), actual.id(), "ID mismatch"),
                 () -> assertEquals(expected.label(), actual.label(), "Label mismatch"),
                 () -> assertEquals(expected.count(), actual.count(), "Count mismatch")
@@ -199,7 +208,7 @@ class LabeledFacetsTest {
         var captor = ArgumentCaptor.forClass(String.class);
         verify(mockDefra, times(1)).getSparqlResultsJson(captor.capture());
         String query = captor.getValue();
-        String ql = query.toLowerCase();
+        String ql = query.toLowerCase(Locale.ROOT);
 
         // Be robust to whitespace/order/casing while still teaching the key clauses.
         assertTrue(ql.contains("group by"), "query should have a GROUP BY");

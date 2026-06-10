@@ -5,6 +5,7 @@ import java.lang.reflect.Modifier;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -17,7 +18,7 @@ public abstract class AbstractParameters {
         return CAMEL_TO_LISP_CASE
             .matcher(field.getName())
             .replaceAll("$1-$2")
-            .toLowerCase();
+            .toLowerCase(Locale.ROOT);
     }
 
     public String toQuery() {

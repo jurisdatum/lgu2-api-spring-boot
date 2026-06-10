@@ -1,14 +1,21 @@
 package uk.gov.legislation.transform;
 
-import net.sf.saxon.s9api.*;
-import org.springframework.stereotype.Service;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
 import java.io.OutputStream;
 import java.io.StringWriter;
 import java.net.URISyntaxException;
 import java.util.Properties;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import net.sf.saxon.s9api.Destination;
+import net.sf.saxon.s9api.QName;
+import net.sf.saxon.s9api.SaxonApiException;
+import net.sf.saxon.s9api.Serializer;
+import net.sf.saxon.s9api.XdmAtomicValue;
+import net.sf.saxon.s9api.XdmNode;
+import net.sf.saxon.s9api.XsltCompiler;
+import net.sf.saxon.s9api.XsltExecutable;
+import net.sf.saxon.s9api.XsltTransformer;
+import org.springframework.stereotype.Service;
 
 @Service
 public class Akn2Html {
@@ -44,10 +51,10 @@ public class Akn2Html {
     static final Properties Indent = createProperties(true);
     static final Properties DontIndent = createProperties(false);
 
-    private static Properties createProperties(boolean indent) {
+    private static Properties createProperties(boolean shouldIndent) {
         Properties properties = new Properties();
         properties.setProperty(Serializer.Property.OMIT_XML_DECLARATION.toString(), "yes");
-        properties.setProperty(Serializer.Property.INDENT.toString(), indent ? "yes" : "no");
+        properties.setProperty(Serializer.Property.INDENT.toString(), shouldIndent ? "yes" : "no");
         return properties;
     }
 
