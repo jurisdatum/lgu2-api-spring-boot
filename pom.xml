@@ -38,6 +38,8 @@
 	<properties>
 		<java.version>21</java.version>
 		<errorprone.version>2.39.0</errorprone.version>
+		<spotless.plugin.version>2.44.5</spotless.plugin.version>
+		<google.format.version>1.27.0</google.format.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -123,6 +125,42 @@
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
+			</plugin>
+			<!-- Spotless / google-java-format (AOSP, 4-space, matching the existing style).
+			     Format the working tree on demand with `./mvnw spotless:apply`. The `check`
+			     goal is bound to the verify phase, so `mvn verify` — and the PR CI in
+			     maven.yml — fails on unformatted sources. Ordinary build commands (compile,
+			     test, package) never mutate sources. Reuses the .mvn/jvm.config add-exports
+			     that Error Prone already requires. -->
+			<plugin>
+				<groupId>com.diffplug.spotless</groupId>
+				<artifactId>spotless-maven-plugin</artifactId>
+				<version>${spotless.plugin.version}</version>
+				<configuration>
+					<java>
+						<includes>
+							<include>src/main/java/**/*.java</include>
+							<include>src/test/java/**/*.java</include>
+						</includes>
+						<googleJavaFormat>
+							<version>${google.format.version}</version>
+							<style>AOSP</style>
+							<reflowLongStrings>true</reflowLongStrings>
+						</googleJavaFormat>
+						<removeUnusedImports/>
+						<trimTrailingWhitespace/>
+						<endWithNewline/>
+					</java>
+				</configuration>
+				<executions>
+					<execution>
+						<id>spotless-check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+						<phase>verify</phase>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
