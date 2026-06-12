@@ -63,6 +63,37 @@ class DatesControllerTest {
     }
 
     @Test
+    void shouldReturnEmptyList_whenFacetPublishDatesAbsent() throws Exception {
+        // MarkLogic omits the <facetPublishDates> element entirely when nothing was published,
+        // so Jackson leaves the list null (not empty) — the real "no publications" shape that the
+        // emptyList() mock above does not exercise. This is what produced the live 500.
+        SearchResults results = new SearchResults();
+        results.facets = new SearchResults.Facets();
+        results.facets.facetPublishDates = null;
+
+        when(search.get(any(Parameters.class))).thenReturn(results);
+
+        mockMvc.perform(get("/dates/published").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(content().json("[]"));
+    }
+
+    @Test
+    void shouldReturnEmptyList_whenFacetsAbsent() throws Exception {
+        // If the <facets> element itself is absent, the whole facets object is null.
+        SearchResults results = new SearchResults();
+        results.facets = null;
+
+        when(search.get(any(Parameters.class))).thenReturn(results);
+
+        mockMvc.perform(get("/dates/published").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(content().json("[]"));
+    }
+
+    @Test
     void shouldReturnSingleDateCount_whenOnePublishDate() throws Exception {
         SearchResults results = new SearchResults();
         results.facets = new SearchResults.Facets();
