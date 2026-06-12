@@ -1,12 +1,11 @@
 package uk.gov.legislation.transform.simple;
 
-import uk.gov.legislation.transform.TransformTest;
-
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Objects;
+import uk.gov.legislation.transform.TransformTest;
 
 public class UnappliedEffectsHelper {
 
@@ -22,7 +21,7 @@ public class UnappliedEffectsHelper {
     static String makeResourceName(String id, String ext) {
         String dir = id.replace('/', '_') + "/";
         String file = id.replace('/', '-') + ext;
-        return  "/" +  dir + file;
+        return "/" + dir + file;
     }
 
     static String read(String id, String ext) throws IOException {
@@ -39,5 +38,4 @@ public class UnappliedEffectsHelper {
         String resource = makeResourceName(id, ext);
         write(resource, content);
     }
-
 }

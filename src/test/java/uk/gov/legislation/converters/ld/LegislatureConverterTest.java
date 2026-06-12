@@ -1,13 +1,12 @@
 package uk.gov.legislation.converters.ld;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+
+import java.net.URI;
 import org.junit.jupiter.api.Test;
 import uk.gov.legislation.api.responses.ld.Legislature;
 import uk.gov.legislation.data.virtuoso.jsonld.LegislatureLD;
-
-import java.net.URI;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
 
 class LegislatureConverterTest {
 
@@ -19,6 +18,10 @@ class LegislatureConverterTest {
 
         Legislature result = LegislatureConverter.convert(mockLegislatureLD);
 
-        assertEquals(mockUri, result.uri, "The URI in the converted Legislature object should match the URI in the LegislatureLD object");
+        assertEquals(
+                mockUri,
+                result.uri,
+                "The URI in the converted Legislature object should match the URI in the"
+                        + " LegislatureLD object");
     }
 }

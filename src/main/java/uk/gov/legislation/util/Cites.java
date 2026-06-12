@@ -1,11 +1,10 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.api.responses.CommonMetadata;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
+import uk.gov.legislation.api.responses.CommonMetadata;
 
 public class Cites {
 
@@ -13,48 +12,45 @@ public class Cites {
         return make(Types.get(type), year, number, Collections.emptyList());
     }
 
-    public static String make(String type, int year, int number, Collection<? extends AltNumber> altNumbers) {
+    public static String make(
+            String type, int year, int number, Collection<? extends AltNumber> altNumbers) {
         return make(Types.get(type), year, number, altNumbers);
     }
 
-    public static String convertNumbersAndMake(String type, int year, int number, List<CommonMetadata.AltNumber> altNumbers) {
-        if (altNumbers == null)
-            altNumbers = List.of();
-        List<AltNumberWrapper> wrapped = altNumbers.stream()
-            .map(AltNumberWrapper::new)
-            .toList();
+    public static String convertNumbersAndMake(
+            String type, int year, int number, List<CommonMetadata.AltNumber> altNumbers) {
+        if (altNumbers == null) altNumbers = List.of();
+        List<AltNumberWrapper> wrapped = altNumbers.stream().map(AltNumberWrapper::new).toList();
         return make(Types.get(type), year, number, wrapped);
     }
 
-    public static String make(Type type, int year, int number, Collection<? extends AltNumber> altNumbers) {
-        if (altNumbers == null)
-            altNumbers = List.of();
+    public static String make(
+            Type type, int year, int number, Collection<? extends AltNumber> altNumbers) {
+        if (altNumbers == null) altNumbers = List.of();
         if (altNumbers.stream().anyMatch(a -> "W".equals(a.category()))) {
             // This is needed only to correct bad data
             // I don't think there should ever be both a W and a Cy alternative number
-            altNumbers = altNumbers.stream()
-                .filter(a -> !"Cy".equals(a.category()))
-                .toList();
+            altNumbers = altNumbers.stream().filter(a -> !"Cy".equals(a.category())).toList();
         }
-        RegnalYear regnal = altNumbers.stream()
-            .filter(a -> "Regnal".equals(a.category()))
-            .findFirst()
-            .map(AltNumber::value)
-            .map(RegnalYear::parse)
-            .orElse(null);
+        RegnalYear regnal =
+                altNumbers.stream()
+                        .filter(a -> "Regnal".equals(a.category()))
+                        .findFirst()
+                        .map(AltNumber::value)
+                        .map(RegnalYear::parse)
+                        .orElse(null);
         String base = Cites.make(type, year, regnal, number);
-        if (base == null)
-            return null;
-        String extra = altNumbers.stream()
-            .filter(a -> !"Regnal".equals(a.category()))
-            .map(a -> " (" + convertCategory(a) + "." + " " + a.value() + ")")
-            .collect(Collectors.joining());
+        if (base == null) return null;
+        String extra =
+                altNumbers.stream()
+                        .filter(a -> !"Regnal".equals(a.category()))
+                        .map(a -> " (" + convertCategory(a) + "." + " " + a.value() + ")")
+                        .collect(Collectors.joining());
         return base + extra;
     }
 
     private static String convertCategory(AltNumber alt) {
-        if (alt.category().equals("NI"))
-            return "N.I";
+        if (alt.category().equals("NI")) return "N.I";
         return alt.category();
     }
 
@@ -64,8 +60,7 @@ public class Cites {
     @SuppressWarnings("DuplicateBranchesInSwitch")
     private static String make(Type type, int year, RegnalYear regnal, int number) {
         String regnalYear = RegnalYear.spacedCitationOrEmpty(regnal);
-        if (type == null)
-            return null;
+        if (type == null) return null;
         return switch (type) {
             case UKPGA, UKPPA -> regnalYear + year + " c. " + number;
             case APGB, AEP -> year + regnalYear + " c. " + number;
@@ -112,7 +107,5 @@ public class Cites {
         public String value() {
             return resp.value;
         }
-
     }
-
 }

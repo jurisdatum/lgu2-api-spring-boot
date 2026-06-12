@@ -7,8 +7,6 @@ import uk.gov.legislation.Application;
 @SpringBootTest(classes = Application.class)
 class Tests {
 
-	@Test
-	void contextLoads() {
-	}
-
+    @Test
+    void contextLoads() {}
 }

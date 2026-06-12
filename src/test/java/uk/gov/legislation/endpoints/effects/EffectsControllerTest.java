@@ -34,39 +34,40 @@ import uk.gov.legislation.data.marklogic.changes.EffectsSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
+
 @WebMvcTest(controllers = EffectsController.class)
 class EffectsControllerTest {
 
     private static final String VALID_TARGET_TYPE = "ukpga";
     private static final int VALID_TARGET_YEAR = 2021;
-    private static final String MOCK_ATOM_FEED = """
-        <feed xmlns="http://www.w3.org/2005/Atom">
-            <entry>
-                <title>Mock Entry</title>
-                <id>mock-id</id>
-            </entry>
-        </feed>
-        """;
+    private static final String MOCK_ATOM_FEED =
+            """
+            <feed xmlns="http://www.w3.org/2005/Atom">
+                <entry>
+                    <title>Mock Entry</title>
+                    <id>mock-id</id>
+                </entry>
+            </feed>
+            """;
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Changes db;
+    @MockitoBean private Changes db;
 
-    @MockitoBean
-    private EffectsSimplifier simplifier;
+    @MockitoBean private EffectsSimplifier simplifier;
 
     @Test
     @DisplayName("Should return Atom XML for valid parameters")
     void shouldReturnAtomXmlForEffects() throws Exception {
         stubFetchForValidEffectsRequest();
 
-        mockMvc.perform(validEffectsRequest(MediaType.APPLICATION_ATOM_XML)
-                .param("sourceTitle", "B"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
-            .andExpect(content().string(containsString("<feed")));
+        mockMvc.perform(
+                        validEffectsRequest(MediaType.APPLICATION_ATOM_XML)
+                                .param("sourceTitle", "B"))
+                .andExpect(status().isOk())
+                .andExpect(
+                        content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE))
+                .andExpect(content().string(containsString("<feed")));
     }
 
     @Test
@@ -79,13 +80,18 @@ class EffectsControllerTest {
 
         PageOfEffects mockPageOfEffects = mock(PageOfEffects.class);
 
-        try (MockedStatic<EffectsFeedConverter> effectsFeedConverter = mockStatic(EffectsFeedConverter.class)) {
-            effectsFeedConverter.when(() -> EffectsFeedConverter.convert(mockPage)).thenReturn(mockPageOfEffects);
+        try (MockedStatic<EffectsFeedConverter> effectsFeedConverter =
+                mockStatic(EffectsFeedConverter.class)) {
+            effectsFeedConverter
+                    .when(() -> EffectsFeedConverter.convert(mockPage))
+                    .thenReturn(mockPageOfEffects);
 
-            mockMvc.perform(validEffectsRequest(MediaType.APPLICATION_JSON)
-                    .param("sourceTitle", "Banana"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE));
+            mockMvc.perform(
+                            validEffectsRequest(MediaType.APPLICATION_JSON)
+                                    .param("sourceTitle", "Banana"))
+                    .andExpect(status().isOk())
+                    .andExpect(
+                            content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON_VALUE));
         }
     }
 
@@ -94,28 +100,35 @@ class EffectsControllerTest {
     void shouldBindSortQueryParameter() throws Exception {
         when(db.fetch(any())).thenReturn(MOCK_ATOM_FEED);
 
-        mockMvc.perform(get("/effects")
-                .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
-                .param("sort", "sourceTitle"))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE));
+        mockMvc.perform(
+                        get("/effects")
+                                .accept(MediaType.APPLICATION_ATOM_XML_VALUE)
+                                .param("sort", "sourceTitle"))
+                .andExpect(status().isOk())
+                .andExpect(
+                        content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML_VALUE));
 
         ArgumentCaptor<Parameters> captor = ArgumentCaptor.forClass(Parameters.class);
         verify(db).fetch(captor.capture());
-        assertEquals(EffectsSort.AFFECTING_TITLE, captor.getValue().sort,
-            "sort query parameter should flow through to the changes request");
+        assertEquals(
+                EffectsSort.AFFECTING_TITLE,
+                captor.getValue().sort,
+                "sort query parameter should flow through to the changes request");
         verifyNoInteractions(simplifier);
     }
 
     @Test
     @DisplayName("Should return 400 Bad Request for an unsupported sort value")
     void shouldReturn400ForInvalidSort() throws Exception {
-        mockMvc.perform(get("/effects")
-                .param("sort", "unknown-sort")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error").value("Invalid Parameter"))
-            .andExpect(jsonPath("$.message").value("Invalid value 'unknown-sort' for parameter 'sort'"));
+        mockMvc.perform(
+                        get("/effects")
+                                .param("sort", "unknown-sort")
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Invalid Parameter"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value("Invalid value 'unknown-sort' for parameter 'sort'"));
 
         verifyNoInteractions(db);
         verifyNoInteractions(simplifier);
@@ -126,36 +139,43 @@ class EffectsControllerTest {
     @DisplayName("Should return 400 Bad Request for invalid document types")
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
 
-        mockMvc.perform(get("/effects")
-                .param("targetType", invalidType)
-                .param("targetYear", String.valueOf(VALID_TARGET_YEAR))
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error")
-                .value("Unknown Document Type Error"))
-            .andExpect(jsonPath("$.message")
-                .value("The document type '" + invalidType + "' is not recognized."));
+        mockMvc.perform(
+                        get("/effects")
+                                .param("targetType", invalidType)
+                                .param("targetYear", String.valueOf(VALID_TARGET_YEAR))
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value(
+                                        "The document type '"
+                                                + invalidType
+                                                + "' is not recognized."));
 
         verifyNoInteractions(db);
         verifyNoInteractions(simplifier);
     }
 
     private void stubFetchForValidEffectsRequest() throws IOException, InterruptedException {
-        when(db.fetch(argThat(params ->
-            VALID_TARGET_TYPE.equals(params.affectedType) &&
-                Integer.valueOf(VALID_TARGET_YEAR).equals(params.affectedYear)
-        ))).thenReturn(MOCK_ATOM_FEED);
+        when(db.fetch(
+                        argThat(
+                                params ->
+                                        VALID_TARGET_TYPE.equals(params.affectedType)
+                                                && Integer.valueOf(VALID_TARGET_YEAR)
+                                                        .equals(params.affectedYear))))
+                .thenReturn(MOCK_ATOM_FEED);
     }
 
     private MockHttpServletRequestBuilder validEffectsRequest(MediaType accept) {
         return get("/effects")
-            .accept(accept)
-            .param("targetType", VALID_TARGET_TYPE)
-            .param("targetYear", String.valueOf(VALID_TARGET_YEAR))
-            .param("targetTitle", "Apple")
-            .param("sourceType", "ukla")
-            .param("sourceYear", "2012")
-            .param("sourceNumber", "3")
-            .param("page", "2");
+                .accept(accept)
+                .param("targetType", VALID_TARGET_TYPE)
+                .param("targetYear", String.valueOf(VALID_TARGET_YEAR))
+                .param("targetTitle", "Apple")
+                .param("sourceType", "ukla")
+                .param("sourceYear", "2012")
+                .param("sourceNumber", "3")
+                .param("page", "2");
     }
 }

@@ -1,10 +1,10 @@
 package uk.gov.legislation.api.parameters;
 
-import org.junit.jupiter.api.Test;
-import uk.gov.legislation.data.marklogic.search.Parameters;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+
+import org.junit.jupiter.api.Test;
+import uk.gov.legislation.data.marklogic.search.Parameters;
 
 class SortConverterTest {
 
@@ -26,5 +26,4 @@ class SortConverterTest {
     void rejectsUnknownWireValues() {
         assertThrows(IllegalArgumentException.class, () -> Parameters.Sort.fromValue("newest"));
     }
-
 }

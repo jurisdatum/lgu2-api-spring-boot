@@ -1,14 +1,5 @@
 package uk.gov.legislation.data.marklogic;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import tools.jackson.core.JacksonException;
-import tools.jackson.core.exc.StreamReadException;
-
-import javax.xml.stream.XMLInputFactory;
-import javax.xml.stream.XMLStreamConstants;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.PushbackInputStream;
@@ -16,6 +7,14 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.XMLStreamConstants;
+import javax.xml.stream.XMLStreamException;
+import javax.xml.stream.XMLStreamReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import tools.jackson.core.JacksonException;
+import tools.jackson.core.exc.StreamReadException;
 
 public class Error {
 
@@ -26,13 +25,17 @@ public class Error {
     /**
      * Result of classifying the root element of a MarkLogic response.
      *
-     * <p>Note: {@link #MALFORMED} is only returned by the {@code String} overload of
-     * {@link #classifyRoot}. The {@code PushbackInputStream} overload is best-effort: it
-     * operates on a fixed-size peek buffer, so an {@link javax.xml.stream.XMLStreamException}
-     * on the sample is treated as {@link #OTHER} rather than {@link #MALFORMED} — the
-     * full stream may still be valid XML.</p>
+     * <p>Note: {@link #MALFORMED} is only returned by the {@code String} overload of {@link
+     * #classifyRoot}. The {@code PushbackInputStream} overload is best-effort: it operates on a
+     * fixed-size peek buffer, so an {@link javax.xml.stream.XMLStreamException} on the sample is
+     * treated as {@link #OTHER} rather than {@link #MALFORMED} — the full stream may still be valid
+     * XML.
      */
-    public enum RootClassification { ERROR, OTHER, MALFORMED }
+    public enum RootClassification {
+        ERROR,
+        OTHER,
+        MALFORMED
+    }
 
     public int statusCode;
 
@@ -47,7 +50,6 @@ public class Error {
         public String name;
 
         public String value;
-
     }
 
     public static class Link {
@@ -55,18 +57,18 @@ public class Error {
         public String href;
 
         public String text;
-
     }
 
     /**
      * Parses an {@code <error>} payload from a String.
      *
-     * <p>Unlike {@link #parseAssumingError(PushbackInputStream)}, this method validates that
-     * the root element is {@code <error>} and throws {@link tools.jackson.core.exc.StreamReadException}
-     * if it is not. Use {@link #classifyRoot(String)} first if the root is uncertain.</p>
+     * <p>Unlike {@link #parseAssumingError(PushbackInputStream)}, this method validates that the
+     * root element is {@code <error>} and throws {@link tools.jackson.core.exc.StreamReadException}
+     * if it is not. Use {@link #classifyRoot(String)} first if the root is uncertain.
      */
     public static Error parse(String xml) throws JacksonException {
-        try (ByteArrayInputStream input = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
+        try (ByteArrayInputStream input =
+                new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
             XMLStreamReader reader = factory.createXMLStreamReader(input);
             try {
                 return parseError(reader);
@@ -74,12 +76,14 @@ public class Error {
                 closeQuietly(reader);
             }
         } catch (IOException | XMLStreamException e) {
-            throw new StreamReadException(null, "Failed to parse error response: " + e.getMessage(), e);
+            throw new StreamReadException(
+                    null, "Failed to parse error response: " + e.getMessage(), e);
         }
     }
 
     public static RootClassification classifyRoot(String xml) {
-        try (ByteArrayInputStream input = new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
+        try (ByteArrayInputStream input =
+                new ByteArrayInputStream(xml.getBytes(StandardCharsets.UTF_8))) {
             XMLStreamReader reader = factory.createXMLStreamReader(input);
             try {
                 return classifyRoot(reader);
@@ -93,8 +97,7 @@ public class Error {
 
     public static RootClassification classifyRoot(PushbackInputStream input) throws IOException {
         byte[] peek = input.readNBytes(1024);
-        if (peek.length == 0)
-            return RootClassification.OTHER;
+        if (peek.length == 0) return RootClassification.OTHER;
         try (ByteArrayInputStream sample = new ByteArrayInputStream(peek)) {
             XMLStreamReader reader = factory.createXMLStreamReader(sample);
             try {
@@ -113,14 +116,14 @@ public class Error {
 
     public static Optional<Error> parse(PushbackInputStream input) throws IOException {
         RootClassification classification = classifyRoot(input);
-        if (classification != RootClassification.ERROR)
-            return Optional.empty();
+        if (classification != RootClassification.ERROR) return Optional.empty();
         return Optional.of(parseAssumingError(input));
     }
 
     /**
-     * Parses an <error> payload without first peeking at the root element.
-     * Callers must have already verified that the root is <error>, e.g. via {@link #classifyRoot(PushbackInputStream)}.
+     * Parses an <error> payload without first peeking at the root element. Callers must have
+     * already verified that the root is <error>, e.g. via {@link
+     * #classifyRoot(PushbackInputStream)}.
      */
     public static Error parseAssumingError(PushbackInputStream input) throws IOException {
         try {
@@ -135,14 +138,16 @@ public class Error {
         }
     }
 
-    private static RootClassification classifyRoot(XMLStreamReader reader) throws XMLStreamException {
+    private static RootClassification classifyRoot(XMLStreamReader reader)
+            throws XMLStreamException {
         int event = reader.nextTag();
         return event == XMLStreamConstants.START_ELEMENT && "error".equals(reader.getLocalName())
-            ? RootClassification.ERROR
-            : RootClassification.OTHER;
+                ? RootClassification.ERROR
+                : RootClassification.OTHER;
     }
 
-    private static Error parseError(XMLStreamReader reader) throws XMLStreamException, StreamReadException {
+    private static Error parseError(XMLStreamReader reader)
+            throws XMLStreamException, StreamReadException {
         if (classifyRoot(reader) != RootClassification.ERROR)
             throw new StreamReadException(null, "Expected <error> root element");
 
@@ -157,18 +162,22 @@ public class Error {
                     case "header" -> error.header = parseHeader(reader);
                     case "link" -> addLink(error, parseLink(reader));
                     default -> {
-                        logger.debug("Unexpected element <{}> under <error>; skipping", reader.getLocalName());
+                        logger.debug(
+                                "Unexpected element <{}> under <error>; skipping",
+                                reader.getLocalName());
                         skipElement(reader);
                     }
                 }
-            } else if (event == XMLStreamConstants.END_ELEMENT && "error".equals(reader.getLocalName())) {
+            } else if (event == XMLStreamConstants.END_ELEMENT
+                    && "error".equals(reader.getLocalName())) {
                 break;
             }
         }
         return error;
     }
 
-    private static void parseStatusCode(XMLStreamReader reader, Error error) throws XMLStreamException {
+    private static void parseStatusCode(XMLStreamReader reader, Error error)
+            throws XMLStreamException {
         String text = reader.getElementText().trim();
         try {
             error.statusCode = Integer.parseInt(text);
@@ -186,11 +195,14 @@ public class Error {
                     case "name" -> header.name = reader.getElementText();
                     case "value" -> header.value = reader.getElementText();
                     default -> {
-                        logger.debug("Unexpected element <{}> under <header>; skipping", reader.getLocalName());
+                        logger.debug(
+                                "Unexpected element <{}> under <header>; skipping",
+                                reader.getLocalName());
                         skipElement(reader);
                     }
                 }
-            } else if (event == XMLStreamConstants.END_ELEMENT && "header".equals(reader.getLocalName())) {
+            } else if (event == XMLStreamConstants.END_ELEMENT
+                    && "header".equals(reader.getLocalName())) {
                 return header;
             }
         }
@@ -203,12 +215,16 @@ public class Error {
         StringBuilder text = new StringBuilder();
         while (reader.hasNext()) {
             int event = reader.next();
-            if (event == XMLStreamConstants.CHARACTERS || event == XMLStreamConstants.CDATA || event == XMLStreamConstants.SPACE) {
+            if (event == XMLStreamConstants.CHARACTERS
+                    || event == XMLStreamConstants.CDATA
+                    || event == XMLStreamConstants.SPACE) {
                 text.append(reader.getText());
             } else if (event == XMLStreamConstants.START_ELEMENT) {
-                logger.debug("Unexpected element <{}> under <link>; skipping", reader.getLocalName());
+                logger.debug(
+                        "Unexpected element <{}> under <link>; skipping", reader.getLocalName());
                 skipElement(reader);
-            } else if (event == XMLStreamConstants.END_ELEMENT && "link".equals(reader.getLocalName())) {
+            } else if (event == XMLStreamConstants.END_ELEMENT
+                    && "link".equals(reader.getLocalName())) {
                 link.text = text.toString();
                 return link;
             }
@@ -218,8 +234,7 @@ public class Error {
     }
 
     private static void addLink(Error error, Link link) {
-        if (error.links == null)
-            error.links = new ArrayList<>();
+        if (error.links == null) error.links = new ArrayList<>();
         error.links.add(link);
     }
 
@@ -234,12 +249,10 @@ public class Error {
 
     @SuppressWarnings("EmptyCatch") // nothing useful to do if closing the reader fails
     private static void closeQuietly(XMLStreamReader reader) {
-        if (reader == null)
-            return;
+        if (reader == null) return;
         try {
             reader.close();
         } catch (XMLStreamException ignored) {
         }
     }
-
 }

@@ -16,16 +16,14 @@ public class MonarchController implements MonarchApi {
     private final ContentNegotiationManager negotiationManager;
     private final MonarchQuery query;
 
-
-    public MonarchController(
-        ContentNegotiationManager negotiationManager,
-        MonarchQuery query) {
+    public MonarchController(ContentNegotiationManager negotiationManager, MonarchQuery query) {
         this.negotiationManager = negotiationManager;
         this.query = query;
     }
 
     @Override
-    public ResponseEntity<?> getMonarchInfo(NativeWebRequest request, String monarch) throws Exception {
+    public ResponseEntity<?> getMonarchInfo(NativeWebRequest request, String monarch)
+            throws Exception {
         MediaType mediaType = negotiationManager.resolveMediaTypes(request).getFirst();
 
         if (Virtuoso.Formats.contains(mediaType.toString())) {
@@ -34,19 +32,7 @@ public class MonarchController implements MonarchApi {
         }
 
         return query.fetchMappedData(monarch)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

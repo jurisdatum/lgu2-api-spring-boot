@@ -21,8 +21,7 @@ public class TocTestRedo {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
-        for (String id : provide().toList())
-            redo(ctx, id);
+        for (String id : provide().toList()) redo(ctx, id);
         SpringApplication.exit(ctx);
     }
 
@@ -39,10 +38,8 @@ public class TocTestRedo {
         } catch (NullPointerException e) {
             expected = ZonedDateTime.now(ZoneOffset.UTC).toString();
         }
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, "json", actual);
     }
-
 }

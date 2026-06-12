@@ -26,7 +26,10 @@ public class EffectsSimplifier {
     public EffectsSimplifier() {
         String systemId;
         try {
-            systemId = Objects.requireNonNull(getClass().getResource(STYLESHEET)).toURI().toASCIIString();
+            systemId =
+                    Objects.requireNonNull(getClass().getResource(STYLESHEET))
+                            .toURI()
+                            .toASCIIString();
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
@@ -52,5 +55,4 @@ public class EffectsSimplifier {
         String simple = simpify(atom);
         return SimpleXmlMapper.INSTANCE.readValue(simple, Page.class);
     }
-
 }

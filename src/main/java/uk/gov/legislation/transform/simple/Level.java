@@ -1,10 +1,9 @@
 package uk.gov.legislation.transform.simple;
 
+import java.time.LocalDate;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.util.Labels;
 import uk.gov.legislation.util.Links;
-
-import java.time.LocalDate;
 
 public class Level {
 
@@ -27,15 +26,11 @@ public class Level {
     @JacksonXmlProperty(localName = "RestrictEndDate", isAttribute = true)
     public LocalDate end;
 
-    @JacksonXmlProperty
-    public String number;
+    @JacksonXmlProperty public String number;
 
-    @JacksonXmlProperty
-    public String title;
+    @JacksonXmlProperty public String title;
 
-    @JacksonXmlProperty
-    public Boolean confersPower;
-
+    @JacksonXmlProperty public Boolean confersPower;
 
     /* conversion */
 
@@ -55,5 +50,4 @@ public class Level {
         other.confersPower = Boolean.TRUE.equals(this.confersPower);
         return other;
     }
-
 }

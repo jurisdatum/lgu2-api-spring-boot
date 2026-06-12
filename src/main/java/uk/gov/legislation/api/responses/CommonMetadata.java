@@ -3,14 +3,13 @@ package uk.gov.legislation.api.responses;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.api.responses.meta.AssociatedDocument;
-import uk.gov.legislation.api.responses.meta.MetaCore;
-import uk.gov.legislation.util.Extent;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
+import uk.gov.legislation.api.responses.meta.AssociatedDocument;
+import uk.gov.legislation.api.responses.meta.MetaCore;
+import uk.gov.legislation.util.Extent;
 
 public abstract class CommonMetadata extends MetaCore {
 
@@ -27,25 +26,34 @@ public abstract class CommonMetadata extends MetaCore {
     @Schema(example = "2024 c. 1")
     public String cite;
 
-    @Schema(example = "enacted", examples = { "enacted", "2024-01-25" })
+    @Schema(
+            example = "enacted",
+            examples = {"enacted", "2024-01-25"})
     public String version;
 
-    @Schema(allowableValues = { "final", "revised" }, example = "final")
+    @Schema(
+            allowableValues = {"final", "revised"},
+            example = "final")
     public String status;
 
     @Schema(example = "Post Office (Horizon System) Compensation Act 2024")
     public String title;
 
-    @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
+    @Schema(allowableValues = {"E", "W", "S", "NI", "EU"})
     public Set<Extent> extent;
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public List<String> subjects;
 
-    @Schema
-    public String lang;
+    @Schema public String lang;
 
-    @Schema(allowableValues = { "King's Printer of Acts of Parliament", "Queen's Printer of Acts of Parliament", "Statute Law Database" }, example = "Statute Law Database")
+    @Schema(
+            allowableValues = {
+                "King's Printer of Acts of Parliament",
+                "Queen's Printer of Acts of Parliament",
+                "Statute Law Database"
+            },
+            example = "Statute Law Database")
     public String publisher;
 
     @Schema(example = "2024-09-23")
@@ -54,13 +62,14 @@ public abstract class CommonMetadata extends MetaCore {
     @Schema(example = "[ \"enacted\", \"2024-01-25\" ]")
     public SortedSet<String> versions;
 
-    @JsonProperty
-    public Has has = new Has();
+    @JsonProperty public Has has = new Has();
 
     @Schema(deprecated = true)
     public boolean schedules;
 
-    @Schema(allowableValues = { "xml", "pdf" }, example = "[\"xml\", \"pdf\"]")
+    @Schema(
+            allowableValues = {"xml", "pdf"},
+            example = "[\"xml\", \"pdf\"]")
     public List<String> formats;
 
     @Schema(nullable = true)
@@ -68,12 +77,13 @@ public abstract class CommonMetadata extends MetaCore {
 
     public static class AltNumber {
 
-        @Schema(example = "C", allowableValues = { "C", "L", "S", "NI", "W", "Cy", "Regnal" })
+        @Schema(
+                example = "C",
+                allowableValues = {"C", "L", "S", "NI", "W", "Cy", "Regnal"})
         public String category;
 
         @Schema(example = "1")
         public String value;
-
     }
 
     public static class Has {
@@ -89,7 +99,6 @@ public abstract class CommonMetadata extends MetaCore {
 
         @JsonInclude(JsonInclude.Include.NON_DEFAULT)
         public boolean note;
-
     }
 
     @JsonProperty
@@ -97,7 +106,9 @@ public abstract class CommonMetadata extends MetaCore {
     public List<AssociatedDocument> alternatives;
 
     @JsonProperty
-    @Schema(description = "associated documents, e.g., explanatory notes, impact assessments, correction slips, etc.")
+    @Schema(
+            description =
+                    "associated documents, e.g., explanatory notes, impact assessments, correction"
+                            + " slips, etc.")
     public List<AssociatedDocument> associated;
-
 }

@@ -24,7 +24,11 @@ public class EffectsParameters {
     private Integer page;
 
     public enum Sort {
-        targetYear, targetTitle, sourceYear, sourceTitle, applied;
+        targetYear,
+        targetTitle,
+        sourceYear,
+        sourceTitle,
+        applied;
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -169,5 +173,4 @@ public class EffectsParameters {
     public void setTargetYear(Integer targetYear) {
         this.targetYear = targetYear;
     }
-
 }

@@ -11,8 +11,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.server.ResponseStatusException;
 import uk.gov.legislation.api.test.LoggingTestWatcher;
+
 @ExtendWith(LoggingTestWatcher.class)
- class YearValidatorTest {
+class YearValidatorTest {
 
     // Valid: Only year is provided
     @Test
@@ -41,8 +42,10 @@ import uk.gov.legislation.api.test.LoggingTestWatcher;
     // Invalid: year combined with startYear
     @Test
     void testYearWithStartYearThrows() {
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class,
-            () -> SearchController.validateYears(2022, 2000, null));
+        ResponseStatusException exception =
+                assertThrows(
+                        ResponseStatusException.class,
+                        () -> SearchController.validateYears(2022, 2000, null));
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
         assertNotNull(exception.getReason());
         assertTrue(exception.getReason().contains("`year` cannot be combined"));
@@ -51,8 +54,10 @@ import uk.gov.legislation.api.test.LoggingTestWatcher;
     // Invalid: year combined with endYear
     @Test
     void testYearWithEndYearThrows() {
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class,
-            () -> SearchController.validateYears(2022, null, 2020));
+        ResponseStatusException exception =
+                assertThrows(
+                        ResponseStatusException.class,
+                        () -> SearchController.validateYears(2022, null, 2020));
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
         assertNotNull(exception.getReason());
         assertTrue(exception.getReason().contains("`year` cannot be combined"));
@@ -61,8 +66,10 @@ import uk.gov.legislation.api.test.LoggingTestWatcher;
     // Invalid: startYear > endYear
     @Test
     void testStartYearGreaterThanEndYearThrows() {
-        ResponseStatusException exception = assertThrows(ResponseStatusException.class,
-            () -> SearchController.validateYears(null, 2021, 2020));
+        ResponseStatusException exception =
+                assertThrows(
+                        ResponseStatusException.class,
+                        () -> SearchController.validateYears(null, 2021, 2020));
         assertEquals(HttpStatus.BAD_REQUEST, exception.getStatusCode());
         assertNotNull(exception.getReason());
         assertTrue(exception.getReason().contains("`startYear` must be ≤ `endYear`"));

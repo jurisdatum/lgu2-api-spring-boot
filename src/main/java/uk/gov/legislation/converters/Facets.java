@@ -1,21 +1,19 @@
 package uk.gov.legislation.converters;
 
-import uk.gov.legislation.api.responses.PageOfDocuments;
-import uk.gov.legislation.data.marklogic.search.SearchResults;
-
 import java.util.Collections;
 import java.util.List;
+import uk.gov.legislation.api.responses.PageOfDocuments;
+import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 public class Facets {
 
     static List<PageOfDocuments.ByType> convertTypeFacets(SearchResults.FacetTypes facetTypes) {
-        if (facetTypes == null)
-            return Collections.emptyList();
-        if (facetTypes.entries == null)
-            return Collections.emptyList();
+        if (facetTypes == null) return Collections.emptyList();
+        if (facetTypes.entries == null) return Collections.emptyList();
         return facetTypes.entries.stream()
-            .filter(f -> !f.type.equals("UnitedKingdomDraftPublicBill")) // TokDo !?
-            .map(Facets::make1).toList();
+                .filter(f -> !f.type.equals("UnitedKingdomDraftPublicBill")) // TokDo !?
+                .map(Facets::make1)
+                .toList();
     }
 
     private static PageOfDocuments.ByType make1(SearchResults.FacetType atom) {
@@ -27,19 +25,15 @@ public class Facets {
         } else {
             byType.type = atom.type.substring(0, pipe);
             String qualifier = atom.type.substring(pipe + 1);
-            if ("ukamended=true".equals(qualifier))
-                byType.ukAmended = true;
-            else if ("ukamended=false".equals(qualifier))
-                byType.ukAmended = false;
+            if ("ukamended=true".equals(qualifier)) byType.ukAmended = true;
+            else if ("ukamended=false".equals(qualifier)) byType.ukAmended = false;
         }
         return byType;
     }
 
     static List<PageOfDocuments.ByYear> convertYearFacets(SearchResults.FacetYears years) {
-        if (years == null)
-            return Collections.emptyList();
-        if (years.entries == null)
-            return Collections.emptyList();
+        if (years == null) return Collections.emptyList();
+        if (years.entries == null) return Collections.emptyList();
         return years.entries.stream().map(Facets::make2).toList();
     }
 
@@ -51,10 +45,8 @@ public class Facets {
     }
 
     static List<PageOfDocuments.ByInitial> convertSubjectFacets(SearchResults.Subjects subjects) {
-        if (subjects == null)
-            return Collections.emptyList();
-        if (subjects.initials == null)
-            return Collections.emptyList();
+        if (subjects == null) return Collections.emptyList();
+        if (subjects.initials == null) return Collections.emptyList();
         return subjects.initials.stream().map(Facets::make3).toList();
     }
 
@@ -65,11 +57,12 @@ public class Facets {
         return byInitial;
     }
 
-    static List<PageOfDocuments.ByStage> convertStageFacets(List<SearchResults.TypeAndValueFacet> stages) {
-        if (stages == null)
-            return Collections.emptyList();
+    static List<PageOfDocuments.ByStage> convertStageFacets(
+            List<SearchResults.TypeAndValueFacet> stages) {
+        if (stages == null) return Collections.emptyList();
         return stages.stream().map(Facets::conertStageFacet).toList();
     }
+
     static PageOfDocuments.ByStage conertStageFacet(SearchResults.TypeAndValueFacet atom) {
         PageOfDocuments.ByStage stage = new PageOfDocuments.ByStage();
         stage.stage = atom.type;
@@ -77,16 +70,17 @@ public class Facets {
         return stage;
     }
 
-    static List<PageOfDocuments.ByDepartment> convertDepartmentFacets(List<SearchResults.TypeAndValueFacet> stages) {
-        if (stages == null)
-            return Collections.emptyList();
+    static List<PageOfDocuments.ByDepartment> convertDepartmentFacets(
+            List<SearchResults.TypeAndValueFacet> stages) {
+        if (stages == null) return Collections.emptyList();
         return stages.stream().map(Facets::convertDepartmentFacet).toList();
     }
-    static PageOfDocuments.ByDepartment convertDepartmentFacet(SearchResults.TypeAndValueFacet atom) {
+
+    static PageOfDocuments.ByDepartment convertDepartmentFacet(
+            SearchResults.TypeAndValueFacet atom) {
         PageOfDocuments.ByDepartment dept = new PageOfDocuments.ByDepartment();
         dept.department = atom.type;
         dept.count = atom.value;
         return dept;
     }
-
 }

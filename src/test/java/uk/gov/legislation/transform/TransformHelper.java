@@ -1,40 +1,37 @@
 package uk.gov.legislation.transform;
 
-import tools.jackson.databind.MapperFeature;
-import tools.jackson.databind.ObjectMapper;
-import tools.jackson.databind.SerializationFeature;
-import tools.jackson.databind.json.JsonMapper;
-import uk.gov.legislation.util.Links;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Objects;
+import tools.jackson.databind.MapperFeature;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.databind.SerializationFeature;
+import tools.jackson.databind.json.JsonMapper;
+import uk.gov.legislation.util.Links;
 
 public class TransformHelper {
 
     private static String makeResourceName(String id, String ext) {
         Links.Components comps = Links.parse(id);
-        String dir = comps.type() + "_" + comps.year().replace('/', '_') + "_" + comps.number() + "/";
+        String dir =
+                comps.type() + "_" + comps.year().replace('/', '_') + "_" + comps.number() + "/";
         String file = comps.type() + "-" + comps.year().replace('/', '-') + "-" + comps.number();
-        if (comps.fragment().isPresent())
-            file += "-" + comps.fragment().get().replace('/', '-');
-        else if (comps.isContents())
-            file += "-contents";
-        if (comps.version().isPresent())
-            file += "-" + comps.version().get();
-        if (comps.language().isPresent())
-            file += "-" + comps.language().get();
+        if (comps.fragment().isPresent()) file += "-" + comps.fragment().get().replace('/', '-');
+        else if (comps.isContents()) file += "-contents";
+        if (comps.version().isPresent()) file += "-" + comps.version().get();
+        if (comps.language().isPresent()) file += "-" + comps.language().get();
         file += "." + ext;
-        return  "/" +  dir + file;
+        return "/" + dir + file;
     }
 
     public static InputStream open(String id, String ext) {
         String resource = makeResourceName(id, ext);
         return TransformTest.class.getResourceAsStream(resource);
     }
+
     public static String read(String id, String ext) throws IOException {
         String resource = makeResourceName(id, ext);
         String content;
@@ -51,9 +48,9 @@ public class TransformHelper {
         Files.writeString(path, content);
     }
 
-    public static final ObjectMapper MAPPER = JsonMapper.builder()
-        .configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, false)
-        .configure(SerializationFeature.INDENT_OUTPUT, true)
-        .build();
-
+    public static final ObjectMapper MAPPER =
+            JsonMapper.builder()
+                    .configure(MapperFeature.SORT_PROPERTIES_ALPHABETICALLY, false)
+                    .configure(SerializationFeature.INDENT_OUTPUT, true)
+                    .build();
 }

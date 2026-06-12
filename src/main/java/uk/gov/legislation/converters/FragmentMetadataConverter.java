@@ -1,5 +1,10 @@
 package uk.gov.legislation.converters;
 
+import static uk.gov.legislation.converters.DocumentMetadataConverter.simplifyWelshEffects;
+
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.api.responses.LabelledLink;
 import uk.gov.legislation.transform.simple.Metadata;
@@ -9,22 +14,15 @@ import uk.gov.legislation.util.EffectsComparator;
 import uk.gov.legislation.util.Links;
 import uk.gov.legislation.util.UpToDate;
 
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import static uk.gov.legislation.converters.DocumentMetadataConverter.simplifyWelshEffects;
-
 public class FragmentMetadataConverter {
 
     /**
      * Converts the simplified transform model into the public API response.
      *
-     * <p>For {@code prevInfo}/{@code nextInfo}, the {@code href} is a shortened
-     * path derived from the corresponding URI and the {@code label} is taken
-     * from the first component of the Atom {@code link/@title} attribute in the
-     * source XML when present. The upstream title value is semicolon‑separated
-     * and may include additional components that are currently ignored.</p>
+     * <p>For {@code prevInfo}/{@code nextInfo}, the {@code href} is a shortened path derived from
+     * the corresponding URI and the {@code label} is taken from the first component of the Atom
+     * {@code link/@title} attribute in the source XML when present. The upstream title value is
+     * semicolon‑separated and may include additional components that are currently ignored.
      */
     public static FragmentMetadata convert(Metadata simple) {
         FragmentMetadata converted = new FragmentMetadata();
@@ -57,22 +55,19 @@ public class FragmentMetadataConverter {
         converted.fragmentInfo = converted.descendants.getFirst();
         converted.unappliedEffects = convertEffects(simple);
         if (DocumentMetadataConverter.shouldComputeUpToDate(simple)) {
-            if (converted.pointInTime == null)
-                UpToDate.setUpToDate(converted);
-            else
-                UpToDate.setUpToDate(converted, converted.pointInTime);
+            if (converted.pointInTime == null) UpToDate.setUpToDate(converted);
+            else UpToDate.setUpToDate(converted, converted.pointInTime);
         }
         return converted;
     }
 
     private static FragmentMetadata.Effects convertEffects(Metadata metadata) {
-        Set<String> descendantIds = metadata.descendants().stream()
-            .map(level -> level.id)
-            .collect(Collectors.toSet());
-        Set<String> ancestorIds = metadata.ancestors().stream()
-            .map(level -> level.id)
-            .collect(Collectors.toSet());
-        String fragmentId = metadata.descendants().stream().findFirst().map(level -> level.id).orElse(null);
+        Set<String> descendantIds =
+                metadata.descendants().stream().map(level -> level.id).collect(Collectors.toSet());
+        Set<String> ancestorIds =
+                metadata.ancestors().stream().map(level -> level.id).collect(Collectors.toSet());
+        String fragmentId =
+                metadata.descendants().stream().findFirst().map(level -> level.id).orElse(null);
         ancestorIds.remove(fragmentId);
 
         List<Effect> all = metadata.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
@@ -87,5 +82,4 @@ public class FragmentMetadataConverter {
         }
         return effects;
     }
-
 }

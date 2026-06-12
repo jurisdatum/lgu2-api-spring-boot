@@ -22,16 +22,21 @@ public class ItemController implements ItemApi {
         this.query = query;
         this.negotiation = negotiation;
     }
+
     @Override
-    public ResponseEntity<?> get(NativeWebRequest request, @PathVariable String type, @PathVariable int year, @PathVariable int number) throws Exception {
+    public ResponseEntity<?> get(
+            NativeWebRequest request,
+            @PathVariable String type,
+            @PathVariable int year,
+            @PathVariable int number)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         if (Virtuoso.Formats.contains(media.toString())) {
             String data = query.get(type, year, number, media.toString());
             return ResponseEntity.ok(data);
         }
         return query.get(type, year, number)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

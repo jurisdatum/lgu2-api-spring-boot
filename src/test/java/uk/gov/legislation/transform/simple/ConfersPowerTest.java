@@ -27,14 +27,14 @@ class ConfersPowerTest {
         String fragmentInfoJson = TransformHelper.MAPPER.writeValueAsString(meta.fragmentInfo);
         assertTrue(fragmentInfoJson.contains("\"confersPower\" : true"));
 
-        var subSection = meta.descendants.stream()
-            .filter(level -> "section-22-1".equals(level.id))
-            .findFirst()
-            .orElseThrow();
+        var subSection =
+                meta.descendants.stream()
+                        .filter(level -> "section-22-1".equals(level.id))
+                        .findFirst()
+                        .orElseThrow();
         assertEquals(false, subSection.confersPower);
 
         String subSectionJson = TransformHelper.MAPPER.writeValueAsString(subSection);
         assertFalse(subSectionJson.contains("\"confersPower\""));
     }
-
 }

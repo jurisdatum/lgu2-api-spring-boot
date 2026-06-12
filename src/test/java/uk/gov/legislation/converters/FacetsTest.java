@@ -19,7 +19,6 @@ import uk.gov.legislation.data.marklogic.search.SearchResults;
 
 class FacetsTest {
 
-
     @ParameterizedTest
     @MethodSource("provideNullAndEmptyFacetTypes")
     @DisplayName("Should return empty list for null or empty facet types")
@@ -37,10 +36,9 @@ class FacetsTest {
         withEmptyEntries.entries = Collections.emptyList();
 
         return Stream.of(
-            Arguments.of("Null facetTypes", null),
-            Arguments.of("Null entries", withNullEntries),
-            Arguments.of("Empty entries", withEmptyEntries)
-        );
+                Arguments.of("Null facetTypes", null),
+                Arguments.of("Null entries", withNullEntries),
+                Arguments.of("Empty entries", withEmptyEntries));
     }
 
     @Test
@@ -59,16 +57,14 @@ class FacetsTest {
 
         List<PageOfDocuments.ByType> result = Facets.convertTypeFacets(facetTypes);
 
-        assertAll("Type facets result",
-            () -> assertNotNull(result, "Result should not be null"),
-            () -> assertEquals(2, result.size(), "Expected exactly 2 type facets"),
-
-            () -> assertEquals("Type1", result.getFirst().type, "First type mismatch"),
-            () -> assertEquals(5, result.getFirst().count, "First type count mismatch"),
-
-            () -> assertEquals("Type2", result.get(1).type, "Second type mismatch"),
-            () -> assertEquals(10, result.get(1).count, "Second type count mismatch")
-        );
+        assertAll(
+                "Type facets result",
+                () -> assertNotNull(result, "Result should not be null"),
+                () -> assertEquals(2, result.size(), "Expected exactly 2 type facets"),
+                () -> assertEquals("Type1", result.getFirst().type, "First type mismatch"),
+                () -> assertEquals(5, result.getFirst().count, "First type count mismatch"),
+                () -> assertEquals("Type2", result.get(1).type, "Second type mismatch"),
+                () -> assertEquals(10, result.get(1).count, "Second type count mismatch"));
     }
 
     @Test
@@ -91,21 +87,18 @@ class FacetsTest {
 
         List<PageOfDocuments.ByType> result = Facets.convertTypeFacets(facetTypes);
 
-        assertAll("ukamended split",
-            () -> assertEquals(3, result.size()),
-
-            () -> assertEquals("EuropeanUnionRegulation", result.get(0).type),
-            () -> assertNull(result.get(0).ukAmended),
-            () -> assertEquals(124855, result.get(0).count),
-
-            () -> assertEquals("EuropeanUnionRegulation", result.get(1).type),
-            () -> assertEquals(true, result.get(1).ukAmended),
-            () -> assertEquals(3683, result.get(1).count),
-
-            () -> assertEquals("EuropeanUnionRegulation", result.get(2).type),
-            () -> assertEquals(false, result.get(2).ukAmended),
-            () -> assertEquals(121172, result.get(2).count)
-        );
+        assertAll(
+                "ukamended split",
+                () -> assertEquals(3, result.size()),
+                () -> assertEquals("EuropeanUnionRegulation", result.get(0).type),
+                () -> assertNull(result.get(0).ukAmended),
+                () -> assertEquals(124855, result.get(0).count),
+                () -> assertEquals("EuropeanUnionRegulation", result.get(1).type),
+                () -> assertEquals(true, result.get(1).ukAmended),
+                () -> assertEquals(3683, result.get(1).count),
+                () -> assertEquals("EuropeanUnionRegulation", result.get(2).type),
+                () -> assertEquals(false, result.get(2).ukAmended),
+                () -> assertEquals(121172, result.get(2).count));
     }
 
     @Test
@@ -128,15 +121,13 @@ class FacetsTest {
 
         List<PageOfDocuments.ByType> result = Facets.convertTypeFacets(facetTypes);
 
-        assertAll("ByType facet results",
-            () -> assertNotNull(result, "Result should not be null"),
-            () -> assertEquals(2, result.size(), "Expected 2 type facets"),
-
-            () -> assertEquals("Type1", result.getFirst().type, "Type1 name mismatch"),
-            () -> assertEquals(5, result.getFirst().count, "Type1 count mismatch"),
-
-            () -> assertEquals("Type2", result.get(1).type, "Type2 name mismatch"),
-            () -> assertEquals(15, result.get(1).count, "Type2 count mismatch")
-        );
+        assertAll(
+                "ByType facet results",
+                () -> assertNotNull(result, "Result should not be null"),
+                () -> assertEquals(2, result.size(), "Expected 2 type facets"),
+                () -> assertEquals("Type1", result.getFirst().type, "Type1 name mismatch"),
+                () -> assertEquals(5, result.getFirst().count, "Type1 count mismatch"),
+                () -> assertEquals("Type2", result.get(1).type, "Type2 name mismatch"),
+                () -> assertEquals(15, result.get(1).count, "Type2 count mismatch"));
     }
 }

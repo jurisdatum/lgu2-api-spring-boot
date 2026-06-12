@@ -1,21 +1,18 @@
 package uk.gov.legislation.transform.simple.effects;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
-import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.time.ZonedDateTime;
 import java.util.Collections;
 import java.util.List;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 @JsonRootName(value = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class Page {
 
-    @JacksonXmlProperty
-    public String id;
+    @JacksonXmlProperty public String id;
 
-    @JacksonXmlProperty
-    public ZonedDateTime updated;
+    @JacksonXmlProperty public ZonedDateTime updated;
 
     @JacksonXmlProperty(namespace = "http://a9.com/-/spec/opensearch/1.1/")
     public int itemsPerPage;
@@ -38,5 +35,4 @@ public class Page {
     @JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "entry")
     public List<Entry> entries = Collections.emptyList();
-
 }

@@ -20,7 +20,8 @@ class LegislationByIdTest {
 
     @Test
     void exists_returnsTrue_whenMarkLogicReturns303() throws Exception {
-        String response = """
+        String response =
+                """
                 <error xmlns="">
                     <status-code>303</status-code>
                     <header>
@@ -36,7 +37,8 @@ class LegislationByIdTest {
 
     @Test
     void exists_returnsFalse_whenMarkLogicReturns404() throws Exception {
-        String response = """
+        String response =
+                """
                 <error xmlns="">
                     <status-code>404</status-code>
                     <message>We couldn't find exactly what you're looking for.</message>
@@ -50,7 +52,8 @@ class LegislationByIdTest {
 
     @Test
     void exists_buildsCorrectQueryString() throws Exception {
-        String response = """
+        String response =
+                """
                 <error xmlns="">
                     <status-code>303</status-code>
                     <header>
@@ -63,12 +66,14 @@ class LegislationByIdTest {
 
         legislationById.exists("ukpga", "2024", 1, "section-1-1");
 
-        verify(db).get("legislation-by-id.xq", "?type=ukpga&year=2024&number=1&section=section-1-1");
+        verify(db)
+                .get("legislation-by-id.xq", "?type=ukpga&year=2024&number=1&section=section-1-1");
     }
 
     @Test
     void exists_encodesRegnalYear() throws Exception {
-        String response = """
+        String response =
+                """
                 <error xmlns="">
                     <status-code>303</status-code>
                     <header>
@@ -82,12 +87,14 @@ class LegislationByIdTest {
         legislationById.exists("aep", "Edw1/25", 9, "section-1");
 
         // The '/' in the regnal year "Edw1/25" must be URL-encoded as "%2F"
-        verify(db).get("legislation-by-id.xq", "?type=aep&year=Edw1%2F25&number=9&section=section-1");
+        verify(db)
+                .get("legislation-by-id.xq", "?type=aep&year=Edw1%2F25&number=9&section=section-1");
     }
 
     @Test
     void exists_throws_onUnexpectedStatusCode() throws Exception {
-        String response = """
+        String response =
+                """
                 <error xmlns="">
                     <status-code>500</status-code>
                     <message>Server error</message>
@@ -95,10 +102,10 @@ class LegislationByIdTest {
                 """;
         when(db.get(eq("legislation-by-id.xq"), anyString())).thenReturn(response);
 
-        DocumentFetchException thrown = assertThrows(DocumentFetchException.class,
-            () -> legislationById.exists("ukpga", "2024", 1, "section-1-1"));
+        DocumentFetchException thrown =
+                assertThrows(
+                        DocumentFetchException.class,
+                        () -> legislationById.exists("ukpga", "2024", 1, "section-1-1"));
         assertTrue(thrown.getMessage().contains("500"));
     }
-
 }
-

@@ -1,7 +1,6 @@
 package uk.gov.legislation.data.marklogic.changes;
 
 public enum EffectsSort {
-
     AFFECTING_YEAR_NUMBER("affecting-year-number"),
     AFFECTING_TITLE("affecting-title"),
     AFFECTED_YEAR_NUMBER("affected-year-number"),
@@ -22,5 +21,4 @@ public enum EffectsSort {
     public String toString() {
         return value;
     }
-
 }

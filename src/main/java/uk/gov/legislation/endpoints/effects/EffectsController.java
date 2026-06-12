@@ -1,5 +1,9 @@
 package uk.gov.legislation.endpoints.effects;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+import static uk.gov.legislation.endpoints.search.SearchController.validateYears;
+
+import java.io.IOException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.api.responses.PageOfEffects;
@@ -9,11 +13,6 @@ import uk.gov.legislation.data.marklogic.changes.EffectsSort;
 import uk.gov.legislation.data.marklogic.changes.Parameters;
 import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Page;
-
-import java.io.IOException;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
-import static uk.gov.legislation.endpoints.search.SearchController.validateYears;
 
 @RestController
 public class EffectsController implements EffectsApi {
@@ -44,34 +43,34 @@ public class EffectsController implements EffectsApi {
         validateYears(param.getTargetYear(), param.getTargetStartYear(), param.getTargetEndYear());
         validateType(param.getSourceType());
         validateYears(param.getSourceYear(), param.getSourceStartYear(), param.getSourceEndYear());
-        Parameters params = Parameters.builder()
-            .affectedType(param.getTargetType())
-            .affectedYear(param.getTargetYear())
-            .affectedNumber(param.getTargetNumber())
-            .affectedStartYear(param.getTargetStartYear())
-            .affectedEndYear(param.getTargetEndYear())
-            .affectedTitle(param.getTargetTitle())
-            .affectingType(param.getSourceType())
-            .affectingYear(param.getSourceYear())
-            .affectingNumber(param.getSourceNumber())
-            .affectingStartYear(param.getSourceStartYear())
-            .affectingEndYear(param.getSourceEndYear())
-            .affectingTitle(param.getSourceTitle())
-            .applied(param.getApplied())
-            .sort(convert(param.getSort()))
-            .orderBy(param.getOrderBy())
-            .page(param.getPage())
-            .build();
+        Parameters params =
+                Parameters.builder()
+                        .affectedType(param.getTargetType())
+                        .affectedYear(param.getTargetYear())
+                        .affectedNumber(param.getTargetNumber())
+                        .affectedStartYear(param.getTargetStartYear())
+                        .affectedEndYear(param.getTargetEndYear())
+                        .affectedTitle(param.getTargetTitle())
+                        .affectingType(param.getSourceType())
+                        .affectingYear(param.getSourceYear())
+                        .affectingNumber(param.getSourceNumber())
+                        .affectingStartYear(param.getSourceStartYear())
+                        .affectingEndYear(param.getSourceEndYear())
+                        .affectingTitle(param.getSourceTitle())
+                        .applied(param.getApplied())
+                        .sort(convert(param.getSort()))
+                        .orderBy(param.getOrderBy())
+                        .page(param.getPage())
+                        .build();
         return db.fetch(params);
     }
 
-
     @Override
-    public PageOfEffects json(EffectsParameters param) throws IOException, InterruptedException, SaxonApiException {
+    public PageOfEffects json(EffectsParameters param)
+            throws IOException, InterruptedException, SaxonApiException {
         // parameter validation done in atom() method
         String atom = atom(param);
         Page simple = simplifier.parse(atom);
         return EffectsFeedConverter.convert(simple);
     }
-
 }

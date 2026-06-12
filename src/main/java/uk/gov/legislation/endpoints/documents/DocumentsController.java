@@ -1,5 +1,10 @@
 package uk.gov.legislation.endpoints.documents;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.accept.ContentNegotiationManager;
@@ -11,12 +16,6 @@ import uk.gov.legislation.converters.DocumentsFeedConverter;
 import uk.gov.legislation.data.marklogic.search.Parameters;
 import uk.gov.legislation.data.marklogic.search.Search;
 import uk.gov.legislation.data.marklogic.search.SearchResults;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.charset.StandardCharsets;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @RestController
 public class DocumentsController implements DocumentsApi {
@@ -45,44 +44,51 @@ public class DocumentsController implements DocumentsApi {
     }
 
     @Override
-    public ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(String type, int year, int page) throws Exception {
+    public ResponseEntity<PageOfDocuments> getDocsByTypeAndYear(String type, int year, int page)
+            throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).year(year).page(page).build();
         return getJson(params);
     }
 
     @Override
-    public ResponseEntity<StreamingResponseBody> getFeedByTypeAndYear(String type, int year, int page) throws Exception {
+    public ResponseEntity<StreamingResponseBody> getFeedByTypeAndYear(
+            String type, int year, int page) throws Exception {
         validateType(type);
         Parameters params = Parameters.builder().type(type).year(year).page(page).build();
         return getAtom(params);
     }
 
     @Override
-    public ResponseEntity<?> getNew(NativeWebRequest request, String region, int page) throws Exception {
+    public ResponseEntity<?> getNew(NativeWebRequest request, String region, int page)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
-        Parameters params = Parameters.builder()
-            .type(region)
-            .sort(Parameters.Sort.PUBLISHED)
-            .page(page)
-            .build();
+        Parameters params =
+                Parameters.builder()
+                        .type(region)
+                        .sort(Parameters.Sort.PUBLISHED)
+                        .page(page)
+                        .build();
         if (media.equals(MediaType.APPLICATION_ATOM_XML)) {
             return getAtom(params);
         }
         return getJson(params);
     }
 
-    public static final MediaType APPLICATION_ATOM_XML_UTF8 = new MediaType(MediaType.APPLICATION_ATOM_XML, StandardCharsets.UTF_8);
+    public static final MediaType APPLICATION_ATOM_XML_UTF8 =
+            new MediaType(MediaType.APPLICATION_ATOM_XML, StandardCharsets.UTF_8);
 
-    private ResponseEntity<StreamingResponseBody> getAtom(Parameters params) throws IOException, InterruptedException {
+    private ResponseEntity<StreamingResponseBody> getAtom(Parameters params)
+            throws IOException, InterruptedException {
         InputStream atom = search.getAtomStream(params);
         try {
-            StreamingResponseBody body = output -> {
-                try (atom) { atom.transferTo(output); }
-            };
-            return ResponseEntity.ok()
-                .contentType(APPLICATION_ATOM_XML_UTF8)
-                .body(body);
+            StreamingResponseBody body =
+                    output -> {
+                        try (atom) {
+                            atom.transferTo(output);
+                        }
+                    };
+            return ResponseEntity.ok().contentType(APPLICATION_ATOM_XML_UTF8).body(body);
         } catch (RuntimeException e) {
             try {
                 atom.close();
@@ -93,12 +99,10 @@ public class DocumentsController implements DocumentsApi {
         }
     }
 
-    private ResponseEntity<PageOfDocuments> getJson(Parameters params) throws IOException, InterruptedException {
+    private ResponseEntity<PageOfDocuments> getJson(Parameters params)
+            throws IOException, InterruptedException {
         SearchResults results = search.get(params);
         PageOfDocuments docs = DocumentsFeedConverter.convert(results, null);
-        return ResponseEntity.ok()
-            .lastModified(docs.meta.updated)
-            .body(docs);
+        return ResponseEntity.ok().lastModified(docs.meta.updated).body(docs);
     }
-
 }

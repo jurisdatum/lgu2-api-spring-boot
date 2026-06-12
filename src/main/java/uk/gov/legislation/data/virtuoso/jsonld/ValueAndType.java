@@ -20,5 +20,4 @@ public class ValueAndType {
         }
         return Graph.mapper.convertValue(node, ValueAndType.class);
     }
-
 }

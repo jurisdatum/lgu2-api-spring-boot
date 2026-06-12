@@ -1,18 +1,17 @@
 package uk.gov.legislation.transform;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringReader;
+import java.util.Properties;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
 import net.sf.saxon.Configuration;
 import net.sf.saxon.s9api.DocumentBuilder;
 import net.sf.saxon.s9api.Processor;
 import net.sf.saxon.s9api.SaxonApiException;
 import net.sf.saxon.s9api.XdmNode;
 import net.sf.saxon.serialize.Emitter;
-
-import javax.xml.transform.Source;
-import javax.xml.transform.stream.StreamSource;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
-import java.util.Properties;
 
 public class Helper {
 
@@ -28,7 +27,6 @@ public class Helper {
         protected Emitter newXMLEmitter(Properties properties) {
             return new XMLEmitter();
         }
-
     }
 
     public static class XMLEmitter extends net.sf.saxon.serialize.XMLEmitter {
@@ -37,20 +35,19 @@ public class Helper {
         protected void writeAttributeIndentString() throws IOException {
             this.writer.writeCodePoint(32);
         }
-
     }
 
     /**
      * The purpose of this is to make generate-id() stable, for testing. Without it generate-id()
      * produces different values depending on the order the source document is processed.
      */
-    public static class DocumentNumberAllocator extends net.sf.saxon.tree.util.DocumentNumberAllocator {
+    public static class DocumentNumberAllocator
+            extends net.sf.saxon.tree.util.DocumentNumberAllocator {
 
         @Override
         public synchronized long allocateDocumentNumber() {
             return 1;
         }
-
     }
 
     static {
@@ -72,5 +69,4 @@ public class Helper {
         DocumentBuilder builder = processor.newDocumentBuilder();
         return builder.build(source);
     }
-
 }

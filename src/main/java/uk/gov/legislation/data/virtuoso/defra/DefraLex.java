@@ -1,11 +1,5 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Repository;
-import tools.jackson.core.JacksonException;
-import tools.jackson.databind.ObjectMapper;
-import uk.gov.legislation.data.virtuoso.JsonResults;
-
 import java.net.URI;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
@@ -17,6 +11,11 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.CompletionStage;
 import java.util.function.Function;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Repository;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
+import uk.gov.legislation.data.virtuoso.JsonResults;
 
 @Repository
 public class DefraLex {
@@ -33,63 +32,73 @@ public class DefraLex {
         this.endpoint = "http://" + host + ":" + port + "/sparql";
     }
 
-    private static final String RESULTS_QUERY = """
-        PREFIX :     <http://www.legislation.gov.uk/def/legislation/>
-        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-        SELECT ?item ?year ?number ?title ?typeLabel ?reviewDate
-        WHERE  {
-          { SELECT DISTINCT ?item
-            WHERE  {
-                %s
-                ?item  <http://defra-lex.legislation.gov.uk/def/type>  ?type ;
-                    :year   ?year ;
-                    :number ?number ;
-                    :title  ?title .
-                ?type  rdfs:label  ?typeLabel .
-                OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
-            }
-            ORDER BY DESC(?year) ?number
-            LIMIT  %d
-            OFFSET %d
-          }
-          # Re‑bind properties for the selected ?item URIs
-          ?item  <http://defra-lex.legislation.gov.uk/def/type>  ?type ;
-              :year   ?year ;
-              :number ?number ;
-              :title  ?title .
-          ?type  rdfs:label  ?typeLabel .
-          OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
-        }
-        ORDER BY DESC(?year) ?number
-    """;
+    private static final String RESULTS_QUERY =
+            """
+                PREFIX :     <http://www.legislation.gov.uk/def/legislation/>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                SELECT ?item ?year ?number ?title ?typeLabel ?reviewDate
+                WHERE  {
+                  { SELECT DISTINCT ?item
+                    WHERE  {
+                        %s
+                        ?item  <http://defra-lex.legislation.gov.uk/def/type>  ?type ;
+                            :year   ?year ;
+                            :number ?number ;
+                            :title  ?title .
+                        ?type  rdfs:label  ?typeLabel .
+                        OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
+                    }
+                    ORDER BY DESC(?year) ?number
+                    LIMIT  %d
+                    OFFSET %d
+                  }
+                  # Re‑bind properties for the selected ?item URIs
+                  ?item  <http://defra-lex.legislation.gov.uk/def/type>  ?type ;
+                      :year   ?year ;
+                      :number ?number ;
+                      :title  ?title .
+                  ?type  rdfs:label  ?typeLabel .
+                  OPTIONAL { ?item <http://defra-lex.legislation.gov.uk/def/reviewDate> ?reviewDate . }
+                }
+                ORDER BY DESC(?year) ?number
+            """;
 
-    static final String FACET_QUERY = """
-        SELECT %s (COUNT(DISTINCT ?item) AS ?cnt)
-        WHERE { %s }
-        GROUP BY %s
-        ORDER BY DESC(?cnt)
-    """;
+    static final String FACET_QUERY =
+            """
+                SELECT %s (COUNT(DISTINCT ?item) AS ?cnt)
+                WHERE { %s }
+                GROUP BY %s
+                ORDER BY DESC(?cnt)
+            """;
 
     CompletableFuture<String> getSparqlResultsJson(String query) {
-        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
-        HttpRequest request = HttpRequest.newBuilder().GET().uri(uri)
-            .header("Accept", "application/sparql-results+json").build();
-        return httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString())
-            .thenApply(HttpResponse::body);
+        URI uri =
+                URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+        HttpRequest request =
+                HttpRequest.newBuilder()
+                        .GET()
+                        .uri(uri)
+                        .header("Accept", "application/sparql-results+json")
+                        .build();
+        return httpClient
+                .sendAsync(request, HttpResponse.BodyHandlers.ofString())
+                .thenApply(HttpResponse::body);
     }
 
-    private CompletableFuture<List<SparqlResults.SimpleItem>> fetchMainResults(String where, int limit, int offset) {
+    private CompletableFuture<List<SparqlResults.SimpleItem>> fetchMainResults(
+            String where, int limit, int offset) {
         String query = RESULTS_QUERY.formatted(where, limit, offset);
         return getSparqlResultsJson(query)
-            .thenApply(body -> {
-                SparqlResults sr;
-                try {
-                    sr = mapper.readValue(body, SparqlResults.class);
-                } catch (JacksonException e) {
-                    throw new CompletionException(e);
-                }
-                return sr.simplified();
-            });
+                .thenApply(
+                        body -> {
+                            SparqlResults sr;
+                            try {
+                                sr = mapper.readValue(body, SparqlResults.class);
+                            } catch (JacksonException e) {
+                                throw new CompletionException(e);
+                            }
+                            return sr.simplified();
+                        });
     }
 
     private static class Properties {
@@ -106,17 +115,19 @@ public class DefraLex {
 
         private static final String SOURCE = "http://defra-lex.legislation.gov.uk/def/sourceOrigin";
 
-        private static final String IS_REGULATED_BY = "http://defra-lex.legislation.gov.uk/def/isRegulatedBy";
+        private static final String IS_REGULATED_BY =
+                "http://defra-lex.legislation.gov.uk/def/isRegulatedBy";
 
         // "subject"
-        private static final String LEG_CONTENTS = "http://defra-lex.legislation.gov.uk/def/legislativecontents";
+        private static final String LEG_CONTENTS =
+                "http://defra-lex.legislation.gov.uk/def/legislativecontents";
 
-        private static final String REVIEW_YEAR = "http://defra-lex.legislation.gov.uk/def/reviewYear";
-
+        private static final String REVIEW_YEAR =
+                "http://defra-lex.legislation.gov.uk/def/reviewYear";
     }
 
     private static String makeWhereClause(String prop, String uri) {
-        return " ?item <" + prop + "> <" + uri +"> .";
+        return " ?item <" + prop + "> <" + uri + "> .";
     }
 
     private static String makeWhereClause(String prop, Integer value) {
@@ -142,18 +153,20 @@ public class DefraLex {
             where += makeWhereClause(Properties.IN_FORCE, params.inForce);
         }
         if (params.isCommencementOrder != null) {
-            String x = " ?item a <http://defra-lex.legislation.gov.uk/id/mechanicallaw/commencementOrder> ";
-            if (params.isCommencementOrder)
-                where += x + ".";
-            else
-                where += " FILTER NOT EXISTS {" + x + "}";
+            String x =
+                    " ?item a"
+                        + " <http://defra-lex.legislation.gov.uk/id/mechanicallaw/commencementOrder>"
+                        + " ";
+            if (params.isCommencementOrder) where += x + ".";
+            else where += " FILTER NOT EXISTS {" + x + "}";
         }
         if (params.isRevocationOrder != null) {
-            String x = " ?item a <http://defra-lex.legislation.gov.uk/id/mechanicallaw/revocationOrder> ";
-            if (params.isRevocationOrder)
-                where += x + ".";
-            else
-                where += " FILTER NOT EXISTS {" + x + "}";
+            String x =
+                    " ?item a"
+                        + " <http://defra-lex.legislation.gov.uk/id/mechanicallaw/revocationOrder>"
+                        + " ";
+            if (params.isRevocationOrder) where += x + ".";
+            else where += " FILTER NOT EXISTS {" + x + "}";
         }
         if (params.type != null) {
             String uri = "http://defra-lex.legislation.gov.uk/id/type/" + params.type;
@@ -188,10 +201,8 @@ public class DefraLex {
         }
 
         // make sure these are set so response contains them
-        if (params.pageSize == null)
-            params.pageSize = Parameters.DEFAULT_PAGE_SIZE;
-        if (params.page == null)
-            params.page = Parameters.DEFAULT_PAGE;
+        if (params.pageSize == null) params.pageSize = Parameters.DEFAULT_PAGE_SIZE;
+        if (params.page == null) params.page = Parameters.DEFAULT_PAGE;
         final int offset = (params.page - 1) * params.pageSize;
         var results = fetchMainResults(where, params.pageSize, offset);
 
@@ -207,7 +218,9 @@ public class DefraLex {
 
         var sourceCounts = LabeledFacets.fetch(this, where, Properties.SOURCE);
 
-        var regulatorCounts = LabeledFacets.fetch(this, where, Properties.IS_REGULATED_BY, LabeledFacets.PREF_LABEL);
+        var regulatorCounts =
+                LabeledFacets.fetch(
+                        this, where, Properties.IS_REGULATED_BY, LabeledFacets.PREF_LABEL);
 
         var bySubject = LabeledFacets.fetch(this, where, Properties.LEG_CONTENTS);
 
@@ -216,30 +229,37 @@ public class DefraLex {
         var total = Total.get(this, where);
 
         CompletableFuture<Void> allDone =
-            CompletableFuture.allOf(
-                results, total, byInForce, typeCounts, yearCounts, chapterCounts,
-                byExtent, sourceCounts, regulatorCounts, bySubject, byReviewDate
-            );
+                CompletableFuture.allOf(
+                        results,
+                        total,
+                        byInForce,
+                        typeCounts,
+                        yearCounts,
+                        chapterCounts,
+                        byExtent,
+                        sourceCounts,
+                        regulatorCounts,
+                        bySubject,
+                        byReviewDate);
 
-        Function<Void, Response> assembleResponse = ignored -> {
-            Response response = new Response();
-            response.query = params;
-            response.counts.total = total.join();
-            response.counts.byInForce = byInForce.join();
-            response.counts.byType = typeCounts.join();
-            response.counts.byYear = yearCounts.join();
-            response.counts.byChapter = chapterCounts.join();
-            response.counts.byExtent = byExtent.join();
-            response.counts.bySource = sourceCounts.join();
-            response.counts.byRegulator = regulatorCounts.join();
-            response.counts.bySubject = bySubject.join();
-            response.counts.byReviewDate = byReviewDate.join();
-            response.results = results.join();
-            return response;
-        };
+        Function<Void, Response> assembleResponse =
+                ignored -> {
+                    Response response = new Response();
+                    response.query = params;
+                    response.counts.total = total.join();
+                    response.counts.byInForce = byInForce.join();
+                    response.counts.byType = typeCounts.join();
+                    response.counts.byYear = yearCounts.join();
+                    response.counts.byChapter = chapterCounts.join();
+                    response.counts.byExtent = byExtent.join();
+                    response.counts.bySource = sourceCounts.join();
+                    response.counts.byRegulator = regulatorCounts.join();
+                    response.counts.bySubject = bySubject.join();
+                    response.counts.byReviewDate = byReviewDate.join();
+                    response.results = results.join();
+                    return response;
+                };
 
         return allDone.thenApply(assembleResponse);
-
     }
-
 }

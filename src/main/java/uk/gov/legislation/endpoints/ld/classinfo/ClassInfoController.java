@@ -30,8 +30,7 @@ public class ClassInfoController implements ClassInfoApi {
             return ResponseEntity.ok(data);
         }
         return query.get(name)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

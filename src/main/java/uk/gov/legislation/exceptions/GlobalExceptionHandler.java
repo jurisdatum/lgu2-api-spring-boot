@@ -1,5 +1,6 @@
 package uk.gov.legislation.exceptions;
 
+import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -11,17 +12,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
 
-import java.io.IOException;
-
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
     private ResponseEntity<ErrorResponse> json(HttpStatusCode status, ErrorResponse body) {
-        return ResponseEntity.status(status)
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(body);
+        return ResponseEntity.status(status).contentType(MediaType.APPLICATION_JSON).body(body);
     }
 
     private ResponseEntity<ErrorResponse> json(HttpStatusCode status, String message, Exception e) {
@@ -30,27 +27,34 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(UnsupportedLanguageException.class)
-    public ResponseEntity<ErrorResponse> handleUnsupportedLanguageException(UnsupportedLanguageException ex) {
+    public ResponseEntity<ErrorResponse> handleUnsupportedLanguageException(
+            UnsupportedLanguageException ex) {
         return json(HttpStatus.BAD_REQUEST, "Unsupported Language", ex);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ErrorResponse> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
-        String message = ex.getFieldErrors().stream()
-            .map(e -> "Invalid value '" + e.getRejectedValue() + "' for parameter '" + e.getField() + "'")
-            .findFirst()
-            .orElse(ex.getMessage());
-        ErrorResponse errorResponse = new ErrorResponse(
-                HttpStatus.BAD_REQUEST,
-                "Invalid Parameter",
-                message
-        );
+    public ResponseEntity<ErrorResponse> handleMethodArgumentNotValid(
+            MethodArgumentNotValidException ex) {
+        String message =
+                ex.getFieldErrors().stream()
+                        .map(
+                                e ->
+                                        "Invalid value '"
+                                                + e.getRejectedValue()
+                                                + "' for parameter '"
+                                                + e.getField()
+                                                + "'")
+                        .findFirst()
+                        .orElse(ex.getMessage());
+        ErrorResponse errorResponse =
+                new ErrorResponse(HttpStatus.BAD_REQUEST, "Invalid Parameter", message);
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
     // FixMe this sometimes obscures error unrelated to user input
     @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<ErrorResponse> handleIllegalArgumentException(IllegalArgumentException ex) {
+    public ResponseEntity<ErrorResponse> handleIllegalArgumentException(
+            IllegalArgumentException ex) {
         return json(HttpStatus.BAD_REQUEST, "Invalid Input", ex);
     }
 
@@ -60,24 +64,28 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(TransformationException.class)
-    public ResponseEntity<ErrorResponse> handleAknTransformationException(TransformationException ex) {
+    public ResponseEntity<ErrorResponse> handleAknTransformationException(
+            TransformationException ex) {
         logger.error("TransformationException: {}", ex.getMessage(), ex);
         return json(HttpStatus.INTERNAL_SERVER_ERROR, "Transformation Error", ex);
     }
 
     @ExceptionHandler(XSLTCompilationException.class)
-    public ResponseEntity<ErrorResponse> handleXSLTCompilationException(XSLTCompilationException ex) {
+    public ResponseEntity<ErrorResponse> handleXSLTCompilationException(
+            XSLTCompilationException ex) {
         return json(HttpStatus.INTERNAL_SERVER_ERROR, "XSLT Compilation Error", ex);
     }
 
     @ExceptionHandler(InvalidURISyntaxException.class)
-    public ResponseEntity<ErrorResponse> handleInvalidURISyntaxException(InvalidURISyntaxException ex) {
+    public ResponseEntity<ErrorResponse> handleInvalidURISyntaxException(
+            InvalidURISyntaxException ex) {
         return json(HttpStatus.INTERNAL_SERVER_ERROR, "Invalid URI Syntax Error", ex);
     }
 
     // thrown when MarkLogic returns an error response
     @ExceptionHandler(MarkLogicRequestException.class)
-    public ResponseEntity<ErrorResponse> handleMarkLogicRequestException(MarkLogicRequestException ex) {
+    public ResponseEntity<ErrorResponse> handleMarkLogicRequestException(
+            MarkLogicRequestException ex) {
         return json(HttpStatus.INTERNAL_SERVER_ERROR, "MarkLogic Error", ex);
     }
 
@@ -92,7 +100,8 @@ public class GlobalExceptionHandler {
         return json(HttpStatus.SERVICE_UNAVAILABLE, "Network Interruption Error", ex);
     }
 
-    // a wrapper around an IOException or an InterruptedException thrown during a request to MarkLogic
+    // a wrapper around an IOException or an InterruptedException thrown during a request to
+    // MarkLogic
     @ExceptionHandler(DocumentFetchException.class)
     public ResponseEntity<ErrorResponse> handleDocumentFetchException(DocumentFetchException ex) {
         return json(HttpStatus.SERVICE_UNAVAILABLE, "Document Fetch Error", ex);
@@ -106,14 +115,15 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity<ErrorResponse> handleResponseStatusException(ResponseStatusException e) {
         if (e.getStatusCode().is5xxServerError()) {
-            logger.error("ResponseStatusException with 5xx status: {} - {}", e.getStatusCode(), e.getReason(), e);
+            logger.error(
+                    "ResponseStatusException with 5xx status: {} - {}",
+                    e.getStatusCode(),
+                    e.getReason(),
+                    e);
         }
-        ErrorResponse error = new ErrorResponse(
-            e.getStatusCode(),
-            e.getBody().getTitle(),
-            e.getBody().getDetail()
-        );
+        ErrorResponse error =
+                new ErrorResponse(
+                        e.getStatusCode(), e.getBody().getTitle(), e.getBody().getDetail());
         return json(e.getStatusCode(), error);
     }
-
 }

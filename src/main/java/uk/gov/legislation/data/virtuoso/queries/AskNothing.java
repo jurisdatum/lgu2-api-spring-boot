@@ -1,14 +1,12 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import java.util.function.BooleanSupplier;
 import org.springframework.stereotype.Repository;
 import uk.gov.legislation.data.virtuoso.Virtuoso;
 
-import java.util.function.BooleanSupplier;
-
 /**
- * Status check for Virtuoso. Executes a trivial SPARQL query (ASK {})
- * and returns true if the database responds successfully within the
- * timeouts defined in Virtuoso, false otherwise.
+ * Status check for Virtuoso. Executes a trivial SPARQL query (ASK {}) and returns true if the
+ * database responds successfully within the timeouts defined in Virtuoso, false otherwise.
  */
 @Repository
 public class AskNothing implements BooleanSupplier {
@@ -32,5 +30,4 @@ public class AskNothing implements BooleanSupplier {
             return false;
         }
     }
-
 }

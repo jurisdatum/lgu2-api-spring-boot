@@ -3,16 +3,11 @@ package uk.gov.legislation.transform.simple;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import java.util.List;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-import java.util.List;
-
-@JsonTypeInfo(
-    use = JsonTypeInfo.Id.NAME,
-    include = JsonTypeInfo.As.PROPERTY,
-    property = "type"
-)
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type")
 @JsonSubTypes({
     @JsonSubTypes.Type(value = RichTextNode.Text.class, name = "text"),
     @JsonSubTypes.Type(value = RichTextNode.Section.class, name = "section"),
@@ -25,7 +20,6 @@ public abstract class RichTextNode {
 
         @JacksonXmlProperty(isAttribute = true)
         public String text;
-
     }
 
     public static class Section extends RichTextNode {
@@ -44,7 +38,6 @@ public abstract class RichTextNode {
 
         @JacksonXmlProperty(isAttribute = true)
         public boolean missing;
-
     }
 
     public static class Range extends RichTextNode {
@@ -64,7 +57,5 @@ public abstract class RichTextNode {
         @JacksonXmlElementWrapper(localName = "children")
         @JacksonXmlProperty(localName = "node")
         public List<RichTextNode> children;
-
     }
-
 }

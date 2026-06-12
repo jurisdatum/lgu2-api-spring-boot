@@ -1,5 +1,8 @@
 package uk.gov.legislation.endpoints.pdf.controller;
 
+import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
+
+import java.io.IOException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -7,9 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import uk.gov.legislation.endpoints.pdf.api.PdfApi;
 import uk.gov.legislation.endpoints.pdf.service.PdfService;
 import uk.gov.legislation.exceptions.DocumentFetchException;
-import java.io.IOException;
-
-import static uk.gov.legislation.endpoints.ParameterValidator.validateType;
 
 @RestController
 public class PdfApiController implements PdfApi {
@@ -27,7 +27,8 @@ public class PdfApiController implements PdfApi {
     }
 
     @Override
-    public ResponseEntity<Void> getPdfWithRegnalYear(String type, String monarch, String years, int number, String version) {
+    public ResponseEntity<Void> getPdfWithRegnalYear(
+            String type, String monarch, String years, int number, String version) {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return handlePdfRequest(type, regnalYear, number, version, false);
@@ -40,15 +41,18 @@ public class PdfApiController implements PdfApi {
     }
 
     @Override
-    public ResponseEntity<Void> getPdfThumbnailWithRegnalYear(String type, String monarch, String years, int number, String version) {
+    public ResponseEntity<Void> getPdfThumbnailWithRegnalYear(
+            String type, String monarch, String years, int number, String version) {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
         return handlePdfRequest(type, regnalYear, number, version, true);
     }
 
-    private ResponseEntity<Void> handlePdfRequest(String type, String yearOrRegnal, int number, String version, boolean isThumbnail) {
+    private ResponseEntity<Void> handlePdfRequest(
+            String type, String yearOrRegnal, int number, String version, boolean isThumbnail) {
         try {
-            return pdfService.fetchPdfUrl(type, yearOrRegnal, number, version)
+            return pdfService
+                    .fetchPdfUrl(type, yearOrRegnal, number, version)
                     .map(url -> isThumbnail ? pdfService.convertToThumbnailUrl(url) : url)
                     .map(pdfService::buildRedirectResponse)
                     .orElseGet(() -> ResponseEntity.status(HttpStatus.NOT_FOUND).build());
@@ -57,4 +61,3 @@ public class PdfApiController implements PdfApi {
         }
     }
 }
-

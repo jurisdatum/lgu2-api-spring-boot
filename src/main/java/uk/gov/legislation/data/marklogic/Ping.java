@@ -1,12 +1,11 @@
 package uk.gov.legislation.data.marklogic;
 
+import java.util.function.BooleanSupplier;
 import org.springframework.stereotype.Repository;
 
-import java.util.function.BooleanSupplier;
-
 /**
- * Status check for MarkLogic. Returns true if the database responds
- * successfully within the timeouts defined in MarkLogic, false otherwise.
+ * Status check for MarkLogic. Returns true if the database responds successfully within the
+ * timeouts defined in MarkLogic, false otherwise.
  */
 @Repository
 public class Ping implements BooleanSupplier {
@@ -30,5 +29,4 @@ public class Ping implements BooleanSupplier {
             return false;
         }
     }
-
 }

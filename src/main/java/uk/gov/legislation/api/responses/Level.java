@@ -2,7 +2,6 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.time.LocalDate;
 
 public class Level {
@@ -36,5 +35,4 @@ public class Level {
 
     @JsonInclude(JsonInclude.Include.NON_DEFAULT)
     public Boolean confersPower;
-
 }

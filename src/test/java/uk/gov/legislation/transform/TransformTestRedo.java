@@ -15,7 +15,7 @@ import uk.gov.legislation.api.responses.Document;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.util.UpToDate;
 
- class TransformTestRedo {
+class TransformTestRedo {
 
     public static void main(String[] args) throws Exception {
         ApplicationContext ctx = SpringApplication.run(Application.class, args);
@@ -34,42 +34,47 @@ import uk.gov.legislation.util.UpToDate;
 
     static void akn(ApplicationContext ctx, String id) throws Exception {
         Transforms transforms = ctx.getBean(Transforms.class);
-        BiPredicate<String, String> compare = (String actual, String expected) -> {
-            actual = replaceAknDate(actual);
-            expected = replaceAknDate(expected);
-            return actual.equals(expected);
-        };
+        BiPredicate<String, String> compare =
+                (String actual, String expected) -> {
+                    actual = replaceAknDate(actual);
+                    expected = replaceAknDate(expected);
+                    return actual.equals(expected);
+                };
         redo(id, transforms::clml2akn, compare, "akn.xml");
     }
 
     static void html(ApplicationContext ctx, String id) throws Exception {
         Transforms transforms = ctx.getBean(Transforms.class);
         ITransform clml2html = (String clml) -> transforms.clml2html(clml, true);
-        BiPredicate<String, String> compare = (String actual, String expected) -> {
-            actual = replaceHtmlDate(actual);
-            expected = replaceHtmlDate(expected);
-            return actual.equals(expected);
-        };
+        BiPredicate<String, String> compare =
+                (String actual, String expected) -> {
+                    actual = replaceHtmlDate(actual);
+                    expected = replaceHtmlDate(expected);
+                    return actual.equals(expected);
+                };
         redo(id, clml2html, compare, "html");
     }
 
     static void json(ApplicationContext ctx, String id) throws Exception {
         Transforms transforms = ctx.getBean(Transforms.class);
-        ITransform transform = TransformTest.isFragment(id) ?
-            (String clml) -> {
-                Fragment fragment = transforms.clml2fragment(clml);
-                UpToDate.setUpToDate(fragment.meta, CUTOFF);
-                return MAPPER.writeValueAsString(fragment);
-            } :
-            (String clml) -> {
-                Document document = transforms.clml2document(clml);
-                UpToDate.setUpToDate(document.meta, CUTOFF);
-                return MAPPER.writeValueAsString(document);
-            } ;
+        ITransform transform =
+                TransformTest.isFragment(id)
+                        ? (String clml) -> {
+                            Fragment fragment = transforms.clml2fragment(clml);
+                            UpToDate.setUpToDate(fragment.meta, CUTOFF);
+                            return MAPPER.writeValueAsString(fragment);
+                        }
+                        : (String clml) -> {
+                            Document document = transforms.clml2document(clml);
+                            UpToDate.setUpToDate(document.meta, CUTOFF);
+                            return MAPPER.writeValueAsString(document);
+                        };
         redo(id, transform, String::equals, "json");
     }
 
-    static void redo(String id, ITransform transform, BiPredicate<String, String> compare,  String format) throws Exception {
+    static void redo(
+            String id, ITransform transform, BiPredicate<String, String> compare, String format)
+            throws Exception {
         String clml = TransformHelper.read(id, "xml");
         String actual = transform.apply(clml);
         String expected;
@@ -85,5 +90,4 @@ import uk.gov.legislation.util.UpToDate;
         System.out.println("redoing " + id);
         TransformHelper.write(id, format, actual);
     }
-
 }

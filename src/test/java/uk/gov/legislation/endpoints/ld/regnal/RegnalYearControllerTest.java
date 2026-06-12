@@ -33,14 +33,11 @@ import uk.gov.legislation.data.virtuoso.queries.RegnalYearQuery;
 @WebMvcTest(controllers = RegnalYearController.class)
 class RegnalYearControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private RegnalYearQuery query;
+    @MockitoBean private RegnalYearQuery query;
 
-    @MockitoBean
-    private ContentNegotiationManager negotiation;
+    @MockitoBean private ContentNegotiationManager negotiation;
 
     private final String reign = "Eliz1";
     private final Integer regnalYear = 1;
@@ -48,15 +45,14 @@ class RegnalYearControllerTest {
 
     static Stream<Arguments> supportedVirtuosoFormats() {
         return Stream.of(
-            Arguments.of("application/ld+json"),
-            Arguments.of("application/rdf+xml"),
-            Arguments.of("application/rdf+json"),
-            Arguments.of("application/sparql-results+json"),
-            Arguments.of("application/sparql-results+xml"),
-            Arguments.of("text/csv"),
-            Arguments.of("text/plain"),
-            Arguments.of("text/turtle")
-        );
+                Arguments.of("application/ld+json"),
+                Arguments.of("application/rdf+xml"),
+                Arguments.of("application/rdf+json"),
+                Arguments.of("application/sparql-results+json"),
+                Arguments.of("application/sparql-results+xml"),
+                Arguments.of("text/csv"),
+                Arguments.of("text/plain"),
+                Arguments.of("text/turtle"));
     }
 
     @ParameterizedTest
@@ -72,16 +68,21 @@ class RegnalYearControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(requestedType));
         when(query.fetchRawData(any(), any(), any())).thenReturn(rawResult);
 
-        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
-                .accept(acceptHeader))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(acceptHeader))
-            .andExpect(content().string(rawResult));
+        mockMvc.perform(
+                        get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
+                                .accept(acceptHeader))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(acceptHeader))
+                .andExpect(content().string(rawResult));
 
-        verify(query).fetchRawData(reignCaptor.capture(), yearCaptor.capture(), mediaCaptor.capture());
+        verify(query)
+                .fetchRawData(reignCaptor.capture(), yearCaptor.capture(), mediaCaptor.capture());
         assertEquals(reign, reignCaptor.getValue(), "Reign parameter should match");
         assertEquals(regnalYear, yearCaptor.getValue(), "Regnal year parameter should match");
-        assertEquals(requestedType.toString(), mediaCaptor.getValue(), "Media type should match requested format");
+        assertEquals(
+                requestedType.toString(),
+                mediaCaptor.getValue(),
+                "Media type should match requested format");
         verifyNoMoreInteractions(query);
     }
 
@@ -92,8 +93,9 @@ class RegnalYearControllerTest {
 
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(requestedType));
 
-        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
-                    .accept(requestedType))
+        mockMvc.perform(
+                        get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
+                                .accept(requestedType))
                 .andExpect(status().isNotAcceptable());
 
         // Verify query methods are NOT called for unsupported types
@@ -118,16 +120,19 @@ class RegnalYearControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
         when(query.fetchMappedData(any(), any())).thenReturn(Optional.of(regnalYearLD));
 
-        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.uri").value("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1"))
-            .andExpect(jsonPath("$.label").value("1st year of reign of Queen Elizabeth I"))
-            .andExpect(jsonPath("$.yearOfReign").value(1))
-            .andExpect(jsonPath("$.reign").value("Eliz1"))
-            .andExpect(jsonPath("$.startDate").value("1558-11-17"))
-            .andExpect(jsonPath("$.endDate").value("1559-11-16"));
+        mockMvc.perform(
+                        get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(
+                        jsonPath("$.uri")
+                                .value("http://www.legislation.gov.uk/id/regnal-year/Eliz1/1"))
+                .andExpect(jsonPath("$.label").value("1st year of reign of Queen Elizabeth I"))
+                .andExpect(jsonPath("$.yearOfReign").value(1))
+                .andExpect(jsonPath("$.reign").value("Eliz1"))
+                .andExpect(jsonPath("$.startDate").value("1558-11-17"))
+                .andExpect(jsonPath("$.endDate").value("1559-11-16"));
 
         verify(query).fetchMappedData(reignCaptor.capture(), yearCaptor.capture());
         assertEquals(reign, reignCaptor.getValue(), "Reign parameter should match");
@@ -144,14 +149,14 @@ class RegnalYearControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
         when(query.fetchMappedData(any(), any())).thenReturn(Optional.empty());
 
-        mockMvc.perform(get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isNotFound());
+        mockMvc.perform(
+                        get("/ld/regnal/{reign}/{regnalYear}", reign, regnalYear)
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
 
         verify(query).fetchMappedData(reignCaptor.capture(), yearCaptor.capture());
         assertEquals(reign, reignCaptor.getValue(), "Reign parameter should match");
         assertEquals(regnalYear, yearCaptor.getValue(), "Regnal year parameter should match");
         verifyNoMoreInteractions(query);
     }
-
 }

@@ -34,11 +34,9 @@ class MetadataControllerTest {
     private static final int NUMBER = 11;
     private static final String LANGUAGE = "en";
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Legislation marklogic;
+    @MockitoBean private Legislation marklogic;
 
     @Test
     void shouldReturnXmlMetadataWithContentLanguage() throws Exception {
@@ -46,13 +44,14 @@ class MetadataControllerTest {
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
         when(marklogic.getMetadata(TYPE, YEAR, NUMBER, Optional.of(LANGUAGE))).thenReturn(response);
 
-        mockMvc.perform(get("/metadata/{type}/{year}/{number}", TYPE, YEAR, NUMBER)
-                .accept(MediaType.APPLICATION_XML)
-                .header("Accept-Language", LANGUAGE))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
-            .andExpect(content().xml(clml))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, LANGUAGE));
+        mockMvc.perform(
+                        get("/metadata/{type}/{year}/{number}", TYPE, YEAR, NUMBER)
+                                .accept(MediaType.APPLICATION_XML)
+                                .header("Accept-Language", LANGUAGE))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_XML))
+                .andExpect(content().xml(clml))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, LANGUAGE));
 
         verify(marklogic).getMetadata(TYPE, YEAR, NUMBER, Optional.of(LANGUAGE));
         verifyNoMoreInteractions(marklogic);
@@ -66,13 +65,14 @@ class MetadataControllerTest {
         Legislation.Response response = new Legislation.Response(clml, Optional.empty());
         when(marklogic.getMetadata(TYPE, YEAR, NUMBER, Optional.of(LANGUAGE))).thenReturn(response);
 
-        mockMvc.perform(get("/metadata/{type}/{year}/{number}", TYPE, YEAR, NUMBER)
-                .accept(MediaType.APPLICATION_JSON)
-                .header("Accept-Language", LANGUAGE))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(content().json(expectedJson))
-            .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, LANGUAGE));
+        mockMvc.perform(
+                        get("/metadata/{type}/{year}/{number}", TYPE, YEAR, NUMBER)
+                                .accept(MediaType.APPLICATION_JSON)
+                                .header("Accept-Language", LANGUAGE))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(content().json(expectedJson))
+                .andExpect(header().string(HttpHeaders.CONTENT_LANGUAGE, LANGUAGE));
 
         verify(marklogic).getMetadata(TYPE, YEAR, NUMBER, Optional.of(LANGUAGE));
         verifyNoMoreInteractions(marklogic);
@@ -85,5 +85,4 @@ class MetadataControllerTest {
             return new String(stream.readAllBytes(), StandardCharsets.UTF_8);
         }
     }
-
 }

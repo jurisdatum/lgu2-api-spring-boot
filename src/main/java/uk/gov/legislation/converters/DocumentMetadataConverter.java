@@ -23,36 +23,34 @@ public class DocumentMetadataConverter {
     }
 
     static void simplifyWelshEffects(List<Effect> effects) {
-        effects.forEach(effect -> {
-            effect.applied = Boolean.TRUE.equals(effect.appliedWelsh);
-            effect.required = !Boolean.FALSE.equals(effect.requiredWelsh);
-            effect.appliedWelsh = null;
-            effect.requiredWelsh = null;
-        });
+        effects.forEach(
+                effect -> {
+                    effect.applied = Boolean.TRUE.equals(effect.appliedWelsh);
+                    effect.required = !Boolean.FALSE.equals(effect.requiredWelsh);
+                    effect.appliedWelsh = null;
+                    effect.requiredWelsh = null;
+                });
     }
 
     public static void convert(Metadata simple, DocumentMetadata converted) {
         convertCommon(simple, converted);
         // perhaps this should be combined with fragment metadata
-        converted.unappliedEffects = simple.rawEffects.stream()
-            .sorted(EffectsComparator.INSTANCE)
-            .map(EffectsFeedConverter::convertEffect).toList();
-        if ("cy".equals(simple.lang))
-            simplifyWelshEffects(converted.unappliedEffects);
+        converted.unappliedEffects =
+                simple.rawEffects.stream()
+                        .sorted(EffectsComparator.INSTANCE)
+                        .map(EffectsFeedConverter::convertEffect)
+                        .toList();
+        if ("cy".equals(simple.lang)) simplifyWelshEffects(converted.unappliedEffects);
         if (shouldComputeUpToDate(simple)) {
-            if (converted.pointInTime == null)
-                UpToDate.setUpToDate(converted);
-            else
-                UpToDate.setUpToDate(converted, converted.pointInTime);
+            if (converted.pointInTime == null) UpToDate.setUpToDate(converted);
+            else UpToDate.setUpToDate(converted, converted.pointInTime);
         }
         converted.altFormats = AlternateFormatConverter.convert(simple.alternatives);
     }
 
     static boolean shouldComputeUpToDate(Metadata simple) {
-        if (!isLatestVersion(simple))
-            return false;
-        if (Metadata.FINAL.equals(simple.status))
-            return simple.finalEffectsEnriched;
+        if (!isLatestVersion(simple)) return false;
+        if (Metadata.FINAL.equals(simple.status)) return simple.finalEffectsEnriched;
         return Metadata.REVISED.equals(simple.status);
     }
 
@@ -79,9 +77,9 @@ public class DocumentMetadataConverter {
         converted.isbn = simple.isbn;
         converted.date = simple.date;
         if (simple.number != null)
-            converted.cite = Cites.make(simple.longType, simple.year, simple.number, simple.altNums);
-        else if (simple.isbn != null)
-            converted.cite = "ISBN " + ISBN.format(simple.isbn);
+            converted.cite =
+                    Cites.make(simple.longType, simple.year, simple.number, simple.altNums);
+        else if (simple.isbn != null) converted.cite = "ISBN " + ISBN.format(simple.isbn);
         converted.version = simple.version();
         converted.status = simple.status;
         converted.title = simple.title;
@@ -102,13 +100,14 @@ public class DocumentMetadataConverter {
         converted.schedules = simple.schedules;
         converted.formats = simple.formats();
         converted.pointInTime = simple.getPointInTime().orElse(null);
-        converted.alternatives = AssociatedDocumentConverter.convert(simple.alternatives, AssociatedDocument.Type.Alternative);
+        converted.alternatives =
+                AssociatedDocumentConverter.convert(
+                        simple.alternatives, AssociatedDocument.Type.Alternative);
         converted.associated = AssociatedDocumentConverter.convertAssociated(simple);
     }
 
     static List<CommonMetadata.AltNumber> convertAltNumbers(List<Metadata.AltNum> altNums) {
-        if (altNums == null)
-            return Collections.emptyList();
+        if (altNums == null) return Collections.emptyList();
         return altNums.stream().map(DocumentMetadataConverter::convertAltNumber).toList();
     }
 
@@ -122,13 +121,9 @@ public class DocumentMetadataConverter {
     /* return null for non-secondary types */
     private static List<String> convertSubjects(Metadata simple) {
         Type type = Types.get(simple.longType);
-        if (type == null)
-            return null;
-        if (!type.category().equals(Type.Category.Secondary))
-            return null;
-        if (simple.subjects == null)
-            return List.of();
+        if (type == null) return null;
+        if (!type.category().equals(Type.Category.Secondary)) return null;
+        if (simple.subjects == null) return List.of();
         return simple.subjects;
     }
-
 }

@@ -1,18 +1,17 @@
 package uk.gov.legislation.transform.simple.effects;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+
+import java.io.IOException;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.PageOfEffects;
-import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 import uk.gov.legislation.converters.EffectsFeedConverter;
-
-import java.io.IOException;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 
 @SpringBootTest(classes = Application.class)
 class EffectsFeedTest {
@@ -28,7 +27,7 @@ class EffectsFeedTest {
     void simplify() throws IOException, SaxonApiException {
         String atom = read("/effects/effects.feed");
         String actual = simplifier.simpify(atom);
-        String expected =  read("/effects/effects-simple.feed");
+        String expected = read("/effects/effects-simple.feed");
         assertEquals(expected, actual);
     }
 
@@ -50,5 +49,4 @@ class EffectsFeedTest {
         String expected = read("/effects/effects-converted.json");
         assertEquals(expected, actual);
     }
-
 }

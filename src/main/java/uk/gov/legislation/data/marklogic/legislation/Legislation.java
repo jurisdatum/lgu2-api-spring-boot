@@ -1,20 +1,19 @@
 package uk.gov.legislation.data.marklogic.legislation;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
-import uk.gov.legislation.data.marklogic.Error;
-import uk.gov.legislation.data.marklogic.MarkLogic;
-import tools.jackson.core.JacksonException;
-import uk.gov.legislation.exceptions.DocumentFetchException;
-import uk.gov.legislation.exceptions.MarkLogicRequestException;
-import uk.gov.legislation.exceptions.NoDocumentException;
-import uk.gov.legislation.util.Links;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PushbackInputStream;
 import java.util.Optional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Repository;
+import tools.jackson.core.JacksonException;
+import uk.gov.legislation.data.marklogic.Error;
+import uk.gov.legislation.data.marklogic.MarkLogic;
+import uk.gov.legislation.exceptions.DocumentFetchException;
+import uk.gov.legislation.exceptions.MarkLogicRequestException;
+import uk.gov.legislation.exceptions.NoDocumentException;
+import uk.gov.legislation.util.Links;
 
 @Repository
 public class Legislation {
@@ -27,77 +26,100 @@ public class Legislation {
         this.db = db;
     }
 
-    public Response getDocument(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .lang(language);
+    public Response getDocument(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params = new Parameters(type, year, number).version(version).lang(language);
         return getAndFollowRedirect(params);
     }
 
-    public StreamResponse getDocumentStream(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .lang(language);
+    public StreamResponse getDocumentStream(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params = new Parameters(type, year, number).version(version).lang(language);
         return getAndFollowRedirect2(params);
     }
 
-    /**
-     * Get table of contents
-     */
-
+    /** Get table of contents */
     private static final Optional<String> CONTENTS_VIEW = Optional.of("contents");
 
     private static final Optional<String> METADATA_VIEW = Optional.of("metadata");
 
-    public Response getTableOfContents(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .view(CONTENTS_VIEW)
-            .lang(language);
+    public Response getTableOfContents(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params =
+                new Parameters(type, year, number)
+                        .version(version)
+                        .view(CONTENTS_VIEW)
+                        .lang(language);
         return getAndFollowRedirect(params);
     }
 
-    public StreamResponse getTableOfContentsStream(String type, String year, int number, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .view(CONTENTS_VIEW)
-            .lang(language);
+    public StreamResponse getTableOfContentsStream(
+            String type,
+            String year,
+            int number,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params =
+                new Parameters(type, year, number)
+                        .version(version)
+                        .view(CONTENTS_VIEW)
+                        .lang(language);
         return getAndFollowRedirect2(params);
     }
 
-    /**
-     * Get document section
-     */
-    public Response getDocumentSection(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .section(Optional.of(section))
-            .lang(language);
+    /** Get document section */
+    public Response getDocumentSection(
+            String type,
+            String year,
+            int number,
+            String section,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params =
+                new Parameters(type, year, number)
+                        .version(version)
+                        .section(Optional.of(section))
+                        .lang(language);
         return getAndFollowRedirect(params);
     }
 
-    public StreamResponse getDocumentSectionStream(String type, String year, int number, String section, Optional<String> version, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .version(version)
-            .section(Optional.of(section))
-            .lang(language);
+    public StreamResponse getDocumentSectionStream(
+            String type,
+            String year,
+            int number,
+            String section,
+            Optional<String> version,
+            Optional<String> language) {
+        Parameters params =
+                new Parameters(type, year, number)
+                        .version(version)
+                        .section(Optional.of(section))
+                        .lang(language);
         return getAndFollowRedirect2(params);
     }
 
     public Response getMetadata(String type, String year, int number, Optional<String> language) {
-        Parameters params = new Parameters(type, year, number)
-            .view(METADATA_VIEW)
-            .lang(language);
+        Parameters params = new Parameters(type, year, number).view(METADATA_VIEW).lang(language);
         return getAndFollowRedirect(params);
     }
 
     /* records for return values */
 
-    public record Response(String clml, Optional<Redirect> redirect) {
-    }
+    public record Response(String clml, Optional<Redirect> redirect) {}
 
-    public record StreamResponse(InputStream clml, Optional<Redirect> redirect) {
-    }
+    public record StreamResponse(InputStream clml, Optional<Redirect> redirect) {}
 
     public record Redirect(String type, String year, long number, Optional<String> version) {
 
@@ -106,11 +128,9 @@ public class Legislation {
         }
 
         static Optional<Redirect> make(boolean afterRedirect, Parameters params) {
-            if (afterRedirect)
-                return Optional.of(make(params));
+            if (afterRedirect) return Optional.of(make(params));
             return Optional.empty();
         }
-
     }
 
     /* helper methods */
@@ -150,24 +170,25 @@ public class Legislation {
 
     private Parameters buildRedirectParams(Error error, Parameters oldParams) {
         if (error.statusCode >= 400)
-            throw new NoDocumentException(error);  // don't use error.toString()
+            throw new NoDocumentException(error); // don't use error.toString()
         String location = extractRedirectLocation(error);
         logger.debug("MarkLogic redirecting to {}", location);
         Links.Components comp = Links.parse(location);
-        if (comp == null)
-            throw new IllegalStateException("Invalid redirect location: " + location);
+        if (comp == null) throw new IllegalStateException("Invalid redirect location: " + location);
         return new Parameters(comp.type(), comp.year(), comp.number())
-            .version(comp.version())
-            .view(oldParams.view())
-            .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
-            .lang(comp.language());
+                .version(comp.version())
+                .view(oldParams.view())
+                .section(comp.fragment().map(fragment -> fragment.replace('/', '-')))
+                .lang(comp.language());
     }
 
     private static String extractRedirectLocation(Error error) {
         if (error.statusCode < 300)
-            throw new MarkLogicRequestException("Expected redirect status (3xx) but got " + error.statusCode);
+            throw new MarkLogicRequestException(
+                    "Expected redirect status (3xx) but got " + error.statusCode);
         if (error.header == null || !"Location".equals(error.header.name))
-            throw new MarkLogicRequestException("MarkLogic redirect <header> missing 'Location' name");
+            throw new MarkLogicRequestException(
+                    "MarkLogic redirect <header> missing 'Location' name");
         String location = error.header.value;
         if (location == null || location.isEmpty())
             throw new MarkLogicRequestException("MarkLogic redirect Location header is empty");
@@ -195,10 +216,12 @@ public class Legislation {
     }
 
     @SuppressWarnings("EmptyCatch") // close() failure in the finally is intentionally ignored
-    private StreamResponse handleStream(PushbackInputStream stream, Parameters params, boolean afterRedirect) {
+    private StreamResponse handleStream(
+            PushbackInputStream stream, Parameters params, boolean afterRedirect) {
         boolean keepOpen = false;
         try {
-            // classifyRoot on a PushbackInputStream never returns MALFORMED (see RootClassification),
+            // classifyRoot on a PushbackInputStream never returns MALFORMED (see
+            // RootClassification),
             // so the only non-OTHER result is ERROR.
             Error.RootClassification classification = Error.classifyRoot(stream);
             if (classification == Error.RootClassification.OTHER) {
@@ -223,5 +246,4 @@ public class Legislation {
             }
         }
     }
-
 }

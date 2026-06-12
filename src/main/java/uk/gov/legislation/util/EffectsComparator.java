@@ -1,74 +1,64 @@
 package uk.gov.legislation.util;
 
-import uk.gov.legislation.transform.simple.RichTextNode;
-import uk.gov.legislation.transform.simple.effects.Effect;
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import uk.gov.legislation.transform.simple.RichTextNode;
+import uk.gov.legislation.transform.simple.effects.Effect;
 
 public class EffectsComparator {
 
-    private static final Comparator<Effect> BY_AFFECTED_PROVISION = (Effect e1, Effect e2) -> {
-        Optional<String> id1 = Effects.flatten(e1.affectedProvisions)
-            .filter(node -> node instanceof RichTextNode.Section)
-            .map(RichTextNode.Section.class::cast)
-            .map(node -> node.ref)
-            .findFirst();
-        Optional<String> id2 = Effects.flatten(e2.affectedProvisions)
-            .filter(node -> node instanceof RichTextNode.Section)
-            .map(RichTextNode.Section.class::cast)
-            .map(node -> node.ref)
-            .findFirst();
-        if (id1.isEmpty() && id2.isEmpty())
-            return 0;
-        if (id1.isEmpty())
-            return -1;
-        if (id2.isEmpty())
-            return 1;
-        return compareFragmentIds(id1.get(), id2.get());
-    };
+    private static final Comparator<Effect> BY_AFFECTED_PROVISION =
+            (Effect e1, Effect e2) -> {
+                Optional<String> id1 =
+                        Effects.flatten(e1.affectedProvisions)
+                                .filter(node -> node instanceof RichTextNode.Section)
+                                .map(RichTextNode.Section.class::cast)
+                                .map(node -> node.ref)
+                                .findFirst();
+                Optional<String> id2 =
+                        Effects.flatten(e2.affectedProvisions)
+                                .filter(node -> node instanceof RichTextNode.Section)
+                                .map(RichTextNode.Section.class::cast)
+                                .map(node -> node.ref)
+                                .findFirst();
+                if (id1.isEmpty() && id2.isEmpty()) return 0;
+                if (id1.isEmpty()) return -1;
+                if (id2.isEmpty()) return 1;
+                return compareFragmentIds(id1.get(), id2.get());
+            };
 
     static int compareFragmentIds(String id1, String id2) {
         List<String> tokens1 = Arrays.asList(id1.replace("--", "-").split("-"));
         List<String> tokens2 = Arrays.asList(id2.replace("--", "-").split("-"));
-        return Comparator
-            .comparing((List<String> tokens) -> tsoSortOrder(tokens, 1))
-            .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 2))
-            .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 3))
-            .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 4))
-            .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 5))
-            .compare(tokens1, tokens2);
+        return Comparator.comparing((List<String> tokens) -> tsoSortOrder(tokens, 1))
+                .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 2))
+                .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 3))
+                .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 4))
+                .thenComparing((List<String> tokens) -> tsoSortOrder(tokens, 5))
+                .compare(tokens1, tokens2);
     }
 
-    public static final Comparator<Effect> INSTANCE = BY_AFFECTED_PROVISION
-        .thenComparing((Effect e) -> e.type)
-        .thenComparing((Effect e) -> e.affectingURI);
-
+    public static final Comparator<Effect> INSTANCE =
+            BY_AFFECTED_PROVISION
+                    .thenComparing((Effect e) -> e.type)
+                    .thenComparing((Effect e) -> e.affectingURI);
 
     /* from unapplied_effects_xhtml_core.xsl */
 
     private static long tsoSortOrder(List<String> tokens, int item) {
-        if (tokens.size() < item)
-            return 0;
+        if (tokens.size() < item) return 0;
         String token = tokens.get(item - 1);
-        if (token.contains("title") || token.contains("cross"))
-            return 0;
-        if (token.equalsIgnoreCase("act"))
-            return 5;
-        if (token.equals("part") || token.equals("Pt."))
-            return 10;
-        if (token.equals("chapter") || token.equals("Ch."))
-            return 15;
-        if (token.equals("section") || token.equals("s."))
-            return 20;
-        if (token.equals("schedule") || token.equals("Sch."))
-            return 30;
-        if (token.equals("paragraph"))
-            return 40;
+        if (token.contains("title") || token.contains("cross")) return 0;
+        if (token.equalsIgnoreCase("act")) return 5;
+        if (token.equals("part") || token.equals("Pt.")) return 10;
+        if (token.equals("chapter") || token.equals("Ch.")) return 15;
+        if (token.equals("section") || token.equals("s.")) return 20;
+        if (token.equals("schedule") || token.equals("Sch.")) return 30;
+        if (token.equals("paragraph")) return 40;
         Matcher matcher = Pattern.compile("^\\d+$").matcher(token);
         if (matcher.find()) {
             long num = Long.parseLong(matcher.group());
@@ -94,5 +84,4 @@ public class EffectsComparator {
         }
         return 0;
     }
-
 }

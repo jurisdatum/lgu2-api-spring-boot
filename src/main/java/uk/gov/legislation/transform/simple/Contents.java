@@ -1,18 +1,19 @@
 package uk.gov.legislation.transform.simple;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
+import java.net.URI;
+import java.util.List;
 import tools.jackson.core.JacksonException;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
-import java.net.URI;
-import java.util.List;
-
 @JsonRootName("Contents")
 public class Contents {
 
-    public static uk.gov.legislation.transform.simple.Contents parse(String xml) throws JacksonException {
-        return SimpleXmlMapper.INSTANCE.readValue(xml, uk.gov.legislation.transform.simple.Contents.class);
+    public static uk.gov.legislation.transform.simple.Contents parse(String xml)
+            throws JacksonException {
+        return SimpleXmlMapper.INSTANCE.readValue(
+                xml, uk.gov.legislation.transform.simple.Contents.class);
     }
 
     public Metadata meta;
@@ -42,7 +43,6 @@ public class Contents {
         @JacksonXmlElementWrapper(localName = "attachments")
         @JacksonXmlProperty(localName = "attachment")
         public List<Item> attachments;
-
     }
 
     public static class Item {
@@ -65,7 +65,5 @@ public class Contents {
         @JacksonXmlElementWrapper(useWrapping = false)
         @JacksonXmlProperty(localName = "item")
         public List<Item> children;
-
     }
-
 }

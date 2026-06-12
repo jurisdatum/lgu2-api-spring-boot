@@ -10,5 +10,4 @@ public class LegislatureConverter {
         legislature.uri = ld.id;
         return legislature;
     }
-
 }

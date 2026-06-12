@@ -1,5 +1,7 @@
 package uk.gov.legislation.converters;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -11,9 +13,6 @@ import uk.gov.legislation.transform.simple.effects.EffectsSimplifier;
 import uk.gov.legislation.transform.simple.effects.Entry;
 import uk.gov.legislation.transform.simple.effects.Page;
 import uk.gov.legislation.util.Types;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Service
 public class UnappliedEffectsFetcher {
@@ -29,47 +28,48 @@ public class UnappliedEffectsFetcher {
     }
 
     /**
-     * For enacted/made-only documents (status "final", viewing the latest version),
-     * fetches unapplied effects from MarkLogic's changes database and populates
-     * {@code simple.rawEffects}. For all other documents, does nothing.
+     * For enacted/made-only documents (status "final", viewing the latest version), fetches
+     * unapplied effects from MarkLogic's changes database and populates {@code simple.rawEffects}.
+     * For all other documents, does nothing.
      */
     public void fetchIfNeeded(Metadata simple) {
-        if (!Metadata.FINAL.equals(simple.status))
-            return;
+        if (!Metadata.FINAL.equals(simple.status)) return;
         String shortType = Types.longToShort(simple.longType);
         if (shortType == null) {
             logger.debug("skipping effects fetch: unknown type {}", simple.longType);
             return;
         }
-        if (!simple.versions().last().equals(simple.version()))
-            return;
+        if (!simple.versions().last().equals(simple.version())) return;
         if (simple.number == null) {
-            logger.debug("skipping effects fetch: no number for {} {}", simple.longType, simple.year);
+            logger.debug(
+                    "skipping effects fetch: no number for {} {}", simple.longType, simple.year);
             return;
         }
 
         try {
             List<Effect> allEffects = new ArrayList<>();
-            Parameters params = Parameters.builder()
-                .affectedType(shortType)
-                .affectedYear(simple.year)
-                .affectedNumber(simple.number)
-                .applied(Parameters.AppliedStatus.unapplied)
-                .page(1)
-                .build();
+            Parameters params =
+                    Parameters.builder()
+                            .affectedType(shortType)
+                            .affectedYear(simple.year)
+                            .affectedNumber(simple.number)
+                            .applied(Parameters.AppliedStatus.unapplied)
+                            .page(1)
+                            .build();
 
             String atom = changes.fetch(params);
             Page page = simplifier.parse(atom);
             extractEffects(page, allEffects);
 
             for (int p = 2; p <= page.totalPages; p++) {
-                params = Parameters.builder()
-                    .affectedType(shortType)
-                    .affectedYear(simple.year)
-                    .affectedNumber(simple.number)
-                    .applied(Parameters.AppliedStatus.unapplied)
-                    .page(p)
-                    .build();
+                params =
+                        Parameters.builder()
+                                .affectedType(shortType)
+                                .affectedYear(simple.year)
+                                .affectedNumber(simple.number)
+                                .applied(Parameters.AppliedStatus.unapplied)
+                                .page(p)
+                                .build();
                 atom = changes.fetch(params);
                 page = simplifier.parse(atom);
                 extractEffects(page, allEffects);
@@ -77,9 +77,19 @@ public class UnappliedEffectsFetcher {
 
             simple.rawEffects = allEffects;
             simple.finalEffectsEnriched = true;
-            logger.debug("fetched {} unapplied effects for {}/{}/{}", allEffects.size(), shortType, simple.year, simple.number);
+            logger.debug(
+                    "fetched {} unapplied effects for {}/{}/{}",
+                    allEffects.size(),
+                    shortType,
+                    simple.year,
+                    simple.number);
         } catch (Exception e) {
-            logger.warn("failed to fetch unapplied effects for {}/{}/{}: {}", shortType, simple.year, simple.number, e.getMessage());
+            logger.warn(
+                    "failed to fetch unapplied effects for {}/{}/{}: {}",
+                    shortType,
+                    simple.year,
+                    simple.number,
+                    e.getMessage());
         }
     }
 
@@ -89,5 +99,4 @@ public class UnappliedEffectsFetcher {
                 effects.add(entry.content.effect);
         }
     }
-
 }

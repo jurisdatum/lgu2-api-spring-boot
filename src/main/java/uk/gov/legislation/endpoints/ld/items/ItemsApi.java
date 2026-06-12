@@ -14,21 +14,25 @@ import uk.gov.legislation.api.parameters.Year;
 @RequestMapping("/ld/items")
 public interface ItemsApi {
 
-    @GetMapping(path = {"/{type}", "/{type}/{year}"}, produces = {
-        "application/xml",
-        "application/json",
-        "application/rdf+xml",
-        "application/rdf+json",
-        "application/ld+json",
-        "application/sparql-results+json",
-        "application/sparql-results+xml",
-        "text/csv",
-        "text/plain",
-        "text/turtle"
-    })
-     ResponseEntity <?> typeAndYear(NativeWebRequest request,
-        @PathVariable @Type String type,
-        @PathVariable(required = false) @Year Integer year,
-        @RequestParam(defaultValue = "1") int page,
-        @RequestParam(defaultValue = "10") int pageSize) throws Exception;
+    @GetMapping(
+            path = {"/{type}", "/{type}/{year}"},
+            produces = {
+                "application/xml",
+                "application/json",
+                "application/rdf+xml",
+                "application/rdf+json",
+                "application/ld+json",
+                "application/sparql-results+json",
+                "application/sparql-results+xml",
+                "text/csv",
+                "text/plain",
+                "text/turtle"
+            })
+    ResponseEntity<?> typeAndYear(
+            NativeWebRequest request,
+            @PathVariable @Type String type,
+            @PathVariable(required = false) @Year Integer year,
+            @RequestParam(defaultValue = "1") int page,
+            @RequestParam(defaultValue = "10") int pageSize)
+            throws Exception;
 }

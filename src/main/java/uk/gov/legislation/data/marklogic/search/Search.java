@@ -1,10 +1,9 @@
 package uk.gov.legislation.data.marklogic.search;
 
-import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.MarkLogic;
-
 import java.io.IOException;
 import java.io.InputStream;
+import org.springframework.stereotype.Service;
+import uk.gov.legislation.data.marklogic.MarkLogic;
 
 @Service
 public class Search {
@@ -33,5 +32,4 @@ public class Search {
             return SearchResults.parse(atom);
         }
     }
-
 }

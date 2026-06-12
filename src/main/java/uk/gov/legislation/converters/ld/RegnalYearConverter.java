@@ -1,15 +1,14 @@
 package uk.gov.legislation.converters.ld;
 
-import uk.gov.legislation.api.responses.ld.RegnalYear;
-import uk.gov.legislation.data.virtuoso.jsonld.RegnalYearLD;
-
 import static uk.gov.legislation.converters.ld.LDConverter.extractDateAtEndOfUri;
 import static uk.gov.legislation.converters.ld.LDConverter.extractLastComponentOfUri;
 
+import uk.gov.legislation.api.responses.ld.RegnalYear;
+import uk.gov.legislation.data.virtuoso.jsonld.RegnalYearLD;
+
 public class RegnalYearConverter {
     public static RegnalYear convert(RegnalYearLD regnalLD) {
-        if (regnalLD == null)
-            return null;
+        if (regnalLD == null) return null;
         RegnalYear regnal = new RegnalYear();
         regnal.uri = regnalLD.id;
         regnal.label = regnalLD.label;
@@ -19,5 +18,4 @@ public class RegnalYearConverter {
         regnal.endDate = extractDateAtEndOfUri(regnalLD.endDate);
         return regnal;
     }
-
 }

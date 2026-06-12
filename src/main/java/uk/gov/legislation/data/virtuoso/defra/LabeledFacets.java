@@ -1,8 +1,6 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import tools.jackson.core.JacksonException;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.ArrayNode;
+import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
 
 import java.net.URI;
 import java.util.Comparator;
@@ -10,12 +8,13 @@ import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.stream.StreamSupport;
-
-import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 public class LabeledFacets {
 
-    public record Count(URI uri, String id, String label, int count) { }
+    public record Count(URI uri, String id, String label, int count) {}
 
     static final String RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label";
 
@@ -24,15 +23,14 @@ public class LabeledFacets {
     static CompletableFuture<List<Count>> fetch(DefraLex defra, String baseWhere, String prop) {
         return fetch(defra, baseWhere, prop, RDFS_LABEL);
     }
+
     // prop is the uri of the main property
     // label is the uri of the label property
-    static CompletableFuture<List<Count>> fetch(DefraLex defra, String baseWhere, String prop, String label) {
-        String where = baseWhere +
-            " ?item <" + prop + "> ?x ." +
-            " ?x <" + label + "> ?label .";
+    static CompletableFuture<List<Count>> fetch(
+            DefraLex defra, String baseWhere, String prop, String label) {
+        String where = baseWhere + " ?item <" + prop + "> ?x ." + " ?x <" + label + "> ?label .";
         String query = FACET_QUERY.formatted("?x ?label", where, "?x ?label");
-        return defra.getSparqlResultsJson(query)
-            .thenApply(LabeledFacets::parse);
+        return defra.getSparqlResultsJson(query).thenApply(LabeledFacets::parse);
     }
 
     static String getBinding(JsonNode binding, String key) {
@@ -48,9 +46,9 @@ public class LabeledFacets {
         }
         ArrayNode bindings = (ArrayNode) tree.get("results").get("bindings");
         return StreamSupport.stream(bindings.spliterator(), false)
-            .map(LabeledFacets::map)
-            .sorted(Comparator.comparingInt(Count::count).reversed())
-            .toList();
+                .map(LabeledFacets::map)
+                .sorted(Comparator.comparingInt(Count::count).reversed())
+                .toList();
     }
 
     private static Count map(JsonNode binding) {
@@ -60,5 +58,4 @@ public class LabeledFacets {
         int count = Integer.parseInt(getBinding(binding, "cnt"));
         return new Count(uri, id, label, count);
     }
-
 }

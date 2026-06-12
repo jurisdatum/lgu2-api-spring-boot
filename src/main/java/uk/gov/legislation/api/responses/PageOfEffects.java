@@ -1,17 +1,14 @@
 package uk.gov.legislation.api.responses;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-
 import java.time.ZonedDateTime;
 import java.util.List;
 
 public class PageOfEffects {
 
-    @Schema
-    public PageMetadata meta;
+    @Schema public PageMetadata meta;
 
-    @Schema
-    public List<Effect> effects;
+    @Schema public List<Effect> effects;
 
     public static class PageMetadata {
 
@@ -21,18 +18,12 @@ public class PageOfEffects {
         @Schema(example = "20")
         public int pageSize;
 
-        @Schema
-        public int totalPages;
+        @Schema public int totalPages;
 
-        @Schema
-        public int startIndex;
+        @Schema public int startIndex;
 
-        @Schema
-        public int totalResults;
+        @Schema public int totalResults;
 
-        @Schema
-        public ZonedDateTime updated;
-
+        @Schema public ZonedDateTime updated;
     }
-
 }

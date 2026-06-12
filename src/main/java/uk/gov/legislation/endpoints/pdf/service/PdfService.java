@@ -1,15 +1,14 @@
 package uk.gov.legislation.endpoints.pdf.service;
 
-import net.sf.saxon.s9api.SaxonApiException;
-import org.springframework.http.ResponseEntity;
-import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
-import uk.gov.legislation.data.marklogic.legislation.Legislation;
-import uk.gov.legislation.transform.simple.Simplify;
-
 import java.io.IOException;
 import java.net.URI;
 import java.util.Optional;
+import net.sf.saxon.s9api.SaxonApiException;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+import uk.gov.legislation.data.marklogic.legislation.Legislation;
+import uk.gov.legislation.transform.simple.Simplify;
 
 @Service
 public class PdfService {
@@ -22,12 +21,20 @@ public class PdfService {
         this.simplifier = simplifier;
     }
 
-    /**
-     * Fetches the URL of a PDF or its thumbnail based on the input parameters.
-     */
+    /** Fetches the URL of a PDF or its thumbnail based on the input parameters. */
     // ToDo add support for Welsh
-    public Optional<String> fetchPdfUrl(String type, String yearOrRegnal, int number, String version) throws IOException, SaxonApiException {
-        String clml = legislationService.getTableOfContents(type,yearOrRegnal, number, Optional.ofNullable(version), Optional.empty()).clml();
+    public Optional<String> fetchPdfUrl(
+            String type, String yearOrRegnal, int number, String version)
+            throws IOException, SaxonApiException {
+        String clml =
+                legislationService
+                        .getTableOfContents(
+                                type,
+                                yearOrRegnal,
+                                number,
+                                Optional.ofNullable(version),
+                                Optional.empty())
+                        .clml();
         return simplifier.contents(clml).meta.pdfFormatUri();
     }
 
@@ -39,9 +46,7 @@ public class PdfService {
      */
     // ToDo add support for Welsh
     public String convertToThumbnailUrl(String url) {
-        return url
-                .replaceFirst("/pdfs/", "/images/")
-                .replaceFirst("\\.pdf", ".jpg");
+        return url.replaceFirst("/pdfs/", "/images/").replaceFirst("\\.pdf", ".jpg");
     }
 
     /**

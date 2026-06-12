@@ -43,5 +43,4 @@ class ExtendedMetadataTest {
         expected = readJson(id);
         assertEquals(expected, json);
     }
-
 }

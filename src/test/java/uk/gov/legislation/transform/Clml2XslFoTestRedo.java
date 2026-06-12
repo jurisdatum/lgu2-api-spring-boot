@@ -1,12 +1,11 @@
 package uk.gov.legislation.transform;
 
+import java.io.IOException;
+import java.io.InputStream;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class Clml2XslFoTestRedo {
 
@@ -21,7 +20,8 @@ public class Clml2XslFoTestRedo {
         }
     }
 
-    private static void redo(ApplicationContext ctx, String id) throws IOException, SaxonApiException {
+    private static void redo(ApplicationContext ctx, String id)
+            throws IOException, SaxonApiException {
         final String format = "fo";
         Clml2Pdf transform = ctx.getBean(Clml2Pdf.class);
         String actual;
@@ -41,5 +41,4 @@ public class Clml2XslFoTestRedo {
         System.out.println("redoing " + id);
         TransformHelper.write(id, format, actual);
     }
-
 }

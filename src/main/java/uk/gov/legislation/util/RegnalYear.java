@@ -14,15 +14,13 @@ public class RegnalYear {
 
     public static RegnalYear parse(String value) {
         String[] parts = value.split("[/_]");
-        if (parts.length < 2)
-            throw new IllegalArgumentException(value);
+        if (parts.length < 2) throw new IllegalArgumentException(value);
         return new RegnalYear(parts);
     }
 
     public static Optional<RegnalYear> extractFromId(String id) {
         String[] parts = id.split("[/_]");
-        if (parts.length < 4)
-            return Optional.empty();
+        if (parts.length < 4) return Optional.empty();
         String[] middle = Arrays.copyOfRange(parts, 1, parts.length - 1);
         return Optional.of(new RegnalYear(middle));
     }
@@ -39,13 +37,12 @@ public class RegnalYear {
     }
 
     static String spacedCitationOrEmpty(RegnalYear regnal) {
-        if (regnal == null)
-            return "";
+        if (regnal == null) return "";
         return " " + regnal.forCitation();
     }
 
     private static boolean isAllDigits(String s) {
-        return s.chars().allMatch(Character::isDigit);  // !s.isEmpty() &&
+        return s.chars().allMatch(Character::isDigit); // !s.isEmpty() &&
     }
 
     public static String[] combineYears(String[] input) {
@@ -66,8 +63,6 @@ public class RegnalYear {
 
     public static void addPunctuation(String[] input) {
         for (int i = 0; i < input.length; i++)
-            if (MONARCH.matcher(input[i]).matches())
-                input[i] = input[i] + ".";
+            if (MONARCH.matcher(input[i]).matches()) input[i] = input[i] + ".";
     }
-
 }

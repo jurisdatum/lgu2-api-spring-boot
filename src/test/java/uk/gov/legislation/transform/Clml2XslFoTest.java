@@ -1,5 +1,8 @@
 package uk.gov.legislation.transform;
 
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -7,17 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.stream.Stream;
-
 @SpringBootTest(classes = Application.class)
 class Clml2XslFoTest {
 
     static Stream<String> provide() {
-        return Stream.of(
-            "ukpga/2023/29/2024-11-01"
-        );
+        return Stream.of("ukpga/2023/29/2024-11-01");
     }
 
     private final Clml2Pdf clml2Pdf;
@@ -39,15 +36,14 @@ class Clml2XslFoTest {
         expected = replaceFoGeneratedDate(expected);
         Assertions.assertEquals(expected, fo);
         final String finalFo = fo;
-        Assertions.assertDoesNotThrow(() -> {
-            clml2Pdf.xslFo2pdf(finalFo, OutputStream.nullOutputStream());
-        });
+        Assertions.assertDoesNotThrow(
+                () -> {
+                    clml2Pdf.xslFo2pdf(finalFo, OutputStream.nullOutputStream());
+                });
     }
 
     private static String replaceFoGeneratedDate(String fo) {
         return fo.replaceAll(
-            "Document Generated:\\s*\\d{4}-\\d{2}-\\d{2}",
-            "Document Generated: 1001-01-01");
+                "Document Generated:\\s*\\d{4}-\\d{2}-\\d{2}", "Document Generated: 1001-01-01");
     }
-
 }

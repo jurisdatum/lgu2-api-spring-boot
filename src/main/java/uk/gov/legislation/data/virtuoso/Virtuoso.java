@@ -1,8 +1,5 @@
 package uk.gov.legislation.data.virtuoso;
 
-import org.springframework.core.env.Environment;
-import org.springframework.stereotype.Repository;
-
 import java.io.IOException;
 import java.net.URI;
 import java.net.URLEncoder;
@@ -12,6 +9,8 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.Set;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Repository;
 
 @Repository
 public class Virtuoso {
@@ -28,26 +27,23 @@ public class Virtuoso {
         endpoint = "http://" + host + ":" + port + "/sparql";
     }
 
-    public static final Set<String> Formats = Set.of(
-        "application/rdf+xml",
-        "application/rdf+json",
-        "application/ld+json",
-        "application/sparql-results+json",
-        "application/sparql-results+xml",
-        "text/csv",
-        "text/plain",
-        "text/turtle"
-    );
+    public static final Set<String> Formats =
+            Set.of(
+                    "application/rdf+xml",
+                    "application/rdf+json",
+                    "application/ld+json",
+                    "application/sparql-results+json",
+                    "application/sparql-results+xml",
+                    "text/csv",
+                    "text/plain",
+                    "text/turtle");
 
     public String query(String query, String format) throws IOException, InterruptedException {
-        if (!Formats.contains(format))
-            throw new IllegalArgumentException(format);
-        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
-        HttpRequest request = HttpRequest.newBuilder()
-            .GET()
-            .uri(uri)
-            .header("Accept", format)
-            .build();
+        if (!Formats.contains(format)) throw new IllegalArgumentException(format);
+        URI uri =
+                URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+        HttpRequest request =
+                HttpRequest.newBuilder().GET().uri(uri).header("Accept", format).build();
         HttpResponse<String> response;
         try (HttpClient client = HttpClient.newHttpClient()) {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
@@ -62,20 +58,21 @@ public class Virtuoso {
 
     /* status checks for health endpoint with shorter timeouts */
 
-    private final HttpClient statusClient = HttpClient.newBuilder()
-        .connectTimeout(Duration.ofMillis(300))
-        .build();
+    private final HttpClient statusClient =
+            HttpClient.newBuilder().connectTimeout(Duration.ofMillis(300)).build();
 
     public int getStatus(String query) throws IOException, InterruptedException {
-        URI uri = URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
-        HttpRequest request = HttpRequest.newBuilder()
-            .GET()
-            .uri(uri)
-            .header("Accept", "application/sparql-results+json")
-            .timeout(Duration.ofMillis(800))
-            .build();
-        HttpResponse<Void> response = statusClient.send(request, HttpResponse.BodyHandlers.discarding());
+        URI uri =
+                URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
+        HttpRequest request =
+                HttpRequest.newBuilder()
+                        .GET()
+                        .uri(uri)
+                        .header("Accept", "application/sparql-results+json")
+                        .timeout(Duration.ofMillis(800))
+                        .build();
+        HttpResponse<Void> response =
+                statusClient.send(request, HttpResponse.BodyHandlers.discarding());
         return response.statusCode();
     }
-
 }

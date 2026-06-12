@@ -17,10 +17,10 @@ import uk.gov.legislation.util.Extent;
 
 /**
  * Search parameters for legislation search endpoints.
- * <p>
- * Used as a {@code @ParameterObject} for Spring parameter binding from query parameters
- * and for JSON serialization/deserialization. Note the special naming convention:
- * {@code getTypes()}/{@code setType()} to handle the "type" parameter that can have multiple values.
+ *
+ * <p>Used as a {@code @ParameterObject} for Spring parameter binding from query parameters and for
+ * JSON serialization/deserialization. Note the special naming convention: {@code getTypes()}/{@code
+ * setType()} to handle the "type" parameter that can have multiple values.
  */
 public class SearchParameters {
 
@@ -158,16 +158,22 @@ public class SearchParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Set<Extent> getExtent() { return extent; }
+    public Set<Extent> getExtent() {
+        return extent;
+    }
 
     public void setExtent(Set<Extent> extent) {
         this.extent = extent == null ? null : EnumSet.copyOf(extent);
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    public Boolean isExclusiveExtent() { return exclusiveExtent; }
+    public Boolean isExclusiveExtent() {
+        return exclusiveExtent;
+    }
 
-    public void setExclusiveExtent(Boolean exclusive) { this.exclusiveExtent = exclusive; }
+    public void setExclusiveExtent(Boolean exclusive) {
+        this.exclusiveExtent = exclusive;
+    }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String getDepartment() {
@@ -179,15 +185,16 @@ public class SearchParameters {
     }
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    @Schema(allowableValues = {
-        "Consultation",
-        "Development",
-        "Enactment",
-        "Final",
-        "Implementation",
-        "Options",
-        "Post Implementation"
-    })
+    @Schema(
+            allowableValues = {
+                "Consultation",
+                "Development",
+                "Enactment",
+                "Final",
+                "Implementation",
+                "Options",
+                "Post Implementation"
+            })
     public String getStage() {
         return stage;
     }
@@ -225,5 +232,4 @@ public class SearchParameters {
     public void setPageSize(Integer pageSize) {
         this.pageSize = pageSize;
     }
-
 }

@@ -1,5 +1,11 @@
 package uk.gov.legislation.endpoints.pdf;
 
+import static org.mockito.Mockito.mock;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,13 +20,6 @@ import uk.gov.legislation.exceptions.GlobalExceptionHandler;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 import uk.gov.legislation.exceptions.NoDocumentException;
 
-import java.util.Optional;
-
-import static org.mockito.Mockito.mock;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
 class PdfApiControllerTest {
 
     private MockMvc mockMvc;
@@ -30,9 +29,10 @@ class PdfApiControllerTest {
     @BeforeEach
     void setUp() {
         pdfService = new StubPdfService();
-        mockMvc = MockMvcBuilders.standaloneSetup(new PdfApiController(pdfService))
-            .setControllerAdvice(new GlobalExceptionHandler())
-            .build();
+        mockMvc =
+                MockMvcBuilders.standaloneSetup(new PdfApiController(pdfService))
+                        .setControllerAdvice(new GlobalExceptionHandler())
+                        .build();
     }
 
     @Test
@@ -44,20 +44,21 @@ class PdfApiControllerTest {
         pdfService.failure = new NoDocumentException(error);
 
         mockMvc.perform(get("/pdf/ukpga/2024/1").accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isNotFound())
-            .andExpect(jsonPath("$.error").value("Document Not Found"))
-            .andExpect(jsonPath("$.message").value("Table of contents not found"));
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.error").value("Document Not Found"))
+                .andExpect(jsonPath("$.message").value("Table of contents not found"));
     }
 
     @Test
     @DisplayName("Should return 500 when the PDF lookup raises MarkLogicRequestException")
     void shouldReturn500WhenPdfLookupThrowsMarkLogicRequestException() throws Exception {
-        pdfService.failure = new MarkLogicRequestException("Error parsing MarkLogic error response");
+        pdfService.failure =
+                new MarkLogicRequestException("Error parsing MarkLogic error response");
 
         mockMvc.perform(get("/pdf/ukpga/2024/1").accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isInternalServerError())
-            .andExpect(jsonPath("$.error").value("MarkLogic Error"))
-            .andExpect(jsonPath("$.message").value("Error parsing MarkLogic error response"));
+                .andExpect(status().isInternalServerError())
+                .andExpect(jsonPath("$.error").value("MarkLogic Error"))
+                .andExpect(jsonPath("$.message").value("Error parsing MarkLogic error response"));
     }
 
     private static final class StubPdfService extends PdfService {
@@ -69,12 +70,10 @@ class PdfApiControllerTest {
         }
 
         @Override
-        public Optional<String> fetchPdfUrl(String type, String yearOrRegnal, int number, String version) {
-            if (failure != null)
-                throw failure;
+        public Optional<String> fetchPdfUrl(
+                String type, String yearOrRegnal, int number, String version) {
+            if (failure != null) throw failure;
             return Optional.empty();
         }
-
     }
-
 }

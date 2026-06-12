@@ -17,7 +17,6 @@ public enum Type {
     UKCI("UnitedKingdomChurchInstrument", Category.Secondary, Country.UK),
     UKIA("UnitedKingdomImpactAssessment", Category.Secondary, Country.UK),
 
-
     // Wales Acts
     ASC("WelshParliamentAct", Category.Primary, Country.WALES),
     WSI("WelshStatutoryInstrument", Category.Secondary, Country.WALES),
@@ -54,10 +53,20 @@ public enum Type {
     EUDR("EuropeanUnionDirective", Category.EURetained, Country.EU),
     EUT("EuropeanUnionTreaty", Category.EURetained, Country.EU);
 
-    public enum Category { Primary, Secondary, EURetained }
+    public enum Category {
+        Primary,
+        Secondary,
+        EURetained
+    }
 
     public enum Country {
-        UK, SCOTLAND, WALES, NORTHERN_IRELAND, ENGLAND, GREAT_BRITAIN, EU
+        UK,
+        SCOTLAND,
+        WALES,
+        NORTHERN_IRELAND,
+        ENGLAND,
+        GREAT_BRITAIN,
+        EU
     }
 
     private final String longName;
@@ -86,5 +95,4 @@ public enum Type {
     public Type.Country country() {
         return country;
     }
-
 }

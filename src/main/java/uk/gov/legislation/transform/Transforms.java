@@ -43,7 +43,13 @@ public class Transforms {
 
     private final UnappliedEffectsFetcher effectsFetcher;
 
-    public Transforms(Clml2Akn clml2akn, Akn2Html akn2html, Simplify simplify, Clml2Pdf clml2pdf, Clml2Docx clml2docx, UnappliedEffectsFetcher effectsFetcher) {
+    public Transforms(
+            Clml2Akn clml2akn,
+            Akn2Html akn2html,
+            Simplify simplify,
+            Clml2Pdf clml2pdf,
+            Clml2Docx clml2docx,
+            UnappliedEffectsFetcher effectsFetcher) {
 
         this.clml2akn = clml2akn;
         this.akn2html = akn2html;
@@ -79,6 +85,7 @@ public class Transforms {
             throw new TransformationException("Error in HTML transform", e);
         }
     }
+
     public void clml2htmlStandalone(InputStream clml, OutputStream html) {
         clml2html(clml, true, html);
     }
@@ -130,7 +137,8 @@ public class Transforms {
     }
 
     public byte[] clml2docx(String clml) throws IOException, SaxonApiException {
-        ByteArrayInputStream input = new ByteArrayInputStream(clml.getBytes(StandardCharsets.UTF_8));
+        ByteArrayInputStream input =
+                new ByteArrayInputStream(clml.getBytes(StandardCharsets.UTF_8));
         return clml2docx.transform(input);
     }
 
@@ -143,5 +151,4 @@ public class Transforms {
             throw new TransformationException("Error in Word transform", e);
         }
     }
-
 }

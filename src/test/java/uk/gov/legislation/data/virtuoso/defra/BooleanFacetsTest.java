@@ -15,40 +15,43 @@ class BooleanFacetsTest {
 
     /**
      * Tests for the fetch method in the BooleanFacets class.
-     * <p>
-     * The fetch method is a static method that constructs a SPARQL query,
-     * retrieves JSON results asynchronously from a DefraLex instance,
-     * and parses them into a list of BooleanFacets.Count records.
+     *
+     * <p>The fetch method is a static method that constructs a SPARQL query, retrieves JSON results
+     * asynchronously from a DefraLex instance, and parses them into a list of BooleanFacets.Count
+     * records.
      */
-
     @Test
     void testFetchWithValidResponse() throws Exception {
 
         String baseWhere = "BASE_WHERE_CONDITION";
         String prop = "https://www.legislation.gov.uk/uksi/2001/1/metadata";
-        String expectedQuery = """
-                SELECT ?value (COUNT(DISTINCT ?item) AS ?cnt)
-                WHERE { BASE_WHERE_CONDITION ?item <https://www.legislation.gov.uk/uksi/2001/1/metadata> ?value . }
-                GROUP BY ?value
-                ORDER BY DESC(?cnt)
-            """;
+        String expectedQuery =
+                """
+                    SELECT ?value (COUNT(DISTINCT ?item) AS ?cnt)
+                    WHERE { BASE_WHERE_CONDITION ?item <https://www.legislation.gov.uk/uksi/2001/1/metadata> ?value . }
+                    GROUP BY ?value
+                    ORDER BY DESC(?cnt)
+                """;
 
-        String jsonResponse = """
-                {
-                    "results": {
-                        "bindings": [
-                            {"value": {"value": "1"}, "cnt": {"value": "10"}},
-                            {"value": {"value": "0"}, "cnt": {"value": "5"}}
-                        ]
+        String jsonResponse =
+                """
+                    {
+                        "results": {
+                            "bindings": [
+                                {"value": {"value": "1"}, "cnt": {"value": "10"}},
+                                {"value": {"value": "0"}, "cnt": {"value": "5"}}
+                            ]
+                        }
                     }
-                }
-            """;
+                """;
 
         DefraLex mockDefraLex = Mockito.mock(DefraLex.class);
-        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString())).thenReturn(CompletableFuture.completedFuture(jsonResponse));
+        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString()))
+                .thenReturn(CompletableFuture.completedFuture(jsonResponse));
 
-        CompletableFuture <List <BooleanFacets.Count>> resultFuture = BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
-        List <BooleanFacets.Count> result = resultFuture.get();
+        CompletableFuture<List<BooleanFacets.Count>> resultFuture =
+                BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
+        List<BooleanFacets.Count> result = resultFuture.get();
 
         Mockito.verify(mockDefraLex).getSparqlResultsJson(expectedQuery);
         assertNotNull(result);
@@ -62,19 +65,22 @@ class BooleanFacetsTest {
 
         String baseWhere = "BASE_WHERE_CONDITION";
         String prop = "https://www.legislation.gov.uk/uksi/2001/1/metadata";
-        String jsonResponse = """
-                {
-                    "results": {
-                        "bindings": []
+        String jsonResponse =
+                """
+                    {
+                        "results": {
+                            "bindings": []
+                        }
                     }
-                }
-            """;
+                """;
 
         DefraLex mockDefraLex = Mockito.mock(DefraLex.class);
-        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString())).thenReturn(CompletableFuture.completedFuture(jsonResponse));
+        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString()))
+                .thenReturn(CompletableFuture.completedFuture(jsonResponse));
 
-        CompletableFuture <List <BooleanFacets.Count>> resultFuture = BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
-        List <BooleanFacets.Count> result = resultFuture.get();
+        CompletableFuture<List<BooleanFacets.Count>> resultFuture =
+                BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
+        List<BooleanFacets.Count> result = resultFuture.get();
 
         assertNotNull(result);
         assertTrue(result.isEmpty());
@@ -88,9 +94,11 @@ class BooleanFacetsTest {
         String invalidJsonResponse = "INVALID_JSON";
 
         DefraLex mockDefraLex = Mockito.mock(DefraLex.class);
-        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString())).thenReturn(CompletableFuture.completedFuture(invalidJsonResponse));
+        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString()))
+                .thenReturn(CompletableFuture.completedFuture(invalidJsonResponse));
 
-        CompletableFuture <List <BooleanFacets.Count>> resultFuture = BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
+        CompletableFuture<List<BooleanFacets.Count>> resultFuture =
+                BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
         assertThrows(Exception.class, resultFuture::get);
     }
 
@@ -99,20 +107,23 @@ class BooleanFacetsTest {
 
         String baseWhere = "BASE_WHERE_CONDITION";
         String prop = "https://www.legislation.gov.uk/uksi/2001/1/metadata";
-        String jsonResponse = """
-                {
-                    "results": {
-                        "bindings": [
-                            {"value": {"value": "1"}}
-                        ]
+        String jsonResponse =
+                """
+                    {
+                        "results": {
+                            "bindings": [
+                                {"value": {"value": "1"}}
+                            ]
+                        }
                     }
-                }
-            """;
+                """;
 
         DefraLex mockDefraLex = Mockito.mock(DefraLex.class);
-        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString())).thenReturn(CompletableFuture.completedFuture(jsonResponse));
+        Mockito.when(mockDefraLex.getSparqlResultsJson(anyString()))
+                .thenReturn(CompletableFuture.completedFuture(jsonResponse));
 
-        CompletableFuture <List <BooleanFacets.Count>> resultFuture = BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
+        CompletableFuture<List<BooleanFacets.Count>> resultFuture =
+                BooleanFacets.fetch(mockDefraLex, baseWhere, prop);
         assertThrows(Exception.class, resultFuture::get);
     }
 }

@@ -1,10 +1,9 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.net.URI;
 import uk.gov.legislation.data.virtuoso.jsonld.ValueAndLanguage;
 import uk.gov.legislation.data.virtuoso.jsonld.ValueAndType;
-
-import java.net.URI;
 
 @Deprecated(forRemoval = true)
 public class DefraItem {
@@ -15,23 +14,17 @@ public class DefraItem {
     @JsonProperty("@type")
     public URI rdfType;
 
-    @JsonProperty
-    public ValueAndType modified;
+    @JsonProperty public ValueAndType modified;
 
-    @JsonProperty
-    public URI chapter;
+    @JsonProperty public URI chapter;
 
-    @JsonProperty
-    public Boolean complete;
+    @JsonProperty public Boolean complete;
 
-    @JsonProperty
-    public URI extent;
+    @JsonProperty public URI extent;
 
-    @JsonProperty
-    public URI heading;
+    @JsonProperty public URI heading;
 
-    @JsonProperty
-    public Boolean inforce;
+    @JsonProperty public Boolean inforce;
 
     @JsonProperty("isCategory_complete")
     public Boolean isCategoryComplete;
@@ -39,8 +32,7 @@ public class DefraItem {
     @JsonProperty("isDetails_complete")
     public Boolean isDetailsComplete;
 
-    @JsonProperty
-    public URI isRegulatedBy;
+    @JsonProperty public URI isRegulatedBy;
 
     @JsonProperty("isRevoke_complete")
     public Boolean isRevokeComplete;
@@ -48,31 +40,22 @@ public class DefraItem {
     @JsonProperty("legislativecontents")
     public URI legislativeContents;
 
-    @JsonProperty
-    public URI leguri;
+    @JsonProperty public URI leguri;
 
-    @JsonProperty
-    public ValueAndType sortby;
+    @JsonProperty public ValueAndType sortby;
 
-    @JsonProperty
-    public URI sourceOrigin;
+    @JsonProperty public URI sourceOrigin;
 
-    @JsonProperty
-    public URI status;
+    @JsonProperty public URI status;
 
-    @JsonProperty("type")  // distinct from "@type"
+    @JsonProperty("type") // distinct from "@type"
     public String legType;
 
-    @JsonProperty
-    public String number;
+    @JsonProperty public String number;
 
-    @JsonProperty
-    public ValueAndLanguage title;
+    @JsonProperty public ValueAndLanguage title;
 
-    @JsonProperty
-    public URI within;
+    @JsonProperty public URI within;
 
-    @JsonProperty
-    public ValueAndType year;
-
+    @JsonProperty public ValueAndType year;
 }

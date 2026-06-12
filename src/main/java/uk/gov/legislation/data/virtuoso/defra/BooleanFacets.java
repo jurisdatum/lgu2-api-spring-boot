@@ -1,27 +1,25 @@
 package uk.gov.legislation.data.virtuoso.defra;
 
-import tools.jackson.core.JacksonException;
-import tools.jackson.databind.JsonNode;
-import tools.jackson.databind.node.ArrayNode;
+import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
+import static uk.gov.legislation.data.virtuoso.defra.LabeledFacets.getBinding;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.stream.StreamSupport;
-
-import static uk.gov.legislation.data.virtuoso.defra.DefraLex.FACET_QUERY;
-import static uk.gov.legislation.data.virtuoso.defra.LabeledFacets.getBinding;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.node.ArrayNode;
 
 public class BooleanFacets {
 
-    public record Count(Boolean value, int count) { }
+    public record Count(Boolean value, int count) {}
 
     static CompletableFuture<List<Count>> fetch(DefraLex defra, String baseWhere, String prop) {
         String where = baseWhere + " ?item <" + prop + "> ?value .";
         String query = FACET_QUERY.formatted("?value", where, "?value");
-        return defra.getSparqlResultsJson(query)
-            .thenApply(BooleanFacets::parse);
+        return defra.getSparqlResultsJson(query).thenApply(BooleanFacets::parse);
     }
 
     private static List<Count> parse(String json) {
@@ -33,9 +31,9 @@ public class BooleanFacets {
         }
         ArrayNode bindings = (ArrayNode) tree.get("results").get("bindings");
         return StreamSupport.stream(bindings.spliterator(), false)
-            .map(BooleanFacets::map)
-            .sorted(Comparator.comparing(Count::value).reversed())
-            .toList();
+                .map(BooleanFacets::map)
+                .sorted(Comparator.comparing(Count::value).reversed())
+                .toList();
     }
 
     private static Count map(JsonNode binding) {
@@ -43,5 +41,4 @@ public class BooleanFacets {
         int count = Integer.parseInt(getBinding(binding, "cnt"));
         return new Count(value, count);
     }
-
 }

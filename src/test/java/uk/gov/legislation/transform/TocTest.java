@@ -1,5 +1,9 @@
 package uk.gov.legislation.transform;
 
+import static uk.gov.legislation.transform.TransformHelper.read;
+import static uk.gov.legislation.transform.TransformTest.CUTOFF;
+
+import java.util.stream.Stream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,11 +17,6 @@ import uk.gov.legislation.transform.simple.Simplify;
 import uk.gov.legislation.transform.simple.UnappliedEffectsTest;
 import uk.gov.legislation.util.UpToDate;
 
-import java.util.stream.Stream;
-
-import static uk.gov.legislation.transform.TransformHelper.read;
-import static uk.gov.legislation.transform.TransformTest.CUTOFF;
-
 @SpringBootTest(classes = Application.class)
 class TocTest {
 
@@ -30,19 +29,18 @@ class TocTest {
 
     static Stream<String> provide() {
         return Stream.of(
-            "ukpga/2000/8/contents",
-            "ukpga/2023/29/contents/2024-11-01",
-            "ukla/2017/1/contents/enacted",
-            "uksi/2025/3/contents/made",
-            "ukpga/Geo6/6-7/48/contents/1991-02-01",
-            "asp/2025/11/contents/2025-08-07",
-            "nia/2022/21/contents/enacted",
-            "aosp/1707/8/contents/2007-01-01",
-            "aep/Ann/6/11/contents/1991-02-01",
-            "aip/Geo3/40/38/contents/1991-02-01",
-            "apgb/Geo3/39-40/14/contents",
-            "asc/2025/1/contents/2025-03-25"
-        );
+                "ukpga/2000/8/contents",
+                "ukpga/2023/29/contents/2024-11-01",
+                "ukla/2017/1/contents/enacted",
+                "uksi/2025/3/contents/made",
+                "ukpga/Geo6/6-7/48/contents/1991-02-01",
+                "asp/2025/11/contents/2025-08-07",
+                "nia/2022/21/contents/enacted",
+                "aosp/1707/8/contents/2007-01-01",
+                "aep/Ann/6/11/contents/1991-02-01",
+                "aip/Geo3/40/38/contents/1991-02-01",
+                "apgb/Geo3/39-40/14/contents",
+                "asc/2025/1/contents/2025-03-25");
     }
 
     @ParameterizedTest
@@ -56,5 +54,4 @@ class TocTest {
         String expected = read(id, "json");
         Assertions.assertEquals(expected, actual);
     }
-
 }

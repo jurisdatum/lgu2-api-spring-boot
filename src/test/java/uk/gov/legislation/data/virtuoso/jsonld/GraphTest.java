@@ -28,11 +28,18 @@ class GraphTest {
         ArrayNode result = Graph.extract(validJson);
 
         assertAll(
-            () -> assertNotNull(result, "The extracted graph should not be null."),
-            () -> assertEquals(1, result.size(), "The graph should contain one element."),
-            () -> assertEquals("1", result.get(0).get("id").asText(), "The id of the first element should be '1'."),
-            () -> assertEquals("Test", result.get(0).get("name").asText(), "The name of the first element should be 'Test'.")
-        );
+                () -> assertNotNull(result, "The extracted graph should not be null."),
+                () -> assertEquals(1, result.size(), "The graph should contain one element."),
+                () ->
+                        assertEquals(
+                                "1",
+                                result.get(0).get("id").asText(),
+                                "The id of the first element should be '1'."),
+                () ->
+                        assertEquals(
+                                "Test",
+                                result.get(0).get("name").asText(),
+                                "The name of the first element should be 'Test'."));
     }
 
     @Test
@@ -43,9 +50,8 @@ class GraphTest {
         ArrayNode result = Graph.extract(validJson);
 
         assertAll(
-            () -> assertNotNull(result, "The extracted graph should not be null."),
-            () -> assertEquals(0, result.size(), "The graph should be empty.")
-        );
+                () -> assertNotNull(result, "The extracted graph should not be null."),
+                () -> assertEquals(0, result.size(), "The graph should be empty."));
     }
 
     @Test
@@ -53,33 +59,38 @@ class GraphTest {
     void testExtractWithInvalidJson() {
         String invalidJson = "{ invalid json ";
 
-        assertThrows(JacksonException.class,
-            () -> Graph.extract(invalidJson),
-            "Passing invalid JSON should throw a JsonProcessingException.");
+        assertThrows(
+                JacksonException.class,
+                () -> Graph.extract(invalidJson),
+                "Passing invalid JSON should throw a JsonProcessingException.");
     }
 
     @ParameterizedTest(name = "{index} => JSON: {0}, expectedId: {1}, expectedName: {2}")
     @MethodSource("validGraphObjectProvider")
     @DisplayName("Should extract first object from valid JSON graph")
-    void testExtractFirstObjectWithValidJson(String json, String expectedId, String expectedName) throws JacksonException {
+    void testExtractFirstObjectWithValidJson(String json, String expectedId, String expectedName)
+            throws JacksonException {
 
         Optional<JsonNode> result = Graph.extractFirstObject(json, JsonNode.class);
 
         assertAll(
-            () -> assertTrue(result.isPresent(), "The first object should be present."),
-            () -> assertEquals(expectedId, result.get().get("id").asText(), "The id of the first object should match."),
-            () -> assertEquals(expectedName, result.get().get("name").asText(), "The name of the first object " +
-                "should match.")
-        );
+                () -> assertTrue(result.isPresent(), "The first object should be present."),
+                () ->
+                        assertEquals(
+                                expectedId,
+                                result.get().get("id").asText(),
+                                "The id of the first object should match."),
+                () ->
+                        assertEquals(
+                                expectedName,
+                                result.get().get("name").asText(),
+                                "The name of the first object " + "should match."));
     }
 
     static Stream<Arguments> validGraphObjectProvider() {
         return Stream.of(
-            Arguments.of(
-                "{ \"@graph\": [{ \"id\": \"1\", \"name\": \"Test\" }] }",
-                "1", "Test"
-            )
-        );
+                Arguments.of(
+                        "{ \"@graph\": [{ \"id\": \"1\", \"name\": \"Test\" }] }", "1", "Test"));
     }
 
     @Test
@@ -97,8 +108,9 @@ class GraphTest {
     void testExtractFirstObjectWithInvalidJson() {
         String invalidJson = "{ invalid json ";
 
-        assertThrows(JacksonException.class,
-            () -> Graph.extractFirstObject(invalidJson, JsonNode.class),
-            "Passing invalid JSON should throw a JsonProcessingException.");
+        assertThrows(
+                JacksonException.class,
+                () -> Graph.extractFirstObject(invalidJson, JsonNode.class),
+                "Passing invalid JSON should throw a JsonProcessingException.");
     }
 }

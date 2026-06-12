@@ -1,5 +1,10 @@
 package uk.gov.legislation.transform.simple;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+
+import java.io.IOException;
+import java.util.stream.Stream;
 import net.sf.saxon.s9api.SaxonApiException;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -8,12 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import uk.gov.legislation.Application;
 import uk.gov.legislation.api.responses.FragmentMetadata;
 import uk.gov.legislation.converters.FragmentMetadataConverter;
-
-import java.io.IOException;
-import java.util.stream.Stream;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
 
 @SpringBootTest(classes = Application.class)
 class UpToDateTest {
@@ -40,5 +39,4 @@ class UpToDateTest {
         String expected = read("/" + id.replace('/', '_') + "/meta.json");
         assertEquals(expected, actual);
     }
-
 }

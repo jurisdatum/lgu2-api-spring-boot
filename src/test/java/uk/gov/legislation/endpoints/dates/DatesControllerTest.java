@@ -28,11 +28,9 @@ import uk.gov.legislation.data.marklogic.search.SearchResults;
 @WebMvcTest(DatesController.class)
 class DatesControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Search search;
+    @MockitoBean private Search search;
 
     private static final ZoneId LONDON = ZoneId.of("Europe/London");
 
@@ -48,11 +46,10 @@ class DatesControllerTest {
         // Capture the current date before the request to guard against a midnight rollover.
         LocalDate beforeRequest = LocalDate.now(LONDON);
 
-        mockMvc.perform(get("/dates/published")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(content().json("[]"));  // Expecting an empty list
+        mockMvc.perform(get("/dates/published").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(content().json("[]")); // Expecting an empty list
 
         // Second capture after the request so we allow either “yesterday” value.
         LocalDate afterRequest = LocalDate.now(LONDON);
@@ -81,12 +78,11 @@ class DatesControllerTest {
 
         LocalDate beforeRequest = LocalDate.now(LONDON);
 
-        mockMvc.perform(get("/dates/published")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$[0].date").value("2023-09-24"))
-            .andExpect(jsonPath("$[0].count").value(5));
+        mockMvc.perform(get("/dates/published").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$[0].date").value("2023-09-24"))
+                .andExpect(jsonPath("$[0].count").value(5));
 
         LocalDate afterRequest = LocalDate.now(LONDON);
 
@@ -118,14 +114,13 @@ class DatesControllerTest {
 
         LocalDate beforeRequest = LocalDate.now(LONDON);
 
-        mockMvc.perform(get("/dates/published")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$[0].date").value("2023-09-24"))
-            .andExpect(jsonPath("$[0].count").value(3))
-            .andExpect(jsonPath("$[1].date").value("2023-09-23"))
-            .andExpect(jsonPath("$[1].count").value(7));
+        mockMvc.perform(get("/dates/published").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$[0].date").value("2023-09-24"))
+                .andExpect(jsonPath("$[0].count").value(3))
+                .andExpect(jsonPath("$[1].date").value("2023-09-23"))
+                .andExpect(jsonPath("$[1].count").value(7));
 
         LocalDate afterRequest = LocalDate.now(LONDON);
 
@@ -137,14 +132,14 @@ class DatesControllerTest {
         assertPublishedDate(beforeRequest, afterRequest, capturedParams.published);
     }
 
-    private static void assertPublishedDate(LocalDate beforeRequest, LocalDate afterRequest, LocalDate actual) {
+    private static void assertPublishedDate(
+            LocalDate beforeRequest, LocalDate afterRequest, LocalDate actual) {
         LocalDate expectedBefore = beforeRequest.minusDays(1);
         LocalDate expectedAfter = afterRequest.minusDays(1);
         assertTrue(
-            actual.equals(expectedBefore) || actual.equals(expectedAfter),
-            () -> "Published date should be yesterday (accepted values: %s or %s) but was %s"
-                .formatted(expectedBefore, expectedAfter, actual)
-        );
+                actual.equals(expectedBefore) || actual.equals(expectedAfter),
+                () ->
+                        "Published date should be yesterday (accepted values: %s or %s) but was %s"
+                                .formatted(expectedBefore, expectedAfter, actual));
     }
-
 }

@@ -1,12 +1,11 @@
 package uk.gov.legislation.transform.simple.effects;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import java.util.Collections;
+import java.util.List;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import uk.gov.legislation.transform.simple.RichTextNode;
-
-import java.util.Collections;
-import java.util.List;
 
 public class Effect {
 
@@ -99,5 +98,4 @@ public class Effect {
 
     @JacksonXmlProperty(localName = "CommencementAuthority")
     public List<RichTextNode> commencementAuthority = Collections.emptyList();
-
 }

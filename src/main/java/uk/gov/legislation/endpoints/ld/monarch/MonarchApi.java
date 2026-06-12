@@ -13,24 +13,22 @@ import uk.gov.legislation.api.parameters.Monarch;
 public interface MonarchApi {
 
     @GetMapping(
-        path = "/ld/monarch/{monarch}",
-        produces = {
-            MediaType.APPLICATION_XML_VALUE,
-            MediaType.APPLICATION_JSON_VALUE,
-            "application/rdf+xml",
-            "application/rdf+json",
-            "application/ld+json",
-            "application/sparql-results+json",
-            "application/sparql-results+xml",
-            "text/csv",
-            "text/plain",
-            "text/turtle"
-        }
-    )
+            path = "/ld/monarch/{monarch}",
+            produces = {
+                MediaType.APPLICATION_XML_VALUE,
+                MediaType.APPLICATION_JSON_VALUE,
+                "application/rdf+xml",
+                "application/rdf+json",
+                "application/ld+json",
+                "application/sparql-results+json",
+                "application/sparql-results+xml",
+                "text/csv",
+                "text/plain",
+                "text/turtle"
+            })
     ResponseEntity<?> getMonarchInfo(
-        NativeWebRequest request,
-        @Parameter(description = "Monarch", example = "Eliz1")
-        @PathVariable @Monarch String monarch
-    ) throws Exception;
+            NativeWebRequest request,
+            @Parameter(description = "Monarch", example = "Eliz1") @PathVariable @Monarch
+                    String monarch)
+            throws Exception;
 }
-

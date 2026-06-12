@@ -39,23 +39,22 @@ import uk.gov.legislation.data.marklogic.search.SearchResults;
 @WebMvcTest(DocumentsController.class)
 class DocumentsControllerTest {
 
-    @Autowired
-    private MockMvc mockMvc;
+    @Autowired private MockMvc mockMvc;
 
-    @MockitoBean
-    private Search search;
+    @MockitoBean private Search search;
 
-    @MockitoBean
-    private ContentNegotiationManager negotiation;
+    @MockitoBean private ContentNegotiationManager negotiation;
 
     private final SearchResults mockResults = new SearchResults();
     private final PageOfDocuments mockPage = new PageOfDocuments();
     private final String type = "ukpga";
     private final int page = 1;
-    private final String atom ="""
-    <feed xmlns='http://www.w3.org/2005/Atom'>
-        <updated>2025-01-01T00:00:00Z</updated>
-    </feed>""";
+    private final String atom =
+            """
+            <feed xmlns='http://www.w3.org/2005/Atom'>
+                <updated>2025-01-01T00:00:00Z</updated>
+            </feed>\
+            """;
 
     @BeforeEach
     void setup() {
@@ -67,44 +66,52 @@ class DocumentsControllerTest {
     @DisplayName("Should return documents by type in JSON or Atom")
     void shouldReturnDocsByType() throws Exception {
 
-            when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
-            when(search.get(argThat(params -> type.equals(params.type) && params.page == page)))
+        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
+        when(search.get(argThat(params -> type.equals(params.type) && params.page == page)))
                 .thenReturn(mockResults);
 
-            try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
-                mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null))
+        try (MockedStatic<DocumentsFeedConverter> mockStatic =
+                mockStatic(DocumentsFeedConverter.class)) {
+            mockStatic
+                    .when(() -> DocumentsFeedConverter.convert(mockResults, null))
                     .thenReturn(mockPage);
 
-                mockMvc.perform(get("/documents/{type}", type)
-                        .param("page", String.valueOf(page))
-                        .accept(MediaType.APPLICATION_JSON))
+            mockMvc.perform(
+                            get("/documents/{type}", type)
+                                    .param("page", String.valueOf(page))
+                                    .accept(MediaType.APPLICATION_JSON))
                     .andExpect(status().isOk())
                     .andExpect(content().contentType(MediaType.APPLICATION_JSON));
-            }
-
-            verify(search).get(argThat(params -> type.equals(params.type) && params.page == page));
         }
+
+        verify(search).get(argThat(params -> type.equals(params.type) && params.page == page));
+    }
 
     @Test
     @DisplayName("Should return Atom feed by type")
     void shouldReturnAtomByType() throws Exception {
 
-        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
-        when(search.getAtomStream(argThat(params -> type.equals(params.type) && params.page == page)))
-            .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
+        when(negotiation.resolveMediaTypes(any()))
+                .thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
+        when(search.getAtomStream(
+                        argThat(params -> type.equals(params.type) && params.page == page)))
+                .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
 
-        MvcResult mvcResult = mockMvc.perform(get("/documents/{type}", type)
-                .param("page", String.valueOf(page))
-                .accept(MediaType.APPLICATION_ATOM_XML))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/documents/{type}", type)
+                                        .param("page", String.valueOf(page))
+                                        .accept(MediaType.APPLICATION_ATOM_XML))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
-            .andExpect(content().string(atom));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
+                .andExpect(content().string(atom));
 
-        verify(search).getAtomStream(argThat(params -> type.equals(params.type) && params.page == page));
+        verify(search)
+                .getAtomStream(argThat(params -> type.equals(params.type) && params.page == page));
     }
 
     @Test
@@ -113,38 +120,56 @@ class DocumentsControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
         when(search.get(any())).thenReturn(mockResults);
 
-        try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
-            mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null)).thenReturn(mockPage);
+        try (MockedStatic<DocumentsFeedConverter> mockStatic =
+                mockStatic(DocumentsFeedConverter.class)) {
+            mockStatic
+                    .when(() -> DocumentsFeedConverter.convert(mockResults, null))
+                    .thenReturn(mockPage);
 
-            mockMvc.perform(get("/documents/ukpga/2020")
-                    .param("page", "1")
-                    .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON));
+            mockMvc.perform(
+                            get("/documents/ukpga/2020")
+                                    .param("page", "1")
+                                    .accept(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(MediaType.APPLICATION_JSON));
         }
-        verify(search).get(argThat(p ->type.equals(p.type) && p.year == 2020));
+        verify(search).get(argThat(p -> type.equals(p.type) && p.year == 2020));
     }
 
     @Test
     @DisplayName("Should return Atom by type and year")
     void shouldReturnAtomByTypeAndYear() throws Exception {
 
-        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
-        when(search.getAtomStream(argThat(params -> type.equals(params.type) && params.year == 2020 && params.page == page)))
-            .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
+        when(negotiation.resolveMediaTypes(any()))
+                .thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
+        when(search.getAtomStream(
+                        argThat(
+                                params ->
+                                        type.equals(params.type)
+                                                && params.year == 2020
+                                                && params.page == page)))
+                .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
 
-        MvcResult mvcResult = mockMvc.perform(get("/documents/ukpga/2020")
-                .param("page", "1")
-                .accept(MediaType.APPLICATION_ATOM_XML))
-            .andExpect(request().asyncStarted())
-            .andReturn();
+        MvcResult mvcResult =
+                mockMvc.perform(
+                                get("/documents/ukpga/2020")
+                                        .param("page", "1")
+                                        .accept(MediaType.APPLICATION_ATOM_XML))
+                        .andExpect(request().asyncStarted())
+                        .andReturn();
 
         mockMvc.perform(asyncDispatch(mvcResult))
-            .andExpect(status().isOk())
-            .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
-            .andExpect(content().string(atom));
+                .andExpect(status().isOk())
+                .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_ATOM_XML))
+                .andExpect(content().string(atom));
 
-        verify(search).getAtomStream(argThat(params -> type.equals(params.type) && params.year == 2020 && params.page == 1));
+        verify(search)
+                .getAtomStream(
+                        argThat(
+                                params ->
+                                        type.equals(params.type)
+                                                && params.year == 2020
+                                                && params.page == 1));
     }
 
     @Test
@@ -153,32 +178,48 @@ class DocumentsControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
         when(search.get(any())).thenReturn(mockResults);
 
-        try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
-            mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null)).thenReturn(mockPage);
+        try (MockedStatic<DocumentsFeedConverter> mockStatic =
+                mockStatic(DocumentsFeedConverter.class)) {
+            mockStatic
+                    .when(() -> DocumentsFeedConverter.convert(mockResults, null))
+                    .thenReturn(mockPage);
 
-            mockMvc.perform(get("/documents/new/uk")
-                    .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON));
+            mockMvc.perform(get("/documents/new/uk").accept(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isOk())
+                    .andExpect(content().contentType(MediaType.APPLICATION_JSON));
         }
 
-        verify(search).get(argThat(params -> params.sort == uk.gov.legislation.data.marklogic.search.Parameters.Sort.PUBLISHED && params.page == 1));
+        verify(search)
+                .get(
+                        argThat(
+                                params ->
+                                        params.sort
+                                                        == uk.gov.legislation.data.marklogic.search
+                                                                .Parameters.Sort.PUBLISHED
+                                                && params.page == 1));
     }
 
     @Test
     @DisplayName("Should return Atom from /documents/new/uk")
     void shouldReturnNewDocumentsAsAtom() throws Exception {
-        when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
+        when(negotiation.resolveMediaTypes(any()))
+                .thenReturn(List.of(MediaType.APPLICATION_ATOM_XML));
         when(search.getAtomStream(any()))
-            .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
+                .thenReturn(new ByteArrayInputStream(atom.getBytes(StandardCharsets.UTF_8)));
 
         // This endpoint uses ResponseEntity<?> with runtime content negotiation,
         // which doesn't support async dispatch in MockMvc. Just verify status and service call.
-        mockMvc.perform(get("/documents/new/uk")
-                .accept(MediaType.APPLICATION_ATOM_XML))
-            .andExpect(status().isOk());
+        mockMvc.perform(get("/documents/new/uk").accept(MediaType.APPLICATION_ATOM_XML))
+                .andExpect(status().isOk());
 
-        verify(search).getAtomStream(argThat(params -> params.sort == uk.gov.legislation.data.marklogic.search.Parameters.Sort.PUBLISHED && params.page == 1));
+        verify(search)
+                .getAtomStream(
+                        argThat(
+                                params ->
+                                        params.sort
+                                                        == uk.gov.legislation.data.marklogic.search
+                                                                .Parameters.Sort.PUBLISHED
+                                                && params.page == 1));
     }
 
     @ParameterizedTest
@@ -187,13 +228,18 @@ class DocumentsControllerTest {
     void shouldReturn400ForInvalidType(String invalidType) throws Exception {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
 
-        mockMvc.perform(get("/documents/{type}/2020", invalidType)
-                .param("page", "1")
-                .accept(MediaType.APPLICATION_JSON))
-            .andExpect(status().isBadRequest())
-            .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
-            .andExpect(jsonPath("$.message")
-                .value("The document type '" + invalidType + "' is not recognized."));
+        mockMvc.perform(
+                        get("/documents/{type}/2020", invalidType)
+                                .param("page", "1")
+                                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.error").value("Unknown Document Type Error"))
+                .andExpect(
+                        jsonPath("$.message")
+                                .value(
+                                        "The document type '"
+                                                + invalidType
+                                                + "' is not recognized."));
 
         verifyNoInteractions(search);
     }
@@ -204,18 +250,21 @@ class DocumentsControllerTest {
         when(negotiation.resolveMediaTypes(any())).thenReturn(List.of(MediaType.APPLICATION_JSON));
         when(search.get(any())).thenReturn(mockResults);
 
-        try (MockedStatic<DocumentsFeedConverter> mockStatic = mockStatic(DocumentsFeedConverter.class)) {
-            mockStatic.when(() -> DocumentsFeedConverter.convert(mockResults, null)).thenReturn(mockPage);
+        try (MockedStatic<DocumentsFeedConverter> mockStatic =
+                mockStatic(DocumentsFeedConverter.class)) {
+            mockStatic
+                    .when(() -> DocumentsFeedConverter.convert(mockResults, null))
+                    .thenReturn(mockPage);
 
-            mockMvc.perform(get("/documents/ukpga")
-                    .param("page", "1")
-                    .accept(MediaType.APPLICATION_JSON))
-                .andExpect(status().isOk())
-                .andExpect(header().exists("Last-Modified"))
-                .andExpect(header().string("Last-Modified", "Wed, 01 Jan 2025 00:00:00 GMT"));
+            mockMvc.perform(
+                            get("/documents/ukpga")
+                                    .param("page", "1")
+                                    .accept(MediaType.APPLICATION_JSON))
+                    .andExpect(status().isOk())
+                    .andExpect(header().exists("Last-Modified"))
+                    .andExpect(header().string("Last-Modified", "Wed, 01 Jan 2025 00:00:00 GMT"));
         }
 
         verify(search).get(argThat(params -> type.equals(params.type) && params.page == 1));
     }
-
 }

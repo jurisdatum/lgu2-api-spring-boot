@@ -1,11 +1,10 @@
 package uk.gov.legislation.util;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import uk.gov.legislation.api.responses.DocumentMetadata;
 import uk.gov.legislation.api.responses.Effect;
 import uk.gov.legislation.api.responses.FragmentMetadata;
-
-import java.time.LocalDate;
-import java.time.ZoneId;
 
 public class UpToDate {
 
@@ -16,6 +15,7 @@ public class UpToDate {
         LocalDate today = LocalDate.now(LONDON);
         setUpToDate(meta, today);
     }
+
     public static void setUpToDate(DocumentMetadata meta, LocalDate cutoff) {
         meta.unappliedEffects.forEach(e -> markEffect(e, cutoff));
         meta.upToDate = meta.unappliedEffects.stream().noneMatch(effect -> effect.outstanding);
@@ -25,6 +25,7 @@ public class UpToDate {
         LocalDate today = LocalDate.now(LONDON);
         setUpToDate(meta, today);
     }
+
     public static void setUpToDate(FragmentMetadata meta, LocalDate cutoff) {
         meta.upToDate = UpToDate.mark(meta.unappliedEffects, cutoff);
     }
@@ -34,27 +35,22 @@ public class UpToDate {
         effects.fragment.forEach(e -> markEffect(e, cutoff));
         effects.ancestor.forEach(e -> markEffect(e, cutoff));
         return effects.fragment.stream().noneMatch(effect -> effect.outstanding)
-            && effects.ancestor.stream().noneMatch(effect -> effect.outstanding);
+                && effects.ancestor.stream().noneMatch(effect -> effect.outstanding);
     }
 
     private static void markEffect(Effect effect, LocalDate cutoff) {
         effect.outstanding = false;
-        if (effect.applied)
-            return;
-        if (!effect.required)
-            return;
+        if (effect.applied) return;
+        if (!effect.required) return;
         effect.inForce.forEach(in -> markInForce(in, cutoff));
         effect.outstanding = effect.inForce.stream().anyMatch(inForce -> inForce.outstanding);
     }
 
     private static void markInForce(Effect.InForce inForce, LocalDate cutoff) {
         inForce.outstanding = false;
-        if (inForce.date == null)
-            return;
+        if (inForce.date == null) return;
         // check prospective?
-        if (inForce.date.isAfter(cutoff))
-            return;
+        if (inForce.date.isAfter(cutoff)) return;
         inForce.outstanding = true;
     }
-
 }

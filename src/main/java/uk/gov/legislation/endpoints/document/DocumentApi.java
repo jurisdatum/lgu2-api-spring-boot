@@ -22,27 +22,25 @@ import uk.gov.legislation.api.parameters.Years;
 import uk.gov.legislation.api.responses.Associated;
 import uk.gov.legislation.api.responses.Document;
 
-/**
- * API for document retrieval and transformation operations.
- */
+/** API for document retrieval and transformation operations. */
 @Tag(name = "Documents")
 public interface DocumentApi {
 
-    /**
-     * Retrieves document content in CLML format.
-     */
+    /** Retrieves document content in CLML format. */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/xml")
     @Operation(
-        summary = "get a document with a calendar year",
-        parameters = {
-            @Parameter(
-                name = "Accept-Language",
-                description = "language of the document",
-                in = ParameterIn.HEADER,
-                schema = @Schema(type = "string", allowableValues = { "en", "cy" }, examples = "en")
-            )
-        }
-    )
+            summary = "get a document with a calendar year",
+            parameters = {
+                @Parameter(
+                        name = "Accept-Language",
+                        description = "language of the document",
+                        in = ParameterIn.HEADER,
+                        schema =
+                                @Schema(
+                                        type = "string",
+                                        allowableValues = {"en", "cy"},
+                                        examples = "en"))
+            })
     ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Year int year,
@@ -52,16 +50,18 @@ public interface DocumentApi {
 
     @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/xml")
     @Operation(
-        summary = "get a document with a regnal year",
-        parameters = {
-            @Parameter(
-                name = "Accept-Language",
-                description = "language of the document",
-                in = ParameterIn.HEADER,
-                schema = @Schema(type = "string", allowableValues = { "en", "cy" }, examples = "en")
-            )
-        }
-    )
+            summary = "get a document with a regnal year",
+            parameters = {
+                @Parameter(
+                        name = "Accept-Language",
+                        description = "language of the document",
+                        in = ParameterIn.HEADER,
+                        schema =
+                                @Schema(
+                                        type = "string",
+                                        allowableValues = {"en", "cy"},
+                                        examples = "en"))
+            })
     ResponseEntity<StreamingResponseBody> getDocumentClml(
             @PathVariable @Type String type,
             @PathVariable @Monarch String monarch,
@@ -72,12 +72,9 @@ public interface DocumentApi {
 
     @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/xml")
     ResponseEntity<StreamingResponseBody> getImpactAssessmentClml(
-        @PathVariable @Year int year,
-        @PathVariable @Number int number) throws Exception;
+            @PathVariable @Year int year, @PathVariable @Number int number) throws Exception;
 
-    /**
-     * Retrieves document content in AKN format.
-     */
+    /** Retrieves document content in AKN format. */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/akn+xml")
     ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
@@ -86,7 +83,9 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/akn+xml")
+    @GetMapping(
+            value = "/document/{type}/{monarch}/{years}/{number}",
+            produces = "application/akn+xml")
     ResponseEntity<StreamingResponseBody> getDocumentAkn(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -95,9 +94,7 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    /**
-     * Retrieves document content in HTML format.
-     */
+    /** Retrieves document content in HTML format. */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "text/html")
     ResponseEntity<StreamingResponseBody> getDocumentHtml(
             @PathVariable String type,
@@ -115,53 +112,60 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    /**
-     * Retrieves document metadata and HTML content in JSON format.
-     */
+    /** Retrieves document metadata and HTML content in JSON format. */
     @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/json")
     ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale)
+            throws Exception;
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/json")
+    @GetMapping(
+            value = "/document/{type}/{monarch}/{years}/{number}",
+            produces = "application/json")
     ResponseEntity<Document> getDocumentJson(
             @PathVariable String type,
             @PathVariable String monarch,
             @PathVariable String years,
             @PathVariable int number,
             @RequestParam Optional<String> version,
-            Locale locale) throws Exception;
+            Locale locale)
+            throws Exception;
 
     @GetMapping(value = "/document/ukia/{year}/{number}", produces = "application/json")
     ResponseEntity<Associated> getImpactAssessmentJson(
-        @PathVariable int year,
-        @PathVariable int number) throws Exception;
+            @PathVariable int year, @PathVariable int number) throws Exception;
 
     /* PDF */
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = MediaType.APPLICATION_PDF_VALUE)
+    @GetMapping(
+            value = "/document/{type}/{year}/{number}",
+            produces = MediaType.APPLICATION_PDF_VALUE)
     ResponseEntity<StreamingResponseBody> pdf(
-        @PathVariable String type,
-        @PathVariable int year,
-        @PathVariable int number,
-        @RequestParam Optional<String> version,
-        Locale locale);
+            @PathVariable String type,
+            @PathVariable int year,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            Locale locale);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = MediaType.APPLICATION_PDF_VALUE)
+    @GetMapping(
+            value = "/document/{type}/{monarch}/{years}/{number}",
+            produces = MediaType.APPLICATION_PDF_VALUE)
     ResponseEntity<StreamingResponseBody> pdf(
-        @PathVariable String type,
-        @PathVariable String monarch,
-        @PathVariable String years,
-        @PathVariable int number,
-        @RequestParam Optional<String> version,
-        Locale locale);
+            @PathVariable String type,
+            @PathVariable String monarch,
+            @PathVariable String years,
+            @PathVariable int number,
+            @RequestParam Optional<String> version,
+            Locale locale);
 
     /* Word (.docx) */
 
-    @GetMapping(value = "/document/{type}/{year}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    @GetMapping(
+            value = "/document/{type}/{year}/{number}",
+            produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable int year,
@@ -169,7 +173,9 @@ public interface DocumentApi {
             @RequestParam Optional<String> version,
             Locale locale);
 
-    @GetMapping(value = "/document/{type}/{monarch}/{years}/{number}", produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+    @GetMapping(
+            value = "/document/{type}/{monarch}/{years}/{number}",
+            produces = "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
     ResponseEntity<StreamingResponseBody> docx(
             @PathVariable String type,
             @PathVariable String monarch,
@@ -177,5 +183,4 @@ public interface DocumentApi {
             @PathVariable int number,
             @RequestParam Optional<String> version,
             Locale locale);
-
 }

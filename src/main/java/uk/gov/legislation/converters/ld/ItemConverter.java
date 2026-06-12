@@ -10,12 +10,13 @@ public class ItemConverter {
     public static Item convert(ItemLD ld) {
         Item item = new Item();
         item.uri = ld.id;
-        item.type = ld.type.stream()
-            .filter(type -> !Resources.Leg.Item.equals(type))
-            .filter(type -> !Resources.Leg.Legislation.equals(type))
-            .map(type -> type.substring(Resources.Leg.Prefix.length()))
-            .findFirst()
-            .orElse(null);
+        item.type =
+                ld.type.stream()
+                        .filter(type -> !Resources.Leg.Item.equals(type))
+                        .filter(type -> !Resources.Leg.Legislation.equals(type))
+                        .map(type -> type.substring(Resources.Leg.Prefix.length()))
+                        .findFirst()
+                        .orElse(null);
         item.year = ld.year;
         item.session = ld.session == null ? null : ld.session.toString().substring(41);
         item.number = ld.number;
@@ -27,12 +28,11 @@ public class ItemConverter {
         item.welshFullCitation = ValueAndLanguage.get(ld.fullCitation, "cy");
         item.commentaryCitation = ValueAndLanguage.get(ld.commentaryCitation, "en");
         item.welshCommentaryCitation = ValueAndLanguage.get(ld.commentaryCitation, "cy");
-        item.originalLanguages = ld.originalLanguageOfTextIsoCode.stream()
-            .map(value -> value.value).toList();
+        item.originalLanguages =
+                ld.originalLanguageOfTextIsoCode.stream().map(value -> value.value).toList();
         item.parent = ld.within;
         item.children = ld.contains;
         item.interpretations = ld.interpretation;
         return item;
     }
-
 }

@@ -3,14 +3,13 @@ package uk.gov.legislation.data.virtuoso.model;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.net.URI;
+import java.util.List;
+import java.util.Optional;
 import uk.gov.legislation.data.virtuoso.Resources;
 import uk.gov.legislation.data.virtuoso.Resources.Leg;
 import uk.gov.legislation.data.virtuoso.Resources.RDF;
 import uk.gov.legislation.data.virtuoso.rdf.RdfProperty;
-
-import java.net.URI;
-import java.util.List;
-import java.util.Optional;
 
 @Deprecated(forRemoval = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -25,9 +24,9 @@ public class Item {
 
     @JsonProperty(value = "type", index = 1)
     public String type() {
-        Optional<String> type = types.stream().filter(t -> Resources.Leg.DocumentTypes.contains(t)).findFirst();
-        if (type.isEmpty())
-            return null;
+        Optional<String> type =
+                types.stream().filter(t -> Resources.Leg.DocumentTypes.contains(t)).findFirst();
+        if (type.isEmpty()) return null;
         return type.get().substring(Resources.Leg.Prefix.length());
     }
 
@@ -53,5 +52,4 @@ public class Item {
     public String originalLanguage;
 
     public List<Interpretation> interpretations;
-
 }

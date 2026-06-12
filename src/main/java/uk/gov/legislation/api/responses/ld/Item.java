@@ -2,20 +2,16 @@ package uk.gov.legislation.api.responses.ld;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.net.URI;
 import java.util.List;
 
 public class Item {
 
-    @JsonProperty
-    public URI uri;
+    @JsonProperty public URI uri;
 
-    @JsonProperty
-    public String type;
+    @JsonProperty public String type;
 
-    @JsonProperty
-    public int year;
+    @JsonProperty public int year;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -25,21 +21,17 @@ public class Item {
     @JsonInclude(JsonInclude.Include.ALWAYS)
     public Integer number;
 
-    @JsonProperty
-    public String title;
+    @JsonProperty public String title;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshTitle;
 
-    @JsonProperty
-    public String citation;
+    @JsonProperty public String citation;
 
-    @JsonProperty
-    public String fullCitation;
+    @JsonProperty public String fullCitation;
 
-    @JsonProperty
-    public String commentaryCitation;
+    @JsonProperty public String commentaryCitation;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -53,8 +45,7 @@ public class Item {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public String welshCommentaryCitation;
 
-    @JsonProperty
-    public List<String> originalLanguages;
+    @JsonProperty public List<String> originalLanguages;
 
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -67,5 +58,4 @@ public class Item {
     @JsonProperty
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public List<String> interpretations;
-
 }

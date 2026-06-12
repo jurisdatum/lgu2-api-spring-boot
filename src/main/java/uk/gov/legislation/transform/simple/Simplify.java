@@ -48,7 +48,8 @@ public class Simplify {
         }
     }
 
-    private void transform(Source clml, Destination destination, Parameters params) throws SaxonApiException {
+    private void transform(Source clml, Destination destination, Parameters params)
+            throws SaxonApiException {
         Xslt30Transformer transformer = executable.load30();
         Map<QName, XdmValue> params2 = new LinkedHashMap<>(2);
         params2.put(IS_FRAGMENT_PARAM, new XdmAtomicValue(params.isFragment()));
@@ -82,29 +83,37 @@ public class Simplify {
 
     /* metadata */
 
-    private Metadata metadata(XdmNode clml, boolean isFragment) throws SaxonApiException, JacksonException {
+    private Metadata metadata(XdmNode clml, boolean isFragment)
+            throws SaxonApiException, JacksonException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
         return Contents.parse(simplified).meta;
     }
-    private Metadata metadata(String clml, boolean isFragment) throws SaxonApiException, JacksonException {
+
+    private Metadata metadata(String clml, boolean isFragment)
+            throws SaxonApiException, JacksonException {
         Parameters params = new Parameters(isFragment, false);
         String simplified = transform(clml, params);
         return Contents.parse(simplified).meta;
     }
 
-    public Metadata extractDocumentMetadata(XdmNode clml) throws SaxonApiException, JacksonException {
-        return metadata(clml, false);
-    }
-    public Metadata extractDocumentMetadata(String clml) throws SaxonApiException, JacksonException {
+    public Metadata extractDocumentMetadata(XdmNode clml)
+            throws SaxonApiException, JacksonException {
         return metadata(clml, false);
     }
 
-    public Metadata extractFragmentMetadata(XdmNode clml) throws SaxonApiException, JacksonException {
-        return metadata(clml, true);
+    public Metadata extractDocumentMetadata(String clml)
+            throws SaxonApiException, JacksonException {
+        return metadata(clml, false);
     }
-    public Metadata extractFragmentMetadata(String clml) throws SaxonApiException, JacksonException {
+
+    public Metadata extractFragmentMetadata(XdmNode clml)
+            throws SaxonApiException, JacksonException {
         return metadata(clml, true);
     }
 
+    public Metadata extractFragmentMetadata(String clml)
+            throws SaxonApiException, JacksonException {
+        return metadata(clml, true);
+    }
 }

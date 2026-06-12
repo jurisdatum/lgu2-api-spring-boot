@@ -41,16 +41,18 @@ class DocumentMetadataConverterTest {
         simple.longType = "ScottishOldAct";
         simple.status = Metadata.REVISED;
         simple.setValid("2000-01-01");
-        simple.setVersions(List.of(
-            Metadata.HasVersionEntry.of(null, "1991-02-01"),
-            Metadata.HasVersionEntry.of(null, "2007-01-01")));
+        simple.setVersions(
+                List.of(
+                        Metadata.HasVersionEntry.of(null, "1991-02-01"),
+                        Metadata.HasVersionEntry.of(null, "2007-01-01")));
 
         assertFalse(DocumentMetadataConverter.shouldComputeUpToDate(simple));
     }
 
     @Test
     void testConvertAltNumbersWithEmptyList() {
-        List <CommonMetadata.AltNumber> result = DocumentMetadataConverter.convertAltNumbers(Collections.emptyList());
+        List<CommonMetadata.AltNumber> result =
+                DocumentMetadataConverter.convertAltNumbers(Collections.emptyList());
         assertNotNull(result);
         assertTrue(result.isEmpty());
     }
@@ -60,7 +62,8 @@ class DocumentMetadataConverterTest {
         Metadata.AltNum simpleAltNum1 = createAltNum("C", "1");
         Metadata.AltNum simpleAltNum2 = createAltNum("L", "2");
 
-        List <CommonMetadata.AltNumber> result = DocumentMetadataConverter.convertAltNumbers(List.of(simpleAltNum1, simpleAltNum2));
+        List<CommonMetadata.AltNumber> result =
+                DocumentMetadataConverter.convertAltNumbers(List.of(simpleAltNum1, simpleAltNum2));
         assertNotNull(result);
         assertEquals(2, result.size());
         assertEquals("C", result.get(0).category);

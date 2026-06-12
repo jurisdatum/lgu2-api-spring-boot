@@ -1,5 +1,9 @@
 package uk.gov.legislation.data.virtuoso.queries;
 
+import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
+
+import java.io.IOException;
+import java.util.Optional;
 import org.springframework.stereotype.Repository;
 import tools.jackson.databind.node.ArrayNode;
 import tools.jackson.databind.node.ObjectNode;
@@ -10,17 +14,14 @@ import uk.gov.legislation.data.virtuoso.Virtuoso;
 import uk.gov.legislation.data.virtuoso.jsonld.ClassLD;
 import uk.gov.legislation.data.virtuoso.jsonld.Graph;
 
-import java.io.IOException;
-import java.util.Optional;
-
-import static uk.gov.legislation.data.virtuoso.queries.Query.makeSingleConstructQuery;
-
 @Repository
 public class ClassQuery {
 
     private final Virtuoso virtuoso;
 
-    public ClassQuery(Virtuoso virtuoso) { this.virtuoso = virtuoso; }
+    public ClassQuery(Virtuoso virtuoso) {
+        this.virtuoso = virtuoso;
+    }
 
     String makeSparqlQuery(String name) {
         String uri = Resources.Leg.Prefix + name;
@@ -36,9 +37,8 @@ public class ClassQuery {
         String json = get(name, "application/ld+json");
         ArrayNode graph = Graph.extract(json);
         return Optional.ofNullable(graph)
-            .map(grph -> (ObjectNode) grph.get(0))
-            .map(ClassLD::convert)
-            .map(ClassConverter::convert);
+                .map(grph -> (ObjectNode) grph.get(0))
+                .map(ClassLD::convert)
+                .map(ClassConverter::convert);
     }
-
 }

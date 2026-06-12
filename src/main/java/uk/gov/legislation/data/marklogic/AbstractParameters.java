@@ -16,37 +16,35 @@ public abstract class AbstractParameters {
 
     String makeKey(Field field) {
         return CAMEL_TO_LISP_CASE
-            .matcher(field.getName())
-            .replaceAll("$1-$2")
-            .toLowerCase(Locale.ROOT);
+                .matcher(field.getName())
+                .replaceAll("$1-$2")
+                .toLowerCase(Locale.ROOT);
     }
 
     public String toQuery() {
         Map<String, String> params = new LinkedHashMap<>();
-        for (Field field: getClass().getDeclaredFields()) {
-            if (Modifier.isStatic(field.getModifiers()))
-                continue;
-            if (field.isSynthetic())
-                continue;
+        for (Field field : getClass().getDeclaredFields()) {
+            if (Modifier.isStatic(field.getModifiers())) continue;
+            if (field.isSynthetic()) continue;
             Object value;
             try {
                 value = field.get(this);
             } catch (IllegalAccessException e) {
                 continue;
             }
-            if (value == null)
-                continue;
+            if (value == null) continue;
             String key = makeKey(field);
             params.put(key, URLEncoder.encode(value.toString(), StandardCharsets.UTF_8));
         }
-        if (params.isEmpty())
-            return "";
-        return "?" + params.entrySet().stream()
-            .map(entry -> entry.getKey() + "=" + entry.getValue())
-            .collect(Collectors.joining("&"));
+        if (params.isEmpty()) return "";
+        return "?"
+                + params.entrySet().stream()
+                        .map(entry -> entry.getKey() + "=" + entry.getValue())
+                        .collect(Collectors.joining("&"));
     }
 
     @Override
-    public String toString() { return toQuery(); }
-
+    public String toString() {
+        return toQuery();
+    }
 }

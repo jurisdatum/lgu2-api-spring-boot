@@ -7,11 +7,10 @@ public class RichText {
 
     public static class Node {
 
-        @Schema(allowableValues = { "text", "link" })
+        @Schema(allowableValues = {"text", "link"})
         public String type;
 
-        @Schema
-        public String text;
+        @Schema public String text;
 
         @JsonInclude(JsonInclude.Include.NON_NULL)
         @Schema(example = "section-1")
@@ -24,7 +23,5 @@ public class RichText {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         @Schema(nullable = true, defaultValue = "false")
         public Boolean missing;
-
     }
-
 }

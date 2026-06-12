@@ -15,10 +15,8 @@ public class Parameters {
     private Optional<String> lang;
 
     public Parameters(String type, String year, long number) {
-        if (type == null)
-            throw new IllegalArgumentException();
-        if (year == null)
-            throw new IllegalArgumentException();
+        if (type == null) throw new IllegalArgumentException();
+        if (year == null) throw new IllegalArgumentException();
         this.type = type;
         this.year = year;
         this.number = number;
@@ -28,31 +26,49 @@ public class Parameters {
         this.lang = Optional.empty();
     }
 
-    public String type() { return type; }
+    public String type() {
+        return type;
+    }
 
-    public String year() { return year; }
+    public String year() {
+        return year;
+    }
 
-    public long number() { return number; }
+    public long number() {
+        return number;
+    }
 
-    public Optional<String> version() { return version; }
+    public Optional<String> version() {
+        return version;
+    }
+
     public Parameters version(Optional<String> version) {
         this.version = version;
         return this;
     }
 
-    public Optional<String> view() { return view; }
+    public Optional<String> view() {
+        return view;
+    }
+
     public Parameters view(Optional<String> view) {
         this.view = view;
         return this;
     }
 
-    public Optional<String> section() { return section; }
+    public Optional<String> section() {
+        return section;
+    }
+
     public Parameters section(Optional<String> section) {
         this.section = section;
         return this;
     }
 
-    public Optional<String> lang() { return lang; }
+    public Optional<String> lang() {
+        return lang;
+    }
+
     public Parameters lang(Optional<String> lang) {
         this.lang = lang;
         return this;
@@ -60,9 +76,12 @@ public class Parameters {
 
     public String buildQuery() {
         StringBuilder query = new StringBuilder();
-        query.append("?type=").append(encode(type))
-                .append("&year=").append(encode(year))
-                .append("&number=").append(number);
+        query.append("?type=")
+                .append(encode(type))
+                .append("&year=")
+                .append(encode(year))
+                .append("&number=")
+                .append(number);
         version.ifPresent(v -> query.append("&version=").append(encode(v)));
         view.ifPresent(v -> query.append("&view=").append(encode(v)));
         section.ifPresent(s -> query.append("&section=").append(encode(s)));
@@ -73,5 +92,4 @@ public class Parameters {
     public static String encode(String value) {
         return URLEncoder.encode(value, StandardCharsets.US_ASCII);
     }
-
 }

@@ -1,20 +1,20 @@
 package uk.gov.legislation.api.test;
 
-import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
-import org.junit.jupiter.api.extension.BeforeEachCallback;
-import org.junit.jupiter.api.extension.ExtensionContext;
-import org.junit.jupiter.api.extension.TestWatcher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import java.lang.reflect.Method;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
+import org.junit.jupiter.api.extension.AfterTestExecutionCallback;
+import org.junit.jupiter.api.extension.BeforeEachCallback;
+import org.junit.jupiter.api.extension.ExtensionContext;
+import org.junit.jupiter.api.extension.TestWatcher;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-
-public class LoggingTestWatcher implements TestWatcher, BeforeEachCallback, AfterTestExecutionCallback {
+public class LoggingTestWatcher
+        implements TestWatcher, BeforeEachCallback, AfterTestExecutionCallback {
 
     private static final Logger log = LoggerFactory.getLogger(LoggingTestWatcher.class);
 
@@ -33,18 +33,26 @@ public class LoggingTestWatcher implements TestWatcher, BeforeEachCallback, Afte
 
     @Override
     public void afterTestExecution(ExtensionContext context) {
-        long duration = Duration.between(
-            getStore(context).remove(START_TIME_KEY, Instant.class),
-            Instant.now()
-        ).toMillis();
+        long duration =
+                Duration.between(
+                                getStore(context).remove(START_TIME_KEY, Instant.class),
+                                Instant.now())
+                        .toMillis();
 
-        log.info("{}⏱️  DURATION: {}ms for {}.{}{}{}",
-            CYAN, duration, getClassName(context), getMethodName(context), formatTags(context), RESET);
+        log.info(
+                "{}⏱️  DURATION: {}ms for {}.{}{}{}",
+                CYAN,
+                duration,
+                getClassName(context),
+                getMethodName(context),
+                formatTags(context),
+                RESET);
     }
 
     @Override
     public void testSuccessful(ExtensionContext context) {
-        log.info("{}✅  PASSED: {}{}{}", GREEN, context.getDisplayName(), formatTags(context), RESET);
+        log.info(
+                "{}✅  PASSED: {}{}{}", GREEN, context.getDisplayName(), formatTags(context), RESET);
     }
 
     @Override
@@ -54,18 +62,31 @@ public class LoggingTestWatcher implements TestWatcher, BeforeEachCallback, Afte
 
     @Override
     public void testAborted(ExtensionContext context, Throwable cause) {
-        log.warn("{}🚫 ABORTED  {}.{}{} | Reason: {}{}",
-            YELLOW, getClassName(context), getMethodName(context), formatTags(context), cause.getMessage(), RESET);
+        log.warn(
+                "{}🚫 ABORTED  {}.{}{} | Reason: {}{}",
+                YELLOW,
+                getClassName(context),
+                getMethodName(context),
+                formatTags(context),
+                cause.getMessage(),
+                RESET);
     }
 
     @Override
     public void testDisabled(ExtensionContext context, Optional<String> reason) {
-        log.warn("{}⚠️ DISABLED {}.{}{} | Reason: {}{}",
-            YELLOW, getClassName(context), getMethodName(context), formatTags(context), reason.orElse("Not specified"), RESET);
+        log.warn(
+                "{}⚠️ DISABLED {}.{}{} | Reason: {}{}",
+                YELLOW,
+                getClassName(context),
+                getMethodName(context),
+                formatTags(context),
+                reason.orElse("Not specified"),
+                RESET);
     }
 
     private ExtensionContext.Store getStore(ExtensionContext context) {
-        return context.getStore(ExtensionContext.Namespace.create(getClass(), context.getRequiredTestMethod()));
+        return context.getStore(
+                ExtensionContext.Namespace.create(getClass(), context.getRequiredTestMethod()));
     }
 
     private String getClassName(ExtensionContext context) {
@@ -77,26 +98,39 @@ public class LoggingTestWatcher implements TestWatcher, BeforeEachCallback, Afte
     }
 
     private String formatTags(ExtensionContext context) {
-        return context.getTags().isEmpty() ? "" : " [tags: " + String.join(", ", context.getTags()) + "]";
+        return context.getTags().isEmpty()
+                ? ""
+                : " [tags: " + String.join(", ", context.getTags()) + "]";
     }
 
     private void logMessage(String prefix, String color, ExtensionContext context) {
-        log.info("{}{} {}.{}{} {}", color, prefix, getClassName(context), getMethodName(context), formatTags(context), RESET);
+        log.info(
+                "{}{} {}.{}{} {}",
+                color,
+                prefix,
+                getClassName(context),
+                getMethodName(context),
+                formatTags(context),
+                RESET);
     }
 
     private void logFailureWithStackTrace(String testName, Throwable exception) {
         log.error(buildErrorMessage(testName, exception));
-        Optional.ofNullable(exception.getCause()).ifPresent(cause -> log.error("Caused by:", cause));
+        Optional.ofNullable(exception.getCause())
+                .ifPresent(cause -> log.error("Caused by:", cause));
     }
 
     private String buildErrorMessage(String testName, Throwable exception) {
         return RED
-            + "❌  TEST FAILED: " + testName + "\n"
-            + "Reason: " + exception.getMessage() + "\n"
-            + "Stack Trace:\n"
-            + Arrays.stream(exception.getStackTrace())
-                .map(e -> "\tat " + e + "\n")
-                .collect(Collectors.joining());
+                + "❌  TEST FAILED: "
+                + testName
+                + "\n"
+                + "Reason: "
+                + exception.getMessage()
+                + "\n"
+                + "Stack Trace:\n"
+                + Arrays.stream(exception.getStackTrace())
+                        .map(e -> "\tat " + e + "\n")
+                        .collect(Collectors.joining());
     }
 }
-

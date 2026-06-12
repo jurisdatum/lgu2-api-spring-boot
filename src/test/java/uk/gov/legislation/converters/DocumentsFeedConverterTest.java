@@ -31,18 +31,18 @@ class DocumentsFeedConverterTest {
 
         PageOfDocuments result = DocumentsFeedConverter.convert(searchResults, query);
 
-        assertAll("Page metadata",
-            () -> assertEquals(1, result.meta.page),
-            () -> assertEquals(10, result.meta.pageSize),
-            () -> assertEquals(5, result.meta.totalPages),
-            () -> assertEquals(50, result.meta.counts.total),
-            () -> assertEquals(List.of("B"), result.meta.subjects)
-        );
+        assertAll(
+                "Page metadata",
+                () -> assertEquals(1, result.meta.page),
+                () -> assertEquals(10, result.meta.pageSize),
+                () -> assertEquals(5, result.meta.totalPages),
+                () -> assertEquals(50, result.meta.counts.total),
+                () -> assertEquals(List.of("B"), result.meta.subjects));
 
-        assertAll("Document list",
-            () -> assertEquals(1, result.documents.size()),
-            () -> assertEquals("1234", result.documents.getFirst().id)
-        );
+        assertAll(
+                "Document list",
+                () -> assertEquals(1, result.documents.size()),
+                () -> assertEquals("1234", result.documents.getFirst().id));
     }
 
     @Test
@@ -93,12 +93,14 @@ class DocumentsFeedConverterTest {
     void testConvert_withAlternativeNumbers() {
         SearchResults searchResults = new SearchResults();
         SearchResults.Entry entry = createEntry();
-        searchResults.facets =  new SearchResults.Facets();
+        searchResults.facets = new SearchResults.Facets();
         searchResults.facets.facetYears = new SearchResults.FacetYears();
-        SearchResults.Entry.AlternativeNumber altNumber1 = new SearchResults.Entry.AlternativeNumber();
+        SearchResults.Entry.AlternativeNumber altNumber1 =
+                new SearchResults.Entry.AlternativeNumber();
         altNumber1.Category = "TypeA";
         altNumber1.Value = "123-A";
-        SearchResults.Entry.AlternativeNumber altNumber2 = new SearchResults.Entry.AlternativeNumber();
+        SearchResults.Entry.AlternativeNumber altNumber2 =
+                new SearchResults.Entry.AlternativeNumber();
         altNumber2.Category = "TypeB";
         altNumber2.Value = "456-B";
         entry.altNumbers = List.of(altNumber1, altNumber2);
@@ -109,22 +111,20 @@ class DocumentsFeedConverterTest {
         var document = result.documents.getFirst();
         var altNumbers = document.altNumbers;
 
-        assertAll("Alt Numbers assertions",
-            () -> assertEquals(2, altNumbers.size()),
-
-            () -> assertEquals("123-A", altNumbers.getFirst().value),
-            () -> assertEquals("TypeA", altNumbers.getFirst().category),
-
-            () -> assertEquals("456-B", altNumbers.get(1).value),
-            () -> assertEquals("TypeB", altNumbers.get(1).category)
-        );
+        assertAll(
+                "Alt Numbers assertions",
+                () -> assertEquals(2, altNumbers.size()),
+                () -> assertEquals("123-A", altNumbers.getFirst().value),
+                () -> assertEquals("TypeA", altNumbers.getFirst().category),
+                () -> assertEquals("456-B", altNumbers.get(1).value),
+                () -> assertEquals("TypeB", altNumbers.get(1).category));
     }
 
     @Test
     void testConvert_withInvalidLinkFormats() {
         SearchResults searchResults = new SearchResults();
         SearchResults.Entry entry = createEntry();
-        searchResults.facets =  new SearchResults.Facets();
+        searchResults.facets = new SearchResults.Facets();
         searchResults.facets.facetYears = new SearchResults.FacetYears();
         SearchResults.Link link = new SearchResults.Link();
         link.rel = "alternate";
@@ -146,13 +146,13 @@ class DocumentsFeedConverterTest {
 
         PageOfDocuments result = DocumentsFeedConverter.convert(searchResults, query);
 
-        assertAll("Page metadata",
-            () -> assertEquals(1, result.meta.page),
-            () -> assertEquals(10, result.meta.pageSize),
-            () -> assertEquals(5, result.meta.totalPages),
-            () -> assertEquals(50, result.meta.counts.total),
-            () -> assertTrue(result.meta.subjects.isEmpty(), "Subjects list should be empty")
-        );
+        assertAll(
+                "Page metadata",
+                () -> assertEquals(1, result.meta.page),
+                () -> assertEquals(10, result.meta.pageSize),
+                () -> assertEquals(5, result.meta.totalPages),
+                () -> assertEquals(50, result.meta.counts.total),
+                () -> assertTrue(result.meta.subjects.isEmpty(), "Subjects list should be empty"));
     }
 
     @Test
@@ -247,12 +247,12 @@ class DocumentsFeedConverterTest {
 
         PageOfDocuments result = DocumentsFeedConverter.convert(searchResults, null);
 
-        assertAll("Documents list",
-            () -> assertEquals(3, result.documents.size()),
-            () -> assertEquals("5678", result.documents.getFirst().id),
-            () -> assertEquals("5678", result.documents.get(1).id),
-            () -> assertEquals("http://custom-domain/id/5678", result.documents.get(2).id)
-        );
+        assertAll(
+                "Documents list",
+                () -> assertEquals(3, result.documents.size()),
+                () -> assertEquals("5678", result.documents.getFirst().id),
+                () -> assertEquals("5678", result.documents.get(1).id),
+                () -> assertEquals("http://custom-domain/id/5678", result.documents.get(2).id));
     }
 
     @Test
@@ -262,15 +262,14 @@ class DocumentsFeedConverterTest {
 
         PageOfDocuments result = DocumentsFeedConverter.convert(searchResults, null);
 
-        assertAll("Page metadata",
-            () -> assertEquals(1, result.meta.page),
-            () -> assertEquals(10, result.meta.pageSize),
-            () -> assertEquals(2, result.meta.totalPages),
-            () -> assertEquals(20, result.meta.counts.total),
-            () -> assertTrue(result.meta.subjects.isEmpty(), "Expected subjects to be empty")
-        );
+        assertAll(
+                "Page metadata",
+                () -> assertEquals(1, result.meta.page),
+                () -> assertEquals(10, result.meta.pageSize),
+                () -> assertEquals(2, result.meta.totalPages),
+                () -> assertEquals(20, result.meta.counts.total),
+                () -> assertTrue(result.meta.subjects.isEmpty(), "Expected subjects to be empty"));
     }
-
 
     @Test
     void testConvert_withNoSubjectsInInputAndQuery() {
@@ -284,14 +283,14 @@ class DocumentsFeedConverterTest {
         assertTrue(result.meta.subjects.isEmpty());
     }
 
-
     @Test
     void testConvert_withMatchingAltNumbersInDocuments() {
         SearchResults searchResults = new SearchResults();
         searchResults.facets = new SearchResults.Facets();
         searchResults.facets.facetYears = new SearchResults.FacetYears();
         SearchResults.Entry entry1 = createEntry();
-        SearchResults.Entry.AlternativeNumber altNumber = new SearchResults.Entry.AlternativeNumber();
+        SearchResults.Entry.AlternativeNumber altNumber =
+                new SearchResults.Entry.AlternativeNumber();
         altNumber.Category = "AltType";
         altNumber.Value = "999-XX";
         entry1.altNumbers = List.of(altNumber);
@@ -303,12 +302,12 @@ class DocumentsFeedConverterTest {
         var document = result.documents.getFirst();
         var altNumber1 = document.altNumbers.getFirst();
 
-        assertAll("Document and AltNumber assertions",
-            () -> assertEquals(1, result.documents.size(), "Expected exactly 1 document"),
-            () -> assertEquals(1, document.altNumbers.size(), "Expected exactly 1 alt number"),
-            () -> assertEquals("AltType", altNumber1.category, "Alt number category mismatch"),
-            () -> assertEquals("999-XX", altNumber1.value, "Alt number value mismatch")
-        );
+        assertAll(
+                "Document and AltNumber assertions",
+                () -> assertEquals(1, result.documents.size(), "Expected exactly 1 document"),
+                () -> assertEquals(1, document.altNumbers.size(), "Expected exactly 1 alt number"),
+                () -> assertEquals("AltType", altNumber1.category, "Alt number category mismatch"),
+                () -> assertEquals("999-XX", altNumber1.value, "Alt number value mismatch"));
     }
 
     @Test
@@ -326,7 +325,6 @@ class DocumentsFeedConverterTest {
         assertEquals(1, result.documents.size());
         assertNull(result.documents.getFirst().longType);
     }
-
 
     // Helper Methods
 
@@ -356,9 +354,7 @@ class DocumentsFeedConverterTest {
     private SearchResults.Facets createFacetsWithSubjects(String... names) {
         SearchResults.Facets facets = new SearchResults.Facets();
         SearchResults.Subjects subjects = new SearchResults.Subjects();
-        subjects.headings = Arrays.stream(names)
-            .map(this::createSubjectHeading)
-            .toList();
+        subjects.headings = Arrays.stream(names).map(this::createSubjectHeading).toList();
         facets.subjects = subjects;
         return facets;
     }

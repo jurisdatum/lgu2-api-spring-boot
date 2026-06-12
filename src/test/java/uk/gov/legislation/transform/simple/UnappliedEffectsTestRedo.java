@@ -1,5 +1,14 @@
 package uk.gov.legislation.transform.simple;
 
+import static uk.gov.legislation.transform.TransformTest.isFragment;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.write;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.indent;
+import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.mapper;
+
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 import uk.gov.legislation.Application;
@@ -7,16 +16,6 @@ import uk.gov.legislation.converters.EffectsFeedConverter;
 import uk.gov.legislation.transform.simple.effects.Effect;
 import uk.gov.legislation.util.Effects;
 import uk.gov.legislation.util.EffectsComparator;
-
-import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
-
-import static uk.gov.legislation.transform.TransformTest.isFragment;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.read;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsHelper.write;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.indent;
-import static uk.gov.legislation.transform.simple.UnappliedEffectsTest.mapper;
 
 public class UnappliedEffectsTestRedo {
 
@@ -39,8 +38,7 @@ public class UnappliedEffectsTestRedo {
         String actual = indent(simplifier.transform(clml, parameters));
         String ext = "-simplified.xml";
         String expected = read(id, ext);
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, ext, actual);
     }
@@ -48,11 +46,13 @@ public class UnappliedEffectsTestRedo {
     static void raw(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
         String clml = read(id, ".xml");
-        Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
+        Metadata meta =
+                isFragment(id)
+                        ? simplifier.extractFragmentMetadata(clml)
+                        : simplifier.extractDocumentMetadata(clml);
         String actual = mapper.writeValueAsString(meta.rawEffects);
         String expected = read(id, "-effects-raw.json");
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, "-effects-raw.json", actual);
     }
@@ -60,13 +60,15 @@ public class UnappliedEffectsTestRedo {
     static void sorted(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
         String clml = read(id, ".xml");
-        Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
+        Metadata meta =
+                isFragment(id)
+                        ? simplifier.extractFragmentMetadata(clml)
+                        : simplifier.extractDocumentMetadata(clml);
         List<Effect> effects = meta.rawEffects.stream().sorted(EffectsComparator.INSTANCE).toList();
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-sorted.json";
         String expected = read(id, ext);
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, ext, actual);
     }
@@ -88,8 +90,7 @@ public class UnappliedEffectsTestRedo {
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-filtered.json";
         String expected = read(id, ext);
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, ext, actual);
     }
@@ -97,15 +98,17 @@ public class UnappliedEffectsTestRedo {
     static void converted(ApplicationContext ctx, String id) throws Exception {
         Simplify simplifier = ctx.getBean(Simplify.class);
         String clml = read(id, ".xml");
-        Metadata meta = isFragment(id) ? simplifier.extractFragmentMetadata(clml) : simplifier.extractDocumentMetadata(clml);
-        List<uk.gov.legislation.api.responses.Effect> effects = EffectsFeedConverter.convertEffects(meta.rawEffects);
+        Metadata meta =
+                isFragment(id)
+                        ? simplifier.extractFragmentMetadata(clml)
+                        : simplifier.extractDocumentMetadata(clml);
+        List<uk.gov.legislation.api.responses.Effect> effects =
+                EffectsFeedConverter.convertEffects(meta.rawEffects);
         String actual = mapper.writeValueAsString(effects);
         String ext = "-effects-converted.json";
         String expected = read(id, ext);
-        if (actual.equals(expected))
-            return;
+        if (actual.equals(expected)) return;
         System.out.println("redoing " + id);
         write(id, ext, actual);
     }
-
 }

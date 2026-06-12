@@ -2,19 +2,16 @@ package uk.gov.legislation.api.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.v3.oas.annotations.media.Schema;
-import uk.gov.legislation.util.Extent;
-
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Set;
+import uk.gov.legislation.util.Extent;
 
 public class Effect {
 
-    @Schema
-    public boolean applied;
+    @Schema public boolean applied;
 
-    @Schema
-    public boolean required;
+    @Schema public boolean required;
 
     @Schema
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -24,20 +21,16 @@ public class Effect {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public Boolean requiredWelsh;
 
-    @Schema
-    public String type;
+    @Schema public String type;
 
-    @Schema
-    public Source target;
+    @Schema public Source target;
 
-    @Schema
-    public Source source;
+    @Schema public Source source;
 
     @Schema(nullable = true)
     public Provisions commencement;
 
-    @Schema
-    public List<InForce> inForce;
+    @Schema public List<InForce> inForce;
 
     @Schema(nullable = true)
     public String notes;
@@ -53,47 +46,36 @@ public class Effect {
         @Schema(example = "ukpga/2024/1")
         public String id;
 
-        @Schema
-        public String longType;
+        @Schema public String longType;
 
-        @Schema
-        public int year;
+        @Schema public int year;
 
-        @Schema
-        public int number;
+        @Schema public int number;
 
-        @Schema
-        public String title;
+        @Schema public String title;
 
         @Schema(example = "2024 c. 1")
         public String cite;
 
-        @Schema
-        public Provisions provisions;
+        @Schema public Provisions provisions;
 
-        @Schema(allowableValues = { "E", "W", "S", "NI", "EU" })
+        @Schema(allowableValues = {"E", "W", "S", "NI", "EU"})
         public Set<Extent> extent;
-
     }
 
     public static class Provisions {
 
-        @Schema
-        public String plain;
+        @Schema public String plain;
 
-        @Schema
-        public List<RichText.Node> rich;
-
+        @Schema public List<RichText.Node> rich;
     }
-
 
     public static class InForce {
 
         @Schema(nullable = true)
         public LocalDate date;
 
-        @Schema
-        public boolean applied;
+        @Schema public boolean applied;
 
         @JsonInclude(JsonInclude.Include.NON_NULL)
         @Schema(nullable = true)
@@ -106,7 +88,5 @@ public class Effect {
         @JsonInclude(JsonInclude.Include.NON_NULL)
         @Schema(nullable = true)
         public Boolean outstanding;
-
     }
-
 }

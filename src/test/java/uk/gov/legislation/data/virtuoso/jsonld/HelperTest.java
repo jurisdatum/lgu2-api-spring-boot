@@ -25,10 +25,9 @@ class HelperTest {
         List<String> result = Helper.oneOrMany(singleNode, String.class);
 
         assertAll(
-            () -> assertNotNull(result),
-            () -> assertEquals(1, result.size()),
-            () -> assertEquals(expectedValue, result.getFirst())
-        );
+                () -> assertNotNull(result),
+                () -> assertEquals(1, result.size()),
+                () -> assertEquals(expectedValue, result.getFirst()));
     }
 
     @Test
@@ -50,12 +49,11 @@ class HelperTest {
         List<String> result = Helper.oneOrMany(arrayNode, String.class);
 
         assertAll(
-            () -> assertNotNull(result),
-            () -> assertEquals(2, result.size()),
-            () -> assertEquals("Item1", result.getFirst()),
-            () -> assertEquals("Item2", result.get(1)),
-            () -> assertEquals(expectedItem2, result.get(1))
-        );
+                () -> assertNotNull(result),
+                () -> assertEquals(2, result.size()),
+                () -> assertEquals("Item1", result.getFirst()),
+                () -> assertEquals("Item2", result.get(1)),
+                () -> assertEquals(expectedItem2, result.get(1)));
     }
 
     @Test
@@ -66,9 +64,8 @@ class HelperTest {
         List<String> result = Helper.oneOrMany(emptyArrayNode, String.class);
 
         assertAll(
-            () -> assertNotNull(result),
-            () -> assertTrue(result.isEmpty(), "Result should be an empty list.")
-        );
+                () -> assertNotNull(result),
+                () -> assertTrue(result.isEmpty(), "Result should be an empty list."));
     }
 
     @Test
@@ -77,10 +74,8 @@ class HelperTest {
         List<String> result = Helper.oneOrMany(null, String.class);
 
         assertAll(
-            () -> assertNotNull(result),
-            () -> assertEquals(1, result.size(), "Result should contain one element."),
-            () -> assertNull(result.getFirst(), "Element should be null.")
-        );
+                () -> assertNotNull(result),
+                () -> assertEquals(1, result.size(), "Result should contain one element."),
+                () -> assertNull(result.getFirst(), "Element should be null."));
     }
-
 }

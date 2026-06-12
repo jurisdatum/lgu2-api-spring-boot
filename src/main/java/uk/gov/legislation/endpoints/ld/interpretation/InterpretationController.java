@@ -21,66 +21,78 @@ public class InterpretationController implements InterpretationApi {
 
     private final ContentNegotiationManager negotiation;
 
-    public InterpretationController(InterpretationQuery query, ContentNegotiationManager negotiation) {
+    public InterpretationController(
+            InterpretationQuery query, ContentNegotiationManager negotiation) {
         this.query = query;
         this.negotiation = negotiation;
     }
 
     @Override
-    public ResponseEntity<?> getCalendarYearAndNumber(NativeWebRequest request,
+    public ResponseEntity<?> getCalendarYearAndNumber(
+            NativeWebRequest request,
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable int number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
-        return helper(request, type, Integer.toString(year), Integer.toString(number), version, locale);
+            Locale locale)
+            throws Exception {
+        return helper(
+                request, type, Integer.toString(year), Integer.toString(number), version, locale);
     }
 
     @GetMapping("/{type}/{year:\\d{4}}/{date}/{number}")
-    public ResponseEntity<?> getYearAndSpecificDate(NativeWebRequest request,
+    public ResponseEntity<?> getYearAndSpecificDate(
+            NativeWebRequest request,
             @PathVariable String type,
             @PathVariable int year,
             @PathVariable String date,
             @PathVariable int number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String middle = year + "/" + date;
         return helper(request, type, middle, Integer.toString(number), version, locale);
     }
 
     @GetMapping("/{type}/{reign}/{session}/{number}")
-    public ResponseEntity<?> getRegnalYearAndNumber(NativeWebRequest request,
+    public ResponseEntity<?> getRegnalYearAndNumber(
+            NativeWebRequest request,
             @PathVariable String type,
             @PathVariable String reign,
             @PathVariable String session,
             @PathVariable String number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String regnal = reign + "/" + session;
         return helper(request, type, regnal, number, version, locale);
     }
 
     @GetMapping("/{type}/{reign}/{session}/{statute}/{number}")
-    public ResponseEntity<?> getRegnalYearWithStatuteNameAndNumber(NativeWebRequest request,
+    public ResponseEntity<?> getRegnalYearWithStatuteNameAndNumber(
+            NativeWebRequest request,
             @PathVariable String type,
             @PathVariable String reign,
             @PathVariable String session,
             @PathVariable String statute,
             @PathVariable String number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String middle = reign + "/" + session + "/" + statute;
         return helper(request, type, middle, number, version, locale);
     }
 
     // this is duplicative of /{type}/{reign}/{session}/{number}, included only for specification
     @GetMapping("/aep/{reign}/{statute}/{number}")
-    public ResponseEntity<?> getAEPStatuteNameAndNumber(NativeWebRequest request,
+    public ResponseEntity<?> getAEPStatuteNameAndNumber(
+            NativeWebRequest request,
             @PathVariable String reign,
             @PathVariable String statute,
             @PathVariable String number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String type = "aep";
         String middle = reign + "/" + statute;
         return helper(request, type, middle, number, version, locale);
@@ -88,11 +100,13 @@ public class InterpretationController implements InterpretationApi {
 
     // for tempincert URIs with number
     @GetMapping("/aep/{statute}/{number}")
-    public ResponseEntity<?> getAEPStatuteNameAndNumber(NativeWebRequest request,
+    public ResponseEntity<?> getAEPStatuteNameAndNumber(
+            NativeWebRequest request,
             @PathVariable String statute,
             @PathVariable String number,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String type = "aep";
         String middle = "tempincert/" + statute;
         return helper(request, type, middle, number, version, locale);
@@ -100,29 +114,35 @@ public class InterpretationController implements InterpretationApi {
 
     // for tempincert URIs without number
     @GetMapping("/aep/{statute}")
-    public ResponseEntity<?> getAEPStatuteNameAlone(NativeWebRequest request,
+    public ResponseEntity<?> getAEPStatuteNameAlone(
+            NativeWebRequest request,
             @PathVariable String statute,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         String type = "aep";
         String middle = "tempincert/" + statute;
         return helper(request, type, middle, null, version, locale);
     }
 
     @GetMapping("/eut/{treaty}")
-    public ResponseEntity<?> getEuropeanUnionTreaty(NativeWebRequest request,
+    public ResponseEntity<?> getEuropeanUnionTreaty(
+            NativeWebRequest request,
             @PathVariable String treaty,
             @RequestParam(required = false) String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         return helper(request, "eut", treaty, null, version, locale);
     }
 
-    private ResponseEntity<?> helper(NativeWebRequest request,
+    private ResponseEntity<?> helper(
+            NativeWebRequest request,
             String type,
             String middle,
             String number,
             String version,
-            Locale locale) throws Exception {
+            Locale locale)
+            throws Exception {
         MediaType media = negotiation.resolveMediaTypes(request).getFirst();
         boolean welsh = "cy".equals(locale.getLanguage());
         if (Virtuoso.Formats.contains(media.toString())) {
@@ -131,8 +151,7 @@ public class InterpretationController implements InterpretationApi {
         }
         // only two possibilities remain: application/json and application/xml
         return query.get(type, middle, number, version, welsh)
-            .map(ResponseEntity::ok)
-            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
     }
-
 }

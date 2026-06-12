@@ -23,11 +23,11 @@ class SectionRangeContainmentTest {
         void numericSubsections() {
             String start = "section-249-1";
             String end = "section-249-3";
-            assertTrue(contains(start, end, "section-249-1"));   // start boundary
-            assertTrue(contains(start, end, "section-249-2"));   // middle
-            assertTrue(contains(start, end, "section-249-3"));   // end boundary
-            assertFalse(contains(start, end, "section-249-4"));  // after
-            assertFalse(contains(start, end, "section-248-5"));  // different parent
+            assertTrue(contains(start, end, "section-249-1")); // start boundary
+            assertTrue(contains(start, end, "section-249-2")); // middle
+            assertTrue(contains(start, end, "section-249-3")); // end boundary
+            assertFalse(contains(start, end, "section-249-4")); // after
+            assertFalse(contains(start, end, "section-248-5")); // different parent
         }
 
         @Test
@@ -213,38 +213,40 @@ class SectionRangeContainmentTest {
         @MethodSource
         void testCompare(String id1, String id2, int expectedSign) {
             int result = SectionRangeContainment.compare(id1, id2);
-            assertEquals(expectedSign, Integer.signum(result),
-                String.format("Expected comparison of '%s' vs '%s' to have sign %d but got %d",
-                    id1, id2, expectedSign, Integer.signum(result)));
+            assertEquals(
+                    expectedSign,
+                    Integer.signum(result),
+                    String.format(
+                            "Expected comparison of '%s' vs '%s' to have sign %d but got %d",
+                            id1, id2, expectedSign, Integer.signum(result)));
         }
 
         static Stream<Arguments> testCompare() {
             return Stream.of(
-                // identical
-                Arguments.of("section-1", "section-1", 0),
+                    // identical
+                    Arguments.of("section-1", "section-1", 0),
 
-                // numeric ordering
-                Arguments.of("section-1", "section-2", -1),
-                Arguments.of("section-10", "section-2", 1),
+                    // numeric ordering
+                    Arguments.of("section-1", "section-2", -1),
+                    Arguments.of("section-10", "section-2", 1),
 
-                // numeric + alpha suffix
-                Arguments.of("section-1", "section-1A", -1),
-                Arguments.of("section-1A", "section-1B", -1),
+                    // numeric + alpha suffix
+                    Arguments.of("section-1", "section-1A", -1),
+                    Arguments.of("section-1A", "section-1B", -1),
 
-                // alphabetic tokens
-                Arguments.of("section-1-a", "section-1-b", -1),
-                Arguments.of("section-1-bc", "section-1-be", -1),
+                    // alphabetic tokens
+                    Arguments.of("section-1-a", "section-1-b", -1),
+                    Arguments.of("section-1-bc", "section-1-be", -1),
 
-                // roman numerals
-                Arguments.of("section-1-a-ii", "section-1-a-iv", -1),
-                Arguments.of("section-1-a-ix", "section-1-a-xi", -1),
+                    // roman numerals
+                    Arguments.of("section-1-a-ii", "section-1-a-iv", -1),
+                    Arguments.of("section-1-a-ix", "section-1-a-xi", -1),
 
-                // shorter ID before longer with same prefix
-                Arguments.of("part-2", "part-2-section-1", -1),
+                    // shorter ID before longer with same prefix
+                    Arguments.of("part-2", "part-2-section-1", -1),
 
-                // different keyword at same position
-                Arguments.of("chapter-1", "section-1", -1)
-            );
+                    // different keyword at same position
+                    Arguments.of("chapter-1", "section-1", -1));
         }
     }
 
@@ -257,97 +259,101 @@ class SectionRangeContainmentTest {
         @DisplayName("compare: full identifier examples from section 6.4 guidance")
         void testGuidanceCompare(String id1, String id2, int expectedSign) {
             int result = SectionRangeContainment.compare(id1, id2);
-            assertEquals(expectedSign, Integer.signum(result),
-                String.format("Expected comparison of '%s' vs '%s' to have sign %d but got %d",
-                    id1, id2, expectedSign, Integer.signum(result)));
+            assertEquals(
+                    expectedSign,
+                    Integer.signum(result),
+                    String.format(
+                            "Expected comparison of '%s' vs '%s' to have sign %d but got %d",
+                            id1, id2, expectedSign, Integer.signum(result)));
         }
 
         static Stream<Arguments> testGuidanceCompare() {
             return Stream.of(
-                // beginning of a series: ZA1, A1, B1, ... then 1
-                Arguments.of("schedule-ZA1", "schedule-A1", -1),
-                Arguments.of("schedule-A1", "schedule-B1", -1),
-                Arguments.of("schedule-B1", "schedule-1", -1),
+                    // beginning of a series: ZA1, A1, B1, ... then 1
+                    Arguments.of("schedule-ZA1", "schedule-A1", -1),
+                    Arguments.of("schedule-A1", "schedule-B1", -1),
+                    Arguments.of("schedule-B1", "schedule-1", -1),
 
-                // inserted between existing provisions
-                Arguments.of("section-1", "section-1ZA", -1),
-                Arguments.of("section-1ZA", "section-1A", -1),
-                Arguments.of("section-1A", "section-1AZA", -1),
-                Arguments.of("section-1AZA", "section-1AA", -1),
+                    // inserted between existing provisions
+                    Arguments.of("section-1", "section-1ZA", -1),
+                    Arguments.of("section-1ZA", "section-1A", -1),
+                    Arguments.of("section-1A", "section-1AZA", -1),
+                    Arguments.of("section-1AZA", "section-1AA", -1),
 
-                // do not generate a lower level unless needed
-                Arguments.of("section-1AA", "section-1AB", -1),
-                Arguments.of("section-1AB", "section-1B", -1),
-                Arguments.of("section-1AA", "section-1AAA", -1),
-                Arguments.of("section-1AAA", "section-1AB", -1),
+                    // do not generate a lower level unless needed
+                    Arguments.of("section-1AA", "section-1AB", -1),
+                    Arguments.of("section-1AB", "section-1B", -1),
+                    Arguments.of("section-1AA", "section-1AAA", -1),
+                    Arguments.of("section-1AAA", "section-1AB", -1),
 
-                // lettered paragraphs
-                Arguments.of("section-1-zza", "section-1-za", -1),
-                Arguments.of("section-1-za", "section-1-a", -1),
-                Arguments.of("section-1-a", "section-1-aza", -1),
-                Arguments.of("section-1-aza", "section-1-aa", -1),
-                Arguments.of("section-1-aa", "section-1-ab", -1),
-                Arguments.of("section-1-ab", "section-1-b", -1),
+                    // lettered paragraphs
+                    Arguments.of("section-1-zza", "section-1-za", -1),
+                    Arguments.of("section-1-za", "section-1-a", -1),
+                    Arguments.of("section-1-a", "section-1-aza", -1),
+                    Arguments.of("section-1-aza", "section-1-aa", -1),
+                    Arguments.of("section-1-aa", "section-1-ab", -1),
+                    Arguments.of("section-1-ab", "section-1-b", -1),
 
-                // roman numeral equivalents
-                Arguments.of("section-1-a-i", "section-1-a-ia", -1),
-                Arguments.of("section-1-a-ia", "section-1-a-ib", -1),
-                Arguments.of("section-1-a-ib", "section-1-a-ii", -1),
+                    // roman numeral equivalents
+                    Arguments.of("section-1-a-i", "section-1-a-ia", -1),
+                    Arguments.of("section-1-a-ia", "section-1-a-ib", -1),
+                    Arguments.of("section-1-a-ib", "section-1-a-ii", -1),
 
-                // after Z use Z1, Z2, Z3, ...
-                Arguments.of("section-360Z", "section-360Z1", -1),
-                Arguments.of("section-360Z1", "section-360Z2", -1),
-                Arguments.of("section-360Z2", "section-360Z10", -1)
-            );
+                    // after Z use Z1, Z2, Z3, ...
+                    Arguments.of("section-360Z", "section-360Z1", -1),
+                    Arguments.of("section-360Z1", "section-360Z2", -1),
+                    Arguments.of("section-360Z2", "section-360Z10", -1));
         }
 
         @ParameterizedTest(name = "[{index}] {0} vs {1} => {2}")
         @MethodSource
         void testCompareSuffix(String s1, String s2, int expectedSign) {
             int result = SectionRangeContainment.compareSuffix(s1, s2);
-            assertEquals(expectedSign, Integer.signum(result),
-                String.format("Expected compareSuffix('%s', '%s') to have sign %d but got %d",
-                    s1, s2, expectedSign, Integer.signum(result)));
+            assertEquals(
+                    expectedSign,
+                    Integer.signum(result),
+                    String.format(
+                            "Expected compareSuffix('%s', '%s') to have sign %d but got %d",
+                            s1, s2, expectedSign, Integer.signum(result)));
         }
 
         static Stream<Arguments> testCompareSuffix() {
             return Stream.of(
-                // basic: empty < A < B < ... < Z
-                Arguments.of("", "A", -1),
-                Arguments.of("A", "B", -1),
-                Arguments.of("Y", "Z", -1),
+                    // basic: empty < A < B < ... < Z
+                    Arguments.of("", "A", -1),
+                    Arguments.of("A", "B", -1),
+                    Arguments.of("Y", "Z", -1),
 
-                // Z-prefix: ZA sorts before A (inserted before first sub-item)
-                Arguments.of("ZA", "A", -1),
-                Arguments.of("ZB", "A", -1),
-                Arguments.of("ZZ", "A", -1),
+                    // Z-prefix: ZA sorts before A (inserted before first sub-item)
+                    Arguments.of("ZA", "A", -1),
+                    Arguments.of("ZB", "A", -1),
+                    Arguments.of("ZZ", "A", -1),
 
-                // recursive Z-prefix: ZZA before ZA before A
-                Arguments.of("ZZA", "ZA", -1),
-                Arguments.of("ZZA", "A", -1),
+                    // recursive Z-prefix: ZZA before ZA before A
+                    Arguments.of("ZZA", "ZA", -1),
+                    Arguments.of("ZZA", "A", -1),
 
-                // sub-insertions: between A and B come AA, AB, ...
-                Arguments.of("A", "AA", -1),
-                Arguments.of("AA", "AB", -1),
-                Arguments.of("AZ", "B", -1),
+                    // sub-insertions: between A and B come AA, AB, ...
+                    Arguments.of("A", "AA", -1),
+                    Arguments.of("AA", "AB", -1),
+                    Arguments.of("AZ", "B", -1),
 
-                // Z-prefix at deeper level: AZA before AA (inserted between A and AA)
-                Arguments.of("AZA", "AA", -1),
-                Arguments.of("AZB", "AA", -1),
+                    // Z-prefix at deeper level: AZA before AA (inserted between A and AA)
+                    Arguments.of("AZA", "AA", -1),
+                    Arguments.of("AZB", "AA", -1),
 
-                // Z at end is the letter Z (sorts last among A-Z)
-                Arguments.of("Y", "Z", -1),
-                Arguments.of("Z", "ZA", 1),  // Z (letter) > ZA (prefix)
+                    // Z at end is the letter Z (sorts last among A-Z)
+                    Arguments.of("Y", "Z", -1),
+                    Arguments.of("Z", "ZA", 1), // Z (letter) > ZA (prefix)
 
-                // case insensitive
-                Arguments.of("za", "A", -1),
-                Arguments.of("a", "B", -1),
+                    // case insensitive
+                    Arguments.of("za", "A", -1),
+                    Arguments.of("a", "B", -1),
 
-                // numeric sub-suffixes (e.g. Z1, Z10)
-                Arguments.of("Z9", "Z10", -1),
-                Arguments.of("Z2", "Z10", -1),
-                Arguments.of("A5", "A10", -1)
-            );
+                    // numeric sub-suffixes (e.g. Z1, Z10)
+                    Arguments.of("Z9", "Z10", -1),
+                    Arguments.of("Z2", "Z10", -1),
+                    Arguments.of("A5", "A10", -1));
         }
 
         @Test
@@ -383,7 +389,7 @@ class SectionRangeContainmentTest {
             // order: a < aza < aa < ab < ... < az < b
             assertTrue(contains("section-1-aza", "section-1-b", "section-1-aa"));
             assertTrue(contains("section-1-aza", "section-1-b", "section-1-ab"));
-            assertFalse(contains("section-1-aza", "section-1-b", "section-1-a"));  // a is before aza
+            assertFalse(contains("section-1-aza", "section-1-b", "section-1-a")); // a is before aza
             assertFalse(contains("section-1-aza", "section-1-b", "section-1-c"));
         }
 
@@ -434,9 +440,9 @@ class SectionRangeContainmentTest {
         @Test
         @DisplayName("invalid sequences return 0")
         void invalidSequences() {
-            assertEquals(0, Roman.parse("iiii"));  // should be iv
-            assertEquals(0, Roman.parse("dd"));    // not valid
-            assertEquals(0, Roman.parse("vv"));    // not valid
+            assertEquals(0, Roman.parse("iiii")); // should be iv
+            assertEquals(0, Roman.parse("dd")); // not valid
+            assertEquals(0, Roman.parse("vv")); // not valid
         }
 
         @Test
@@ -450,5 +456,4 @@ class SectionRangeContainmentTest {
     private static boolean contains(String start, String end, String id) {
         return SectionRangeContainment.contains(start, end, id);
     }
-
 }

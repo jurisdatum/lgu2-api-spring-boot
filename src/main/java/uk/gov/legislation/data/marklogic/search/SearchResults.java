@@ -2,13 +2,6 @@ package uk.gov.legislation.data.marklogic.search;
 
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import tools.jackson.core.JacksonException;
-import tools.jackson.databind.DeserializationFeature;
-import tools.jackson.databind.ObjectMapper;
-import tools.jackson.dataformat.xml.XmlMapper;
-import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.time.LocalDate;
@@ -16,13 +9,20 @@ import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.DeserializationFeature;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.dataformat.xml.XmlMapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import tools.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 
 @JsonRootName(value = "feed", namespace = "http://www.w3.org/2005/Atom")
 public class SearchResults {
 
-    static final ObjectMapper MAPPER = XmlMapper.builder()
-        .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-        .build();
+    static final ObjectMapper MAPPER =
+            XmlMapper.builder()
+                    .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                    .build();
 
     public static SearchResults parse(String xml) throws JacksonException {
         return MAPPER.readValue(xml, SearchResults.class);
@@ -60,230 +60,248 @@ public class SearchResults {
     @JacksonXmlProperty(localName = "entry")
     public List<Entry> entries;
 
-public static class Facets {
+    public static class Facets {
 
-    @JacksonXmlElementWrapper(localName = "facetPublishDates")
-    @JacksonXmlProperty(localName = "facetPublishDate")
-    public List<FacetPublishDate> facetPublishDates;
+        @JacksonXmlElementWrapper(localName = "facetPublishDates")
+        @JacksonXmlProperty(localName = "facetPublishDate")
+        public List<FacetPublishDate> facetPublishDates;
 
-    @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public FacetTypes facetTypes;
+        @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public FacetTypes facetTypes;
 
-    @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public FacetYears facetYears;
+        @JacksonXmlProperty(namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public FacetYears facetYears;
 
-    @JacksonXmlProperty(localName = "facetSubjectsInitials", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public Subjects subjects;
+        @JacksonXmlProperty(
+                localName = "facetSubjectsInitials",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public Subjects subjects;
 
-    @JacksonXmlElementWrapper(localName = "facetStages", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    @JacksonXmlProperty(localName = "facetStage", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<TypeAndValueFacet> facetStages;
+        @JacksonXmlElementWrapper(
+                localName = "facetStages",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        @JacksonXmlProperty(
+                localName = "facetStage",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<TypeAndValueFacet> facetStages;
 
-    @JacksonXmlElementWrapper(localName = "facetDepartments", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    @JacksonXmlProperty(localName = "facetDepartment", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<TypeAndValueFacet> facetDepartments;
-
-}
-
-public static class FacetTypes {
-
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "facetType", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<FacetType> entries;
-
-}
-
-public static class FacetType {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String type;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int value;
-
-}
-
-public static class FacetPublishDate {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public LocalDate date;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int total;
-
-}
-
-public static class FacetYears {
-
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "facetYear", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<FacetYear> entries;
-
-}
-
-public static class FacetYear {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int year;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int total;
-
-}
-
-public static class Subjects {
-
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "facetSubjectInitial", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<SubjectInitial> initials;
-
-    @JacksonXmlElementWrapper(localName = "headings", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    @JacksonXmlProperty(localName = "heading", namespace = "http://www.legislation.gov.uk/namespaces/legislation")
-    public List<SubjectHeading> headings;
-
-}
-
-public static class SubjectInitial {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String initial;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int total;
-
-}
-
-public static class SubjectHeading {
-
-    @JacksonXmlProperty(localName = "Value", isAttribute = true)
-    public String name;
-
-}
-
-public static class TypeAndValueFacet {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String type;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public int value;
-
-}
-
-public static class Entry {
-
-    public String id;
-
-    public String title;
-
-    public String altTitle;
-
-    @SuppressWarnings("unchecked")
-    @JsonSetter("title")
-    public void setTitle(Object obj) {
-        if (obj instanceof String str) {
-            title = str;
-            return;
-        }
-        Map<String, ?> map = (Map<String, ?>) obj;
-        Map<String, ?> div = (Map<String, ?>) map.get("div");
-        ArrayList<Map<String, String>> spans = (ArrayList<Map<String, String>>) div.get("span");
-        for (Map<String, String> span : spans) {
-            String lang = span.get("lang");
-            String title = span.get("");
-            if ("en".equals(lang))
-                this.title = title;
-            else
-                this.altTitle = title;
-        }
+        @JacksonXmlElementWrapper(
+                localName = "facetDepartments",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        @JacksonXmlProperty(
+                localName = "facetDepartment",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<TypeAndValueFacet> facetDepartments;
     }
 
-    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
-    public String summary;
+    public static class FacetTypes {
 
-    @JacksonXmlProperty(localName = "DocumentMainType", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public Value mainType;
-
-    @JacksonXmlProperty(localName = "Year", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public IntValue year;
-
-    @JacksonXmlProperty(localName = "Number", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public IntValue number;
-
-    @JacksonXmlProperty(localName = "ISBN", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public Value isbn;
-
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "AlternativeNumber", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public List<AlternativeNumber> altNumbers;
-
-    public static class AlternativeNumber {
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String Category;
-
-        @JacksonXmlProperty(isAttribute = true)
-        public String Value;
-
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(
+                localName = "facetType",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<FacetType> entries;
     }
 
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "Subject", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public List<Subject> subjects;
+    public static class FacetType {
 
-    public static class Subject {
+        @JacksonXmlProperty(isAttribute = true)
+        public String type;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int value;
+    }
+
+    public static class FacetPublishDate {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public LocalDate date;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int total;
+    }
+
+    public static class FacetYears {
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(
+                localName = "facetYear",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<FacetYear> entries;
+    }
+
+    public static class FacetYear {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int year;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int total;
+    }
+
+    public static class Subjects {
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(
+                localName = "facetSubjectInitial",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<SubjectInitial> initials;
+
+        @JacksonXmlElementWrapper(
+                localName = "headings",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        @JacksonXmlProperty(
+                localName = "heading",
+                namespace = "http://www.legislation.gov.uk/namespaces/legislation")
+        public List<SubjectHeading> headings;
+    }
+
+    public static class SubjectInitial {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String initial;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int total;
+    }
+
+    public static class SubjectHeading {
+
+        @JacksonXmlProperty(localName = "Value", isAttribute = true)
+        public String name;
+    }
+
+    public static class TypeAndValueFacet {
+
+        @JacksonXmlProperty(isAttribute = true)
+        public String type;
+
+        @JacksonXmlProperty(isAttribute = true)
+        public int value;
+    }
+
+    public static class Entry {
+
+        public String id;
+
+        public String title;
+
+        public String altTitle;
+
+        @SuppressWarnings("unchecked")
+        @JsonSetter("title")
+        public void setTitle(Object obj) {
+            if (obj instanceof String str) {
+                title = str;
+                return;
+            }
+            Map<String, ?> map = (Map<String, ?>) obj;
+            Map<String, ?> div = (Map<String, ?>) map.get("div");
+            ArrayList<Map<String, String>> spans = (ArrayList<Map<String, String>>) div.get("span");
+            for (Map<String, String> span : spans) {
+                String lang = span.get("lang");
+                String title = span.get("");
+                if ("en".equals(lang)) this.title = title;
+                else this.altTitle = title;
+            }
+        }
+
+        @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+        public String summary;
+
+        @JacksonXmlProperty(
+                localName = "DocumentMainType",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public Value mainType;
+
+        @JacksonXmlProperty(
+                localName = "Year",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public IntValue year;
+
+        @JacksonXmlProperty(
+                localName = "Number",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public IntValue number;
+
+        @JacksonXmlProperty(
+                localName = "ISBN",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public Value isbn;
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(
+                localName = "AlternativeNumber",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public List<AlternativeNumber> altNumbers;
+
+        public static class AlternativeNumber {
+
+            @JacksonXmlProperty(isAttribute = true)
+            public String Category;
+
+            @JacksonXmlProperty(isAttribute = true)
+            public String Value;
+        }
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(
+                localName = "Subject",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public List<Subject> subjects;
+
+        public static class Subject {
+            @JacksonXmlProperty(localName = "Value", isAttribute = true)
+            public String value;
+        }
+
+        @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+        public ZonedDateTime updated;
+
+        @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
+        public ZonedDateTime published;
+
+        @JacksonXmlElementWrapper(useWrapping = false)
+        @JacksonXmlProperty(localName = "link")
+        public List<Link> links;
+
+        /* for impact assessments */
+
+        @JacksonXmlProperty(
+                localName = "DocumentStage",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public Value stage;
+
+        @JacksonXmlProperty(
+                localName = "Department",
+                namespace = "http://www.legislation.gov.uk/namespaces/metadata")
+        public Value department;
+    }
+
+    public static class Value {
+
         @JacksonXmlProperty(localName = "Value", isAttribute = true)
         public String value;
     }
 
-    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
-    public ZonedDateTime updated;
+    public static class IntValue {
 
-    @JacksonXmlProperty(namespace = "http://www.w3.org/2005/Atom")
-    public ZonedDateTime published;
+        @JacksonXmlProperty(localName = "Value", isAttribute = true)
+        public int value;
+    }
 
-    @JacksonXmlElementWrapper(useWrapping = false)
-    @JacksonXmlProperty(localName = "link")
-    public List<Link> links;
+    public static class Link {
 
-    /* for impact assessments */
+        @JacksonXmlProperty(isAttribute = true)
+        public String rel;
 
-    @JacksonXmlProperty(localName = "DocumentStage", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public Value stage;
+        @JacksonXmlProperty(isAttribute = true)
+        public String type;
 
-    @JacksonXmlProperty(localName = "Department", namespace = "http://www.legislation.gov.uk/namespaces/metadata")
-    public Value department;
+        @JacksonXmlProperty(isAttribute = true)
+        public String href;
 
-}
-
-public static class Value {
-
-    @JacksonXmlProperty(localName = "Value", isAttribute = true)
-    public String value;
-
-}
-
-public static class IntValue {
-
-    @JacksonXmlProperty(localName = "Value", isAttribute = true)
-    public int value;
-
-}
-
-public static class Link {
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String rel;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String type;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String href;
-
-    @JacksonXmlProperty(isAttribute = true)
-    public String title;
-
-}
-
+        @JacksonXmlProperty(isAttribute = true)
+        public String title;
+    }
 }

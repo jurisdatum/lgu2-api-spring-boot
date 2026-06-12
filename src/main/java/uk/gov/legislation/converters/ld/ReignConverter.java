@@ -1,10 +1,10 @@
 package uk.gov.legislation.converters.ld;
 
-import uk.gov.legislation.api.responses.ld.Reign;
-import uk.gov.legislation.data.virtuoso.jsonld.ReignLD;
-
 import static uk.gov.legislation.converters.ld.LDConverter.extractDateAtEndOfUri;
 import static uk.gov.legislation.converters.ld.LDConverter.extractIntegerAtEndOfUri;
+
+import uk.gov.legislation.api.responses.ld.Reign;
+import uk.gov.legislation.data.virtuoso.jsonld.ReignLD;
 
 public class ReignConverter {
 
@@ -19,5 +19,4 @@ public class ReignConverter {
         reign.endRegnalYear = extractIntegerAtEndOfUri(ld.endRegnalYear);
         return reign;
     }
-
 }
