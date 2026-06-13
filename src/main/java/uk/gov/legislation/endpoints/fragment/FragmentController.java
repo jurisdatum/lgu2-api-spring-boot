@@ -20,8 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 import uk.gov.legislation.api.responses.Fragment;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
-import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.endpoints.CustomHeaders;
+import uk.gov.legislation.exceptions.NoDocumentException;
 import uk.gov.legislation.transform.Transforms;
 
 @RestController
@@ -29,13 +29,10 @@ public class FragmentController implements FragmentApi {
 
     private final Legislation marklogic;
     private final Transforms transforms;
-    private final LegislationById legislationById;
 
-    public FragmentController(
-            Legislation marklogic, Transforms transforms, LegislationById legislationById) {
+    public FragmentController(Legislation marklogic, Transforms transforms) {
         this.marklogic = marklogic;
         this.transforms = transforms;
-        this.legislationById = legislationById;
     }
 
     /* CLML */
@@ -246,19 +243,57 @@ public class FragmentController implements FragmentApi {
     /* HEAD (existence check) */
 
     @Override
-    public ResponseEntity<Void> headFragment(String type, int year, int number, String section) {
+    public ResponseEntity<Void> headFragment(
+            String type,
+            int year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         validateType(type);
-        boolean exists = legislationById.exists(type, Integer.toString(year), number, section);
-        return exists ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+        return fragmentExists(type, Integer.toString(year), number, section, version, locale)
+                ? ResponseEntity.ok().build()
+                : ResponseEntity.notFound().build();
     }
 
     @Override
     public ResponseEntity<Void> headFragment(
-            String type, String monarch, String years, int number, String section) {
+            String type,
+            String monarch,
+            String years,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
         validateType(type);
         String regnalYear = String.join("/", monarch, years);
-        boolean exists = legislationById.exists(type, regnalYear, number, section);
-        return exists ? ResponseEntity.ok().build() : ResponseEntity.notFound().build();
+        return fragmentExists(type, regnalYear, number, section, version, locale)
+                ? ResponseEntity.ok().build()
+                : ResponseEntity.notFound().build();
+    }
+
+    /**
+     * Resolves existence through the same path GET uses ({@link Legislation#getDocumentSection}),
+     * passing the same {@code version} and language, so HEAD and GET evaluate existence for the
+     * same fragment at the same point in time and cannot disagree. The lightweight {@code
+     * legislation-by-id.xq} resolver only confirms that the <em>document</em> resolves — it returns
+     * a 303 for a well-formed but non-existent section — so it cannot answer fragment existence
+     * (see ADR 2026-06-13, fragment existence check).
+     */
+    private boolean fragmentExists(
+            String type,
+            String year,
+            int number,
+            String section,
+            Optional<String> version,
+            Locale locale) {
+        try {
+            marklogic.getDocumentSection(
+                    type, year, number, section, version, Optional.of(locale.getLanguage()));
+            return true;
+        } catch (NoDocumentException e) {
+            return false;
+        }
     }
 
     /* helper */
@@ -281,12 +316,7 @@ public class FragmentController implements FragmentApi {
         String language = locale.getLanguage();
         Legislation.Response leg =
                 marklogic.getDocumentSection(
-                        type,
-                        year,
-                        number,
-                        section,
-                        version,
-                        Optional.of(String.valueOf(language)));
+                        type, year, number, section, version, Optional.of(language));
         T body = transform.apply(leg.clml());
         HttpHeaders headers = CustomHeaders.make(language, leg.redirect().orElse(null));
         return ResponseEntity.ok().headers(headers).body(body);
@@ -305,12 +335,7 @@ public class FragmentController implements FragmentApi {
         String language = locale.getLanguage();
         Legislation.StreamResponse doc =
                 marklogic.getDocumentSectionStream(
-                        type,
-                        year,
-                        number,
-                        section,
-                        version,
-                        Optional.of(String.valueOf(language)));
+                        type, year, number, section, version, Optional.of(language));
         InputStream clml = doc.clml();
         try {
             StreamingResponseBody body =
