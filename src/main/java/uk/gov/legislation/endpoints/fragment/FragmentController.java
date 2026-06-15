@@ -277,8 +277,7 @@ public class FragmentController implements FragmentApi {
      * passing the same {@code version} and language, so HEAD and GET evaluate existence for the
      * same fragment at the same point in time and cannot disagree. The lightweight {@code
      * legislation-by-id.xq} resolver only confirms that the <em>document</em> resolves — it returns
-     * a 303 for a well-formed but non-existent section — so it cannot answer fragment existence
-     * (see ADR 2026-06-13, fragment existence check).
+     * a 303 for a well-formed but non-existent section — so it cannot answer fragment existence.
      */
     private boolean fragmentExists(
             String type,
