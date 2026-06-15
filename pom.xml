@@ -38,7 +38,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<errorprone.version>2.39.0</errorprone.version>
-		<spotless.plugin.version>2.44.5</spotless.plugin.version>
+		<spotless.plugin.version>3.6.0</spotless.plugin.version>
 		<google.format.version>1.27.0</google.format.version>
 	</properties>
 	<dependencies>
