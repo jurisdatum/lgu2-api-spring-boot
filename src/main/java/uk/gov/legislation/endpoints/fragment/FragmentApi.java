@@ -184,7 +184,9 @@ public interface FragmentApi {
             @PathVariable @Type String type,
             @PathVariable @Year int year,
             @PathVariable @Number int number,
-            @PathVariable @Section String section);
+            @PathVariable @Section String section,
+            @RequestParam Optional<String> version,
+            Locale locale);
 
     @RequestMapping(
             value = "/fragment/{type}/{monarch}/{years}/{number}/{section}",
@@ -195,5 +197,7 @@ public interface FragmentApi {
             @PathVariable @Monarch String monarch,
             @PathVariable @Years String years,
             @PathVariable @Number int number,
-            @PathVariable @Section String section);
+            @PathVariable @Section String section,
+            @RequestParam Optional<String> version,
+            Locale locale);
 }

@@ -15,7 +15,6 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import uk.gov.legislation.converters.UnappliedEffectsFetcher;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
-import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
 import uk.gov.legislation.response.ExpectedWelshResponseDataCy;
 import uk.gov.legislation.transform.Akn2Html;
 import uk.gov.legislation.transform.Clml2Akn;
@@ -40,8 +39,6 @@ class WelshFragmentTest {
     @MockitoBean private Clml2Pdf clml2Pdf;
 
     @MockitoBean private UnappliedEffectsFetcher unappliedEffectsFetcher;
-
-    @MockitoBean private LegislationById legislationById;
 
     @Test
     void test() throws Exception {

@@ -1,6 +1,7 @@
 package uk.gov.legislation.endpoints.fragment;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.doAnswer;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoInteractions;
@@ -32,8 +33,9 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import uk.gov.legislation.api.responses.Fragment;
+import uk.gov.legislation.data.marklogic.Error;
 import uk.gov.legislation.data.marklogic.legislation.Legislation;
-import uk.gov.legislation.data.marklogic.legislationbyid.LegislationById;
+import uk.gov.legislation.exceptions.NoDocumentException;
 import uk.gov.legislation.transform.Transforms;
 
 @WebMvcTest(FragmentController.class)
@@ -44,8 +46,6 @@ class FragmentControllerTest {
     @MockitoBean private Legislation marklogic;
 
     @MockitoBean private Transforms transforms;
-
-    @MockitoBean private LegislationById legislationById;
 
     private static final String DOCX_MIME_TYPE =
             "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
@@ -557,36 +557,42 @@ class FragmentControllerTest {
     @Test
     @DisplayName("HEAD should return 200 when fragment exists")
     void headShouldReturn200_whenFragmentExists() throws Exception {
-        when(legislationById.exists(type, year, number, section)).thenReturn(true);
+        // No Accept-Language header → Spring resolves the default locale to "en", so the existence
+        // check runs with language = Optional.of("en") (see shouldUseDefaultLocale... below).
+        when(marklogic.getDocumentSection(type, year, number, section, Optional.empty(), language))
+                .thenReturn(mockResponse);
 
         mockMvc.perform(head("/fragment/ukla/2020/1/section-1")).andExpect(status().isOk());
 
-        verify(legislationById).exists(type, year, number, section);
-        verifyNoInteractions(marklogic);
+        verify(marklogic)
+                .getDocumentSection(type, year, number, section, Optional.empty(), language);
         verifyNoInteractions(transforms);
     }
 
     @Test
     @DisplayName("HEAD should return 404 when fragment does not exist")
     void headShouldReturn404_whenFragmentDoesNotExist() throws Exception {
-        when(legislationById.exists(type, year, number, section)).thenReturn(false);
+        when(marklogic.getDocumentSection(type, year, number, section, Optional.empty(), language))
+                .thenThrow(new NoDocumentException(notFound()));
 
         mockMvc.perform(head("/fragment/ukla/2020/1/section-1")).andExpect(status().isNotFound());
 
-        verify(legislationById).exists(type, year, number, section);
-        verifyNoInteractions(marklogic);
+        verify(marklogic)
+                .getDocumentSection(type, year, number, section, Optional.empty(), language);
         verifyNoInteractions(transforms);
     }
 
     @Test
     @DisplayName("HEAD should return 200 when fragment exists (regnal year)")
     void headShouldReturn200_whenFragmentExistsWithMonarch() throws Exception {
-        when(legislationById.exists(type, regnalYear, number, section)).thenReturn(true);
+        when(marklogic.getDocumentSection(
+                        type, regnalYear, number, section, Optional.empty(), language))
+                .thenReturn(mockResponse);
 
         mockMvc.perform(head("/fragment/ukla/Eliz1/2020/1/section-1")).andExpect(status().isOk());
 
-        verify(legislationById).exists(type, regnalYear, number, section);
-        verifyNoInteractions(marklogic);
+        verify(marklogic)
+                .getDocumentSection(type, regnalYear, number, section, Optional.empty(), language);
         verifyNoInteractions(transforms);
     }
 
@@ -596,8 +602,49 @@ class FragmentControllerTest {
         mockMvc.perform(head("/fragment/invalid/2020/1/section-1"))
                 .andExpect(status().isBadRequest());
 
-        verifyNoInteractions(legislationById);
         verifyNoInteractions(marklogic);
         verifyNoInteractions(transforms);
+    }
+
+    @Test
+    @DisplayName("HEAD and GET agree (both 404) when the section does not exist")
+    void headAndGet_agreeOnMissingSection() throws Exception {
+        // The bug this guards against: HEAD used a document-level resolver that returned 303 for a
+        // non-existent section, so HEAD answered 200 while GET answered 404. Both now resolve via
+        // getDocumentSection, so they agree by construction.
+        when(marklogic.getDocumentSection(any(), any(), anyInt(), any(), any(), any()))
+                .thenThrow(new NoDocumentException(notFound()));
+
+        mockMvc.perform(head("/fragment/ukla/2020/1/section-1")).andExpect(status().isNotFound());
+        mockMvc.perform(get("/fragment/ukla/2020/1/section-1").accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
+    }
+
+    @Test
+    @DisplayName("HEAD evaluates existence at the requested version and language")
+    void headPassesVersionAndLanguage() throws Exception {
+        // Existence is version- and language-dependent (a fragment may be inserted or repealed
+        // between versions, or differ by language). HEAD must check the requested version and
+        // language exactly as GET does, not the current/default fragment. Here the fragment is
+        // absent at the requested version, so HEAD must 404 — it would 200 if version were dropped.
+        Optional<String> requestedVersion = Optional.of("2020-01-01");
+        Optional<String> welsh = Optional.of("cy");
+        when(marklogic.getDocumentSection(type, year, number, section, requestedVersion, welsh))
+                .thenThrow(new NoDocumentException(notFound()));
+
+        mockMvc.perform(
+                        head("/fragment/ukla/2020/1/section-1")
+                                .queryParam("version", "2020-01-01")
+                                .header("Accept-Language", "cy"))
+                .andExpect(status().isNotFound());
+
+        verify(marklogic).getDocumentSection(type, year, number, section, requestedVersion, welsh);
+    }
+
+    private static Error notFound() {
+        Error error = new Error();
+        error.statusCode = 404;
+        error.message = "Document section not found";
+        return error;
     }
 }
