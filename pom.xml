@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>4.0.1</version>
+		<version>4.1.0</version>
 		<relativePath/>
 		<!-- lookup parent from repository -->
 	</parent>
@@ -38,7 +38,7 @@
 	<properties>
 		<java.version>21</java.version>
 		<errorprone.version>2.39.0</errorprone.version>
-		<spotless.plugin.version>2.44.5</spotless.plugin.version>
+		<spotless.plugin.version>3.6.0</spotless.plugin.version>
 		<google.format.version>1.27.0</google.format.version>
 	</properties>
 	<dependencies>
@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>io.awspring.cloud</groupId>
 			<artifactId>spring-cloud-aws-starter-parameter-store</artifactId>
-			<version>4.0.0</version>
+			<version>4.0.2</version>
 			<exclusions>
 				<exclusion>
 					<groupId>commons-logging</groupId>
@@ -80,7 +80,7 @@
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-api</artifactId>
-			<version>3.0.1</version>
+			<version>3.0.3</version>
 		</dependency>
 		<!-- Spring Boot AOP -->
 		<dependency>
@@ -175,7 +175,7 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.14</version>
+				<version>0.8.15</version>
 				<executions>
 					<execution>
 						<goals>
