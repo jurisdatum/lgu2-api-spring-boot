@@ -10,28 +10,20 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.Base64;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 import uk.gov.legislation.exceptions.MarkLogicRequestException;
 
 @Component
 public class MarkLogic {
 
-    private final HttpClient httpClient;
+    private final HttpClient httpClient = HttpClient.newHttpClient();
     private final String baseUri;
     private final String authHeader;
 
     /** Using constructor-based injection for better testability and immutability. */
-    public MarkLogic(Environment env) {
-        this.httpClient = HttpClient.newHttpClient();
-
-        String host = env.getProperty("MARKLOGIC_HOST");
-        String port = env.getProperty("MARKLOGIC_PORT");
-        String username = env.getProperty("MARKLOGIC_USERNAME");
-        String password = env.getProperty("MARKLOGIC_PASSWORD");
-
-        this.baseUri = String.format("http://%s:%s/queries/", host, port);
-        this.authHeader = createAuthHeader(username, password);
+    public MarkLogic(MarkLogicConfig config) {
+        this.baseUri = String.format("http://%s:%d/queries/", config.host(), config.port());
+        this.authHeader = createAuthHeader(config.username(), config.password());
     }
 
     private String createAuthHeader(String username, String password) {

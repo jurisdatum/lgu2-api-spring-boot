@@ -11,7 +11,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 import java.util.concurrent.CompletionStage;
 import java.util.function.Function;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
 import tools.jackson.core.JacksonException;
 import tools.jackson.databind.ObjectMapper;
@@ -26,10 +25,8 @@ public class DefraLex {
 
     static final ObjectMapper mapper = JsonResults.MAPPER;
 
-    public DefraLex(Environment env) {
-        String host = env.getProperty("VIRTUOSO_HOST");
-        String port = env.getProperty("DEFRALEX_PORT");
-        this.endpoint = "http://" + host + ":" + port + "/sparql";
+    public DefraLex(DefraLexConfig config) {
+        this.endpoint = "http://" + config.host() + ":" + config.port() + "/sparql";
     }
 
     private static final String RESULTS_QUERY =

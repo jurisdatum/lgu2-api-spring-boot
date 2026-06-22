@@ -9,22 +9,16 @@ import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.Set;
-import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public class Virtuoso {
 
     private final String endpoint;
+    private final HttpClient httpClient = HttpClient.newHttpClient();
 
-    public Virtuoso(Environment env) {
-        String host = env.getProperty("VIRTUOSO_HOST");
-        String port = env.getProperty("VIRTUOSO_PORT");
-
-        if (host == null || port == null) {
-            throw new IllegalArgumentException("VIRTUOSO_HOST or VIRTUOSO_PORT cannot be null");
-        }
-        endpoint = "http://" + host + ":" + port + "/sparql";
+    public Virtuoso(VirtuosoConfig config) {
+        endpoint = "http://" + config.host() + ":" + config.port() + "/sparql";
     }
 
     public static final Set<String> Formats =
@@ -44,10 +38,8 @@ public class Virtuoso {
                 URI.create(endpoint + "?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8));
         HttpRequest request =
                 HttpRequest.newBuilder().GET().uri(uri).header("Accept", format).build();
-        HttpResponse<String> response;
-        try (HttpClient client = HttpClient.newHttpClient()) {
-            response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        }
+        HttpResponse<String> response =
+                httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         return response.body();
     }
 
