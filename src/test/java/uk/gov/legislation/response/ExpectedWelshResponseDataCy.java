@@ -117,9 +117,6 @@ public class ExpectedWelshResponseDataCy {
                               "xml",
                               "pdf"
                           ],
-                          "fragment": "regulation/2",
-                          "prev": "regulation/1",
-                          "next": "regulation/3",
                           "fragmentInfo": {
                               "element": "P1",
                               "id": "regulation-2",

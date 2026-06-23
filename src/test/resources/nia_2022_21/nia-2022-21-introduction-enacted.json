@@ -30,9 +30,6 @@
       "size" : 352718
     } ],
     "associated" : [ ],
-    "fragment" : "introduction",
-    "prev" : null,
-    "next" : "section/1",
     "fragmentInfo" : {
       "element" : "PrimaryPrelims",
       "id" : "introduction",

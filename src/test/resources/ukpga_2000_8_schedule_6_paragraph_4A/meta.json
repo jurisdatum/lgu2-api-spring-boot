@@ -30,9 +30,6 @@
     "size" : null
   } ],
   "associated" : [ ],
-  "fragment" : "schedule/6/paragraph/4A",
-  "prev" : "schedule/6/paragraph/3E",
-  "next" : "schedule/6/paragraph/4B",
   "fragmentInfo" : {
     "element" : "P1",
     "id" : "schedule-6-paragraph-4A",

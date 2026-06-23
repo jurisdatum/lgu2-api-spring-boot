@@ -35,9 +35,6 @@
       "size" : 3178982
     } ],
     "associated" : [ ],
-    "fragment" : "part/1",
-    "prev" : "introduction",
-    "next" : "part/III",
     "fragmentInfo" : {
       "element" : "Part",
       "id" : "part-1",

@@ -24,9 +24,6 @@
     "pointInTime" : "2006-01-01",
     "alternatives" : [ ],
     "associated" : [ ],
-    "fragment" : "section/5",
-    "prev" : "paragraph/p1",
-    "next" : "section/6",
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-5",

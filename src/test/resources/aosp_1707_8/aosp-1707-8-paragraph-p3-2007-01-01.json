@@ -23,9 +23,6 @@
     "pointInTime" : "2007-01-01",
     "alternatives" : [ ],
     "associated" : [ ],
-    "fragment" : "paragraph/p3",
-    "prev" : "introduction",
-    "next" : null,
     "fragmentInfo" : {
       "element" : "P",
       "id" : "paragraph-p3",

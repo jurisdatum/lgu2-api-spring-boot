@@ -61,9 +61,6 @@
       "date" : "2025-04-09",
       "size" : 555756
     } ],
-    "fragment" : "part/1/chapter/2",
-    "prev" : "part/1/chapter/1",
-    "next" : "part/2",
     "fragmentInfo" : {
       "element" : "Chapter",
       "id" : "part-1-chapter-2",
