@@ -28,9 +28,6 @@
     "pointInTime" : null,
     "alternatives" : [ ],
     "associated" : [ ],
-    "fragment" : "section/2",
-    "prev" : "section/1.",
-    "next" : null,
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-2",

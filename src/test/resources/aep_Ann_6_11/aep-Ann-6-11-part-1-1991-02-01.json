@@ -28,9 +28,6 @@
     "pointInTime" : "1991-02-01",
     "alternatives" : [ ],
     "associated" : [ ],
-    "fragment" : "part/1",
-    "prev" : "introduction",
-    "next" : "part/2",
     "fragmentInfo" : {
       "element" : "Part",
       "id" : "part-1",

@@ -290,11 +290,11 @@ public class Metadata {
     /**
      * True when the payload is a whole-document response rather than a fragment response. {@code
      * simplify/metadata.xsl} only emits the {@code <fragment>} element (from which {@link
-     * #fragment} is populated) when the {@code is-fragment} parameter is true, so a null {@code
-     * fragment} uniquely indicates a whole-document request.
+     * #fragmentUri} is populated) when the {@code is-fragment} parameter is true, so a null {@code
+     * fragmentUri} uniquely indicates a whole-document request.
      */
     private boolean isWholeDocument() {
-        return fragment == null;
+        return fragmentUri == null;
     }
 
     private boolean matchesResponseLanguage(String hreflang) {
@@ -360,33 +360,19 @@ public class Metadata {
     /* fragment info */
 
     public URI fragmentUri;
-    private String fragment;
-
-    @Deprecated(forRemoval = true)
-    public String fragment() {
-        return fragment;
-    }
 
     @JsonSetter("fragment")
     public void setFragment(String value) {
         fragmentUri = URI.create(value);
-        fragment = Links.extractFragmentIdentifierFromLink(value);
     }
 
     /* info for prev and next links */
 
     public URI prevUri;
-    private String prev;
-
-    @Deprecated(forRemoval = true) // use prevUri
-    public String prev() {
-        return prev;
-    }
 
     @JsonSetter("prev")
     public void setPrev(String value) {
         prevUri = URI.create(value);
-        prev = Links.extractFragmentIdentifierFromLink(value);
     }
 
     /**
@@ -397,17 +383,10 @@ public class Metadata {
     @JacksonXmlProperty public String prevTitle;
 
     public URI nextUri;
-    private String next; // to remove
-
-    @Deprecated(forRemoval = true) // use nextUri
-    public String next() {
-        return next;
-    }
 
     @JsonSetter("next")
     public void setNext(String value) {
         nextUri = URI.create(value);
-        next = Links.extractFragmentIdentifierFromLink(value);
     }
 
     /**

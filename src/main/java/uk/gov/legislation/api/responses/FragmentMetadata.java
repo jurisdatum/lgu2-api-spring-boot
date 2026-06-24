@@ -12,15 +12,6 @@ import java.util.List;
  */
 public class FragmentMetadata extends CommonMetadata {
 
-    @Schema(example = "section/2", deprecated = true, description = "use fragmentInfo")
-    public String fragment;
-
-    @Schema(example = "section/1", deprecated = true, description = "use prevInfo")
-    public String prev;
-
-    @Schema(example = "section/3", deprecated = true, description = "use nextInfo")
-    public String next;
-
     @Schema public Level fragmentInfo;
 
     @Schema(description = "Previous fragment with display label (see LabelledLink).")

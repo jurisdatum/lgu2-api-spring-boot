@@ -27,9 +27,6 @@ public class FragmentMetadataConverter {
     public static FragmentMetadata convert(Metadata simple) {
         FragmentMetadata converted = new FragmentMetadata();
         DocumentMetadataConverter.convertCommon(simple, converted);
-        converted.fragment = simple.fragment();
-        converted.prev = simple.prev();
-        converted.next = simple.next();
         if (simple.prevUri != null) {
             converted.prevInfo = new LabelledLink();
             converted.prevInfo.href = Links.extractFragmentIdentifierFromLink(simple.prevUri);

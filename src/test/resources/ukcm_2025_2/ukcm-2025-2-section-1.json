@@ -30,9 +30,6 @@
       "size" : 320616
     } ],
     "associated" : [ ],
-    "fragment" : "section/1",
-    "prev" : "introduction",
-    "next" : "section/2",
     "fragmentInfo" : {
       "element" : "P1",
       "id" : "section-1",

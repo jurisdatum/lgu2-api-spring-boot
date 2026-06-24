@@ -31,9 +31,6 @@
       "size" : 1631326
     } ],
     "associated" : [ ],
-    "fragment" : "part/1/crossheading/reviews",
-    "prev" : "part/1/crossheading/supporting-provisions",
-    "next" : "part/2/crossheading/establishment",
     "fragmentInfo" : {
       "element" : "Pblock",
       "id" : "part-1-crossheading-reviews",
